@@ -37,6 +37,20 @@ def store_get(key):
 
 init_store()
 
+class Amendment(BaseModel):
+  uuid: Union[str, None] = None
+  amendment_effective_date: str
+  amendment_version: str
+
+class StudyProtocol(BaseModel):
+  uuid: Union[str, None] = None
+  brief_title: str
+  full_title: str
+  public_title: str
+  scientific_title: str
+  version: str
+  study_protocol_amendments: Union[List[Amendment], None] = []
+
 class Code(BaseModel):
   uuid: Union[str, None] = None
   code: str
@@ -59,6 +73,7 @@ class Study(BaseModel):
   study_type: Code
   study_phase: Code
   study_identifier: Union[List[StudyIdentifier], None] = []
+  study_protocol_reference: Union[str, None] = None
   #study_status: Union[str, None] = None
 
 app = FastAPI()
@@ -76,7 +91,15 @@ async def create_item(study: Study):
   study.uuid = str(uuid4())
   study.study_type.uuid = str(uuid4())
   study.study_phase.uuid = str(uuid4())
-  #for identifier in study.identifiers:
-  #  identifier.uuid = str(uuid4())
+  for identifier in study.study_identifier:
+    identifier.uuid = str(uuid4())
   store_put(vars(study), study.uuid)
   return study.uuid
+
+@app.post("/protocol/")
+async def create_item(protocol: StudyProtocol):
+  protocol.uuid = str(uuid4())
+  for amendment in protocol.study_protocol_amendments:
+    amendment.uuid = str(uuid4())
+  store_put(vars(protocol), protocol.uuid)
+  return protocol.uuid
