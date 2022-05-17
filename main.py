@@ -8,6 +8,8 @@ deta = None
 ddf_store = None
 
 def init_store():
+  global ddf_store
+  global deta
   try: 
     deta = Deta()
     ddf_store = deta.Base("ddf_store")
@@ -16,13 +18,19 @@ def init_store():
     ddf_store = {}
 
 def store_put(data, key):
+  global ddf_store
+  global deta
   if deta == None:
+    #print("%s -> %s" % (key, data))
     ddf_store[key] = data
   else:
     ddf_store.put(data, key)
 
-def store_get(data, key):
+def store_get(key):
+  global ddf_store
+  global deta
   if deta == None:
+    #print("%s" % (key))
     return ddf_store[key]
   else:
     return ddf_store.get(key)
@@ -70,5 +78,5 @@ async def create_item(study: Study):
   study.study_phase.uuid = str(uuid4())
   #for identifier in study.identifiers:
   #  identifier.uuid = str(uuid4())
-  #store_put(vars(study), study.uuid)
+  store_put(vars(study), study.uuid)
   return study.uuid
