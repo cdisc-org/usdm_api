@@ -1,0 +1,28 @@
+from typing import List, Union
+from .api_base_model import ApiBaseModel
+from .study_identifier import StudyIdentifier
+from .study_protocol import StudyProtocol
+from .code import Code
+from uuid import uuid4
+
+class Study(ApiBaseModel):
+  uuid: Union[str, None] = None
+  study_title: str
+  study_version: str
+  study_status: str
+  study_protocol_version: str
+  study_type: Union[Code, str, None]
+  study_phase: Union[Code, str, None]
+  study_identifier: Union[List[StudyIdentifier], List[str], None] = []
+  study_protocol_reference: Union[StudyProtocol, str, None] = None
+
+  def save(self, store):
+    self.uuid = str(uuid4())
+    self.study_type = self.check_and_save(self.study_type, store)
+    self.study_phase = self.check_and_save(self.study_phase, store)
+    self.study_protocol_reference = self.check_and_save(self.study_protocol_reference, store)
+    for idx, identifier in enumerate(self.study_identifier):
+      self.study_identifier[idx] = self.check_and_save(identifier, store)
+    store.put(self.__class__.__name__, vars(self), self.uuid)
+    return self.uuid
+
