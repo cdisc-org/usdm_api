@@ -27,7 +27,7 @@ async def create_item(study: Study):
 def read_item(uuid: str):
   return the_store.get("Study", uuid)
 
-@app.post("/protocol/")
-async def create_item(protocol: StudyProtocol):
-  protocol.save(the_store)
-  return protocol.uuid
+#@app.post("/protocol/")
+#async def create_item(protocol: StudyProtocol):
+#  protocol.save(the_store)
+#  return protocol.uuid
