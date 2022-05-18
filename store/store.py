@@ -30,13 +30,18 @@ class Store():
     self.check(klass)
     items = None
     results = []
+    print("List for: %s" % (klass))
     if self.__deta == None:
-      #print("%s" % (key))
       items = self.__store[klass]
+      print("Items: %s" % (items))
+      for k, v in items.items():
+        results.append(k)
     else:
-      items = self.__store[klass].fetch()
-    for k, v in items.items():
-      results.append(k)
+      items = self.__store[klass].fetch().items
+      print("Items: %s" % (items))
+      for v in items:
+        results.append(v["key"])
+    print("Results: %s" % (results))
     return results
 
   def check(self, name):
