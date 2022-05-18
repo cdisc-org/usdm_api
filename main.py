@@ -1,41 +1,10 @@
 from typing import List, Union
 from fastapi import FastAPI
-from deta import Deta
 from pydantic import BaseModel
 from uuid import uuid4
+from store.store import Store
 
-deta = None
-ddf_store = None
-
-def init_store():
-  global ddf_store
-  global deta
-  try: 
-    deta = Deta()
-    ddf_store = deta.Base("ddf_store")
-  except:
-    deta = None
-    ddf_store = {}
-
-def store_put(data, key):
-  global ddf_store
-  global deta
-  if deta == None:
-    #print("%s -> %s" % (key, data))
-    ddf_store[key] = data
-  else:
-    ddf_store.put(data, key)
-
-def store_get(key):
-  global ddf_store
-  global deta
-  if deta == None:
-    #print("%s" % (key))
-    return ddf_store[key]
-  else:
-    return ddf_store.get(key)
-
-init_store()
+store = Store()
 
 class Amendment(BaseModel):
   uuid: Union[str, None] = None
@@ -84,7 +53,11 @@ def read_root():
 
 @app.get("/study/{uuid}")
 def read_item(uuid: str):
-  return store_get(uuid)
+  return store.get("Study", uuid)
+
+@app.get("/study/")
+def read_item():
+  return store.list("Study")
 
 @app.post("/study/")
 async def create_item(study: Study):
@@ -93,7 +66,7 @@ async def create_item(study: Study):
   study.study_phase.uuid = str(uuid4())
   for identifier in study.study_identifier:
     identifier.uuid = str(uuid4())
-  store_put(vars(study), study.uuid)
+  store.put("Study", vars(study), study.uuid)
   return study.uuid
 
 @app.post("/protocol/")
@@ -101,5 +74,5 @@ async def create_item(protocol: StudyProtocol):
   protocol.uuid = str(uuid4())
   for amendment in protocol.study_protocol_amendments:
     amendment.uuid = str(uuid4())
-  store_put(vars(protocol), protocol.uuid)
+  store.put("Protocol", vars(protocol), protocol.uuid)
   return protocol.uuid
