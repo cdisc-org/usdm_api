@@ -16,3 +16,9 @@ class StudyEpoch(ApiBaseModel):
       self.epoch_type = self.check_and_save(self.epoch_type, store)
     store.put(self.__class__.__name__, vars(self), self.uuid)
     return self.uuid
+
+  @classmethod
+  def read_full(cls, uuid, store):
+    study_epoch = store.get(cls.__name__, uuid)
+    study_epoch["epoch_type"] = Code.read_full(study_epoch["epoch_type"], store)
+    return study_epoch
