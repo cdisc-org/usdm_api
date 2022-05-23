@@ -33,15 +33,15 @@ class Study(ApiBaseModel):
     store.put(self.__class__.__name__, vars(self), self.uuid)
     return self.uuid
 
-  @classmethod
-  def read_full(cls, uuid, store):
-    study = store.get(cls.__name__, uuid)
-    study["study_type"] = Code.read_full(study["study_type"], store)
-    study["study_phase"] = Code.read_full(study["study_phase"], store)
-    if not study["study_identifier"] == None:
-      for idx, identifier in enumerate(study["study_identifier"]):
-        study["study_identifier"][idx] = StudyIdentifier.read_full(identifier, store)
-    if not study["study_design"] == None:
-      for idx, design in enumerate(study["study_design"]):
-        study["study_design"][idx] =StudyDesign.read_full(design, store)
-    return study
+  # @classmethod
+  # def read_full(cls, uuid, store):
+  #   study = store.get(cls.__name__, uuid)
+  #   study["study_type"] = Code.read_full(study["study_type"], store)
+  #   study["study_phase"] = Code.read_full(study["study_phase"], store)
+  #   if not study["study_identifier"] == None:
+  #     for idx, identifier in enumerate(study["study_identifier"]):
+  #       study["study_identifier"][idx] = StudyIdentifier.read_full(identifier, store)
+  #   if not study["study_design"] == None:
+  #     for idx, design in enumerate(study["study_design"]):
+  #       study["study_design"][idx] =StudyDesign.read_full(design, store)
+  #   return study

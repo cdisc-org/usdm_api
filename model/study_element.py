@@ -19,11 +19,11 @@ class StudyElement(ApiBaseModel):
     store.put(self.__class__.__name__, vars(self), self.uuid)
     return self.uuid
 
-  @classmethod
-  def read_full(cls, uuid, store):
-    study_element = store.get(cls.__name__, uuid)
-    if not study_element["start_rule"] == None:
-      study_element["start_rule"] = Rule.read_full(study_element["start_rule"], store)
-    if not study_element["end_rule"] == None:
-      study_element["end_rule"] = Rule.read_full(study_element["end_rule"], store)
-    return study_element
+  # @classmethod
+  # def read_full(cls, uuid, store):
+  #   study_element = store.get(cls.__name__, uuid)
+  #   if not study_element["start_rule"] == None:
+  #     study_element["start_rule"] = Rule.read_full(study_element["start_rule"], store)
+  #   if not study_element["end_rule"] == None:
+  #     study_element["end_rule"] = Rule.read_full(study_element["end_rule"], store)
+  #   return study_element

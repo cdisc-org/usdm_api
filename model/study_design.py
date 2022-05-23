@@ -1,6 +1,6 @@
 from typing import List, Union
-from .code import Code
 from .api_base_model import ApiBaseModel
+from .code import Code
 from .study_cell import StudyCell
 from .indication import Indication
 from uuid import uuid4
@@ -25,15 +25,15 @@ class StudyDesign(ApiBaseModel):
     store.put(self.__class__.__name__, vars(self), self.uuid)
     return self.uuid
 
-  @classmethod
-  def read_full(cls, uuid, store):
-    study_design = store.get(cls.__name__, uuid)
-    study_design["trial_type"] = Code.read_full(study_design["trial_type"], store)
-    study_design["trial_intent_type"] = Code.read_full(study_design["trial_intent_type"], store)
-    if not study_design["study_cell"] == None:
-      for idx, cell in enumerate(study_design["study_cell"]):
-        study_design["study_cell"][idx] = StudyCell.read_full(cell, store)
-    if not study_design["study_indication"] == None:
-      for idx, cell in enumerate(study_design["study_indication"]):
-        study_design["study_indication"][idx] = Indication.read_full(cell, store)
-    return study_design
+  # @classmethod
+  # def read_full(cls, uuid, store):
+  #   study_design = store.get(cls.__name__, uuid)
+  #   study_design["trial_type"] = Code.read_full(study_design["trial_type"], store)
+  #   study_design["trial_intent_type"] = Code.read_full(study_design["trial_intent_type"], store)
+  #   if not study_design["study_cell"] == None:
+  #     for idx, cell in enumerate(study_design["study_cell"]):
+  #       study_design["study_cell"][idx] = StudyCell.read_full(cell, store)
+  #   if not study_design["study_indication"] == None:
+  #     for idx, cell in enumerate(study_design["study_indication"]):
+  #       study_design["study_indication"][idx] = Indication.read_full(cell, store)
+  #   return study_design

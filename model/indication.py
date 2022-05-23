@@ -16,10 +16,10 @@ class Indication(ApiBaseModel):
     store.put(self.__class__.__name__, vars(self), self.uuid)
     return self.uuid
 
-  @classmethod
-  def read_full(cls, uuid, store):
-    study_indication = store.get(cls.__name__, uuid)
-    if not study_indication["indication"] == None:
-      for idx, indication in enumerate(study_indication["indication"]):
-        study_indication["indication"][idx] = Code.read_full(indication, store)
-    return study_indication
+  # @classmethod
+  # def read_full(cls, uuid, store):
+  #   study_indication = store.get(cls.__name__, uuid)
+  #   if not study_indication["indication"] == None:
+  #     for idx, indication in enumerate(study_indication["indication"]):
+  #       study_indication["indication"][idx] = Code.read_full(indication, store)
+  #   return study_indication
