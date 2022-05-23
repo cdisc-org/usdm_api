@@ -1,6 +1,7 @@
 from typing import Union
 from .api_base_model import ApiBaseModel
 from .code import Code
+from uuid import uuid4
 
 class StudyArm(ApiBaseModel):
   uuid: Union[str, None] = None
@@ -9,3 +10,14 @@ class StudyArm(ApiBaseModel):
   study_arm_origin: Union[Code, str, None]
   study_arm_type: Union[Code, str, None]
   study_origin_type: Union[Code, str, None]
+
+  def save(self, store):
+    self.uuid = str(uuid4())
+    if not self.study_arm_origin == None:
+      self.study_arm_origin = self.check_and_save(self.study_arm_origin, store)
+    if not self.study_arm_type == None:
+      self.study_arm_type = self.check_and_save(self.study_arm_type, store)
+    if not self.study_origin_type == None:
+      self.study_origin_type = self.check_and_save(self.study_origin_type, store)
+    store.put(self.__class__.__name__, vars(self), self.uuid)
+    return self.uuid

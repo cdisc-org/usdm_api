@@ -1,5 +1,6 @@
 import json
 import requests
+from model.study import Study
 
 #url = 'https://byrikz.deta.dev/'
 url = 'http://localhost:8000/'
@@ -36,7 +37,7 @@ def study_design_data(intent, type, cells):
   return {
     "trial_intent_type": intent,
     "trial_type": type,
-    "study_cells": cells
+    "study_cell": cells
   }
 
 def study_arm_data(name, description, arm_type, origin, origin_type):
@@ -50,10 +51,10 @@ def study_arm_data(name, description, arm_type, origin, origin_type):
 
 def study_epoch_data(name, description, sequence, epoch_type):
   return {
-    "study_arm_name": name,
-    "study_arm_desc": description,
+    "study_epoch_name": name,
+    "study_epoch_desc": description,
     "sequence_in_study": sequence,
-    "study_epoch_type": epoch_type
+    "epoch_type": epoch_type
   }
 
 def study_cell_data(arm, epoch):
@@ -109,4 +110,6 @@ r = requests.get("%sstudy_full/%s" % (url, uuid))
 print_response("Get Study Full", r)
 r = requests.get("%sstudy" % (url))
 print_response("List Studies", r)
+
+#print(Study.schema_json(indent=2))
 

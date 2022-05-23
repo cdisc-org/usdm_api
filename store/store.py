@@ -13,19 +13,19 @@ class Store():
   def put(self, klass, data, key):
     self.check(klass)
     if self.__deta == None:
-      print("%s -> %s" % (key, data))
+      print("%s: %s -> %s" % (klass.upper(), key, data))
       self.__store[klass][key] = data
     else:
+      print("%s: %s -> %s" % (klass.upper(), key, data))
       self.__store[klass].put(data, key)
 
   def get(self, klass, key):
-    print("Deta: %s" % (self.__deta))
     self.check(klass)
     if self.__deta == None:
-      print("Get %s for %s" % (key, klass))
+      print("%s: %s" % (klass.upper(), key))
       return self.__store[klass][key]
     else:
-      print("Get %s for %s" % (key, klass))
+      print("%s: %s" % (klass.upper(), key))
       return self.__store[klass].get(key)
 
   def list(self, klass):

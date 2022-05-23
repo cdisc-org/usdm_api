@@ -16,3 +16,13 @@ class StudyCell(ApiBaseModel):
     if not self.study_epoch == None:
       self.study_epoch = self.check_and_save(self.study_epoch, store)
     store.put(self.__class__.__name__, vars(self), self.uuid)
+    return self.uuid
+
+  @classmethod
+  def read_full(cls, uuid, store):
+    study_cell = store.get(cls.__name__, uuid)
+    if not study_cell["study_arm"] == None:
+      study_cell["study_arm"] = StudyArm.read_full(study_cell["study_arm"], store)
+    if not study_cell["study_epoch"] == None:
+      study_cell["study_epoch"] = StudyEpoch.read_full(study_cell["study_epoch"], store)
+    return study_cell
