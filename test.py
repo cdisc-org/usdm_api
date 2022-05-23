@@ -33,11 +33,12 @@ def study_identifier_data(name, desc, org_code):
     "org_code": org_code
   }
 
-def study_design_data(intent, type, cells):
+def study_design_data(intent, type, cells, indications):
   return {
     "trial_intent_type": intent,
     "trial_type": type,
-    "study_cell": cells
+    "study_cell": cells,
+    "study_indication": indications
   }
 
 def study_arm_data(name, description, arm_type, origin, origin_type):
@@ -77,6 +78,12 @@ def rule_data(description):
     "rule_desc": description
   }
 
+def study_indication_data(description, indications):
+  return {
+    "indication_desc": description,
+    "indication": indications
+  }
+
 def print_response(title, r):
   resp = json.loads(r.text)
   print(title)
@@ -90,6 +97,8 @@ identifier_1 = study_identifier_data("A1", "X Registery", "Registry")
 identifier_2 = study_identifier_data("A2", "X Registery", "Registry")
 identifiers = [identifier_1, identifier_2]
 
+indication_1 = study_indication_data("Something bad", [code_data("C6666x", "http://www.cdisc.org", "1", "BAD STUFF")])
+indication_2 = study_indication_data("Something similarly bad", [code_data("C6666y", "http://www.cdisc.org", "1", "BAD SIMILAR STUFF")])
 origin = code_data("C6574y", "http://www.cdisc.org", "1", "SUBJECT DATA")
 origin_type = code_data("C6574z", "http://www.cdisc.org", "1", "SOMETHING")
 arm_type = code_data("C6574x", "http://www.cdisc.org", "1", "NORMAL ARM")
@@ -115,8 +124,8 @@ study_cells.append(study_cell_data(study_arm_2, study_epoch_3, [study_element_6]
 intent = code_data("C3495x", "http://www.cdisc.org", "1", "BIG INTENT")
 design_1_type = code_data("C3496x", "http://www.cdisc.org", "1", "COMPLEX DESIGN I")
 design_2_type = code_data("C3496y", "http://www.cdisc.org", "1", "COMPLEX DESIGN II")
-design_1 = study_design_data(intent, design_1_type, study_cells)
-design_2 = study_design_data(intent, design_2_type, study_cells)
+design_1 = study_design_data(intent, design_1_type, study_cells, [indication_1])
+design_2 = study_design_data(intent, design_2_type, study_cells, [indication_1, indication_2])
 designs = [design_1, design_2]
 
 study = study_data("New Title", "1", "draft", "", study_type, phase, identifiers, designs)
