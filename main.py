@@ -12,7 +12,7 @@ the_store = Store()
 
 @app.get("/")
 def read_root():
-  return {"Version": "0.1", "System": "DDF API Simulator"}
+  return {"Version": "0.2", "System": "DDF API Simulator"}
 
 @app.get("/study/")
 def list_items():
@@ -23,9 +23,14 @@ async def create_item(study: Study):
   study.save(the_store)
   return study.uuid
 
+@app.get("/study_full/{uuid}")
+def read_full_item(uuid: str):
+  return Study.read_full(uuid, the_store)
+
 @app.get("/study/{uuid}")
 def read_item(uuid: str):
-  return the_store.get("Study", uuid)
+  #return the_store.get("Study", uuid)
+  Study.read(uuid, the_store)
 
 #@app.post("/protocol/")
 #async def create_item(protocol: StudyProtocol):

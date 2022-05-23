@@ -19,11 +19,13 @@ class Store():
       self.__store[klass].put(data, key)
 
   def get(self, klass, key):
+    print("Deta: %s" % (self.__deta))
     self.check(klass)
     if self.__deta == None:
-      print("%s" % (key))
+      print("Get %s for %s" % (key, klass))
       return self.__store[klass][key]
     else:
+      print("Get %s for %s" % (key, klass))
       return self.__store[klass].get(key)
 
   def list(self, klass):
