@@ -57,10 +57,24 @@ def study_epoch_data(name, description, sequence, epoch_type):
     "epoch_type": epoch_type
   }
 
-def study_cell_data(arm, epoch):
+def study_cell_data(arm, epoch, elements):
   return {
     "study_arm": arm,
-    "study_epoch": epoch
+    "study_epoch": epoch,
+    "study_element": elements
+  }
+
+def study_element_data(name, description, start = None, end = None):
+  return {
+    "study_element_name": name,
+    "study_element_desc": description,
+    "start_rule": start,
+    "end_rule": end
+  }
+
+def rule_data(description):
+  return {
+    "rule_desc": description
   }
 
 def print_response(title, r):
@@ -85,13 +99,19 @@ study_arm_2 = study_arm_data("Active", "Super Drug Arm", arm_type, origin, origi
 study_epoch_1 = study_epoch_data("Run In", "The run in", 1, epoch_type)
 study_epoch_2 = study_epoch_data("Treatment", "The drug!", 1, epoch_type)
 study_epoch_3 = study_epoch_data("Follow Up", "Go away", 1, epoch_type)
+study_element_1 = study_element_data("Element 1", "First element")
+study_element_2 = study_element_data("Element 2", "Second element")
+study_element_3 = study_element_data("Element 3", "Third element")
+study_element_4 = study_element_data("Element 4", "Fourth element")
+study_element_5 = study_element_data("Element 5", "Fifth element")
+study_element_6 = study_element_data("Element 6", "Sixth element")
 study_cells = []
-study_cells.append(study_cell_data(study_arm_1, study_epoch_1))
-study_cells.append(study_cell_data(study_arm_1, study_epoch_2))
-study_cells.append(study_cell_data(study_arm_1, study_epoch_3))
-study_cells.append(study_cell_data(study_arm_2, study_epoch_1))
-study_cells.append(study_cell_data(study_arm_2, study_epoch_2))
-study_cells.append(study_cell_data(study_arm_2, study_epoch_3))
+study_cells.append(study_cell_data(study_arm_1, study_epoch_1, [study_element_1]))
+study_cells.append(study_cell_data(study_arm_1, study_epoch_2, [study_element_2]))
+study_cells.append(study_cell_data(study_arm_1, study_epoch_3, [study_element_3]))
+study_cells.append(study_cell_data(study_arm_2, study_epoch_1, [study_element_4]))
+study_cells.append(study_cell_data(study_arm_2, study_epoch_2, [study_element_5]))
+study_cells.append(study_cell_data(study_arm_2, study_epoch_3, [study_element_6]))
 intent = code_data("C3495x", "http://www.cdisc.org", "1", "BIG INTENT")
 design_1_type = code_data("C3496x", "http://www.cdisc.org", "1", "COMPLEX DESIGN I")
 design_2_type = code_data("C3496y", "http://www.cdisc.org", "1", "COMPLEX DESIGN II")
