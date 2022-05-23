@@ -13,7 +13,7 @@ class Store():
   def put(self, klass, data, key):
     self.check(klass)
     if self.__deta == None:
-      #print("%s -> %s" % (key, data))
+      print("%s -> %s" % (key, data))
       self.__store[klass][key] = data
     else:
       self.__store[klass].put(data, key)
@@ -21,7 +21,7 @@ class Store():
   def get(self, klass, key):
     self.check(klass)
     if self.__deta == None:
-      #print("%s" % (key))
+      print("%s" % (key))
       return self.__store[klass][key]
     else:
       return self.__store[klass].get(key)
