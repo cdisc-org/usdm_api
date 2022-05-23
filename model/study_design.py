@@ -23,6 +23,8 @@ class StudyDesign(ApiBaseModel):
   @classmethod
   def read_full(cls, uuid, store):
     study_design = store.get(cls.__name__, uuid)
+    study_design["trial_type"] = Code.read(study_design["trial_type"], store)
+    study_design["trial_intent_type"] = Code.read(study_design["trial_intent_type"], store)
     if not study_design["study_cell"] == None:
       for idx, cell in enumerate(study_design["study_cell"]):
         study_design["study_cell"][idx] = StudyCell.read(cell, store)

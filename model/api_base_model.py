@@ -19,5 +19,4 @@ class ApiBaseModel(BaseModel):
 
   @classmethod
   def read(cls, uuid, store):
-    print("NAME:", cls.__name__)
     return store.get(cls.__name__, uuid)

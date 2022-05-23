@@ -34,9 +34,9 @@ class Study(ApiBaseModel):
 
   @classmethod
   def read_full(cls, uuid, store):
-    print("xxxx:", cls.__name__)
     study = store.get(cls.__name__, uuid)
-    print("xxxx:", study)
+    study["study_type"] = Code.read(study["study_type"], store)
+    study["study_phase"] = Code.read(study["study_phase"], store)
     if not study["study_identifier"] == None:
       for idx, identifier in enumerate(study["study_identifier"]):
         study["study_identifier"][idx] = StudyIdentifier.read(identifier, store)
