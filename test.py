@@ -2,8 +2,8 @@ import json
 import requests
 from model.study import Study
 
-url = 'https://byrikz.deta.dev/'
-#url = 'http://localhost:8000/'
+#url = 'https://byrikz.deta.dev/'
+url = 'http://localhost:8000/'
 
 def code_data(code, system, version, decode):
   return {

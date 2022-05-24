@@ -2,7 +2,8 @@ from typing import List, Union
 from .api_base_model import ApiBaseModel
 from .code import Code
 
-class Indication(ApiBaseModel):
+class IntercurrentEvent(ApiBaseModel):
   uuid: Union[str, None] = None
-  indication_desc: str
-  indication: Union[List[Code], List[str], None]
+  intercurrent_name: str
+  intercurrent_desc: str
+  coding: Union[Code, str, None]

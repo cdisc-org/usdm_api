@@ -1,8 +1,8 @@
 from typing import List, Union
 from .api_base_model import ApiBaseModel
 from .code import Code
+from .endpoint import Endpoint
 
-class Indication(ApiBaseModel):
+class Population(ApiBaseModel):
   uuid: Union[str, None] = None
-  indication_desc: str
-  indication: Union[List[Code], List[str], None]
+  population_desc: str

@@ -2,7 +2,7 @@ from typing import List, Union
 from .api_base_model import ApiBaseModel
 from .code import Code
 
-class Indication(ApiBaseModel):
+class Estimand(ApiBaseModel):
   uuid: Union[str, None] = None
-  indication_desc: str
-  indication: Union[List[Code], List[str], None]
+  summary_measure: str
+  population: Union[Code, str, None]
