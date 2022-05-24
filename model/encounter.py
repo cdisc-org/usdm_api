@@ -3,7 +3,7 @@ from .api_base_model import ApiBaseModel
 from .code import Code
 from .rule import Rule
 
-class Code(ApiBaseModel):
+class Encounter(ApiBaseModel):
   uuid: Union[str, None] = None
   encounter_desc: str
   name: str
