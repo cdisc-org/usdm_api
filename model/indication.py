@@ -8,13 +8,13 @@ class Indication(ApiBaseModel):
   indication_desc: str
   indication: Union[List[Code], List[str], None]
 
-  def save(self, store):
-    self.uuid = str(uuid4())
-    if not self.indication == None:
-      for idx, design in enumerate(self.indication):
-        self.indication[idx] = self.check_and_save(design, store)
-    store.put(self.__class__.__name__, vars(self), self.uuid)
-    return self.uuid
+  # def save(self, store):
+  #   self.uuid = str(uuid4())
+  #   if not self.indication == None:
+  #     for idx, design in enumerate(self.indication):
+  #       self.indication[idx] = self.check_and_save(design, store)
+  #   store.put(self.__class__.__name__, vars(self), self.uuid)
+  #   return self.uuid
 
   # @classmethod
   # def read_full(cls, uuid, store):

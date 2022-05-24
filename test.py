@@ -2,8 +2,8 @@ import json
 import requests
 from model.study import Study
 
-#url = 'https://byrikz.deta.dev/'
-url = 'http://localhost:8000/'
+url = 'https://byrikz.deta.dev/'
+#url = 'http://localhost:8000/'
 
 def code_data(code, system, version, decode):
   return {
@@ -139,6 +139,4 @@ r = requests.get("%sstudy_full/%s" % (url, uuid))
 print_response("Get Study Full", r)
 r = requests.get("%sstudy" % (url))
 print_response("List Studies", r)
-
-#print(Study.schema_json(indent=2))
 

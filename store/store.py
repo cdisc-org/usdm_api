@@ -47,8 +47,13 @@ class Store():
     return results
 
   def check(self, name):
+    print("CHECK: >%s<" % (name))
+    print("CHECK:", self.__store.keys())
     if not name in self.__store:
+      print("CHECK: A")
       if self.__deta == None:
         self.__store[name] = {}
+        print("CHECK: B")
       else:
         self.__store[name] = self.__deta.Base(name) 
+        print("CHECK: C")

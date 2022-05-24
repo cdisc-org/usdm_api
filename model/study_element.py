@@ -10,14 +10,14 @@ class StudyElement(ApiBaseModel):
   start_rule: Union[Rule, str, None] = None
   end_rule: Union[Rule, str, None] = None
 
-  def save(self, store):
-    self.uuid = str(uuid4())
-    if not self.start_rule == None:
-      self.start_rule = self.check_and_save(self.start_rule, store)
-    if not self.end_rule == None:
-      self.end_rule = self.check_and_save(self.end_rule, store)
-    store.put(self.__class__.__name__, vars(self), self.uuid)
-    return self.uuid
+  # def save(self, store):
+  #   self.uuid = str(uuid4())
+  #   if not self.start_rule == None:
+  #     self.start_rule = self.check_and_save(self.start_rule, store)
+  #   if not self.end_rule == None:
+  #     self.end_rule = self.check_and_save(self.end_rule, store)
+  #   store.put(self.__class__.__name__, vars(self), self.uuid)
+  #   return self.uuid
 
   # @classmethod
   # def read_full(cls, uuid, store):

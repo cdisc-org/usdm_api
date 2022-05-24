@@ -20,17 +20,16 @@ def list_items():
 
 @app.post("/study/")
 async def create_item(study: Study):
-  study.save(the_store)
+  study.recursive_save(the_store)
   return study.uuid
 
 @app.get("/study_full/{uuid}")
 def read_full_item(uuid: str):
-  return Study.read_full(uuid, the_store)
+  return Study.recursive_read(uuid, the_store)
 
 @app.get("/study/{uuid}")
 def read_item(uuid: str):
-  #return the_store.get("Study", uuid)
-  Study.read(uuid, the_store)
+  return Study.read(uuid, the_store)
 
 #@app.post("/protocol/")
 #async def create_item(protocol: StudyProtocol):

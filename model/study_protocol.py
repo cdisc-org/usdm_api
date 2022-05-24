@@ -12,9 +12,9 @@ class StudyProtocol(ApiBaseModel):
   version: str
   study_protocol_amendments: Union[List[Amendment], List[str], None] = []
 
-  def save(self, store):
-    self.uuid = str(uuid4())
-    for idx, amendment in enumerate(self.study_protocol_amendments, store):
-      self.study_protocol_amendments[idx] = self.check_and_save(amendment, store)
-    store.put(self.__class__.__name__, vars(self), self.uuid)
-    return self.uuid
+  # def save(self, store):
+  #   self.uuid = str(uuid4())
+  #   for idx, amendment in enumerate(self.study_protocol_amendments, store):
+  #     self.study_protocol_amendments[idx] = self.check_and_save(amendment, store)
+  #   store.put(self.__class__.__name__, vars(self), self.uuid)
+  #   return self.uuid
