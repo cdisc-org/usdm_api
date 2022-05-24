@@ -13,6 +13,20 @@ def code_data(code, system, version, decode):
     "decode": decode
   }
 
+def endpoint_data(description, purpose, level):
+  return {
+    "endpoint_desc": description,
+    "endpoint_purpose": purpose,
+    "outcome_level": level
+  }
+
+def objective_data(description, level, endpoints):
+  return {
+    "objective_desc": description,
+    "objective_endpoint": endpoints,
+    "objective_level": level
+  }
+
 def study_data(title, version, status, protocol_version, type, phase, identifiers, designs):
   return {
     "study_title": title,
@@ -33,12 +47,13 @@ def study_identifier_data(name, desc, org_code):
     "org_code": org_code
   }
 
-def study_design_data(intent, type, cells, indications):
+def study_design_data(intent, type, cells, indications, objectives):
   return {
     "trial_intent_type": intent,
     "trial_type": type,
     "study_cell": cells,
-    "study_indication": indications
+    "study_indication": indications,
+    "study_objective": objectives
   }
 
 def study_arm_data(name, description, arm_type, origin, origin_type):
@@ -91,6 +106,22 @@ def print_response(title, r):
   print("")
   print("")
 
+endpoint_1 = endpoint_data(
+  "Endpoint 1", 
+  code_data("C9834x", "http://www.cdisc.org", "1", "PURPOSE"), 
+  code_data("C9834y", "http://www.cdisc.org", "1", "LEVEL")
+  )
+endpoint_2 = endpoint_data(
+  "Endpoint 2", 
+  code_data("C9834x", "http://www.cdisc.org", "1", "PURPOSE"), 
+  code_data("C9834y", "http://www.cdisc.org", "1", "LEVEL")
+  )
+objective_1 = objective_data(
+  "Objective Level 1", 
+  code_data("C9844x", "http://www.cdisc.org", "1", "OBJ LEVEL"), 
+  [endpoint_1, endpoint_2]
+)
+
 phase = code_data("C1234a", "http://www.cdisc.org", "1", "PHASE III")
 study_type = code_data("C1254x", "http://www.cdisc.org", "1", "SIMPLE")
 identifier_1 = study_identifier_data("A1", "X Registery", "Registry")
@@ -124,8 +155,8 @@ study_cells.append(study_cell_data(study_arm_2, study_epoch_3, [study_element_6]
 intent = code_data("C3495x", "http://www.cdisc.org", "1", "BIG INTENT")
 design_1_type = code_data("C3496x", "http://www.cdisc.org", "1", "COMPLEX DESIGN I")
 design_2_type = code_data("C3496y", "http://www.cdisc.org", "1", "COMPLEX DESIGN II")
-design_1 = study_design_data(intent, design_1_type, study_cells, [indication_1])
-design_2 = study_design_data(intent, design_2_type, study_cells, [indication_1, indication_2])
+design_1 = study_design_data(intent, design_1_type, study_cells, [indication_1], [objective_1])
+design_2 = study_design_data(intent, design_2_type, study_cells, [indication_1, indication_2], [objective_1])
 designs = [design_1, design_2]
 
 study = study_data("New Title", "1", "draft", "", study_type, phase, identifiers, designs)
@@ -133,10 +164,10 @@ study = study_data("New Title", "1", "draft", "", study_type, phase, identifiers
 r = requests.post("%sstudy" % (url), data=json.dumps(study))
 print_response("Post Study", r)
 uuid = r.json()
-r = requests.get("%sstudy/%s" % (url, uuid))
-print_response("Get Study", r)
+#r = requests.get("%sstudy/%s" % (url, uuid))
+#print_response("Get Study", r)
 r = requests.get("%sstudy_full/%s" % (url, uuid))
 print_response("Get Study Full", r)
-r = requests.get("%sstudy" % (url))
-print_response("List Studies", r)
+#r = requests.get("%sstudy" % (url))
+#print_response("List Studies", r)
 
