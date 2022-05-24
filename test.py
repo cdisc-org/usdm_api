@@ -1,8 +1,8 @@
+import sys
 import json
 import requests
 
-url = 'https://byrikz.deta.dev/'
-#url = 'http://localhost:8000/'
+endpoints = { "remote": 'https://byrikz.deta.dev/', "local": 'http://localhost:8000/' }
 
 def code_data(code, system, version, decode):
   return {
@@ -268,12 +268,18 @@ designs = [design_1, design_2]
 
 study = study_data("New Title", "1", "draft", "", study_type, phase, identifiers, designs)
 
-r = requests.post("%sstudy" % (url), data=json.dumps(study))
-print_response("Post Study", r)
-uuid = r.json()
-#r = requests.get("%sstudy/%s" % (url, uuid))
-#print_response("Get Study", r)
-r = requests.get("%sstudy_full/%s" % (url, uuid))
-print_response("Get Study Full", r)
-#r = requests.get("%sstudy" % (url))
-#print_response("List Studies", r)
+if __name__ == "__main__":
+  endpoint = "local"
+  if len(sys.argv) > 1 and sys.argv[1].lower() == "remote":
+    endpoint = "remote"
+  url = endpoints[endpoint]
+
+  #r = requests.post("%sstudy" % (url), data=json.dumps(study))
+  #print_response("Post Study", r)
+  #uuid = r.json()
+  #r = requests.get("%sstudy/%s" % (url, uuid))
+  #print_response("Get Study", r)
+  #r = requests.get("%sstudy_full/%s" % (url, uuid))
+  #print_response("Get Study Full", r)
+  r = requests.get("%sstudy" % (url))
+  print_response("List Studies", r)
