@@ -7,12 +7,15 @@ from model.api_base_model import ApiBaseModel
 from model.study import Study
 from model.study_protocol import StudyProtocol
 
+VERSION = "0.3"
+SYSTEM_NAME = "DDF API Simulator"
+
 app = FastAPI()
 the_store = Store()
 
 @app.get("/")
 def read_root():
-  return {"Version": "0.2", "System": "DDF API Simulator"}
+  return {"Version":VERSION, "System": SYSTEM_NAME}
 
 @app.get("/study/")
 def list_items():
