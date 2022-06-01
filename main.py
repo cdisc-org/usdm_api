@@ -1,10 +1,11 @@
 from typing import List, Union
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from uuid import uuid4
 from store.store import Store
 from model.api_base_model import ApiBaseModel
 from model.study import Study
+from model.study_identifier import StudyIdentifier
 from model.study_protocol import StudyProtocol
 
 VERSION = "0.3"
@@ -18,23 +19,37 @@ def read_root():
   return {"Version":VERSION, "System": SYSTEM_NAME}
 
 @app.get("/study/")
-def list_items():
+def list_studies():
   return the_store.list("Study")
 
 @app.post("/study/")
-async def create_item(study: Study):
+async def create_study(study: Study):
   study.recursive_save(the_store)
   return study.uuid
 
 @app.get("/study_full/{uuid}")
-def read_full_item(uuid: str):
+def read_full_study(uuid: str):
+  if uuid not in the_store.list("Study"):
+    raise HTTPException(status_code=404, detail="Item not found")
   return Study.recursive_read(uuid, the_store)
 
 @app.get("/study/{uuid}")
-def read_item(uuid: str):
+def read_study(uuid: str):
+  if uuid not in the_store.list("Study"):
+    raise HTTPException(status_code=404, detail="Item not found")
   return Study.read(uuid, the_store)
 
-#@app.post("/protocol/")
-#async def create_item(protocol: StudyProtocol):
-#  protocol.save(the_store)
-#  return protocol.uuid
+@app.get("/study_identifier/")
+def list_study_identifiers():
+  return the_store.list("StudyIdentifier")
+
+@app.post("/study_identifier/")
+async def create_study_identifier(identifier: StudyIdentifier):
+  identifier.recursive_save(the_store)
+  return identifier.uuid
+
+@app.get("/study_identifier/{uuid}")
+def read_study_identifier(uuid: str):
+  if uuid not in the_store.list("StudyIdentifier"):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return StudyIdentifier.read(uuid, the_store)

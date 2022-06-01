@@ -20,8 +20,8 @@ class ApiBaseModel(BaseModel):
 
   @classmethod
   def read(cls, uuid, store):
-    #print("READ:", uuid)
-    #print("READ:", cls.__name__)
+    print("READ:", uuid)
+    print("READ:", cls.__name__)
     return store.get(cls.__name__, uuid)
 
   def recursive_save(self, store):
@@ -50,6 +50,11 @@ class ApiBaseModel(BaseModel):
               for item in getattr(self, key):
                 result.append(klass.recursive_save(item, store))
               setattr(self, key, result)
+      elif "$ref" in definition:
+        klass_str = definition["$ref"].replace("#/definitions/", "")
+        klass = Klass.get(klass_str)
+        if getattr(self, key) != None:
+          setattr(self, key, klass.recursive_save(getattr(self, key), store)) 
     self.save(store)
     return self.uuid
 
@@ -84,4 +89,9 @@ class ApiBaseModel(BaseModel):
               for item in instance[key]:
                 result.append(klass.recursive_read(item, store))
               instance[key] = result
+      elif "$ref" in definition:
+        klass_str = definition["$ref"].replace("#/definitions/", "")
+        klass = Klass.get(klass_str)
+        if instance[key] != None:
+          instance[key] = klass.recursive_read(instance[key], store)
     return instance

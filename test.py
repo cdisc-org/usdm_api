@@ -51,9 +51,12 @@ objective_1 = objective_data(
 
 phase = code_data("C1234a", "http://www.cdisc.org", "1", "PHASE III")
 study_type = code_data("C1254x", "http://www.cdisc.org", "1", "SIMPLE")
-identifier_1 = study_identifier_data("A1", "X Registery", "Registry")
-identifier_2 = study_identifier_data("A2", "X Registery", "Registry")
-identifiers = [identifier_1, identifier_2]
+registry_type = code_data("C2365x", "http://www.cdisc.org", "1", "REGISTRY_STUDY_IDENTIFIER")
+sponsor_type = code_data("C2365y", "http://www.cdisc.org", "1", "SPONSOR_STUDY_IDENTIFIER")
+identifier_1 = study_identifier_data("CT-GOV-1234", registry_type, "CT.gov")
+identifier_2 = study_identifier_data("EU-5678", registry_type, "EUDRACT")
+identifier_3 = study_identifier_data("ACME-5678", sponsor_type, "ACME Pharma")
+identifiers = [identifier_1, identifier_2, identifier_3]
 
 indication_1 = study_indication_data("Something bad", [code_data("C6666x", "http://www.cdisc.org", "1", "BAD STUFF")])
 indication_2 = study_indication_data("Something similarly bad", [code_data("C6666y", "http://www.cdisc.org", "1", "BAD SIMILAR STUFF")])
@@ -94,3 +97,4 @@ if __name__ == "__main__":
   service.get("study", uuid)
   service.get("study_full", uuid)
   service.get("study")
+  service.get("study_identifier")

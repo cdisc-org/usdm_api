@@ -1,3 +1,19 @@
+def soa(df):
+  encounters = []
+  activities = []
+  # data = {'activity_1': ["x", "", "", ""], 'activity_2': ["", '', 'X', '']}
+  # pd.DataFrame.from_dict(data, orient='index', columns=['Visit 1', 'Visit 2', 'Visit 3', 'Visit 4'])
+  columns = df.columns.values.tolist()
+  rows = list(df.index)
+  for column in columns:
+    encounters.append(encounter_data(column, "The %s visit" % (column), None, None, None))
+  for row in rows:
+    activities.append(activity_data(row))
+  for index, row in df.iterrows():
+    for column in df:
+      if row[column].upper() == "X":
+        workflow_item_data("WFI %s,%s)", None, None, encounters[column], activities[row])
+
 def code_data(code, system, version, decode):
   return {
     "code": code,
@@ -94,11 +110,11 @@ def intercurrent_event_data(name, description, coding):
            "coding": coding
   }
 
-def study_identifier_data(name, desc, org_code):
+def study_identifier_data(identifier, identifier_type, org_name):
   return {
-    "study_identifier_desc": name,
-    "study_identifier_name": desc,
-    "org_code": org_code
+    "study_identifier": identifier,
+    "study_identifier_type": identifier_type,
+    "organization_name": org_name
   }
 
 def study_arm_data(name, description, arm_type, origin, origin_type):
