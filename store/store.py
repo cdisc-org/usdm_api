@@ -12,8 +12,9 @@ class Store():
     self.__store.put(data, self.store_key(klass, key))
 
   def get(self, klass, key):
-    #return json.loads(self.__store.get(self.store_key(klass, key)))
-    return self.__store.get(self.store_key(klass, key))
+    data = self.__store.get(self.store_key(klass, key))
+    data.pop('key', None)
+    return data
 
   def list(self, klass):
     results = []
@@ -30,4 +31,4 @@ class Store():
     return key.replace("%s." % (klass), "")
 
   def of_klass(self, klass, key):
-    return key.startswith("%s" % (klass))
+    return key.startswith("%s." % (klass))

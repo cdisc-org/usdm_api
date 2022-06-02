@@ -98,10 +98,10 @@ study = study_data("New Title", "1", "draft", study_type, phase, identifiers, pr
 if __name__ == "__main__":
   service = Service(sys.argv)
   uuid = service.post("study", study)
-  #service.get("study", uuid)
+  service.get("study", uuid)
   service.get("study_full", uuid)
-  #service.get("study")
-  #service.get("study_identifier")
+  service.get("study")
+  service.get("study_identifier")
   uuids = service.get("organisation")
   service.get("organisation", uuids[0])
   service.get("organisation_full", uuids[0])

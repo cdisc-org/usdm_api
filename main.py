@@ -71,14 +71,12 @@ async def create_organisation(org: Organisation):
 
 @app.get("/organisation/{uuid}", response_model=OrganisationResponse)
 def read_organisation(uuid: UUID):
-  print("A", Organisation.list(store))
   if str(uuid) not in Organisation.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return Organisation.read(store, str(uuid))
 
 @app.get("/organisation_full/{uuid}")
 def read_organisation_full(uuid: UUID):
-  print("A", Organisation.list(store))
   if str(uuid) not in Organisation.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return Organisation.recursive_read(store, str(uuid))
