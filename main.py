@@ -1,11 +1,11 @@
 from typing import List, Union
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from uuid import uuid4
+from uuid import UUID
 from store.store import Store
 from model.api_base_model import ApiBaseModel
 from model.study import Study
-from model.study_identifier import StudyIdentifier
+from model.study_identifier import StudyIdentifier, StudyIdentifierResponse
 from model.study_protocol import StudyProtocol
 
 VERSION = "0.3"
@@ -48,8 +48,8 @@ async def create_study_identifier(identifier: StudyIdentifier):
   identifier.recursive_save(the_store)
   return identifier.uuid
 
-@app.get("/study_identifier/{uuid}")
-def read_study_identifier(uuid: str):
+@app.get("/study_identifier/{uuid}", response_model=StudyIdentifierResponse)
+def read_study_identifier(uuid: UUID):
   if uuid not in the_store.list("StudyIdentifier"):
     raise HTTPException(status_code=404, detail="Item not found")
   return StudyIdentifier.read(uuid, the_store)
