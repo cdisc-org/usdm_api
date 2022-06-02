@@ -19,7 +19,8 @@ class ApiBaseModel(BaseModel):
 
   def save(self, store):
     self.uuid = str(uuid4())
-    store.put( vars(self), self.__class__.__name__, self.uuid)
+    #store.put(vars(self), self.__class__.__name__, self.uuid)
+    store.put(self, self.__class__.__name__, self.uuid)
     return self.uuid
 
   def recursive_save(self, store):

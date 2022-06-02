@@ -1,5 +1,5 @@
 import os
-#import json
+import json
 from deta import Deta
 
 class Store():
@@ -9,10 +9,12 @@ class Store():
     self.__store = self.__deta.Base("ddf_service")
 
   def put(self, data, klass, key):
-    self.__store.put(data, self.store_key(klass, key))
+    #self.__store.put(data, self.store_key(klass, key))
+    self.__store.put(data.json(), self.store_key(klass, key))
 
   def get(self, klass, key):
-    data = self.__store.get(self.store_key(klass, key))
+    #data = self.__store.get(self.store_key(klass, key))
+    data = json.loads(self.__store.get(self.store_key(klass, key))["value"])
     data.pop('key', None)
     return data
 
