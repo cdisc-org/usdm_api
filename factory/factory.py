@@ -110,11 +110,18 @@ def intercurrent_event_data(name, description, coding):
            "coding": coding
   }
 
-def study_identifier_data(identifier, identifier_type, org_name):
+def study_identifier_data(identifier, organisation):
   return {
     "study_identifier": identifier,
-    "study_identifier_type": identifier_type,
-    "organization_name": org_name
+    "study_identifier_scope": organisation
+  }
+
+def organization_data(identifier_scheme, org_identifier, org_name, organisation_type):
+  return {
+    "organisation_identifier_scheme": identifier_scheme,
+    "organisation_identifier": org_identifier,
+    "organisation_name": org_name,
+    "organisation_type": organisation_type
   }
 
 def study_arm_data(name, description, arm_type, origin, origin_type):
@@ -160,16 +167,15 @@ def study_indication_data(description, indications):
     "indication": indications
   }
 
-def study_data(title, version, status, protocol_version, type, phase, identifiers, designs):
+def study_data(title, version, status, type, phase, identifiers, protocol_versions, designs):
   return {
     "study_title": title,
     "study_version": version,
     "study_status": status,
-    "study_protocol_version": protocol_version,
     "study_type":  type,
     "study_phase":  phase,
     "study_identifier": identifiers,
-    "study_protocol_reference": None,
+    "study_protocol_version": protocol_versions,
     "study_design": designs
   }
 

@@ -22,6 +22,7 @@ class ApiBaseModel(BaseModel):
   def read(cls, uuid, store):
     print("READ:", uuid)
     print("READ:", cls.__name__)
+    print("DATA:", store.get(cls.__name__, uuid))
     return store.get(cls.__name__, uuid)
 
   def recursive_save(self, store):
@@ -65,22 +66,23 @@ class ApiBaseModel(BaseModel):
 
     schema = cls.schema_json()
     instance = store.get(cls.__name__, uuid)
+    print("RECURSIVE_READ 0: %s" % (instance))
     x = json.loads(schema)
     for key, definition in x["properties"].items():
-      #print("RECURSIVE_READ 1: %s => %s" % (key, definition))
+      print("RECURSIVE_READ 1: %s => %s" % (key, definition))
       if "anyOf" in definition:
         any_of = definition["anyOf"]
-        #print("RECURSIVE_READ 2: %s" % (any_of))
+        print("RECURSIVE_READ 2: %s" % (any_of))
         for any_of_item in any_of:
           if "$ref" in any_of_item:
-            #print("RECURSIVE_READ 3: %s" % (any_of_item))
+            print("RECURSIVE_READ 3: %s" % (any_of_item))
             klass_str = any_of_item["$ref"].replace("#/definitions/", "")
             klass = Klass.get(klass_str)
             if instance[key] != None:
               instance[key] = klass.recursive_read(instance[key], store)
           elif "items" in any_of_item:
             if "$ref" in any_of_item["items"]:
-              #print("RECURSIVE_READ 4: %s" % (any_of_item["items"]))
+              print("RECURSIVE_READ 4: %s" % (any_of_item["items"]))
               #print("RECURSIVE_READ 5: %s" % (key))
               #print("RECURSIVE_READ 6: %s" % (instance[key]))
               klass_str = any_of_item["items"]["$ref"].replace("#/definitions/", "")
@@ -92,6 +94,8 @@ class ApiBaseModel(BaseModel):
       elif "$ref" in definition:
         klass_str = definition["$ref"].replace("#/definitions/", "")
         klass = Klass.get(klass_str)
+        print("RECURSIVE_READ 7: %s" % (instance[key]))
+        print("RECURSIVE_READ 8: %s" % (definition))
         if instance[key] != None:
           instance[key] = klass.recursive_read(instance[key], store)
     return instance
