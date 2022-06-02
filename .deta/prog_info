@@ -1,1 +1,1 @@
-{"id":"5112cec4-cd84-4ee0-beef-a10d42cd1822","space":23001,"runtime":"python3.9","name":"ddf_service","path":"byrikz","project":"a0c4l6ln","account":"144798365827","region":"eu-central-1","deps":["fastapi","deta"],"envs":null,"public":true,"log_level":"debug","cron":""}
+{"id":"5112cec4-cd84-4ee0-beef-a10d42cd1822","space":23001,"runtime":"python3.9","name":"ddf_service","path":"byrikz","project":"a0c4l6ln","account":"144798365827","region":"eu-central-1","deps":["fastapi","deta"],"envs":["DDF_SERVICE_PROJ_KEY"],"public":true,"log_level":"debug","cron":""}
