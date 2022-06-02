@@ -190,3 +190,14 @@ def study_design_data(intent, type, cells, indications, objectives, populations,
     "study_investigational_interventions": interventions,
     "study_workflow": workflows
   }
+
+def study_protocol_version_data(brief_title, official_title, public_title, scientific_title, version, amendment, effective_date):
+  return {
+    "brief_title": brief_title,
+    "offical_title": official_title,
+    "public_title": public_title,
+    "scientific_title": scientific_title,
+    "version": version,
+    "amendment": amendment,
+    "effective_date": effective_date
+  }
