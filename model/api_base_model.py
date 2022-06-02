@@ -1,29 +1,26 @@
 from pydantic import BaseModel
 from uuid import uuid4
+from store.store import Store
 import json
 
 class ApiBaseModel(BaseModel):
 
-  def check_and_save(self, item, store):
+  def check_and_save(self, store, item):
     if item == None:
       return None
     elif isinstance(item, str):
       return item
     else:
-      return item.save(store)
+      return self.save(item)
+
+  @classmethod
+  def list(cls, store):
+    return store.list(cls.__name__)
 
   def save(self, store):
     self.uuid = str(uuid4())
-    #print("Class:", self.__class__.__name__)
-    store.put(self.__class__.__name__, vars(self), self.uuid)
+    store.put( vars(self), self.__class__.__name__, self.uuid)
     return self.uuid
-
-  @classmethod
-  def read(cls, uuid, store):
-    print("READ:", uuid)
-    print("READ:", cls.__name__)
-    print("DATA:", store.get(cls.__name__, uuid))
-    return store.get(cls.__name__, uuid)
 
   def recursive_save(self, store):
 
@@ -60,7 +57,13 @@ class ApiBaseModel(BaseModel):
     return self.uuid
 
   @classmethod
-  def recursive_read(cls, uuid, store):
+  def read(cls, store, uuid):
+    print("READ:", uuid)
+    print("READ:", cls.__name__)
+    return store.get(cls.__name__, uuid) 
+
+  @classmethod
+  def recursive_read(cls, store, uuid):
 
     from .klass import Klass
 
@@ -79,7 +82,7 @@ class ApiBaseModel(BaseModel):
             klass_str = any_of_item["$ref"].replace("#/definitions/", "")
             klass = Klass.get(klass_str)
             if instance[key] != None:
-              instance[key] = klass.recursive_read(instance[key], store)
+              instance[key] = klass.recursive_read(store, instance[key])
           elif "items" in any_of_item:
             if "$ref" in any_of_item["items"]:
               print("RECURSIVE_READ 4: %s" % (any_of_item["items"]))
@@ -89,7 +92,7 @@ class ApiBaseModel(BaseModel):
               klass = Klass.get(klass_str)
               result = []
               for item in instance[key]:
-                result.append(klass.recursive_read(item, store))
+                result.append(klass.recursive_read(store, item))
               instance[key] = result
       elif "$ref" in definition:
         klass_str = definition["$ref"].replace("#/definitions/", "")
@@ -97,5 +100,5 @@ class ApiBaseModel(BaseModel):
         print("RECURSIVE_READ 7: %s" % (instance[key]))
         print("RECURSIVE_READ 8: %s" % (definition))
         if instance[key] != None:
-          instance[key] = klass.recursive_read(instance[key], store)
+          instance[key] = klass.recursive_read(store, instance[key])
     return instance

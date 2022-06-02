@@ -53,9 +53,12 @@ phase = code_data("C1234a", "http://www.cdisc.org", "1", "PHASE III")
 study_type = code_data("C1254x", "http://www.cdisc.org", "1", "SIMPLE")
 registry_type = code_data("C2365x", "http://www.cdisc.org", "1", "REGISTRY_STUDY_IDENTIFIER")
 sponsor_type = code_data("C2365y", "http://www.cdisc.org", "1", "SPONSOR_STUDY_IDENTIFIER")
-identifier_1 = study_identifier_data("CT-GOV-1234", registry_type, "CT.gov")
-identifier_2 = study_identifier_data("EU-5678", registry_type, "EUDRACT")
-identifier_3 = study_identifier_data("ACME-5678", sponsor_type, "ACME Pharma")
+organisation_1 = organization_data("DUNS", "123456789", "ACME Pharma", sponsor_type)
+organisation_2 = organization_data("FDA", "CT-GOV", "ClinicalTrials.gov", registry_type)
+organisation_3 = organization_data("EMA", "EudraCT", "European Union Drug Regulating Authorities Clinical Trials Database", registry_type)
+identifier_1 = study_identifier_data("CT-GOV-1234", organisation_2)
+identifier_2 = study_identifier_data("EU-5678", organisation_3)
+identifier_3 = study_identifier_data("ACME-5678", organisation_1)
 identifiers = [identifier_1, identifier_2, identifier_3]
 
 indication_1 = study_indication_data("Something bad", [code_data("C6666x", "http://www.cdisc.org", "1", "BAD STUFF")])
@@ -88,13 +91,18 @@ design_2_type = code_data("C3496y", "http://www.cdisc.org", "1", "COMPLEX DESIGN
 design_1 = study_design_data(intent, design_1_type, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [wf_1])
 design_2 = study_design_data(intent, design_2_type, study_cells, [indication_1, indication_2], [objective_1], [population_1], [ii_1], [wf_1])
 designs = [design_1, design_2]
+protocol_versions = []
 
-study = study_data("New Title", "1", "draft", "", study_type, phase, identifiers, designs)
+study = study_data("New Title", "1", "draft", study_type, phase, identifiers, protocol_versions, designs)
 
 if __name__ == "__main__":
   service = Service(sys.argv)
   uuid = service.post("study", study)
-  service.get("study", uuid)
+  #service.get("study", uuid)
   service.get("study_full", uuid)
-  service.get("study")
-  service.get("study_identifier")
+  #service.get("study")
+  #service.get("study_identifier")
+  uuids = service.get("organisation")
+  service.get("organisation", uuids[0])
+  service.get("organisation_full", uuids[0])
+  service.get("organisation", uuids[0])

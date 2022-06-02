@@ -12,7 +12,7 @@ VERSION = "0.3"
 SYSTEM_NAME = "DDF API Simulator"
 
 app = FastAPI()
-the_store = Store()
+store = Store()
 
 @app.get("/")
 def read_root():
@@ -20,59 +20,65 @@ def read_root():
 
 @app.get("/study/")
 def list_studies():
-  return the_store.list("Study")
+  return Study.list(store)
 
 @app.post("/study/")
 async def create_study(study: Study):
-  study.recursive_save(the_store)
+  study.recursive_save(store)
   return study.uuid
 
 @app.get("/study_full/{uuid}")
 def read_full_study(uuid: str):
-  if uuid not in the_store.list("Study"):
+  if uuid not in Study.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
-  return Study.recursive_read(uuid, the_store)
+  return Study.recursive_read(store, uuid)
 
 @app.get("/study/{uuid}")
 def read_study(uuid: str):
-  if uuid not in the_store.list("Study"):
+  if uuid not in Study.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
-  return Study.read(uuid, the_store)
+  return Study.read(store, uuid)
 
 @app.get("/study_identifier/")
 def list_study_identifiers():
-  return the_store.list("StudyIdentifier")
+  return StudyIdentifier.list(store)
 
 @app.post("/study_identifier/")
 async def create_study_identifier(identifier: StudyIdentifier):
-  identifier.recursive_save(the_store)
+  identifier.recursive_save(store)
   return identifier.uuid
 
 @app.get("/study_identifier/{uuid}", response_model=StudyIdentifierResponse)
 def read_study_identifier(uuid: UUID):
-  if str(uuid) not in the_store.list("StudyIdentifier"):
+  if str(uuid) not in StudyIdentifier.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
-  return StudyIdentifier.read(str(uuid), the_store)
+  return StudyIdentifier.read(store, str(uuid))
+
+@app.get("/study_identifier_full/{uuid}")
+def read_study_identifier(uuid: UUID):
+  if str(uuid) not in StudyIdentifier.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return StudyIdentifier.recursive_read(store, str(uuid))
 
 @app.get("/organisation/")
 def list_organisations():
-  return the_store.list("Organisation")
+  return Organisation.list(store)
 
 @app.post("/organisation/")
 async def create_organisation(org: Organisation):
-  org.recursive_save(the_store)
+  org.recursive_save(store)
   return org.uuid
 
 @app.get("/organisation/{uuid}", response_model=OrganisationResponse)
 def read_organisation(uuid: UUID):
-  print("A", the_store.list("Organisation"))
-  if str(uuid) not in the_store.list("Organisation"):
+  print("A", Organisation.list(store))
+  if str(uuid) not in Organisation.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
-  return Organisation.read(str(uuid), the_store)
+  return Organisation.read(store, str(uuid))
 
-@app.get("/organisation_full/{uuid}", response_model=OrganisationResponse)
+@app.get("/organisation_full/{uuid}")
 def read_organisation_full(uuid: UUID):
-  print("A", the_store.list("Organisation"))
-  if str(uuid) not in the_store.list("Organisation"):
+  print("A", Organisation.list(store))
+  if str(uuid) not in Organisation.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
-  return Organisation.recursive_read(str(uuid), the_store)
+  return Organisation.recursive_read(store, str(uuid))
