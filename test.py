@@ -91,7 +91,7 @@ design_2_type = code_data("C3496y", "http://www.cdisc.org", "1", "COMPLEX DESIGN
 design_1 = study_design_data(intent, design_1_type, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [wf_1])
 design_2 = study_design_data(intent, design_2_type, study_cells, [indication_1, indication_2], [objective_1], [population_1], [ii_1], [wf_1])
 designs = [design_1, design_2]
-protocol_version_1 = study_protocol_version_data("Short", "Very Official", "Public Voice", "Incomprehensible", "1", "", "2022-01-01")
+protocol_version_1 = study_protocol_version_data("Short", "Very Official", "Public Voice", "Incomprehensible", "1", None, "2022-01-01")
 protocol_version_2 = study_protocol_version_data("Shorter", "Very Official", "Public Voice", "Incomprehensible", "1", "Amendment 1", "2022-02-01")
 protocol_versions = [protocol_version_1, protocol_version_2]
 
@@ -108,3 +108,5 @@ if __name__ == "__main__":
   service.get("organisation", uuids[0])
   service.get("organisation_full", uuids[0])
   service.get("organisation", uuids[0])
+  uuids = service.get("study_protocol_version")
+  service.get("study_protocol_version", uuids[0])

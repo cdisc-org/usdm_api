@@ -2,6 +2,7 @@ from typing import List, Union
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from uuid import UUID
+from model.study_protocol_version import StudyProtocolVersion, StudyProtocolVersionResponse
 from store.store import Store
 from model.api_base_model import ApiBaseModel
 from model.study import Study
@@ -66,7 +67,7 @@ def list_organisations():
 
 @app.post("/organisation/")
 async def create_organisation(org: Organisation):
-  org.recursive_save(store)
+  org.save(store)
   return org.uuid
 
 @app.get("/organisation/{uuid}", response_model=OrganisationResponse)
@@ -80,3 +81,18 @@ def read_organisation_full(uuid: UUID):
   if str(uuid) not in Organisation.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return Organisation.recursive_read(store, str(uuid))
+
+@app.get("/study_protocol_version/")
+def list_study_protocol_versions():
+  return StudyProtocolVersion.list(store)
+
+@app.post("/study_protocol_version/")
+async def create_protocol_version(version: StudyProtocolVersion):
+  version.save(store)
+  return version.uuid
+
+@app.get("/study_protocol_version/{uuid}", response_model=StudyProtocolVersionResponse)
+def read_study_protocol_version(uuid: UUID):
+  if str(uuid) not in StudyProtocolVersion.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return StudyProtocolVersion.read(store, str(uuid))

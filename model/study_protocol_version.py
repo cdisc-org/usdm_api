@@ -20,5 +20,5 @@ class StudyProtocolVersionResponse(ApiBaseModel):
   public_title: str
   scientific_title: str
   version: str
-  amendment: Union[UUID, None] = None
+  amendment: Union[str, None] = None
   effective_date: date
