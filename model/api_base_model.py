@@ -15,13 +15,11 @@ class ApiBaseModel(BaseModel):
 
   @classmethod
   def list(cls, store):
-    return store.list(cls.__name__)
+    return store.list(cls)
 
   def save(self, store):
     uuid = str(uuid4())
-    #self.uuid = uuid
-    uuid = store.put(self, self.__class__.__name__, uuid)
-    #return self.uuid
+    uuid = store.put(self, self.__class__, uuid)
     return uuid
 
   def recursive_save(self, store):
@@ -53,14 +51,13 @@ class ApiBaseModel(BaseModel):
         klass = Klass.get(klass_str)
         if getattr(self, key) != None:
           setattr(self, key, klass.recursive_save(getattr(self, key), store)) 
-    #self.save(store)
-    #return self.uuid
     uuid = self.save(store)
+    self.uuid = uuid
     return uuid
 
   @classmethod
   def read(cls, store, uuid):
-    data = store.get(cls.__name__, uuid) 
+    data = store.get(cls, uuid) 
     data["uuid"] = uuid
     return data
 
@@ -70,7 +67,7 @@ class ApiBaseModel(BaseModel):
     from .klass import Klass
 
     schema = cls.schema_json()
-    instance = store.get(cls.__name__, uuid)
+    instance = store.get(cls, uuid)
     x = json.loads(schema)
     for key, definition in x["properties"].items():
       if "anyOf" in definition:

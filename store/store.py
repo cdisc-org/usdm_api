@@ -12,7 +12,7 @@ class Store():
     value = data.json()
     match = self.matching(klass, data.json())
     if match == None:
-      self.__store.put( { "value": value, "klass": klass }, self.store_key(klass, key))
+      self.__store.put( { "value": value, "klass": klass.__name__ }, key)
       return key
     else:
       return match["key"]
@@ -25,13 +25,13 @@ class Store():
 
   def list(self, klass):
     results = []
-    items = self.__store.fetch({"klass": klass}).items
+    items = self.__store.fetch({"klass": klass.__name__}).items
     for v in items:
       results.append(v["key"])
     return results
 
   def matching(self, klass, value):
-    items = self.__store.fetch({"klass": klass, "value": value}).items
+    items = self.__store.fetch({"klass": klass.__name__, "value": value}).items
     for v in items:
       return v
     return None
