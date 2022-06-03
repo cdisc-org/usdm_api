@@ -9,7 +9,7 @@ from model.study import Study
 from model.study_identifier import *
 from model.organisation import *
 
-VERSION = "0.4"
+VERSION = "0.5"
 SYSTEM_NAME = "DDF API Simulator"
 
 app = FastAPI()
