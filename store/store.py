@@ -17,9 +17,8 @@ class Store():
     else:
       return match["key"]
 
-
   def get(self, klass, key):
-    data = json.loads(self.__store.get(self.store_key(klass, key))["value"])
+    data = json.loads(self.__store.get(key)["value"])
     data.pop('key', None)
     data["uuid"] = key
     return data
@@ -28,27 +27,11 @@ class Store():
     results = []
     items = self.__store.fetch({"klass": klass}).items
     for v in items:
-      #if self.of_klass(klass, v["key"]):
-      results.append(self.uuid_key(klass, v["key"]))
+      results.append(v["key"])
     return results
 
-  def store_key(self, klass, key):
-    #return "%s.%s" % (klass, key)
-    return key
-  
-  def uuid_key(self, klass, key):
-    #return key.replace("%s." % (klass), "")
-    return key
-
-  #def of_klass(self, klass, key):
-  #  return key.startswith("%s." % (klass))
-
   def matching(self, klass, value):
-    #if klass != "Code":
-    #  return None
-    #print("VALUE:", value)
     items = self.__store.fetch({"klass": klass, "value": value}).items
-    #print("ITEMS:", items)
     for v in items:
       return v
     return None
