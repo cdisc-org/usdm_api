@@ -8,11 +8,11 @@ class Store():
     self.__deta = Deta(os.environ['DDF_SERVICE_PROJ_KEY'])
     self.__store = self.__deta.Base("ddf_service")
 
-  def put(self, data, klass, key):
+  def put(self, data, klass, key, scope):
     value = data.json()
-    match = self.matching(klass, data.json())
+    match = self.matching(klass, data.json(), scope)
     if match == None:
-      self.__store.put( { "value": value, "klass": klass.__name__ }, key)
+      self.__store.put( { "value": value, "klass": klass.__name__,"scope": scope }, key)
       return key
     else:
       return match["key"]
@@ -30,8 +30,24 @@ class Store():
       results.append(v["key"])
     return results
 
-  def matching(self, klass, value):
+  def matching(self, klass, value, scope):
+    if klass.global_reuse():
+      return self.global_match(klass, value)
+    elif klass.scope_reuse():
+      return self.scope_match(klass, value, scope)
+    else:
+      return None
+
+  def global_match(self, klass, value):
+    print("GLOBAL:", klass.__name__)
     items = self.__store.fetch({"klass": klass.__name__, "value": value}).items
+    for v in items:
+      return v
+    return None
+
+  def scope_match(self, klass, value, scope):
+    print("SCOPE:", klass.__name__)
+    items = self.__store.fetch({"klass": klass.__name__, "scope": scope, "value": value}).items
     for v in items:
       return v
     return None

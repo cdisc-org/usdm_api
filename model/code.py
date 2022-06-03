@@ -9,6 +9,10 @@ class Code(ApiBaseModel):
   code_system_version: str
   decode: str
 
+  @classmethod
+  def global_reuse(cls):
+    return True
+
 class CodeResponse(ApiBaseModel):
   uuid: UUID
   code: str

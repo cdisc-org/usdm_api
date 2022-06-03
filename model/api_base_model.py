@@ -5,30 +5,19 @@ import json
 
 class ApiBaseModel(BaseModel):
 
-  def check_and_save(self, store, item):
-    if item == None:
-      return None
-    elif isinstance(item, str):
-      return item
-    else:
-      return self.save(item)
-
-  @classmethod
-  def list(cls, store):
-    return store.list(cls)
-
-  def save(self, store):
+  def save(self, store, scope):
     uuid = str(uuid4())
-    uuid = store.put(self, self.__class__, uuid)
+    uuid = store.put(self, self.__class__, uuid, scope)
     return uuid
 
-  def recursive_save(self, store):
+  def recursive_save(self, store, scope=None):
 
     from .klass import Klass
 
+    if scope == None:
+      scope = str(uuid4()) # Any unique string but use a UUID.
     schema = self.__class__.schema_json()
     x = json.loads(schema)
-    #self.uuid = str(uuid4())
     for key, definition in x["properties"].items():
       if "anyOf" in definition:
         any_of = definition["anyOf"]
@@ -37,21 +26,21 @@ class ApiBaseModel(BaseModel):
             klass_str = any_of_item["$ref"].replace("#/definitions/", "")
             klass = Klass.get(klass_str)
             if getattr(self, key) != None:
-              setattr(self, key, klass.recursive_save(getattr(self, key), store)) 
+              setattr(self, key, klass.recursive_save(getattr(self, key), store, scope)) 
           elif "items" in any_of_item:
             if "$ref" in any_of_item["items"]:
               klass_str = any_of_item["items"]["$ref"].replace("#/definitions/", "")
               klass = Klass.get(klass_str)
               result = []
               for item in getattr(self, key):
-                result.append(klass.recursive_save(item, store))
+                result.append(klass.recursive_save(item, store, scope))
               setattr(self, key, result)
       elif "$ref" in definition:
         klass_str = definition["$ref"].replace("#/definitions/", "")
         klass = Klass.get(klass_str)
         if getattr(self, key) != None:
-          setattr(self, key, klass.recursive_save(getattr(self, key), store)) 
-    uuid = self.save(store)
+          setattr(self, key, klass.recursive_save(getattr(self, key), store, scope)) 
+    uuid = self.save(store, scope)
     self.uuid = uuid
     return uuid
 
@@ -92,3 +81,24 @@ class ApiBaseModel(BaseModel):
         if instance[key] != None:
           instance[key] = klass.recursive_read(store, instance[key])
     return instance
+
+  @classmethod
+  def list(cls, store):
+    return store.list(cls)
+
+  def check_and_save(self, store, item):
+    if item == None:
+      return None
+    elif isinstance(item, str):
+      return item
+    else:
+      return self.save(item)
+  
+  @classmethod
+  def scope_reuse(cls):
+    return True
+
+  @classmethod
+  def global_reuse(cls):
+    return False
+

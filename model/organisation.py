@@ -10,6 +10,10 @@ class Organisation(ApiBaseModel):
   organisation_name: str
   organisation_type: Code
 
+  @classmethod
+  def global_reuse(cls):
+    return True
+
 class OrganisationResponse(ApiBaseModel):
   uuid: UUID
   organisation_identifier_scheme: str

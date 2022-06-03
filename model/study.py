@@ -17,6 +17,10 @@ class Study(ApiBaseModel):
   study_protocol_version: Union[List[StudyProtocolVersion], List[UUID], None] = []
   study_design: Union[List[StudyDesign], List[UUID], None] = []
 
+  @classmethod
+  def scope_reuse(cls):
+    return False
+
 class StudyResponse(ApiBaseModel):
   uuid: UUID
   study_title: str
