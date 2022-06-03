@@ -31,6 +31,7 @@ class Store():
     return results
 
   def matching(self, klass, value, scope):
+    #print("MATCHING:", klass.__name__)
     if klass.global_reuse():
       return self.global_match(klass, value)
     elif klass.scope_reuse():
@@ -39,14 +40,15 @@ class Store():
       return None
 
   def global_match(self, klass, value):
-    print("GLOBAL:", klass.__name__)
+    #print("GLOBAL:", klass.__name__)
     items = self.__store.fetch({"klass": klass.__name__, "value": value}).items
     for v in items:
+      #print("GLOBAL: match")
       return v
     return None
 
   def scope_match(self, klass, value, scope):
-    print("SCOPE:", klass.__name__)
+    #print("SCOPE:", klass.__name__)
     items = self.__store.fetch({"klass": klass.__name__, "scope": scope, "value": value}).items
     for v in items:
       return v

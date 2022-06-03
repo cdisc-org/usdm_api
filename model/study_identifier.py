@@ -6,7 +6,7 @@ from .organisation import Organisation
 class StudyIdentifier(ApiBaseModel):
   uuid: Union[UUID, None] = None
   study_identifier: str
-  study_identifier_scope: Organisation
+  study_identifier_scope: Union[UUID, Organisation]
 
 class StudyIdentifierResponse(ApiBaseModel):
   uuid: UUID

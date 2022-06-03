@@ -8,6 +8,7 @@ class ApiBaseModel(BaseModel):
   def save(self, store, scope):
     uuid = str(uuid4())
     uuid = store.put(self, self.__class__, uuid, scope)
+    self.uuid = uuid
     return uuid
 
   def recursive_save(self, store, scope=None):

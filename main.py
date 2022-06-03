@@ -2,12 +2,13 @@ from typing import List, Union
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from uuid import UUID
-from model.study_protocol_version import StudyProtocolVersion, StudyProtocolVersionResponse
 from store.store import Store
 from model.api_base_model import ApiBaseModel
 from model.study import Study
 from model.study_identifier import *
 from model.organisation import *
+from model.study_protocol_version import *
+from model.code import *
 
 VERSION = "0.5"
 SYSTEM_NAME = "DDF API Simulator"
@@ -46,7 +47,7 @@ def list_study_identifiers():
 
 @app.post("/study_identifier/")
 async def create_study_identifier(identifier: StudyIdentifier):
-  identifier.recursive_save(store)
+  identifier.recursive_save(store, None)
   return identifier.uuid
 
 @app.get("/study_identifier/{uuid}", response_model=StudyIdentifierResponse)
@@ -67,7 +68,7 @@ def list_organisations():
 
 @app.post("/organisation/")
 async def create_organisation(org: Organisation):
-  org.save(store)
+  org.save(store, None)
   return org.uuid
 
 @app.get("/organisation/{uuid}", response_model=OrganisationResponse)
@@ -88,7 +89,7 @@ def list_study_protocol_versions():
 
 @app.post("/study_protocol_version/")
 async def create_protocol_version(version: StudyProtocolVersion):
-  version.save(store)
+  version.save(store, None)
   return version.uuid
 
 @app.get("/study_protocol_version/{uuid}", response_model=StudyProtocolVersionResponse)
@@ -96,3 +97,18 @@ def read_study_protocol_version(uuid: UUID):
   if str(uuid) not in StudyProtocolVersion.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return StudyProtocolVersion.read(store, str(uuid))
+
+@app.get("/code/")
+def list_codes():
+  return Code.list(store)
+
+@app.post("/code/")
+async def create_code(item: Code):
+  item.save(store, None)
+  return item.uuid
+
+@app.get("/code/{uuid}", response_model=CodeResponse)
+def read_code(uuid: UUID):
+  if str(uuid) not in Code.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return Code.read(store, str(uuid))
