@@ -3,13 +3,14 @@ import requests
 
 class Service():
 
-  ENDPOINTS = { "remote": 'https://byrikz.deta.dev/', "local": 'http://localhost:8000/' }
-
+  ENDPOINTS = { "remote": 'https://byrikz.deta.dev', "local": 'http://localhost:8000' }
+  VERSION = "v1"
+  
   def __init__(self, argv):
     endpoint = "local"
     if len(argv) > 1 and argv[1].lower() == "remote":
       endpoint = "remote"
-    self.url = self.ENDPOINTS[endpoint]
+    self.url = "%s/%s/" % (self.ENDPOINTS[endpoint], self.VERSION)
 
   def display_response(self, title, endpoint_url, r):
     resp = json.loads(r.text)

@@ -1,0 +1,205 @@
+Study:
+  study_phase:
+    conceptId: C99077
+    definition: A terminology codelist relevant to the role the study plays in determining
+      the interventions a subject receives.
+    extensible: 'false'
+    name: Study Type Response
+    preferredTerm: CDISC SDTM Study Type Terminology
+    submissionValue: STYPE
+    synonyms:
+    - Study Type Response
+    terms:
+    - conceptId: C98722
+      definition: Studies that provide a means for obtaining an experimental drug
+        or device for patients who are not adequately treated by existing therapy,
+        who do not meet the eligibility criteria for enrollment, or who are otherwise
+        unable to participate in another clinical study. Expanded Access studies include
+        individual-patient IND, treatment IND, compassionate use, emergency use or
+        continued access.
+      preferredTerm: Expanded Access Study
+      submissionValue: EXPANDED ACCESS
+    - conceptId: C98388
+      definition: Studies in which individuals are assigned by an investigator based
+        on a protocol to receive specific interventions. Subjects may receive diagnostic,
+        therapeutic or other types of interventions. The assignment of the intervention
+        may or may not be random. The individuals are then followed and biomedical
+        and/or health outcomes are assessed.
+      preferredTerm: Interventional Study
+      submissionValue: INTERVENTIONAL
+    - conceptId: C16084
+      definition: Studies in which biomedical and/or health outcomes are assessed
+        in pre-defined groups of individuals. Subjects in the study may receive diagnostic,
+        therapeutic, or other interventions, but the investigator does not assign
+        specific interventions to the subjects of the study.
+      preferredTerm: Observational Study
+      submissionValue: OBSERVATIONAL
+    - conceptId: C129000
+      definition: Observational studies which include an organized system that uses
+        observational methods to collect uniform data (clinical and other) prospectively
+        for a population defined by a particular disorder/disease, condition (including
+        susceptibility to a disorder), or exposure (including products, health care
+        services, and/or procedures) and that serves a predetermined scientific, clinical,
+        or policy purpose. Patient registries may be single purpose or on-going data
+        collection programs that address one or more questions. (AHRQ)
+      preferredTerm: Patient Registry Study
+      submissionValue: PATIENT REGISTRY
+  study_type:
+    conceptId: C66737
+    definition: A terminology codelist relevant to the phase, or stage, of the clinical
+      trial.
+    extensible: 'true'
+    name: Trial Phase Response
+    preferredTerm: CDISC SDTM Trial Phase Terminology
+    submissionValue: TPHASE
+    synonyms:
+    - Trial Phase Response
+    terms:
+    - conceptId: C48660
+      definition: Determination of a value is not relevant in the current context.
+        (NCI)
+      preferredTerm: Not Applicable
+      submissionValue: NOT APPLICABLE
+      synonyms:
+      - NA
+      - Not Applicable
+    - conceptId: C54721
+      definition: 'First-in-human trials, in a small number of subjects, that are
+        conducted before Phase 1 trials and are intended to assess new candidate therapeutic
+        and imaging agents. The study agent is administered at a low dose for a limited
+        time, and there is no therapeutic or diagnostic intent. NOTE: FDA Guidance
+        for Industry, Investigators, and Reviewers: Exploratory IND Studies, January
+        2006 classifies such studies as Phase 1. NOTE: A Phase 0 study might not include
+        any drug delivery but may be an exploration of human material from a study
+        (e.g., tissue samples or biomarker determinations). [Improving the Quality
+        of Cancer Clinical Trials: Workshop summary-Proceedings of the National Cancer
+        Policy Forum Workshop, improving the Quality of Cancer Clinical Trials (Washington,
+        DC, Oct 2007)] (CDISC glossary)'
+      preferredTerm: Phase 0 Trial
+      submissionValue: PHASE 0 TRIAL
+      synonyms:
+      - '0'
+      - Pre-clinical Trial
+      - Trial Phase 0
+    - conceptId: C15600
+      definition: 'The initial introduction of an investigational new drug into humans.
+        Phase 1 studies are typically closely monitored and may be conducted in patients
+        or normal volunteer subjects. NOTE: These studies are designed to determine
+        the metabolism and pharmacologic actions of the drug in humans, the side effects
+        associated with increasing doses, and, if possible, to gain early evidence
+        on effectiveness. During Phase 1, sufficient information about the drug''s
+        pharmacokinetics and pharmacological effects should be obtained to permit
+        the design of well-controlled, scientifically valid, Phase 2 studies. The
+        total number of subjects and patients included in Phase I studies varies with
+        the drug, but is generally in the range of 20 to 80. Phase 1 studies also
+        include studies of drug metabolism, structure-activity relationships, and
+        mechanism of action in humans, as well as studies in which investigational
+        drugs are used as research tools to explore biological phenomena or disease
+        processes. [After FDA CDER Handbook, ICH E8] (CDISC glossary)'
+      preferredTerm: Phase I Trial
+      submissionValue: PHASE I TRIAL
+      synonyms:
+      - '1'
+      - Trial Phase 1
+    - conceptId: C15693
+      definition: A class of clinical study that combines elements characteristic
+        of traditional Phase I and Phase II trials. See also Phase I, Phase II.
+      preferredTerm: Phase I/II Trial
+      submissionValue: PHASE I/II TRIAL
+      synonyms:
+      - 1-2
+      - Trial Phase 1-2
+    - conceptId: C15601
+      definition: 'Phase 2. Controlled clinical studies conducted to evaluate the
+        effectiveness of the drug for a particular indication or indications in patients
+        with the disease or condition under study and to determine the common short-term
+        side effects and risks associated with the drug. NOTE: Phase 2 studies are
+        typically well controlled, closely monitored, and conducted in a relatively
+        small number of patients, usually involving no more than several hundred subjects.
+        [After FDA CDER Handbook, ICH E8] (CDISC glossary)'
+      preferredTerm: Phase II Trial
+      submissionValue: PHASE II TRIAL
+      synonyms:
+      - '2'
+      - Trial Phase 2
+    - conceptId: C15694
+      definition: A class of clinical study that combines elements characteristic
+        of traditional Phase II and Phase III trials.
+      preferredTerm: Phase II/III Trial
+      submissionValue: PHASE II/III TRIAL
+      synonyms:
+      - 2-3
+      - Trial Phase 2-3
+    - conceptId: C49686
+      definition: A clinical research protocol generally referred to as a pilot or
+        feasibility trial that aims to prove the concept of the new intervention in
+        question. (NCI)
+      preferredTerm: Phase IIa Trial
+      submissionValue: PHASE IIA TRIAL
+      synonyms:
+      - 2A
+      - Trial Phase 2A
+    - conceptId: C49688
+      definition: A clinical research protocol generally referred to as a well-controlled
+        and pivotal trial that aims to prove the mechanism of action of the new intervention
+        in question. A pivotal study will generally be well-controlled, randomized,
+        of adequate size, and whenever possible, double-blind. (NCI)
+      preferredTerm: Phase IIb Trial
+      submissionValue: PHASE IIB TRIAL
+      synonyms:
+      - 2B
+      - Trial Phase 2B
+    - conceptId: C15602
+      definition: 'Phase 3. Studies are expanded controlled and uncontrolled trials.
+        They are performed after preliminary evidence suggesting effectiveness of
+        the drug has been obtained, and are intended to gather the additional information
+        about effectiveness and safety that is needed to confirm efficacy and evaluate
+        the overall benefit-risk relationship of the drug and to provide an adequate
+        basis for physician labeling. NOTE: Phase 3 studies usually include from several
+        hundred to several thousand subjects. [After FDA CDER Handbook, ICH E8] (CDISC
+        glossary)'
+      preferredTerm: Phase III Trial
+      submissionValue: PHASE III TRIAL
+      synonyms:
+      - '3'
+      - Trial Phase 3
+    - conceptId: C49687
+      definition: A classification typically assigned retrospectively to a Phase III
+        trial upon determination by regulatory authorities of a need for a Phase III
+        B trial. (NCI)
+      preferredTerm: Phase IIIa Trial
+      submissionValue: PHASE IIIA TRIAL
+      synonyms:
+      - 3A
+      - Trial Phase 3A
+    - conceptId: C49689
+      definition: 'A subcategory of Phase III trials done near the time of approval
+        to elicit additional findings. NOTE: Dossier review may continue while associated
+        Phase IIIB trials are conducted. These trials may be required as a condition
+        of regulatory authority approval.'
+      preferredTerm: Phase IIIb Trial
+      submissionValue: PHASE IIIB TRIAL
+      synonyms:
+      - 3B
+      - Trial Phase 3B
+    - conceptId: C15603
+      definition: 'Phase 4. Postmarketing (Phase 4) studies to delineate additional
+        information about the drug''s risks, benefits, and optimal use that may be
+        requested by regulatory authorities in conjunction with marketing approval.
+        NOTE: These studies could include, but would not be limited to, studying different
+        doses or schedules of administration than were used in Phase 2 studies, use
+        of the drug in other patient populations or other stages of the disease, or
+        use of the drug over a longer period of time. [After FDA CDER Handbook, ICH
+        E8] (CDISC glossary)'
+      preferredTerm: Phase IV Trial
+      submissionValue: PHASE IV TRIAL
+      synonyms:
+      - '4'
+      - Trial Phase 4
+    - conceptId: C47865
+      definition: Postmarketing surveillance is sometimes referred to as Phase V.
+      preferredTerm: Phase V Trial
+      submissionValue: PHASE V TRIAL
+      synonyms:
+      - '5'
+      - Trial Phase 5
