@@ -1,19 +1,14 @@
-from typing import List, Union
 from fastapi import FastAPI, HTTPException, status
-from pydantic import BaseModel
 from uuid import UUID
-
-from requests import Response
 from store.store import Store
-from model.api_base_model import ApiBaseModel
-from model.study import Study
+from model.study import *
 from model.study_identifier import *
 from model.organisation import *
 from model.study_protocol_version import *
 from model.code import *
 from model.ct import *
 
-VERSION = "0.6"
+VERSION = "0.7"
 SYSTEM_NAME = "DDF API Simulator"
 
 tags_metadata = [
@@ -52,12 +47,16 @@ app = FastAPI(openapi_tags=tags_metadata)
 store = Store()
 
 # System Name and Version
+@app.get("/", 
+  tags=["informational"],
+  summary="Obtain name and version",
+  description="Obtain the name of the micro service and the current version.")
 @app.get("/v1/", 
   tags=["informational"],
   summary="Obtain name and version",
   description="Obtain the name of the micro service and the current version.")
 def system_and_version():
-  return { "System": SYSTEM_NAME, "Version": VERSION }
+  return { "system": SYSTEM_NAME, "version": VERSION }
 
 # Study
 @app.get("/v1/study/", 
