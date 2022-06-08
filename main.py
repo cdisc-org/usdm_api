@@ -107,7 +107,7 @@ async def create_study_identifier(identifier: StudyIdentifier):
   identifier.recursive_save(store, None)
   return identifier.uuid
 
-@app.get("/v1/study_identifier/{uuid}", response_model=StudyIdentifierResponse, tags=["informational"])
+@app.get("/v1/study_identifier/{uuid}", response_model=StudyIdentifier, tags=["informational"])
 async def read_study_identifier(uuid: UUID):
   if str(uuid) not in StudyIdentifier.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
@@ -131,7 +131,7 @@ async def create_organisation(org: Organisation):
   org.save(store, None)
   return org.uuid
 
-@app.get("/v1/organisation/{uuid}", response_model=OrganisationResponse, tags=["informational"])
+@app.get("/v1/organisation/{uuid}", response_model=Organisation, tags=["informational"])
 async def read_organisation(uuid: UUID):
   if str(uuid) not in Organisation.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
@@ -155,7 +155,7 @@ async def create_protocol_version(version: StudyProtocolVersion):
   version.save(store, None)
   return version.uuid
 
-@app.get("/v1/study_protocol_version/{uuid}", response_model=StudyProtocolVersionResponse, tags=["informational"])
+@app.get("/v1/study_protocol_version/{uuid}", response_model=StudyProtocolVersion, tags=["informational"])
 async def read_study_protocol_version(uuid: UUID):
   if str(uuid) not in StudyProtocolVersion.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
@@ -173,7 +173,7 @@ async def create_code(item: Code):
   item.save(store, None)
   return item.uuid
 
-@app.get("/v1/code/{uuid}", response_model=CodeResponse, tags=["informational"])
+@app.get("/v1/code/{uuid}", response_model=Code, tags=["informational"])
 async def read_code(uuid: UUID):
   if str(uuid) not in Code.list(store):
     raise HTTPException(status_code=404, detail="Item not found")

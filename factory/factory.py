@@ -167,11 +167,10 @@ def study_indication_data(description, indications):
     "indication": indications
   }
 
-def study_data(title, version, status, type, phase, identifiers, protocol_versions, designs):
+def study_data(title, version, type, phase, identifiers, protocol_versions, designs):
   return {
     "study_title": title,
     "study_version": version,
-    "study_status": status,
     "study_type":  type,
     "study_phase":  phase,
     "study_identifier": identifiers,
@@ -191,13 +190,14 @@ def study_design_data(intent, type, cells, indications, objectives, populations,
     "study_workflow": workflows
   }
 
-def study_protocol_version_data(brief_title, official_title, public_title, scientific_title, version, amendment, effective_date):
+def study_protocol_version_data(brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):
   return {
     "brief_title": brief_title,
     "offical_title": official_title,
     "public_title": public_title,
     "scientific_title": scientific_title,
-    "version": version,
-    "amendment": amendment,
-    "effective_date": effective_date
+    "protocol_version": version,
+    "protocol_amendment": amendment,
+    "protocol_effective_date": effective_date,
+    "protocol_status": status
   }

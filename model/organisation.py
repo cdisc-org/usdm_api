@@ -4,7 +4,7 @@ from .api_base_model import ApiBaseModel
 from .code import Code
 
 class Organisation(ApiBaseModel):
-  uuid: Union[UUID, None] = None
+  uuid: Union[UUID, None]
   organisation_identifier_scheme: str
   organisation_identifier: str
   organisation_name: str
@@ -14,9 +14,3 @@ class Organisation(ApiBaseModel):
   def global_reuse(cls):
     return True
 
-class OrganisationResponse(ApiBaseModel):
-  uuid: UUID
-  organisation_identifier_scheme: str
-  organisation_identifier: str
-  organisation_name: str
-  organisation_type: UUID
