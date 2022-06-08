@@ -49,7 +49,7 @@ objective_1 = objective_data(
   [endpoint_1, endpoint_2]
 )
 
-phase = code_data("C1234a", "http://www.cdisc.org", "1", "PHASE III")
+phase = code_data("C49686", "http://www.cdisc.org", "2022-03-25", "Phase IIa Trial")
 study_type = code_data("C98388", "http://www.cdisc.org", "2022-03-25", "Interventional Study")
 registry_type = code_data("C2365x", "http://www.cdisc.org", "1", "REGISTRY_STUDY_IDENTIFIER")
 sponsor_type = code_data("C2365y", "http://www.cdisc.org", "1", "SPONSOR_STUDY_IDENTIFIER")
