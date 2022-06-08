@@ -50,7 +50,7 @@ objective_1 = objective_data(
 )
 
 phase = code_data("C1234a", "http://www.cdisc.org", "1", "PHASE III")
-study_type = code_data("C1254x", "http://www.cdisc.org", "1", "SIMPLE")
+study_type = code_data("C98388", "http://www.cdisc.org", "2022-03-25", "Interventional Study")
 registry_type = code_data("C2365x", "http://www.cdisc.org", "1", "REGISTRY_STUDY_IDENTIFIER")
 sponsor_type = code_data("C2365y", "http://www.cdisc.org", "1", "SPONSOR_STUDY_IDENTIFIER")
 organisation_1 = organization_data("DUNS", "123456789", "ACME Pharma", sponsor_type)

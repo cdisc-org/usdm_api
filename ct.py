@@ -6,8 +6,8 @@ API_KEY = os.getenv('CDISC_API_KEY')
 
 c_code_list = {
   'Study': {
-    'study_type': "C66737", 
-    'study_phase': "C99077"
+    'study_type': "C99077", 
+    'study_phase': "C66737"
   }
 }
 sdtm_release = "sdtmct-2022-03-25"

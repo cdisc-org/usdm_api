@@ -8,7 +8,7 @@ from model.study_protocol_version import *
 from model.code import *
 from model.ct import *
 
-VERSION = "0.7"
+VERSION = "0.8"
 SYSTEM_NAME = "DDF API Simulator"
 
 tags_metadata = [
