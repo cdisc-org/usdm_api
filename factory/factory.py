@@ -1,3 +1,5 @@
+import yaml
+
 def soa(df):
   encounters = []
   activities = []
@@ -21,6 +23,16 @@ def code_data(code, system, version, decode):
     "code_system_version": version,
     "decode": decode
   }
+
+def code_for(klass, attribute, **kwargs):
+  if 'c_code' in kwargs:
+    entry = _find_ct_entry(klass, attribute, 'conceptId', kwargs['c_code'])
+    return code_data(entry['conceptId'], "http://www.cdisc.org", "2022-03-25", entry['preferredTerm'])
+  elif 'submission_value' in kwargs:
+    entry = _find_ct_entry(klass, attribute, 'submissionValue', kwargs['submission_value'])
+    return code_data(entry['conceptId'], "http://www.cdisc.org", "2022-03-25", entry['preferredTerm'])
+  else:
+    raise Exception("Need to specify either a C Code or Submission value when selecting a CT value.")
 
 def workflow_data(description, start, end, items):
   return {
@@ -201,3 +213,13 @@ def study_protocol_version_data(brief_title, official_title, public_title, scien
     "protocol_effective_date": effective_date,
     "protocol_status": status
   }
+
+# Internal methods
+def _find_ct_entry(klass, attribute, name, value):
+  with open("data/ct.yaml") as file:
+    ct = yaml.load(file, Loader=yaml.FullLoader)
+    for entry in ct[klass][attribute]['terms']:
+      if entry[name] == value:
+        return entry
+    raise Exception("Could not find CT match for (%s, %s, %s, %s)." % (klass, attribute, name, value))        
+

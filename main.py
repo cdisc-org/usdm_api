@@ -49,11 +49,11 @@ store = Store()
 # System Name and Version
 @app.get("/", 
   tags=["informational"],
-  summary="Obtain name and version",
+  summary="Obtain system name and version",
   description="Obtain the name of the micro service and the current version.")
 @app.get("/v1/", 
   tags=["informational"],
-  summary="Obtain name and version",
+  summary="Obtain system name and version",
   description="Obtain the name of the micro service and the current version.")
 def system_and_version():
   return { "system": SYSTEM_NAME, "version": VERSION }
