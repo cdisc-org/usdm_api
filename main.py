@@ -10,7 +10,7 @@ from model.ct import *
 from model.study_arm import *
 from model.study_cell import *
 
-VERSION = "0.9"
+VERSION = "0.10"
 SYSTEM_NAME = "DDF API Simulator"
 
 tags_metadata = [
