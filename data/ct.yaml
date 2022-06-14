@@ -203,6 +203,56 @@ Study:
         collection programs that address one or more questions. (AHRQ)
       preferredTerm: Patient Registry Study
       submissionValue: PATIENT REGISTRY
+StudyArm:
+  study_arm_type:
+    conceptId: C174222
+    definition: The terminology relevant to the identification of the kind of arm.
+    name: Study Arm Type Value Set Terminology
+    preferredTerm: CDISC Protocol Study Arm Type Value Set Terminology
+    submissionValue: Study Arm Type Value Set Terminology
+    synonyms:
+    - Study Arm Type Value Set Terminology
+    terms:
+    - conceptId: C174267
+      definition: An arm describing the active comparator.
+      preferredTerm: Active Comparator Arm
+      submissionValue: Active Comparator Arm
+    - conceptId: C174226
+      definition: An arm describing the intervention or treatment plan for a group
+        of participants in the study receiving a control. The control may comprise
+        a non-investigational product (active control) or regimen, placebo, or no
+        treatment.
+      preferredTerm: Control Arm
+      submissionValue: Control Arm
+    - conceptId: C174266
+      definition: An arm describing the intervention or treatment plan for a group
+        of participants in the study receiving test product(s).
+      preferredTerm: Investigational Arm
+      submissionValue: Experimental Arm
+      synonyms:
+      - Investigational Arm
+    - conceptId: C174270
+      definition: A study arm without an intervention or treatment.
+      preferredTerm: No Intervention Arm
+      submissionValue: No Intervention Arm
+    - conceptId: C174268
+      definition: An arm describing the placebo comparator.
+      preferredTerm: Placebo Control Arm
+      submissionValue: Placebo Comparator Arm
+      synonyms:
+      - Placebo Control Arm
+    - conceptId: C174269
+      definition: An arm describing the sham comparator.
+      preferredTerm: Sham Comparator Arm
+      submissionValue: Sham Comparator Arm
+      synonyms:
+      - Sham Intervention Arm
+    - conceptId: C15538
+      definition: An arm describing the intervention or treatment plan for a group
+        of participants in the study. Treatment may consist of either experimental
+        or control products under investigation.
+      preferredTerm: Protocol Treatment Arm
+      submissionValue: Treatment Arm
 StudyDesign:
   trial_intent_type:
     conceptId: C66736

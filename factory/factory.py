@@ -136,13 +136,13 @@ def organization_data(identifier_scheme, org_identifier, org_name, organisation_
     "organisation_type": organisation_type
   }
 
-def study_arm_data(name, description, arm_type, origin, origin_type):
+def study_arm_data(name, description, arm_type, origin_description, origin_type):
   return {
     "study_arm_name": name,
     "study_arm_desc": description,
-    "study_arm_origin": origin,
-    "study_origin_type": origin_type,
-    "study_arm_type": arm_type
+    "study_arm_type": arm_type,
+    "study_arm_data_origin_desc": origin_description,
+    "study_arm_data_origin_type": origin_type,
   }
 
 def study_epoch_data(name, description, sequence, epoch_type):

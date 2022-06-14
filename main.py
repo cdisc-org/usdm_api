@@ -7,6 +7,8 @@ from model.organisation import *
 from model.study_protocol_version import *
 from model.code import *
 from model.ct import *
+from model.study_arm import *
+from model.study_cell import *
 
 VERSION = "0.9"
 SYSTEM_NAME = "DDF API Simulator"
@@ -43,7 +45,12 @@ annotations = {
   }
 }
 
-app = FastAPI(openapi_tags=tags_metadata)
+app = FastAPI(
+  title = SYSTEM_NAME,
+  description = "A simple TransCelerate Digital Data Flow (DDF) Study Definitions Repository (SDR) Simulator. Used to define and test the logic of the SDR API.",
+  version = VERSION,
+  openapi_tags = tags_metadata
+)
 store = Store()
 
 # System Name and Version
@@ -160,6 +167,42 @@ async def read_study_protocol_version(uuid: UUID):
   if str(uuid) not in StudyProtocolVersion.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return StudyProtocolVersion.read(store, str(uuid))
+
+# Study Arm
+@app.get("/v1/study_arm/", tags=["informational"])
+async def list_study_arms():
+  return StudyArm.list(store)
+
+@app.post("/v1/study_arm/", 
+  tags=["informational"], 
+  status_code=status.HTTP_201_CREATED)
+async def create_study_arm(item: StudyArm):
+  item.save(store, None)
+  return item.uuid
+
+@app.get("/v1/study_arm/{uuid}", response_model=StudyArm, tags=["informational"])
+async def read_study_arm(uuid: UUID):
+  if str(uuid) not in StudyArm.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return StudyArm.read(store, str(uuid))
+
+# Study Cell
+@app.get("/v1/study_cell/", tags=["informational"])
+async def list_study_cells():
+  return StudyCell.list(store)
+
+@app.post("/v1/study_cell/", 
+  tags=["informational"], 
+  status_code=status.HTTP_201_CREATED)
+async def create_study_cell(item: StudyCell):
+  item.save(store, None)
+  return item.uuid
+
+@app.get("/v1/study_cell/{uuid}", response_model=StudyCell, tags=["informational"])
+async def read_study_cell(uuid: UUID):
+  if str(uuid) not in StudyCell.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return StudyCell.read(store, str(uuid))
 
 # Code
 @app.get("/v1/code/", tags=["informational"])
