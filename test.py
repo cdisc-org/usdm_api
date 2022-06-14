@@ -106,9 +106,9 @@ study = study_data("New Title", "1", study_type, phase, identifiers, protocol_ve
 
 if __name__ == "__main__":
   service = Service(sys.argv)
-  uuid = service.post("study", study)
+  uuid = service.post("study_definition", study)
+  service.get("study_definition", uuid)
   service.get("study", uuid)
-  service.get("study_full", uuid)
   items = ["study", "study_identifier", "organisation", "study_protocol_version", "study_arm", "study_cell", "code"]
   for item in items:
     uuids = service.get(item)
