@@ -203,3 +203,270 @@ Study:
         collection programs that address one or more questions. (AHRQ)
       preferredTerm: Patient Registry Study
       submissionValue: PATIENT REGISTRY
+StudyDesign:
+  trial_intent_type:
+    conceptId: C66736
+    definition: A terminology codelist relevant to the responses for the planned purpose
+      of the therapy, device, or agent under study in the clinical trial.
+    extensible: 'true'
+    name: Trial Intent Type Response
+    preferredTerm: CDISC SDTM Trial Indication Type Terminology
+    submissionValue: TINDTP
+    synonyms:
+    - Trial Intent Type Response
+    terms:
+    - conceptId: C15714
+      definition: A type of study designed to examine the basic mechanism of action
+        (e.g., physiology, biomechanics) of an intervention. (ClinicalTrials.gov)
+      preferredTerm: Basic Research
+      submissionValue: BASIC SCIENCE
+      synonyms:
+      - Basic Research
+    - conceptId: C49654
+      definition: A type of study designed to evaluate intervention(s) aimed to cure
+        a disease or condition.
+      preferredTerm: Cure Study
+      submissionValue: CURE
+    - conceptId: C139174
+      definition: An intervention of a device product is being evaluated to determine
+        the feasibility of the product or to test a prototype device and not health
+        outcomes. Such studies are conducted to confirm the design and operating specifications
+        of a device before beginning a full clinical trial. (ClinicalTrials.gov)
+      preferredTerm: Device Feasibility Study
+      submissionValue: DEVICE FEASIBILITY
+    - conceptId: C49653
+      definition: A type of study designed to evaluate intervention(s) aimed at identifying
+        a disease or condition.
+      preferredTerm: Diagnosis Study
+      submissionValue: DIAGNOSIS
+    - conceptId: C170629
+      definition: A type of study designed to evaluate the effects of treatment(s)
+        intended to cause a change in disease, syndrome, or condition beyond the point
+        of treatment administration.
+      preferredTerm: Disease Modifying Treatment Study
+      submissionValue: DISEASE MODIFYING
+    - conceptId: C15245
+      definition: A type of study designed to evaluate the delivery, processes, management,
+        organization or financing of health care. (ClinicalTrials.gov)
+      preferredTerm: Health Services Research
+      submissionValue: HEALTH SERVICES RESEARCH
+    - conceptId: C49655
+      definition: A type of study designed to identify actions necessary to eliminate
+        or reduce the risk to human life or well-being as a result of a particular
+        medication or treatment regimen. (NCI)
+      preferredTerm: Adverse Effect Mitigation Study
+      submissionValue: MITIGATION
+    - conceptId: C49657
+      definition: A type of study designed to identify actions necessary to permanently
+        eliminate or reduce the long-term risk to human life as a result of a particular
+        medication or treatment regimen.
+      preferredTerm: Prevention Study
+      submissionValue: PREVENTION
+      synonyms:
+      - Prophylaxis Study
+    - conceptId: C71485
+      definition: A type of study designed to assess or examine methods of identifying
+        a condition (or risk factors for a condition) in people who are not yet known
+        to have the condition (or risk factor). (Clinicaltrials.gov)
+      preferredTerm: Screening Study
+      submissionValue: SCREENING
+    - conceptId: C71486
+      definition: A type of study designed to evaluate one or more interventions where
+        the primary intent is to maximize comfort, minimize side effects or mitigate
+        against a decline in the subject's health or function. In general, supportive
+        care interventions are not intended to cure a disease. (ClinicalTrials.gov)
+      preferredTerm: Supportive Care Study
+      submissionValue: SUPPORTIVE CARE
+    - conceptId: C49656
+      definition: A type of study designed to evaluate intervention(s) for treatment
+        of disease, syndrome or condition.
+      preferredTerm: Treatment Study
+      submissionValue: TREATMENT
+      synonyms:
+      - Therapy Trial
+  trial_type:
+    conceptId: C66739
+    definition: A terminology codelist relevant to the type of primary outcome or
+      endpoint that the protocol is designed to evaluate.
+    extensible: 'true'
+    name: Trial Type Response
+    preferredTerm: CDISC SDTM Trial Type Terminology
+    submissionValue: TTYPE
+    synonyms:
+    - Trial Type Response
+    terms:
+    - conceptId: C158283
+      definition: A type of study designed to evaluate the strength of the bond between
+        an adhesive and the application surface.
+      preferredTerm: Adhesion Performance Study
+      submissionValue: ADHESION PERFORMANCE
+    - conceptId: C158284
+      definition: A type of study designed to evaluate the effects of alcohol on investigational
+        product safety and/or efficacy.
+      preferredTerm: Alcohol Effect Study
+      submissionValue: ALCOHOL EFFECT
+    - conceptId: C49664
+      definition: A study of the degree to which or rate at which a drug or other
+        substance is absorbed or becomes available at the site of physiological activity
+        after administration. (NCI)
+      preferredTerm: Bioavailability Study
+      submissionValue: BIO-AVAILABILITY
+    - conceptId: C49665
+      definition: A study most often used to compare the efficacy of different formulations
+        to treat a given disease. It is the testing of an old versus a new formulation
+        in healthy volunteers or subjects with the disease under study and usually
+        in one dose. (NCI)
+      preferredTerm: Therapeutic Equivalency Study
+      submissionValue: BIO-EQUIVALENCE
+    - conceptId: C158288
+      definition: A type of study designed to evaluate whether a biologic test article
+        is highly similar in function and effect to an existing biologic that has
+        already been clinically tested and approved for use.
+      preferredTerm: Biosimilarity Study
+      submissionValue: BIOSIMILARITY
+    - conceptId: C158285
+      definition: A type of study designed to evaluate the interaction between a device
+        and a drug, where the use of one may affect the disposition, function, efficacy,
+        or safety of the other.
+      preferredTerm: Device-Drug Interaction Study
+      submissionValue: DEVICE-DRUG INTERACTION
+    - conceptId: C49653
+      definition: A type of study designed to evaluate intervention(s) aimed at identifying
+        a disease or condition.
+      preferredTerm: Diagnosis Study
+      submissionValue: DIAGNOSIS
+    - conceptId: C158289
+      definition: An early phase clinical study with the objective of determining
+        the optimal dose of an investigational product.
+      preferredTerm: Dose Finding Study
+      submissionValue: DOSE FINDING
+    - conceptId: C158290
+      definition: A type of study designed to evaluate the relationship between dose
+        and resulting exposure.
+      preferredTerm: Dose Proportionality Study
+      submissionValue: DOSE PROPORTIONALITY
+    - conceptId: C127803
+      definition: A study of the effect of dose changes on the efficacy of a drug
+        in order to determine the dose-response relationship and optimal dose of a
+        therapy.
+      preferredTerm: Dose Response Study
+      submissionValue: DOSE RESPONSE
+    - conceptId: C158286
+      definition: A type of study designed to evaluate the interaction between drugs,
+        where the use of one may affect the disposition, efficacy, or safety of the
+        other.
+      preferredTerm: Drug-Drug Interaction Study
+      submissionValue: DRUG-DRUG INTERACTION
+    - conceptId: C178057
+      definition: A study that evaluates the effect of a treatment on cardiac electrical
+        activity, as assessed by electrocardiography.
+      preferredTerm: Electrocardiographic Study
+      submissionValue: ECG
+      synonyms:
+      - Electrocardiographic Study
+    - conceptId: C49666
+      definition: A study of the relative therapeutic efficacy of treatment of a disease.
+        Usually this is a Phase II or III study. (NCI)
+      preferredTerm: Efficacy Study
+      submissionValue: EFFICACY
+    - conceptId: C98729
+      definition: Studies that are conducted to assess the effect of food on the rate
+        and extent of absorption of a drug, either compared to a fasted state or to
+        a reference drug.
+      preferredTerm: Food Effect Study
+      submissionValue: FOOD EFFECT
+    - conceptId: C120842
+      definition: A study that assesses an agent's ability to provoke an immune response.
+      preferredTerm: Immunogenicity Study
+      submissionValue: IMMUNOGENICITY
+    - conceptId: C49662
+      definition: A study of the biochemical and physiological effect of a drug and
+        the mechanism of drug action and the relationship between drug concentration
+        and effect. (NCI)
+      preferredTerm: Pharmacodynamic Study
+      submissionValue: PHARMACODYNAMIC
+    - conceptId: C39493
+      definition: A study that assesses the value associated with a given drug in
+        therapeutic and economic terms. This type of study is multidisciplinary in
+        nature and takes into consideration the social and economic costs (resource
+        utilization costs including direct, indirect, and intangible costs) of drug
+        therapy in addition to its direct therapeutic benefits. Analyses relate the
+        difference in therapeutic benefits to the difference in costs between treatment
+        alternatives. (NCI)
+      preferredTerm: Pharmacoeconomic Study
+      submissionValue: PHARMACOECONOMIC
+    - conceptId: C129001
+      definition: A study that assesses variation in DNA sequence, usually within
+        a single gene, and its effect on drug response.
+      preferredTerm: Pharmacogenetic Study
+      submissionValue: PHARMACOGENETIC
+    - conceptId: C49661
+      definition: A study that identifies or assesses variations within the entire
+        genome, including DNA, RNA, or transcriptional elements, and its effects on
+        drug response.
+      preferredTerm: Pharmacogenomic Study
+      submissionValue: PHARMACOGENOMIC
+    - conceptId: C49663
+      definition: A study of the process by which a drug is absorbed, distributed,
+        metabolized, and eliminated by the body. (NCI)
+      preferredTerm: Pharmacokinetic Study
+      submissionValue: PHARMACOKINETIC
+    - conceptId: C161477
+      definition: A type of study designed to evaluate the effect of body position
+        during and/or after administration of the investigational product.
+      preferredTerm: Position Effect Trial
+      submissionValue: POSITION EFFECT
+    - conceptId: C49657
+      definition: A type of study designed to identify actions necessary to permanently
+        eliminate or reduce the long-term risk to human life as a result of a particular
+        medication or treatment regimen.
+      preferredTerm: Prevention Study
+      submissionValue: PREVENTION
+      synonyms:
+      - Prophylaxis Study
+    - conceptId: C174366
+      definition: A type of study designed to evaluate the expected, acute types of
+        immunological responses, sometimes considered excessive, following agent administration.
+      preferredTerm: Reactogenicity Study
+      submissionValue: REACTOGENICITY
+    - conceptId: C49667
+      definition: A study that assesses the medical risks to a subject. Safety is
+        usually assessed by examining a wide range of clinical parameters, including
+        adverse events, vital signs, physical exam, laboratory tests.
+      preferredTerm: Safety Study
+      submissionValue: SAFETY
+    - conceptId: C161478
+      definition: A type of study designed to evaluate the effect of the investigational
+        product on the physiologic act of swallowing.
+      preferredTerm: Swallowing Function Trial
+      submissionValue: SWALLOWING FUNCTION
+    - conceptId: C158287
+      definition: A type of study designed to evaluate the ability of an investigational
+        product and/or approved drug to delay cardiac ventricular repolarization as
+        detected by QT prolongation and other ECG parameters.
+      preferredTerm: Thorough QT Study
+      submissionValue: THOROUGH QT
+      synonyms:
+      - TQT Study
+    - conceptId: C98791
+      definition: A type of safety study that assesses the degree to which overt adverse
+        effects can be tolerated by the subject.
+      preferredTerm: Tolerability Study
+      submissionValue: TOLERABILITY
+    - conceptId: C49656
+      definition: A type of study designed to evaluate intervention(s) for treatment
+        of disease, syndrome or condition.
+      preferredTerm: Treatment Study
+      submissionValue: TREATMENT
+      synonyms:
+      - Therapy Trial
+    - conceptId: C161479
+      definition: A type of study designed to evaluate the user experience with a
+        product.
+      preferredTerm: Usability Testing Study
+      submissionValue: USABILITY TESTING
+    - conceptId: C161480
+      definition: A type of study designed to evaluate the effects of water on investigational
+        product safety and/or efficacy.
+      preferredTerm: Water Effect Trial
+      submissionValue: WATER EFFECT

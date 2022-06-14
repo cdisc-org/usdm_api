@@ -8,6 +8,10 @@ c_code_list = {
   'Study': {
     'study_type': "C99077", 
     'study_phase': "C66737"
+  },
+  'StudyDesign': {
+    'trial_intent_type': "C66736", 
+    'trial_type': "C66739"
   }
 }
 sdtm_release = "sdtmct-2022-03-25"
