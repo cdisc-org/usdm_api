@@ -160,7 +160,7 @@ def study_cell_data(arm, epoch, elements):
     "study_element": elements
   }
 
-def study_element_data(name, description, start = None, end = None):
+def study_element_data(name, description, start=None, end=None):
   return {
     "study_element_name": name,
     "study_element_desc": description,

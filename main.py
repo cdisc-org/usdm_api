@@ -10,7 +10,7 @@ from model.ct import *
 from model.study_arm import *
 from model.study_cell import *
 
-VERSION = "0.11"
+VERSION = "0.12"
 SYSTEM_NAME = "DDF API Simulator"
 
 tags_metadata = [
@@ -266,6 +266,27 @@ async def read_study_cell(uuid: UUID):
   if str(uuid) not in StudyCell.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return StudyCell.read(store, str(uuid))
+
+# Study Element
+@app.get("/v1/study_elements/", 
+  tags=["potential"], 
+  response_model=List[UUID]
+)
+async def list_study_elements():
+  return StudyElement.list(store)
+
+@app.post("/v1/study_elements/", 
+  tags=["potential"], 
+  status_code=status.HTTP_201_CREATED)
+async def create_study_cell(item: StudyElement):
+  item.save(store, None)
+  return item.uuid
+
+@app.get("/v1/study_elements/{uuid}", response_model=StudyElement, tags=["potential"])
+async def read_study_cell(uuid: UUID):
+  if str(uuid) not in StudyElement.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return StudyElement.read(store, str(uuid))
 
 # Code
 @app.get("/v1/codes/", 
