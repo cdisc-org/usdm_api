@@ -66,12 +66,17 @@ indication_2 = study_indication_data("Something similarly bad", [code_data("C666
 origin_type = code_data("C6574y", "http://www.cdisc.org", "1", "SUBJECT DATA")
 treatment = code_for('StudyArm', 'study_arm_type', submission_value='Treatment Arm')
 placebo = code_for('StudyArm', 'study_arm_type', submission_value='Placebo Comparator Arm')
-epoch_type = code_data("C1111x", "http://www.cdisc.org", "1", "NORMAL EPOCH")
 study_arm_1 = study_arm_data("Placebo", "The Placebo Arm", placebo, "Captured subject data", origin_type)
 study_arm_2 = study_arm_data("Active", "Super Drug Arm", treatment, "Captured subject data", origin_type)
-study_epoch_1 = study_epoch_data("Run In", "The run in", 1, epoch_type)
-study_epoch_2 = study_epoch_data("Treatment", "The drug!", 1, epoch_type)
-study_epoch_3 = study_epoch_data("Follow Up", "Go away", 1, epoch_type)
+
+#epoch_type = code_data("C1111x", "http://www.cdisc.org", "1", "NORMAL EPOCH")
+run_in = code_for('StudyEpoch', 'epoch_type', submission_value='RUN-IN') 
+treatment = code_for('StudyEpoch', 'epoch_type', submission_value='TREATMENT')
+follow_up = code_for('StudyEpoch', 'epoch_type', submission_value='FOLLOW-UP')
+study_epoch_1 = study_epoch_data("Run In", "The run in", 1, run_in)
+study_epoch_2 = study_epoch_data("Treatment", "The drug!", 1, treatment)
+study_epoch_3 = study_epoch_data("Follow Up", "Go away", 1, follow_up)
+
 study_element_1 = study_element_data("Element 1", "First element")
 study_element_2 = study_element_data("Element 2", "Second element")
 study_element_3 = study_element_data("Element 3", "Third element")
@@ -91,8 +96,11 @@ study_cells.append(study_cell_data(study_arm_2, study_epoch_3, [study_element_6]
 #design_2_type = code_data("C3496y", "http://www.cdisc.org", "1", "COMPLEX DESIGN II")
 
 intent = code_for('StudyDesign', 'trial_intent_type', c_code='C15714')
+print(intent)
 design_1_type = code_for('StudyDesign', 'trial_type', submission_value='BIOSIMILARITY')
+print(design_1_type)
 design_2_type = code_for('StudyDesign', 'trial_type', submission_value='EFFICACY')
+print(design_2_type)
 
 design_1 = study_design_data([intent], design_1_type, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [wf_1])
 design_2 = study_design_data([intent], design_2_type, study_cells, [indication_1, indication_2], [objective_1], [population_1], [ii_1], [wf_1])
@@ -109,7 +117,8 @@ if __name__ == "__main__":
   uuid = service.post("study_definitions", study)
   service.get("study_definitions", uuid)
   service.get("studies", uuid)
-  items = ["studies", "study_identifiers", "organisations", "study_protocol_versions", "study_arms", "study_cells", "codes"]
+  items = ["studies", "study_identifiers", "organisations", "study_protocol_versions", "study_arms", "study_epochs", 
+    "study_cells", "codes"]
   for item in items:
     uuids = service.get(item)
     service.get(item, uuids[0])

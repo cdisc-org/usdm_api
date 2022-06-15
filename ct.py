@@ -25,6 +25,9 @@ c_code_list = {
   },
   'StudyArm': {
     'study_arm_type': 'C174222'
+  },
+  'StudyEpoch': {
+    'epoch_type': 'C99079'
   }
 }
 releases = ["sdtmct-2022-03-25", "protocolct-2022-03-25"]

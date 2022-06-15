@@ -96,12 +96,14 @@ async def list_studies():
   tags=["production"], 
   summary=annotations['study_definition']['post']['summary'],
   description=annotations['study_definition']['post']['description'], 
-  status_code=status.HTTP_201_CREATED)
+  status_code=status.HTTP_201_CREATED,
+  response_model=UUID)
 @app.post("/v1/study_definitions/", 
   tags=["proposed"], 
   summary=annotations['study_definition']['post']['summary'],
   description=annotations['study_definition']['post']['description'], 
-  status_code=status.HTTP_201_CREATED)
+  status_code=status.HTTP_201_CREATED,
+  response_model=UUID)
 async def create_study(study: Study):
   study.recursive_save(store)
   return study.uuid
@@ -223,6 +225,26 @@ async def read_study_arm(uuid: UUID):
   if str(uuid) not in StudyArm.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return StudyArm.read(store, str(uuid))
+
+# Study Epoch
+@app.get("/v1/study_epochs/", 
+  tags=["potential"], 
+  response_model=List[UUID])
+async def list_study_epochs():
+  return StudyEpoch.list(store)
+
+@app.post("/v1/study_epochs/", 
+  tags=["potential"], 
+  status_code=status.HTTP_201_CREATED)
+async def create_study_arm(item: StudyEpoch):
+  item.save(store, None)
+  return item.uuid
+
+@app.get("/v1/study_epochs/{uuid}", response_model=StudyEpoch, tags=["potential"])
+async def read_study_arm(uuid: UUID):
+  if str(uuid) not in StudyEpoch.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return StudyEpoch.read(store, str(uuid))
 
 # Study Cell
 @app.get("/v1/study_cells/", 

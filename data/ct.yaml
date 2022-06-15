@@ -520,3 +520,85 @@ StudyDesign:
         product safety and/or efficacy.
       preferredTerm: Water Effect Trial
       submissionValue: WATER EFFECT
+StudyEpoch:
+  epoch_type:
+    conceptId: C99079
+    definition: The name of the EPOCH.
+    extensible: 'true'
+    name: Epoch
+    preferredTerm: CDISC SDTM Epoch Terminology
+    submissionValue: EPOCH
+    synonyms:
+    - Epoch
+    terms:
+    - conceptId: C125938
+      definition: A period in a clinical study after eligibility has been met and
+        before the start of treatment, at which baseline measurements are collected.
+      preferredTerm: Baseline Epoch
+      submissionValue: BASELINE
+    - conceptId: C102255
+      definition: A period in a clinical study during which subjects receive blinded
+        therapeutic treatment.
+      preferredTerm: Blinded Treatment Epoch
+      submissionValue: BLINDED TREATMENT
+    - conceptId: C123452
+      definition: A period in a clinical study during which subjects receive continuation
+        treatment.
+      preferredTerm: Continuation Therapy Epoch
+      submissionValue: CONTINUATION TREATMENT
+      synonyms:
+      - Continuation Phase
+    - conceptId: C99158
+      definition: A period in a clinical study during which information about the
+        health status of an individual is obtained after study interventions have
+        concluded.
+      preferredTerm: Clinical Study Follow-up
+      submissionValue: FOLLOW-UP
+    - conceptId: C123453
+      definition: A period in a clinical study during which subjects receive induction
+        treatment.
+      preferredTerm: Induction Therapy Epoch
+      submissionValue: INDUCTION TREATMENT
+      synonyms:
+      - Induction Phase
+      - Intensive Phase
+    - conceptId: C16032
+      definition: A period in a clinical study during which information about the
+        health status of an individual is obtained long after study interventions
+        have concluded.
+      preferredTerm: Long-term Follow-up
+      submissionValue: LONG-TERM FOLLOW-UP
+    - conceptId: C165873
+      definition: A period in a clinical study during which subjects are observed,
+        without any planned intervention.
+      preferredTerm: Observation Study Epoch
+      submissionValue: OBSERVATION
+    - conceptId: C102256
+      definition: A period in a clinical study during which subjects receive open
+        label therapeutic treatment.
+      preferredTerm: Open Label Treatment Epoch
+      submissionValue: OPEN LABEL TREATMENT
+    - conceptId: C98779
+      definition: A period in a clinical study that occurs before the commencement
+        of the primary clinical study investigation, during which subjects may be
+        assessed for suitability in the clinical study, withdrawn from existing therapy,
+        trained in study methodology or evaluated for any other protocol-specified
+        reason.
+      preferredTerm: Run-in Period
+      submissionValue: RUN-IN
+    - conceptId: C48262
+      definition: A period in a clinical study during which subjects are evaluated
+        for participation in the study.
+      preferredTerm: Trial Screening
+      submissionValue: SCREENING
+    - conceptId: C101526
+      definition: A period in a study during which subjects are receiving investigational
+        therapy or treatment.
+      preferredTerm: Treatment Epoch
+      submissionValue: TREATMENT
+    - conceptId: C42872
+      definition: A period of time during a study when a subject is taken off of the
+        investigational therapy or treatment in order to reduce the amount of investigational
+        product within the body.
+      preferredTerm: Washout Period
+      submissionValue: WASHOUT
