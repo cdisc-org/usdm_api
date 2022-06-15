@@ -9,7 +9,6 @@ from model.code import *
 from model.ct import *
 from model.study_arm import *
 from model.study_cell import *
-from model.list_uuid import *
 
 VERSION = "0.11"
 SYSTEM_NAME = "DDF API Simulator"
