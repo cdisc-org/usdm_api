@@ -89,7 +89,7 @@ def system_and_version():
   tags=["proposed"], 
   summary=annotations['study_definition']['get']['summary'],
   description=annotations['study_definition']['get']['description'], 
-  response_model=ListUUID)
+  response_model=List[UUID])
 async def list_studies():
   return Study.list(store)
 
@@ -123,7 +123,7 @@ async def read_full_study(uuid: str):
   tags=["potential"], 
   summary=annotations['study']['get']['summary'],
   description=annotations['study']['get']['description'], 
-  response_model=ListUUID)
+  response_model=List[UUID])
 async def list_studies():
   return Study.list(store)
 
@@ -139,7 +139,7 @@ async def read_study(uuid: str):
 # Study Identifiers
 @app.get("/v1/study_identifiers/", 
   tags=["potential"], 
-  response_model=ListUUID
+  response_model=List[UUID]
 )
 async def list_study_identifiers():
   return StudyIdentifier.list(store)
@@ -160,7 +160,7 @@ async def read_study_identifier(uuid: UUID):
 # Organisations
 @app.get("/v1/organisations/", 
   tags=["potential"], 
-  response_model=ListUUID
+  response_model=List[UUID]
 )
 async def list_organisations():
   return Organisation.list(store)
@@ -187,7 +187,7 @@ async def read_organisation_full(uuid: UUID):
 # Study Protocol Version
 @app.get("/v1/study_protocol_versions/", 
   tags=["potential"], 
-  response_model=ListUUID
+  response_model=List[UUID]
 )
 async def list_study_protocol_versions():
   return StudyProtocolVersion.list(store)
@@ -208,7 +208,7 @@ async def read_study_protocol_version(uuid: UUID):
 # Study Arm
 @app.get("/v1/study_arms/", 
   tags=["potential"], 
-  response_model=ListUUID)
+  response_model=List[UUID])
 async def list_study_arms():
   return StudyArm.list(store)
 
@@ -228,7 +228,7 @@ async def read_study_arm(uuid: UUID):
 # Study Cell
 @app.get("/v1/study_cells/", 
   tags=["potential"], 
-  response_model=ListUUID
+  response_model=List[UUID]
 )
 async def list_study_cells():
   return StudyCell.list(store)
@@ -249,7 +249,7 @@ async def read_study_cell(uuid: UUID):
 # Code
 @app.get("/v1/codes/", 
   tags=["potential"], 
-  response_model=ListUUID
+  response_model=List[UUID]
 )
 async def list_codes():
   return Code.list(store)
