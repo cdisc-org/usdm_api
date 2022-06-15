@@ -9,6 +9,7 @@ from model.code import *
 from model.ct import *
 from model.study_arm import *
 from model.study_cell import *
+from model.study_data import *
 
 VERSION = "0.12"
 SYSTEM_NAME = "DDF API Simulator"
@@ -308,6 +309,27 @@ async def read_code(uuid: UUID):
   if str(uuid) not in Code.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return Code.read(store, str(uuid))
+
+# Study Data
+@app.get("/v1/study_data/", 
+  tags=["potential"], 
+  response_model=List[UUID]
+)
+async def list_study_data():
+  return StudyData.list(store)
+
+@app.post("/v1/study_data/", 
+  tags=["potential"], 
+  status_code=status.HTTP_201_CREATED)
+async def create_code(item: StudyData):
+  item.save(store, None)
+  return item.uuid
+
+@app.get("/v1/study_data/{uuid}", response_model=StudyData, tags=["potential"])
+async def read_code(uuid: UUID):
+  if str(uuid) not in StudyData.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return StudyData.read(store, str(uuid))
 
 # Controlled Terminology
 @app.get("/v1/terms/", 

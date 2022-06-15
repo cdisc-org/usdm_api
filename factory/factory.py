@@ -52,9 +52,11 @@ def workflow_item_data(description, from_pit, to_pit, previous, encounter, activ
     "activity": activity
   }
 
-def activity_data(description):
+def activity_data(description, procedures, study_data):
   return {
-    "activity_desc": description
+    "activity_desc": description,
+    "defined_procedure": procedures,
+    "study_data_collection": study_data
   }
 
 def procedure_data(name, the_type, previous):

@@ -2,10 +2,10 @@ import sys
 from factory.factory import *
 from service.service import Service
 
-activity_1 = activity_data("Activity_1")
-activity_2 = activity_data("Activity_2")
 procedure_1 = procedure_data("Procedure 1", None, None)
 study_data_1 = study_data_data("Study Data 1", "Something", "Link 1")
+activity_1 = activity_data("Activity_1", [procedure_1], [])
+activity_2 = activity_data("Activity_2", [], [study_data_1])
 encounter_1 = encounter_data("Encounter 1", "desc", None, None, None)
 encounter_2 = encounter_data("Encounter 2", "desc", None, None, None)
 wfi_1 = workflow_item_data("", None, None, None, encounter_1, activity_1)
@@ -118,7 +118,7 @@ if __name__ == "__main__":
   service.get("study_definitions", uuid)
   service.get("studies", uuid)
   items = ["studies", "study_identifiers", "organisations", "study_protocol_versions", "study_arms", "study_epochs", 
-    "study_cells", "study_elements", "codes"]
+    "study_cells", "study_elements", "codes", "study_data"]
   for item in items:
     uuids = service.get(item)
     service.get(item, uuids[0])
