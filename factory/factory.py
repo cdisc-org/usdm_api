@@ -149,8 +149,8 @@ def study_epoch_data(name, description, sequence, epoch_type):
   return {
     "study_epoch_name": name,
     "study_epoch_desc": description,
+    "epoch_type": epoch_type,
     "sequence_in_study": sequence,
-    "epoch_type": epoch_type
   }
 
 def study_cell_data(arm, epoch, elements):
