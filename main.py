@@ -9,6 +9,7 @@ from model.code import *
 from model.ct import *
 from model.study_arm import *
 from model.study_cell import *
+from model.list_uuid import *
 
 VERSION = "0.11"
 SYSTEM_NAME = "DDF API Simulator"
@@ -87,7 +88,8 @@ def system_and_version():
 @app.get("/v1/study_definition/", 
   tags=["proposed"], 
   summary=annotations['study_definition']['get']['summary'],
-  description=annotations['study_definition']['get']['description'])
+  description=annotations['study_definition']['get']['description'], 
+  response_model=ListUUID)
 async def list_studies():
   return Study.list(store)
 
@@ -120,7 +122,8 @@ async def read_full_study(uuid: str):
 @app.get("/v1/study/", 
   tags=["potential"], 
   summary=annotations['study']['get']['summary'],
-  description=annotations['study']['get']['description'])
+  description=annotations['study']['get']['description'], 
+  response_model=ListUUID)
 async def list_studies():
   return Study.list(store)
 
@@ -134,7 +137,10 @@ async def read_study(uuid: str):
   return Study.read(store, uuid)
 
 # Study Identifiers
-@app.get("/v1/study_identifier/", tags=["potential"])
+@app.get("/v1/study_identifier/", 
+  tags=["potential"], 
+  response_model=ListUUID
+)
 async def list_study_identifiers():
   return StudyIdentifier.list(store)
 
@@ -152,7 +158,10 @@ async def read_study_identifier(uuid: UUID):
   return StudyIdentifier.read(store, str(uuid))
 
 # Organisations
-@app.get("/v1/organisation/", tags=["potential"])
+@app.get("/v1/organisation/", 
+  tags=["potential"], 
+  response_model=ListUUID
+)
 async def list_organisations():
   return Organisation.list(store)
 
@@ -176,7 +185,10 @@ async def read_organisation_full(uuid: UUID):
   return Organisation.recursive_read(store, str(uuid))
 
 # Study Protocol Version
-@app.get("/v1/study_protocol_version/", tags=["potential"])
+@app.get("/v1/study_protocol_version/", 
+  tags=["potential"], 
+  response_model=ListUUID
+)
 async def list_study_protocol_versions():
   return StudyProtocolVersion.list(store)
 
@@ -194,7 +206,9 @@ async def read_study_protocol_version(uuid: UUID):
   return StudyProtocolVersion.read(store, str(uuid))
 
 # Study Arm
-@app.get("/v1/study_arm/", tags=["potential"])
+@app.get("/v1/study_arm/", 
+  tags=["potential"], 
+  response_model=ListUUID)
 async def list_study_arms():
   return StudyArm.list(store)
 
@@ -212,7 +226,10 @@ async def read_study_arm(uuid: UUID):
   return StudyArm.read(store, str(uuid))
 
 # Study Cell
-@app.get("/v1/study_cell/", tags=["potential"])
+@app.get("/v1/study_cell/", 
+  tags=["potential"], 
+  response_model=ListUUID
+)
 async def list_study_cells():
   return StudyCell.list(store)
 
@@ -230,7 +247,10 @@ async def read_study_cell(uuid: UUID):
   return StudyCell.read(store, str(uuid))
 
 # Code
-@app.get("/v1/code/", tags=["potential"])
+@app.get("/v1/code/", 
+  tags=["potential"], 
+  response_model=ListUUID
+)
 async def list_codes():
   return Code.list(store)
 
