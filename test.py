@@ -2,7 +2,9 @@ import sys
 from factory.factory import *
 from service.service import Service
 
-procedure_1 = procedure_data("Procedure 1", None, None)
+
+procedure_code = code_data("371970002", "SNOMED-CT", "4.0.6.4", "Procedure X")           
+procedure_1 = procedure_data("Procedure 1", procedure_code, None)
 study_data_1 = study_data_data("Study Data 1", "Something", "Link 1")
 activity_1 = activity_data("Activity_1", [procedure_1], [])
 activity_2 = activity_data("Activity_2", [], [study_data_1])
