@@ -85,7 +85,7 @@ def system_and_version():
   return { "system": SYSTEM_NAME, "version": VERSION }
 
 # Study Definition
-@app.get("/v1/study_definition/", 
+@app.get("/v1/study_definitions/", 
   tags=["proposed"], 
   summary=annotations['study_definition']['get']['summary'],
   description=annotations['study_definition']['get']['description'], 
@@ -98,7 +98,7 @@ async def list_studies():
   summary=annotations['study_definition']['post']['summary'],
   description=annotations['study_definition']['post']['description'], 
   status_code=status.HTTP_201_CREATED)
-@app.post("/v1/study_definition/", 
+@app.post("/v1/study_definitions/", 
   tags=["proposed"], 
   summary=annotations['study_definition']['post']['summary'],
   description=annotations['study_definition']['post']['description'], 
@@ -110,7 +110,7 @@ async def create_study(study: Study):
 @app.get("/studydefinitionrepository/v1/{study}", tags=["production"], 
   summary=annotations['study_definition']['get_uuid']['summary'],
   description=annotations['study_definition']['get_uuid']['description'])
-@app.get("/v1/study_definition/{uuid}", tags=["proposed"], 
+@app.get("/v1/study_definitions/{uuid}", tags=["proposed"], 
   summary=annotations['study_definition']['get_uuid']['summary'],
   description=annotations['study_definition']['get_uuid']['description'])
 async def read_full_study(uuid: str):
@@ -119,7 +119,7 @@ async def read_full_study(uuid: str):
   return Study.recursive_read(store, uuid)
 
 # Study
-@app.get("/v1/study/", 
+@app.get("/v1/studies/", 
   tags=["potential"], 
   summary=annotations['study']['get']['summary'],
   description=annotations['study']['get']['description'], 
@@ -127,7 +127,7 @@ async def read_full_study(uuid: str):
 async def list_studies():
   return Study.list(store)
 
-@app.get("/v1/study/{uuid}", 
+@app.get("/v1/studies/{uuid}", 
   tags=["potential"], 
   summary=annotations['study']['get_uuid']['summary'],
   description=annotations['study']['get_uuid']['description'])
@@ -137,42 +137,42 @@ async def read_study(uuid: str):
   return Study.read(store, uuid)
 
 # Study Identifiers
-@app.get("/v1/study_identifier/", 
+@app.get("/v1/study_identifiers/", 
   tags=["potential"], 
   response_model=ListUUID
 )
 async def list_study_identifiers():
   return StudyIdentifier.list(store)
 
-@app.post("/v1/study_identifier/", 
+@app.post("/v1/study_identifiers/", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_study_identifier(identifier: StudyIdentifier):
   identifier.recursive_save(store, None)
   return identifier.uuid
 
-@app.get("/v1/study_identifier/{uuid}", response_model=StudyIdentifier, tags=["potential"])
+@app.get("/v1/study_identifiers/{uuid}", response_model=StudyIdentifier, tags=["potential"])
 async def read_study_identifier(uuid: UUID):
   if str(uuid) not in StudyIdentifier.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return StudyIdentifier.read(store, str(uuid))
 
 # Organisations
-@app.get("/v1/organisation/", 
+@app.get("/v1/organisations/", 
   tags=["potential"], 
   response_model=ListUUID
 )
 async def list_organisations():
   return Organisation.list(store)
 
-@app.post("/v1/organisation/", 
+@app.post("/v1/organisations/", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_organisation(org: Organisation):
   org.save(store, None)
   return org.uuid
 
-@app.get("/v1/organisation/{uuid}", response_model=Organisation, tags=["potential"])
+@app.get("/v1/organisations/{uuid}", response_model=Organisation, tags=["potential"])
 async def read_organisation(uuid: UUID):
   if str(uuid) not in Organisation.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
@@ -185,92 +185,92 @@ async def read_organisation_full(uuid: UUID):
   return Organisation.recursive_read(store, str(uuid))
 
 # Study Protocol Version
-@app.get("/v1/study_protocol_version/", 
+@app.get("/v1/study_protocol_versions/", 
   tags=["potential"], 
   response_model=ListUUID
 )
 async def list_study_protocol_versions():
   return StudyProtocolVersion.list(store)
 
-@app.post("/v1/study_protocol_version/", 
+@app.post("/v1/study_protocol_versions/", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_protocol_version(version: StudyProtocolVersion):
   version.save(store, None)
   return version.uuid
 
-@app.get("/v1/study_protocol_version/{uuid}", response_model=StudyProtocolVersion, tags=["potential"])
+@app.get("/v1/study_protocol_versions/{uuid}", response_model=StudyProtocolVersion, tags=["potential"])
 async def read_study_protocol_version(uuid: UUID):
   if str(uuid) not in StudyProtocolVersion.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return StudyProtocolVersion.read(store, str(uuid))
 
 # Study Arm
-@app.get("/v1/study_arm/", 
+@app.get("/v1/study_arms/", 
   tags=["potential"], 
   response_model=ListUUID)
 async def list_study_arms():
   return StudyArm.list(store)
 
-@app.post("/v1/study_arm/", 
+@app.post("/v1/study_arms/", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_study_arm(item: StudyArm):
   item.save(store, None)
   return item.uuid
 
-@app.get("/v1/study_arm/{uuid}", response_model=StudyArm, tags=["potential"])
+@app.get("/v1/study_arms/{uuid}", response_model=StudyArm, tags=["potential"])
 async def read_study_arm(uuid: UUID):
   if str(uuid) not in StudyArm.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return StudyArm.read(store, str(uuid))
 
 # Study Cell
-@app.get("/v1/study_cell/", 
+@app.get("/v1/study_cells/", 
   tags=["potential"], 
   response_model=ListUUID
 )
 async def list_study_cells():
   return StudyCell.list(store)
 
-@app.post("/v1/study_cell/", 
+@app.post("/v1/study_cells/", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_study_cell(item: StudyCell):
   item.save(store, None)
   return item.uuid
 
-@app.get("/v1/study_cell/{uuid}", response_model=StudyCell, tags=["potential"])
+@app.get("/v1/study_cells/{uuid}", response_model=StudyCell, tags=["potential"])
 async def read_study_cell(uuid: UUID):
   if str(uuid) not in StudyCell.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return StudyCell.read(store, str(uuid))
 
 # Code
-@app.get("/v1/code/", 
+@app.get("/v1/codes/", 
   tags=["potential"], 
   response_model=ListUUID
 )
 async def list_codes():
   return Code.list(store)
 
-@app.post("/v1/code/", 
+@app.post("/v1/codes/", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_code(item: Code):
   item.save(store, None)
   return item.uuid
 
-@app.get("/v1/code/{uuid}", response_model=Code, tags=["potential"])
+@app.get("/v1/codes/{uuid}", response_model=Code, tags=["potential"])
 async def read_code(uuid: UUID):
   if str(uuid) not in Code.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return Code.read(store, str(uuid))
 
 # Controlled Terminology
-@app.get("/v1/ct/", 
+@app.get("/v1/terms/", 
   tags=["potential"],
-  summary="Return specified Controlled Terminology",
+  summary="Return Controlled Terminology",
   description="Return the specified Controlled Terminology (CT) for the specified class and attribute. This is the CT defined within the model specification")
 async def ct_search(klass: str, attribute: str):
   return CT().search(klass, attribute)
