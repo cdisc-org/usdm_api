@@ -149,10 +149,10 @@ def study_arm_data(name, description, arm_type, origin_description, origin_type)
 
 def study_epoch_data(name, description, sequence, epoch_type):
   return {
-    "study_epoch_name": name,
-    "study_epoch_desc": description,
-    "epoch_type": epoch_type,
-    "sequence_in_study": sequence,
+    "studyEpochName": name,
+    "studyEpochDesc": description,
+    "studyEpochType": epoch_type,
+    "sequenceInStudy": sequence,
   }
 
 def study_cell_data(arm, epoch, elements):
@@ -164,10 +164,10 @@ def study_cell_data(arm, epoch, elements):
 
 def study_element_data(name, description, start=None, end=None):
   return {
-    "study_element_name": name,
-    "study_element_desc": description,
-    "start_rule": start,
-    "end_rule": end
+    "studyElementName": name,
+    "studyElementDesc": description,
+    "startRule": start,
+    "endRule": end
   }
 
 def rule_data(description):

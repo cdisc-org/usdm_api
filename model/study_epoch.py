@@ -5,7 +5,7 @@ from uuid import UUID
 
 class StudyEpoch(ApiBaseModel):
   uuid: Union[UUID, None] = None
-  study_epoch_name: str
-  study_epoch_desc: str
-  epoch_type: Union[Code, UUID]
-  sequence_in_study: int
+  studyEpochName: str
+  studyEpochDesc: str
+  studyEpochType: Union[Code, UUID]
+  sequenceInStudy: int
