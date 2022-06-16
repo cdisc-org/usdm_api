@@ -126,8 +126,8 @@ def intercurrent_event_data(name, description, coding):
 
 def study_identifier_data(identifier, organisation):
   return {
-    "study_identifier": identifier,
-    "study_identifier_scope": organisation
+    "studyIdentifier": identifier,
+    "studyIdentifierScope": organisation
   }
 
 def organization_data(identifier_scheme, org_identifier, org_name, organisation_type):
