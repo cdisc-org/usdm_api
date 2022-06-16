@@ -194,14 +194,14 @@ def study_data(title, version, type, phase, identifiers, protocol_versions, desi
 
 def study_design_data(intent, type, cells, indications, objectives, populations, interventions, workflows):
   return {
-    "trial_intent_type": intent,
-    "trial_type": type,
-    "study_cell": cells,
-    "study_indication": indications,
-    "study_objective": objectives,
-    "study_population": populations,
-    "study_investigational_interventions": interventions,
-    "study_workflow": workflows
+    "trialIntentType": intent,
+    "trialType": type,
+    "studyCells": cells,
+    "studyIndications": indications,
+    "studyObjectives": objectives,
+    "studyPopulations": populations,
+    "studyInvestigationalInterventions": interventions,
+    "studyWorkflows": workflows
   }
 
 def study_protocol_version_data(brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):

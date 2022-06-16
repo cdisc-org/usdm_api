@@ -11,11 +11,11 @@ from uuid import UUID
 
 class StudyDesign(ApiBaseModel):
   uuid: Union[UUID, None] = None
-  trial_intent_type: Union[List[Code], List[UUID]]
-  trial_type: Union[Code, UUID]
-  study_cell: Union[List[StudyCell], List[UUID], None] = []
-  study_indication: Union[List[Indication], List[UUID], None] = []
-  study_investigational_interventions: Union[List[InvestigationalIntervention], List[UUID], None] = []
-  study_population: Union[List[Population], List[UUID], None] = []
-  study_objective: Union[List[Objective], List[UUID], None] = []
-  study_workflow: Union[List[Workflow], List[UUID], None] = []
+  trialIntentType: Union[List[Code], List[UUID]]
+  trialType: Union[Code, UUID]
+  studyCells: Union[List[StudyCell], List[UUID], None] = []
+  studyIndications: Union[List[Indication], List[UUID], None] = []
+  studyInvestigationalInterventions: Union[List[InvestigationalIntervention], List[UUID], None] = []
+  studyPopulations: Union[List[Population], List[UUID], None] = []
+  studyObjectives: Union[List[Objective], List[UUID], None] = []
+  studyWorkflows: Union[List[Workflow], List[UUID], None] = []
