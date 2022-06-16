@@ -157,9 +157,9 @@ def study_epoch_data(name, description, sequence, epoch_type):
 
 def study_cell_data(arm, epoch, elements):
   return {
-    "study_arm": arm,
-    "study_epoch": epoch,
-    "study_element": elements
+    "studyArm": arm,
+    "studyEpoch": epoch,
+    "studyElements": elements
   }
 
 def study_element_data(name, description, start=None, end=None):
