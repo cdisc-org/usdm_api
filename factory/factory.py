@@ -19,8 +19,8 @@ def soa(df):
 def code_data(code, system, version, decode):
   return {
     "code": code,
-    "code_system": system,
-    "code_system_version": version,
+    "codeSystem": system,
+    "codeSystemVersion": version,
     "decode": decode
   }
 
@@ -132,10 +132,10 @@ def study_identifier_data(identifier, organisation):
 
 def organization_data(identifier_scheme, org_identifier, org_name, organisation_type):
   return {
-    "organisation_identifier_scheme": identifier_scheme,
-    "organisation_identifier": org_identifier,
-    "organisation_name": org_name,
-    "organisation_type": organisation_type
+    "organisationIdentifierScheme": identifier_scheme,
+    "organisationIdentifier": org_identifier,
+    "organisationName": org_name,
+    "organisationType": organisation_type
   }
 
 def study_arm_data(name, description, arm_type, origin_description, origin_type):
@@ -206,14 +206,14 @@ def study_design_data(intent, type, cells, indications, objectives, populations,
 
 def study_protocol_version_data(brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):
   return {
-    "brief_title": brief_title,
-    "offical_title": official_title,
-    "public_title": public_title,
-    "scientific_title": scientific_title,
-    "protocol_version": version,
-    "protocol_amendment": amendment,
-    "protocol_effective_date": effective_date,
-    "protocol_status": status
+    "briefTitle": brief_title,
+    "officalTitle": official_title,
+    "publicTitle": public_title,
+    "scientificTitle": scientific_title,
+    "protocolVersion": version,
+    "protocolAmendment": amendment,
+    "protocolEffectiveDate": effective_date,
+    "protocolStatus": status
   }
 
 # Internal methods

@@ -5,10 +5,10 @@ from .code import Code
 
 class Organisation(ApiBaseModel):
   uuid: Union[UUID, None]
-  organisation_identifier_scheme: str
-  organisation_identifier: str
-  organisation_name: str
-  organisation_type: Union[UUID, Code]
+  organisationIdentifierScheme: str
+  organisationIdentifier: str
+  organisationName: str
+  organisationType: Union[UUID, Code]
 
   @classmethod
   def global_reuse(cls):
