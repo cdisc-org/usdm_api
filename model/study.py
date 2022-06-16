@@ -8,13 +8,13 @@ from uuid import UUID
 
 class Study(ApiBaseModel):
   uuid: Union[UUID, None]
-  study_title: str
-  study_version: str
-  study_type: Union[Code, None]
-  study_phase: Union[Code, None]
-  study_identifier: Union[List[StudyIdentifier], List[UUID], None] = []
-  study_protocol_version: Union[List[StudyProtocolVersion], List[UUID], None] = []
-  study_design: Union[List[StudyDesign], List[UUID], None] = []
+  studyTitle: str
+  studyVersion: str
+  studyType: Union[Code, None]
+  studyPhase: Union[Code, None]
+  studyIdentifiers: Union[List[StudyIdentifier], List[UUID], None] = []
+  studyProtocolVersions: Union[List[StudyProtocolVersion], List[UUID], None] = []
+  studyDesigns: Union[List[StudyDesign], List[UUID], None] = []
 
   @classmethod
   def scope_reuse(cls):

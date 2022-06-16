@@ -183,13 +183,13 @@ def study_indication_data(description, indications):
 
 def study_data(title, version, type, phase, identifiers, protocol_versions, designs):
   return {
-    "study_title": title,
-    "study_version": version,
-    "study_type":  type,
-    "study_phase":  phase,
-    "study_identifier": identifiers,
-    "study_protocol_version": protocol_versions,
-    "study_design": designs
+    "studyTitle": title,
+    "studyVersion": version,
+    "studyType":  type,
+    "studyPhase":  phase,
+    "studyIdentifiers": identifiers,
+    "studyProtocolVersions": protocol_versions,
+    "studyDesigns": designs
   }
 
 def study_design_data(intent, type, cells, indications, objectives, populations, interventions, workflows):
