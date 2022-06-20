@@ -4,14 +4,14 @@ from .code import Code
 from uuid import UUID
 
 class PreviousProcedure(ApiBaseModel):
-  procedure_name: str
-  procedure_type: Union[Code, UUID]
+  procedureName: str
+  procedureCode: Union[Code, UUID]
 
 class Procedure(ApiBaseModel):
   uuid: Union[UUID, None] = None
-  procedure_name: str
-  procedure_type: Union[Code, UUID]
-  previous_procedure: Union[PreviousProcedure, UUID, None] = None
+  procedureType: str
+  procedureCode: Union[Code, UUID]
+  previousProcedure: Union[PreviousProcedure, UUID, None] = None
   
   @classmethod
   def scope_reuse(cls):

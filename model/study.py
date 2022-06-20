@@ -19,4 +19,3 @@ class Study(ApiBaseModel):
   @classmethod
   def scope_reuse(cls):
     return False
-

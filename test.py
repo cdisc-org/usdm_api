@@ -2,9 +2,8 @@ import sys
 from factory.factory import *
 from service.service import Service
 
-
-procedure_code = code_data("371970002", "SNOMED-CT", "4.0.6.4", "Procedure X")           
-procedure_1 = procedure_data("Procedure 1", procedure_code, None)
+procedure_code = code_data("767002", "SNOMED-CT", "2022-05-31", "White blood cell count")           
+procedure_1 = procedure_data("Specimen Collection", procedure_code, None)
 study_data_1 = study_data_data("Study Data 1", "Something", "Link 1")
 activity_1 = activity_data("Activity_1", [procedure_1], [])
 activity_2 = activity_data("Activity_2", [], [study_data_1])
@@ -66,15 +65,15 @@ identifiers = [identifier_1, identifier_2, identifier_3]
 indication_1 = study_indication_data("Something bad", [code_data("C6666x", "http://www.cdisc.org", "1", "BAD STUFF")])
 indication_2 = study_indication_data("Something similarly bad", [code_data("C6666y", "http://www.cdisc.org", "1", "BAD SIMILAR STUFF")])
 origin_type = code_data("C6574y", "http://www.cdisc.org", "1", "SUBJECT DATA")
-treatment = code_for('StudyArm', 'study_arm_type', submission_value='Treatment Arm')
-placebo = code_for('StudyArm', 'study_arm_type', submission_value='Placebo Comparator Arm')
+treatment = code_for('StudyArm', 'studyArmType', submission_value='Treatment Arm')
+placebo = code_for('StudyArm', 'studyArmType', submission_value='Placebo Comparator Arm')
 study_arm_1 = study_arm_data("Placebo", "The Placebo Arm", placebo, "Captured subject data", origin_type)
 study_arm_2 = study_arm_data("Active", "Super Drug Arm", treatment, "Captured subject data", origin_type)
 
 #epoch_type = code_data("C1111x", "http://www.cdisc.org", "1", "NORMAL EPOCH")
-run_in = code_for('StudyEpoch', 'epoch_type', submission_value='RUN-IN') 
-treatment = code_for('StudyEpoch', 'epoch_type', submission_value='TREATMENT')
-follow_up = code_for('StudyEpoch', 'epoch_type', submission_value='FOLLOW-UP')
+run_in = code_for('StudyEpoch', 'studyEpochType', submission_value='RUN-IN') 
+treatment = code_for('StudyEpoch', 'studyEpochType', submission_value='TREATMENT')
+follow_up = code_for('StudyEpoch', 'studyEpochType', submission_value='FOLLOW-UP')
 study_epoch_1 = study_epoch_data("Run In", "The run in", 1, run_in)
 study_epoch_2 = study_epoch_data("Treatment", "The drug!", 2, treatment)
 study_epoch_3 = study_epoch_data("Follow Up", "Go away", 3, follow_up)
@@ -97,11 +96,11 @@ study_cells.append(study_cell_data(study_arm_2, study_epoch_3, [study_element_6]
 #design_1_type = code_data("C3496x", "http://www.cdisc.org", "1", "COMPLEX DESIGN I")
 #design_2_type = code_data("C3496y", "http://www.cdisc.org", "1", "COMPLEX DESIGN II")
 
-intent = code_for('StudyDesign', 'trial_intent_type', c_code='C15714')
+intent = code_for('StudyDesign', 'trialIntentType', c_code='C15714')
 print(intent)
-design_1_type = code_for('StudyDesign', 'trial_type', submission_value='BIOSIMILARITY')
+design_1_type = code_for('StudyDesign', 'trialType', submission_value='BIOSIMILARITY')
 print(design_1_type)
-design_2_type = code_for('StudyDesign', 'trial_type', submission_value='EFFICACY')
+design_2_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
 print(design_2_type)
 
 design_1 = study_design_data([intent], design_1_type, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [wf_1])
@@ -113,6 +112,8 @@ protocol_version_2 = study_protocol_version_data("Shorter", "Very Official", "Pu
 protocol_versions = [protocol_version_1, protocol_version_2]
 
 study = study_data("New Title", "1", study_type, phase, identifiers, protocol_versions, designs)
+
+print(study)
 
 if __name__ == "__main__":
   service = Service(sys.argv)

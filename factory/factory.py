@@ -59,18 +59,18 @@ def activity_data(description, procedures, study_data):
     "study_data_collection": study_data
   }
 
-def procedure_data(name, the_type, previous):
+def procedure_data(the_type, the_code, previous):
   return {
-    "procedure_name": name,
-    "procedure_type": the_type,
-    "previous_procedure": previous
+    "procedureType": the_type,
+    "procedureCode": the_code,
+    "previousProcedure": previous
   }
 
 def study_data_data(name, description, link):
   return {
-    "study_data_name": name,
-    "study_data_desc": description,
-    "crf_link": link
+    "studyDataName": name,
+    "studyDataDesc": description,
+    "crfLink": link
   }
 
 def encounter_data(name, description, encounter_type, env_setting, contact_mode, start_rule=None, end_rule=None):

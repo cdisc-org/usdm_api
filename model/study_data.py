@@ -4,6 +4,6 @@ from uuid import UUID
 
 class StudyData(ApiBaseModel):
   uuid: Union[UUID, None] = None
-  study_data_name: str
-  study_data_desc: str
-  crf_link: str
+  studyDataName: str
+  studyDataDesc: str
+  crfLink: str

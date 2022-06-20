@@ -1,5 +1,5 @@
 Study:
-  study_phase:
+  studyPhase:
     conceptId: C66737
     definition: A terminology codelist relevant to the phase, or stage, of the clinical
       trial.
@@ -158,7 +158,7 @@ Study:
       synonyms:
       - '5'
       - Trial Phase 5
-  study_type:
+  studyType:
     conceptId: C99077
     definition: A terminology codelist relevant to the role the study plays in determining
       the interventions a subject receives.
@@ -204,7 +204,7 @@ Study:
       preferredTerm: Patient Registry Study
       submissionValue: PATIENT REGISTRY
 StudyArm:
-  study_arm_type:
+  studyArmType:
     conceptId: C174222
     definition: The terminology relevant to the identification of the kind of arm.
     name: Study Arm Type Value Set Terminology
@@ -254,7 +254,7 @@ StudyArm:
       preferredTerm: Protocol Treatment Arm
       submissionValue: Treatment Arm
 StudyDesign:
-  trial_intent_type:
+  trialIntentType:
     conceptId: C66736
     definition: A terminology codelist relevant to the responses for the planned purpose
       of the therapy, device, or agent under study in the clinical trial.
@@ -334,7 +334,7 @@ StudyDesign:
       submissionValue: TREATMENT
       synonyms:
       - Therapy Trial
-  trial_type:
+  trialType:
     conceptId: C66739
     definition: A terminology codelist relevant to the type of primary outcome or
       endpoint that the protocol is designed to evaluate.
@@ -521,7 +521,7 @@ StudyDesign:
       preferredTerm: Water Effect Trial
       submissionValue: WATER EFFECT
 StudyEpoch:
-  epoch_type:
+  studyEpochType:
     conceptId: C99079
     definition: The name of the EPOCH.
     extensible: 'true'
