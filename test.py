@@ -121,7 +121,7 @@ if __name__ == "__main__":
   service.get("study_definitions", uuid)
   service.get("studies", uuid)
   items = ["studies", "study_identifiers", "organisations", "study_protocol_versions", "study_arms", "study_epochs", 
-    "study_cells", "study_elements", "codes", "study_data"]
+    "study_cells", "study_elements", "codes", "study_data", "procedures", "activities"]
   for item in items:
     uuids = service.get(item)
     service.get(item, uuids[0])

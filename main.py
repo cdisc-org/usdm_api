@@ -10,6 +10,8 @@ from model.ct import *
 from model.study_arm import *
 from model.study_cell import *
 from model.study_data import *
+from model.procedure import *
+from model.activity import *
 
 VERSION = "0.12"
 SYSTEM_NAME = "DDF API Simulator"
@@ -321,15 +323,57 @@ async def list_study_data():
 @app.post("/v1/study_data/", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
-async def create_code(item: StudyData):
+async def create_study_data(item: StudyData):
   item.save(store, None)
   return item.uuid
 
 @app.get("/v1/study_data/{uuid}", response_model=StudyData, tags=["potential"])
-async def read_code(uuid: UUID):
+async def read_study_data(uuid: UUID):
   if str(uuid) not in StudyData.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return StudyData.read(store, str(uuid))
+
+# Procedures
+@app.get("/v1/procedures/", 
+  tags=["potential"], 
+  response_model=List[UUID]
+)
+async def list_procedures():
+  return Procedure.list(store)
+
+@app.post("/v1/procedures/", 
+  tags=["potential"], 
+  status_code=status.HTTP_201_CREATED)
+async def create_procedure(item: Procedure):
+  item.save(store, None)
+  return item.uuid
+
+@app.get("/v1/procedures/{uuid}", response_model=Procedure, tags=["potential"])
+async def read_procedure(uuid: UUID):
+  if str(uuid) not in Procedure.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return Procedure.read(store, str(uuid))
+
+# Activities
+@app.get("/v1/activities/", 
+  tags=["potential"], 
+  response_model=List[UUID]
+)
+async def list_activities():
+  return Activity.list(store)
+
+@app.post("/v1/activities/", 
+  tags=["potential"], 
+  status_code=status.HTTP_201_CREATED)
+async def create_activity(item: Activity):
+  item.save(store, None)
+  return item.uuid
+
+@app.get("/v1/activities/{uuid}", response_model=Activity, tags=["potential"])
+async def read_activity(uuid: UUID):
+  if str(uuid) not in Activity.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return Activity.read(store, str(uuid))
 
 # Controlled Terminology
 @app.get("/v1/terms/", 
