@@ -78,12 +78,15 @@ study_epoch_1 = study_epoch_data("Run In", "The run in", 1, run_in)
 study_epoch_2 = study_epoch_data("Treatment", "The drug!", 2, treatment)
 study_epoch_3 = study_epoch_data("Follow Up", "Go away", 3, follow_up)
 
-study_element_1 = study_element_data("Element 1", "First element")
+start_rule = transition_rule_data("Start Rule")
+end_rule = transition_rule_data("End Rule")
+study_element_1 = study_element_data("Element 1", "First element", start_rule, end_rule)
 study_element_2 = study_element_data("Element 2", "Second element")
 study_element_3 = study_element_data("Element 3", "Third element")
 study_element_4 = study_element_data("Element 4", "Fourth element")
 study_element_5 = study_element_data("Element 5", "Fifth element")
 study_element_6 = study_element_data("Element 6", "Sixth element")
+
 study_cells = []
 study_cells.append(study_cell_data(study_arm_1, study_epoch_1, [study_element_1]))
 study_cells.append(study_cell_data(study_arm_1, study_epoch_2, [study_element_2]))
@@ -121,7 +124,7 @@ if __name__ == "__main__":
   service.get("study_definitions", uuid)
   service.get("studies", uuid)
   items = ["studies", "study_identifiers", "organisations", "study_protocol_versions", "study_arms", "study_epochs", 
-    "study_cells", "study_elements", "codes", "study_data", "procedures", "activities"]
+    "study_cells", "study_elements", "codes", "study_data", "procedures", "activities", "transition_rules"]
   for item in items:
     uuids = service.get(item)
     service.get(item, uuids[0])

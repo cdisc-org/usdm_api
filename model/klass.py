@@ -11,7 +11,7 @@ from .organisation import *
 from .point_in_time import *
 from .population import *
 from .procedure import *
-from .rule import *
+from .transition_rule import *
 from .study_arm import *
 from .study_cell import *
 from .study_data import *

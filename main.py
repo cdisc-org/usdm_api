@@ -12,6 +12,7 @@ from model.study_cell import *
 from model.study_data import *
 from model.procedure import *
 from model.activity import *
+from model.transition_rule import *
 
 VERSION = "0.12"
 SYSTEM_NAME = "DDF API Simulator"
@@ -374,6 +375,27 @@ async def read_activity(uuid: UUID):
   if str(uuid) not in Activity.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return Activity.read(store, str(uuid))
+
+# Transition Rules
+@app.get("/v1/transition_rules/", 
+  tags=["potential"], 
+  response_model=List[UUID]
+)
+async def list_rules():
+  return TransitionRule.list(store)
+
+@app.post("/v1/transition_rules/", 
+  tags=["potential"], 
+  status_code=status.HTTP_201_CREATED)
+async def create_rule(item: TransitionRule):
+  item.save(store, None)
+  return item.uuid
+
+@app.get("/v1/transition_rules/{uuid}", response_model=TransitionRule, tags=["potential"])
+async def read_rule(uuid: UUID):
+  if str(uuid) not in TransitionRule.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return TransitionRule.read(store, str(uuid))
 
 # Controlled Terminology
 @app.get("/v1/terms/", 

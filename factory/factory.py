@@ -166,13 +166,13 @@ def study_element_data(name, description, start=None, end=None):
   return {
     "studyElementName": name,
     "studyElementDesc": description,
-    "startRule": start,
-    "endRule": end
+    "transitionStartRule": start,
+    "transitionEndRule": end
   }
 
-def rule_data(description):
+def transition_rule_data(description):
   return {
-    "rule_desc": description
+    "transitionRuleDesc": description
   }
 
 def study_indication_data(description, indications):
