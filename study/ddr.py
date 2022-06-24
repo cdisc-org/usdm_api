@@ -51,12 +51,13 @@ class DDR():
     code_10 = code_data( "249565666", "PubChem", "09/02/2021", "Durvalumab; Imfinzi; Anti-B7H1; Monoclonal Antibody")
 
     # Procedures
-    procedure_1 = procedure_data("Remote ICF collection", None, None)
-    procedure_2 = procedure_data("Blood sample collection", None, None)
-    procedure_3 = procedure_data("Blood sample analysis", None, None)
-    procedure_4 = procedure_data("Drug administration", None, None)
-    procedure_5 = procedure_data("Hospitalisation", None, None)
-    procedure_6 = procedure_data("Weight measurement", None, None)
+    dummy_procedure = code_data("C4936x", "http://www.cdisc.org", "1", "DUMMY PROCEDURE")
+    procedure_1 = procedure_data("Remote ICF collection", dummy_procedure, None)
+    procedure_2 = procedure_data("Blood sample collection", dummy_procedure, None)
+    procedure_3 = procedure_data("Blood sample analysis",dummy_procedure, None)
+    procedure_4 = procedure_data("Drug administration", dummy_procedure, None)
+    procedure_5 = procedure_data("Hospitalisation", dummy_procedure, None)
+    procedure_6 = procedure_data("Weight measurement", dummy_procedure, None)
 
     #Study Data
     study_data_1 = study_data_data("ALAT", "Alanine transaminase", "https://www.dropbox.com/s/84quxhfj254k2sh/LB_LOCAL_XML.xml?dl=1")
