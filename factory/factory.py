@@ -52,9 +52,10 @@ def workflow_item_data(description, from_pit, to_pit, previous, encounter, activ
     "activity": activity
   }
 
-def activity_data(description, procedures, study_data):
+def activity_data(description, sequenceInStudy, procedures, study_data):
   return {
     "activityDesc": description,
+    "sequenceInStudy": sequenceInStudy,
     "definedProcedures": procedures,
     "studyDataCollection": study_data
   }

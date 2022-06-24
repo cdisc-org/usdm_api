@@ -8,5 +8,6 @@ from uuid import UUID
 class Activity(ApiBaseModel):
   uuid: Union[UUID, None] = None
   activityDesc: str
+  sequenceInStudy: int
   definedProcedures: Union[List[Procedure], List[UUID]] = []
   studyDataCollection: Union[List[StudyData], List[UUID]] = []

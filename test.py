@@ -23,5 +23,7 @@ if __name__ == "__main__":
   # for item in items:
   #   uuids = service.get("%s/list" % (item))
   #   service.get(item, uuids[0])
-  uuids = service.get("study_definitions?identifier=NCT04298023")
+  uuid = service.get("study_definitions?identifier=NCT04298023")
+  uuid = service.get("study_definitions/list")
+  soa = service.get("study_definitions/soa/%s" % (uuid[0]))
   

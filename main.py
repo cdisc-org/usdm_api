@@ -106,6 +106,13 @@ async def studies_search(identifier: str=""):
     raise HTTPException(status_code=404, detail="Item not found")
   return result
 
+@app.get("/v1/study_definitions/soa/{uuid}", 
+  tags=["proposed"])
+async def studies_soa(uuid: UUID):
+  if str(uuid) not in Study.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  study = Study(**Study.read(store, str(uuid)))
+  return study.soa(store)
 
 @app.post("/studydefinitionrepository/v1", 
   tags=["production"], 
@@ -113,7 +120,7 @@ async def studies_search(identifier: str=""):
   description=annotations['study_definition']['post']['description'], 
   status_code=status.HTTP_201_CREATED,
   response_model=UUID)
-@app.post("/v1/study_definitions/", 
+@app.post("/v1/study_definitions", 
   tags=["proposed"], 
   summary=annotations['study_definition']['post']['summary'],
   description=annotations['study_definition']['post']['description'], 

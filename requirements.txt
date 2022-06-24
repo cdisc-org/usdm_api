@@ -1,3 +1,4 @@
 fastapi
 deta
 pyyaml
+pandas
