@@ -55,6 +55,7 @@ class Study(ApiBaseModel):
     # Activities
     activities = {}
     results = self.activity_encounters(store)
+    print(results)
     for record in results:
       if not record["activity"] in activities:
         activities[record["activity"]] = visit_row.copy()

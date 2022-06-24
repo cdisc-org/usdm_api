@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, status
+from fastapi import FastAPI, HTTPException, status, Response
 from uuid import UUID
 from store.store import Store
 from model.study import *
@@ -112,7 +112,8 @@ async def studies_soa(uuid: UUID):
   if str(uuid) not in Study.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   study = Study(**Study.read(store, str(uuid)))
-  return study.soa(store)
+  df = study.soa(store)
+  return Response(df.to_json(orient="records"), media_type="application/json")
 
 @app.post("/studydefinitionrepository/v1", 
   tags=["production"], 
