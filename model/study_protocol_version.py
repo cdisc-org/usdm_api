@@ -7,7 +7,7 @@ from uuid import UUID
 class StudyProtocolVersion(ApiBaseModel):
   uuid: Union[UUID, None]
   briefTitle: str
-  officalTitle: str
+  officialTitle: str
   publicTitle: str
   scientificTitle: str
   protocolVersion: str

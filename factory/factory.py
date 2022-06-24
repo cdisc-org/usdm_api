@@ -209,7 +209,7 @@ def study_design_data(intent, type, cells, indications, objectives, populations,
 def study_protocol_version_data(brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):
   return {
     "briefTitle": brief_title,
-    "officalTitle": official_title,
+    "officialTitle": official_title,
     "publicTitle": public_title,
     "scientificTitle": scientific_title,
     "protocolVersion": version,
