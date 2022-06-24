@@ -68,9 +68,9 @@ class Study(ApiBaseModel):
     # Activity Order
     activity_order = self.activity_order(store)
   
-    print("V KEYS", visits.keys())
-    print("V VALS", visits.values())
-    print("V RULE", visit_rule.values())
+    # print("V KEYS", visits.keys())
+    # print("V VALS", visits.values())
+    # print("V RULE", visit_rule.values())
 
     rows = []
     rows.append([""] + list(visits.values()))
@@ -81,11 +81,9 @@ class Study(ApiBaseModel):
         data = activities[activity]
         rows.append([activity] + list(data.values()))
         print("ROW", [activity] + list(data.values()))
-    for row in rows:
-      print("ROW [%s] %s" % (len(row), row))
-    print("HEADER %s" % (visits.values()))
     n = len(rows[0])
     df = pd.DataFrame(rows, columns=list(range(n)))
+    print(df)
     return df.to_json()
 
   def epochs_and_encounters(self, store):
