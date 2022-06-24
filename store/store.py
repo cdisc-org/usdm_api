@@ -24,7 +24,6 @@ class Store():
     return data
 
   def scope(self, key):
-    print(self.__store.get(key)["scope"])
     return self.__store.get(key)["scope"]
 
   def get_by_klass_and_scope(self, klass, scope):
@@ -36,7 +35,6 @@ class Store():
       data.pop('key', None)
       data["uuid"] = key
       final_results.append(data)
-    print(results)
     return final_results
 
   def get_by_klass(self, klass):
@@ -48,7 +46,6 @@ class Store():
       data.pop('key', None)
       data["uuid"] = key
       final_results.append(data)
-    print(results)
     return final_results
 
   def list(self, klass):

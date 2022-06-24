@@ -101,11 +101,8 @@ class SimpleStudy():
     #design_2_type = code_data("C3496y", "http://www.cdisc.org", "1", "COMPLEX DESIGN II")
 
     intent = code_for('StudyDesign', 'trialIntentType', c_code='C15714')
-    print(intent)
     design_1_type = code_for('StudyDesign', 'trialType', submission_value='BIOSIMILARITY')
-    print(design_1_type)
     design_2_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
-    print(design_2_type)
 
     design_1 = study_design_data([intent], design_1_type, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [])
     design_2 = study_design_data([intent], design_2_type, study_cells, [indication_1, indication_2], [objective_1], [population_1], [ii_1], [])

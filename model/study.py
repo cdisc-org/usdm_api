@@ -24,14 +24,9 @@ class Study(ApiBaseModel):
   @classmethod
   def search(cls, store, identifier):
     identifiers = store.get_by_klass("StudyIdentifier")
-    print(identifiers)
     for item in identifiers:
       result = store.get("", item['uuid'])
-      print(result)
-      print(result['studyIdentifier'])
-      print(identifier)
       if result['studyIdentifier'] == identifier:
-        print("found")
         return store.scope(item['uuid'])
     return None
 
@@ -68,10 +63,6 @@ class Study(ApiBaseModel):
     # Activity Order
     activity_order = self.activity_order(store)
   
-    # print("V KEYS", visits.keys())
-    # print("V VALS", visits.values())
-    # print("V RULE", visit_rule.values())
-
     rows = []
     rows.append([""] + list(visits.values()))
     rows.append([""] + list(visits.keys()))
@@ -80,11 +71,10 @@ class Study(ApiBaseModel):
       if activity in activities:
         data = activities[activity]
         rows.append([activity] + list(data.values()))
-        print("ROW", [activity] + list(data.values()))
     n = len(rows[0])
     df = pd.DataFrame(rows, columns=list(range(n)))
     print(df)
-    return df.to_json()
+    return df
 
   def epochs_and_encounters(self, store):
     epochs = {}
