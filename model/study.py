@@ -73,6 +73,7 @@ class Study(ApiBaseModel):
     print("V RULE", visit_rule.values())
 
     rows = []
+    rows.append([""] + list(visits.values()))
     rows.append([""] + list(visits.keys()))
     rows.append([""] + list(visit_rule.values()))
     for activity in activity_order:
@@ -80,7 +81,11 @@ class Study(ApiBaseModel):
         data = activities[activity]
         rows.append([activity] + list(data.values()))
         print("ROW", [activity] + list(data.values()))
-    df = pd.DataFrame(rows, [""] + list(visits.values()))
+    for row in rows:
+      print("ROW [%s] %s" % (len(row), row))
+    print("HEADER %s" % (visits.values()))
+    n = len(rows[0])
+    df = pd.DataFrame(rows, columns=list(range(n)))
     return df.to_json()
 
   def epochs_and_encounters(self, store):
@@ -114,7 +119,7 @@ class Study(ApiBaseModel):
   def get_rule(self, store, uuid):
     if uuid == None:
       return ""
-    rule = store.get("", uuid)
+    rule = store.get("", uuid)['transitionRuleDesc']
     return rule
 
   def activity_encounters(self, store):
