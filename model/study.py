@@ -73,7 +73,7 @@ class Study(ApiBaseModel):
         rows.append([activity] + list(data.values()))
     n = len(rows[0])
     df = pd.DataFrame(rows, columns=list(range(n)))
-    print(df)
+    print(df.to_string())
     return df
 
   def epochs_and_encounters(self, store):
