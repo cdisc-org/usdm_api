@@ -1,3 +1,138 @@
+Encounter:
+  encounterContactMode:
+    conceptId: C171445
+    definition: Terminology relevant to the means by which interaction occurs between
+      the subject and person or entity.
+    extensible: 'true'
+    name: Mode of Subject Contact
+    preferredTerm: CDISC SDTM Mode of Subject Contact Terminology
+    submissionValue: CNTMODE
+    synonyms:
+    - Mode of Subject Contact
+    terms:
+    - conceptId: C175574
+      definition: An interaction that takes place in the physical presence of someone
+        else.
+      preferredTerm: In Person
+      submissionValue: IN PERSON
+      synonyms:
+      - In-Person
+    - conceptId: C177933
+      definition: A type of automated system in which individuals can access information
+        menus containing pre-recorded or dynamically generated information with voice
+        prompts, without the need for an agent or operator.
+      preferredTerm: Interactive Voice Response System
+      submissionValue: IVRS
+      synonyms:
+      - Interactive Voice Response System
+    - conceptId: C171525
+      definition: A form of remote communication by audio video technology.
+      preferredTerm: Audio-Videoconferencing
+      submissionValue: REMOTE AUDIO VIDEO
+    - conceptId: C171524
+      definition: A form of remote communication by audio technology.
+      preferredTerm: Audioconferencing
+      submissionValue: REMOTE AUDIO
+    - conceptId: C171533
+      definition: Receipt of shipped material was confirmed by signature.
+      preferredTerm: Shipment Confirmed by Signature
+      submissionValue: SHIPMENT CONFIRMED BY SIGNATURE
+    - conceptId: C171537
+      definition: Communication by way of telephone.
+      preferredTerm: Telephone Call
+      submissionValue: TELEPHONE CALL
+  encounterEnvironmentalSetting:
+    conceptId: C127262
+    definition: Terminology relevant to the surroundings or environment.
+    extensible: 'true'
+    name: Environmental Setting
+    preferredTerm: CDISC SDTM Environmental Setting Terminology
+    submissionValue: SETTING
+    synonyms:
+    - Environmental Setting
+    terms:
+    - conceptId: C127785
+      definition: An establishment that provides care for infants and children.
+      preferredTerm: Childcare Center
+      submissionValue: CHILD CARE CENTER
+    - conceptId: C51282
+      definition: A health care facility where subjects or patients may receive assessments,
+        procedures, or treatments that are provided by physicians and other healthcare
+        providers.
+      preferredTerm: Clinic
+      submissionValue: CLINIC
+    - conceptId: C48953
+      definition: A tract of land cultivated for the purpose of agricultural production
+        or devoted to the raising and breeding of domestic animals.
+      preferredTerm: Farm
+      submissionValue: FARM
+    - conceptId: C102650
+      definition: A setting outside the clinic or a comparable health care facility,
+        e.g. a doctor's office, the subject's home or workplace, a school, a public
+        park, or a restaurant.
+      preferredTerm: In the Field
+      submissionValue: FIELD
+    - conceptId: C21541
+      definition: The buildings and organizations where healthcare services are provided.
+      preferredTerm: Healthcare Facility
+      submissionValue: HEALTH FACILITY
+    - conceptId: C18002
+      definition: A person's place of residence.
+      preferredTerm: Home
+      submissionValue: HOME
+    - conceptId: C16696
+      definition: An institution that provides medical, surgical, or psychiatric care
+        and treatment for the sick or the injured.
+      preferredTerm: Hospital
+      submissionValue: HOSPITAL
+    - conceptId: C102647
+      definition: The area in which an individual lives.
+      preferredTerm: Household Environment
+      submissionValue: HOUSEHOLD ENVIRONMENT
+    - conceptId: C41206
+      definition: An established society, corporation, foundation or other organization
+        founded and united for a specific purpose, e.g. for health-related research;
+        also used to refer to a building or buildings occupied or used by such organization.
+      preferredTerm: Institution
+      submissionValue: INSTITUTION
+    - conceptId: C181529
+      definition: A motorized conveyance for people and goods.
+      preferredTerm: Motor Vehicle
+      submissionValue: MOTOR VEHICLE
+    - conceptId: C102679
+      definition: An area outside of that in which an individual lives.
+      preferredTerm: Non-household Environment
+      submissionValue: NON-HOUSEHOLD ENVIRONMENT
+    - conceptId: C181530
+      definition: Any environmental setting outside of a clinic.
+      preferredTerm: Not In Clinic
+      submissionValue: NOT IN CLINIC
+    - conceptId: C16281
+      definition: A medical care center that provides healthcare services on an outpatient
+        basis.
+      preferredTerm: Ambulatory Care Facility
+      submissionValue: OUTPATIENT CLINIC
+    - conceptId: C85862
+      definition: An institution where persons are confined for punishment and to
+        protect the public.
+      preferredTerm: Correctional Institution
+      submissionValue: PRISON
+    - conceptId: C17118
+      definition: An educational institution.
+      preferredTerm: School
+      submissionValue: SCHOOL
+    - conceptId: C85863
+      definition: Temporary housing for displaced or at-risk persons.
+      preferredTerm: Shelter
+      submissionValue: SHELTER
+    - conceptId: C102712
+      definition: The surroundings or environment in which social activities occur.
+      preferredTerm: Social Setting
+      submissionValue: SOCIAL SETTING
+    - conceptId: C17556
+      definition: Place or physical location of work or employment.
+      preferredTerm: Worksite
+      submissionValue: WORKSITE
 Study:
   studyPhase:
     conceptId: C66737

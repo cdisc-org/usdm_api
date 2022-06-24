@@ -16,18 +16,22 @@ def get_code_list(releases, c_code):
 
 c_code_list = {
   'Study': {
-    'study_type': "C99077", 
-    'study_phase': "C66737"
+    'studyType': "C99077", 
+    'studyPhase': "C66737"
   },
   'StudyDesign': {
-    'trial_intent_type': "C66736", 
-    'trial_type': "C66739"
+    'trialIntentType': "C66736", 
+    'trialType': "C66739"
   },
   'StudyArm': {
-    'study_arm_type': 'C174222'
+    'studyArmType': 'C174222'
   },
   'StudyEpoch': {
-    'epoch_type': 'C99079'
+    'studyEpochType': 'C99079'
+  },
+  'Encounter': {
+    'encounterEnvironmentalSetting': 'C127262',
+    'encounterContactMode': 'C171445'
   }
 }
 releases = ["sdtmct-2022-03-25", "protocolct-2022-03-25"]

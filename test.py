@@ -7,11 +7,11 @@ procedure_1 = procedure_data("Specimen Collection", procedure_code, None)
 study_data_1 = study_data_data("Study Data 1", "Something", "Link 1")
 activity_1 = activity_data("Activity_1", [procedure_1], [])
 activity_2 = activity_data("Activity_2", [], [study_data_1])
-encounter_1 = encounter_data("Encounter 1", "desc", None, None, None)
-encounter_2 = encounter_data("Encounter 2", "desc", None, None, None)
-wfi_1 = workflow_item_data("", None, None, None, encounter_1, activity_1)
-wfi_2 = workflow_item_data("", None, None, None, encounter_2, activity_2)
-wf_1 = workflow_data("Workflow 1", None, None, [wfi_1, wfi_2])
+encounter_type = code_data("C7652x", "http://www.cdisc.org", "1", "SITE VISIT")
+env_setting = code_for('Encounter', 'encounterEnvironmentalSetting', c_code='C51282')    
+env_contact_mode = code_for('Encounter', 'encounterContactMode', c_code='C175574')    
+encounter_1 = encounter_data("Encounter 1", "desc", encounter_type, env_setting, env_contact_mode, [activity_1])
+encounter_2 = encounter_data("Encounter 2", "desc", encounter_type, env_setting, env_contact_mode, [activity_2])
 
 ii_1 = investigational_intervention_data(
   "Intervention 1", 
@@ -106,8 +106,8 @@ print(design_1_type)
 design_2_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
 print(design_2_type)
 
-design_1 = study_design_data([intent], design_1_type, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [wf_1])
-design_2 = study_design_data([intent], design_2_type, study_cells, [indication_1, indication_2], [objective_1], [population_1], [ii_1], [wf_1])
+design_1 = study_design_data([intent], design_1_type, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [])
+design_2 = study_design_data([intent], design_2_type, study_cells, [indication_1, indication_2], [objective_1], [population_1], [ii_1], [])
 designs = [design_1, design_2]
 final = code_data("C1113x", "http://www.cdisc.org", "1", "FINAL")
 protocol_version_1 = study_protocol_version_data("Short", "Very Official", "Public Voice", "Incomprehensible", "1", None, "2022-01-01", final)
@@ -124,7 +124,7 @@ if __name__ == "__main__":
   service.get("study_definitions", uuid)
   service.get("studies", uuid)
   items = ["studies", "study_identifiers", "organisations", "study_protocol_versions", "study_arms", "study_epochs", 
-    "study_cells", "study_elements", "codes", "study_data", "procedures", "activities", "transition_rules"]
+    "study_cells", "study_elements", "codes", "study_data", "procedures", "activities", "transition_rules", "encounters"]
   for item in items:
     uuids = service.get(item)
     service.get(item, uuids[0])

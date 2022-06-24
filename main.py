@@ -13,8 +13,9 @@ from model.study_data import *
 from model.procedure import *
 from model.activity import *
 from model.transition_rule import *
+from model.encounter import *
 
-VERSION = "0.12"
+VERSION = "0.14"
 SYSTEM_NAME = "DDF API Simulator"
 
 tags_metadata = [
@@ -396,6 +397,27 @@ async def read_rule(uuid: UUID):
   if str(uuid) not in TransitionRule.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return TransitionRule.read(store, str(uuid))
+
+# Encounters
+@app.get("/v1/encounters/", 
+  tags=["potential"], 
+  response_model=List[UUID]
+)
+async def list_encounters():
+  return Encounter.list(store)
+
+@app.post("/v1/encounters/", 
+  tags=["potential"], 
+  status_code=status.HTTP_201_CREATED)
+async def create_encounter(item: Encounter):
+  item.save(store, None)
+  return item.uuid
+
+@app.get("/v1/encounters/{uuid}", response_model=Encounter, tags=["potential"])
+async def read_encounter(uuid: UUID):
+  if str(uuid) not in Encounter.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return Encounter.read(store, str(uuid))
 
 # Controlled Terminology
 @app.get("/v1/terms/", 

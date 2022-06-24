@@ -73,15 +73,16 @@ def study_data_data(name, description, link):
     "crfLink": link
   }
 
-def encounter_data(name, description, encounter_type, env_setting, contact_mode, start_rule=None, end_rule=None):
+def encounter_data(name, description, encounter_type, env_setting, contact_mode, activities=[], start_rule=None, end_rule=None):
   return {
-    "encounter_desc": description,
-    "name": name,
-    "encounter_type": encounter_type,
-    "env_setting": env_setting,
-    "contact_mode": contact_mode,
-    "start_rule": start_rule,
-    "end_rule": end_rule
+    "encounterDesc": description,
+    "encounterName": name,
+    "encounterType": encounter_type,
+    "encounterEnvironmentalSetting": env_setting,
+    "encounterContactMode": contact_mode,
+    "activities": activities,
+    "transitionStartRule": start_rule,
+    "transitionEndRule": end_rule
   }
 
 def point_in_time_data(start, end, pit_type):
