@@ -19,3 +19,17 @@ class Study(ApiBaseModel):
   @classmethod
   def scope_reuse(cls):
     return False
+  
+  @classmethod
+  def search(cls, store, identifier):
+    identifiers = store.get_by_klass("StudyIdentifier")
+    print(identifiers)
+    for item in identifiers:
+      result = store.get("", item['uuid'])
+      print(result)
+      print(result['studyIdentifier'])
+      print(identifier)
+      if result['studyIdentifier'] == identifier:
+        print("found")
+        return store.scope(item['uuid'])
+    return None

@@ -26,7 +26,9 @@ class Service():
     return r.json()
   
   def get(self, endpoint, uuid=""):
-    endpoint_url = "%s%s/%s" % (self.url, endpoint, uuid)
+    endpoint_url = "%s%s" % (self.url, endpoint)
+    if uuid != "":
+      endpoint_url = "%s/%s" % (endpoint_url, uuid)
     r = requests.get(endpoint_url)
     self.display_response("Get", endpoint_url, r)
     return r.json()

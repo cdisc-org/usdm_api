@@ -23,6 +23,34 @@ class Store():
     data["uuid"] = key
     return data
 
+  def scope(self, key):
+    print(self.__store.get(key)["scope"])
+    return self.__store.get(key)["scope"]
+
+  def get_by_klass_and_scope(self, klass, scope):
+    final_results = []
+    results = self.__store.fetch([{"klass": klass}, {"scope": scope}])
+    for item in results.items:
+      data = json.loads(item["value"])
+      key = item["key"]
+      data.pop('key', None)
+      data["uuid"] = key
+      final_results.append(data)
+    print(results)
+    return final_results
+
+  def get_by_klass(self, klass):
+    final_results = []
+    results = self.__store.fetch([{"klass": klass}])
+    for item in results.items:
+      data = json.loads(item["value"])
+      key = item["key"]
+      data.pop('key', None)
+      data["uuid"] = key
+      final_results.append(data)
+    print(results)
+    return final_results
+
   def list(self, klass):
     results = []
     items = self.__store.fetch({"klass": klass.__name__}).items

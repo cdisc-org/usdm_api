@@ -11,3 +11,7 @@ class StudyIdentifier(ApiBaseModel):
   @classmethod
   def scope_reuse(cls):
     return True
+
+  @classmethod
+  def search(cls, store, study_uuid):
+    return store.get_by_klass_and_scope(cls.__name__, study_uuid)

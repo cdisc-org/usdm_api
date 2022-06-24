@@ -89,13 +89,23 @@ def system_and_version():
   return { "system": SYSTEM_NAME, "version": VERSION }
 
 # Study Definition
-@app.get("/v1/study_definitions/", 
+@app.get("/v1/study_definitions/list", 
   tags=["proposed"], 
   summary=annotations['study_definition']['get']['summary'],
   description=annotations['study_definition']['get']['description'], 
   response_model=List[UUID])
 async def list_studies():
   return Study.list(store)
+
+@app.get("/v1/study_definitions", 
+  tags=["proposed"], 
+  response_model=UUID)
+async def studies_search(identifier: str=""):
+  result = Study.search(store, identifier)
+  if result == None:
+    raise HTTPException(status_code=404, detail="Item not found")
+  return result
+
 
 @app.post("/studydefinitionrepository/v1", 
   tags=["production"], 
@@ -125,7 +135,7 @@ async def read_full_study(uuid: str):
   return Study.recursive_read(store, uuid)
 
 # Study
-@app.get("/v1/studies/", 
+@app.get("/v1/studies/list", 
   tags=["potential"], 
   summary=annotations['study']['get']['summary'],
   description=annotations['study']['get']['description'], 
@@ -143,14 +153,21 @@ async def read_study(uuid: str):
   return Study.read(store, uuid)
 
 # Study Identifiers
-@app.get("/v1/study_identifiers/", 
+@app.get("/v1/study_identifiers/list", 
   tags=["potential"], 
   response_model=List[UUID]
 )
 async def list_study_identifiers():
   return StudyIdentifier.list(store)
 
-@app.post("/v1/study_identifiers/", 
+@app.get("/v1/study_identifiers", 
+  tags=["potential"], 
+  response_model=List[StudyIdentifier]
+)
+async def study_identifiers_search(study_uuid: UUID):
+  return StudyIdentifier.search(store, str(study_uuid))
+
+@app.post("/v1/study_identifiers", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_study_identifier(identifier: StudyIdentifier):
@@ -164,14 +181,14 @@ async def read_study_identifier(uuid: UUID):
   return StudyIdentifier.read(store, str(uuid))
 
 # Organisations
-@app.get("/v1/organisations/", 
+@app.get("/v1/organisations/list", 
   tags=["potential"], 
   response_model=List[UUID]
 )
 async def list_organisations():
   return Organisation.list(store)
 
-@app.post("/v1/organisations/", 
+@app.post("/v1/organisations", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_organisation(org: Organisation):
@@ -191,14 +208,14 @@ async def read_organisation_full(uuid: UUID):
   return Organisation.recursive_read(store, str(uuid))
 
 # Study Protocol Version
-@app.get("/v1/study_protocol_versions/", 
+@app.get("/v1/study_protocol_versions/list", 
   tags=["potential"], 
   response_model=List[UUID]
 )
 async def list_study_protocol_versions():
   return StudyProtocolVersion.list(store)
 
-@app.post("/v1/study_protocol_versions/", 
+@app.post("/v1/study_protocol_versions", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_protocol_version(version: StudyProtocolVersion):
@@ -212,13 +229,13 @@ async def read_study_protocol_version(uuid: UUID):
   return StudyProtocolVersion.read(store, str(uuid))
 
 # Study Arm
-@app.get("/v1/study_arms/", 
+@app.get("/v1/study_arms/list", 
   tags=["potential"], 
   response_model=List[UUID])
 async def list_study_arms():
   return StudyArm.list(store)
 
-@app.post("/v1/study_arms/", 
+@app.post("/v1/study_arms", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_study_arm(item: StudyArm):
@@ -232,13 +249,13 @@ async def read_study_arm(uuid: UUID):
   return StudyArm.read(store, str(uuid))
 
 # Study Epoch
-@app.get("/v1/study_epochs/", 
+@app.get("/v1/study_epochs/list", 
   tags=["potential"], 
   response_model=List[UUID])
 async def list_study_epochs():
   return StudyEpoch.list(store)
 
-@app.post("/v1/study_epochs/", 
+@app.post("/v1/study_epochs", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_study_arm(item: StudyEpoch):
@@ -252,14 +269,14 @@ async def read_study_arm(uuid: UUID):
   return StudyEpoch.read(store, str(uuid))
 
 # Study Cell
-@app.get("/v1/study_cells/", 
+@app.get("/v1/study_cells/list", 
   tags=["potential"], 
   response_model=List[UUID]
 )
 async def list_study_cells():
   return StudyCell.list(store)
 
-@app.post("/v1/study_cells/", 
+@app.post("/v1/study_cells", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_study_cell(item: StudyCell):
@@ -273,14 +290,14 @@ async def read_study_cell(uuid: UUID):
   return StudyCell.read(store, str(uuid))
 
 # Study Element
-@app.get("/v1/study_elements/", 
+@app.get("/v1/study_elements/list", 
   tags=["potential"], 
   response_model=List[UUID]
 )
 async def list_study_elements():
   return StudyElement.list(store)
 
-@app.post("/v1/study_elements/", 
+@app.post("/v1/study_elements", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_study_cell(item: StudyElement):
@@ -294,14 +311,14 @@ async def read_study_cell(uuid: UUID):
   return StudyElement.read(store, str(uuid))
 
 # Code
-@app.get("/v1/codes/", 
+@app.get("/v1/codes/list", 
   tags=["potential"], 
   response_model=List[UUID]
 )
 async def list_codes():
   return Code.list(store)
 
-@app.post("/v1/codes/", 
+@app.post("/v1/codes", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_code(item: Code):
@@ -315,14 +332,14 @@ async def read_code(uuid: UUID):
   return Code.read(store, str(uuid))
 
 # Study Data
-@app.get("/v1/study_data/", 
+@app.get("/v1/study_data/list", 
   tags=["potential"], 
   response_model=List[UUID]
 )
 async def list_study_data():
   return StudyData.list(store)
 
-@app.post("/v1/study_data/", 
+@app.post("/v1/study_data", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_study_data(item: StudyData):
@@ -336,14 +353,14 @@ async def read_study_data(uuid: UUID):
   return StudyData.read(store, str(uuid))
 
 # Procedures
-@app.get("/v1/procedures/", 
+@app.get("/v1/procedures/list", 
   tags=["potential"], 
   response_model=List[UUID]
 )
 async def list_procedures():
   return Procedure.list(store)
 
-@app.post("/v1/procedures/", 
+@app.post("/v1/procedures", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_procedure(item: Procedure):
@@ -357,14 +374,14 @@ async def read_procedure(uuid: UUID):
   return Procedure.read(store, str(uuid))
 
 # Activities
-@app.get("/v1/activities/", 
+@app.get("/v1/activities/list", 
   tags=["potential"], 
   response_model=List[UUID]
 )
 async def list_activities():
   return Activity.list(store)
 
-@app.post("/v1/activities/", 
+@app.post("/v1/activities", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_activity(item: Activity):
@@ -378,14 +395,14 @@ async def read_activity(uuid: UUID):
   return Activity.read(store, str(uuid))
 
 # Transition Rules
-@app.get("/v1/transition_rules/", 
+@app.get("/v1/transition_rules/list", 
   tags=["potential"], 
   response_model=List[UUID]
 )
 async def list_rules():
   return TransitionRule.list(store)
 
-@app.post("/v1/transition_rules/", 
+@app.post("/v1/transition_rules", 
   tags=["potential"], 
   status_code=status.HTTP_201_CREATED)
 async def create_rule(item: TransitionRule):
@@ -399,7 +416,7 @@ async def read_rule(uuid: UUID):
   return TransitionRule.read(store, str(uuid))
 
 # Encounters
-@app.get("/v1/encounters/", 
+@app.get("/v1/encounters/list", 
   tags=["potential"], 
   response_model=List[UUID]
 )
