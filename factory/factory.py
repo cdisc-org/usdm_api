@@ -163,10 +163,11 @@ def study_cell_data(arm, epoch, elements):
     "studyElements": elements
   }
 
-def study_element_data(name, description, start=None, end=None):
+def study_element_data(name, description, encounters=[], start=None, end=None):
   return {
     "studyElementName": name,
     "studyElementDesc": description,
+    "encounters": encounters,
     "transitionStartRule": start,
     "transitionEndRule": end
   }
