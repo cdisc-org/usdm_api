@@ -32,25 +32,22 @@ class Study(ApiBaseModel):
 
   def soa(self, store):
     # Data
-    visits = {}
-    visit_row = {}
-    visit_rule = {}
-    epoch_visits = {}
-    epoch_count = 0
+    visits = []
+    visit_index = {}
+    visit_rule = []
+    epochs = []
 
-    epoch_visits, visits = self.epochs_and_encounters(store)
-    for visit in visits:
-      visit_row[visit] = ""
+    epochs, visits = self.epochs_and_encounters(store)
+    for idx, visit in enumerate(visits):
+        visit_index[visit] = idx
 
     # Visit Rules
     result = self.encounter_rules(store)
-    for visit in visits.keys():
-      visit_rule[visit] = ""
     for record in result:
       if record["start_rule"] == record["end_rule"]:
-        visit_rule[record["visit"]] = "%s" % (record["start_rule"])
+        visit_rule.append("%s" % (record["start_rule"]))
       else:
-        visit_rule[record["visit"]] = "%s to %s" % (record["start_rule"], record["end_rule"])
+        visit_rule.append("%s to %s" % (record["start_rule"], record["end_rule"]))
 
     # Activities
     activities = {}
@@ -58,20 +55,20 @@ class Study(ApiBaseModel):
     print(results)
     for record in results:
       if not record["activity"] in activities:
-        activities[record["activity"]] = visit_row.copy()
-      activities[record["activity"]][record["visit"]] = "X" 
+        activities[record["activity"]] = [''] * len(visits)
+      activities[record["activity"]][visit_index[record["visit"]]] = "X" 
 
     # Activity Order
     activity_order = self.activity_order(store)
   
     rows = []
-    rows.append([""] + list(visits.values()))
-    rows.append([""] + list(visits.keys()))
-    rows.append([""] + list(visit_rule.values()))
+    rows.append([""] + list(epochs))
+    rows.append([""] + list(visits))
+    rows.append([""] + list(visit_rule))
     for activity in activity_order:
       if activity in activities:
         data = activities[activity]
-        rows.append([activity] + list(data.values()))
+        rows.append([activity] + list(data))
     n = len(rows[0])
     df = pd.DataFrame(rows, columns=list(range(n)))
     print(df.to_string())
@@ -79,21 +76,28 @@ class Study(ApiBaseModel):
 
   def epochs_and_encounters(self, store):
     epochs = {}
+    ordered_epochs = []
     encounters = {}
+    ordered_encounters = []
     cells = store.get_by_klass_and_scope("StudyCell", str(str(str(self.uuid))))
     for cell in cells:
       epoch_uuid = cell['studyEpoch']
       epoch = store.get("", epoch_uuid)
       epoch_name = epoch['studyEpochName']
-      epochs[epoch_name] = []
       for element_uuid in cell['studyElements']:
         element = store.get("", element_uuid)
         for encounter_uuid in element['encounters']:
           encounter = store.get("", encounter_uuid)
           encounter_name = encounter['encounterName']
-          epochs[epoch_name].append(encounter_name)
-          encounters[encounter_name] = epoch_name
-    return epochs, encounters
+          ordinal = encounter['sequenceInStudy']
+          epochs[encounter_name] = epoch_name
+          encounters[encounter_name] = int(ordinal)
+    ordered_encounters = self.order_dict(encounters)
+    for encounter in ordered_encounters:
+      ordered_epochs.append(epochs[encounter])
+    print("EPOCHS", ordered_epochs)
+    print("ENCOUNTERS", ordered_encounters)
+    return ordered_epochs, ordered_encounters
 
   def encounter_rules(self, store):
     the_encounters = []
@@ -102,7 +106,15 @@ class Study(ApiBaseModel):
       encounter_name = encounter['encounterName']
       start_rule_uuid = encounter['transitionStartRule']
       end_rule_uuid = encounter['transitionEndRule']
-      the_encounters.append({ 'visit': encounter_name, 'start_rule': self.get_rule(store, start_rule_uuid), 'end_rule': self.get_rule(store, end_rule_uuid) })
+      ordinal = encounter['sequenceInStudy']
+      record = { 
+        'visit': encounter_name, 
+        'ordinal': ordinal, 
+        'start_rule': self.get_rule(store, start_rule_uuid), 
+        'end_rule': self.get_rule(store, end_rule_uuid) 
+      }
+      #the_encounters.append(record)
+      the_encounters.insert(int(ordinal) - 1, record)
     return the_encounters
 
   def get_rule(self, store, uuid):
@@ -122,9 +134,15 @@ class Study(ApiBaseModel):
     return activities
 
   def activity_order(self, store):
-    the_activities = []
+    the_activities = {}
     activities = store.get_by_klass_and_scope("Activity", str(self.uuid))
     for activity in activities:
       ordinal = activity['sequenceInStudy']
-      the_activities.insert(int(ordinal) - 1,activity['activityDesc'])
-    return the_activities
+      desc = activity['activityDesc']
+      the_activities[desc] = int(ordinal)
+    ordered = self.order_dict(the_activities)
+    #{ k: the_activities[k] for k in sorted(the_activities, key=the_activities.get)}
+    return ordered.keys()
+
+  def order_dict(self, the_dict):
+    return { k: the_dict[k] for k in sorted(the_dict, key=the_dict.get) }

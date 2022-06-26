@@ -14,15 +14,15 @@ items = [
   
 if __name__ == "__main__":
   service = Service(sys.argv)
-  # for study in studies:
-  #   data = study.json()
-  #   print(data)
-  #   uuid = service.post("study_definitions", data)
-  #   service.get("study_definitions", uuid)
-  #   service.get("studies", uuid)
-  # for item in items:
-  #   uuids = service.get("%s/list" % (item))
-  #   service.get(item, uuids[0])
+  for study in studies:
+    data = study.json()
+    print(data)
+    uuid = service.post("study_definitions", data)
+    service.get("study_definitions", uuid)
+    service.get("studies", uuid)
+  for item in items:
+    uuids = service.get("%s/list" % (item))
+    service.get(item, uuids[0])
   uuid = service.get("study_definitions?identifier=NCT04298023")
   uuid = service.get("study_definitions/list")
   soa = service.get("study_definitions/soa/%s" % (uuid[0]))

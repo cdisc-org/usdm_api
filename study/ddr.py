@@ -329,34 +329,26 @@ class DDR():
     study_epoch_5 = study_epoch_data("TREATMENT X", "Treatment Cycle X", 5, treatment)
     study_epoch_6 = study_epoch_data("FOLLOW-UP", "Follow-up", 6, follow_up)
 
-    treatment_encounters = [
-      encounter_2, 
-      encounter_3, 
-      encounter_4, 
-      encounter_5, 
-      encounter_6, 
-      encounter_7, 
-      encounter_8, 
-      encounter_9
-    ]
     study_element_1 = study_element_data("SCREENING", "Screening", [encounter_1], rule_01, rule_05)
-    study_element_2 = study_element_data("AZD_DRUV", "AZD6738 + Durvalumab", treatment_encounters, rule_02, rule_06)
-    study_element_3 = study_element_data("AZD_OLA", "AZD6738 + Olaparib", [encounter_10, encounter_11], rule_03, rule_07)
-    study_element_4 = study_element_data("FOLLOW-UP", "Follow-up", [encounter_12, encounter_13], rule_04, rule_08)
+    study_element_2 = study_element_data("AZD_DRUV", "AZD6738 + Durvalumab", [encounter_2, encounter_3, encounter_4], rule_02, rule_06)
+    study_element_3 = study_element_data("AZD_OLA", "AZD6738 + Olaparib", [encounter_5, encounter_6, encounter_7], rule_03, rule_07)
+    study_element_4 = study_element_data("FOLLOW-UP", "Follow-up", [encounter_8, encounter_9], rule_04, rule_08)
+    study_element_5 = study_element_data("FOLLOW-UP", "Follow-up", [encounter_10, encounter_11], rule_04, rule_08)
+    study_element_6 = study_element_data("FOLLOW-UP", "Follow-up", [encounter_12, encounter_13], rule_04, rule_08)
 
     study_cells = []
     study_cells.append(study_cell_data(study_arm_1, study_epoch_1, [study_element_1]))
     study_cells.append(study_cell_data(study_arm_1, study_epoch_2, [study_element_2]))
-    study_cells.append(study_cell_data(study_arm_1, study_epoch_3, [study_element_2]))
-    study_cells.append(study_cell_data(study_arm_1, study_epoch_4, [study_element_2]))
-    study_cells.append(study_cell_data(study_arm_1, study_epoch_5, [study_element_2]))
-    study_cells.append(study_cell_data(study_arm_1, study_epoch_6, [study_element_4]))
+    study_cells.append(study_cell_data(study_arm_1, study_epoch_3, [study_element_3]))
+    study_cells.append(study_cell_data(study_arm_1, study_epoch_4, [study_element_4]))
+    study_cells.append(study_cell_data(study_arm_1, study_epoch_5, [study_element_5]))
+    study_cells.append(study_cell_data(study_arm_1, study_epoch_6, [study_element_6]))
     study_cells.append(study_cell_data(study_arm_2, study_epoch_1, [study_element_1]))
-    study_cells.append(study_cell_data(study_arm_2, study_epoch_2, [study_element_3]))
+    study_cells.append(study_cell_data(study_arm_2, study_epoch_2, [study_element_2]))
     study_cells.append(study_cell_data(study_arm_2, study_epoch_3, [study_element_3]))
-    study_cells.append(study_cell_data(study_arm_2, study_epoch_4, [study_element_3]))
-    study_cells.append(study_cell_data(study_arm_2, study_epoch_5, [study_element_3]))
-    study_cells.append(study_cell_data(study_arm_2, study_epoch_6, [study_element_4]))
+    study_cells.append(study_cell_data(study_arm_2, study_epoch_4, [study_element_4]))
+    study_cells.append(study_cell_data(study_arm_2, study_epoch_5, [study_element_5]))
+    study_cells.append(study_cell_data(study_arm_2, study_epoch_6, [study_element_6]))
 
     intent = code_for('StudyDesign', 'trialIntentType', c_code='C15714')
     design_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
