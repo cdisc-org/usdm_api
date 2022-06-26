@@ -24,7 +24,7 @@ class DDR():
     rule_17 = transition_rule_data("D1")
     rule_18 = transition_rule_data("D4")
     rule_19 = transition_rule_data("W2")
-    rule_20 = transition_rule_data("W4")
+    rule_20 = transition_rule_data("W6")
     rule_21 = transition_rule_data("-D5")
     rule_22 = transition_rule_data("-D3")
     rule_23 = transition_rule_data("-D1")
@@ -36,7 +36,7 @@ class DDR():
     rule_29 = transition_rule_data("D1")
     rule_30 = transition_rule_data("D4")
     rule_31 = transition_rule_data("W2")
-    rule_32 = transition_rule_data("W4")
+    rule_32 = transition_rule_data("W6")
 
     # Code references
     code_1 = code_data( "24662006", "SNOMED-CT", "4.0.6.4", "Influenza due to Influenza virus, type B")

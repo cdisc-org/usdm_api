@@ -81,6 +81,7 @@ class Study(ApiBaseModel):
     ordered_encounters = []
     cells = store.get_by_klass_and_scope("StudyCell", str(str(str(self.uuid))))
     for cell in cells:
+      print("CELL:", cell)
       epoch_uuid = cell['studyEpoch']
       epoch = store.get("", epoch_uuid)
       epoch_name = epoch['studyEpochName']
@@ -109,13 +110,12 @@ class Study(ApiBaseModel):
       ordinal = encounter['sequenceInStudy']
       record = { 
         'visit': encounter_name, 
-        'ordinal': ordinal, 
+        'ordinal': int(ordinal), 
         'start_rule': self.get_rule(store, start_rule_uuid), 
         'end_rule': self.get_rule(store, end_rule_uuid) 
       }
-      #the_encounters.append(record)
-      the_encounters.insert(int(ordinal) - 1, record)
-    return the_encounters
+      the_encounters.append(record)
+    return sorted(the_encounters, key = lambda i: i['ordinal'])
 
   def get_rule(self, store, uuid):
     if uuid == None:
