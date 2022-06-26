@@ -74,10 +74,11 @@ def study_data_data(name, description, link):
     "crfLink": link
   }
 
-def encounter_data(name, description, encounter_type, env_setting, contact_mode, activities=[], start_rule=None, end_rule=None):
+def encounter_data(name, description, sequence, encounter_type, env_setting, contact_mode, activities=[], start_rule=None, end_rule=None):
   return {
-    "encounterDesc": description,
     "encounterName": name,
+    "encounterDesc": description,
+    "sequenceInStudy": sequence,
     "encounterType": encounter_type,
     "encounterEnvironmentalSetting": env_setting,
     "encounterContactMode": contact_mode,

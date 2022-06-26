@@ -180,19 +180,19 @@ class DDR():
     ]	
     encounter_13_activities = []
 
-    encounter_1 = encounter_data("SCREENING VISIT", "", planned_visit, clinic_setting, in_person_mode, encounter_1_activities)
-    encounter_2 = encounter_data("RUN-IN VISIT 1", "", planned_visit, hospital_setting, in_person_mode, encounter_2_activities, rule_09, rule_21)
-    encounter_3 = encounter_data("RUN-IN VISIT 2", "", planned_visit, hospital_setting, in_person_mode, encounter_3_activities, rule_10, rule_22)
-    encounter_4 = encounter_data("RUN-IN VISIT 3", "", planned_visit, hospital_setting, in_person_mode, encounter_4_activities, rule_11, rule_23)
-    encounter_5 = encounter_data("CYCLE 1, TREATMENT DAY 1", "", planned_visit, hospital_setting, in_person_mode, encounter_5_activities, rule_12, rule_24)
-    encounter_6 = encounter_data("CYCLE 1, TREATMENT DAY 3", "", planned_visit, hospital_setting, in_person_mode, encounter_6_7_9_11_activities, rule_13, rule_25)
-    encounter_7 = encounter_data("CYCLE 1, TREATMENT DAY 5", "", planned_visit, hospital_setting, in_person_mode, encounter_6_7_9_11_activities, rule_14, rule_26)
-    encounter_8 = encounter_data("CYCLE 2, TREATMENT DAY 1", "", planned_visit, clinic_setting, in_person_mode, encounter_8_activities, rule_15, rule_27)
-    encounter_9 = encounter_data("CYCLE 2, TREATMENT DAY 3", "", planned_visit, hospital_setting, in_person_mode, encounter_6_7_9_11_activities, rule_16, rule_28)
-    encounter_10 = encounter_data("CYCLE X, TREATMENT DAY 1", "", planned_visit, hospital_setting, in_person_mode, encounter_10_activities, rule_17, rule_29)
-    encounter_11 = encounter_data("CYCLE X, TREATMENT DAY 4", "", planned_visit, hospital_setting, in_person_mode, encounter_6_7_9_11_activities, rule_18, rule_30)
-    encounter_12 = encounter_data("FU 1", "", planned_visit, clinic_setting, in_person_mode, encounter_12_activities, rule_19, rule_31)
-    encounter_13 = encounter_data("FU 2", "", virtual_visit, clinic_setting, remote_audio_mode, encounter_13_activities, rule_20, rule_32)
+    encounter_1 = encounter_data("SCREENING VISIT", "", 1, planned_visit, clinic_setting, in_person_mode, encounter_1_activities)
+    encounter_2 = encounter_data("RUN-IN VISIT 1", "", 2, planned_visit, hospital_setting, in_person_mode, encounter_2_activities, rule_09, rule_21)
+    encounter_3 = encounter_data("RUN-IN VISIT 2", "", 3, planned_visit, hospital_setting, in_person_mode, encounter_3_activities, rule_10, rule_22)
+    encounter_4 = encounter_data("RUN-IN VISIT 3", "", 4, planned_visit, hospital_setting, in_person_mode, encounter_4_activities, rule_11, rule_23)
+    encounter_5 = encounter_data("CYCLE 1, TREATMENT DAY 1", "", 5, planned_visit, hospital_setting, in_person_mode, encounter_5_activities, rule_12, rule_24)
+    encounter_6 = encounter_data("CYCLE 1, TREATMENT DAY 3", "", 6, planned_visit, hospital_setting, in_person_mode, encounter_6_7_9_11_activities, rule_13, rule_25)
+    encounter_7 = encounter_data("CYCLE 1, TREATMENT DAY 5", "", 7, planned_visit, hospital_setting, in_person_mode, encounter_6_7_9_11_activities, rule_14, rule_26)
+    encounter_8 = encounter_data("CYCLE 2, TREATMENT DAY 1", "", 8, planned_visit, clinic_setting, in_person_mode, encounter_8_activities, rule_15, rule_27)
+    encounter_9 = encounter_data("CYCLE 2, TREATMENT DAY 3", "", 9, planned_visit, hospital_setting, in_person_mode, encounter_6_7_9_11_activities, rule_16, rule_28)
+    encounter_10 = encounter_data("CYCLE X, TREATMENT DAY 1", "", 10, planned_visit, hospital_setting, in_person_mode, encounter_10_activities, rule_17, rule_29)
+    encounter_11 = encounter_data("CYCLE X, TREATMENT DAY 4", "", 11, planned_visit, hospital_setting, in_person_mode, encounter_6_7_9_11_activities, rule_18, rule_30)
+    encounter_12 = encounter_data("FU 1", "", 12, planned_visit, clinic_setting, in_person_mode, encounter_12_activities, rule_19, rule_31)
+    encounter_13 = encounter_data("FU 2", "", 13, virtual_visit, clinic_setting, remote_audio_mode, encounter_13_activities, rule_20, rule_32)
 	
     # Investigational Interventions
     ii_1 = investigational_intervention_data("Olaparibstring", "done", [code_9])

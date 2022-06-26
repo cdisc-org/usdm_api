@@ -9,6 +9,7 @@ class Encounter(ApiBaseModel):
   uuid: Union[UUID, None] = None
   encounterName: str
   encounterDesc: str
+  sequenceInStudy: int
   encounterType: Union[Code, UUID, None]
   encounterEnvironmentalSetting: Union[Code, UUID, None]
   encounterContactMode: Union[Code, UUID, None]
