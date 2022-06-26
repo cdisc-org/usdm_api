@@ -15,7 +15,7 @@ from model.activity import *
 from model.transition_rule import *
 from model.encounter import *
 
-VERSION = "0.15"
+VERSION = "0.16"
 SYSTEM_NAME = "DDF API Simulator"
 
 tags_metadata = [
