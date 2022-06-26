@@ -92,6 +92,14 @@ store = Store()
 def system_and_version():
   return { "system": SYSTEM_NAME, "version": VERSION }
 
+# Controlled Terminology
+@app.get("/v1/terms/", 
+  tags=["simulator"],
+  summary="Return Controlled Terminology",
+  description="Return the specified Controlled Terminology (CT) for the specified class and attribute. This is the CT defined within the model specification")
+async def ct_search(klass: str, attribute: str):
+  return CT().search(klass, attribute)
+  
 # Study Definition
 @app.get("/v1/study_definitions/list", 
   tags=["proposed"], 
@@ -471,11 +479,3 @@ async def read_encounter(uuid: UUID):
   if str(uuid) not in Encounter.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   return Encounter.read(store, str(uuid))
-
-# Controlled Terminology
-@app.get("/v1/terms/", 
-  tags=["potential"],
-  summary="Return Controlled Terminology",
-  description="Return the specified Controlled Terminology (CT) for the specified class and attribute. This is the CT defined within the model specification")
-async def ct_search(klass: str, attribute: str):
-  return CT().search(klass, attribute)
