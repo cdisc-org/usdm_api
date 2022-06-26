@@ -263,7 +263,7 @@ async def read_study_design(uuid: UUID):
 async def search_study_design(study_uuid: UUID):
   return StudyDesign.search(store, str(study_uuid))
 
-@app.get("/v1/study_designs/soa/{uuid}", 
+@app.get("/v1/study_designs/{uuid}/soa", 
   tags=["soa"])
 async def studies_soa(uuid: UUID):
   if str(uuid) not in StudyDesign.list(store):

@@ -27,5 +27,5 @@ if __name__ == "__main__":
     uuid = service.get("study_definitions?identifier=%s" % (identifier))
     service.get("study_definitions", uuid)
     study_designs = service.get("study_designs?study_uuid=%s" % (uuid))
-    soa = service.get("study_designs/soa/%s" % (study_designs[0]['uuid']))
+    soa = service.get("study_designs/%s/soa" % (study_designs[0]['uuid']))
   
