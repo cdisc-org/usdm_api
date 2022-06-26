@@ -19,3 +19,9 @@ class StudyDesign(ApiBaseModel):
   studyPopulations: Union[List[Population], List[UUID], None] = []
   studyObjectives: Union[List[Objective], List[UUID], None] = []
   studyWorkflows: Union[List[Workflow], List[UUID], None] = []
+
+  @classmethod
+  def search(cls, store, uuid):
+    designs = store.get_by_klass_and_scope("StudyDesign", uuid)
+    print("DESIGNS:", designs)
+    return designs

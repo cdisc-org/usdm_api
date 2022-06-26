@@ -236,6 +236,30 @@ async def read_study_protocol_version(uuid: UUID):
     raise HTTPException(status_code=404, detail="Item not found")
   return StudyProtocolVersion.read(store, str(uuid))
 
+# Study Design
+@app.get("/v1/study_designs/list", 
+  tags=["potential"], 
+  response_model=List[UUID])
+async def list_study_designs():
+  return StudyDesign.list(store)
+
+@app.post("/v1/study_designs", 
+  tags=["potential"], 
+  status_code=status.HTTP_201_CREATED)
+async def create_study_design(item: StudyDesign):
+  item.save(store, None)
+  return item.uuid
+
+@app.get("/v1/study_designs/{uuid}", response_model=StudyDesign, tags=["potential"])
+async def read_study_design(uuid: UUID):
+  if str(uuid) not in StudyDesign.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  return StudyDesign.read(store, str(uuid))
+
+@app.get("/v1/study_designs", response_model=List[StudyDesign], tags=["potential"])
+async def read_study_design(study_uuid: UUID):
+  return StudyDesign.search(store, str(study_uuid))
+
 # Study Arm
 @app.get("/v1/study_arms/list", 
   tags=["potential"], 
