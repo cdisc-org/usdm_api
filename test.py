@@ -4,8 +4,8 @@ from study.simple_study import *
 from study.ddr import *
 
 studies = [
-  #SimpleStudy, 
-  DDR
+  SimpleStudy, 
+  #DDR
   ]
 items = [
   "studies", "study_identifiers", "organisations", "study_protocol_versions", "study_arms", "study_epochs", 

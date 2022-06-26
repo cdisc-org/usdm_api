@@ -55,7 +55,6 @@ class Study(ApiBaseModel):
     # Activities
     activities = {}
     results = self.activity_encounters(store)
-    print(results)
     for record in results:
       if not record["activity"] in activities:
         activities[record["activity"]] = [''] * len(visits)
@@ -84,7 +83,6 @@ class Study(ApiBaseModel):
     ordered_encounters = []
     cells = store.get_by_klass_and_scope("StudyCell", str(str(str(self.uuid))))
     for cell in cells:
-      print("CELL:", cell)
       epoch_uuid = cell['studyEpoch']
       epoch = store.get("", epoch_uuid)
       epoch_name = epoch['studyEpochName']
@@ -99,8 +97,6 @@ class Study(ApiBaseModel):
     ordered_encounters = self.order_dict(encounters)
     for encounter in ordered_encounters:
       ordered_epochs.append(epochs[encounter])
-    print("EPOCHS", ordered_epochs)
-    print("ENCOUNTERS", ordered_encounters)
     return ordered_epochs, ordered_encounters
 
   def encounter_rules(self, store):
@@ -144,7 +140,6 @@ class Study(ApiBaseModel):
       desc = activity['activityDesc']
       the_activities[desc] = int(ordinal)
     ordered = self.order_dict(the_activities)
-    #{ k: the_activities[k] for k in sorted(the_activities, key=the_activities.get)}
     return ordered.keys()
 
   def order_dict(self, the_dict):

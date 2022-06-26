@@ -20,12 +20,14 @@ class Service():
     print("")
 
   def post(self, endpoint, body):
+    print("Post ...")
     endpoint_url = "%s%s" % (self.url, endpoint)
     r = requests.post(endpoint_url, data=json.dumps(body))
     self.display_response("Post", endpoint_url, r)
     return r.json()
   
   def get(self, endpoint, uuid=""):
+    print("Get ...")
     endpoint_url = "%s%s" % (self.url, endpoint)
     if uuid != "":
       endpoint_url = "%s/%s" % (endpoint_url, uuid)
