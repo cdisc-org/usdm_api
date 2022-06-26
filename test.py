@@ -25,5 +25,6 @@ if __name__ == "__main__":
   identifiers = ["ACME-5678", "NCT04298023"]
   for identifier in identifiers:
     uuid = service.get("study_definitions?identifier=%s" % (identifier))
-    soa = service.get("study_definitions/soa/%s" % (uuid))
+    study_designs = service.get("study_designs?study_uuid=%s" % (uuid))
+    soa = service.get("study_designs/soa/%s" % (study_designs[0]['uuid']))
   

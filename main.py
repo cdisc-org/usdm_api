@@ -28,12 +28,16 @@ tags_metadata = [
         "description": "Routes that are proposed as being included within the production specification."
     },
     {
+        "name": "soa",
+        "description": "Routes related to the SoA for a study design."
+    },
+    {
         "name": "potential",
         "description": "Routes that could potentially be included in the production specification."
     },
     {
         "name": "simulator",
-        "description": "Routes used to support the simulator."
+        "description": "Routes used to support the simulator, not for production."
     }
 ]
 
@@ -105,15 +109,6 @@ async def studies_search(identifier: str=""):
   if result == None:
     raise HTTPException(status_code=404, detail="Item not found")
   return result
-
-@app.get("/v1/study_definitions/soa/{uuid}", 
-  tags=["proposed"])
-async def studies_soa(uuid: UUID):
-  if str(uuid) not in Study.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  study = Study(**Study.read(store, str(uuid)))
-  df = study.soa(store)
-  return Response(df.to_json(orient="records"), media_type="application/json")
 
 @app.post("/studydefinitionrepository/v1", 
   tags=["production"], 
@@ -256,9 +251,18 @@ async def read_study_design(uuid: UUID):
     raise HTTPException(status_code=404, detail="Item not found")
   return StudyDesign.read(store, str(uuid))
 
-@app.get("/v1/study_designs", response_model=List[StudyDesign], tags=["potential"])
-async def read_study_design(study_uuid: UUID):
+@app.get("/v1/study_designs", response_model=List[StudyDesign], tags=["soa"])
+async def search_study_design(study_uuid: UUID):
   return StudyDesign.search(store, str(study_uuid))
+
+@app.get("/v1/study_designs/soa/{uuid}", 
+  tags=["soa"])
+async def studies_soa(uuid: UUID):
+  if str(uuid) not in StudyDesign.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  study_design = StudyDesign(**StudyDesign.read(store, str(uuid)))
+  df = SoA(study_design, store).soa()
+  return Response(df.to_json(orient="records"), media_type="application/json")
 
 # Study Arm
 @app.get("/v1/study_arms/list", 
