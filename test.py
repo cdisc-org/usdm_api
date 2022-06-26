@@ -4,7 +4,7 @@ from study.simple_study import *
 from study.ddr import *
 
 studies = [
-  SimpleStudy, 
+  #SimpleStudy, 
   DDR
   ]
 items = [
@@ -25,6 +25,7 @@ if __name__ == "__main__":
   identifiers = ["ACME-5678", "NCT04298023"]
   for identifier in identifiers:
     uuid = service.get("study_definitions?identifier=%s" % (identifier))
+    service.get("study_definitions", uuid)
     study_designs = service.get("study_designs?study_uuid=%s" % (uuid))
     soa = service.get("study_designs/soa/%s" % (study_designs[0]['uuid']))
   
