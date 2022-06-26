@@ -28,13 +28,16 @@ class Store():
 
   def get_by_klass_and_scope(self, klass, scope):
     final_results = []
-    results = self.__store.fetch([{"klass": klass}, {"scope": scope}])
+    results = self.__store.fetch({"klass": klass})
     for item in results.items:
-      data = json.loads(item["value"])
-      key = item["key"]
-      data.pop('key', None)
-      data["uuid"] = key
-      final_results.append(data)
+      print("GET_BY_CLASS_AND_SCOPE (1):", str(scope))
+      print("GET_BY_CLASS_AND_SCOPE (2):", item['scope'])
+      if item['scope'] == str(scope):
+        data = json.loads(item["value"])
+        key = item["key"]
+        data.pop('key', None)
+        data["uuid"] = key
+        final_results.append(data)
     return final_results
 
   def get_by_klass(self, klass):

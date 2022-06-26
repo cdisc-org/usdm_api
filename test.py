@@ -4,8 +4,8 @@ from study.simple_study import *
 from study.ddr import *
 
 studies = [
-  SimpleStudy, 
-  #DDR
+  #SimpleStudy, 
+  DDR
   ]
 items = [
   "studies", "study_identifiers", "organisations", "study_protocol_versions", "study_arms", "study_epochs", 
@@ -19,10 +19,11 @@ if __name__ == "__main__":
     uuid = service.post("study_definitions", data)
     service.get("study_definitions", uuid)
     service.get("studies", uuid)
-  #for item in items:
-  #  uuids = service.get("%s/list" % (item))
-  #  service.get(item, uuids[0])
-  #uuid = service.get("study_definitions?identifier=NCT04298023")
-  #uuid = service.get("study_definitions/list")
-  #soa = service.get("study_definitions/soa/%s" % (uuid[0]))
+  for item in items:
+   uuids = service.get("%s/list" % (item))
+   service.get(item, uuids[0])
+  identifiers = ["ACME-5678", "NCT04298023"]
+  for identifier in identifiers:
+    uuid = service.get("study_definitions?identifier=%s" % (identifier))
+    soa = service.get("study_definitions/soa/%s" % (uuid))
   

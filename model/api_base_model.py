@@ -5,8 +5,11 @@ import json
 
 class ApiBaseModel(BaseModel):
 
-  def save(self, store, scope):
-    uuid = str(uuid4())
+  def save(self, store, scope, use_scope=False):
+    if use_scope:
+      uuid = scope
+    else:
+      uuid = str(uuid4())
     uuid = store.put(self, self.__class__, uuid, scope)
     self.uuid = uuid
     return uuid
@@ -15,8 +18,10 @@ class ApiBaseModel(BaseModel):
 
     from .klass import Klass
 
+    use_scope = False
     if scope == None:
       scope = str(uuid4()) # Any unique string but use a UUID.
+      use_scope = True
     schema = self.__class__.schema_json()
     x = json.loads(schema)
     for key, definition in x["properties"].items():
@@ -41,7 +46,7 @@ class ApiBaseModel(BaseModel):
         klass = Klass.get(klass_str)
         if getattr(self, key) != None:
           setattr(self, key, klass.recursive_save(getattr(self, key), store, scope)) 
-    uuid = self.save(store, scope)
+    uuid = self.save(store, scope, use_scope)
     self.uuid = uuid
     return uuid
 

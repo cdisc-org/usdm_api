@@ -27,7 +27,10 @@ class Study(ApiBaseModel):
     for item in identifiers:
       result = store.get("", item['uuid'])
       if result['studyIdentifier'] == identifier:
-        return store.scope(item['uuid'])
+        studies = store.get_by_klass("Study")
+        for study in studies:
+          if result['uuid'] in study['studyIdentifiers']:
+            return study['uuid']
     return None
 
   def soa(self, store):
