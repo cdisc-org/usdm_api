@@ -102,16 +102,16 @@ def investigational_intervention_data(description, codes):
 
 def endpoint_data(description, purpose, level):
   return {
-    "endpoint_desc": description,
-    "endpoint_purpose": purpose,
-    "outcome_level": level
+    "endpointDesc": description,
+    "endpointPurposeDesc": purpose,
+    "endpointLevel": level
   }
 
 def objective_data(description, level, endpoints):
   return {
-    "objective_desc": description,
-    "objective_endpoint": endpoints,
-    "objective_level": level
+    "objectiveDesc": description,
+    "objectiveLevel": level,
+    "objectiveEndpoints": endpoints
   }
 
 def population_data(description):

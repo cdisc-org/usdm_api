@@ -2,9 +2,10 @@ from typing import List, Union
 from .api_base_model import ApiBaseModel
 from .code import Code
 from .endpoint import Endpoint
+from uuid import UUID
 
 class Objective(ApiBaseModel):
-  uuid: Union[str, None] = None
-  objective_desc: str
-  objective_level: Union[Code, str, None]
-  objective_endpoint: Union[List[Endpoint], List[str], None]
+  uuid: Union[UUID, None] = None
+  objectiveDesc: str
+  objectiveLevel: Union[Code, UUID, None]
+  objectiveEndpoints: Union[List[Endpoint], List[UUID], None]
