@@ -102,7 +102,7 @@ class SoA():
           for encounter_uuid in element['encounters']:
             encounter = self.store.get("", encounter_uuid)
             encounter_name = encounter['encounterName']
-            ordinal = encounter['sequenceInStudy']
+            ordinal = encounter['sequenceInStudyDesign']
             encounters[encounter_name] = int(ordinal)
             epochs[encounter_name] = epoch_name
             self.encounters[encounter_name] = encounter
@@ -121,7 +121,7 @@ class SoA():
       encounter_name = encounter['encounterName']
       start_rule_uuid = encounter['transitionStartRule']
       end_rule_uuid = encounter['transitionEndRule']
-      ordinal = encounter['sequenceInStudy']
+      ordinal = encounter['sequenceInStudyDesign']
       record = { 
         'visit': encounter_name, 
         'ordinal': int(ordinal), 
@@ -151,7 +151,7 @@ class SoA():
     the_activities = {}
     #activities = store.get_by_klass_and_scope("Activity", str(self.uuid))
     for activity in self.activities.values():
-      ordinal = activity['sequenceInStudy']
+      ordinal = activity['sequenceInStudyDesign']
       desc = activity['activityDesc']
       the_activities[desc] = int(ordinal)
     ordered = self.order_dict(the_activities)

@@ -1,4 +1,3 @@
-from msilib import sequence
 from typing import List, Union
 from .api_base_model import ApiBaseModel
 from .transition_rule import TransitionRule
