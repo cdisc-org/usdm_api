@@ -181,7 +181,7 @@ def transition_rule_data(description):
 
 def study_indication_data(description, indications):
   return {
-    "indication": indications,
+    "indications": indications,
     "indicationDesc": description
   }
 
