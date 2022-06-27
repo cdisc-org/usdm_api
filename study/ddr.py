@@ -219,73 +219,73 @@ class DDR():
     # Endpoints
     endpoint_1 = endpoint_data(
       "Disease control rate of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
-      code_data("C9834x", "http://www.cdisc.org", "1", "PRIMARY"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "EFFICACY")
+      "EFFICACY",
+      code_data("C9834x", "http://www.cdisc.org", "1", "PRIMARY")
     )
     endpoint_2 = endpoint_data(
       "Disease control rate of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
-      code_data("C9834x", "http://www.cdisc.org", "1", "PRIMARY"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "EFFICACY")
+      "EFFICACY",
+      code_data("C9834x", "http://www.cdisc.org", "1", "PRIMARY") 
     )
     endpoint_3 = endpoint_data(
       "Overall response rate of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "EFFICACY")
+      "EFFICACY",
+      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY")
     )
     endpoint_4 = endpoint_data(
       "progression-free survival of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "EFFICACY")
+      "EFFICACY",
+      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY")
     )
     endpoint_5 = endpoint_data(
        "duration of response of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY"), 
-      code_data("C9835y", "http://www.cdisc.org", "1", "PHARMACODYNAMIC")
+      "PHARMACODYNAMIC",
+      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY")
     )
     endpoint_6 = endpoint_data(
       "overall survival of response of AZD6738 + Durvalumab cohort [ Time Frame: every 12 weeks until death or up to 5 years ]",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "EFFICACY")
+      "EFFICACY",
+      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
     )
     endpoint_7 = endpoint_data(
       "Safety and tolerability of AZD6738 + Durvalumab cohort measured by number and grade of toxicity events [ Time Frame: through study completion, an average of 1 year ]",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "SAFETY")
+      "SAFETY",
+      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
     )
     endpoint_8 = endpoint_data(
       "quality of life measurement of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "EFFICACY")
+      "EFFICACY",
+      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
     )
     endpoint_9 = endpoint_data(
       "overall response rate (ORR) of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "EFFICACY")
+      "EFFICACY",
+      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
     )
     endpoint_10 = endpoint_data(
       "progression-free survival of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "EFFICACY")
+      "EFFICACY",
+      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
     )
     endpoint_11 = endpoint_data(
       "duration of response of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY"), 
-      code_data("C9835y", "http://www.cdisc.org", "1", "PHARMACODYNAMIC")
+      "PHARMACODYNAMIC",
+      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
     )
     endpoint_12 = endpoint_data(
       "overall survival of AZD6738 + Olaparib cohort [ Time Frame: every 12 weeks until death or up to 5 years ]",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "EFFICACY")
+      "EFFICACY",
+      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
     )
     endpoint_13 = endpoint_data(
       "Safety and tolerability of AZD6738 + Olaparib cohort as measured by number and grade of toxicity events [ Time Frame: through study completion, an average of 1 year ]",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "SAFETY")
+      "SAFETY",
+      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
     )
     endpoint_14 = endpoint_data(
       "quality of life measurement of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "EFFICACY")
+      "EFFICACY",
+      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY")
     )
 
     # Objectives

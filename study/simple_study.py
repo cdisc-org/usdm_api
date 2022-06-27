@@ -36,13 +36,13 @@ class SimpleStudy():
     )
     endpoint_1 = endpoint_data(
       "Endpoint 1", 
-      code_data("C9834x", "http://www.cdisc.org", "1", "PURPOSE"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "LEVEL")
+      "level description",
+      code_data("C9834x", "http://www.cdisc.org", "1", "PURPOSE")
       )
     endpoint_2 = endpoint_data(
-      "Endpoint 2", 
-      code_data("C9834x", "http://www.cdisc.org", "1", "PURPOSE"), 
-      code_data("C9834y", "http://www.cdisc.org", "1", "LEVEL")
+      "Endpoint 2",
+      "level description",
+      code_data("C9834x", "http://www.cdisc.org", "1", "PURPOSE"),
       )
     objective_1 = objective_data(
       "Objective Level 1", 
