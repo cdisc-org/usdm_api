@@ -7,4 +7,3 @@ class InvestigationalIntervention(ApiBaseModel):
   uuid: Union[UUID, None] = None
   interventions: Union[List[Code], List[UUID], None]  
   interventionDesc: str
-  interventionModel: Union[Code, UUID]
