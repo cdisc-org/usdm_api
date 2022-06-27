@@ -5,7 +5,7 @@ from study.ddr import *
 
 studies = [
   SimpleStudy, 
-  #DDR
+  DDR
   ]
 items = [
   "studies", "study_identifiers", "organisations", "study_protocol_versions", "study_arms", "study_epochs", 
@@ -14,9 +14,9 @@ items = [
   
 if __name__ == "__main__":
   service = Service(sys.argv)
-  #for study in studies:
-  #  data = study.json()
-  #  uuid = service.post("study_definitions", data)
+  # for study in studies:
+  #   data = study.json()
+  #   uuid = service.post("study_definitions", data)
   for item in items:
    uuids = service.get("%s/list" % (item))
    service.get(item, uuids[0])
