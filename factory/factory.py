@@ -94,11 +94,10 @@ def point_in_time_data(start, end, pit_type):
     "point_in_time_type": pit_type
   }
 
-def investigational_intervention_data(description, status, models):
+def investigational_intervention_data(description, codes):
   return {
-    "intervention_desc": description,
-    "intervention_status": status,
-    "intervention_model": models
+    "interventions": codes,
+    "interventionDesc": description,
   }
 
 def endpoint_data(description, purpose, level):
@@ -197,10 +196,11 @@ def study_data(title, version, type, phase, identifiers, protocol_versions, desi
     "studyDesigns": designs
   }
 
-def study_design_data(intent, type, cells, indications, objectives, populations, interventions, workflows):
+def study_design_data(intent, type, model, cells, indications, objectives, populations, interventions, workflows):
   return {
     "trialIntentType": intent,
     "trialType": type,
+    "interventionModel": model,
     "studyCells": cells,
     "studyIndications": indications,
     "studyObjectives": objectives,

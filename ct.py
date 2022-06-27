@@ -21,7 +21,8 @@ c_code_list = {
   },
   'StudyDesign': {
     'trialIntentType': "C66736", 
-    'trialType': "C66739"
+    'trialType': "C66739",
+    'interventionModel': 'C99076'
   },
   'StudyArm': {
     'studyArmType': 'C174222'
@@ -40,6 +41,7 @@ result = {}
 for klass, info in c_code_list.items():
   result[klass] = {}
   for attribute, c_code in info.items():
+    print("Working ...")
     body = get_code_list(releases, c_code)
     body.pop('_links', None)
     result[klass][attribute] = body

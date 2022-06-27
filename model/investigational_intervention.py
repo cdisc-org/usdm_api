@@ -1,9 +1,10 @@
 from typing import List, Union
 from .api_base_model import ApiBaseModel
 from .code import Code
+from uuid import UUID
 
 class InvestigationalIntervention(ApiBaseModel):
-  uuid: Union[str, None] = None
-  intervention_desc: str
-  intervention_status: str
-  intervention_model: Union[List[Code], List[str], None]
+  uuid: Union[UUID, None] = None
+  interventions: Union[List[Code], List[UUID], None]  
+  interventionDesc: str
+  interventionModel: Union[Code, UUID]

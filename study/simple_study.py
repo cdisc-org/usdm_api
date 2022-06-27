@@ -16,7 +16,6 @@ class SimpleStudy():
 
     ii_1 = investigational_intervention_data(
       "Intervention 1", 
-      "done", 
       [ 
         code_data("C7639x", "http://www.cdisc.org", "1", "MODEL 1"), 
         code_data("C7639y", "http://www.cdisc.org", "1", "MODEL 2")
@@ -71,7 +70,6 @@ class SimpleStudy():
     study_arm_1 = study_arm_data("Placebo", "The Placebo Arm", placebo, "Captured subject data", origin_type)
     study_arm_2 = study_arm_data("Active", "Super Drug Arm", treatment, "Captured subject data", origin_type)
 
-    #epoch_type = code_data("C1111x", "http://www.cdisc.org", "1", "NORMAL EPOCH")
     run_in = code_for('StudyEpoch', 'studyEpochType', submission_value='RUN-IN') 
     treatment = code_for('StudyEpoch', 'studyEpochType', submission_value='TREATMENT')
     follow_up = code_for('StudyEpoch', 'studyEpochType', submission_value='FOLLOW-UP')
@@ -96,16 +94,13 @@ class SimpleStudy():
     study_cells.append(study_cell_data(study_arm_2, study_epoch_2, [study_element_5]))
     study_cells.append(study_cell_data(study_arm_2, study_epoch_3, [study_element_6]))
 
-    #intent = code_data("C3495x", "http://www.cdisc.org", "1", "BIG INTENT")
-    #design_1_type = code_data("C3496x", "http://www.cdisc.org", "1", "COMPLEX DESIGN I")
-    #design_2_type = code_data("C3496y", "http://www.cdisc.org", "1", "COMPLEX DESIGN II")
-
     intent = code_for('StudyDesign', 'trialIntentType', c_code='C15714')
     design_1_type = code_for('StudyDesign', 'trialType', submission_value='BIOSIMILARITY')
     design_2_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
+    int_model = code_for('StudyDesign', 'interventionModel', submission_value='PARALLEL')
 
-    design_1 = study_design_data([intent], design_1_type, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [])
-    design_2 = study_design_data([intent], design_2_type, study_cells, [indication_1, indication_2], [objective_1], [population_1], [ii_1], [])
+    design_1 = study_design_data([intent], design_1_type, int_model, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [])
+    design_2 = study_design_data([intent], design_2_type, int_model, study_cells, [indication_1, indication_2], [objective_1], [population_1], [ii_1], [])
     designs = [design_1, design_2]
     final = code_data("C1113x", "http://www.cdisc.org", "1", "FINAL")
     protocol_version_1 = study_protocol_version_data("Short", "Very Official", "Public Voice", "Incomprehensible", "1", None, "2022-01-01", final)

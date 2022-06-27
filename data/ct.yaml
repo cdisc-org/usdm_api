@@ -389,6 +389,45 @@ StudyArm:
       preferredTerm: Protocol Treatment Arm
       submissionValue: Treatment Arm
 StudyDesign:
+  interventionModel:
+    conceptId: C99076
+    definition: A terminology codelist relevant to the trial design developed to compare
+      treatment groups.
+    extensible: 'true'
+    name: Intervention Model Response
+    preferredTerm: CDISC SDTM Intervention Model Terminology
+    submissionValue: INTMODEL
+    synonyms:
+    - Intervention Model Response
+    terms:
+    - conceptId: C82637
+      definition: Participants receive one of two or more alternative intervention(s)
+        during the initial epoch of the study and receive other intervention(s) during
+        the subsequent epoch(s) of the study.
+      preferredTerm: Crossover Study
+      submissionValue: CROSS-OVER
+    - conceptId: C82638
+      definition: Two or more interventions, each alone or in combination, are evaluated
+        in parallel against a control group. This study design allows for the comparison
+        of active drug to placebo, presence of drug-drug interactions, and comparison
+        of active drugs against each other.
+      preferredTerm: Factorial Study
+      submissionValue: FACTORIAL
+    - conceptId: C82639
+      definition: Participants are assigned to one of two or more treatment groups
+        in parallel for the duration of the study.
+      preferredTerm: Parallel Study
+      submissionValue: PARALLEL
+    - conceptId: C142568
+      definition: Groups of participants are assigned to receive interventions based
+        on prior milestones being reached in the study. (clinicaltrials.gov)
+      preferredTerm: Group Sequential Design
+      submissionValue: SEQUENTIAL
+    - conceptId: C82640
+      definition: All trial participants are assigned to a single treatment group
+        for the duration of the study.
+      preferredTerm: Single Group Study
+      submissionValue: SINGLE GROUP
   trialIntentType:
     conceptId: C66736
     definition: A terminology codelist relevant to the responses for the planned purpose

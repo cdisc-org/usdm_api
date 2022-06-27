@@ -195,9 +195,9 @@ class DDR():
     encounter_13 = encounter_data("FU 2", "", 13, virtual_visit, clinic_setting, remote_audio_mode, encounter_13_activities, rule_20, rule_32)
 	
     # Investigational Interventions
-    ii_1 = investigational_intervention_data("Olaparibstring", "done", [code_9])
-    ii_2 = investigational_intervention_data("Durvalumab", "done", [code_8, code_10])
-    ii_3 = investigational_intervention_data("AZD6738", "done", [])
+    ii_1 = investigational_intervention_data("Olaparibstring", [code_9])
+    ii_2 = investigational_intervention_data("Durvalumab", [code_8, code_10])
+    ii_3 = investigational_intervention_data("AZD6738", [])
     ii = [ii_1, ii_2, ii_3]
 
     # Populations
@@ -352,8 +352,9 @@ class DDR():
 
     intent = code_for('StudyDesign', 'trialIntentType', c_code='C15714')
     design_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
+    int_model = code_for('StudyDesign', 'interventionModel', submission_value='PARALLEL')
 
-    design_1 = study_design_data([intent], design_type, study_cells, indications, objectives, [population_1], ii, [])
+    design_1 = study_design_data([intent], design_type, int_model, study_cells, indications, objectives, [population_1], ii, [])
     designs = [design_1]
 
     # Protocol versions    
