@@ -8,4 +8,4 @@ class StudyEpoch(ApiBaseModel):
   studyEpochName: str
   studyEpochDesc: str
   studyEpochType: Union[Code, UUID]
-  sequenceInStudy: int
+  sequenceInStudyDesign: int

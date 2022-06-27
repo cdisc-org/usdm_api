@@ -11,7 +11,6 @@ class Procedure(ApiBaseModel):
   uuid: Union[UUID, None] = None
   procedureType: str
   procedureCode: Union[Code, UUID]
-  previousProcedure: Union[PreviousProcedure, UUID, None] = None
   
   @classmethod
   def scope_reuse(cls):

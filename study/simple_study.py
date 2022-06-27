@@ -4,10 +4,10 @@ class SimpleStudy():
 
   def json():
     procedure_code = code_data("767002", "SNOMED-CT", "2022-05-31", "White blood cell count")           
-    procedure_1 = procedure_data("Specimen Collection", procedure_code, None)
+    procedure_1 = procedure_data("Specimen Collection", procedure_code)
     study_data_1 = study_data_data("Study Data 1", "Something", "Link 1")
-    activity_1 = activity_data("Activity_1", 1, [procedure_1], [])
-    activity_2 = activity_data("Activity_2", 2, [], [study_data_1])
+    activity_1 = activity_data("Activity_1", "", 1, [procedure_1], [])
+    activity_2 = activity_data("Activity_2", "",  2, [], [study_data_1])
     encounter_type = code_data("C7652x", "http://www.cdisc.org", "1", "SITE VISIT")
     env_setting = code_for('Encounter', 'encounterEnvironmentalSetting', c_code='C51282')    
     env_contact_mode = code_for('Encounter', 'encounterContactMode', c_code='C175574')    
@@ -81,12 +81,12 @@ class SimpleStudy():
 
     start_rule = transition_rule_data("Start Rule")
     end_rule = transition_rule_data("End Rule")
-    study_element_1 = study_element_data("Element 1", "First element", [encounter_1, encounter_2], start_rule, end_rule)
-    study_element_2 = study_element_data("Element 2", "Second element", [])
-    study_element_3 = study_element_data("Element 3", "Third element", [])
-    study_element_4 = study_element_data("Element 4", "Fourth element", [])
-    study_element_5 = study_element_data("Element 5", "Fifth element", [])
-    study_element_6 = study_element_data("Element 6", "Sixth element", [])
+    study_element_1 = study_element_data("Element 1", "First element", [encounter_1, encounter_2], [], start_rule, end_rule)
+    study_element_2 = study_element_data("Element 2", "Second element", [], [])
+    study_element_3 = study_element_data("Element 3", "Third element", [], [])
+    study_element_4 = study_element_data("Element 4", "Fourth element", [], [])
+    study_element_5 = study_element_data("Element 5", "Fifth element", [], [])
+    study_element_6 = study_element_data("Element 6", "Sixth element", [], [])
 
     study_cells = []
     study_cells.append(study_cell_data(study_arm_1, study_epoch_1, [study_element_1]))

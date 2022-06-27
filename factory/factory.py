@@ -52,19 +52,19 @@ def workflow_item_data(description, from_pit, to_pit, previous, encounter, activ
     "activity": activity
   }
 
-def activity_data(description, sequenceInStudy, procedures, study_data):
+def activity_data(name, description, sequence, procedures, study_data):
   return {
+    "activityName": name,
     "activityDesc": description,
-    "sequenceInStudy": sequenceInStudy,
+    "sequenceInStudyDesign": sequence,
     "definedProcedures": procedures,
     "studyDataCollection": study_data
   }
 
-def procedure_data(the_type, the_code, previous):
+def procedure_data(the_type, the_code):
   return {
     "procedureType": the_type,
-    "procedureCode": the_code,
-    "previousProcedure": previous
+    "procedureCode": the_code
   }
 
 def study_data_data(name, description, link):
@@ -78,7 +78,7 @@ def encounter_data(name, description, sequence, encounter_type, env_setting, con
   return {
     "encounterName": name,
     "encounterDesc": description,
-    "sequenceInStudy": sequence,
+    "sequenceInStudyDesign": sequence,
     "encounterType": encounter_type,
     "encounterEnvironmentalSetting": env_setting,
     "encounterContactMode": contact_mode,
@@ -155,7 +155,7 @@ def study_epoch_data(name, description, sequence, epoch_type):
     "studyEpochName": name,
     "studyEpochDesc": description,
     "studyEpochType": epoch_type,
-    "sequenceInStudy": sequence,
+    "sequenceInStudyDesign": sequence,
   }
 
 def study_cell_data(arm, epoch, elements):
@@ -165,11 +165,12 @@ def study_cell_data(arm, epoch, elements):
     "studyElements": elements
   }
 
-def study_element_data(name, description, encounters=[], start=None, end=None):
+def study_element_data(name, description, encounters=[], activities=[], start=None, end=None):
   return {
     "studyElementName": name,
     "studyElementDesc": description,
     "encounters": encounters,
+    "activities": activities,
     "transitionStartRule": start,
     "transitionEndRule": end
   }
