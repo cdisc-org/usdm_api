@@ -32,8 +32,16 @@ tags_metadata = [
         "description": "Routes related to the SoA for a study design."
     },
     {
+        "name": "search",
+        "description": "Routes related to search functions."
+    },
+    {
+        "name": "sections",
+        "description": "Routes providing similar functionality to that of 'sections' in the previous draft of the API."
+    },
+    {
         "name": "potential",
-        "description": "Routes that could potentially be included in the production specification."
+        "description": "Routes that could potentially be included in the production specification. These tend to be more granular routes, more typical 'resource' driven."
     },
     {
         "name": "simulator",
@@ -94,7 +102,7 @@ def system_and_version():
 
 # Controlled Terminology
 @app.get("/v1/terms/", 
-  tags=["simulator"],
+  tags=["simulator", 'search'],
   summary="Return Controlled Terminology",
   description="Return the specified Controlled Terminology (CT) for the specified class and attribute. This is the CT defined within the model specification")
 async def ct_search(klass: str, attribute: str):
@@ -110,7 +118,9 @@ async def list_studies():
   return Study.list(store)
 
 @app.get("/v1/study_definitions", 
-  tags=["proposed"], 
+  tags=["proposed", 'search'], 
+  summary='Study definition for specified identifier',
+  description='Returns the uuid for the study with the matching identifier.',
   response_model=UUID)
 async def studies_search(identifier: str=""):
   result = Study.search(store, identifier)
@@ -165,14 +175,16 @@ async def read_study(uuid: str):
 
 # Study Identifiers
 @app.get("/v1/study_identifiers/list", 
-  tags=["potential"], 
+  tags=["potential"],
   response_model=List[UUID]
 )
 async def list_study_identifiers():
   return StudyIdentifier.list(store)
 
 @app.get("/v1/study_identifiers", 
-  tags=["potential"], 
+  tags=["potential", 'sections'], 
+  summary='Study identifiers for a study',
+  description='Returns all the identifiers for a specified study.',
   response_model=List[StudyIdentifier]
 )
 async def study_identifiers_search(study_uuid: UUID):
@@ -259,12 +271,20 @@ async def read_study_design(uuid: UUID):
     raise HTTPException(status_code=404, detail="Item not found")
   return StudyDesign.read(store, str(uuid))
 
-@app.get("/v1/study_designs", response_model=List[StudyDesign], tags=["soa"])
+@app.get("/v1/study_designs", 
+  tags=["soa", 'sections'],
+  summary='Study designs for a study',
+  description='Returns all the study designs for a specified study.',
+  response_model=List[StudyDesign]
+)
 async def search_study_design(study_uuid: UUID):
   return StudyDesign.search(store, str(study_uuid))
 
 @app.get("/v1/study_designs/{uuid}/soa", 
-  tags=["soa"])
+  tags=["soa"],
+  summary='SoA for the specified study design',
+  description='Returns a SoA for the specified study design. The SoA returned is a JSON structure (pandas dataframe to JSON) representing the SoA for the study.'
+)
 async def studies_soa(uuid: UUID):
   if str(uuid) not in StudyDesign.list(store):
     raise HTTPException(status_code=404, detail="Item not found")

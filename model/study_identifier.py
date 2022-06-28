@@ -14,4 +14,10 @@ class StudyIdentifier(ApiBaseModel):
 
   @classmethod
   def search(cls, store, study_uuid):
-    return store.get_by_klass_and_scope(cls.__name__, study_uuid)
+    results = []
+    items = store.get_by_klass_and_scope(cls.__name__, study_uuid)
+    print("IDENTIFIERS:", items)
+    for item in items:
+      results.append(cls.recursive_read(store, item['uuid']))
+    return results
+
