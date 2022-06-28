@@ -2,6 +2,8 @@ import sys
 from service.service import Service
 from study.simple_study import *
 from study.ddr import *
+import pandas as pd
+from pandas import json_normalize
 
 studies = [
   SimpleStudy, 
@@ -27,4 +29,5 @@ if __name__ == "__main__":
     service.get("study_definitions", uuid)
     study_designs = service.get("study_designs?study_uuid=%s" % (uuid))
     soa = service.get("study_designs/%s/soa" % (study_designs[0]['uuid']))
-  
+    df = json_normalize(soa)
+    print(df)
