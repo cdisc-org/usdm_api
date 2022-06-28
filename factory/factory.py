@@ -96,7 +96,7 @@ def point_in_time_data(start, end, pit_type):
 
 def investigational_intervention_data(description, codes):
   return {
-    "interventions": codes,
+    "codes": codes,
     "interventionDesc": description,
   }
 
@@ -181,7 +181,7 @@ def transition_rule_data(description):
 
 def study_indication_data(description, indications):
   return {
-    "indications": indications,
+    "codes": indications,
     "indicationDesc": description
   }
 
