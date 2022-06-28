@@ -198,7 +198,7 @@ def study_data(title, version, type, phase, identifiers, protocol_versions, desi
 
 def study_design_data(intent, type, model, cells, indications, objectives, populations, interventions, workflows):
   return {
-    "trialIntentType": intent,
+    "trialIntentTypes": intent,
     "trialType": type,
     "interventionModel": model,
     "studyCells": cells,

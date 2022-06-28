@@ -12,7 +12,7 @@ import pandas as pd
 
 class StudyDesign(ApiBaseModel):
   uuid: Union[UUID, None] = None
-  trialIntentType: Union[List[Code], List[UUID]]
+  trialIntentTypes: Union[List[Code], List[UUID]]
   trialType: Union[Code, UUID]
   interventionModel: Union[Code, UUID]
   studyCells: Union[List[StudyCell], List[UUID], None] = []
