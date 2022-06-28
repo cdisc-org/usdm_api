@@ -178,7 +178,7 @@ class DDR():
       activity_16,
       activity_17
     ]	
-    encounter_13_activities = []
+    encounter_13_activities = [activity_17]
 
     encounter_1 = encounter_data("SCREENING VISIT", "", 1, planned_visit, clinic_setting, in_person_mode, encounter_1_activities)
     encounter_2 = encounter_data("RUN-IN VISIT 1", "", 2, planned_visit, hospital_setting, in_person_mode, encounter_2_activities, rule_09, rule_21)
