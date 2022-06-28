@@ -30,4 +30,8 @@ if __name__ == "__main__":
     study_designs = service.get("study_designs?study_uuid=%s" % (uuid))
     soa = service.get("study_designs/%s/soa" % (study_designs[0]['uuid']))
     df = json_normalize(soa)
+    pd.set_option('display.max_rows', None)
+    pd.set_option('display.max_columns', None)
+    pd.set_option('display.width', 2000)
+    pd.set_option('display.max_colwidth', None)
     print(df)
