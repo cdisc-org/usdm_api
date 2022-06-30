@@ -117,13 +117,13 @@ def objective_data(description, level, endpoints):
 def population_data(description):
   return { "population_desc": description }
 
-def estimand_data(measure, population):
-  return { "summary_measure": measure, "population": population }
+def estimand_data(measure, population, treatment, variable, events):
+  return { "summary_measure": measure, "population": population, "treatment": treatment, "variableOfInterest": variable, "intercurrentEvents": events }
 
-def intercurrent_event_data(name, description, coding):
-  return { "intercurrent_name": name, 
-           "intercurrent_desc": description,
-           "coding": coding
+def intercurrent_event_data(name, description, strategy):
+  return { "intercurrentEventName": name, 
+           "intercurrentEventDesc": description,
+           "intercurrentEventStrategy": strategy
   }
 
 def study_identifier_data(identifier, organisation):
@@ -140,6 +140,16 @@ def organization_data(identifier_scheme, org_identifier, org_name, organisation_
     "organisationType": organisation_type
   }
 
+def analysis_population_data(description):
+  return {
+    "populationDesc": description
+  }
+
+def study_design_population_data(description):
+  return {
+    "populationDesc": description
+  }
+  
 def study_arm_data(name, description, arm_type, origin_description, origin_type):
   return {
     "studyArmName": name,
@@ -196,7 +206,7 @@ def study_data(title, version, type, phase, identifiers, protocol_versions, desi
     "studyDesigns": designs
   }
 
-def study_design_data(intent, type, model, cells, indications, objectives, populations, interventions, workflows):
+def study_design_data(intent, type, model, cells, indications, objectives, populations, interventions, workflows, estimands):
   return {
     "trialIntentTypes": intent,
     "trialType": type,
@@ -206,7 +216,8 @@ def study_design_data(intent, type, model, cells, indications, objectives, popul
     "studyObjectives": objectives,
     "studyPopulations": populations,
     "studyInvestigationalInterventions": interventions,
-    "studyWorkflows": workflows
+    "studyWorkflows": workflows,
+    "studyEstimands": estimands
   }
 
 def study_protocol_version_data(brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):

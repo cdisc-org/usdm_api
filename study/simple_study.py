@@ -24,16 +24,6 @@ class SimpleStudy():
 
     population_1 = population_data("Population 1")
 
-    estimand_1 = estimand_data("Measure 1", population_1)
-
-    i_event_1 = intercurrent_event_data(
-      "Intercurrent Event 1", 
-      "An Event", 
-      [ 
-        code_data("C9822x", "http://www.cdisc.org", "1", "IE1"), 
-        code_data("C9822y", "http://www.cdisc.org", "1", "IE2")
-      ]
-    )
     endpoint_1 = endpoint_data(
       "Endpoint 1", 
       "level description",
@@ -97,8 +87,8 @@ class SimpleStudy():
     design_2_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='PARALLEL')
 
-    design_1 = study_design_data([intent], design_1_type, int_model, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [])
-    design_2 = study_design_data([intent], design_2_type, int_model, study_cells, [indication_1, indication_2], [objective_1], [population_1], [ii_1], [])
+    design_1 = study_design_data([intent], design_1_type, int_model, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [], [])
+    design_2 = study_design_data([intent], design_2_type, int_model, study_cells, [indication_1, indication_2], [objective_1], [population_1], [ii_1], [], [])
     designs = [design_1, design_2]
     final = code_data("C1113x", "http://www.cdisc.org", "1", "FINAL")
     protocol_version_1 = study_protocol_version_data("Short", "Very Official", "Public Voice", "Incomprehensible", "1", None, "2022-01-01", final)

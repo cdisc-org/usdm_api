@@ -4,9 +4,10 @@ from .code import Code
 from .study_cell import StudyCell
 from .indication import Indication
 from .investigational_intervention import InvestigationalIntervention
-from .population import Population
+from .analysis_population import Population
 from .objective import Objective
 from .workflow import Workflow
+from .estimand import Estimand
 from uuid import UUID
 import pandas as pd
 
@@ -21,6 +22,7 @@ class StudyDesign(ApiBaseModel):
   studyPopulations: Union[List[Population], List[UUID], None] = []
   studyObjectives: Union[List[Objective], List[UUID], None] = []
   studyWorkflows: Union[List[Workflow], List[UUID], None] = []
+  studyEstimands: Union[List[Estimand], List[UUID], None] = []
 
   @classmethod
   def search(cls, store, uuid):

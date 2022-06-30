@@ -9,7 +9,8 @@ from .investigational_intervention import *
 from .objective import *
 from .organisation import *
 from .point_in_time import *
-from .population import *
+from .analysis_population import *
+from .study_design_population import *
 from .procedure import *
 from .transition_rule import *
 from .study_arm import *

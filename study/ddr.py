@@ -201,20 +201,7 @@ class DDR():
     ii = [ii_1, ii_2, ii_3]
 
     # Populations
-    population_1 = population_data("biliary tract cancer patients who have failed to 1st-line chemotherapy")
-
-    # Estimands
-    estimand_1 = estimand_data("Measure 1", population_1)
-
-    # Intercurrent Events
-    #i_event_1 = intercurrent_event_data(
-    #  "Intercurrent Event 1", 
-    #  "An Event", 
-    #  [ 
-    #    code_data("C9822x", "http://www.cdisc.org", "1", "IE1"), 
-    #    code_data("C9822y", "http://www.cdisc.org", "1", "IE2")
-    #  ]
-    #)
+    population_1 = study_design_population_data("biliary tract cancer patients who have failed to 1st-line chemotherapy")
 
     # Endpoints
     endpoint_1 = endpoint_data(
@@ -311,6 +298,18 @@ class DDR():
     indication_2 = study_indication_data("Influenza", [code_1, code_2, code_3])
     indications = [indication_1, indication_2]
 
+    # Intercurrent Events
+    i_event_1 = intercurrent_event_data(
+     "Intercurrent Event 1", 
+     "An Intercuurent Event that could happen in a study", 
+     "A very bold strategy"
+    )
+
+    # Estimands
+    population_2 = analysis_population_data("The analysis population")
+    estimand_1 = estimand_data("Measure 1", population_2, indication_1, endpoint_1, [i_event_1])
+    estimands = [estimand_1]
+
     # Study Arms
     origin_type = code_data("C6574y", "http://www.cdisc.org", "1", "SUBJECT DATA")
     treatment = code_for('StudyArm', 'studyArmType', submission_value='Treatment Arm')
@@ -354,7 +353,7 @@ class DDR():
     design_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='PARALLEL')
 
-    design_1 = study_design_data([intent], design_type, int_model, study_cells, indications, objectives, [population_1], ii, [])
+    design_1 = study_design_data([intent], design_type, int_model, study_cells, indications, objectives, [population_1], ii, [], estimands)
     designs = [design_1]
 
     # Protocol versions    

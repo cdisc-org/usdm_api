@@ -1,9 +1,10 @@
 from typing import List, Union
 from .api_base_model import ApiBaseModel
 from .code import Code
+from uuid import UUID
 
 class IntercurrentEvent(ApiBaseModel):
-  uuid: Union[str, None] = None
-  intercurrent_name: str
-  intercurrent_desc: str
-  coding: Union[Code, str, None]
+  uuid: Union[UUID, None] = None
+  intercurrentEventName: str
+  intercurrentEventDesc: str
+  intercurrentEventStrategy: str
