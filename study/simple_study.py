@@ -11,8 +11,18 @@ class SimpleStudy():
     encounter_type = code_data("C7652x", "http://www.cdisc.org", "1", "SITE VISIT")
     env_setting = code_for('Encounter', 'encounterEnvironmentalSetting', c_code='C51282')    
     env_contact_mode = code_for('Encounter', 'encounterContactMode', c_code='C175574')    
-    encounter_1 = encounter_data("Encounter 1", "desc", 1, encounter_type, env_setting, env_contact_mode, [activity_1])
-    encounter_2 = encounter_data("Encounter 2", "desc", 2, encounter_type, env_setting, env_contact_mode, [activity_2])
+    encounter_1 = encounter_data("Encounter 1", "desc", 1, encounter_type, env_setting, env_contact_mode)
+    encounter_2 = encounter_data("Encounter 2", "desc", 2, encounter_type, env_setting, env_contact_mode)
+
+    wfi_links = [
+      [encounter_1, activity_1],
+      [encounter_2, activity_2]
+    ]
+    wfis = []
+    for item in wfi_links:
+      wfis.append(workflow_item_data("", item[0], item[1]))
+    workflow = workflow_data("Schedule of Activities", wfis)
+    double_link(wfis, 'previousWorkflowItemId', 'nextWorkflowItemId')  
 
     ii_1 = investigational_intervention_data(
       "Intervention 1", 
@@ -22,7 +32,7 @@ class SimpleStudy():
       ]
     )
 
-    population_1 = population_data("Population 1")
+    population_1 = study_design_population_data("Population 1")
 
     endpoint_1 = endpoint_data(
       "Endpoint 1", 
@@ -63,16 +73,19 @@ class SimpleStudy():
     run_in = code_for('StudyEpoch', 'studyEpochType', submission_value='RUN-IN') 
     treatment = code_for('StudyEpoch', 'studyEpochType', submission_value='TREATMENT')
     follow_up = code_for('StudyEpoch', 'studyEpochType', submission_value='FOLLOW-UP')
-    study_epoch_1 = study_epoch_data("Run In", "The run in", 1, run_in)
-    study_epoch_2 = study_epoch_data("Treatment", "The drug!", 2, treatment)
-    study_epoch_3 = study_epoch_data("Follow Up", "Go away", 3, follow_up)
+    study_epoch_1 = study_epoch_data("Run In", "The run in", run_in, [encounter_1, encounter_2])
+    study_epoch_2 = study_epoch_data("Treatment", "The drug!", treatment, [])
+    study_epoch_3 = study_epoch_data("Follow Up", "Go away", follow_up, [])
+    epochs = [study_epoch_1, study_epoch_2, study_epoch_3]
+    double_link(epochs, 'previousEpochId', 'nextEpochId')
+    print(epochs)
 
     start_rule = transition_rule_data("Start Rule")
     end_rule = transition_rule_data("End Rule")
-    study_element_1 = study_element_data("Element 1", "First element", [encounter_1, encounter_2], [], start_rule, end_rule)
-    study_element_2 = study_element_data("Element 2", "Second element", [], [])
-    study_element_3 = study_element_data("Element 3", "Third element", [], [])
-    study_element_4 = study_element_data("Element 4", "Fourth element", [], [])
+    study_element_1 = study_element_data("Element 1", "First element", start_rule, end_rule)
+    study_element_2 = study_element_data("Element 2", "Second element")
+    study_element_3 = study_element_data("Element 3", "Third element")
+    study_element_4 = study_element_data("Element 4", "Fourth element")
 
     study_cells = []
     study_cells.append(study_cell_data(study_arm_1, study_epoch_1, [study_element_1]))
@@ -87,7 +100,7 @@ class SimpleStudy():
     design_2_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='PARALLEL')
 
-    design_1 = study_design_data([intent], design_1_type, int_model, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [], [])
+    design_1 = study_design_data([intent], design_1_type, int_model, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [workflow], [])
     design_2 = study_design_data([intent], design_2_type, int_model, study_cells, [indication_1, indication_2], [objective_1], [population_1], [ii_1], [], [])
     designs = [design_1, design_2]
     final = code_data("C1113x", "http://www.cdisc.org", "1", "FINAL")

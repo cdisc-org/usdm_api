@@ -19,8 +19,7 @@ if __name__ == "__main__":
   service = Service(sys.argv)
   for study in studies:
     data = study.json()
-    print(data)
-    #uuid = service.post("study_definitions", data)
+    uuid = service.post("study_definitions", data)
   # for item in items:
   #  uuids = service.get("%s/list" % (item))
   #  service.get(item, uuids[0])

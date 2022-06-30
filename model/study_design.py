@@ -4,7 +4,7 @@ from .code import Code
 from .study_cell import StudyCell
 from .indication import Indication
 from .investigational_intervention import InvestigationalIntervention
-from .analysis_population import Population
+from .study_design_population import StudyDesignPopulation
 from .objective import Objective
 from .workflow import Workflow
 from .estimand import Estimand
@@ -19,7 +19,7 @@ class StudyDesign(ApiBaseModel):
   studyCells: Union[List[StudyCell], List[UUID], None] = []
   studyIndications: Union[List[Indication], List[UUID], None] = []
   studyInvestigationalInterventions: Union[List[InvestigationalIntervention], List[UUID], None] = []
-  studyPopulations: Union[List[Population], List[UUID], None] = []
+  studyPopulations: Union[List[StudyDesignPopulation], List[UUID], None] = []
   studyObjectives: Union[List[Objective], List[UUID], None] = []
   studyWorkflows: Union[List[Workflow], List[UUID], None] = []
   studyEstimands: Union[List[Estimand], List[UUID], None] = []

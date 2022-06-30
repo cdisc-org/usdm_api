@@ -10,7 +10,5 @@ class StudyElement(ApiBaseModel):
   uuid: Union[UUID, None] = None
   studyElementName: str
   studyElementDesc: str
-  encounters: Union[List[Encounter], List[UUID], None] = []
-  activities: Union[List[Activity], List[UUID], None] = []
   transitionStartRule: Union[TransitionRule, UUID, None] = None
   transitionEndRule: Union[TransitionRule, UUID, None] = None

@@ -12,4 +12,4 @@ class Estimand(ApiBaseModel):
   analysisPopulation: Union[AnalysisPopulation, UUID]
   treatment: Union[InvestigationalIntervention, UUID]
   variableOfInterest: Union[Endpoint, UUID]
-  intercurrentEvents: Union[IntercurrentEvent, UUID]
+  intercurrentEvents: Union[List[IntercurrentEvent], List[UUID]]

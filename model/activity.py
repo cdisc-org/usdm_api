@@ -9,6 +9,7 @@ class Activity(ApiBaseModel):
   uuid: Union[UUID, None] = None
   activityName: str
   activityDesc: str
-  sequenceInStudyDesign: int
+  previousActivityId: Union[UUID, None] = None
+  nextActivityId: Union[UUID, None] = None
   definedProcedures: Union[List[Procedure], List[UUID]] = []
   studyDataCollection: Union[List[StudyData], List[UUID]] = []

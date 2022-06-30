@@ -1,4 +1,5 @@
 import yaml
+from uuid import uuid4
 
 def soa(df):
   encounters = []
@@ -16,6 +17,19 @@ def soa(df):
       if row[column].upper() == "X":
         workflow_item_data("WFI %s,%s)", None, None, encounters[column], activities[row])
 
+def double_link(items, prev, next):
+  for item in items:
+    item['uuid'] = str(uuid4())
+  for idx, item in enumerate(items):
+    if idx == 0:
+      item[prev] = None
+    else:
+      item[prev] = items[idx-1]['uuid']
+    if idx == len(items)-1:  
+      item[next] = None
+    else:
+      item[next] = items[idx+1]['uuid']
+    
 def code_data(code, system, version, decode):
   return {
     "code": code,
@@ -56,7 +70,8 @@ def activity_data(name, description, sequence, procedures, study_data):
   return {
     "activityName": name,
     "activityDesc": description,
-    "sequenceInStudyDesign": sequence,
+    "previousActivityId": None,
+    "nextActivityId": None,
     "definedProcedures": procedures,
     "studyDataCollection": study_data
   }
@@ -74,15 +89,15 @@ def study_data_data(name, description, link):
     "crfLink": link
   }
 
-def encounter_data(name, description, sequence, encounter_type, env_setting, contact_mode, activities=[], start_rule=None, end_rule=None):
+def encounter_data(name, description, sequence, encounter_type, env_setting, contact_mode, start_rule=None, end_rule=None):
   return {
     "encounterName": name,
     "encounterDesc": description,
-    "sequenceInStudyDesign": sequence,
+    "previousEncounterId": None,
+    "nextEncounterId": None,
     "encounterType": encounter_type,
     "encounterEnvironmentalSetting": env_setting,
     "encounterContactMode": contact_mode,
-    "activities": activities,
     "transitionStartRule": start_rule,
     "transitionEndRule": end_rule
   }
@@ -114,11 +129,8 @@ def objective_data(description, level, endpoints):
     "objectiveEndpoints": endpoints
   }
 
-def population_data(description):
-  return { "population_desc": description }
-
 def estimand_data(measure, population, treatment, variable, events):
-  return { "summary_measure": measure, "population": population, "treatment": treatment, "variableOfInterest": variable, "intercurrentEvents": events }
+  return { "summaryMeasure": measure, "analysisPopulation": population, "treatment": treatment, "variableOfInterest": variable, "intercurrentEvents": events }
 
 def intercurrent_event_data(name, description, strategy):
   return { "intercurrentEventName": name, 
@@ -159,12 +171,14 @@ def study_arm_data(name, description, arm_type, origin_description, origin_type)
     "studyArmDataOriginType": origin_type,
   }
 
-def study_epoch_data(name, description, sequence, epoch_type):
+def study_epoch_data(name, description, epoch_type, encounters):
   return {
     "studyEpochName": name,
     "studyEpochDesc": description,
+    "previousEpochId": None,
+    "nextEpochId": None,
     "studyEpochType": epoch_type,
-    "sequenceInStudyDesign": sequence,
+    "encounters": encounters
   }
 
 def study_cell_data(arm, epoch, elements):
@@ -174,12 +188,10 @@ def study_cell_data(arm, epoch, elements):
     "studyElements": elements
   }
 
-def study_element_data(name, description, encounters=[], activities=[], start=None, end=None):
+def study_element_data(name, description, start=None, end=None):
   return {
     "studyElementName": name,
     "studyElementDesc": description,
-    "encounters": encounters,
-    "activities": activities,
     "transitionStartRule": start,
     "transitionEndRule": end
   }
@@ -230,6 +242,19 @@ def study_protocol_version_data(brief_title, official_title, public_title, scien
     "protocolAmendment": amendment,
     "protocolEffectiveDate": effective_date,
     "protocolStatus": status
+  }
+
+def workflow_item_data(description, encounter, activity):
+  return {
+    'workflowItemDesc': description,
+    'workflowItemEncounter': encounter,
+    'workflowItemActivity': activity,
+  }
+
+def workflow_data(description, items):
+  return {
+    'workflowDesc': description,
+    'workflowItems': items
   }
 
 # Internal methods

@@ -98,7 +98,12 @@ class DDR():
     activity_17 = activity_data("VS3", "Vital signs", 17, [], [study_data_16, study_data_17])
     activity_18 = activity_data("AE", "adverse events", 18, [], [])
     activity_19 = activity_data("CM", "Concomitant medications", 19, [], [])
-
+    activities = [
+      activity_1, activity_2, activity_3, activity_4, activity_5, activity_6, activity_7, activity_8, activity_9, activity_10, 
+      activity_11, activity_12, activity_13, activity_14, activity_15, activity_16, activity_17, activity_18, activity_19 
+    ]
+    double_link(activities, 'previousActivityId', 'nextActivityId')
+    
     # Visits
     planned_visit = code_data("C7652x", "http://www.cdisc.org", "1", "PLANNED VISIT")
     virtual_visit = code_data("C7653x", "http://www.cdisc.org", "1", "VIRTUAL VISIT")
@@ -107,93 +112,90 @@ class DDR():
     in_person_mode = code_for('Encounter', 'encounterContactMode', c_code='C175574')    
     remote_audio_mode = code_for('Encounter', 'encounterContactMode', c_code='C171525')    
 
-    encounter_1_activities = [
-      activity_1, 
-      activity_2, 
-      activity_3, 
-      activity_4, 
-      activity_5, 
-      activity_6, 
-      activity_7, 
-      activity_8, 
-      activity_9, 
-      activity_10,
-      activity_11,
-      activity_12,
-      activity_13,
-      activity_16,
-      activity_17
+    encounter_1 = encounter_data("SCREENING VISIT", "", 1, planned_visit, clinic_setting, in_person_mode)
+    encounter_2 = encounter_data("RUN-IN VISIT 1", "", 2, planned_visit, hospital_setting, in_person_mode, rule_09, rule_21)
+    encounter_3 = encounter_data("RUN-IN VISIT 2", "", 3, planned_visit, hospital_setting, in_person_mode, rule_10, rule_22)
+    encounter_4 = encounter_data("RUN-IN VISIT 3", "", 4, planned_visit, hospital_setting, in_person_mode, rule_11, rule_23)
+    encounter_5 = encounter_data("CYCLE 1, TREATMENT DAY 1", "", 5, planned_visit, hospital_setting, in_person_mode, rule_12, rule_24)
+    encounter_6 = encounter_data("CYCLE 1, TREATMENT DAY 3", "", 6, planned_visit, hospital_setting, in_person_mode, rule_13, rule_25)
+    encounter_7 = encounter_data("CYCLE 1, TREATMENT DAY 5", "", 7, planned_visit, hospital_setting, in_person_mode, rule_14, rule_26)
+    encounter_8 = encounter_data("CYCLE 2, TREATMENT DAY 1", "", 8, planned_visit, clinic_setting, in_person_mode, rule_15, rule_27)
+    encounter_9 = encounter_data("CYCLE 2, TREATMENT DAY 3", "", 9, planned_visit, hospital_setting, in_person_mode, rule_16, rule_28)
+    encounter_10 = encounter_data("CYCLE X, TREATMENT DAY 1", "", 10, planned_visit, hospital_setting, in_person_mode, rule_17, rule_29)
+    encounter_11 = encounter_data("CYCLE X, TREATMENT DAY 4", "", 11, planned_visit, hospital_setting, in_person_mode, rule_18, rule_30)
+    encounter_12 = encounter_data("FU 1", "", 12, planned_visit, clinic_setting, in_person_mode, rule_19, rule_31)
+    encounter_13 = encounter_data("FU 2", "", 13, virtual_visit, clinic_setting, remote_audio_mode, rule_20, rule_32)
+    encounters = [
+      encounter_1, encounter_2, encounter_3, encounter_4, encounter_5, encounter_6, encounter_7, encounter_8, encounter_9, encounter_10, 
+      encounter_11, encounter_12, encounter_13
     ]
-    encounter_2_activities = [
-      activity_8, 
-      activity_11,
-      activity_15,
-      activity_17
-    ]
-    encounter_3_activities = [
-      activity_6, 
-      activity_8, 
-      activity_11,
-      activity_17
-    ]
-    encounter_4_activities = [
-      activity_8, 
-      activity_9,
-      activity_10,
-      activity_11,
-      activity_12,
-      activity_13,
-      activity_17
-    ]
-    encounter_5_activities = [
-      activity_11,
-      activity_14,
-      activity_15,
-      activity_16,
-      activity_17
-    ]
-    encounter_8_activities = [
-      activity_11,
-      activity_14,
-      activity_15,
-      activity_16,
-      activity_17
-    ]
-    encounter_6_7_9_11_activities = [
-      activity_17
-    ]
-    encounter_10_activities = [
-      activity_11,
-      activity_14,
-      activity_15,
-      activity_17
-    ]
-    encounter_12_activities = [
-      activity_6,
-      activity_8,
-      activity_9,
-      activity_10,
-      activity_11,
-      activity_12,
-      activity_16,
-      activity_17
-    ]	
-    encounter_13_activities = [activity_17]
+    double_link(encounters, 'previousEncounterId', 'nextEncounterId')
 
-    encounter_1 = encounter_data("SCREENING VISIT", "", 1, planned_visit, clinic_setting, in_person_mode, encounter_1_activities)
-    encounter_2 = encounter_data("RUN-IN VISIT 1", "", 2, planned_visit, hospital_setting, in_person_mode, encounter_2_activities, rule_09, rule_21)
-    encounter_3 = encounter_data("RUN-IN VISIT 2", "", 3, planned_visit, hospital_setting, in_person_mode, encounter_3_activities, rule_10, rule_22)
-    encounter_4 = encounter_data("RUN-IN VISIT 3", "", 4, planned_visit, hospital_setting, in_person_mode, encounter_4_activities, rule_11, rule_23)
-    encounter_5 = encounter_data("CYCLE 1, TREATMENT DAY 1", "", 5, planned_visit, hospital_setting, in_person_mode, encounter_5_activities, rule_12, rule_24)
-    encounter_6 = encounter_data("CYCLE 1, TREATMENT DAY 3", "", 6, planned_visit, hospital_setting, in_person_mode, encounter_6_7_9_11_activities, rule_13, rule_25)
-    encounter_7 = encounter_data("CYCLE 1, TREATMENT DAY 5", "", 7, planned_visit, hospital_setting, in_person_mode, encounter_6_7_9_11_activities, rule_14, rule_26)
-    encounter_8 = encounter_data("CYCLE 2, TREATMENT DAY 1", "", 8, planned_visit, clinic_setting, in_person_mode, encounter_8_activities, rule_15, rule_27)
-    encounter_9 = encounter_data("CYCLE 2, TREATMENT DAY 3", "", 9, planned_visit, hospital_setting, in_person_mode, encounter_6_7_9_11_activities, rule_16, rule_28)
-    encounter_10 = encounter_data("CYCLE X, TREATMENT DAY 1", "", 10, planned_visit, hospital_setting, in_person_mode, encounter_10_activities, rule_17, rule_29)
-    encounter_11 = encounter_data("CYCLE X, TREATMENT DAY 4", "", 11, planned_visit, hospital_setting, in_person_mode, encounter_6_7_9_11_activities, rule_18, rule_30)
-    encounter_12 = encounter_data("FU 1", "", 12, planned_visit, clinic_setting, in_person_mode, encounter_12_activities, rule_19, rule_31)
-    encounter_13 = encounter_data("FU 2", "", 13, virtual_visit, clinic_setting, remote_audio_mode, encounter_13_activities, rule_20, rule_32)
-	
+    wfi_links = [
+      [ encounter_1, activity_1 ], 
+      [ encounter_1, activity_2 ], 
+      [ encounter_1, activity_3 ], 
+      [ encounter_1, activity_4 ], 
+      [ encounter_1, activity_5 ], 
+      [ encounter_1, activity_6 ], 
+      [ encounter_1, activity_7 ], 
+      [ encounter_1, activity_8 ], 
+      [ encounter_1, activity_9 ], 
+      [ encounter_1, activity_10 ],
+      [ encounter_1, activity_11 ],
+      [ encounter_1, activity_12 ],
+      [ encounter_1, activity_13 ],
+      [ encounter_1, activity_16 ],
+      [ encounter_1, activity_17 ],
+      [ encounter_2, activity_8 ], 
+      [ encounter_2, activity_11 ],
+      [ encounter_2, activity_15 ],
+      [ encounter_2, activity_17 ],
+      [ encounter_3, activity_6 ], 
+      [ encounter_3, activity_8 ], 
+      [ encounter_3, activity_11 ],
+      [ encounter_3, activity_17 ],
+      [ encounter_4, activity_8 ], 
+      [ encounter_4, activity_9 ],
+      [ encounter_4, activity_10 ],
+      [ encounter_4, activity_11 ],
+      [ encounter_4, activity_12 ],
+      [ encounter_4, activity_13 ],
+      [ encounter_4, activity_17 ],
+      [ encounter_5, activity_11 ],
+      [ encounter_5, activity_14 ],
+      [ encounter_5, activity_15 ],
+      [ encounter_5, activity_16 ],
+      [ encounter_5, activity_17 ],
+      [ encounter_6, activity_17 ],
+      [ encounter_7, activity_17 ],
+      [ encounter_8, activity_11 ],
+      [ encounter_8, activity_14 ],
+      [ encounter_8, activity_15 ],
+      [ encounter_8, activity_16 ],
+      [ encounter_8, activity_17 ],
+      [ encounter_9, activity_17 ],
+      [ encounter_10, activity_11 ],
+      [ encounter_10, activity_14 ],
+      [ encounter_10, activity_15 ],
+      [ encounter_10, activity_17 ],
+      [ encounter_11, activity_17 ],
+      [ encounter_12, activity_6 ],
+      [ encounter_12, activity_8 ],
+      [ encounter_12, activity_9 ],
+      [ encounter_12, activity_10 ],
+      [ encounter_12, activity_11 ],
+      [ encounter_12, activity_12 ],
+      [ encounter_12, activity_16 ],
+      [ encounter_12, activity_17 ],
+      [ encounter_13, activity_17 ]
+    ]
+    wfis = []
+    for item in wfi_links:
+      wfis.append(workflow_item_data("", item[0], item[1]))
+    workflow = workflow_data("Schedule of Activities", wfis)
+    double_link(wfis, 'previousWorkflowItemId', 'nextWorkflowItemId')  
+
     # Investigational Interventions
     ii_1 = investigational_intervention_data("Olaparibstring", [code_9])
     ii_2 = investigational_intervention_data("Durvalumab", [code_8, code_10])
@@ -307,7 +309,7 @@ class DDR():
 
     # Estimands
     population_2 = analysis_population_data("The analysis population")
-    estimand_1 = estimand_data("Measure 1", population_2, indication_1, endpoint_1, [i_event_1])
+    estimand_1 = estimand_data("Measure 1", population_2, ii_1, endpoint_1, [i_event_1])
     estimands = [estimand_1]
 
     # Study Arms
@@ -321,19 +323,22 @@ class DDR():
     screening = code_for('StudyEpoch', 'studyEpochType', submission_value='SCREENING') 
     treatment = code_for('StudyEpoch', 'studyEpochType', submission_value='TREATMENT')
     follow_up = code_for('StudyEpoch', 'studyEpochType', submission_value='FOLLOW-UP')
-    study_epoch_1 = study_epoch_data("SCREEN", 	"Screening", 1, screening)
-    study_epoch_2 = study_epoch_data("RUN-IN", "Run-In", 2, run_in)
-    study_epoch_3 = study_epoch_data("TREATMENT 1", "Treatment Cycle 1", 3, treatment)
-    study_epoch_4 = study_epoch_data("TREATMENT 2", "Treatment Cycle 2", 4, treatment)
-    study_epoch_5 = study_epoch_data("TREATMENT X", "Treatment Cycle X", 5, treatment)
-    study_epoch_6 = study_epoch_data("FOLLOW-UP", "Follow-up", 6, follow_up)
+    study_epoch_1 = study_epoch_data("SCREEN", 	"Screening",screening, [encounter_1])
+    study_epoch_2 = study_epoch_data("RUN-IN", "Run-In", run_in, [encounter_2, encounter_3, encounter_4])
+    study_epoch_3 = study_epoch_data("TREATMENT 1", "Treatment Cycle 1", treatment, [encounter_5, encounter_6, encounter_7])
+    study_epoch_4 = study_epoch_data("TREATMENT 2", "Treatment Cycle 2", treatment, [encounter_8, encounter_9])
+    study_epoch_5 = study_epoch_data("TREATMENT X", "Treatment Cycle X", treatment, [encounter_10, encounter_11])
+    study_epoch_6 = study_epoch_data("FOLLOW-UP", "Follow-up", follow_up, [encounter_12, encounter_13])
+    epochs = [study_epoch_1, study_epoch_2, study_epoch_3, study_epoch_4, study_epoch_5, study_epoch_6]
+    double_link(epochs, 'previousEpochId', 'nextEpochId')
+    print(epochs)
 
-    study_element_1 = study_element_data("SCREENING", "Screening", [encounter_1], [], rule_01, rule_05)
-    study_element_2 = study_element_data("AZD_DRUV", "AZD6738 + Durvalumab", [encounter_2, encounter_3, encounter_4], [], rule_02, rule_06)
-    study_element_3 = study_element_data("AZD_OLA", "AZD6738 + Olaparib", [encounter_5, encounter_6, encounter_7], [], rule_03, rule_07)
-    study_element_4 = study_element_data("FOLLOW-UP", "Follow-up", [encounter_8, encounter_9], [], rule_04, rule_08)
-    study_element_5 = study_element_data("FOLLOW-UP", "Follow-up", [encounter_10, encounter_11], [], rule_04, rule_08)
-    study_element_6 = study_element_data("FOLLOW-UP", "Follow-up", [encounter_12, encounter_13], [], rule_04, rule_08)
+    study_element_1 = study_element_data("SCREENING", "Screening", rule_01, rule_05)
+    study_element_2 = study_element_data("AZD_DRUV", "AZD6738 + Durvalumab", rule_02, rule_06)
+    study_element_3 = study_element_data("AZD_OLA", "AZD6738 + Olaparib", rule_03, rule_07)
+    study_element_4 = study_element_data("FOLLOW-UP", "Follow-up", rule_04, rule_08)
+    study_element_5 = study_element_data("FOLLOW-UP", "Follow-up", rule_04, rule_08)
+    study_element_6 = study_element_data("FOLLOW-UP", "Follow-up", rule_04, rule_08)
 
     study_cells = []
     study_cells.append(study_cell_data(study_arm_1, study_epoch_1, [study_element_1]))
@@ -353,7 +358,7 @@ class DDR():
     design_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='PARALLEL')
 
-    design_1 = study_design_data([intent], design_type, int_model, study_cells, indications, objectives, [population_1], ii, [], estimands)
+    design_1 = study_design_data([intent], design_type, int_model, study_cells, indications, objectives, [population_1], ii, [workflow], estimands)
     designs = [design_1]
 
     # Protocol versions    

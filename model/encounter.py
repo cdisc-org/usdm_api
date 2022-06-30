@@ -9,10 +9,10 @@ class Encounter(ApiBaseModel):
   uuid: Union[UUID, None] = None
   encounterName: str
   encounterDesc: str
-  sequenceInStudyDesign: int
-  encounterType: Union[Code, UUID, None]
-  encounterEnvironmentalSetting: Union[Code, UUID, None]
-  encounterContactMode: Union[Code, UUID, None]
-  activities: Union[List[Activity], List[UUID], None] = None
+  previousEncounterId: Union[UUID, None] = None
+  nextEncounterId: Union[UUID, None] = None
+  encounterType: Union[Code, UUID, None] = None
+  encounterEnvironmentalSetting: Union[Code, UUID, None] = None
+  encounterContactMode: Union[Code, UUID, None] = None
   transitionStartRule: Union[TransitionRule, UUID, None] = None
   transitionEndRule: Union[TransitionRule, UUID, None] = None

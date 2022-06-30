@@ -1,16 +1,13 @@
-from datetime import date
-from typing import List, Union
+from typing import Union
 from .api_base_model import ApiBaseModel
-from .code import Code
-from .point_in_time import PointInTime
 from .activity import Activity
 from .encounter import Encounter
+from uuid import UUID
 
 class WorkflowItem(ApiBaseModel):
-  uuid: Union[str, None] = None
-  description: str
-  from_point_in_time: Union[PointInTime, str, None] = None
-  to_point_in_time: Union[PointInTime, str, None] = None
-  previous_workflow_item: Union[str, None] = None
-  encounter: Union[Encounter, str, None] = None
-  activity: Union[Activity, str, None] = None
+  uuid: Union[UUID, None] = None
+  workflowItemDesc: str
+  previousWorkflowItemId: Union[UUID, None] = None
+  nextWorkflowItemId: Union[UUID, None] = None
+  workflowItemEncounter: Union[Encounter, UUID, None] = None
+  workflowItemActivity: Union[Activity, UUID, None] = None

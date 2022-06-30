@@ -8,7 +8,6 @@ from .intercurrent_event import *
 from .investigational_intervention import *
 from .objective import *
 from .organisation import *
-from .point_in_time import *
 from .analysis_population import *
 from .study_design_population import *
 from .procedure import *
