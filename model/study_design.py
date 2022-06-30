@@ -27,7 +27,7 @@ class StudyDesign(ApiBaseModel):
   @classmethod
   def search(cls, store, uuid):
     designs = store.get_by_klass_and_scope("StudyDesign", uuid)
-    print("DESIGNS:", designs)
+#    print("DESIGNS:", designs)
     return designs
 
 class SoA():
@@ -48,8 +48,8 @@ class SoA():
     for idx, visit in enumerate(visits):
         visit_index[visit] = idx
 
-    print("SOA [1]:", epochs)
-    print("SOA [2]:", visits)
+#    print("SOA [1]:", epochs)
+#    print("SOA [2]:", visits)
 
     # Visit Rules
     result = self.encounter_rules()

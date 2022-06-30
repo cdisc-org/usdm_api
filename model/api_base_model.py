@@ -6,8 +6,12 @@ import json
 class ApiBaseModel(BaseModel):
 
   def save(self, store, scope, use_scope=False):
+    #print("UUID:", self.uuid)
     if use_scope:
       uuid = scope
+    elif self.uuid != None:
+      uuid = str(self.uuid)
+      self.uuid = None
     else:
       uuid = str(uuid4())
     uuid = store.put(self, self.__class__, uuid, scope)
