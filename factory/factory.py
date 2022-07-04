@@ -1,21 +1,21 @@
 import yaml
 from uuid import uuid4
 
-def soa(df):
-  encounters = []
-  activities = []
-  # data = {'activity_1': ["x", "", "", ""], 'activity_2': ["", '', 'X', '']}
-  # pd.DataFrame.from_dict(data, orient='index', columns=['Visit 1', 'Visit 2', 'Visit 3', 'Visit 4'])
-  columns = df.columns.values.tolist()
-  rows = list(df.index)
-  for column in columns:
-    encounters.append(encounter_data(column, "The %s visit" % (column), None, None, None))
-  for row in rows:
-    activities.append(activity_data(row))
-  for index, row in df.iterrows():
-    for column in df:
-      if row[column].upper() == "X":
-        workflow_item_data("WFI %s,%s)", None, None, encounters[column], activities[row])
+# def soa(df):
+#   encounters = []
+#   activities = []
+#   # data = {'activity_1': ["x", "", "", ""], 'activity_2': ["", '', 'X', '']}
+#   # pd.DataFrame.from_dict(data, orient='index', columns=['Visit 1', 'Visit 2', 'Visit 3', 'Visit 4'])
+#   columns = df.columns.values.tolist()
+#   rows = list(df.index)
+#   for column in columns:
+#     encounters.append(encounter_data(column, "The %s visit" % (column), None, None, None))
+#   for row in rows:
+#     activities.append(activity_data(row))
+#   for index, row in df.iterrows():
+#     for column in df:
+#       if row[column].upper() == "X":
+#         workflow_item_data("WFI %s,%s)", None, None, encounters[column], activities[row])
 
 def double_link(items, prev, next):
   for item in items:

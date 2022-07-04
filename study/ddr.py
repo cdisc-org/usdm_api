@@ -100,10 +100,10 @@ class DDR():
     activity_19 = activity_data("CM", "Concomitant medications", 19, [], [])
     activities = [
       activity_1, activity_2, activity_3, activity_4, activity_5, activity_6, activity_7, activity_8, activity_9, activity_10, 
-      activity_11, activity_12, activity_13, activity_14, activity_15, activity_16, activity_17, activity_18, activity_19 
+      activity_11, activity_12, activity_13, activity_14, activity_15, activity_16, activity_17 
     ]
     double_link(activities, 'previousActivityId', 'nextActivityId')
-    
+
     # Visits
     planned_visit = code_data("C7652x", "http://www.cdisc.org", "1", "PLANNED VISIT")
     virtual_visit = code_data("C7653x", "http://www.cdisc.org", "1", "VIRTUAL VISIT")
