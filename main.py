@@ -23,26 +23,26 @@ tags_metadata = [
         "name": "production",
         "description": "Routes that form the production specification."
     },
-    {
-        "name": "proposed",
-        "description": "Routes that are proposed as being included within the production specification."
-    },
+    # {
+    #     "name": "proposed",
+    #     "description": "Routes that are proposed as being included within the production specification."
+    # },
     {
         "name": "soa",
         "description": "Routes related to the SoA for a study design."
     },
-    {
-        "name": "search",
-        "description": "Routes related to search functions."
-    },
-    {
-        "name": "sections",
-        "description": "Routes providing similar functionality to that of 'sections' in the previous draft of the API."
-    },
-    {
-        "name": "potential",
-        "description": "Routes that could potentially be included in the production specification. These tend to be more granular routes, more typical 'resource' driven."
-    },
+    # {
+    #     "name": "search",
+    #     "description": "Routes related to search functions."
+    # },
+    # {
+    #     "name": "sections",
+    #     "description": "Routes providing similar functionality to that of 'sections' in the previous draft of the API."
+    # },
+    # {
+    #     "name": "potential",
+    #     "description": "Routes that could potentially be included in the production specification. These tend to be more granular routes, more typical 'resource' driven."
+    # },
     {
         "name": "simulator",
         "description": "Routes used to support the simulator, not for production."
@@ -102,40 +102,40 @@ def system_and_version():
 
 # Controlled Terminology
 @app.get("/v1/terms/", 
-  tags=["simulator", 'search'],
+  tags=["simulator"],
   summary="Return Controlled Terminology",
   description="Return the specified Controlled Terminology (CT) for the specified class and attribute. This is the CT defined within the model specification")
 async def ct_search(klass: str, attribute: str):
   return CT().search(klass, attribute)
   
 # Study Definition
-@app.get("/v1/study_definitions/list", 
-  tags=["proposed"], 
-  summary=annotations['study_definition']['get']['summary'],
-  description=annotations['study_definition']['get']['description'], 
-  response_model=List[UUID])
-async def list_studies():
-  return Study.list(store)
+# @app.get("/v1/study_definitions/list", 
+#   tags=["proposed"], 
+#   summary=annotations['study_definition']['get']['summary'],
+#   description=annotations['study_definition']['get']['description'], 
+#   response_model=List[UUID])
+# async def list_studies():
+#   return Study.list(store)
 
-@app.get("/v1/study_definitions", 
-  tags=["proposed", 'search'], 
-  summary='Study definition for specified identifier',
-  description='Returns the uuid for the study with the matching identifier.',
-  response_model=UUID)
-async def studies_search(identifier: str=""):
-  result = Study.search(store, identifier)
-  if result == None:
-    raise HTTPException(status_code=404, detail="Item not found")
-  return result
+# @app.get("/v1/study_definitions", 
+#   tags=["proposed", 'search'], 
+#   summary='Study definition for specified identifier',
+#   description='Returns the uuid for the study with the matching identifier.',
+#   response_model=UUID)
+# async def studies_search(identifier: str=""):
+#   result = Study.search(store, identifier)
+#   if result == None:
+#     raise HTTPException(status_code=404, detail="Item not found")
+#   return result
 
-@app.post("/studydefinitionrepository/v1", 
-  tags=["production"], 
-  summary=annotations['study_definition']['post']['summary'],
-  description=annotations['study_definition']['post']['description'], 
-  status_code=status.HTTP_201_CREATED,
-  response_model=UUID)
+# @app.post("/studydefinitionrepository/v1", 
+#   tags=["production"], 
+#   summary=annotations['study_definition']['post']['summary'],
+#   description=annotations['study_definition']['post']['description'], 
+#   status_code=status.HTTP_201_CREATED,
+#   response_model=UUID)
 @app.post("/v1/study_definitions", 
-  tags=["proposed"], 
+  tags=["production"], 
   summary=annotations['study_definition']['post']['summary'],
   description=annotations['study_definition']['post']['description'], 
   status_code=status.HTTP_201_CREATED,
@@ -144,10 +144,11 @@ async def create_study(study: Study):
   study.recursive_save(store)
   return study.uuid
 
-@app.get("/studydefinitionrepository/v1/{study}", tags=["production"], 
-  summary=annotations['study_definition']['get_uuid']['summary'],
-  description=annotations['study_definition']['get_uuid']['description'])
-@app.get("/v1/study_definitions/{uuid}", tags=["proposed"], 
+# @app.get("/studydefinitionrepository/v1/{study}", tags=["production"], 
+#   summary=annotations['study_definition']['get_uuid']['summary'],
+#   description=annotations['study_definition']['get_uuid']['description'])
+@app.get("/v1/study_definitions/{uuid}", 
+  tags=["production"], 
   summary=annotations['study_definition']['get_uuid']['summary'],
   description=annotations['study_definition']['get_uuid']['description'])
 async def read_full_study(uuid: str):
@@ -156,129 +157,129 @@ async def read_full_study(uuid: str):
   return Study.recursive_read(store, uuid)
 
 # Study
-@app.get("/v1/studies/list", 
-  tags=["potential"], 
-  summary=annotations['study']['get']['summary'],
-  description=annotations['study']['get']['description'], 
-  response_model=List[UUID])
-async def list_studies():
-  return Study.list(store)
+# @app.get("/v1/studies/list", 
+#   tags=["potential"], 
+#   summary=annotations['study']['get']['summary'],
+#   description=annotations['study']['get']['description'], 
+#   response_model=List[UUID])
+# async def list_studies():
+#   return Study.list(store)
 
-@app.get("/v1/studies/{uuid}", 
-  tags=["potential"], 
-  summary=annotations['study']['get_uuid']['summary'],
-  description=annotations['study']['get_uuid']['description'])
-async def read_study(uuid: str):
-  if uuid not in Study.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return Study.read(store, uuid)
+# @app.get("/v1/studies/{uuid}", 
+#   tags=["potential"], 
+#   summary=annotations['study']['get_uuid']['summary'],
+#   description=annotations['study']['get_uuid']['description'])
+# async def read_study(uuid: str):
+#   if uuid not in Study.list(store):
+#     raise HTTPException(status_code=404, detail="Item not found")
+#   return Study.read(store, uuid)
 
 # Study Identifiers
-@app.get("/v1/study_identifiers/list", 
-  tags=["potential"],
-  response_model=List[UUID]
-)
-async def list_study_identifiers():
-  return StudyIdentifier.list(store)
+# @app.get("/v1/study_identifiers/list", 
+#   tags=["potential"],
+#   response_model=List[UUID]
+# )
+# async def list_study_identifiers():
+#   return StudyIdentifier.list(store)
 
-@app.get("/v1/study_identifiers", 
-  tags=["potential", 'sections'], 
-  summary='Study identifiers for a study',
-  description='Returns all the identifiers for a specified study.',
-  response_model=List[StudyIdentifier]
-)
-async def study_identifiers_search(study_uuid: UUID):
-  return StudyIdentifier.search(store, str(study_uuid))
+# @app.get("/v1/study_identifiers", 
+#   tags=["potential", 'sections'], 
+#   summary='Study identifiers for a study',
+#   description='Returns all the identifiers for a specified study.',
+#   response_model=List[StudyIdentifier]
+# )
+# async def study_identifiers_search(study_uuid: UUID):
+#   return StudyIdentifier.search(store, str(study_uuid))
 
-@app.post("/v1/study_identifiers", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_study_identifier(identifier: StudyIdentifier):
-  identifier.recursive_save(store, None)
-  return identifier.uuid
+# @app.post("/v1/study_identifiers", 
+#   tags=["potential"], 
+#   status_code=status.HTTP_201_CREATED)
+# async def create_study_identifier(identifier: StudyIdentifier):
+#   identifier.recursive_save(store, None)
+#   return identifier.uuid
 
-@app.get("/v1/study_identifiers/{uuid}", response_model=StudyIdentifier, tags=["potential"])
-async def read_study_identifier(uuid: UUID):
-  if str(uuid) not in StudyIdentifier.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return StudyIdentifier.read(store, str(uuid))
+# @app.get("/v1/study_identifiers/{uuid}", response_model=StudyIdentifier, tags=["potential"])
+# async def read_study_identifier(uuid: UUID):
+#   if str(uuid) not in StudyIdentifier.list(store):
+#     raise HTTPException(status_code=404, detail="Item not found")
+#   return StudyIdentifier.read(store, str(uuid))
 
 # Organisations
-@app.get("/v1/organisations/list", 
-  tags=["potential"], 
-  response_model=List[UUID]
-)
-async def list_organisations():
-  return Organisation.list(store)
+# @app.get("/v1/organisations/list", 
+#   tags=["potential"], 
+#   response_model=List[UUID]
+# )
+# async def list_organisations():
+#   return Organisation.list(store)
 
-@app.post("/v1/organisations", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_organisation(org: Organisation):
-  org.save(store, None)
-  return org.uuid
+# @app.post("/v1/organisations", 
+#   tags=["potential"], 
+#   status_code=status.HTTP_201_CREATED)
+# async def create_organisation(org: Organisation):
+#   org.save(store, None)
+#   return org.uuid
 
-@app.get("/v1/organisations/{uuid}", response_model=Organisation, tags=["potential"])
-async def read_organisation(uuid: UUID):
-  if str(uuid) not in Organisation.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return Organisation.read(store, str(uuid))
+# @app.get("/v1/organisations/{uuid}", response_model=Organisation, tags=["potential"])
+# async def read_organisation(uuid: UUID):
+#   if str(uuid) not in Organisation.list(store):
+#     raise HTTPException(status_code=404, detail="Item not found")
+#   return Organisation.read(store, str(uuid))
 
-@app.get("/v1/organisation_full/{uuid}", tags=["potential"])
-async def read_organisation_full(uuid: UUID):
-  if str(uuid) not in Organisation.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return Organisation.recursive_read(store, str(uuid))
+# @app.get("/v1/organisation_full/{uuid}", tags=["potential"])
+# async def read_organisation_full(uuid: UUID):
+#   if str(uuid) not in Organisation.list(store):
+#     raise HTTPException(status_code=404, detail="Item not found")
+#   return Organisation.recursive_read(store, str(uuid))
 
 # Study Protocol Version
-@app.get("/v1/study_protocol_versions/list", 
-  tags=["potential"], 
-  response_model=List[UUID]
-)
-async def list_study_protocol_versions():
-  return StudyProtocolVersion.list(store)
+# @app.get("/v1/study_protocol_versions/list", 
+#   tags=["potential"], 
+#   response_model=List[UUID]
+# )
+# async def list_study_protocol_versions():
+#   return StudyProtocolVersion.list(store)
 
-@app.post("/v1/study_protocol_versions", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_protocol_version(version: StudyProtocolVersion):
-  version.save(store, None)
-  return version.uuid
+# @app.post("/v1/study_protocol_versions", 
+#   tags=["potential"], 
+#   status_code=status.HTTP_201_CREATED)
+# async def create_protocol_version(version: StudyProtocolVersion):
+#   version.save(store, None)
+#   return version.uuid
 
-@app.get("/v1/study_protocol_versions/{uuid}", response_model=StudyProtocolVersion, tags=["potential"])
-async def read_study_protocol_version(uuid: UUID):
-  if str(uuid) not in StudyProtocolVersion.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return StudyProtocolVersion.read(store, str(uuid))
+# @app.get("/v1/study_protocol_versions/{uuid}", response_model=StudyProtocolVersion, tags=["potential"])
+# async def read_study_protocol_version(uuid: UUID):
+#   if str(uuid) not in StudyProtocolVersion.list(store):
+#     raise HTTPException(status_code=404, detail="Item not found")
+#   return StudyProtocolVersion.read(store, str(uuid))
 
 # Study Design
-@app.get("/v1/study_designs/list", 
-  tags=["potential"], 
-  response_model=List[UUID])
-async def list_study_designs():
-  return StudyDesign.list(store)
+# @app.get("/v1/study_designs/list", 
+#   tags=["potential"], 
+#   response_model=List[UUID])
+# async def list_study_designs():
+#   return StudyDesign.list(store)
 
-@app.post("/v1/study_designs", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_study_design(item: StudyDesign):
-  item.save(store, None)
-  return item.uuid
+# @app.post("/v1/study_designs", 
+#   tags=["potential"], 
+#   status_code=status.HTTP_201_CREATED)
+# async def create_study_design(item: StudyDesign):
+#   item.save(store, None)
+#   return item.uuid
 
-@app.get("/v1/study_designs/{uuid}", response_model=StudyDesign, tags=["potential"])
-async def read_study_design(uuid: UUID):
-  if str(uuid) not in StudyDesign.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return StudyDesign.read(store, str(uuid))
+# @app.get("/v1/study_designs/{uuid}", response_model=StudyDesign, tags=["potential"])
+# async def read_study_design(uuid: UUID):
+#   if str(uuid) not in StudyDesign.list(store):
+#     raise HTTPException(status_code=404, detail="Item not found")
+#   return StudyDesign.read(store, str(uuid))
 
-@app.get("/v1/study_designs", 
-  tags=["soa", 'sections'],
-  summary='Study designs for a study',
-  description='Returns all the study designs for a specified study.',
-  response_model=List[StudyDesign]
-)
-async def search_study_design(study_uuid: UUID):
-  return StudyDesign.search(store, str(study_uuid))
+# @app.get("/v1/study_designs", 
+#   tags=["soa", 'sections'],
+#   summary='Study designs for a study',
+#   description='Returns all the study designs for a specified study.',
+#   response_model=List[StudyDesign]
+# )
+# async def search_study_design(study_uuid: UUID):
+#   return StudyDesign.search(store, str(study_uuid))
 
 @app.get("/v1/study_designs/{uuid}/soa", 
   tags=["soa"],
@@ -291,211 +292,3 @@ async def studies_soa(uuid: UUID):
   study_design = StudyDesign(**StudyDesign.read(store, str(uuid)))
   df = SoA(study_design, store).soa()
   return Response(df.to_json(orient="records"), media_type="application/json")
-
-# Study Arm
-@app.get("/v1/study_arms/list", 
-  tags=["potential"], 
-  response_model=List[UUID])
-async def list_study_arms():
-  return StudyArm.list(store)
-
-@app.post("/v1/study_arms", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_study_arm(item: StudyArm):
-  item.save(store, None)
-  return item.uuid
-
-@app.get("/v1/study_arms/{uuid}", response_model=StudyArm, tags=["potential"])
-async def read_study_arm(uuid: UUID):
-  if str(uuid) not in StudyArm.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return StudyArm.read(store, str(uuid))
-
-# Study Epoch
-@app.get("/v1/study_epochs/list", 
-  tags=["potential"], 
-  response_model=List[UUID])
-async def list_study_epochs():
-  return StudyEpoch.list(store)
-
-@app.post("/v1/study_epochs", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_study_arm(item: StudyEpoch):
-  item.save(store, None)
-  return item.uuid
-
-@app.get("/v1/study_epochs/{uuid}", response_model=StudyEpoch, tags=["potential"])
-async def read_study_arm(uuid: UUID):
-  if str(uuid) not in StudyEpoch.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return StudyEpoch.read(store, str(uuid))
-
-# Study Cell
-@app.get("/v1/study_cells/list", 
-  tags=["potential"], 
-  response_model=List[UUID]
-)
-async def list_study_cells():
-  return StudyCell.list(store)
-
-@app.post("/v1/study_cells", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_study_cell(item: StudyCell):
-  item.save(store, None)
-  return item.uuid
-
-@app.get("/v1/study_cells/{uuid}", response_model=StudyCell, tags=["potential"])
-async def read_study_cell(uuid: UUID):
-  if str(uuid) not in StudyCell.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return StudyCell.read(store, str(uuid))
-
-# Study Element
-@app.get("/v1/study_elements/list", 
-  tags=["potential"], 
-  response_model=List[UUID]
-)
-async def list_study_elements():
-  return StudyElement.list(store)
-
-@app.post("/v1/study_elements", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_study_cell(item: StudyElement):
-  item.save(store, None)
-  return item.uuid
-
-@app.get("/v1/study_elements/{uuid}", response_model=StudyElement, tags=["potential"])
-async def read_study_cell(uuid: UUID):
-  if str(uuid) not in StudyElement.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return StudyElement.read(store, str(uuid))
-
-# Code
-@app.get("/v1/codes/list", 
-  tags=["potential"], 
-  response_model=List[UUID]
-)
-async def list_codes():
-  return Code.list(store)
-
-@app.post("/v1/codes", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_code(item: Code):
-  item.save(store, None)
-  return item.uuid
-
-@app.get("/v1/codes/{uuid}", response_model=Code, tags=["potential"])
-async def read_code(uuid: UUID):
-  if str(uuid) not in Code.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return Code.read(store, str(uuid))
-
-# Study Data
-@app.get("/v1/study_data/list", 
-  tags=["potential"], 
-  response_model=List[UUID]
-)
-async def list_study_data():
-  return StudyData.list(store)
-
-@app.post("/v1/study_data", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_study_data(item: StudyData):
-  item.save(store, None)
-  return item.uuid
-
-@app.get("/v1/study_data/{uuid}", response_model=StudyData, tags=["potential"])
-async def read_study_data(uuid: UUID):
-  if str(uuid) not in StudyData.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return StudyData.read(store, str(uuid))
-
-# Procedures
-@app.get("/v1/procedures/list", 
-  tags=["potential"], 
-  response_model=List[UUID]
-)
-async def list_procedures():
-  return Procedure.list(store)
-
-@app.post("/v1/procedures", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_procedure(item: Procedure):
-  item.save(store, None)
-  return item.uuid
-
-@app.get("/v1/procedures/{uuid}", response_model=Procedure, tags=["potential"])
-async def read_procedure(uuid: UUID):
-  if str(uuid) not in Procedure.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return Procedure.read(store, str(uuid))
-
-# Activities
-@app.get("/v1/activities/list", 
-  tags=["potential"], 
-  response_model=List[UUID]
-)
-async def list_activities():
-  return Activity.list(store)
-
-@app.post("/v1/activities", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_activity(item: Activity):
-  item.save(store, None)
-  return item.uuid
-
-@app.get("/v1/activities/{uuid}", response_model=Activity, tags=["potential"])
-async def read_activity(uuid: UUID):
-  if str(uuid) not in Activity.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return Activity.read(store, str(uuid))
-
-# Transition Rules
-@app.get("/v1/transition_rules/list", 
-  tags=["potential"], 
-  response_model=List[UUID]
-)
-async def list_rules():
-  return TransitionRule.list(store)
-
-@app.post("/v1/transition_rules", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_rule(item: TransitionRule):
-  item.save(store, None)
-  return item.uuid
-
-@app.get("/v1/transition_rules/{uuid}", response_model=TransitionRule, tags=["potential"])
-async def read_rule(uuid: UUID):
-  if str(uuid) not in TransitionRule.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return TransitionRule.read(store, str(uuid))
-
-# Encounters
-@app.get("/v1/encounters/list", 
-  tags=["potential"], 
-  response_model=List[UUID]
-)
-async def list_encounters():
-  return Encounter.list(store)
-
-@app.post("/v1/encounters/", 
-  tags=["potential"], 
-  status_code=status.HTTP_201_CREATED)
-async def create_encounter(item: Encounter):
-  item.save(store, None)
-  return item.uuid
-
-@app.get("/v1/encounters/{uuid}", response_model=Encounter, tags=["potential"])
-async def read_encounter(uuid: UUID):
-  if str(uuid) not in Encounter.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  return Encounter.read(store, str(uuid))
