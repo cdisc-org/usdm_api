@@ -80,6 +80,17 @@ annotations = {
   }
 }
 
+standard_response_fields = {
+  "statusCode": "string",
+  "detail": "string",
+  "message": "string"
+}
+
+standard_responses = {
+  400: standard_response_fields,
+  401: standard_response_fields
+}
+
 app = FastAPI(
   title = SYSTEM_NAME,
   description = "A simple TransCelerate Digital Data Flow (DDF) Study Definitions Repository (SDR) Simulator. Used to define and test the logic of the SDR API.",
@@ -134,12 +145,13 @@ async def ct_search(klass: str, attribute: str):
 #   description=annotations['study_definition']['post']['description'], 
 #   status_code=status.HTTP_201_CREATED,
 #   response_model=UUID)
-@app.post("/v1/study_definitions", 
+@app.post("/v1/studyDefinitions", 
   tags=["production"], 
   summary=annotations['study_definition']['post']['summary'],
   description=annotations['study_definition']['post']['description'], 
   status_code=status.HTTP_201_CREATED,
-  response_model=UUID)
+  response_model=UUID,
+  responses=standard_responses)
 async def create_study(study: Study):
   study.recursive_save(store)
   return study.uuid
@@ -147,14 +159,26 @@ async def create_study(study: Study):
 # @app.get("/studydefinitionrepository/v1/{study}", tags=["production"], 
 #   summary=annotations['study_definition']['get_uuid']['summary'],
 #   description=annotations['study_definition']['get_uuid']['description'])
-@app.get("/v1/study_definitions/{uuid}", 
+@app.get("/v1/studyDefinitions/{uuid}", 
   tags=["production"], 
   summary=annotations['study_definition']['get_uuid']['summary'],
-  description=annotations['study_definition']['get_uuid']['description'])
+  description=annotations['study_definition']['get_uuid']['description'],
+  responses=standard_responses)
 async def read_full_study(uuid: str):
   if uuid not in Study.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
+    raise HTTPException(statusCode=404, detail="Item not found", message= "")
   return Study.recursive_read(store, uuid)
+
+@app.get("/v1/studyDefinitions/{uuid}/history", 
+  tags=["production"], 
+  summary="",
+  description="",
+  response_model=List[Study],
+  responses=standard_responses)
+async def read_study_history(uuid: str):
+  if uuid not in Study.list(store):
+    raise HTTPException(statusCode=404, detail="Item not found", message= "")
+  return []
 
 # Study
 # @app.get("/v1/studies/list", 
@@ -272,23 +296,25 @@ async def read_full_study(uuid: str):
 #     raise HTTPException(status_code=404, detail="Item not found")
 #   return StudyDesign.read(store, str(uuid))
 
-# @app.get("/v1/study_designs", 
-#   tags=["soa", 'sections'],
-#   summary='Study designs for a study',
-#   description='Returns all the study designs for a specified study.',
-#   response_model=List[StudyDesign]
-# )
-# async def search_study_design(study_uuid: UUID):
-#   return StudyDesign.search(store, str(study_uuid))
+@app.get("/v1/study_designs", 
+  tags=['production'],
+  summary='Study designs for a study',
+  description='Returns all the study designs for a specified study.',
+  response_model=List[StudyDesign],
+  responses=standard_responses
+)
+async def search_study_design(study_uuid: UUID):
+  return StudyDesign.search(store, str(study_uuid))
 
-@app.get("/v1/study_designs/{uuid}/soa", 
+@app.get("/v1/studyDesigns/{uuid}/soa", 
   tags=["soa"],
   summary='SoA for the specified study design',
-  description='Returns a SoA for the specified study design. The SoA returned is a JSON structure (pandas dataframe to JSON) representing the SoA for the study.'
+  description='Returns a SoA for the specified study design. The SoA returned is a JSON structure (pandas dataframe to JSON) representing the SoA for the study.',
+  responses=standard_responses
 )
 async def studies_soa(uuid: UUID):
   if str(uuid) not in StudyDesign.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
+    raise HTTPException(statusCode=404, detail="Item not found", message= "")
   study_design = StudyDesign(**StudyDesign.read(store, str(uuid)))
   df = SoA(study_design, store).soa()
   return Response(df.to_json(orient="records"), media_type="application/json")
