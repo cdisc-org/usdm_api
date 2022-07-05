@@ -1,0 +1,1131 @@
+{
+  "studyTitle": "New Title",
+  "studyVersion": "1",
+  "studyType": {
+    "code": "C98388",
+    "codeSystem": "http://www.cdisc.org",
+    "codeSystemVersion": "2022-03-25",
+    "decode": "Interventional Study"
+  },
+  "studyPhase": {
+    "code": "C49686",
+    "codeSystem": "http://www.cdisc.org",
+    "codeSystemVersion": "2022-03-25",
+    "decode": "Phase IIa Trial"
+  },
+  "studyIdentifiers": [
+    {
+      "studyIdentifier": "CT-GOV-1234",
+      "studyIdentifierScope": {
+        "organisationIdentifierScheme": "FDA",
+        "organisationIdentifier": "CT-GOV",
+        "organisationName": "ClinicalTrials.gov",
+        "organisationType": {
+          "code": "C2365x",
+          "codeSystem": "http://www.cdisc.org",
+          "codeSystemVersion": "1",
+          "decode": "REGISTRY_STUDY_IDENTIFIER"
+        }
+      }
+    },
+    {
+      "studyIdentifier": "EU-5678",
+      "studyIdentifierScope": {
+        "organisationIdentifierScheme": "EMA",
+        "organisationIdentifier": "EudraCT",
+        "organisationName": "European Union Drug Regulating Authorities Clinical Trials Database",
+        "organisationType": {
+          "code": "C2365x",
+          "codeSystem": "http://www.cdisc.org",
+          "codeSystemVersion": "1",
+          "decode": "REGISTRY_STUDY_IDENTIFIER"
+        }
+      }
+    },
+    {
+      "studyIdentifier": "ACME-5678",
+      "studyIdentifierScope": {
+        "organisationIdentifierScheme": "DUNS",
+        "organisationIdentifier": "123456789",
+        "organisationName": "ACME Pharma",
+        "organisationType": {
+          "code": "C2365y",
+          "codeSystem": "http://www.cdisc.org",
+          "codeSystemVersion": "1",
+          "decode": "SPONSOR_STUDY_IDENTIFIER"
+        }
+      }
+    }
+  ],
+  "studyProtocolVersions": [
+    {
+      "briefTitle": "Short",
+      "officialTitle": "Very Official",
+      "publicTitle": "Public Voice",
+      "scientificTitle": "Incomprehensible",
+      "protocolVersion": "1",
+      "protocolAmendment": null,
+      "protocolEffectiveDate": "2022-01-01",
+      "protocolStatus": {
+        "code": "C1113x",
+        "codeSystem": "http://www.cdisc.org",
+        "codeSystemVersion": "1",
+        "decode": "FINAL"
+      }
+    },
+    {
+      "briefTitle": "Shorter",
+      "officialTitle": "Very Official",
+      "publicTitle": "Public Voice",
+      "scientificTitle": "Incomprehensible",
+      "protocolVersion": "1",
+      "protocolAmendment": "Amendment 1",
+      "protocolEffectiveDate": "2022-02-01",
+      "protocolStatus": {
+        "code": "C1113x",
+        "codeSystem": "http://www.cdisc.org",
+        "codeSystemVersion": "1",
+        "decode": "FINAL"
+      }
+    }
+  ],
+  "studyDesigns": [
+    {
+      "trialIntentTypes": [
+        {
+          "code": "C15714",
+          "codeSystem": "http://www.cdisc.org",
+          "codeSystemVersion": "2022-03-25",
+          "decode": "Basic Research"
+        }
+      ],
+      "trialType": {
+        "code": "C158288",
+        "codeSystem": "http://www.cdisc.org",
+        "codeSystemVersion": "2022-03-25",
+        "decode": "Biosimilarity Study"
+      },
+      "interventionModel": {
+        "code": "C82639",
+        "codeSystem": "http://www.cdisc.org",
+        "codeSystemVersion": "2022-03-25",
+        "decode": "Parallel Study"
+      },
+      "studyCells": [
+        {
+          "studyArm": {
+            "studyArmName": "Placebo",
+            "studyArmDesc": "The Placebo Arm",
+            "studyArmType": {
+              "code": "C174268",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Placebo Control Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "Run In",
+            "studyEpochDesc": "The run in",
+            "previousEpochId": null,
+            "nextEpochId": "ab70ada9-95c3-42ea-be27-61fe4be4331b",
+            "studyEpochType": {
+              "code": "C98779",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Run-in Period"
+            },
+            "encounters": [
+              {
+                "encounterName": "Encounter 1",
+                "encounterDesc": "desc",
+                "previousEncounterId": null,
+                "nextEncounterId": "db3cc5a8-edde-4a45-9802-611ca8662219",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "SITE VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": null,
+                "transitionEndRule": null,
+                "uuid": "3f4f971e-c5e5-4a4c-81bc-308615224542"
+              },
+              {
+                "encounterName": "Encounter 2",
+                "encounterDesc": "desc",
+                "previousEncounterId": "3f4f971e-c5e5-4a4c-81bc-308615224542",
+                "nextEncounterId": null,
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "SITE VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": null,
+                "transitionEndRule": null,
+                "uuid": "db3cc5a8-edde-4a45-9802-611ca8662219"
+              }
+            ],
+            "uuid": "06cd32f8-0930-4692-b80f-01bb30516f85"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "Element 1",
+              "studyElementDesc": "First element",
+              "transitionStartRule": {
+                "transitionRuleDesc": "Start Rule"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "End Rule"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "Placebo",
+            "studyArmDesc": "The Placebo Arm",
+            "studyArmType": {
+              "code": "C174268",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Placebo Control Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "Treatment",
+            "studyEpochDesc": "The drug!",
+            "previousEpochId": "06cd32f8-0930-4692-b80f-01bb30516f85",
+            "nextEpochId": "0ea5fc7f-0318-438a-a46c-1dec19bde78f",
+            "studyEpochType": {
+              "code": "C101526",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Treatment Epoch"
+            },
+            "encounters": [],
+            "uuid": "ab70ada9-95c3-42ea-be27-61fe4be4331b"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "Element 2",
+              "studyElementDesc": "Second element",
+              "transitionStartRule": null,
+              "transitionEndRule": null
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "Placebo",
+            "studyArmDesc": "The Placebo Arm",
+            "studyArmType": {
+              "code": "C174268",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Placebo Control Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "Follow Up",
+            "studyEpochDesc": "Go away",
+            "previousEpochId": "ab70ada9-95c3-42ea-be27-61fe4be4331b",
+            "nextEpochId": null,
+            "studyEpochType": {
+              "code": "C99158",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Clinical Study Follow-up"
+            },
+            "encounters": [],
+            "uuid": "0ea5fc7f-0318-438a-a46c-1dec19bde78f"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "Element 4",
+              "studyElementDesc": "Fourth element",
+              "transitionStartRule": null,
+              "transitionEndRule": null
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "Active",
+            "studyArmDesc": "Super Drug Arm",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "Run In",
+            "studyEpochDesc": "The run in",
+            "previousEpochId": null,
+            "nextEpochId": "ab70ada9-95c3-42ea-be27-61fe4be4331b",
+            "studyEpochType": {
+              "code": "C98779",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Run-in Period"
+            },
+            "encounters": [
+              {
+                "encounterName": "Encounter 1",
+                "encounterDesc": "desc",
+                "previousEncounterId": null,
+                "nextEncounterId": "db3cc5a8-edde-4a45-9802-611ca8662219",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "SITE VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": null,
+                "transitionEndRule": null,
+                "uuid": "3f4f971e-c5e5-4a4c-81bc-308615224542"
+              },
+              {
+                "encounterName": "Encounter 2",
+                "encounterDesc": "desc",
+                "previousEncounterId": "3f4f971e-c5e5-4a4c-81bc-308615224542",
+                "nextEncounterId": null,
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "SITE VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": null,
+                "transitionEndRule": null,
+                "uuid": "db3cc5a8-edde-4a45-9802-611ca8662219"
+              }
+            ],
+            "uuid": "06cd32f8-0930-4692-b80f-01bb30516f85"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "Element 1",
+              "studyElementDesc": "First element",
+              "transitionStartRule": {
+                "transitionRuleDesc": "Start Rule"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "End Rule"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "Active",
+            "studyArmDesc": "Super Drug Arm",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "Treatment",
+            "studyEpochDesc": "The drug!",
+            "previousEpochId": "06cd32f8-0930-4692-b80f-01bb30516f85",
+            "nextEpochId": "0ea5fc7f-0318-438a-a46c-1dec19bde78f",
+            "studyEpochType": {
+              "code": "C101526",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Treatment Epoch"
+            },
+            "encounters": [],
+            "uuid": "ab70ada9-95c3-42ea-be27-61fe4be4331b"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "Element 3",
+              "studyElementDesc": "Third element",
+              "transitionStartRule": null,
+              "transitionEndRule": null
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "Active",
+            "studyArmDesc": "Super Drug Arm",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "Follow Up",
+            "studyEpochDesc": "Go away",
+            "previousEpochId": "ab70ada9-95c3-42ea-be27-61fe4be4331b",
+            "nextEpochId": null,
+            "studyEpochType": {
+              "code": "C99158",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Clinical Study Follow-up"
+            },
+            "encounters": [],
+            "uuid": "0ea5fc7f-0318-438a-a46c-1dec19bde78f"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "Element 4",
+              "studyElementDesc": "Fourth element",
+              "transitionStartRule": null,
+              "transitionEndRule": null
+            }
+          ]
+        }
+      ],
+      "studyIndications": [
+        {
+          "codes": [
+            {
+              "code": "C6666x",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "BAD STUFF"
+            }
+          ],
+          "indicationDesc": "Something bad"
+        }
+      ],
+      "studyObjectives": [
+        {
+          "objectiveDesc": "Objective Level 1",
+          "objectiveLevel": {
+            "code": "C9844x",
+            "codeSystem": "http://www.cdisc.org",
+            "codeSystemVersion": "1",
+            "decode": "OBJ LEVEL"
+          },
+          "objectiveEndpoints": [
+            {
+              "endpointDesc": "Endpoint 1",
+              "endpointPurposeDesc": "level description",
+              "endpointLevel": {
+                "code": "C9834x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "PURPOSE"
+              }
+            },
+            {
+              "endpointDesc": "Endpoint 2",
+              "endpointPurposeDesc": "level description",
+              "endpointLevel": {
+                "code": "C9834x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "PURPOSE"
+              }
+            }
+          ]
+        }
+      ],
+      "studyPopulations": [
+        {
+          "populationDesc": "Population 1"
+        }
+      ],
+      "studyInvestigationalInterventions": [
+        {
+          "codes": [
+            {
+              "code": "C7639x",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "MODEL 1"
+            },
+            {
+              "code": "C7639y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "MODEL 2"
+            }
+          ],
+          "interventionDesc": "Intervention 1"
+        }
+      ],
+      "studyWorkflows": [
+        {
+          "workflowDesc": "Schedule of Activities",
+          "workflowItems": [
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Encounter 1",
+                "encounterDesc": "desc",
+                "previousEncounterId": null,
+                "nextEncounterId": "db3cc5a8-edde-4a45-9802-611ca8662219",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "SITE VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": null,
+                "transitionEndRule": null,
+                "uuid": "3f4f971e-c5e5-4a4c-81bc-308615224542"
+              },
+              "workflowItemActivity": {
+                "activityName": "A1",
+                "activityDesc": "Activity_1",
+                "previousActivityId": null,
+                "nextActivityId": "cdf3d2aa-90b0-44e7-9a8a-8370a98d4127",
+                "definedProcedures": [
+                  {
+                    "procedureType": "Specimen Collection",
+                    "procedureCode": {
+                      "code": "767002",
+                      "codeSystem": "SNOMED-CT",
+                      "codeSystemVersion": "2022-05-31",
+                      "decode": "White blood cell count"
+                    }
+                  }
+                ],
+                "studyDataCollection": [],
+                "uuid": "8baeeae6-8070-46b5-bbd4-a4d4439929e0"
+              },
+              "uuid": "108cde88-4dad-4a0e-b3b0-201b60126d19",
+              "previousWorkflowItemId": null,
+              "nextWorkflowItemId": "0d77782c-ccc5-41e4-9b27-34f5c5e4b835"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Encounter 2",
+                "encounterDesc": "desc",
+                "previousEncounterId": "3f4f971e-c5e5-4a4c-81bc-308615224542",
+                "nextEncounterId": null,
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "SITE VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": null,
+                "transitionEndRule": null,
+                "uuid": "db3cc5a8-edde-4a45-9802-611ca8662219"
+              },
+              "workflowItemActivity": {
+                "activityName": "A2",
+                "activityDesc": "Activity_2",
+                "previousActivityId": "8baeeae6-8070-46b5-bbd4-a4d4439929e0",
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": [
+                  {
+                    "studyDataName": "Study Data 1",
+                    "studyDataDesc": "Something",
+                    "crfLink": "Link 1"
+                  }
+                ],
+                "uuid": "cdf3d2aa-90b0-44e7-9a8a-8370a98d4127"
+              },
+              "uuid": "0d77782c-ccc5-41e4-9b27-34f5c5e4b835",
+              "previousWorkflowItemId": "108cde88-4dad-4a0e-b3b0-201b60126d19",
+              "nextWorkflowItemId": null
+            }
+          ]
+        }
+      ],
+      "studyEstimands": []
+    },
+    {
+      "trialIntentTypes": [
+        {
+          "code": "C15714",
+          "codeSystem": "http://www.cdisc.org",
+          "codeSystemVersion": "2022-03-25",
+          "decode": "Basic Research"
+        }
+      ],
+      "trialType": {
+        "code": "C49666",
+        "codeSystem": "http://www.cdisc.org",
+        "codeSystemVersion": "2022-03-25",
+        "decode": "Efficacy Study"
+      },
+      "interventionModel": {
+        "code": "C82639",
+        "codeSystem": "http://www.cdisc.org",
+        "codeSystemVersion": "2022-03-25",
+        "decode": "Parallel Study"
+      },
+      "studyCells": [
+        {
+          "studyArm": {
+            "studyArmName": "Placebo",
+            "studyArmDesc": "The Placebo Arm",
+            "studyArmType": {
+              "code": "C174268",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Placebo Control Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "Run In",
+            "studyEpochDesc": "The run in",
+            "previousEpochId": null,
+            "nextEpochId": "ab70ada9-95c3-42ea-be27-61fe4be4331b",
+            "studyEpochType": {
+              "code": "C98779",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Run-in Period"
+            },
+            "encounters": [
+              {
+                "encounterName": "Encounter 1",
+                "encounterDesc": "desc",
+                "previousEncounterId": null,
+                "nextEncounterId": "db3cc5a8-edde-4a45-9802-611ca8662219",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "SITE VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": null,
+                "transitionEndRule": null,
+                "uuid": "3f4f971e-c5e5-4a4c-81bc-308615224542"
+              },
+              {
+                "encounterName": "Encounter 2",
+                "encounterDesc": "desc",
+                "previousEncounterId": "3f4f971e-c5e5-4a4c-81bc-308615224542",
+                "nextEncounterId": null,
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "SITE VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": null,
+                "transitionEndRule": null,
+                "uuid": "db3cc5a8-edde-4a45-9802-611ca8662219"
+              }
+            ],
+            "uuid": "06cd32f8-0930-4692-b80f-01bb30516f85"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "Element 1",
+              "studyElementDesc": "First element",
+              "transitionStartRule": {
+                "transitionRuleDesc": "Start Rule"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "End Rule"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "Placebo",
+            "studyArmDesc": "The Placebo Arm",
+            "studyArmType": {
+              "code": "C174268",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Placebo Control Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "Treatment",
+            "studyEpochDesc": "The drug!",
+            "previousEpochId": "06cd32f8-0930-4692-b80f-01bb30516f85",
+            "nextEpochId": "0ea5fc7f-0318-438a-a46c-1dec19bde78f",
+            "studyEpochType": {
+              "code": "C101526",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Treatment Epoch"
+            },
+            "encounters": [],
+            "uuid": "ab70ada9-95c3-42ea-be27-61fe4be4331b"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "Element 2",
+              "studyElementDesc": "Second element",
+              "transitionStartRule": null,
+              "transitionEndRule": null
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "Placebo",
+            "studyArmDesc": "The Placebo Arm",
+            "studyArmType": {
+              "code": "C174268",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Placebo Control Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "Follow Up",
+            "studyEpochDesc": "Go away",
+            "previousEpochId": "ab70ada9-95c3-42ea-be27-61fe4be4331b",
+            "nextEpochId": null,
+            "studyEpochType": {
+              "code": "C99158",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Clinical Study Follow-up"
+            },
+            "encounters": [],
+            "uuid": "0ea5fc7f-0318-438a-a46c-1dec19bde78f"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "Element 4",
+              "studyElementDesc": "Fourth element",
+              "transitionStartRule": null,
+              "transitionEndRule": null
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "Active",
+            "studyArmDesc": "Super Drug Arm",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "Run In",
+            "studyEpochDesc": "The run in",
+            "previousEpochId": null,
+            "nextEpochId": "ab70ada9-95c3-42ea-be27-61fe4be4331b",
+            "studyEpochType": {
+              "code": "C98779",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Run-in Period"
+            },
+            "encounters": [
+              {
+                "encounterName": "Encounter 1",
+                "encounterDesc": "desc",
+                "previousEncounterId": null,
+                "nextEncounterId": "db3cc5a8-edde-4a45-9802-611ca8662219",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "SITE VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": null,
+                "transitionEndRule": null,
+                "uuid": "3f4f971e-c5e5-4a4c-81bc-308615224542"
+              },
+              {
+                "encounterName": "Encounter 2",
+                "encounterDesc": "desc",
+                "previousEncounterId": "3f4f971e-c5e5-4a4c-81bc-308615224542",
+                "nextEncounterId": null,
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "SITE VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": null,
+                "transitionEndRule": null,
+                "uuid": "db3cc5a8-edde-4a45-9802-611ca8662219"
+              }
+            ],
+            "uuid": "06cd32f8-0930-4692-b80f-01bb30516f85"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "Element 1",
+              "studyElementDesc": "First element",
+              "transitionStartRule": {
+                "transitionRuleDesc": "Start Rule"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "End Rule"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "Active",
+            "studyArmDesc": "Super Drug Arm",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "Treatment",
+            "studyEpochDesc": "The drug!",
+            "previousEpochId": "06cd32f8-0930-4692-b80f-01bb30516f85",
+            "nextEpochId": "0ea5fc7f-0318-438a-a46c-1dec19bde78f",
+            "studyEpochType": {
+              "code": "C101526",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Treatment Epoch"
+            },
+            "encounters": [],
+            "uuid": "ab70ada9-95c3-42ea-be27-61fe4be4331b"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "Element 3",
+              "studyElementDesc": "Third element",
+              "transitionStartRule": null,
+              "transitionEndRule": null
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "Active",
+            "studyArmDesc": "Super Drug Arm",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "Follow Up",
+            "studyEpochDesc": "Go away",
+            "previousEpochId": "ab70ada9-95c3-42ea-be27-61fe4be4331b",
+            "nextEpochId": null,
+            "studyEpochType": {
+              "code": "C99158",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Clinical Study Follow-up"
+            },
+            "encounters": [],
+            "uuid": "0ea5fc7f-0318-438a-a46c-1dec19bde78f"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "Element 4",
+              "studyElementDesc": "Fourth element",
+              "transitionStartRule": null,
+              "transitionEndRule": null
+            }
+          ]
+        }
+      ],
+      "studyIndications": [
+        {
+          "codes": [
+            {
+              "code": "C6666x",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "BAD STUFF"
+            }
+          ],
+          "indicationDesc": "Something bad"
+        },
+        {
+          "codes": [
+            {
+              "code": "C6666y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "BAD SIMILAR STUFF"
+            }
+          ],
+          "indicationDesc": "Something similarly bad"
+        }
+      ],
+      "studyObjectives": [
+        {
+          "objectiveDesc": "Objective Level 1",
+          "objectiveLevel": {
+            "code": "C9844x",
+            "codeSystem": "http://www.cdisc.org",
+            "codeSystemVersion": "1",
+            "decode": "OBJ LEVEL"
+          },
+          "objectiveEndpoints": [
+            {
+              "endpointDesc": "Endpoint 1",
+              "endpointPurposeDesc": "level description",
+              "endpointLevel": {
+                "code": "C9834x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "PURPOSE"
+              }
+            },
+            {
+              "endpointDesc": "Endpoint 2",
+              "endpointPurposeDesc": "level description",
+              "endpointLevel": {
+                "code": "C9834x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "PURPOSE"
+              }
+            }
+          ]
+        }
+      ],
+      "studyPopulations": [
+        {
+          "populationDesc": "Population 1"
+        }
+      ],
+      "studyInvestigationalInterventions": [
+        {
+          "codes": [
+            {
+              "code": "C7639x",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "MODEL 1"
+            },
+            {
+              "code": "C7639y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "MODEL 2"
+            }
+          ],
+          "interventionDesc": "Intervention 1"
+        }
+      ],
+      "studyWorkflows": [],
+      "studyEstimands": []
+    }
+  ]
+}
