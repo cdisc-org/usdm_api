@@ -15,8 +15,9 @@ from model.activity import *
 from model.transition_rule import *
 from model.encounter import *
 
-VERSION = "0.21"
-SYSTEM_NAME = "DDF API Simulator"
+#VERSION = "0.22"
+VERSION = "V1-Provisional"
+SYSTEM_NAME = "Simple API for DDF"
 
 tags_metadata = [
     {
@@ -27,26 +28,26 @@ tags_metadata = [
     #     "name": "proposed",
     #     "description": "Routes that are proposed as being included within the production specification."
     # },
-    {
-        "name": "SoA",
-        "description": "Routes related to the SoA for a study design."
-    },
-    {
-        "name": "Search",
-        "description": "Routes related to search functions."
-    },
-    {
-        "name": "Sections",
-        "description": "Routes providing similar functionality to that of 'sections' in the previous draft of the API."
-    },
+    # {
+    #     "name": "SoA",
+    #     "description": "Routes related to the SoA for a study design."
+    # },
+    # {
+    #     "name": "Search",
+    #     "description": "Routes related to search functions."
+    # },
+    # {
+    #     "name": "Sections",
+    #     "description": "Routes providing similar functionality to that of 'sections' in the previous draft of the API."
+    # },
     # {
     #     "name": "potential",
     #     "description": "Routes that could potentially be included in the production specification. These tend to be more granular routes, more typical 'resource' driven."
     # },
-    {
-        "name": "Simulator",
-        "description": "Routes used to support the simulator, not for production."
-    }
+    # {
+    #     "name": "Simulator",
+    #     "description": "Routes used to support the simulator, not for production."
+    # }
 ]
 
 annotations = {
@@ -93,31 +94,31 @@ standard_responses = {
 
 app = FastAPI(
   title = SYSTEM_NAME,
-  description = "A simple TransCelerate Digital Data Flow (DDF) Study Definitions Repository (SDR) Simulator. Used to define and test the logic of the SDR API.",
+  description = "A simple TransCelerate Digital Data Flow (DDF) Study Definitions Repository API.",
   version = VERSION,
   openapi_tags = tags_metadata
 )
 store = Store()
 
 # System Name and Version
-@app.get("/", 
-  tags=["Simulator"],
-  summary="Obtain system name and version",
-  description="Obtain the name of the micro service and the current version.")
-@app.get("/v1/", 
-  tags=["Simulator"],
-  summary="Obtain system name and version",
-  description="Obtain the name of the micro service and the current version.")
-def system_and_version():
-  return { "system": SYSTEM_NAME, "version": VERSION }
+# @app.get("/", 
+#   tags=["Simulator"],
+#   summary="Obtain system name and version",
+#   description="Obtain the name of the micro service and the current version.")
+# @app.get("/v1/", 
+#   tags=["Simulator"],
+#   summary="Obtain system name and version",
+#   description="Obtain the name of the micro service and the current version.")
+# def system_and_version():
+#   return { "system": SYSTEM_NAME, "version": VERSION }
 
 # Controlled Terminology
-@app.get("/v1/terms/", 
-  tags=["Simulator"],
-  summary="Return Controlled Terminology",
-  description="Return the specified Controlled Terminology (CT) for the specified class and attribute. This is the CT defined within the model specification")
-async def ct_search(klass: str, attribute: str):
-  return CT().search(klass, attribute)
+# @app.get("/v1/terms/", 
+#   tags=["Simulator"],
+#   summary="Return Controlled Terminology",
+#   description="Return the specified Controlled Terminology (CT) for the specified class and attribute. This is the CT defined within the model specification")
+# async def ct_search(klass: str, attribute: str):
+#   return CT().search(klass, attribute)
   
 # Study Definition
 # @app.get("/v1/study_definitions/list", 
@@ -128,16 +129,16 @@ async def ct_search(klass: str, attribute: str):
 # async def list_studies():
 #   return Study.list(store)
 
-@app.get("/v1/studyDefinitions", 
-  tags=['Search'], 
-  summary='Study definition for specified identifier',
-  description='Returns the uuid for the study with the matching identifier.',
-  response_model=UUID)
-async def studies_search(identifier: str=""):
-  result = Study.search(store, identifier)
-  if result == None:
-    raise HTTPException(status_code=404, detail="Item not found")
-  return result
+# @app.get("/v1/studyDefinitions", 
+#   tags=['Search'], 
+#   summary='Study definition for specified identifier',
+#   description='Returns the uuid for the study with the matching identifier.',
+#   response_model=UUID)
+# async def studies_search(identifier: str=""):
+#   result = Study.search(store, identifier)
+#   if result == None:
+#     raise HTTPException(status_code=404, detail="Item not found")
+#   return result
 
 # @app.post("/studydefinitionrepository/v1", 
 #   tags=["production"], 
@@ -206,14 +207,14 @@ async def read_study_history(uuid: str):
 # async def list_study_identifiers():
 #   return StudyIdentifier.list(store)
 
-@app.get("/v1/studyIdentifiers", 
-  tags=["Sections"], 
-  summary='Study identifiers for a study',
-  description='Returns all the identifiers for a specified study.',
-  response_model=List[StudyIdentifier]
-)
-async def study_identifiers_search(study_uuid: UUID):
-  return StudyIdentifier.search(store, str(study_uuid))
+# @app.get("/v1/studyIdentifiers", 
+#   tags=["Sections"], 
+#   summary='Study identifiers for a study',
+#   description='Returns all the identifiers for a specified study.',
+#   response_model=List[StudyIdentifier]
+# )
+# async def study_identifiers_search(study_uuid: UUID):
+#   return StudyIdentifier.search(store, str(study_uuid))
 
 # @app.post("/v1/study_identifiers", 
 #   tags=["potential"], 
@@ -306,15 +307,15 @@ async def study_identifiers_search(study_uuid: UUID):
 async def search_study_design(study_uuid: UUID):
   return StudyDesign.search(store, str(study_uuid))
 
-@app.get("/v1/studyDesigns/{uuid}/soa", 
-  tags=["SoA"],
-  summary='SoA for the specified study design',
-  description='Returns a SoA for the specified study design. The SoA returned is a JSON structure (pandas dataframe to JSON) representing the SoA for the study.',
-  responses=standard_responses
-)
-async def studies_soa(uuid: UUID):
-  if str(uuid) not in StudyDesign.list(store):
-    raise HTTPException(status_code=404, detail="Item not found")
-  study_design = StudyDesign(**StudyDesign.read(store, str(uuid)))
-  df = SoA(study_design, store).soa()
-  return Response(df.to_json(orient="records"), media_type="application/json")
+# @app.get("/v1/studyDesigns/{uuid}/soa", 
+#   tags=["SoA"],
+#   summary='SoA for the specified study design',
+#   description='Returns a SoA for the specified study design. The SoA returned is a JSON structure (pandas dataframe to JSON) representing the SoA for the study.',
+#   responses=standard_responses
+# )
+# async def studies_soa(uuid: UUID):
+#   if str(uuid) not in StudyDesign.list(store):
+#     raise HTTPException(status_code=404, detail="Item not found")
+#   study_design = StudyDesign(**StudyDesign.read(store, str(uuid)))
+#   df = SoA(study_design, store).soa()
+#   return Response(df.to_json(orient="records"), media_type="application/json")
