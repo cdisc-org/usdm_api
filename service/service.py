@@ -32,5 +32,10 @@ class Service():
     if uuid != "":
       endpoint_url = "%s/%s" % (endpoint_url, uuid)
     r = requests.get(endpoint_url)
-    self.display_response("Get", endpoint_url, r)
-    return r.json()
+    if r.status_code != 200:
+      print("Get (%s)" % (endpoint_url))
+      print("Bad response, code [%s], text [%s]" % (r.status_code, r.text))
+      return {}
+    else:
+      self.display_response("Get", endpoint_url, r)
+      return r.json()
