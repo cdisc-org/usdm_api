@@ -6,73 +6,68 @@ class BMS():
 
     # Rules
     study_rule_data = [
-      "DO NOT USE - INDEX 0",
-
       # Visit Start Rules
       "6 weeks prior to treatment",
       "2 hours before treatment",
+      "2 hours before treatment",
+      "start of day 8",
       "start of day 15",
       "start of day 22",
+      "start of day 29",
       "start of day 36",
-      "Start of day 43",
-      "Start of day 64",
-      "Start of day 85",
-      "Start of day 106",
-      "Start of day 127",
-      "Start of day 148",
-      "Start of day 169",
-      "",
+      "start of day 43",
+      "start of day 50",
+      "start of day 57",
+      # Index (from 0) 11
+      "start of day 64",
+      "start of day 71",
+      "start of day 78",
+      "start of day 85",
+      "start of day 92",
+      "start of day 99",
+      "start of day 106",
 
       # Visit End Rules
+      # 18
       "start of run-in period",
-      "",
-      "end of day 15",
-      "end of day 22",
-      "End of day 36",
-      "End of day 43",
-      "End of day 64",
-      "End of day 85",
-      "End of day 106",
-      "End of day 127",
-      "End of day 148",
-      "End of day 169",
-      ""
+      "end of day 1",
+      "end of day 14",
+      "end of day 21",
+      "end of day 28",
+      "end of day 35",
+      "end of day 42",
+      "end of day 49",
+      "end of day 56",
+      "end of day 63",
+      "end of day 70",
+      "end of day 77",
+      # 30
+      "end of day 84",
+      "end of day 91",
+      "end of day 99",
+      "end of day 105",
+      "end of day 112",
 
       # Element Start Rules
+      # 35
       "6 weeks prior to treatment",
-      "Start of treatment period",
-      "Start of treatment period",
-      "Start of treatment period",
-      "Start of treatment period",
-      "",
-      "",
-		
+      "Start of Week 1",
+      "Start of Week 5",
+      "Start of Week 9",
+      "Start of Week 13",
+				
       # Element End Rules
+      # 40
       "Start of run-in period",
-      "end of treatment period",
-      "end of treatment period",
-      "end of treatment period",
-      "end of treatment period",
-      "",
-      ""
-
+      "End of Week 4",
+      "End of Week 8",
+      "End of Week 12",
+      "End of Week 16"
     ]
 
     rules = []
     for rule in study_rule_data:
       rules.append(transition_rule_data(rule))
-
-    # Code references
-    code_1 = code_data( "24662006", "SNOMED-CT", "4.0.6.4", "Influenza due to Influenza virus, type B")
-    code_2 = code_data( "1022000", "MEDDRA", "Nov18_2021", "Influenza")
-    code_3 = code_data( "J11.1", "ICD	10", "1", "Influenza due to unidentified influenza virus with other respiratory manifestations")
-    code_4 = code_data( "C22.1", "ICD	10", "1", "Intrahepatic bile duct carcinoma")
-    code_5 = code_data( "371970002", "SNOMED-CT", "4.0.6.4", "Primary malignant neoplasm of biliary tract (disorder)")
-    code_6 = code_data( "10004596", "MEDDRA", "Nov18_2021", "Bile duct cancer recurrent")
-    code_7 = code_data( "J07BX03", "ATC	2020", "1", "Covid-19 vaccines")
-    code_8 = code_data( "L01XC28", "ATC", "14-12-2021", "Durvalumab")
-    code_9 = code_data( "L01XK01", "ATC", "14-12-2021", "Olaparib")
-    code_10 = code_data( "249565666", "PubChem", "09/02/2021", "Durvalumab; Imfinzi; Anti-B7H1; Monoclonal Antibody")
 
     # Procedures
     # None
@@ -83,19 +78,20 @@ class BMS():
     # Activities
     # Short Name, Description, Procedures, Study Data
     study_activity_data = [
-      ("BLANK", "DO NOT USE - INDEX 0", [], []),
       ("A1", "Informed Consent", [], []),
       ("A2", "Eligibility Screening", [], []),
       ("A3", "Hematology", [], []),
       ("A4", "Biochemistry", [], []),
       ("A5", "Demographics", [], []),
       ("A6", "Dosing", [], []),
-      ("A7", "Plasma Biomarker", [], [])
+      ("A7", "Plasma Biomarker", [], []),
+      ("A8", "PK Sample", [], [])
     ]
     activities = []
     for activity in study_activity_data:
       activities.append(activity_data(*activity))
-    
+    double_link(activities, 'previousActivityId', 'nextActivityId')
+
     # Visits
     planned_visit = code_data("C7652x", "http://www.cdisc.org", "1", "PLANNED VISIT")
     virtual_visit = code_data("C7653x", "http://www.cdisc.org", "1", "VIRTUAL VISIT")
@@ -106,21 +102,27 @@ class BMS():
 
     # name, description, encounter_type, env_setting, contact_mode, start_rule=None, end_rule=None
     study_encounter_data = [
-      ("Don't Use", "DON'T USE", None, None, None, None, None), 
-      ("Screening", "SCREENING", planned_visit, clinic_setting, in_person_mode, rules[1], rules[14]),
-      ("Cycle 1, Day 1", "DAY 1", planned_visit, hospital_setting, in_person_mode, rules[2], rules[15]),
-      ("Cycle 1, Day 15", "DAY 15", planned_visit, hospital_setting, in_person_mode, rules[3], rules[16]),
-      ("Cycle 2, Day 1", "DAY 1",	planned_visit, hospital_setting, in_person_mode, rules[4], rules[17]),
-      ("Cycle 2, Day 15", "DAY 15",	planned_visit, hospital_setting, in_person_mode, rules[5], rules[18]),
-      ("Cycle 3, Day 1", "DAY 1",	planned_visit, hospital_setting, in_person_mode, rules[6], rules[19]),
-      ("Cycle 4, Day 1", "DAY 1",	planned_visit, hospital_setting, in_person_mode, rules[7], rules[20]),
-      ("Cycle 5, Day 1", "DAY 1",	planned_visit, hospital_setting, in_person_mode, rules[8], rules[21]),
-      ("Cycle 6, Day 1", "DAY 1",	planned_visit, hospital_setting, in_person_mode, rules[9], rules[22]),
-      ("Cycle 7, Day 1", "DAY 1",	planned_visit, hospital_setting, in_person_mode, rules[10], rules[23]),
-      ("Cycle 8, Day 1", "DAY 1",	planned_visit, hospital_setting, in_person_mode, rules[11], rules[24]),
-      ("Cycle 9, Day 1", "DAY 1",	virtual_visit, clinic_setting, remote_audio_mode, rules[12], rules[25]),
-      ("Follow up", "FOLLOW-UP",	planned_visit, clinic_setting, in_person_mode, rules[13], rules[26])
+      ("Screening", "SCREENING", planned_visit, clinic_setting, in_person_mode, rules[0], rules[18]),
+      ("Day 1", "DAY 1", planned_visit, hospital_setting, in_person_mode, rules[1], None),
+      ("Week 1", "WEEK 1", planned_visit, hospital_setting, in_person_mode, rules[2], rules[19]),
+      ("Week 2", "WEEK 2", planned_visit, hospital_setting, in_person_mode, rules[3], rules[20]),
+      ("Week 3", "WEEK 3", planned_visit, hospital_setting, in_person_mode, rules[4], rules[21]),
+      ("Week 4", "WEEK 4", planned_visit, hospital_setting, in_person_mode, rules[5], rules[22]),
+      ("Week 5", "WEEK 5", planned_visit, hospital_setting, in_person_mode, rules[6], rules[23]),
+      ("Week 6", "WEEK 6", planned_visit, hospital_setting, in_person_mode, rules[7], rules[24]),
+      ("Week 7", "WEEK 7", planned_visit, hospital_setting, in_person_mode, rules[8], rules[25]),
+      ("Week 8", "WEEK 8", planned_visit, hospital_setting, in_person_mode, rules[9], rules[26]),
+      ("Week 9", "WEEK 9", planned_visit, hospital_setting, in_person_mode, rules[10], rules[27]),
+      ("Week 10", "WEEK 10", planned_visit, hospital_setting, in_person_mode, rules[11], rules[28]),
+      ("Week 11", "WEEK 11", planned_visit, hospital_setting, in_person_mode, rules[12], rules[29]),
+      ("Week 12", "WEEK 12", planned_visit, hospital_setting, in_person_mode, rules[13], rules[30]),
+      ("Week 13", "WEEK 13", planned_visit, hospital_setting, in_person_mode, rules[14], rules[31]),
+      ("Week 14", "WEEK 14", planned_visit, hospital_setting, in_person_mode, rules[15], rules[32]),
+      ("Week 15", "WEEK 15", planned_visit, hospital_setting, in_person_mode, rules[16], rules[33]),
+      ("Week 16", "WEEK 16", planned_visit, hospital_setting, in_person_mode, rules[17], rules[34]),
+      ("Follow up", "FOLLOW-UP",	planned_visit, hospital_setting, in_person_mode, None, None)
     ]
+
     encounters = []
     for encounter in study_encounter_data:
       encounters.append(encounter_data(*encounter))
@@ -128,35 +130,62 @@ class BMS():
 
     # Work Flow Items
     wfi_links = [
-      [ encounters[2], activities[3] ], 
-      [ encounters[2], activities[6] ], 
-      [ encounters[2], activities[7] ], 
-      [ encounters[3], activities[3] ], 
-      [ encounters[3], activities[6] ], 
-      [ encounters[4], activities[3] ], 
-      [ encounters[4], activities[6] ], 
-      [ encounters[4], activities[7] ],
-      [ encounters[5], activities[3] ],
+      [ encounters[0], activities[0] ], 
+      [ encounters[0], activities[1] ], 
+      [ encounters[0], activities[2] ], 
+      [ encounters[1], activities[2] ], 
+      [ encounters[1], activities[5] ], 
+      [ encounters[1], activities[6] ], 
+      [ encounters[1], activities[7] ], 
+      [ encounters[2], activities[2] ], 
+      [ encounters[2], activities[5] ], 
+      [ encounters[3], activities[2] ], 
+      [ encounters[3], activities[5] ], 
+      [ encounters[3], activities[6] ],
+      [ encounters[3], activities[7] ],
+      [ encounters[4], activities[2] ],
+      [ encounters[4], activities[5] ],
+      [ encounters[5], activities[2] ],
       [ encounters[5], activities[5] ],
+      [ encounters[5], activities[6] ],
+      [ encounters[6], activities[2] ], 
       [ encounters[6], activities[3] ],
-      [ encounters[6], activities[6] ],
+      [ encounters[6], activities[4] ],
       [ encounters[6], activities[7] ],
-      [ encounters[7], activities[3] ], 
-      [ encounters[7], activities[6] ],
-      [ encounters[7], activities[7] ],
-      [ encounters[8], activities[3] ],
-      [ encounters[8], activities[6] ], 
-      [ encounters[9], activities[3] ], 
-      [ encounters[9], activities[6] ],
-      [ encounters[9], activities[7] ],
-      [ encounters[10], activities[3] ], 
-      [ encounters[10], activities[6] ],
-      [ encounters[10], activities[3] ],
+      [ encounters[7], activities[2] ],
+      [ encounters[7], activities[5] ], 
+      [ encounters[8], activities[2] ], 
+      [ encounters[8], activities[5] ],
+      [ encounters[8], activities[6] ],
+      [ encounters[8], activities[7] ],
+      [ encounters[9], activities[2] ], 
+      [ encounters[9], activities[3] ],
+      [ encounters[9], activities[4] ],
+      [ encounters[10], activities[2] ],
+      [ encounters[10], activities[5] ],
+      [ encounters[10], activities[7] ],
+      [ encounters[11], activities[2] ],
+      [ encounters[11], activities[5] ],
       [ encounters[11], activities[6] ],
-      [ encounters[11], activities[7] ],
+      [ encounters[12], activities[2] ],
       [ encounters[12], activities[3] ],
-      [ encounters[13], activities[3] ],
-      [ encounters[13], activities[4] ]
+      [ encounters[12], activities[4] ],
+      [ encounters[13], activities[2] ],
+      [ encounters[13], activities[5] ],
+      [ encounters[14], activities[2] ],
+      [ encounters[14], activities[5] ],
+      [ encounters[14], activities[6] ],
+      [ encounters[15], activities[2] ], 
+      [ encounters[15], activities[3] ],
+      [ encounters[15], activities[4] ],
+      [ encounters[16], activities[2] ],
+      [ encounters[16], activities[5] ],
+      [ encounters[17], activities[2] ],
+      [ encounters[17], activities[5] ],
+      [ encounters[17], activities[6] ],
+      [ encounters[18], activities[2] ],
+      [ encounters[18], activities[3] ],
+      [ encounters[18], activities[4] ]
     ]
     wfis = []
     for item in wfi_links:
@@ -165,181 +194,114 @@ class BMS():
     double_link(wfis, 'previousWorkflowItemId', 'nextWorkflowItemId')  
 
     # Investigational Interventions
-    ii_1 = investigational_intervention_data("Olaparibstring", [code_9])
-    ii_2 = investigational_intervention_data("Durvalumab", [code_8, code_10])
-    ii_3 = investigational_intervention_data("AZD6738", [])
-    ii = [ii_1, ii_2, ii_3]
-
+    ii_code_1 = code_data( "XX031ZA", "ATC", "2021", "SubstX")
+    ii_1 = investigational_intervention_data("Treatment with substX", [ii_code_1])
+    ii = [ii_1]
+						
     # Populations
-    population_1 = study_design_population_data("biliary tract cancer patients who have failed to 1st-line chemotherapy")
+    population_1 = study_design_population_data("Population not provided")
 
     # Endpoints
     endpoint_1 = endpoint_data(
-      "Disease control rate of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
-      "EFFICACY",
+      "PK Parameters",
+      "PHARMACODYNAMIC",
       code_data("C9834x", "http://www.cdisc.org", "1", "PRIMARY")
-    )
-    endpoint_2 = endpoint_data(
-      "Disease control rate of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
-      "EFFICACY",
-      code_data("C9834x", "http://www.cdisc.org", "1", "PRIMARY") 
-    )
-    endpoint_3 = endpoint_data(
-      "Overall response rate of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
-      "EFFICACY",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY")
-    )
-    endpoint_4 = endpoint_data(
-      "progression-free survival of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
-      "EFFICACY",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY")
-    )
-    endpoint_5 = endpoint_data(
-       "duration of response of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
-      "PHARMACODYNAMIC",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY")
-    )
-    endpoint_6 = endpoint_data(
-      "overall survival of response of AZD6738 + Durvalumab cohort [ Time Frame: every 12 weeks until death or up to 5 years ]",
-      "EFFICACY",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
-    )
-    endpoint_7 = endpoint_data(
-      "Safety and tolerability of AZD6738 + Durvalumab cohort measured by number and grade of toxicity events [ Time Frame: through study completion, an average of 1 year ]",
-      "SAFETY",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
-    )
-    endpoint_8 = endpoint_data(
-      "quality of life measurement of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
-      "EFFICACY",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
-    )
-    endpoint_9 = endpoint_data(
-      "overall response rate (ORR) of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
-      "EFFICACY",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
-    )
-    endpoint_10 = endpoint_data(
-      "progression-free survival of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
-      "EFFICACY",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
-    )
-    endpoint_11 = endpoint_data(
-      "duration of response of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
-      "PHARMACODYNAMIC",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
-    )
-    endpoint_12 = endpoint_data(
-      "overall survival of AZD6738 + Olaparib cohort [ Time Frame: every 12 weeks until death or up to 5 years ]",
-      "EFFICACY",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
-    )
-    endpoint_13 = endpoint_data(
-      "Safety and tolerability of AZD6738 + Olaparib cohort as measured by number and grade of toxicity events [ Time Frame: through study completion, an average of 1 year ]",
-      "SAFETY",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY") 
-    )
-    endpoint_14 = endpoint_data(
-      "quality of life measurement of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
-      "EFFICACY",
-      code_data("C9835x", "http://www.cdisc.org", "1", "SECONDARY")
     )
 
     # Objectives
     objective_1 = objective_data(
-      "To assess the effect of AZD6738 and Durvalumab combination or AZD6738 and Olaparib combination in biliary tract cancer patients who have failed to 1st-line chemotherapy and are in second phase of disease", 
+      "Evaluate sensitivity index from baseline to end of study (16 weeks)", 
       code_data("C9844x", "http://www.cdisc.org", "1", "OBJ LEVEL"), 
-      [endpoint_1, endpoint_2, endpoint_3, endpoint_4, endpoint_5, endpoint_6, endpoint_7, endpoint_8, endpoint_9, endpoint_10, endpoint_11, endpoint_12, endpoint_13, endpoint_14]
+      [endpoint_1]
     )
-    objective_2 = objective_data(
-      "To assess the effect of AZD6738 and Durvalumab combination or AZD6738 and Olaparib combination in biliary tract cancer patients who have failed to 1st-line chemotherapy and are in second phase of disease", 
-      code_data("C9844x", "http://www.cdisc.org", "1", "OBJ LEVEL"), 
-      [endpoint_7, endpoint_13]
-    )
-    objective_3 = objective_data(
-      "To assess the effect of AZD6738 and Durvalumab combination or AZD6738 and Olaparib combination in biliary tract cancer patients who have failed to 1st-line chemotherapy", 
-      code_data("C9844x", "http://www.cdisc.org", "1", "OBJ LEVEL"), 
-      [endpoint_1, endpoint_2, endpoint_3, endpoint_4, endpoint_5, endpoint_6, endpoint_7, endpoint_8, endpoint_9, endpoint_10, endpoint_11, endpoint_12, endpoint_14]
-    )
-    objectives = [objective_1, objective_2, objective_3]
+    objectives = [objective_1]
 
     # Indications
-    indication_1 = study_indication_data("Bile duct cancer", [code_4, code_5, code_6])
-    indication_2 = study_indication_data("Influenza", [code_1, code_2, code_3])
+    code_1 = code_data( "E11", "ICD-10-CM", "10", "Type 2 diabetes mellitus")
+    code_2 = code_data( "44054006", "SNOMED", "2022", "Diabetes mellitus type 2 (disorder)"	)
+    code_3 = code_data( "E10", "ICD-10-CM", "10", "Type 1 diabetes mellitus")
+    code_4 = code_data( "44635009", "SNOMED", "2022", "Diabetes mellitus type 1 (disorder)"	)
+
+    indication_1 = study_indication_data("Diabetes Type II", [code_1, code_2])
+    indication_2 = study_indication_data("Diabetes Type I", [code_3, code_4])
     indications = [indication_1, indication_2]
 
     # Intercurrent Events
-    i_event_1 = intercurrent_event_data(
-     "Intercurrent Event 1", 
-     "An Intercuurent Event that could happen in a study", 
-     "A very bold strategy"
-    )
+    # None
 
     # Estimands
-    population_2 = analysis_population_data("The analysis population")
-    estimand_1 = estimand_data("Measure 1", population_2, ii_1, endpoint_1, [i_event_1])
-    estimands = [estimand_1]
+    # None
+    estimands = []
 
     # Study Arms
     origin_type = code_data("C6574y", "http://www.cdisc.org", "1", "SUBJECT DATA")
     treatment = code_for('StudyArm', 'studyArmType', submission_value='Treatment Arm')
     placebo = code_for('StudyArm', 'studyArmType', submission_value='Placebo Comparator Arm')
-    study_arm_1 = study_arm_data("DURVALUMAB ADD_ON", "AZD6738 + Durvalumab", treatment, "Captured subject data", origin_type)
-    study_arm_2 = study_arm_data("OLAPARIB_ADDON", "AZD6738 + Olaparib", treatment, "Captured subject data", origin_type)
+    study_arm_1 = study_arm_data("Treatment", "Treatment", treatment, "Captured subject data", origin_type)
 
+    # Epochs
     run_in = code_for('StudyEpoch', 'studyEpochType', submission_value='RUN-IN') 
     screening = code_for('StudyEpoch', 'studyEpochType', submission_value='SCREENING') 
     treatment = code_for('StudyEpoch', 'studyEpochType', submission_value='TREATMENT')
     follow_up = code_for('StudyEpoch', 'studyEpochType', submission_value='FOLLOW-UP')
-    study_epoch_1 = study_epoch_data("SCREEN", 	"Screening",screening, [ encounters[1]])
-    study_epoch_2 = study_epoch_data("RUN-IN", "Run-In", run_in, [ encounters[2], encounters[3], encounters[4]])
-    study_epoch_3 = study_epoch_data("TREATMENT 1", "Treatment Cycle 1", treatment, [ encounters[5], encounters[6], encounters[7]])
-    study_epoch_4 = study_epoch_data("TREATMENT 2", "Treatment Cycle 2", treatment, [ encounters[8], encounters[9]])
-    study_epoch_5 = study_epoch_data("TREATMENT X", "Treatment Cycle X", treatment, [ encounters[10], encounters[11]])
-    study_epoch_6 = study_epoch_data("FOLLOW-UP", "Follow-up", follow_up, [ encounters[12], encounters[13]])
-    epochs = [study_epoch_1, study_epoch_2, study_epoch_3, study_epoch_4, study_epoch_5, study_epoch_6]
+    
+    # name, description, epoch_type, encounters
+    raw_epoch_data = [
+      ("Screening", "Screening", screening, [encounters[0]]),
+      ("Titration Period 1", "Titration Period 1", treatment, [ encounters[1], encounters[2], encounters[3], encounters[4], encounters[5] ]),
+      ("Titration Period 2", "Titration Period 2", treatment, [ encounters[6], encounters[7], encounters[8], encounters[9] ]),
+      ("Titration Period 3", "Titration Period 3", treatment, [ encounters[10], encounters[11], encounters[12], encounters[13] ]),
+      ("Titration Period 4", "Titration Period 4", treatment, [ encounters[14], encounters[15], encounters[16], encounters[17] ]),
+      ("Follow-upP", "Follow-up", follow_up, [ encounters[18] ])
+    ]
+    epochs = []
+    for epoch in raw_epoch_data:
+      epochs.append(study_epoch_data(*epoch))
     double_link(epochs, 'previousEpochId', 'nextEpochId')
     print(epochs)
 
-    study_element_1 = study_element_data("SCREENING", "Screening", rules[1], rules[2])
-    study_element_2 = study_element_data("AZD_DRUV", "AZD6738 + Durvalumab", rules[1], rules[1])
-    study_element_3 = study_element_data("AZD_OLA", "AZD6738 + Olaparib", rules[1], rules[1])
-    study_element_4 = study_element_data("FOLLOW-UP", "Follow-up", rules[1], rules[1])
-    study_element_5 = study_element_data("FOLLOW-UP", "Follow-up", rules[1], rules[1])
-    study_element_6 = study_element_data("FOLLOW-UP", "Follow-up", rules[1], rules[1])
+    # Elements
+    # name, description, start rule, end rule
+    raw_element_data = [
+      ("Screening", "Screening", rules[35], rules[40]),
+      ("Titration Period 1", "dose range 10 mg to 20 mg", rules[36], rules[41]),
+      ("Titration Period 2", "dose range 20 mg to 30 mg", rules[37], rules[42]),
+      ("Titration Period 3", "dose range 30 mg to 40 mg", rules[38], rules[43]),
+      ("Titration Period 4", "dose range 40 mg to 50 mg", rules[39], rules[44]),
+      ("FOLLOW_UP", "Follow up", None, None),
+    ]
+    elements = []
+    for element in raw_element_data:
+      elements.append(study_element_data(*element))
 
     study_cells = []
-    study_cells.append(study_cell_data(study_arm_1, study_epoch_1, [study_element_1]))
-    study_cells.append(study_cell_data(study_arm_1, study_epoch_2, [study_element_2]))
-    study_cells.append(study_cell_data(study_arm_1, study_epoch_3, [study_element_3]))
-    study_cells.append(study_cell_data(study_arm_1, study_epoch_4, [study_element_4]))
-    study_cells.append(study_cell_data(study_arm_1, study_epoch_5, [study_element_5]))
-    study_cells.append(study_cell_data(study_arm_1, study_epoch_6, [study_element_6]))
-    study_cells.append(study_cell_data(study_arm_2, study_epoch_1, [study_element_1]))
-    study_cells.append(study_cell_data(study_arm_2, study_epoch_2, [study_element_2]))
-    study_cells.append(study_cell_data(study_arm_2, study_epoch_3, [study_element_3]))
-    study_cells.append(study_cell_data(study_arm_2, study_epoch_4, [study_element_4]))
-    study_cells.append(study_cell_data(study_arm_2, study_epoch_5, [study_element_5]))
-    study_cells.append(study_cell_data(study_arm_2, study_epoch_6, [study_element_6]))
+    study_cells.append(study_cell_data(study_arm_1, epochs[0], [ elements[0] ]))
+    study_cells.append(study_cell_data(study_arm_1, epochs[1], [ elements[1] ]))
+    study_cells.append(study_cell_data(study_arm_1, epochs[2], [ elements[2] ]))
+    study_cells.append(study_cell_data(study_arm_1, epochs[3], [ elements[3] ]))
+    study_cells.append(study_cell_data(study_arm_1, epochs[4], [ elements[4] ]))
+    study_cells.append(study_cell_data(study_arm_1, epochs[5], [ elements[5] ]))
 
     intent = code_for('StudyDesign', 'trialIntentType', c_code='C15714')
     design_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
-    int_model = code_for('StudyDesign', 'interventionModel', submission_value='PARALLEL')
+    int_model = code_for('StudyDesign', 'interventionModel', submission_value='SEQUENTIAL')
 
     design_1 = study_design_data([intent], design_type, int_model, study_cells, indications, objectives, [population_1], ii, [workflow], estimands)
     designs = [design_1]
 
-    # Protocol versions    
+    # Protocol versions
+    # brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):
     final = code_data("C1113x", "http://www.cdisc.org", "1", "FINAL")
+    draft = code_data("C1113y", "http://www.cdisc.org", "1", "DRAFT")
     protocol_version_1 = study_protocol_version_data(
-      "DDR", 
-      "Targeting Agents in ABTC", 
-      "DDR-Umbrella Study of DDR (DNA-Damage Response) Targeting Agents in Advanced Biliary Tract Cancer Umbrella ABTC Study",
-      "DDR-Umbrella Study of DNA-Damage Response Targeting Agents in Advanced Biliary Tract Cancer",
-      "", 
+      "BMS", 
+      "BMS Study Official title", 
+      "BMS Study Public title",
+      "BMS Study Scientific title",
+      "1", 
       None, 
       "2022-01-01", 
-      final
+      draft
     )
     protocol_versions = [protocol_version_1]
 
@@ -348,14 +310,18 @@ class BMS():
     study_type = code_data("C98388", "http://www.cdisc.org", "2022-03-25", "Interventional Study")
     registry_type = code_data("C2365x", "http://www.cdisc.org", "1", "REGISTRY_STUDY_IDENTIFIER")
     sponsor_type = code_data("C2365y", "http://www.cdisc.org", "1", "SPONSOR_STUDY_IDENTIFIER")
+    regulator_type = code_data("C2365z", "http://www.cdisc.org", "1", "REGULATOR_STUDY_IDENTIFIER")
     organisation_1 = organization_data("DUNS", "123456789", "ACME Pharma", sponsor_type)
     organisation_2 = organization_data("USGOV", "CT-GOV", "ClinicalTrials.gov", registry_type)
-    identifier_1 = study_identifier_data("NCT04298021", organisation_2)
-    identifier_2 = study_identifier_data("NCT04298023", organisation_2)
-    identifier_3 = study_identifier_data("AP002020202", organisation_1)
-    identifiers = [identifier_1, identifier_2, identifier_3]
+    organisation_3 = organization_data("FDA", "FDA", "Food and Drug Adminstration", regulator_type)
+    organisation_4 = organization_data("EMA", "EMA", "European Medicines Agency", regulator_type)
+    identifier_1 = study_identifier_data("XYZ01235", organisation_1)
+    identifier_2 = study_identifier_data("NCT12345678", organisation_2)
+    identifier_3 = study_identifier_data("FDA1234", organisation_3)
+    identifier_4 = study_identifier_data("EMA1234", organisation_4)
+    identifiers = [identifier_1, identifier_2, identifier_3, identifier_4]
 
     # Assemble complete study
-    study_title = "Umbrella Study of DDR (DNA-Damage Response) Targeting Agents in Advanced Biliary Tract Cancer"
+    study_title = "BMS Test Study"
     return study_data(study_title, "1", study_type, phase, identifiers, protocol_versions, designs)
 
