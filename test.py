@@ -16,10 +16,10 @@ def save_as_file(data, filename):
 
 if __name__ == "__main__":
   service = Service(sys.argv)
-  for study in studies:
-    data = study.json()
-    save_as_file(data, study.__name__)
-    uuid = service.post("studyDefinitions", data)
+  # for study in studies:
+  #   data = study.json()
+  #   save_as_file(data, study.__name__)
+  #   uuid = service.post("studyDefinitions", data)
   for identifier in identifiers:
     uuid = service.get("studyDefinitions?identifier=%s" % (identifier))
     identifiers = service.get("studyIdentifiers?study_uuid=%s" % (uuid))
