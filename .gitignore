@@ -133,3 +133,7 @@ dmypy.json
 
 # Environment file
 .env
+
+# Deta dir
+.deta/
+.deta/state
