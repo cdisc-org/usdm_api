@@ -6,16 +6,16 @@ class SimpleStudy():
     procedure_code = code_data("767002", "SNOMED-CT", "2022-05-31", "White blood cell count")           
     procedure_1 = procedure_data("Specimen Collection", procedure_code)
     study_data_1 = study_data_data("Study Data 1", "Something", "Link 1")
-    activity_1 = activity_data("A1", "Activity_1", 1, [procedure_1], [])
-    activity_2 = activity_data("A2", "Activity_2",  2, [], [study_data_1])
+    activity_1 = activity_data("A1", "Activity_1", [procedure_1], [])
+    activity_2 = activity_data("A2", "Activity_2", [], [study_data_1])
     activities = [activity_1, activity_2]
     double_link(activities, 'previousActivityId', 'nextActivityId')
 
     encounter_type = code_data("C7652x", "http://www.cdisc.org", "1", "SITE VISIT")
     env_setting = code_for('Encounter', 'encounterEnvironmentalSetting', c_code='C51282')    
     env_contact_mode = code_for('Encounter', 'encounterContactMode', c_code='C175574')    
-    encounter_1 = encounter_data("Encounter 1", "desc", 1, encounter_type, env_setting, env_contact_mode)
-    encounter_2 = encounter_data("Encounter 2", "desc", 2, encounter_type, env_setting, env_contact_mode)
+    encounter_1 = encounter_data("Encounter 1", "desc", encounter_type, env_setting, env_contact_mode)
+    encounter_2 = encounter_data("Encounter 2", "desc", encounter_type, env_setting, env_contact_mode)
     encounters = [encounter_1, encounter_2]
     double_link(encounters, 'previousEncounterId', 'nextEncounterId')
 

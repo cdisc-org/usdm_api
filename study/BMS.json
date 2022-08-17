@@ -1,0 +1,3221 @@
+{
+  "studyTitle": "Umbrella Study of DDR (DNA-Damage Response) Targeting Agents in Advanced Biliary Tract Cancer",
+  "studyVersion": "1",
+  "studyType": {
+    "code": "C98388",
+    "codeSystem": "http://www.cdisc.org",
+    "codeSystemVersion": "2022-03-25",
+    "decode": "Interventional Study"
+  },
+  "studyPhase": {
+    "code": "C49686",
+    "codeSystem": "http://www.cdisc.org",
+    "codeSystemVersion": "2022-03-25",
+    "decode": "Phase II Trial"
+  },
+  "studyIdentifiers": [
+    {
+      "studyIdentifier": "NCT04298021",
+      "studyIdentifierScope": {
+        "organisationIdentifierScheme": "USGOV",
+        "organisationIdentifier": "CT-GOV",
+        "organisationName": "ClinicalTrials.gov",
+        "organisationType": {
+          "code": "C2365x",
+          "codeSystem": "http://www.cdisc.org",
+          "codeSystemVersion": "1",
+          "decode": "REGISTRY_STUDY_IDENTIFIER"
+        }
+      }
+    },
+    {
+      "studyIdentifier": "NCT04298023",
+      "studyIdentifierScope": {
+        "organisationIdentifierScheme": "USGOV",
+        "organisationIdentifier": "CT-GOV",
+        "organisationName": "ClinicalTrials.gov",
+        "organisationType": {
+          "code": "C2365x",
+          "codeSystem": "http://www.cdisc.org",
+          "codeSystemVersion": "1",
+          "decode": "REGISTRY_STUDY_IDENTIFIER"
+        }
+      }
+    },
+    {
+      "studyIdentifier": "AP002020202",
+      "studyIdentifierScope": {
+        "organisationIdentifierScheme": "DUNS",
+        "organisationIdentifier": "123456789",
+        "organisationName": "ACME Pharma",
+        "organisationType": {
+          "code": "C2365y",
+          "codeSystem": "http://www.cdisc.org",
+          "codeSystemVersion": "1",
+          "decode": "SPONSOR_STUDY_IDENTIFIER"
+        }
+      }
+    }
+  ],
+  "studyProtocolVersions": [
+    {
+      "briefTitle": "DDR",
+      "officialTitle": "Targeting Agents in ABTC",
+      "publicTitle": "DDR-Umbrella Study of DDR (DNA-Damage Response) Targeting Agents in Advanced Biliary Tract Cancer Umbrella ABTC Study",
+      "scientificTitle": "DDR-Umbrella Study of DNA-Damage Response Targeting Agents in Advanced Biliary Tract Cancer",
+      "protocolVersion": "",
+      "protocolAmendment": null,
+      "protocolEffectiveDate": "2022-01-01",
+      "protocolStatus": {
+        "code": "C1113x",
+        "codeSystem": "http://www.cdisc.org",
+        "codeSystemVersion": "1",
+        "decode": "FINAL"
+      }
+    }
+  ],
+  "studyDesigns": [
+    {
+      "trialIntentTypes": [
+        {
+          "code": "C15714",
+          "codeSystem": "http://www.cdisc.org",
+          "codeSystemVersion": "2022-03-25",
+          "decode": "Basic Research"
+        }
+      ],
+      "trialType": {
+        "code": "C49666",
+        "codeSystem": "http://www.cdisc.org",
+        "codeSystemVersion": "2022-03-25",
+        "decode": "Efficacy Study"
+      },
+      "interventionModel": {
+        "code": "C82639",
+        "codeSystem": "http://www.cdisc.org",
+        "codeSystemVersion": "2022-03-25",
+        "decode": "Parallel Study"
+      },
+      "studyCells": [
+        {
+          "studyArm": {
+            "studyArmName": "DURVALUMAB ADD_ON",
+            "studyArmDesc": "AZD6738 + Durvalumab",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "SCREEN",
+            "studyEpochDesc": "Screening",
+            "previousEpochId": null,
+            "nextEpochId": "862d65a3-bafb-4542-ab67-6537ba39ad50",
+            "studyEpochType": {
+              "code": "C48262",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Trial Screening"
+            },
+            "encounters": [
+              {
+                "encounterName": "Screening",
+                "encounterDesc": "SCREENING",
+                "previousEncounterId": "79e2494e-7ecf-403d-9f3b-d5cff3b3ff1e",
+                "nextEncounterId": "38369b4f-f251-4da5-b5b8-d6d344fb63ee",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "6 weeks prior to treatment"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "start of run-in period"
+                },
+                "uuid": "976c2b8f-dafe-4f96-843e-72dd94719069"
+              }
+            ],
+            "uuid": "aa9c2d37-dd4b-45b0-ac7a-c1d6c946873c"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "SCREENING",
+              "studyElementDesc": "Screening",
+              "transitionStartRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "2 hours before treatment"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "DURVALUMAB ADD_ON",
+            "studyArmDesc": "AZD6738 + Durvalumab",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "RUN-IN",
+            "studyEpochDesc": "Run-In",
+            "previousEpochId": "aa9c2d37-dd4b-45b0-ac7a-c1d6c946873c",
+            "nextEpochId": "13d13bcd-e7ff-45f7-909b-c76e1f4ba59f",
+            "studyEpochType": {
+              "code": "C98779",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Run-in Period"
+            },
+            "encounters": [
+              {
+                "encounterName": "Cycle 1, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "976c2b8f-dafe-4f96-843e-72dd94719069",
+                "nextEncounterId": "30edb7ad-a703-4108-bb1c-a8711f0e97be",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "2 hours before treatment"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": ""
+                },
+                "uuid": "38369b4f-f251-4da5-b5b8-d6d344fb63ee"
+              },
+              {
+                "encounterName": "Cycle 1, Day 15",
+                "encounterDesc": "DAY 15",
+                "previousEncounterId": "38369b4f-f251-4da5-b5b8-d6d344fb63ee",
+                "nextEncounterId": "3cbb4b9d-1044-47b4-ad19-2c0349d665c1",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "start of day 15"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "end of day 15"
+                },
+                "uuid": "30edb7ad-a703-4108-bb1c-a8711f0e97be"
+              },
+              {
+                "encounterName": "Cycle 2, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "30edb7ad-a703-4108-bb1c-a8711f0e97be",
+                "nextEncounterId": "955690d3-9958-422f-b2f5-9f8ad4842ea6",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "start of day 22"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "end of day 22"
+                },
+                "uuid": "3cbb4b9d-1044-47b4-ad19-2c0349d665c1"
+              }
+            ],
+            "uuid": "862d65a3-bafb-4542-ab67-6537ba39ad50"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "AZD_DRUV",
+              "studyElementDesc": "AZD6738 + Durvalumab",
+              "transitionStartRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "DURVALUMAB ADD_ON",
+            "studyArmDesc": "AZD6738 + Durvalumab",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "TREATMENT 1",
+            "studyEpochDesc": "Treatment Cycle 1",
+            "previousEpochId": "862d65a3-bafb-4542-ab67-6537ba39ad50",
+            "nextEpochId": "6c0eb587-993d-4dea-9cc7-fc64910ab932",
+            "studyEpochType": {
+              "code": "C101526",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Treatment Epoch"
+            },
+            "encounters": [
+              {
+                "encounterName": "Cycle 2, Day 15",
+                "encounterDesc": "DAY 15",
+                "previousEncounterId": "3cbb4b9d-1044-47b4-ad19-2c0349d665c1",
+                "nextEncounterId": "a18809b6-39bf-4950-82f4-730df99af873",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "start of day 36"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 36"
+                },
+                "uuid": "955690d3-9958-422f-b2f5-9f8ad4842ea6"
+              },
+              {
+                "encounterName": "Cycle 3, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "955690d3-9958-422f-b2f5-9f8ad4842ea6",
+                "nextEncounterId": "4322f7b3-a3f8-4216-a820-a63933d36b38",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 43"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 43"
+                },
+                "uuid": "a18809b6-39bf-4950-82f4-730df99af873"
+              },
+              {
+                "encounterName": "Cycle 4, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "a18809b6-39bf-4950-82f4-730df99af873",
+                "nextEncounterId": "a9433a32-976b-47a8-8fd9-ce372fafbeef",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 64"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 64"
+                },
+                "uuid": "4322f7b3-a3f8-4216-a820-a63933d36b38"
+              }
+            ],
+            "uuid": "13d13bcd-e7ff-45f7-909b-c76e1f4ba59f"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "AZD_OLA",
+              "studyElementDesc": "AZD6738 + Olaparib",
+              "transitionStartRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "DURVALUMAB ADD_ON",
+            "studyArmDesc": "AZD6738 + Durvalumab",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "TREATMENT 2",
+            "studyEpochDesc": "Treatment Cycle 2",
+            "previousEpochId": "13d13bcd-e7ff-45f7-909b-c76e1f4ba59f",
+            "nextEpochId": "fe36cd58-7eb8-4913-9787-3d049273dfa3",
+            "studyEpochType": {
+              "code": "C101526",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Treatment Epoch"
+            },
+            "encounters": [
+              {
+                "encounterName": "Cycle 5, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "4322f7b3-a3f8-4216-a820-a63933d36b38",
+                "nextEncounterId": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 85"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 85"
+                },
+                "uuid": "a9433a32-976b-47a8-8fd9-ce372fafbeef"
+              },
+              {
+                "encounterName": "Cycle 6, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "a9433a32-976b-47a8-8fd9-ce372fafbeef",
+                "nextEncounterId": "df2d25f0-2e69-4c3a-8fd4-095266634b57",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 106"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 106"
+                },
+                "uuid": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770"
+              }
+            ],
+            "uuid": "6c0eb587-993d-4dea-9cc7-fc64910ab932"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "FOLLOW-UP",
+              "studyElementDesc": "Follow-up",
+              "transitionStartRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "DURVALUMAB ADD_ON",
+            "studyArmDesc": "AZD6738 + Durvalumab",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "TREATMENT X",
+            "studyEpochDesc": "Treatment Cycle X",
+            "previousEpochId": "6c0eb587-993d-4dea-9cc7-fc64910ab932",
+            "nextEpochId": "33661b82-a429-459b-9409-73641b613e7c",
+            "studyEpochType": {
+              "code": "C101526",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Treatment Epoch"
+            },
+            "encounters": [
+              {
+                "encounterName": "Cycle 7, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770",
+                "nextEncounterId": "e19e197d-b61f-4e83-8ded-7e34e4c9dae8",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 127"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 127"
+                },
+                "uuid": "df2d25f0-2e69-4c3a-8fd4-095266634b57"
+              },
+              {
+                "encounterName": "Cycle 8, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "df2d25f0-2e69-4c3a-8fd4-095266634b57",
+                "nextEncounterId": "6e03159a-cb52-4b70-85a4-dc26ee7ec787",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 148"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 148"
+                },
+                "uuid": "e19e197d-b61f-4e83-8ded-7e34e4c9dae8"
+              }
+            ],
+            "uuid": "fe36cd58-7eb8-4913-9787-3d049273dfa3"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "FOLLOW-UP",
+              "studyElementDesc": "Follow-up",
+              "transitionStartRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "DURVALUMAB ADD_ON",
+            "studyArmDesc": "AZD6738 + Durvalumab",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "FOLLOW-UP",
+            "studyEpochDesc": "Follow-up",
+            "previousEpochId": "fe36cd58-7eb8-4913-9787-3d049273dfa3",
+            "nextEpochId": null,
+            "studyEpochType": {
+              "code": "C99158",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Clinical Study Follow-up"
+            },
+            "encounters": [
+              {
+                "encounterName": "Cycle 9, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "e19e197d-b61f-4e83-8ded-7e34e4c9dae8",
+                "nextEncounterId": "a57090f6-a0d4-434f-b022-169e9303503c",
+                "encounterType": {
+                  "code": "C7653x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "VIRTUAL VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C171525",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Audio-Videoconferencing"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 169"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 169"
+                },
+                "uuid": "6e03159a-cb52-4b70-85a4-dc26ee7ec787"
+              },
+              {
+                "encounterName": "Follow up",
+                "encounterDesc": "FOLLOW-UP",
+                "previousEncounterId": "6e03159a-cb52-4b70-85a4-dc26ee7ec787",
+                "nextEncounterId": null,
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": ""
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "6 weeks prior to treatment"
+                },
+                "uuid": "a57090f6-a0d4-434f-b022-169e9303503c"
+              }
+            ],
+            "uuid": "33661b82-a429-459b-9409-73641b613e7c"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "FOLLOW-UP",
+              "studyElementDesc": "Follow-up",
+              "transitionStartRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "OLAPARIB_ADDON",
+            "studyArmDesc": "AZD6738 + Olaparib",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "SCREEN",
+            "studyEpochDesc": "Screening",
+            "previousEpochId": null,
+            "nextEpochId": "862d65a3-bafb-4542-ab67-6537ba39ad50",
+            "studyEpochType": {
+              "code": "C48262",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Trial Screening"
+            },
+            "encounters": [
+              {
+                "encounterName": "Screening",
+                "encounterDesc": "SCREENING",
+                "previousEncounterId": "79e2494e-7ecf-403d-9f3b-d5cff3b3ff1e",
+                "nextEncounterId": "38369b4f-f251-4da5-b5b8-d6d344fb63ee",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "6 weeks prior to treatment"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "start of run-in period"
+                },
+                "uuid": "976c2b8f-dafe-4f96-843e-72dd94719069"
+              }
+            ],
+            "uuid": "aa9c2d37-dd4b-45b0-ac7a-c1d6c946873c"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "SCREENING",
+              "studyElementDesc": "Screening",
+              "transitionStartRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "2 hours before treatment"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "OLAPARIB_ADDON",
+            "studyArmDesc": "AZD6738 + Olaparib",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "RUN-IN",
+            "studyEpochDesc": "Run-In",
+            "previousEpochId": "aa9c2d37-dd4b-45b0-ac7a-c1d6c946873c",
+            "nextEpochId": "13d13bcd-e7ff-45f7-909b-c76e1f4ba59f",
+            "studyEpochType": {
+              "code": "C98779",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Run-in Period"
+            },
+            "encounters": [
+              {
+                "encounterName": "Cycle 1, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "976c2b8f-dafe-4f96-843e-72dd94719069",
+                "nextEncounterId": "30edb7ad-a703-4108-bb1c-a8711f0e97be",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "2 hours before treatment"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": ""
+                },
+                "uuid": "38369b4f-f251-4da5-b5b8-d6d344fb63ee"
+              },
+              {
+                "encounterName": "Cycle 1, Day 15",
+                "encounterDesc": "DAY 15",
+                "previousEncounterId": "38369b4f-f251-4da5-b5b8-d6d344fb63ee",
+                "nextEncounterId": "3cbb4b9d-1044-47b4-ad19-2c0349d665c1",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "start of day 15"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "end of day 15"
+                },
+                "uuid": "30edb7ad-a703-4108-bb1c-a8711f0e97be"
+              },
+              {
+                "encounterName": "Cycle 2, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "30edb7ad-a703-4108-bb1c-a8711f0e97be",
+                "nextEncounterId": "955690d3-9958-422f-b2f5-9f8ad4842ea6",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "start of day 22"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "end of day 22"
+                },
+                "uuid": "3cbb4b9d-1044-47b4-ad19-2c0349d665c1"
+              }
+            ],
+            "uuid": "862d65a3-bafb-4542-ab67-6537ba39ad50"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "AZD_DRUV",
+              "studyElementDesc": "AZD6738 + Durvalumab",
+              "transitionStartRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "OLAPARIB_ADDON",
+            "studyArmDesc": "AZD6738 + Olaparib",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "TREATMENT 1",
+            "studyEpochDesc": "Treatment Cycle 1",
+            "previousEpochId": "862d65a3-bafb-4542-ab67-6537ba39ad50",
+            "nextEpochId": "6c0eb587-993d-4dea-9cc7-fc64910ab932",
+            "studyEpochType": {
+              "code": "C101526",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Treatment Epoch"
+            },
+            "encounters": [
+              {
+                "encounterName": "Cycle 2, Day 15",
+                "encounterDesc": "DAY 15",
+                "previousEncounterId": "3cbb4b9d-1044-47b4-ad19-2c0349d665c1",
+                "nextEncounterId": "a18809b6-39bf-4950-82f4-730df99af873",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "start of day 36"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 36"
+                },
+                "uuid": "955690d3-9958-422f-b2f5-9f8ad4842ea6"
+              },
+              {
+                "encounterName": "Cycle 3, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "955690d3-9958-422f-b2f5-9f8ad4842ea6",
+                "nextEncounterId": "4322f7b3-a3f8-4216-a820-a63933d36b38",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 43"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 43"
+                },
+                "uuid": "a18809b6-39bf-4950-82f4-730df99af873"
+              },
+              {
+                "encounterName": "Cycle 4, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "a18809b6-39bf-4950-82f4-730df99af873",
+                "nextEncounterId": "a9433a32-976b-47a8-8fd9-ce372fafbeef",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 64"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 64"
+                },
+                "uuid": "4322f7b3-a3f8-4216-a820-a63933d36b38"
+              }
+            ],
+            "uuid": "13d13bcd-e7ff-45f7-909b-c76e1f4ba59f"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "AZD_OLA",
+              "studyElementDesc": "AZD6738 + Olaparib",
+              "transitionStartRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "OLAPARIB_ADDON",
+            "studyArmDesc": "AZD6738 + Olaparib",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "TREATMENT 2",
+            "studyEpochDesc": "Treatment Cycle 2",
+            "previousEpochId": "13d13bcd-e7ff-45f7-909b-c76e1f4ba59f",
+            "nextEpochId": "fe36cd58-7eb8-4913-9787-3d049273dfa3",
+            "studyEpochType": {
+              "code": "C101526",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Treatment Epoch"
+            },
+            "encounters": [
+              {
+                "encounterName": "Cycle 5, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "4322f7b3-a3f8-4216-a820-a63933d36b38",
+                "nextEncounterId": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 85"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 85"
+                },
+                "uuid": "a9433a32-976b-47a8-8fd9-ce372fafbeef"
+              },
+              {
+                "encounterName": "Cycle 6, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "a9433a32-976b-47a8-8fd9-ce372fafbeef",
+                "nextEncounterId": "df2d25f0-2e69-4c3a-8fd4-095266634b57",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 106"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 106"
+                },
+                "uuid": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770"
+              }
+            ],
+            "uuid": "6c0eb587-993d-4dea-9cc7-fc64910ab932"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "FOLLOW-UP",
+              "studyElementDesc": "Follow-up",
+              "transitionStartRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "OLAPARIB_ADDON",
+            "studyArmDesc": "AZD6738 + Olaparib",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "TREATMENT X",
+            "studyEpochDesc": "Treatment Cycle X",
+            "previousEpochId": "6c0eb587-993d-4dea-9cc7-fc64910ab932",
+            "nextEpochId": "33661b82-a429-459b-9409-73641b613e7c",
+            "studyEpochType": {
+              "code": "C101526",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Treatment Epoch"
+            },
+            "encounters": [
+              {
+                "encounterName": "Cycle 7, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770",
+                "nextEncounterId": "e19e197d-b61f-4e83-8ded-7e34e4c9dae8",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 127"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 127"
+                },
+                "uuid": "df2d25f0-2e69-4c3a-8fd4-095266634b57"
+              },
+              {
+                "encounterName": "Cycle 8, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "df2d25f0-2e69-4c3a-8fd4-095266634b57",
+                "nextEncounterId": "6e03159a-cb52-4b70-85a4-dc26ee7ec787",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 148"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 148"
+                },
+                "uuid": "e19e197d-b61f-4e83-8ded-7e34e4c9dae8"
+              }
+            ],
+            "uuid": "fe36cd58-7eb8-4913-9787-3d049273dfa3"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "FOLLOW-UP",
+              "studyElementDesc": "Follow-up",
+              "transitionStartRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              }
+            }
+          ]
+        },
+        {
+          "studyArm": {
+            "studyArmName": "OLAPARIB_ADDON",
+            "studyArmDesc": "AZD6738 + Olaparib",
+            "studyArmType": {
+              "code": "C15538",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Protocol Treatment Arm"
+            },
+            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginType": {
+              "code": "C6574y",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "SUBJECT DATA"
+            }
+          },
+          "studyEpoch": {
+            "studyEpochName": "FOLLOW-UP",
+            "studyEpochDesc": "Follow-up",
+            "previousEpochId": "fe36cd58-7eb8-4913-9787-3d049273dfa3",
+            "nextEpochId": null,
+            "studyEpochType": {
+              "code": "C99158",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Clinical Study Follow-up"
+            },
+            "encounters": [
+              {
+                "encounterName": "Cycle 9, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "e19e197d-b61f-4e83-8ded-7e34e4c9dae8",
+                "nextEncounterId": "a57090f6-a0d4-434f-b022-169e9303503c",
+                "encounterType": {
+                  "code": "C7653x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "VIRTUAL VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C171525",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Audio-Videoconferencing"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 169"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 169"
+                },
+                "uuid": "6e03159a-cb52-4b70-85a4-dc26ee7ec787"
+              },
+              {
+                "encounterName": "Follow up",
+                "encounterDesc": "FOLLOW-UP",
+                "previousEncounterId": "6e03159a-cb52-4b70-85a4-dc26ee7ec787",
+                "nextEncounterId": null,
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": ""
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "6 weeks prior to treatment"
+                },
+                "uuid": "a57090f6-a0d4-434f-b022-169e9303503c"
+              }
+            ],
+            "uuid": "33661b82-a429-459b-9409-73641b613e7c"
+          },
+          "studyElements": [
+            {
+              "studyElementName": "FOLLOW-UP",
+              "studyElementDesc": "Follow-up",
+              "transitionStartRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              },
+              "transitionEndRule": {
+                "transitionRuleDesc": "6 weeks prior to treatment"
+              }
+            }
+          ]
+        }
+      ],
+      "studyIndications": [
+        {
+          "codes": [
+            {
+              "code": "C22.1",
+              "codeSystem": "ICD\t10",
+              "codeSystemVersion": "1",
+              "decode": "Intrahepatic bile duct carcinoma"
+            },
+            {
+              "code": "371970002",
+              "codeSystem": "SNOMED-CT",
+              "codeSystemVersion": "4.0.6.4",
+              "decode": "Primary malignant neoplasm of biliary tract (disorder)"
+            },
+            {
+              "code": "10004596",
+              "codeSystem": "MEDDRA",
+              "codeSystemVersion": "Nov18_2021",
+              "decode": "Bile duct cancer recurrent"
+            }
+          ],
+          "indicationDesc": "Bile duct cancer"
+        },
+        {
+          "codes": [
+            {
+              "code": "24662006",
+              "codeSystem": "SNOMED-CT",
+              "codeSystemVersion": "4.0.6.4",
+              "decode": "Influenza due to Influenza virus, type B"
+            },
+            {
+              "code": "1022000",
+              "codeSystem": "MEDDRA",
+              "codeSystemVersion": "Nov18_2021",
+              "decode": "Influenza"
+            },
+            {
+              "code": "J11.1",
+              "codeSystem": "ICD\t10",
+              "codeSystemVersion": "1",
+              "decode": "Influenza due to unidentified influenza virus with other respiratory manifestations"
+            }
+          ],
+          "indicationDesc": "Influenza"
+        }
+      ],
+      "studyObjectives": [
+        {
+          "objectiveDesc": "To assess the effect of AZD6738 and Durvalumab combination or AZD6738 and Olaparib combination in biliary tract cancer patients who have failed to 1st-line chemotherapy and are in second phase of disease",
+          "objectiveLevel": {
+            "code": "C9844x",
+            "codeSystem": "http://www.cdisc.org",
+            "codeSystemVersion": "1",
+            "decode": "OBJ LEVEL"
+          },
+          "objectiveEndpoints": [
+            {
+              "endpointDesc": "Disease control rate of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9834x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "PRIMARY"
+              }
+            },
+            {
+              "endpointDesc": "Disease control rate of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9834x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "PRIMARY"
+              }
+            },
+            {
+              "endpointDesc": "Overall response rate of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "progression-free survival of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "duration of response of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "PHARMACODYNAMIC",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "overall survival of response of AZD6738 + Durvalumab cohort [ Time Frame: every 12 weeks until death or up to 5 years ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "Safety and tolerability of AZD6738 + Durvalumab cohort measured by number and grade of toxicity events [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "SAFETY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "quality of life measurement of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "overall response rate (ORR) of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "progression-free survival of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "duration of response of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "PHARMACODYNAMIC",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "overall survival of AZD6738 + Olaparib cohort [ Time Frame: every 12 weeks until death or up to 5 years ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "Safety and tolerability of AZD6738 + Olaparib cohort as measured by number and grade of toxicity events [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "SAFETY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "quality of life measurement of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            }
+          ]
+        },
+        {
+          "objectiveDesc": "To assess the effect of AZD6738 and Durvalumab combination or AZD6738 and Olaparib combination in biliary tract cancer patients who have failed to 1st-line chemotherapy and are in second phase of disease",
+          "objectiveLevel": {
+            "code": "C9844x",
+            "codeSystem": "http://www.cdisc.org",
+            "codeSystemVersion": "1",
+            "decode": "OBJ LEVEL"
+          },
+          "objectiveEndpoints": [
+            {
+              "endpointDesc": "Safety and tolerability of AZD6738 + Durvalumab cohort measured by number and grade of toxicity events [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "SAFETY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "Safety and tolerability of AZD6738 + Olaparib cohort as measured by number and grade of toxicity events [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "SAFETY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            }
+          ]
+        },
+        {
+          "objectiveDesc": "To assess the effect of AZD6738 and Durvalumab combination or AZD6738 and Olaparib combination in biliary tract cancer patients who have failed to 1st-line chemotherapy",
+          "objectiveLevel": {
+            "code": "C9844x",
+            "codeSystem": "http://www.cdisc.org",
+            "codeSystemVersion": "1",
+            "decode": "OBJ LEVEL"
+          },
+          "objectiveEndpoints": [
+            {
+              "endpointDesc": "Disease control rate of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9834x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "PRIMARY"
+              }
+            },
+            {
+              "endpointDesc": "Disease control rate of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9834x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "PRIMARY"
+              }
+            },
+            {
+              "endpointDesc": "Overall response rate of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "progression-free survival of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "duration of response of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "PHARMACODYNAMIC",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "overall survival of response of AZD6738 + Durvalumab cohort [ Time Frame: every 12 weeks until death or up to 5 years ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "Safety and tolerability of AZD6738 + Durvalumab cohort measured by number and grade of toxicity events [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "SAFETY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "quality of life measurement of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "overall response rate (ORR) of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "progression-free survival of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "duration of response of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "PHARMACODYNAMIC",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "overall survival of AZD6738 + Olaparib cohort [ Time Frame: every 12 weeks until death or up to 5 years ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            },
+            {
+              "endpointDesc": "quality of life measurement of AZD6738 + Olaparib cohort [ Time Frame: through study completion, an average of 1 year ]",
+              "endpointPurposeDesc": "EFFICACY",
+              "endpointLevel": {
+                "code": "C9835x",
+                "codeSystem": "http://www.cdisc.org",
+                "codeSystemVersion": "1",
+                "decode": "SECONDARY"
+              }
+            }
+          ]
+        }
+      ],
+      "studyPopulations": [
+        {
+          "populationDesc": "biliary tract cancer patients who have failed to 1st-line chemotherapy"
+        }
+      ],
+      "studyInvestigationalInterventions": [
+        {
+          "codes": [
+            {
+              "code": "L01XK01",
+              "codeSystem": "ATC",
+              "codeSystemVersion": "14-12-2021",
+              "decode": "Olaparib"
+            }
+          ],
+          "interventionDesc": "Olaparibstring"
+        },
+        {
+          "codes": [
+            {
+              "code": "L01XC28",
+              "codeSystem": "ATC",
+              "codeSystemVersion": "14-12-2021",
+              "decode": "Durvalumab"
+            },
+            {
+              "code": "249565666",
+              "codeSystem": "PubChem",
+              "codeSystemVersion": "09/02/2021",
+              "decode": "Durvalumab; Imfinzi; Anti-B7H1; Monoclonal Antibody"
+            }
+          ],
+          "interventionDesc": "Durvalumab"
+        },
+        {
+          "codes": [],
+          "interventionDesc": "AZD6738"
+        }
+      ],
+      "studyWorkflows": [
+        {
+          "workflowDesc": "Schedule of Activities",
+          "workflowItems": [
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 1, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "976c2b8f-dafe-4f96-843e-72dd94719069",
+                "nextEncounterId": "30edb7ad-a703-4108-bb1c-a8711f0e97be",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "2 hours before treatment"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": ""
+                },
+                "uuid": "38369b4f-f251-4da5-b5b8-d6d344fb63ee"
+              },
+              "workflowItemActivity": {
+                "activityName": "A3",
+                "activityDesc": "Hematology",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "2b52bb50-35b9-4856-b8e5-ab70caca3886",
+              "previousWorkflowItemId": null,
+              "nextWorkflowItemId": "7506bcde-a932-40b7-afa9-0c6c685f767e"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 1, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "976c2b8f-dafe-4f96-843e-72dd94719069",
+                "nextEncounterId": "30edb7ad-a703-4108-bb1c-a8711f0e97be",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "2 hours before treatment"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": ""
+                },
+                "uuid": "38369b4f-f251-4da5-b5b8-d6d344fb63ee"
+              },
+              "workflowItemActivity": {
+                "activityName": "A6",
+                "activityDesc": "Dosing",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "7506bcde-a932-40b7-afa9-0c6c685f767e",
+              "previousWorkflowItemId": "2b52bb50-35b9-4856-b8e5-ab70caca3886",
+              "nextWorkflowItemId": "b51eb4da-ba2c-4975-bf34-91c22e5968eb"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 1, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "976c2b8f-dafe-4f96-843e-72dd94719069",
+                "nextEncounterId": "30edb7ad-a703-4108-bb1c-a8711f0e97be",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "2 hours before treatment"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": ""
+                },
+                "uuid": "38369b4f-f251-4da5-b5b8-d6d344fb63ee"
+              },
+              "workflowItemActivity": {
+                "activityName": "A7",
+                "activityDesc": "Plasma Biomarker",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "b51eb4da-ba2c-4975-bf34-91c22e5968eb",
+              "previousWorkflowItemId": "7506bcde-a932-40b7-afa9-0c6c685f767e",
+              "nextWorkflowItemId": "a6c61206-e876-4b17-a2a1-8cb6123bc1da"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 1, Day 15",
+                "encounterDesc": "DAY 15",
+                "previousEncounterId": "38369b4f-f251-4da5-b5b8-d6d344fb63ee",
+                "nextEncounterId": "3cbb4b9d-1044-47b4-ad19-2c0349d665c1",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "start of day 15"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "end of day 15"
+                },
+                "uuid": "30edb7ad-a703-4108-bb1c-a8711f0e97be"
+              },
+              "workflowItemActivity": {
+                "activityName": "A3",
+                "activityDesc": "Hematology",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "a6c61206-e876-4b17-a2a1-8cb6123bc1da",
+              "previousWorkflowItemId": "b51eb4da-ba2c-4975-bf34-91c22e5968eb",
+              "nextWorkflowItemId": "673bdc9b-c5d2-4abf-bad7-90a069238d64"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 1, Day 15",
+                "encounterDesc": "DAY 15",
+                "previousEncounterId": "38369b4f-f251-4da5-b5b8-d6d344fb63ee",
+                "nextEncounterId": "3cbb4b9d-1044-47b4-ad19-2c0349d665c1",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "start of day 15"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "end of day 15"
+                },
+                "uuid": "30edb7ad-a703-4108-bb1c-a8711f0e97be"
+              },
+              "workflowItemActivity": {
+                "activityName": "A6",
+                "activityDesc": "Dosing",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "673bdc9b-c5d2-4abf-bad7-90a069238d64",
+              "previousWorkflowItemId": "a6c61206-e876-4b17-a2a1-8cb6123bc1da",
+              "nextWorkflowItemId": "eb71d1da-76a4-45df-aaca-f2c632f66e3c"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 2, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "30edb7ad-a703-4108-bb1c-a8711f0e97be",
+                "nextEncounterId": "955690d3-9958-422f-b2f5-9f8ad4842ea6",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "start of day 22"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "end of day 22"
+                },
+                "uuid": "3cbb4b9d-1044-47b4-ad19-2c0349d665c1"
+              },
+              "workflowItemActivity": {
+                "activityName": "A3",
+                "activityDesc": "Hematology",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "eb71d1da-76a4-45df-aaca-f2c632f66e3c",
+              "previousWorkflowItemId": "673bdc9b-c5d2-4abf-bad7-90a069238d64",
+              "nextWorkflowItemId": "8371c95e-9d05-44a0-98ae-fec3dec95895"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 2, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "30edb7ad-a703-4108-bb1c-a8711f0e97be",
+                "nextEncounterId": "955690d3-9958-422f-b2f5-9f8ad4842ea6",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "start of day 22"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "end of day 22"
+                },
+                "uuid": "3cbb4b9d-1044-47b4-ad19-2c0349d665c1"
+              },
+              "workflowItemActivity": {
+                "activityName": "A6",
+                "activityDesc": "Dosing",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "8371c95e-9d05-44a0-98ae-fec3dec95895",
+              "previousWorkflowItemId": "eb71d1da-76a4-45df-aaca-f2c632f66e3c",
+              "nextWorkflowItemId": "a4259d6a-0416-4d6c-9ce6-73370e5750f8"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 2, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "30edb7ad-a703-4108-bb1c-a8711f0e97be",
+                "nextEncounterId": "955690d3-9958-422f-b2f5-9f8ad4842ea6",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "start of day 22"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "end of day 22"
+                },
+                "uuid": "3cbb4b9d-1044-47b4-ad19-2c0349d665c1"
+              },
+              "workflowItemActivity": {
+                "activityName": "A7",
+                "activityDesc": "Plasma Biomarker",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "a4259d6a-0416-4d6c-9ce6-73370e5750f8",
+              "previousWorkflowItemId": "8371c95e-9d05-44a0-98ae-fec3dec95895",
+              "nextWorkflowItemId": "20f60945-c3f9-4897-863b-abb8e69aac6f"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 2, Day 15",
+                "encounterDesc": "DAY 15",
+                "previousEncounterId": "3cbb4b9d-1044-47b4-ad19-2c0349d665c1",
+                "nextEncounterId": "a18809b6-39bf-4950-82f4-730df99af873",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "start of day 36"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 36"
+                },
+                "uuid": "955690d3-9958-422f-b2f5-9f8ad4842ea6"
+              },
+              "workflowItemActivity": {
+                "activityName": "A3",
+                "activityDesc": "Hematology",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "20f60945-c3f9-4897-863b-abb8e69aac6f",
+              "previousWorkflowItemId": "a4259d6a-0416-4d6c-9ce6-73370e5750f8",
+              "nextWorkflowItemId": "b3d8e936-798f-4739-a78f-33d271fd32d0"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 2, Day 15",
+                "encounterDesc": "DAY 15",
+                "previousEncounterId": "3cbb4b9d-1044-47b4-ad19-2c0349d665c1",
+                "nextEncounterId": "a18809b6-39bf-4950-82f4-730df99af873",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "start of day 36"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 36"
+                },
+                "uuid": "955690d3-9958-422f-b2f5-9f8ad4842ea6"
+              },
+              "workflowItemActivity": {
+                "activityName": "A5",
+                "activityDesc": "Demographics",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "b3d8e936-798f-4739-a78f-33d271fd32d0",
+              "previousWorkflowItemId": "20f60945-c3f9-4897-863b-abb8e69aac6f",
+              "nextWorkflowItemId": "d0b335dd-e365-4459-9ede-a5f5af3361b5"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 3, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "955690d3-9958-422f-b2f5-9f8ad4842ea6",
+                "nextEncounterId": "4322f7b3-a3f8-4216-a820-a63933d36b38",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 43"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 43"
+                },
+                "uuid": "a18809b6-39bf-4950-82f4-730df99af873"
+              },
+              "workflowItemActivity": {
+                "activityName": "A3",
+                "activityDesc": "Hematology",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "d0b335dd-e365-4459-9ede-a5f5af3361b5",
+              "previousWorkflowItemId": "b3d8e936-798f-4739-a78f-33d271fd32d0",
+              "nextWorkflowItemId": "80a2f337-cff5-4e6a-9fd8-d9365462538d"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 3, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "955690d3-9958-422f-b2f5-9f8ad4842ea6",
+                "nextEncounterId": "4322f7b3-a3f8-4216-a820-a63933d36b38",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 43"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 43"
+                },
+                "uuid": "a18809b6-39bf-4950-82f4-730df99af873"
+              },
+              "workflowItemActivity": {
+                "activityName": "A6",
+                "activityDesc": "Dosing",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "80a2f337-cff5-4e6a-9fd8-d9365462538d",
+              "previousWorkflowItemId": "d0b335dd-e365-4459-9ede-a5f5af3361b5",
+              "nextWorkflowItemId": "59cc6a2e-1698-4cb1-b34e-09805673ba98"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 3, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "955690d3-9958-422f-b2f5-9f8ad4842ea6",
+                "nextEncounterId": "4322f7b3-a3f8-4216-a820-a63933d36b38",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 43"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 43"
+                },
+                "uuid": "a18809b6-39bf-4950-82f4-730df99af873"
+              },
+              "workflowItemActivity": {
+                "activityName": "A7",
+                "activityDesc": "Plasma Biomarker",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "59cc6a2e-1698-4cb1-b34e-09805673ba98",
+              "previousWorkflowItemId": "80a2f337-cff5-4e6a-9fd8-d9365462538d",
+              "nextWorkflowItemId": "3ece2980-71b2-4462-8a91-ed23fb949c01"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 4, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "a18809b6-39bf-4950-82f4-730df99af873",
+                "nextEncounterId": "a9433a32-976b-47a8-8fd9-ce372fafbeef",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 64"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 64"
+                },
+                "uuid": "4322f7b3-a3f8-4216-a820-a63933d36b38"
+              },
+              "workflowItemActivity": {
+                "activityName": "A3",
+                "activityDesc": "Hematology",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "3ece2980-71b2-4462-8a91-ed23fb949c01",
+              "previousWorkflowItemId": "59cc6a2e-1698-4cb1-b34e-09805673ba98",
+              "nextWorkflowItemId": "0c57ece0-059b-4535-aedf-fafdae73a840"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 4, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "a18809b6-39bf-4950-82f4-730df99af873",
+                "nextEncounterId": "a9433a32-976b-47a8-8fd9-ce372fafbeef",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 64"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 64"
+                },
+                "uuid": "4322f7b3-a3f8-4216-a820-a63933d36b38"
+              },
+              "workflowItemActivity": {
+                "activityName": "A6",
+                "activityDesc": "Dosing",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "0c57ece0-059b-4535-aedf-fafdae73a840",
+              "previousWorkflowItemId": "3ece2980-71b2-4462-8a91-ed23fb949c01",
+              "nextWorkflowItemId": "ec18effd-0602-46cb-af3b-0782d7388ec0"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 4, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "a18809b6-39bf-4950-82f4-730df99af873",
+                "nextEncounterId": "a9433a32-976b-47a8-8fd9-ce372fafbeef",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 64"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 64"
+                },
+                "uuid": "4322f7b3-a3f8-4216-a820-a63933d36b38"
+              },
+              "workflowItemActivity": {
+                "activityName": "A7",
+                "activityDesc": "Plasma Biomarker",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "ec18effd-0602-46cb-af3b-0782d7388ec0",
+              "previousWorkflowItemId": "0c57ece0-059b-4535-aedf-fafdae73a840",
+              "nextWorkflowItemId": "4169c273-4c74-47b8-a7b1-496b0510ab1f"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 5, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "4322f7b3-a3f8-4216-a820-a63933d36b38",
+                "nextEncounterId": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 85"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 85"
+                },
+                "uuid": "a9433a32-976b-47a8-8fd9-ce372fafbeef"
+              },
+              "workflowItemActivity": {
+                "activityName": "A3",
+                "activityDesc": "Hematology",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "4169c273-4c74-47b8-a7b1-496b0510ab1f",
+              "previousWorkflowItemId": "ec18effd-0602-46cb-af3b-0782d7388ec0",
+              "nextWorkflowItemId": "57b6137f-98d1-4dc6-8610-f74120caceaa"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 5, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "4322f7b3-a3f8-4216-a820-a63933d36b38",
+                "nextEncounterId": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 85"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 85"
+                },
+                "uuid": "a9433a32-976b-47a8-8fd9-ce372fafbeef"
+              },
+              "workflowItemActivity": {
+                "activityName": "A6",
+                "activityDesc": "Dosing",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "57b6137f-98d1-4dc6-8610-f74120caceaa",
+              "previousWorkflowItemId": "4169c273-4c74-47b8-a7b1-496b0510ab1f",
+              "nextWorkflowItemId": "65aed953-8baa-4b96-b95f-5e2fbc24cec2"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 6, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "a9433a32-976b-47a8-8fd9-ce372fafbeef",
+                "nextEncounterId": "df2d25f0-2e69-4c3a-8fd4-095266634b57",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 106"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 106"
+                },
+                "uuid": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770"
+              },
+              "workflowItemActivity": {
+                "activityName": "A3",
+                "activityDesc": "Hematology",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "65aed953-8baa-4b96-b95f-5e2fbc24cec2",
+              "previousWorkflowItemId": "57b6137f-98d1-4dc6-8610-f74120caceaa",
+              "nextWorkflowItemId": "ee9a8327-8754-4abd-bb2e-e5c84cbfe29d"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 6, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "a9433a32-976b-47a8-8fd9-ce372fafbeef",
+                "nextEncounterId": "df2d25f0-2e69-4c3a-8fd4-095266634b57",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 106"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 106"
+                },
+                "uuid": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770"
+              },
+              "workflowItemActivity": {
+                "activityName": "A6",
+                "activityDesc": "Dosing",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "ee9a8327-8754-4abd-bb2e-e5c84cbfe29d",
+              "previousWorkflowItemId": "65aed953-8baa-4b96-b95f-5e2fbc24cec2",
+              "nextWorkflowItemId": "ab634630-3ee3-4a7e-ab09-703518a1fec0"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 6, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "a9433a32-976b-47a8-8fd9-ce372fafbeef",
+                "nextEncounterId": "df2d25f0-2e69-4c3a-8fd4-095266634b57",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 106"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 106"
+                },
+                "uuid": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770"
+              },
+              "workflowItemActivity": {
+                "activityName": "A7",
+                "activityDesc": "Plasma Biomarker",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "ab634630-3ee3-4a7e-ab09-703518a1fec0",
+              "previousWorkflowItemId": "ee9a8327-8754-4abd-bb2e-e5c84cbfe29d",
+              "nextWorkflowItemId": "3d88e96b-350c-4b86-a9ac-a41948415fe0"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 7, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770",
+                "nextEncounterId": "e19e197d-b61f-4e83-8ded-7e34e4c9dae8",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 127"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 127"
+                },
+                "uuid": "df2d25f0-2e69-4c3a-8fd4-095266634b57"
+              },
+              "workflowItemActivity": {
+                "activityName": "A3",
+                "activityDesc": "Hematology",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "3d88e96b-350c-4b86-a9ac-a41948415fe0",
+              "previousWorkflowItemId": "ab634630-3ee3-4a7e-ab09-703518a1fec0",
+              "nextWorkflowItemId": "23b901e5-66d9-4650-af16-e8f191dc0a7d"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 7, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770",
+                "nextEncounterId": "e19e197d-b61f-4e83-8ded-7e34e4c9dae8",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 127"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 127"
+                },
+                "uuid": "df2d25f0-2e69-4c3a-8fd4-095266634b57"
+              },
+              "workflowItemActivity": {
+                "activityName": "A6",
+                "activityDesc": "Dosing",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "23b901e5-66d9-4650-af16-e8f191dc0a7d",
+              "previousWorkflowItemId": "3d88e96b-350c-4b86-a9ac-a41948415fe0",
+              "nextWorkflowItemId": "c75d824e-e86c-4c8e-a926-69f8c545d221"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 7, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "b8b69c6b-eb32-487c-8dc5-7df3d9a20770",
+                "nextEncounterId": "e19e197d-b61f-4e83-8ded-7e34e4c9dae8",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 127"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 127"
+                },
+                "uuid": "df2d25f0-2e69-4c3a-8fd4-095266634b57"
+              },
+              "workflowItemActivity": {
+                "activityName": "A3",
+                "activityDesc": "Hematology",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "c75d824e-e86c-4c8e-a926-69f8c545d221",
+              "previousWorkflowItemId": "23b901e5-66d9-4650-af16-e8f191dc0a7d",
+              "nextWorkflowItemId": "76439e3e-e7e4-4479-aaf7-f60077916efb"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 8, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "df2d25f0-2e69-4c3a-8fd4-095266634b57",
+                "nextEncounterId": "6e03159a-cb52-4b70-85a4-dc26ee7ec787",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 148"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 148"
+                },
+                "uuid": "e19e197d-b61f-4e83-8ded-7e34e4c9dae8"
+              },
+              "workflowItemActivity": {
+                "activityName": "A6",
+                "activityDesc": "Dosing",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "76439e3e-e7e4-4479-aaf7-f60077916efb",
+              "previousWorkflowItemId": "c75d824e-e86c-4c8e-a926-69f8c545d221",
+              "nextWorkflowItemId": "f70c0bb8-41d3-435b-abea-94d5e67bf61d"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 8, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "df2d25f0-2e69-4c3a-8fd4-095266634b57",
+                "nextEncounterId": "6e03159a-cb52-4b70-85a4-dc26ee7ec787",
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C16696",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Hospital"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 148"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 148"
+                },
+                "uuid": "e19e197d-b61f-4e83-8ded-7e34e4c9dae8"
+              },
+              "workflowItemActivity": {
+                "activityName": "A7",
+                "activityDesc": "Plasma Biomarker",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "f70c0bb8-41d3-435b-abea-94d5e67bf61d",
+              "previousWorkflowItemId": "76439e3e-e7e4-4479-aaf7-f60077916efb",
+              "nextWorkflowItemId": "edddef79-c431-4bf4-8584-c9df40f736d2"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Cycle 9, Day 1",
+                "encounterDesc": "DAY 1",
+                "previousEncounterId": "e19e197d-b61f-4e83-8ded-7e34e4c9dae8",
+                "nextEncounterId": "a57090f6-a0d4-434f-b022-169e9303503c",
+                "encounterType": {
+                  "code": "C7653x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "VIRTUAL VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C171525",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Audio-Videoconferencing"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": "Start of day 169"
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "End of day 169"
+                },
+                "uuid": "6e03159a-cb52-4b70-85a4-dc26ee7ec787"
+              },
+              "workflowItemActivity": {
+                "activityName": "A3",
+                "activityDesc": "Hematology",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "edddef79-c431-4bf4-8584-c9df40f736d2",
+              "previousWorkflowItemId": "f70c0bb8-41d3-435b-abea-94d5e67bf61d",
+              "nextWorkflowItemId": "deda47f3-0081-49c8-9025-c696c1b8724c"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Follow up",
+                "encounterDesc": "FOLLOW-UP",
+                "previousEncounterId": "6e03159a-cb52-4b70-85a4-dc26ee7ec787",
+                "nextEncounterId": null,
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": ""
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "6 weeks prior to treatment"
+                },
+                "uuid": "a57090f6-a0d4-434f-b022-169e9303503c"
+              },
+              "workflowItemActivity": {
+                "activityName": "A3",
+                "activityDesc": "Hematology",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "deda47f3-0081-49c8-9025-c696c1b8724c",
+              "previousWorkflowItemId": "edddef79-c431-4bf4-8584-c9df40f736d2",
+              "nextWorkflowItemId": "64beb9d3-cf96-45ac-a46d-1936ccd1d585"
+            },
+            {
+              "workflowItemDesc": "",
+              "workflowItemEncounter": {
+                "encounterName": "Follow up",
+                "encounterDesc": "FOLLOW-UP",
+                "previousEncounterId": "6e03159a-cb52-4b70-85a4-dc26ee7ec787",
+                "nextEncounterId": null,
+                "encounterType": {
+                  "code": "C7652x",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "1",
+                  "decode": "PLANNED VISIT"
+                },
+                "encounterEnvironmentalSetting": {
+                  "code": "C51282",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Clinic"
+                },
+                "encounterContactMode": {
+                  "code": "C175574",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "In Person"
+                },
+                "transitionStartRule": {
+                  "transitionRuleDesc": ""
+                },
+                "transitionEndRule": {
+                  "transitionRuleDesc": "6 weeks prior to treatment"
+                },
+                "uuid": "a57090f6-a0d4-434f-b022-169e9303503c"
+              },
+              "workflowItemActivity": {
+                "activityName": "A4",
+                "activityDesc": "Biochemistry",
+                "previousActivityId": null,
+                "nextActivityId": null,
+                "definedProcedures": [],
+                "studyDataCollection": []
+              },
+              "uuid": "64beb9d3-cf96-45ac-a46d-1936ccd1d585",
+              "previousWorkflowItemId": "deda47f3-0081-49c8-9025-c696c1b8724c",
+              "nextWorkflowItemId": null
+            }
+          ]
+        }
+      ],
+      "studyEstimands": [
+        {
+          "summaryMeasure": "Measure 1",
+          "analysisPopulation": {
+            "populationDesc": "The analysis population"
+          },
+          "treatment": {
+            "codes": [
+              {
+                "code": "L01XK01",
+                "codeSystem": "ATC",
+                "codeSystemVersion": "14-12-2021",
+                "decode": "Olaparib"
+              }
+            ],
+            "interventionDesc": "Olaparibstring"
+          },
+          "variableOfInterest": {
+            "endpointDesc": "Disease control rate of AZD6738 + Durvalumab cohort [ Time Frame: through study completion, an average of 1 year ]",
+            "endpointPurposeDesc": "EFFICACY",
+            "endpointLevel": {
+              "code": "C9834x",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "1",
+              "decode": "PRIMARY"
+            }
+          },
+          "intercurrentEvents": [
+            {
+              "intercurrentEventName": "Intercurrent Event 1",
+              "intercurrentEventDesc": "An Intercuurent Event that could happen in a study",
+              "intercurrentEventStrategy": "A very bold strategy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

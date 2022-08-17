@@ -66,7 +66,7 @@ def workflow_item_data(description, from_pit, to_pit, previous, encounter, activ
     "activity": activity
   }
 
-def activity_data(name, description, sequence, procedures, study_data):
+def activity_data(name, description, procedures, study_data):
   return {
     "activityName": name,
     "activityDesc": description,
@@ -89,7 +89,7 @@ def study_data_data(name, description, link):
     "crfLink": link
   }
 
-def encounter_data(name, description, sequence, encounter_type, env_setting, contact_mode, start_rule=None, end_rule=None):
+def encounter_data(name, description, encounter_type, env_setting, contact_mode, start_rule=None, end_rule=None):
   return {
     "encounterName": name,
     "encounterDesc": description,

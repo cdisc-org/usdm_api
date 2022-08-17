@@ -2,11 +2,12 @@ import sys
 from service.service import Service
 from study.simple_study import *
 from study.ddr import *
+from study.bms import *
 import pandas as pd
 from pandas import json_normalize
 import json
 
-studies = [ SimpleStudy, DDR ]
+studies = [ SimpleStudy, DDR, BMS ]
 identifiers = ["NCT04298023", "ACME-5678"] 
 
 def save_as_file(data, filename):
