@@ -1,3 +1,5 @@
+from ast import BinOp
+from telnetlib import DM
 from factory.factory import *
 
 class BMS():
@@ -73,19 +75,41 @@ class BMS():
     # None
 
     # Study Data
-    # None
+    raw_study_data = [
+      #Heam
+      ( "RBC", "Red Blood Cell count", "" ),
+      ( "HCT", "Hematocrit", "" ),
+      ( "WBC", "White blood Cell differential", "" ),
+
+      #Bio
+      ( "CHOL",	"Cholesterol", "" ),
+      ( "MG", "Magnesium", "" ),
+      ( "P", "Potassium", "" ),
+
+      #DM
+      ( "HGT", "Height", "" ),
+      ( "WGT", "Weight", "" ),
+      ( "BDATE", "Birth Date", "" ),
+
+      #Biomarker
+      ( "BMX", "Biomarker X", "" ),
+      ( "BMY", "Biomarker Y", "" )
+    ]
+    study_data_items = []
+    for data in raw_study_data:
+      study_data_items.append(study_data_data(*data))
 
     # Activities
     # Short Name, Description, Procedures, Study Data
     study_activity_data = [
-      ("A1", "Informed Consent", [], []),
-      ("A2", "Eligibility Screening", [], []),
-      ("A3", "Hematology", [], []),
-      ("A4", "Biochemistry", [], []),
-      ("A5", "Demographics", [], []),
-      ("A6", "Dosing", [], []),
-      ("A7", "Plasma Biomarker", [], []),
-      ("A8", "PK Sample", [], [])
+      ("Informed Consent", "Informed consent is obtained at screening", [], []),
+      ("Eligibility Screening", "Inclusion and Exclusion criteria evaluation", [], []),
+      ("Hematology", "Hematology assessment in blood samples", [], [study_data_items[0:3]]),
+      ("Biochemistry", "Biochemistry assessment in plasma samples", [], [study_data_items[3:3]]),
+      ("Demographics", "Demographics", [], [study_data_items[6:3]]),
+      ("Dosing", "Dosing of Drug A - 2 times a week", [], []),
+      ("Plasma Biomarker", "Biomarker assessments for xxx", [], [study_data_items[9:2]]),
+      ("PK", "PK Sample", [], [])
     ]
     activities = []
     for activity in study_activity_data:
