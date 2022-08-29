@@ -192,45 +192,6 @@ Objective:
       synonyms:
       - Study Secondary Objective
       - Trial Secondary Objective
-ProtocolStatus:
-  protocolStatus:
-    conceptId: C188723
-    definition: The terminology relevant to the protocol status.
-    extensible: ''
-    name: Protocol Status Value Set Terminology
-    preferredTerm: CDISC DDF Protocol Status Value Set Terminology
-    submissionValue: Protocol Status Value Set Terminology
-    synonyms:
-    - Protocol Status Value Set Terminology
-    terms:
-    - conceptId: C25425
-      definition: Acceptance as satisfactory by an authoritative body; established
-        by authority; given authoritative approval.
-      preferredTerm: Approval
-      submissionValue: Approved
-      synonyms: []
-    - conceptId: C85255
-      definition: A preliminary version of a written work, design, or picture.
-      preferredTerm: Draft
-      submissionValue: Draft
-      synonyms: []
-    - conceptId: C25508
-      definition: Conclusive in a process or progression.
-      preferredTerm: Final
-      submissionValue: Final
-      synonyms: []
-    - conceptId: C63553
-      definition: No longer in use or valid; old.
-      preferredTerm: Obsolete
-      submissionValue: Obsolete
-      synonyms: []
-    - conceptId: C188862
-      definition: A preliminary version of a written work, design, or picture that
-        is awaiting review.
-      preferredTerm: Pending Review
-      submissionValue: Pending Review
-      synonyms:
-      - Draft Pending Review
 Study:
   studyPhase:
     conceptId: C66737
@@ -874,3 +835,42 @@ StudyEpoch:
         product within the body.
       preferredTerm: Washout Period
       submissionValue: WASHOUT
+StudyProtocolVersion:
+  protocolStatus:
+    conceptId: C188723
+    definition: The terminology relevant to the protocol status.
+    extensible: ''
+    name: Protocol Status Value Set Terminology
+    preferredTerm: CDISC DDF Protocol Status Value Set Terminology
+    submissionValue: Protocol Status Value Set Terminology
+    synonyms:
+    - Protocol Status Value Set Terminology
+    terms:
+    - conceptId: C25425
+      definition: Acceptance as satisfactory by an authoritative body; established
+        by authority; given authoritative approval.
+      preferredTerm: Approval
+      submissionValue: Approved
+      synonyms: []
+    - conceptId: C85255
+      definition: A preliminary version of a written work, design, or picture.
+      preferredTerm: Draft
+      submissionValue: Draft
+      synonyms: []
+    - conceptId: C25508
+      definition: Conclusive in a process or progression.
+      preferredTerm: Final
+      submissionValue: Final
+      synonyms: []
+    - conceptId: C63553
+      definition: No longer in use or valid; old.
+      preferredTerm: Obsolete
+      submissionValue: Obsolete
+      synonyms: []
+    - conceptId: C188862
+      definition: A preliminary version of a written work, design, or picture that
+        is awaiting review.
+      preferredTerm: Pending Review
+      submissionValue: Pending Review
+      synonyms:
+      - Draft Pending Review

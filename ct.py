@@ -40,7 +40,7 @@ c_code_list = {
   'Objective': {
     'objectiveLevel': 'C188725'
   },
-  'ProtocolStatus': {
+  'StudyProtocolVersion': {
     'protocolStatus': 'C188723'
   }
 }
