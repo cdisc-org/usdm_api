@@ -98,19 +98,21 @@ class BMS():
     study_data_items = []
     for data in raw_study_data:
       study_data_items.append(study_data_data(*data))
+    #print(study_data_items)
 
     # Activities
     # Short Name, Description, Procedures, Study Data
     study_activity_data = [
       ("Informed Consent", "Informed consent is obtained at screening", [], []),
       ("Eligibility Screening", "Inclusion and Exclusion criteria evaluation", [], []),
-      ("Hematology", "Hematology assessment in blood samples", [], [study_data_items[0:3]]),
-      ("Biochemistry", "Biochemistry assessment in plasma samples", [], [study_data_items[3:3]]),
-      ("Demographics", "Demographics", [], [study_data_items[6:3]]),
+      ("Hematology", "Hematology assessment in blood samples", [], study_data_items[0:3]),
+      ("Biochemistry", "Biochemistry assessment in plasma samples", [], study_data_items[3:3]),
+      ("Demographics", "Demographics", [], study_data_items[6:3]),
       ("Dosing", "Dosing of Drug A - 2 times a week", [], []),
-      ("Plasma Biomarker", "Biomarker assessments for xxx", [], [study_data_items[9:2]]),
+      ("Plasma Biomarker", "Biomarker assessments for xxx", [], study_data_items[9:2]),
       ("PK", "PK Sample", [], [])
     ]
+    print(study_activity_data[2])
     activities = []
     for activity in study_activity_data:
       activities.append(activity_data(*activity))

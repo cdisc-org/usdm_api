@@ -331,7 +331,7 @@ class DDR():
     study_epoch_6 = study_epoch_data("FOLLOW-UP", "Follow-up", follow_up, [encounter_12, encounter_13])
     epochs = [study_epoch_1, study_epoch_2, study_epoch_3, study_epoch_4, study_epoch_5, study_epoch_6]
     double_link(epochs, 'previousEpochId', 'nextEpochId')
-    print(epochs)
+    #print(epochs)
 
     study_element_1 = study_element_data("SCREENING", "Screening", rule_01, rule_05)
     study_element_2 = study_element_data("AZD_DRUV", "AZD6738 + Durvalumab", rule_02, rule_06)
