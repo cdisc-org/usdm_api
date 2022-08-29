@@ -33,6 +33,12 @@ c_code_list = {
   'Encounter': {
     'encounterEnvironmentalSetting': 'C127262',
     'encounterContactMode': 'C171445'
+  },
+  'Endpoint': {
+    'endpointLevel': 'C188726' 
+  },
+  'Objective': {
+    'objectiveLevel': 'C188725'
   }
 }
 releases = ["sdtmct-2022-03-25", "protocolct-2022-03-25"]
@@ -41,12 +47,23 @@ result = {}
 for klass, info in c_code_list.items():
   result[klass] = {}
   for attribute, c_code in info.items():
-    print("Working ...")
+    print("Working [%s] ..." % (c_code))
     body = get_code_list(releases, c_code)
-    body.pop('_links', None)
-    result[klass][attribute] = body
+    if body == None:
+      with open("data/08-22-2022_provisional_ct.yaml") as file:
+        ct = yaml.load(file, Loader=yaml.FullLoader)
+        body = next((item for item in ct['codelists'] if item["conceptId"] == c_code), None)
+        if body != None:
+          result[klass][attribute] = body
+          print("  ... success")
+        else:
+          print("  ... failed, not found")
+    else:
+      body.pop('_links', None)
+      result[klass][attribute] = body
+      print("  ... success")
 
-print(result)
+#print(result)
 with open('data/ct.yaml', 'w') as outfile:
   yaml.dump(result, outfile, default_flow_style=False)
 

@@ -133,6 +133,65 @@ Encounter:
       definition: Place or physical location of work or employment.
       preferredTerm: Worksite
       submissionValue: WORKSITE
+Endpoint:
+  endpointLevel:
+    conceptId: C188726
+    definition: The terminology relevant to the endpoint level.
+    extensible: ''
+    name: Endpoint Level Value Set Terminology
+    preferredTerm: CDISC DDF Endpoint Level Value Set Terminology
+    submissionValue: Endpoint Level Value Set Terminology
+    synonyms:
+    - Endpoint Level Value Set Terminology
+    terms:
+    - conceptId: C170559
+      definition: Endpoint(s) that may include clinically important events that are
+        expected to occur too infrequently to show a treatment effect or endpoints
+        that for other reasons are thought to be less likely to show an effect but
+        are included to explore new hypotheses. (After FDA-NIH Protocol Template)
+      preferredTerm: Exploratory Endpoint
+      submissionValue: Exploratory Endpoint
+      synonyms: []
+    - conceptId: C94496
+      definition: Endpoint(s) of greatest importance that is the basis for concluding
+        whether the study met its objective(s) and provides a clinically relevant,
+        valid, and reliable measure of the primary objective(s). (After FDA-NIH Protocol
+        Template)
+      preferredTerm: Primary Endpoint
+      submissionValue: Primary Endpoint
+      synonyms: []
+    - conceptId: C139173
+      definition: Endpoint(s) that may provide supportive information about the effect
+        of the study intervention(s) on the primary endpoint or demonstrate additional
+        effects on the disease or condition. (After FDA-NIH Protocol Template)
+      preferredTerm: Secondary Endpoint
+      submissionValue: Secondary Endpoint
+      synonyms: []
+Objective:
+  objectiveLevel:
+    conceptId: C188725
+    definition: The terminology relevant to the objective level.
+    extensible: ''
+    name: Objective Level Value Set Terminology
+    preferredTerm: CDISC DDF Objective Level Value Set Terminology
+    submissionValue: Objective Level Value Set Terminology
+    synonyms:
+    - Objective Level Value Set Terminology
+    terms:
+    - conceptId: C85826
+      definition: A principle objective of the study.
+      preferredTerm: Trial Primary Objective
+      submissionValue: Study Primary Objective
+      synonyms:
+      - Study Primary Objective
+      - Trial Primary Objective
+    - conceptId: C85827
+      definition: An auxiliary objective of the study.
+      preferredTerm: Trial Secondary Objective
+      submissionValue: Study Secondary Objective
+      synonyms:
+      - Study Secondary Objective
+      - Trial Secondary Objective
 Study:
   studyPhase:
     conceptId: C66737
