@@ -198,20 +198,22 @@ class BMS():
     ii_1 = investigational_intervention_data("Treatment with substX", [ii_code_1])
     ii = [ii_1]
 						
-    # Populations
-    population_1 = study_design_population_data("Population not provided")
+    # Study Populations
+    study_population_1 = study_design_population_data("A metastatic cancer population")
 
     # Endpoints
+    primary_endpoint = code_for('Endpoint', 'endpointLevel', submission_value='Primary Endpoint')
     endpoint_1 = endpoint_data(
-      "PK Parameters",
-      "PHARMACODYNAMIC",
-      code_data("C9834x", "http://www.cdisc.org", "1", "PRIMARY")
+      "Survival rate after cycle 8 of treatment",
+      "EFFICACY",
+      primary_endpoint
     )
 
     # Objectives
+    primary_objective = code_for('Objective', 'objectiveLevel', submission_value='Study Primary Objective')
     objective_1 = objective_data(
       "Evaluate sensitivity index from baseline to end of study (16 weeks)", 
-      code_data("C9844x", "http://www.cdisc.org", "1", "OBJ LEVEL"), 
+      primary_objective, 
       [endpoint_1]
     )
     objectives = [objective_1]
@@ -228,10 +230,35 @@ class BMS():
 
     # Intercurrent Events
     # None
+    i_event_1 = intercurrent_event_data(
+      "Termination", 
+      "Termination",
+      "Patients with out of range lab values before dosing will be excluded"
+    )
+    i_event_2 = intercurrent_event_data(
+      "Missed dose",
+      "Missed dose",
+      "Patients with 1 missed dose will be included. Patients with >1 missed dose will be excluded"
+    )
+    i_event_3 = intercurrent_event_data(
+      "Termination",
+      "Termination",
+      "Patients with out of range lab values before dosing will be excluded"
+    )
+    i_event_4 = intercurrent_event_data(
+      "Out of range lab values",
+      "Out of range lab values",
+      "Patients with out of range lab values before dosing will be excluded"
+    )
+
+    # Analysis Populations
+    analysis_population_1 = analysis_population_data("ITT")
+    analysis_population_2 = analysis_population_data("PP")
 
     # Estimands
-    # None
-    estimands = []
+    estimand_1 = estimand_data("Measure 1", analysis_population_1, ii_1, endpoint_1, [i_event_1])
+    estimand_2 = estimand_data("Measure 2", analysis_population_2, ii_1, endpoint_1, [i_event_2, i_event_3, i_event_4])
+    estimands = [estimand_1, estimand_2]
 
     # Study Arms
     origin_type = code_data("C6574y", "http://www.cdisc.org", "1", "SUBJECT DATA")
@@ -286,13 +313,12 @@ class BMS():
     design_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='SEQUENTIAL')
 
-    design_1 = study_design_data([intent], design_type, int_model, study_cells, indications, objectives, [population_1], ii, [workflow], estimands)
+    design_1 = study_design_data([intent], design_type, int_model, study_cells, indications, objectives, [study_population_1], ii, [workflow], estimands)
     designs = [design_1]
 
     # Protocol versions
     # brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):
-    final = code_data("C1113x", "http://www.cdisc.org", "1", "FINAL")
-    draft = code_data("C1113y", "http://www.cdisc.org", "1", "DRAFT")
+    draft_status = code_for('StudyProtocolVersion', 'protocolStatus', submission_value='Draft')
     protocol_version_1 = study_protocol_version_data(
       "BMS", 
       "BMS Study Official title", 
@@ -301,7 +327,7 @@ class BMS():
       "1", 
       None, 
       "2022-01-01", 
-      draft
+      draft_status
     )
     protocol_versions = [protocol_version_1]
 

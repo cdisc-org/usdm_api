@@ -39,6 +39,9 @@ c_code_list = {
   },
   'Objective': {
     'objectiveLevel': 'C188725'
+  },
+  'ProtocolStatus': {
+    'protocolStatus': 'C188723'
   }
 }
 releases = ["sdtmct-2022-03-25", "protocolct-2022-03-25"]
