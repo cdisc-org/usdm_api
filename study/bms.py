@@ -213,7 +213,7 @@ class BMS():
     wfis = []
     for item in wfi_links:
       wfis.append(workflow_item_data("", item[0], item[1]))
-    workflow = workflow_data("Schedule of Activities", wfis)
+    workflow = workflow_data("Workflow 1", wfis)
     double_link(wfis, 'previousWorkflowItemId', 'nextWorkflowItemId')  
 
     # Investigational Interventions
