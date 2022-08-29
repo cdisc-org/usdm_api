@@ -133,6 +133,22 @@ Encounter:
       definition: Place or physical location of work or employment.
       preferredTerm: Worksite
       submissionValue: WORKSITE
+  encounterType:
+    conceptId: C188728
+    definition: The terminology relevant to the encounter type.
+    extensible: ''
+    name: Encounter Type Value Set Terminology
+    preferredTerm: CDISC DDF Encounter Type Value Set Terminology
+    submissionValue: Encounter Type Value Set Terminology
+    synonyms:
+    - Encounter Type Value Set Terminology
+    terms:
+    - conceptId: C25716
+      definition: The act of going to see some person or place or thing; it can cover
+        a short or long period but refers to a non-permanent arrangement.
+      preferredTerm: Visit
+      submissionValue: Visit
+      synonyms: []
 Endpoint:
   endpointLevel:
     conceptId: C188726
@@ -192,6 +208,42 @@ Objective:
       synonyms:
       - Study Secondary Objective
       - Trial Secondary Objective
+Organization:
+  organizationType:
+    conceptId: C188724
+    definition: The terminology relevant to the organization type.
+    extensible: ''
+    name: Organization Type Value Set Terminology
+    preferredTerm: CDISC DDF Organization Type Value Set Terminology
+    submissionValue: Organization Type Value Set Terminology
+    synonyms:
+    - Organization Type Value Set Terminology
+    terms:
+    - conceptId: C93453
+      definition: An organization (typically a government agency) that administers
+        the registration of studies. (BRIDG)
+      preferredTerm: Study Registry
+      submissionValue: Clinical Study Registry
+      synonyms: []
+    - conceptId: C70793
+      definition: An entity that is responsible for the initiation, management, and/or
+        financing of a clinical study.
+      preferredTerm: Clinical Study Sponsor
+      submissionValue: Clinical Study Sponsor
+      synonyms:
+      - Clinical Study Sponsor
+      - Sponsor
+      - Study Sponsor
+    - conceptId: C188863
+      definition: An organization (typically a government agency) that is responsible
+        for implementing and enforcing laws, licensing and regulating products and
+        services, promoting the use of standards, and ensuring safety and consumer
+        protections.
+      preferredTerm: Regulatory Agency
+      submissionValue: Regulatory Agency
+      synonyms:
+      - Regulator
+      - Regulatory Body
 Study:
   studyPhase:
     conceptId: C66737
@@ -398,6 +450,53 @@ Study:
       preferredTerm: Patient Registry Study
       submissionValue: PATIENT REGISTRY
 StudyArm:
+  studyArmDataOriginType:
+    conceptId: C188727
+    definition: The terminology relevant to the study arm data origin type.
+    extensible: ''
+    name: Study Arm Data Origin Type Value Set Terminology
+    preferredTerm: CDISC DDF Study Arm Data Origin Type Value Set Terminology
+    submissionValue: Study Arm Data Origin Type Value Set Terminology
+    synonyms:
+    - Study Arm Data Origin Type Value Set Terminology
+    terms:
+    - conceptId: C188866
+      definition: Data that are generated from the current study.
+      preferredTerm: Data Generated Within Study
+      submissionValue: Data Generated Within Study
+      synonyms: []
+    - conceptId: C188864
+      definition: Data from studies that have occurred in the past.
+      preferredTerm: Historical Data
+      submissionValue: Historical Data
+      synonyms: []
+    - conceptId: C165830
+      definition: 'Data relating to patient health status and/or the delivery of health
+        care routinely collected from sources other than traditional clinical trials.
+        NOTE: Examples of sources include data derived from electronic health records
+        (EHRs); medical claims and billing data; data from product and disease registries;
+        patient-generated data, including from in-home-use settings; and data gathered
+        from other sources that can inform on health status, such as mobile devices.
+        [After 21 U.S.C. 355g(b)).5 and Framework for FDA''s Real-World Evidence Program
+        December 2018] See also Real-World Evidence (RWE)'
+      preferredTerm: Real-world Data
+      submissionValue: Real World Data
+      synonyms: []
+    - conceptId: C176263
+      definition: 'Data that are artificially created rather than being generated
+        by actual events. NOTE: Data are often created with the help of algorithms
+        and used for a wide range of activities, including as test data for new products
+        and tools, for model validation, and in AI optimization. [After The Ultimate
+        Guide to Synthetic Data in 2020, August 29, 2020]. See also artificial intelligence.'
+      preferredTerm: Synthetic Data
+      submissionValue: Synthetic Data
+      synonyms: []
+    - conceptId: C188865
+      definition: Data that are generated from virtual encounters between investigators
+        and subjects.
+      preferredTerm: Virtual Data
+      submissionValue: Virtual Data
+      synonyms: []
   studyArmType:
     conceptId: C174222
     definition: The terminology relevant to the identification of the kind of arm.

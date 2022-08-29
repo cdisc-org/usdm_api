@@ -25,14 +25,16 @@ c_code_list = {
     'interventionModel': 'C99076'
   },
   'StudyArm': {
-    'studyArmType': 'C174222'
+    'studyArmType': 'C174222',
+    'studyArmDataOriginType': 'C188727'
   },
   'StudyEpoch': {
     'studyEpochType': 'C99079'
   },
   'Encounter': {
     'encounterEnvironmentalSetting': 'C127262',
-    'encounterContactMode': 'C171445'
+    'encounterContactMode': 'C171445',
+    'encounterType': 'C188728'
   },
   'Endpoint': {
     'endpointLevel': 'C188726' 
@@ -42,6 +44,9 @@ c_code_list = {
   },
   'StudyProtocolVersion': {
     'protocolStatus': 'C188723'
+  },
+  'Organization': {
+    'organizationType': 'C188724'
   }
 }
 releases = ["sdtmct-2022-03-25", "protocolct-2022-03-25"]

@@ -93,8 +93,7 @@ class BMS():
     double_link(activities, 'previousActivityId', 'nextActivityId')
 
     # Visits
-    planned_visit = code_data("C7652x", "http://www.cdisc.org", "1", "PLANNED VISIT")
-    virtual_visit = code_data("C7653x", "http://www.cdisc.org", "1", "VIRTUAL VISIT")
+    a_visit = code_for('Encounter', 'encounterType', submission_value='Visit')   
     clinic_setting = code_for('Encounter', 'encounterEnvironmentalSetting', c_code='C51282')   
     hospital_setting = code_for('Encounter', 'encounterEnvironmentalSetting', c_code='C16696')   
     in_person_mode = code_for('Encounter', 'encounterContactMode', c_code='C175574')    
@@ -102,25 +101,25 @@ class BMS():
 
     # name, description, encounter_type, env_setting, contact_mode, start_rule=None, end_rule=None
     study_encounter_data = [
-      ("Screening", "SCREENING", planned_visit, clinic_setting, in_person_mode, rules[0], rules[18]),
-      ("Day 1", "DAY 1", planned_visit, hospital_setting, in_person_mode, rules[1], None),
-      ("Week 1", "WEEK 1", planned_visit, hospital_setting, in_person_mode, rules[2], rules[19]),
-      ("Week 2", "WEEK 2", planned_visit, hospital_setting, in_person_mode, rules[3], rules[20]),
-      ("Week 3", "WEEK 3", planned_visit, hospital_setting, in_person_mode, rules[4], rules[21]),
-      ("Week 4", "WEEK 4", planned_visit, hospital_setting, in_person_mode, rules[5], rules[22]),
-      ("Week 5", "WEEK 5", planned_visit, hospital_setting, in_person_mode, rules[6], rules[23]),
-      ("Week 6", "WEEK 6", planned_visit, hospital_setting, in_person_mode, rules[7], rules[24]),
-      ("Week 7", "WEEK 7", planned_visit, hospital_setting, in_person_mode, rules[8], rules[25]),
-      ("Week 8", "WEEK 8", planned_visit, hospital_setting, in_person_mode, rules[9], rules[26]),
-      ("Week 9", "WEEK 9", planned_visit, hospital_setting, in_person_mode, rules[10], rules[27]),
-      ("Week 10", "WEEK 10", planned_visit, hospital_setting, in_person_mode, rules[11], rules[28]),
-      ("Week 11", "WEEK 11", planned_visit, hospital_setting, in_person_mode, rules[12], rules[29]),
-      ("Week 12", "WEEK 12", planned_visit, hospital_setting, in_person_mode, rules[13], rules[30]),
-      ("Week 13", "WEEK 13", planned_visit, hospital_setting, in_person_mode, rules[14], rules[31]),
-      ("Week 14", "WEEK 14", planned_visit, hospital_setting, in_person_mode, rules[15], rules[32]),
-      ("Week 15", "WEEK 15", planned_visit, hospital_setting, in_person_mode, rules[16], rules[33]),
-      ("Week 16", "WEEK 16", planned_visit, hospital_setting, in_person_mode, rules[17], rules[34]),
-      ("Follow up", "FOLLOW-UP",	planned_visit, hospital_setting, in_person_mode, None, None)
+      ("Screening", "SCREENING", a_visit, clinic_setting, in_person_mode, rules[0], rules[18]),
+      ("Day 1", "DAY 1", a_visit, hospital_setting, in_person_mode, rules[1], None),
+      ("Week 1", "WEEK 1", a_visit, hospital_setting, in_person_mode, rules[2], rules[19]),
+      ("Week 2", "WEEK 2", a_visit, hospital_setting, in_person_mode, rules[3], rules[20]),
+      ("Week 3", "WEEK 3", a_visit, hospital_setting, in_person_mode, rules[4], rules[21]),
+      ("Week 4", "WEEK 4", a_visit, hospital_setting, in_person_mode, rules[5], rules[22]),
+      ("Week 5", "WEEK 5", a_visit, hospital_setting, in_person_mode, rules[6], rules[23]),
+      ("Week 6", "WEEK 6", a_visit, hospital_setting, in_person_mode, rules[7], rules[24]),
+      ("Week 7", "WEEK 7", a_visit, hospital_setting, in_person_mode, rules[8], rules[25]),
+      ("Week 8", "WEEK 8", a_visit, hospital_setting, in_person_mode, rules[9], rules[26]),
+      ("Week 9", "WEEK 9", a_visit, hospital_setting, in_person_mode, rules[10], rules[27]),
+      ("Week 10", "WEEK 10", a_visit, hospital_setting, in_person_mode, rules[11], rules[28]),
+      ("Week 11", "WEEK 11", a_visit, hospital_setting, in_person_mode, rules[12], rules[29]),
+      ("Week 12", "WEEK 12", a_visit, hospital_setting, in_person_mode, rules[13], rules[30]),
+      ("Week 13", "WEEK 13", a_visit, hospital_setting, in_person_mode, rules[14], rules[31]),
+      ("Week 14", "WEEK 14", a_visit, hospital_setting, in_person_mode, rules[15], rules[32]),
+      ("Week 15", "WEEK 15", a_visit, hospital_setting, in_person_mode, rules[16], rules[33]),
+      ("Week 16", "WEEK 16", a_visit, hospital_setting, in_person_mode, rules[17], rules[34]),
+      ("Follow up", "FOLLOW-UP",	a_visit, hospital_setting, in_person_mode, None, None)
     ]
 
     encounters = []
@@ -261,7 +260,7 @@ class BMS():
     estimands = [estimand_1, estimand_2]
 
     # Study Arms
-    origin_type = code_data("C6574y", "http://www.cdisc.org", "1", "SUBJECT DATA")
+    origin_type = code_for('StudyArm', 'studyArmDataOriginType', submission_value='Data Generated Within Study') 
     treatment = code_for('StudyArm', 'studyArmType', submission_value='Treatment Arm')
     placebo = code_for('StudyArm', 'studyArmType', submission_value='Placebo Comparator Arm')
     study_arm_1 = study_arm_data("Treatment", "Treatment", treatment, "Captured subject data", origin_type)
@@ -285,7 +284,7 @@ class BMS():
     for epoch in raw_epoch_data:
       epochs.append(study_epoch_data(*epoch))
     double_link(epochs, 'previousEpochId', 'nextEpochId')
-    print(epochs)
+    #print(epochs)
 
     # Elements
     # name, description, start rule, end rule
@@ -309,7 +308,7 @@ class BMS():
     study_cells.append(study_cell_data(study_arm_1, epochs[4], [ elements[4] ]))
     study_cells.append(study_cell_data(study_arm_1, epochs[5], [ elements[5] ]))
 
-    intent = code_for('StudyDesign', 'trialIntentType', c_code='C15714')
+    intent = code_for('StudyDesign', 'trialIntentType', submission_value='CURE')
     design_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='SEQUENTIAL')
 
@@ -332,16 +331,14 @@ class BMS():
     protocol_versions = [protocol_version_1]
 
     # Study Identifiers
-    phase = code_data("C49686", "http://www.cdisc.org", "2022-03-25", "Phase II Trial")
-    study_type = code_data("C98388", "http://www.cdisc.org", "2022-03-25", "Interventional Study")
-    registry_type = code_data("C2365x", "http://www.cdisc.org", "1", "REGISTRY_STUDY_IDENTIFIER")
-    sponsor_type = code_data("C2365y", "http://www.cdisc.org", "1", "SPONSOR_STUDY_IDENTIFIER")
-    regulator_type = code_data("C2365z", "http://www.cdisc.org", "1", "REGULATOR_STUDY_IDENTIFIER")
+    registry_type = code_for('Organization', 'organizationType', submission_value='Clinical Study Registry')
+    sponsor_type = code_for('Organization', 'organizationType', submission_value='Clinical Study Sponsor')
+    regulator_type = code_for('Organization', 'organizationType', submission_value='Regulatory Agency')
     organisation_1 = organization_data("DUNS", "123456789", "ACME Pharma", sponsor_type)
     organisation_2 = organization_data("USGOV", "CT-GOV", "ClinicalTrials.gov", registry_type)
     organisation_3 = organization_data("FDA", "FDA", "Food and Drug Adminstration", regulator_type)
     organisation_4 = organization_data("EMA", "EMA", "European Medicines Agency", regulator_type)
-    identifier_1 = study_identifier_data("XYZ01235", organisation_1)
+    identifier_1 = study_identifier_data("XX03CC05", organisation_1)
     identifier_2 = study_identifier_data("NCT12345678", organisation_2)
     identifier_3 = study_identifier_data("FDA1234", organisation_3)
     identifier_4 = study_identifier_data("EMA1234", organisation_4)
@@ -349,5 +346,7 @@ class BMS():
 
     # Assemble complete study
     study_title = "BMS Test Study"
+    phase = code_data("C49686", "http://www.cdisc.org", "2022-03-25", "Phase II Trial")
+    study_type = code_data("C98388", "http://www.cdisc.org", "2022-03-25", "Interventional Study")
     return study_data(study_title, "1", study_type, phase, identifiers, protocol_versions, designs)
 
