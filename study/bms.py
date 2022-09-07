@@ -1,5 +1,5 @@
-from ast import BinOp
-from telnetlib import DM
+#from ast import BinOp
+#from telnetlib import DM
 from factory.factory import *
 
 class BMS():
@@ -112,7 +112,7 @@ class BMS():
       ("Plasma Biomarker", "Biomarker assessments for xxx", [], study_data_items[9:2]),
       ("PK", "PK Sample", [], [])
     ]
-    print(study_activity_data[2])
+    #print(study_activity_data[2])
     activities = []
     for activity in study_activity_data:
       activities.append(activity_data(*activity))
