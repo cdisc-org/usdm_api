@@ -82,7 +82,7 @@ class SimpleStudy():
     study_epoch_2 = study_epoch_data("Treatment", "The drug!", treatment, [])
     study_epoch_3 = study_epoch_data("Follow Up", "Go away", follow_up, [])
     epochs = [study_epoch_1, study_epoch_2, study_epoch_3]
-    double_link(epochs, 'previousEpochId', 'nextEpochId')
+    double_link(epochs, 'previousStudyEpochId', 'nextStudyEpochId')
     #print(epochs)
 
     start_rule = transition_rule_data("Start Rule")

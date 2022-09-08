@@ -309,7 +309,7 @@ class BMS():
     epochs = []
     for epoch in raw_epoch_data:
       epochs.append(study_epoch_data(*epoch))
-    double_link(epochs, 'previousEpochId', 'nextEpochId')
+    double_link(epochs, 'previousStudyEpochId', 'nextStudyEpochId')
     #print(epochs)
 
     # Elements

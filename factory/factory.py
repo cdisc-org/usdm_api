@@ -175,8 +175,8 @@ def study_epoch_data(name, description, epoch_type, encounters):
   return {
     "studyEpochName": name,
     "studyEpochDesc": description,
-    "previousEpochId": None,
-    "nextEpochId": None,
+    "previousStudyEpochId": None,
+    "nextStudyEpochId": None,
     "studyEpochType": epoch_type,
     "encounters": encounters
   }

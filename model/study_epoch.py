@@ -9,7 +9,7 @@ class StudyEpoch(ApiBaseModel):
   uuid: Union[UUID, None] = None
   studyEpochName: str
   studyEpochDesc: str
-  previousEpochId: Union[UUID, None] = None
-  nextEpochId: Union[UUID, None] = None
+  previousStudyEpochId: Union[UUID, None] = None
+  nextStudyEpochId: Union[UUID, None] = None
   studyEpochType: Union[Code, UUID]
   encounters: Union[List[Encounter], List[UUID]]

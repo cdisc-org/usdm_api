@@ -330,7 +330,7 @@ class DDR():
     study_epoch_5 = study_epoch_data("TREATMENT X", "Treatment Cycle X", treatment, [encounter_10, encounter_11])
     study_epoch_6 = study_epoch_data("FOLLOW-UP", "Follow-up", follow_up, [encounter_12, encounter_13])
     epochs = [study_epoch_1, study_epoch_2, study_epoch_3, study_epoch_4, study_epoch_5, study_epoch_6]
-    double_link(epochs, 'previousEpochId', 'nextEpochId')
+    double_link(epochs, 'previousStudyEpochId', 'nextStudyEpochId')
     #print(epochs)
 
     study_element_1 = study_element_data("SCREENING", "Screening", rule_01, rule_05)
