@@ -133,7 +133,7 @@
             "studyEpochName": "Screening",
             "studyEpochDesc": "Screening",
             "previousStudyEpochId": null,
-            "nextStudyEpochId": "3bc9818f-f8be-4bb5-8126-125677e92639",
+            "nextStudyEpochId": "d286e327-e540-44a0-807a-25c175c784b5",
             "studyEpochType": {
               "code": "C48262",
               "codeSystem": "http://www.cdisc.org",
@@ -145,7 +145,7 @@
                 "encounterName": "Screening",
                 "encounterDesc": "SCREENING",
                 "previousEncounterId": null,
-                "nextEncounterId": "7ffaabd4-b20b-4b29-aee3-60fff410df39",
+                "nextEncounterId": "70b0f007-0305-4d17-91e1-a8d10ff7c186",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -170,10 +170,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "start of run-in period"
                 },
-                "uuid": "e1c511ae-be01-43f7-8445-006a08ce6f44"
+                "uuid": "e54b4b6b-fff9-4f43-bdff-2f24814fcf9d"
               }
             ],
-            "uuid": "39efb830-5fda-429e-9858-d0e81cd2dc46"
+            "uuid": "3d8a8568-0130-4df7-9386-52dbb5ae8c7f"
           },
           "studyElements": [
             {
@@ -209,8 +209,8 @@
           "studyEpoch": {
             "studyEpochName": "Titration Period 1",
             "studyEpochDesc": "Titration Period 1",
-            "previousStudyEpochId": "39efb830-5fda-429e-9858-d0e81cd2dc46",
-            "nextStudyEpochId": "aec53a4f-79cc-430a-976c-a1f52f746873",
+            "previousStudyEpochId": "3d8a8568-0130-4df7-9386-52dbb5ae8c7f",
+            "nextStudyEpochId": "d159886c-84dd-4064-85d9-490d75af45cb",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -221,8 +221,8 @@
               {
                 "encounterName": "Day 1",
                 "encounterDesc": "DAY 1",
-                "previousEncounterId": "e1c511ae-be01-43f7-8445-006a08ce6f44",
-                "nextEncounterId": "0564d648-6d01-4865-943a-bce4bb68ecdc",
+                "previousEncounterId": "e54b4b6b-fff9-4f43-bdff-2f24814fcf9d",
+                "nextEncounterId": "94cc2359-1c6d-4f60-8933-384b70a63374",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -245,13 +245,13 @@
                   "transitionRuleDesc": "2 hours before treatment"
                 },
                 "transitionEndRule": null,
-                "uuid": "7ffaabd4-b20b-4b29-aee3-60fff410df39"
+                "uuid": "70b0f007-0305-4d17-91e1-a8d10ff7c186"
               },
               {
                 "encounterName": "Week 1",
                 "encounterDesc": "WEEK 1",
-                "previousEncounterId": "7ffaabd4-b20b-4b29-aee3-60fff410df39",
-                "nextEncounterId": "d7aec1e2-a3bd-451b-8cc3-8a8e8d39febd",
+                "previousEncounterId": "70b0f007-0305-4d17-91e1-a8d10ff7c186",
+                "nextEncounterId": "b332fb6b-3094-437e-9456-d17c2d024ff4",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -276,13 +276,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 1"
                 },
-                "uuid": "0564d648-6d01-4865-943a-bce4bb68ecdc"
+                "uuid": "94cc2359-1c6d-4f60-8933-384b70a63374"
               },
               {
                 "encounterName": "Week 2",
                 "encounterDesc": "WEEK 2",
-                "previousEncounterId": "0564d648-6d01-4865-943a-bce4bb68ecdc",
-                "nextEncounterId": "c378c94f-a1ce-4a4b-be18-dc06f6b12a74",
+                "previousEncounterId": "94cc2359-1c6d-4f60-8933-384b70a63374",
+                "nextEncounterId": "5281d216-af13-4aa5-8366-9f480170b21c",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -307,13 +307,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 14"
                 },
-                "uuid": "d7aec1e2-a3bd-451b-8cc3-8a8e8d39febd"
+                "uuid": "b332fb6b-3094-437e-9456-d17c2d024ff4"
               },
               {
                 "encounterName": "Week 3",
                 "encounterDesc": "WEEK 3",
-                "previousEncounterId": "d7aec1e2-a3bd-451b-8cc3-8a8e8d39febd",
-                "nextEncounterId": "de42ddb1-670b-4ab0-955b-42ccfd883f03",
+                "previousEncounterId": "b332fb6b-3094-437e-9456-d17c2d024ff4",
+                "nextEncounterId": "bfa00f86-e8a9-4c21-83e5-9b557dd1c3cf",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -338,13 +338,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 21"
                 },
-                "uuid": "c378c94f-a1ce-4a4b-be18-dc06f6b12a74"
+                "uuid": "5281d216-af13-4aa5-8366-9f480170b21c"
               },
               {
                 "encounterName": "Week 4",
                 "encounterDesc": "WEEK 4",
-                "previousEncounterId": "c378c94f-a1ce-4a4b-be18-dc06f6b12a74",
-                "nextEncounterId": "d6550ad2-0426-404b-8689-217da3cd8092",
+                "previousEncounterId": "5281d216-af13-4aa5-8366-9f480170b21c",
+                "nextEncounterId": "b0721ebc-f4aa-4346-99c3-05b4d3697118",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -369,10 +369,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 28"
                 },
-                "uuid": "de42ddb1-670b-4ab0-955b-42ccfd883f03"
+                "uuid": "bfa00f86-e8a9-4c21-83e5-9b557dd1c3cf"
               }
             ],
-            "uuid": "3bc9818f-f8be-4bb5-8126-125677e92639"
+            "uuid": "d286e327-e540-44a0-807a-25c175c784b5"
           },
           "studyElements": [
             {
@@ -408,8 +408,8 @@
           "studyEpoch": {
             "studyEpochName": "Titration Period 2",
             "studyEpochDesc": "Titration Period 2",
-            "previousStudyEpochId": "3bc9818f-f8be-4bb5-8126-125677e92639",
-            "nextStudyEpochId": "1f80035f-8b37-4d0f-8166-e3f5eef49d16",
+            "previousStudyEpochId": "d286e327-e540-44a0-807a-25c175c784b5",
+            "nextStudyEpochId": "3b74e8a4-f226-4ac2-b07b-38c1de16c169",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -420,8 +420,8 @@
               {
                 "encounterName": "Week 5",
                 "encounterDesc": "WEEK 5",
-                "previousEncounterId": "de42ddb1-670b-4ab0-955b-42ccfd883f03",
-                "nextEncounterId": "c9444ea0-6495-4fe0-9f0c-6330c1d82081",
+                "previousEncounterId": "bfa00f86-e8a9-4c21-83e5-9b557dd1c3cf",
+                "nextEncounterId": "b61568de-0450-42de-ad7e-ff09af060cd1",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -446,13 +446,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 35"
                 },
-                "uuid": "d6550ad2-0426-404b-8689-217da3cd8092"
+                "uuid": "b0721ebc-f4aa-4346-99c3-05b4d3697118"
               },
               {
                 "encounterName": "Week 6",
                 "encounterDesc": "WEEK 6",
-                "previousEncounterId": "d6550ad2-0426-404b-8689-217da3cd8092",
-                "nextEncounterId": "03d52d12-e705-42bf-9d39-f3550f7269c7",
+                "previousEncounterId": "b0721ebc-f4aa-4346-99c3-05b4d3697118",
+                "nextEncounterId": "e51c9c6c-a71f-4183-9ac6-289ebd7a2052",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -477,13 +477,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 42"
                 },
-                "uuid": "c9444ea0-6495-4fe0-9f0c-6330c1d82081"
+                "uuid": "b61568de-0450-42de-ad7e-ff09af060cd1"
               },
               {
                 "encounterName": "Week 7",
                 "encounterDesc": "WEEK 7",
-                "previousEncounterId": "c9444ea0-6495-4fe0-9f0c-6330c1d82081",
-                "nextEncounterId": "80e777e7-250d-4fdc-8a0c-072dbab6587b",
+                "previousEncounterId": "b61568de-0450-42de-ad7e-ff09af060cd1",
+                "nextEncounterId": "a74e8a73-b528-4fdb-9880-7f25e723587f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -508,13 +508,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 49"
                 },
-                "uuid": "03d52d12-e705-42bf-9d39-f3550f7269c7"
+                "uuid": "e51c9c6c-a71f-4183-9ac6-289ebd7a2052"
               },
               {
                 "encounterName": "Week 8",
                 "encounterDesc": "WEEK 8",
-                "previousEncounterId": "03d52d12-e705-42bf-9d39-f3550f7269c7",
-                "nextEncounterId": "6641ff69-d61f-488e-afdb-f775a37c53e4",
+                "previousEncounterId": "e51c9c6c-a71f-4183-9ac6-289ebd7a2052",
+                "nextEncounterId": "63fc6fc3-c333-492f-b6ed-f7d5cbeee859",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -539,10 +539,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 56"
                 },
-                "uuid": "80e777e7-250d-4fdc-8a0c-072dbab6587b"
+                "uuid": "a74e8a73-b528-4fdb-9880-7f25e723587f"
               }
             ],
-            "uuid": "aec53a4f-79cc-430a-976c-a1f52f746873"
+            "uuid": "d159886c-84dd-4064-85d9-490d75af45cb"
           },
           "studyElements": [
             {
@@ -578,8 +578,8 @@
           "studyEpoch": {
             "studyEpochName": "Titration Period 3",
             "studyEpochDesc": "Titration Period 3",
-            "previousStudyEpochId": "aec53a4f-79cc-430a-976c-a1f52f746873",
-            "nextStudyEpochId": "97e593cb-dbe5-4666-b102-0fe27d4518e7",
+            "previousStudyEpochId": "d159886c-84dd-4064-85d9-490d75af45cb",
+            "nextStudyEpochId": "7c6c0cb7-3fc4-4e16-8d44-7621401a3184",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -590,8 +590,8 @@
               {
                 "encounterName": "Week 9",
                 "encounterDesc": "WEEK 9",
-                "previousEncounterId": "80e777e7-250d-4fdc-8a0c-072dbab6587b",
-                "nextEncounterId": "938d2c59-a524-4c0f-bf70-45b706f34baf",
+                "previousEncounterId": "a74e8a73-b528-4fdb-9880-7f25e723587f",
+                "nextEncounterId": "304c5f91-656c-48da-9c17-508af7b4658f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -616,13 +616,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 63"
                 },
-                "uuid": "6641ff69-d61f-488e-afdb-f775a37c53e4"
+                "uuid": "63fc6fc3-c333-492f-b6ed-f7d5cbeee859"
               },
               {
                 "encounterName": "Week 10",
                 "encounterDesc": "WEEK 10",
-                "previousEncounterId": "6641ff69-d61f-488e-afdb-f775a37c53e4",
-                "nextEncounterId": "27cf20b4-310f-4f7c-b2be-f15569b1c376",
+                "previousEncounterId": "63fc6fc3-c333-492f-b6ed-f7d5cbeee859",
+                "nextEncounterId": "c477a011-69b7-4d05-aa2f-ba507ff995e9",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -647,13 +647,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 70"
                 },
-                "uuid": "938d2c59-a524-4c0f-bf70-45b706f34baf"
+                "uuid": "304c5f91-656c-48da-9c17-508af7b4658f"
               },
               {
                 "encounterName": "Week 11",
                 "encounterDesc": "WEEK 11",
-                "previousEncounterId": "938d2c59-a524-4c0f-bf70-45b706f34baf",
-                "nextEncounterId": "dc062e84-9e73-468f-b568-9964f1499dfe",
+                "previousEncounterId": "304c5f91-656c-48da-9c17-508af7b4658f",
+                "nextEncounterId": "6aaee373-a24e-4eda-bd16-6a47c435f1c2",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -678,13 +678,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 77"
                 },
-                "uuid": "27cf20b4-310f-4f7c-b2be-f15569b1c376"
+                "uuid": "c477a011-69b7-4d05-aa2f-ba507ff995e9"
               },
               {
                 "encounterName": "Week 12",
                 "encounterDesc": "WEEK 12",
-                "previousEncounterId": "27cf20b4-310f-4f7c-b2be-f15569b1c376",
-                "nextEncounterId": "545ab02b-b837-400b-bb41-3e5a2f2638f3",
+                "previousEncounterId": "c477a011-69b7-4d05-aa2f-ba507ff995e9",
+                "nextEncounterId": "089263a7-a009-43b1-9f3e-72f9e370197f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -709,10 +709,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 84"
                 },
-                "uuid": "dc062e84-9e73-468f-b568-9964f1499dfe"
+                "uuid": "6aaee373-a24e-4eda-bd16-6a47c435f1c2"
               }
             ],
-            "uuid": "1f80035f-8b37-4d0f-8166-e3f5eef49d16"
+            "uuid": "3b74e8a4-f226-4ac2-b07b-38c1de16c169"
           },
           "studyElements": [
             {
@@ -748,8 +748,8 @@
           "studyEpoch": {
             "studyEpochName": "Titration Period 4",
             "studyEpochDesc": "Titration Period 4",
-            "previousStudyEpochId": "1f80035f-8b37-4d0f-8166-e3f5eef49d16",
-            "nextStudyEpochId": "17fbecf4-ba18-45c3-b707-4225763799a4",
+            "previousStudyEpochId": "3b74e8a4-f226-4ac2-b07b-38c1de16c169",
+            "nextStudyEpochId": "7a92fb46-d6b9-47eb-8aa5-be76ba8be7d3",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -760,8 +760,8 @@
               {
                 "encounterName": "Week 13",
                 "encounterDesc": "WEEK 13",
-                "previousEncounterId": "dc062e84-9e73-468f-b568-9964f1499dfe",
-                "nextEncounterId": "23ad9951-1ba3-4f60-b62b-f8f6cef04e73",
+                "previousEncounterId": "6aaee373-a24e-4eda-bd16-6a47c435f1c2",
+                "nextEncounterId": "444e2e28-f17b-40af-9fcb-863278da083f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -786,13 +786,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 91"
                 },
-                "uuid": "545ab02b-b837-400b-bb41-3e5a2f2638f3"
+                "uuid": "089263a7-a009-43b1-9f3e-72f9e370197f"
               },
               {
                 "encounterName": "Week 14",
                 "encounterDesc": "WEEK 14",
-                "previousEncounterId": "545ab02b-b837-400b-bb41-3e5a2f2638f3",
-                "nextEncounterId": "d73a2352-f8b0-4f47-aade-b84233d77829",
+                "previousEncounterId": "089263a7-a009-43b1-9f3e-72f9e370197f",
+                "nextEncounterId": "878eb852-1277-47dc-a3d6-0cc4e1bdb018",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -817,13 +817,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 99"
                 },
-                "uuid": "23ad9951-1ba3-4f60-b62b-f8f6cef04e73"
+                "uuid": "444e2e28-f17b-40af-9fcb-863278da083f"
               },
               {
                 "encounterName": "Week 15",
                 "encounterDesc": "WEEK 15",
-                "previousEncounterId": "23ad9951-1ba3-4f60-b62b-f8f6cef04e73",
-                "nextEncounterId": "cb24ed95-0c32-4913-a617-6989fbe47002",
+                "previousEncounterId": "444e2e28-f17b-40af-9fcb-863278da083f",
+                "nextEncounterId": "0f2211b2-d98f-4c6b-a119-553c210f3051",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -848,13 +848,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 105"
                 },
-                "uuid": "d73a2352-f8b0-4f47-aade-b84233d77829"
+                "uuid": "878eb852-1277-47dc-a3d6-0cc4e1bdb018"
               },
               {
                 "encounterName": "Week 16",
                 "encounterDesc": "WEEK 16",
-                "previousEncounterId": "d73a2352-f8b0-4f47-aade-b84233d77829",
-                "nextEncounterId": "73435464-ced0-44c6-aec9-248e434d50ab",
+                "previousEncounterId": "878eb852-1277-47dc-a3d6-0cc4e1bdb018",
+                "nextEncounterId": "d69f1b0f-a1fc-40cc-be1a-53c8dc25b7b9",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -879,10 +879,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 112"
                 },
-                "uuid": "cb24ed95-0c32-4913-a617-6989fbe47002"
+                "uuid": "0f2211b2-d98f-4c6b-a119-553c210f3051"
               }
             ],
-            "uuid": "97e593cb-dbe5-4666-b102-0fe27d4518e7"
+            "uuid": "7c6c0cb7-3fc4-4e16-8d44-7621401a3184"
           },
           "studyElements": [
             {
@@ -918,7 +918,7 @@
           "studyEpoch": {
             "studyEpochName": "Follow-upP",
             "studyEpochDesc": "Follow-up",
-            "previousStudyEpochId": "97e593cb-dbe5-4666-b102-0fe27d4518e7",
+            "previousStudyEpochId": "7c6c0cb7-3fc4-4e16-8d44-7621401a3184",
             "nextStudyEpochId": null,
             "studyEpochType": {
               "code": "C99158",
@@ -930,7 +930,7 @@
               {
                 "encounterName": "Follow up",
                 "encounterDesc": "FOLLOW-UP",
-                "previousEncounterId": "cb24ed95-0c32-4913-a617-6989fbe47002",
+                "previousEncounterId": "0f2211b2-d98f-4c6b-a119-553c210f3051",
                 "nextEncounterId": null,
                 "encounterType": {
                   "code": "C25716",
@@ -952,10 +952,10 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "73435464-ced0-44c6-aec9-248e434d50ab"
+                "uuid": "d69f1b0f-a1fc-40cc-be1a-53c8dc25b7b9"
               }
             ],
-            "uuid": "17fbecf4-ba18-45c3-b707-4225763799a4"
+            "uuid": "7a92fb46-d6b9-47eb-8aa5-be76ba8be7d3"
           },
           "studyElements": [
             {
@@ -1054,7 +1054,7 @@
                 "encounterName": "Screening",
                 "encounterDesc": "SCREENING",
                 "previousEncounterId": null,
-                "nextEncounterId": "7ffaabd4-b20b-4b29-aee3-60fff410df39",
+                "nextEncounterId": "70b0f007-0305-4d17-91e1-a8d10ff7c186",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1079,20 +1079,20 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "start of run-in period"
                 },
-                "uuid": "e1c511ae-be01-43f7-8445-006a08ce6f44"
+                "uuid": "e54b4b6b-fff9-4f43-bdff-2f24814fcf9d"
               },
               "workflowItemActivity": {
                 "activityName": "Informed Consent",
                 "activityDesc": "Informed consent is obtained at screening",
                 "previousActivityId": null,
-                "nextActivityId": "360049f3-d759-4595-85b3-343462d390b8",
+                "nextActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "e165d8e3-47ab-4f8f-9eb2-7fd99572efcb"
+                "uuid": "bb2381d5-70f1-44be-b403-28cb3e30cf4b"
               },
-              "uuid": "885b03ad-fb55-4672-a322-ad10380e2067",
+              "uuid": "94fbe230-46d2-4070-90fb-b67b2ce5a92a",
               "previousWorkflowItemId": null,
-              "nextWorkflowItemId": "81661caf-f67c-4d32-aa02-5d0a862706d5"
+              "nextWorkflowItemId": "de6baa97-643c-4726-b2d8-e215e270ba7f"
             },
             {
               "workflowItemDesc": "",
@@ -1100,7 +1100,7 @@
                 "encounterName": "Screening",
                 "encounterDesc": "SCREENING",
                 "previousEncounterId": null,
-                "nextEncounterId": "7ffaabd4-b20b-4b29-aee3-60fff410df39",
+                "nextEncounterId": "70b0f007-0305-4d17-91e1-a8d10ff7c186",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1125,20 +1125,20 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "start of run-in period"
                 },
-                "uuid": "e1c511ae-be01-43f7-8445-006a08ce6f44"
+                "uuid": "e54b4b6b-fff9-4f43-bdff-2f24814fcf9d"
               },
               "workflowItemActivity": {
                 "activityName": "Eligibility Screening",
                 "activityDesc": "Inclusion and Exclusion criteria evaluation",
-                "previousActivityId": "e165d8e3-47ab-4f8f-9eb2-7fd99572efcb",
-                "nextActivityId": "c7f8d532-1068-4e0e-9009-8a553135c7bd",
+                "previousActivityId": "bb2381d5-70f1-44be-b403-28cb3e30cf4b",
+                "nextActivityId": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "360049f3-d759-4595-85b3-343462d390b8"
+                "uuid": "01981777-b0ad-448b-b031-03c3278bee00"
               },
-              "uuid": "81661caf-f67c-4d32-aa02-5d0a862706d5",
-              "previousWorkflowItemId": "885b03ad-fb55-4672-a322-ad10380e2067",
-              "nextWorkflowItemId": "4eca21a0-22db-43ac-8c4a-3d06fbdff2e3"
+              "uuid": "de6baa97-643c-4726-b2d8-e215e270ba7f",
+              "previousWorkflowItemId": "94fbe230-46d2-4070-90fb-b67b2ce5a92a",
+              "nextWorkflowItemId": "e3ac6726-ff4e-4dee-96d2-72eeeacc36ac"
             },
             {
               "workflowItemDesc": "",
@@ -1146,7 +1146,7 @@
                 "encounterName": "Screening",
                 "encounterDesc": "SCREENING",
                 "previousEncounterId": null,
-                "nextEncounterId": "7ffaabd4-b20b-4b29-aee3-60fff410df39",
+                "nextEncounterId": "70b0f007-0305-4d17-91e1-a8d10ff7c186",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1171,13 +1171,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "start of run-in period"
                 },
-                "uuid": "e1c511ae-be01-43f7-8445-006a08ce6f44"
+                "uuid": "e54b4b6b-fff9-4f43-bdff-2f24814fcf9d"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -1196,19 +1196,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "4eca21a0-22db-43ac-8c4a-3d06fbdff2e3",
-              "previousWorkflowItemId": "81661caf-f67c-4d32-aa02-5d0a862706d5",
-              "nextWorkflowItemId": "cffd84b1-d2da-4c68-913a-1f9743b2d883"
+              "uuid": "e3ac6726-ff4e-4dee-96d2-72eeeacc36ac",
+              "previousWorkflowItemId": "de6baa97-643c-4726-b2d8-e215e270ba7f",
+              "nextWorkflowItemId": "c792b07f-29d7-4689-a880-399d326b65a7"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Day 1",
                 "encounterDesc": "DAY 1",
-                "previousEncounterId": "e1c511ae-be01-43f7-8445-006a08ce6f44",
-                "nextEncounterId": "0564d648-6d01-4865-943a-bce4bb68ecdc",
+                "previousEncounterId": "e54b4b6b-fff9-4f43-bdff-2f24814fcf9d",
+                "nextEncounterId": "94cc2359-1c6d-4f60-8933-384b70a63374",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1231,13 +1231,13 @@
                   "transitionRuleDesc": "2 hours before treatment"
                 },
                 "transitionEndRule": null,
-                "uuid": "7ffaabd4-b20b-4b29-aee3-60fff410df39"
+                "uuid": "70b0f007-0305-4d17-91e1-a8d10ff7c186"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -1256,19 +1256,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "cffd84b1-d2da-4c68-913a-1f9743b2d883",
-              "previousWorkflowItemId": "4eca21a0-22db-43ac-8c4a-3d06fbdff2e3",
-              "nextWorkflowItemId": "17152d48-f367-4b11-bb13-cefc88025034"
+              "uuid": "c792b07f-29d7-4689-a880-399d326b65a7",
+              "previousWorkflowItemId": "e3ac6726-ff4e-4dee-96d2-72eeeacc36ac",
+              "nextWorkflowItemId": "5a9a007f-2749-49ca-b018-67178479ef2a"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Day 1",
                 "encounterDesc": "DAY 1",
-                "previousEncounterId": "e1c511ae-be01-43f7-8445-006a08ce6f44",
-                "nextEncounterId": "0564d648-6d01-4865-943a-bce4bb68ecdc",
+                "previousEncounterId": "e54b4b6b-fff9-4f43-bdff-2f24814fcf9d",
+                "nextEncounterId": "94cc2359-1c6d-4f60-8933-384b70a63374",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1291,28 +1291,28 @@
                   "transitionRuleDesc": "2 hours before treatment"
                 },
                 "transitionEndRule": null,
-                "uuid": "7ffaabd4-b20b-4b29-aee3-60fff410df39"
+                "uuid": "70b0f007-0305-4d17-91e1-a8d10ff7c186"
               },
               "workflowItemActivity": {
                 "activityName": "Dosing",
                 "activityDesc": "Dosing of Drug A - 2 times a week",
-                "previousActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
-                "nextActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
+                "nextActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "60e00e4a-f20c-45ee-b032-3b68c916aea1"
+                "uuid": "16799187-3b3e-4556-8d4d-027c63fdcdb4"
               },
-              "uuid": "17152d48-f367-4b11-bb13-cefc88025034",
-              "previousWorkflowItemId": "cffd84b1-d2da-4c68-913a-1f9743b2d883",
-              "nextWorkflowItemId": "7e0a89f8-b021-4ba7-ba1b-bec6fd0defa2"
+              "uuid": "5a9a007f-2749-49ca-b018-67178479ef2a",
+              "previousWorkflowItemId": "c792b07f-29d7-4689-a880-399d326b65a7",
+              "nextWorkflowItemId": "6ae43dfb-540b-4696-872c-58abc17d47fe"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Day 1",
                 "encounterDesc": "DAY 1",
-                "previousEncounterId": "e1c511ae-be01-43f7-8445-006a08ce6f44",
-                "nextEncounterId": "0564d648-6d01-4865-943a-bce4bb68ecdc",
+                "previousEncounterId": "e54b4b6b-fff9-4f43-bdff-2f24814fcf9d",
+                "nextEncounterId": "94cc2359-1c6d-4f60-8933-384b70a63374",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1335,28 +1335,28 @@
                   "transitionRuleDesc": "2 hours before treatment"
                 },
                 "transitionEndRule": null,
-                "uuid": "7ffaabd4-b20b-4b29-aee3-60fff410df39"
+                "uuid": "70b0f007-0305-4d17-91e1-a8d10ff7c186"
               },
               "workflowItemActivity": {
                 "activityName": "Plasma Biomarker",
                 "activityDesc": "Biomarker assessments for xxx",
-                "previousActivityId": "60e00e4a-f20c-45ee-b032-3b68c916aea1",
-                "nextActivityId": "821adb01-e81d-41b7-852a-5a9711aa6843",
+                "previousActivityId": "16799187-3b3e-4556-8d4d-027c63fdcdb4",
+                "nextActivityId": "5f4ff366-e8c1-48b4-90f6-ea7708604ee1",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "ed956c33-082e-495b-8d51-75d2bef4a48b"
+                "uuid": "4cbe5fb7-6386-44a2-ab75-03d054c55636"
               },
-              "uuid": "7e0a89f8-b021-4ba7-ba1b-bec6fd0defa2",
-              "previousWorkflowItemId": "17152d48-f367-4b11-bb13-cefc88025034",
-              "nextWorkflowItemId": "e9634e41-ee12-4bf5-9e9d-43a84cdd8df5"
+              "uuid": "6ae43dfb-540b-4696-872c-58abc17d47fe",
+              "previousWorkflowItemId": "5a9a007f-2749-49ca-b018-67178479ef2a",
+              "nextWorkflowItemId": "58ef9d57-bf65-4ef5-ab71-19d509aedff4"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Day 1",
                 "encounterDesc": "DAY 1",
-                "previousEncounterId": "e1c511ae-be01-43f7-8445-006a08ce6f44",
-                "nextEncounterId": "0564d648-6d01-4865-943a-bce4bb68ecdc",
+                "previousEncounterId": "e54b4b6b-fff9-4f43-bdff-2f24814fcf9d",
+                "nextEncounterId": "94cc2359-1c6d-4f60-8933-384b70a63374",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1379,28 +1379,28 @@
                   "transitionRuleDesc": "2 hours before treatment"
                 },
                 "transitionEndRule": null,
-                "uuid": "7ffaabd4-b20b-4b29-aee3-60fff410df39"
+                "uuid": "70b0f007-0305-4d17-91e1-a8d10ff7c186"
               },
               "workflowItemActivity": {
                 "activityName": "PK",
                 "activityDesc": "PK Sample",
-                "previousActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "821adb01-e81d-41b7-852a-5a9711aa6843"
+                "uuid": "5f4ff366-e8c1-48b4-90f6-ea7708604ee1"
               },
-              "uuid": "e9634e41-ee12-4bf5-9e9d-43a84cdd8df5",
-              "previousWorkflowItemId": "7e0a89f8-b021-4ba7-ba1b-bec6fd0defa2",
-              "nextWorkflowItemId": "9d1fafeb-ed58-47c5-83a8-fc8bbdc7a1ca"
+              "uuid": "58ef9d57-bf65-4ef5-ab71-19d509aedff4",
+              "previousWorkflowItemId": "6ae43dfb-540b-4696-872c-58abc17d47fe",
+              "nextWorkflowItemId": "69f59c0e-20f5-4216-9b9f-57d1a23f8a7c"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 1",
                 "encounterDesc": "WEEK 1",
-                "previousEncounterId": "7ffaabd4-b20b-4b29-aee3-60fff410df39",
-                "nextEncounterId": "d7aec1e2-a3bd-451b-8cc3-8a8e8d39febd",
+                "previousEncounterId": "70b0f007-0305-4d17-91e1-a8d10ff7c186",
+                "nextEncounterId": "b332fb6b-3094-437e-9456-d17c2d024ff4",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1425,13 +1425,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 1"
                 },
-                "uuid": "0564d648-6d01-4865-943a-bce4bb68ecdc"
+                "uuid": "94cc2359-1c6d-4f60-8933-384b70a63374"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -1450,19 +1450,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "9d1fafeb-ed58-47c5-83a8-fc8bbdc7a1ca",
-              "previousWorkflowItemId": "e9634e41-ee12-4bf5-9e9d-43a84cdd8df5",
-              "nextWorkflowItemId": "dbd8eb8e-ed44-4bfc-9682-cd31277f9a9d"
+              "uuid": "69f59c0e-20f5-4216-9b9f-57d1a23f8a7c",
+              "previousWorkflowItemId": "58ef9d57-bf65-4ef5-ab71-19d509aedff4",
+              "nextWorkflowItemId": "1fac4bb8-7574-4659-8224-0cd956198014"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 1",
                 "encounterDesc": "WEEK 1",
-                "previousEncounterId": "7ffaabd4-b20b-4b29-aee3-60fff410df39",
-                "nextEncounterId": "d7aec1e2-a3bd-451b-8cc3-8a8e8d39febd",
+                "previousEncounterId": "70b0f007-0305-4d17-91e1-a8d10ff7c186",
+                "nextEncounterId": "b332fb6b-3094-437e-9456-d17c2d024ff4",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1487,28 +1487,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 1"
                 },
-                "uuid": "0564d648-6d01-4865-943a-bce4bb68ecdc"
+                "uuid": "94cc2359-1c6d-4f60-8933-384b70a63374"
               },
               "workflowItemActivity": {
                 "activityName": "Dosing",
                 "activityDesc": "Dosing of Drug A - 2 times a week",
-                "previousActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
-                "nextActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
+                "nextActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "60e00e4a-f20c-45ee-b032-3b68c916aea1"
+                "uuid": "16799187-3b3e-4556-8d4d-027c63fdcdb4"
               },
-              "uuid": "dbd8eb8e-ed44-4bfc-9682-cd31277f9a9d",
-              "previousWorkflowItemId": "9d1fafeb-ed58-47c5-83a8-fc8bbdc7a1ca",
-              "nextWorkflowItemId": "31acda20-9565-42f2-9b11-c802aea5fe01"
+              "uuid": "1fac4bb8-7574-4659-8224-0cd956198014",
+              "previousWorkflowItemId": "69f59c0e-20f5-4216-9b9f-57d1a23f8a7c",
+              "nextWorkflowItemId": "43b98b6c-1e08-4f45-af31-ed3e9676290c"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 2",
                 "encounterDesc": "WEEK 2",
-                "previousEncounterId": "0564d648-6d01-4865-943a-bce4bb68ecdc",
-                "nextEncounterId": "c378c94f-a1ce-4a4b-be18-dc06f6b12a74",
+                "previousEncounterId": "94cc2359-1c6d-4f60-8933-384b70a63374",
+                "nextEncounterId": "5281d216-af13-4aa5-8366-9f480170b21c",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1533,13 +1533,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 14"
                 },
-                "uuid": "d7aec1e2-a3bd-451b-8cc3-8a8e8d39febd"
+                "uuid": "b332fb6b-3094-437e-9456-d17c2d024ff4"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -1558,19 +1558,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "31acda20-9565-42f2-9b11-c802aea5fe01",
-              "previousWorkflowItemId": "dbd8eb8e-ed44-4bfc-9682-cd31277f9a9d",
-              "nextWorkflowItemId": "befb6290-4eb6-4413-9937-619c5885fcc5"
+              "uuid": "43b98b6c-1e08-4f45-af31-ed3e9676290c",
+              "previousWorkflowItemId": "1fac4bb8-7574-4659-8224-0cd956198014",
+              "nextWorkflowItemId": "d5cacedd-0851-401f-95cb-028c1f75a068"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 2",
                 "encounterDesc": "WEEK 2",
-                "previousEncounterId": "0564d648-6d01-4865-943a-bce4bb68ecdc",
-                "nextEncounterId": "c378c94f-a1ce-4a4b-be18-dc06f6b12a74",
+                "previousEncounterId": "94cc2359-1c6d-4f60-8933-384b70a63374",
+                "nextEncounterId": "5281d216-af13-4aa5-8366-9f480170b21c",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1595,28 +1595,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 14"
                 },
-                "uuid": "d7aec1e2-a3bd-451b-8cc3-8a8e8d39febd"
+                "uuid": "b332fb6b-3094-437e-9456-d17c2d024ff4"
               },
               "workflowItemActivity": {
                 "activityName": "Dosing",
                 "activityDesc": "Dosing of Drug A - 2 times a week",
-                "previousActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
-                "nextActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
+                "nextActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "60e00e4a-f20c-45ee-b032-3b68c916aea1"
+                "uuid": "16799187-3b3e-4556-8d4d-027c63fdcdb4"
               },
-              "uuid": "befb6290-4eb6-4413-9937-619c5885fcc5",
-              "previousWorkflowItemId": "31acda20-9565-42f2-9b11-c802aea5fe01",
-              "nextWorkflowItemId": "ea650b11-7e89-4fa8-ac86-0c29b6ec0cd4"
+              "uuid": "d5cacedd-0851-401f-95cb-028c1f75a068",
+              "previousWorkflowItemId": "43b98b6c-1e08-4f45-af31-ed3e9676290c",
+              "nextWorkflowItemId": "e7b44c09-fedc-427e-ac30-eba27b714801"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 2",
                 "encounterDesc": "WEEK 2",
-                "previousEncounterId": "0564d648-6d01-4865-943a-bce4bb68ecdc",
-                "nextEncounterId": "c378c94f-a1ce-4a4b-be18-dc06f6b12a74",
+                "previousEncounterId": "94cc2359-1c6d-4f60-8933-384b70a63374",
+                "nextEncounterId": "5281d216-af13-4aa5-8366-9f480170b21c",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1641,28 +1641,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 14"
                 },
-                "uuid": "d7aec1e2-a3bd-451b-8cc3-8a8e8d39febd"
+                "uuid": "b332fb6b-3094-437e-9456-d17c2d024ff4"
               },
               "workflowItemActivity": {
                 "activityName": "Plasma Biomarker",
                 "activityDesc": "Biomarker assessments for xxx",
-                "previousActivityId": "60e00e4a-f20c-45ee-b032-3b68c916aea1",
-                "nextActivityId": "821adb01-e81d-41b7-852a-5a9711aa6843",
+                "previousActivityId": "16799187-3b3e-4556-8d4d-027c63fdcdb4",
+                "nextActivityId": "5f4ff366-e8c1-48b4-90f6-ea7708604ee1",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "ed956c33-082e-495b-8d51-75d2bef4a48b"
+                "uuid": "4cbe5fb7-6386-44a2-ab75-03d054c55636"
               },
-              "uuid": "ea650b11-7e89-4fa8-ac86-0c29b6ec0cd4",
-              "previousWorkflowItemId": "befb6290-4eb6-4413-9937-619c5885fcc5",
-              "nextWorkflowItemId": "02436b84-97f0-4ede-b802-3843078a1dad"
+              "uuid": "e7b44c09-fedc-427e-ac30-eba27b714801",
+              "previousWorkflowItemId": "d5cacedd-0851-401f-95cb-028c1f75a068",
+              "nextWorkflowItemId": "ef8a7907-96bc-44af-aca6-ea20797a3d48"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 2",
                 "encounterDesc": "WEEK 2",
-                "previousEncounterId": "0564d648-6d01-4865-943a-bce4bb68ecdc",
-                "nextEncounterId": "c378c94f-a1ce-4a4b-be18-dc06f6b12a74",
+                "previousEncounterId": "94cc2359-1c6d-4f60-8933-384b70a63374",
+                "nextEncounterId": "5281d216-af13-4aa5-8366-9f480170b21c",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1687,28 +1687,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 14"
                 },
-                "uuid": "d7aec1e2-a3bd-451b-8cc3-8a8e8d39febd"
+                "uuid": "b332fb6b-3094-437e-9456-d17c2d024ff4"
               },
               "workflowItemActivity": {
                 "activityName": "PK",
                 "activityDesc": "PK Sample",
-                "previousActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "821adb01-e81d-41b7-852a-5a9711aa6843"
+                "uuid": "5f4ff366-e8c1-48b4-90f6-ea7708604ee1"
               },
-              "uuid": "02436b84-97f0-4ede-b802-3843078a1dad",
-              "previousWorkflowItemId": "ea650b11-7e89-4fa8-ac86-0c29b6ec0cd4",
-              "nextWorkflowItemId": "7fc7019d-d881-4250-8f29-db20ccf7a76e"
+              "uuid": "ef8a7907-96bc-44af-aca6-ea20797a3d48",
+              "previousWorkflowItemId": "e7b44c09-fedc-427e-ac30-eba27b714801",
+              "nextWorkflowItemId": "9211b011-f353-4aa3-9c6c-ce296c50a6ff"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 3",
                 "encounterDesc": "WEEK 3",
-                "previousEncounterId": "d7aec1e2-a3bd-451b-8cc3-8a8e8d39febd",
-                "nextEncounterId": "de42ddb1-670b-4ab0-955b-42ccfd883f03",
+                "previousEncounterId": "b332fb6b-3094-437e-9456-d17c2d024ff4",
+                "nextEncounterId": "bfa00f86-e8a9-4c21-83e5-9b557dd1c3cf",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1733,13 +1733,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 21"
                 },
-                "uuid": "c378c94f-a1ce-4a4b-be18-dc06f6b12a74"
+                "uuid": "5281d216-af13-4aa5-8366-9f480170b21c"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -1758,19 +1758,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "7fc7019d-d881-4250-8f29-db20ccf7a76e",
-              "previousWorkflowItemId": "02436b84-97f0-4ede-b802-3843078a1dad",
-              "nextWorkflowItemId": "87ab1bcf-5a72-4a64-ae55-04f317cfa4eb"
+              "uuid": "9211b011-f353-4aa3-9c6c-ce296c50a6ff",
+              "previousWorkflowItemId": "ef8a7907-96bc-44af-aca6-ea20797a3d48",
+              "nextWorkflowItemId": "4ae1f95b-f259-4363-a53a-685dba16a719"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 3",
                 "encounterDesc": "WEEK 3",
-                "previousEncounterId": "d7aec1e2-a3bd-451b-8cc3-8a8e8d39febd",
-                "nextEncounterId": "de42ddb1-670b-4ab0-955b-42ccfd883f03",
+                "previousEncounterId": "b332fb6b-3094-437e-9456-d17c2d024ff4",
+                "nextEncounterId": "bfa00f86-e8a9-4c21-83e5-9b557dd1c3cf",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1795,28 +1795,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 21"
                 },
-                "uuid": "c378c94f-a1ce-4a4b-be18-dc06f6b12a74"
+                "uuid": "5281d216-af13-4aa5-8366-9f480170b21c"
               },
               "workflowItemActivity": {
                 "activityName": "Dosing",
                 "activityDesc": "Dosing of Drug A - 2 times a week",
-                "previousActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
-                "nextActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
+                "nextActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "60e00e4a-f20c-45ee-b032-3b68c916aea1"
+                "uuid": "16799187-3b3e-4556-8d4d-027c63fdcdb4"
               },
-              "uuid": "87ab1bcf-5a72-4a64-ae55-04f317cfa4eb",
-              "previousWorkflowItemId": "7fc7019d-d881-4250-8f29-db20ccf7a76e",
-              "nextWorkflowItemId": "b958e3ce-a864-4419-978f-862aa228feea"
+              "uuid": "4ae1f95b-f259-4363-a53a-685dba16a719",
+              "previousWorkflowItemId": "9211b011-f353-4aa3-9c6c-ce296c50a6ff",
+              "nextWorkflowItemId": "9440cf15-94c9-46e8-85e5-2bad822310d8"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 4",
                 "encounterDesc": "WEEK 4",
-                "previousEncounterId": "c378c94f-a1ce-4a4b-be18-dc06f6b12a74",
-                "nextEncounterId": "d6550ad2-0426-404b-8689-217da3cd8092",
+                "previousEncounterId": "5281d216-af13-4aa5-8366-9f480170b21c",
+                "nextEncounterId": "b0721ebc-f4aa-4346-99c3-05b4d3697118",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1841,13 +1841,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 28"
                 },
-                "uuid": "de42ddb1-670b-4ab0-955b-42ccfd883f03"
+                "uuid": "bfa00f86-e8a9-4c21-83e5-9b557dd1c3cf"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -1866,19 +1866,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "b958e3ce-a864-4419-978f-862aa228feea",
-              "previousWorkflowItemId": "87ab1bcf-5a72-4a64-ae55-04f317cfa4eb",
-              "nextWorkflowItemId": "c2d3b607-7e66-4f11-b01f-6ec43edf2914"
+              "uuid": "9440cf15-94c9-46e8-85e5-2bad822310d8",
+              "previousWorkflowItemId": "4ae1f95b-f259-4363-a53a-685dba16a719",
+              "nextWorkflowItemId": "a6f305e3-f761-4ae8-829a-bf2312bd56b7"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 4",
                 "encounterDesc": "WEEK 4",
-                "previousEncounterId": "c378c94f-a1ce-4a4b-be18-dc06f6b12a74",
-                "nextEncounterId": "d6550ad2-0426-404b-8689-217da3cd8092",
+                "previousEncounterId": "5281d216-af13-4aa5-8366-9f480170b21c",
+                "nextEncounterId": "b0721ebc-f4aa-4346-99c3-05b4d3697118",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1903,28 +1903,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 28"
                 },
-                "uuid": "de42ddb1-670b-4ab0-955b-42ccfd883f03"
+                "uuid": "bfa00f86-e8a9-4c21-83e5-9b557dd1c3cf"
               },
               "workflowItemActivity": {
                 "activityName": "Dosing",
                 "activityDesc": "Dosing of Drug A - 2 times a week",
-                "previousActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
-                "nextActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
+                "nextActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "60e00e4a-f20c-45ee-b032-3b68c916aea1"
+                "uuid": "16799187-3b3e-4556-8d4d-027c63fdcdb4"
               },
-              "uuid": "c2d3b607-7e66-4f11-b01f-6ec43edf2914",
-              "previousWorkflowItemId": "b958e3ce-a864-4419-978f-862aa228feea",
-              "nextWorkflowItemId": "5403f530-5524-4cb5-a605-7c4e84ff8bc6"
+              "uuid": "a6f305e3-f761-4ae8-829a-bf2312bd56b7",
+              "previousWorkflowItemId": "9440cf15-94c9-46e8-85e5-2bad822310d8",
+              "nextWorkflowItemId": "e5eeb687-5777-4ad5-b1b2-7badae37f353"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 4",
                 "encounterDesc": "WEEK 4",
-                "previousEncounterId": "c378c94f-a1ce-4a4b-be18-dc06f6b12a74",
-                "nextEncounterId": "d6550ad2-0426-404b-8689-217da3cd8092",
+                "previousEncounterId": "5281d216-af13-4aa5-8366-9f480170b21c",
+                "nextEncounterId": "b0721ebc-f4aa-4346-99c3-05b4d3697118",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1949,28 +1949,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 28"
                 },
-                "uuid": "de42ddb1-670b-4ab0-955b-42ccfd883f03"
+                "uuid": "bfa00f86-e8a9-4c21-83e5-9b557dd1c3cf"
               },
               "workflowItemActivity": {
                 "activityName": "Plasma Biomarker",
                 "activityDesc": "Biomarker assessments for xxx",
-                "previousActivityId": "60e00e4a-f20c-45ee-b032-3b68c916aea1",
-                "nextActivityId": "821adb01-e81d-41b7-852a-5a9711aa6843",
+                "previousActivityId": "16799187-3b3e-4556-8d4d-027c63fdcdb4",
+                "nextActivityId": "5f4ff366-e8c1-48b4-90f6-ea7708604ee1",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "ed956c33-082e-495b-8d51-75d2bef4a48b"
+                "uuid": "4cbe5fb7-6386-44a2-ab75-03d054c55636"
               },
-              "uuid": "5403f530-5524-4cb5-a605-7c4e84ff8bc6",
-              "previousWorkflowItemId": "c2d3b607-7e66-4f11-b01f-6ec43edf2914",
-              "nextWorkflowItemId": "49cb777d-15d8-4b1b-8477-29f63ab11182"
+              "uuid": "e5eeb687-5777-4ad5-b1b2-7badae37f353",
+              "previousWorkflowItemId": "a6f305e3-f761-4ae8-829a-bf2312bd56b7",
+              "nextWorkflowItemId": "13a5b3b3-c07d-40cd-ae0a-8c4cdb1f4395"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 5",
                 "encounterDesc": "WEEK 5",
-                "previousEncounterId": "de42ddb1-670b-4ab0-955b-42ccfd883f03",
-                "nextEncounterId": "c9444ea0-6495-4fe0-9f0c-6330c1d82081",
+                "previousEncounterId": "bfa00f86-e8a9-4c21-83e5-9b557dd1c3cf",
+                "nextEncounterId": "b61568de-0450-42de-ad7e-ff09af060cd1",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -1995,13 +1995,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 35"
                 },
-                "uuid": "d6550ad2-0426-404b-8689-217da3cd8092"
+                "uuid": "b0721ebc-f4aa-4346-99c3-05b4d3697118"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2020,19 +2020,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "49cb777d-15d8-4b1b-8477-29f63ab11182",
-              "previousWorkflowItemId": "5403f530-5524-4cb5-a605-7c4e84ff8bc6",
-              "nextWorkflowItemId": "d1bc3d2b-5521-4902-8516-58f731d8022b"
+              "uuid": "13a5b3b3-c07d-40cd-ae0a-8c4cdb1f4395",
+              "previousWorkflowItemId": "e5eeb687-5777-4ad5-b1b2-7badae37f353",
+              "nextWorkflowItemId": "0984387c-f9cb-4dca-aed1-0c385dcc0b45"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 5",
                 "encounterDesc": "WEEK 5",
-                "previousEncounterId": "de42ddb1-670b-4ab0-955b-42ccfd883f03",
-                "nextEncounterId": "c9444ea0-6495-4fe0-9f0c-6330c1d82081",
+                "previousEncounterId": "bfa00f86-e8a9-4c21-83e5-9b557dd1c3cf",
+                "nextEncounterId": "b61568de-0450-42de-ad7e-ff09af060cd1",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2057,28 +2057,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 35"
                 },
-                "uuid": "d6550ad2-0426-404b-8689-217da3cd8092"
+                "uuid": "b0721ebc-f4aa-4346-99c3-05b4d3697118"
               },
               "workflowItemActivity": {
                 "activityName": "Biochemistry",
                 "activityDesc": "Biochemistry assessment in plasma samples",
-                "previousActivityId": "c7f8d532-1068-4e0e-9009-8a553135c7bd",
-                "nextActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
+                "previousActivityId": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a",
+                "nextActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "27afa229-5aad-40b3-bb89-458baeb0b26f"
+                "uuid": "ea1462db-d1af-47d6-b774-029d81261503"
               },
-              "uuid": "d1bc3d2b-5521-4902-8516-58f731d8022b",
-              "previousWorkflowItemId": "49cb777d-15d8-4b1b-8477-29f63ab11182",
-              "nextWorkflowItemId": "3200c1b5-cb2a-4c08-9669-619cd2ccf824"
+              "uuid": "0984387c-f9cb-4dca-aed1-0c385dcc0b45",
+              "previousWorkflowItemId": "13a5b3b3-c07d-40cd-ae0a-8c4cdb1f4395",
+              "nextWorkflowItemId": "fef6a893-8b00-46f6-bc2e-cc7a2ca4b078"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 5",
                 "encounterDesc": "WEEK 5",
-                "previousEncounterId": "de42ddb1-670b-4ab0-955b-42ccfd883f03",
-                "nextEncounterId": "c9444ea0-6495-4fe0-9f0c-6330c1d82081",
+                "previousEncounterId": "bfa00f86-e8a9-4c21-83e5-9b557dd1c3cf",
+                "nextEncounterId": "b61568de-0450-42de-ad7e-ff09af060cd1",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2103,28 +2103,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 35"
                 },
-                "uuid": "d6550ad2-0426-404b-8689-217da3cd8092"
+                "uuid": "b0721ebc-f4aa-4346-99c3-05b4d3697118"
               },
               "workflowItemActivity": {
                 "activityName": "Demographics",
                 "activityDesc": "Demographics",
-                "previousActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
-                "nextActivityId": "60e00e4a-f20c-45ee-b032-3b68c916aea1",
+                "previousActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
+                "nextActivityId": "16799187-3b3e-4556-8d4d-027c63fdcdb4",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "67a62643-c638-4b2d-b22d-fad7c3e92ce4"
+                "uuid": "58e48a2c-29f5-415d-a530-ae0826e554ba"
               },
-              "uuid": "3200c1b5-cb2a-4c08-9669-619cd2ccf824",
-              "previousWorkflowItemId": "d1bc3d2b-5521-4902-8516-58f731d8022b",
-              "nextWorkflowItemId": "cc2c2655-9d9e-4a98-bdde-152fee3d9920"
+              "uuid": "fef6a893-8b00-46f6-bc2e-cc7a2ca4b078",
+              "previousWorkflowItemId": "0984387c-f9cb-4dca-aed1-0c385dcc0b45",
+              "nextWorkflowItemId": "8406893e-6a25-4167-8ccc-7e37fa03b39c"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 5",
                 "encounterDesc": "WEEK 5",
-                "previousEncounterId": "de42ddb1-670b-4ab0-955b-42ccfd883f03",
-                "nextEncounterId": "c9444ea0-6495-4fe0-9f0c-6330c1d82081",
+                "previousEncounterId": "bfa00f86-e8a9-4c21-83e5-9b557dd1c3cf",
+                "nextEncounterId": "b61568de-0450-42de-ad7e-ff09af060cd1",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2149,28 +2149,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 35"
                 },
-                "uuid": "d6550ad2-0426-404b-8689-217da3cd8092"
+                "uuid": "b0721ebc-f4aa-4346-99c3-05b4d3697118"
               },
               "workflowItemActivity": {
                 "activityName": "PK",
                 "activityDesc": "PK Sample",
-                "previousActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "821adb01-e81d-41b7-852a-5a9711aa6843"
+                "uuid": "5f4ff366-e8c1-48b4-90f6-ea7708604ee1"
               },
-              "uuid": "cc2c2655-9d9e-4a98-bdde-152fee3d9920",
-              "previousWorkflowItemId": "3200c1b5-cb2a-4c08-9669-619cd2ccf824",
-              "nextWorkflowItemId": "35939135-e916-4c5c-a6b5-53aa5efb6729"
+              "uuid": "8406893e-6a25-4167-8ccc-7e37fa03b39c",
+              "previousWorkflowItemId": "fef6a893-8b00-46f6-bc2e-cc7a2ca4b078",
+              "nextWorkflowItemId": "9d937023-96d1-4ef5-8f15-9f0ba60006a9"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 6",
                 "encounterDesc": "WEEK 6",
-                "previousEncounterId": "d6550ad2-0426-404b-8689-217da3cd8092",
-                "nextEncounterId": "03d52d12-e705-42bf-9d39-f3550f7269c7",
+                "previousEncounterId": "b0721ebc-f4aa-4346-99c3-05b4d3697118",
+                "nextEncounterId": "e51c9c6c-a71f-4183-9ac6-289ebd7a2052",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2195,13 +2195,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 42"
                 },
-                "uuid": "c9444ea0-6495-4fe0-9f0c-6330c1d82081"
+                "uuid": "b61568de-0450-42de-ad7e-ff09af060cd1"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2220,19 +2220,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "35939135-e916-4c5c-a6b5-53aa5efb6729",
-              "previousWorkflowItemId": "cc2c2655-9d9e-4a98-bdde-152fee3d9920",
-              "nextWorkflowItemId": "d574d37d-bdbe-4dad-b664-2d042970c43c"
+              "uuid": "9d937023-96d1-4ef5-8f15-9f0ba60006a9",
+              "previousWorkflowItemId": "8406893e-6a25-4167-8ccc-7e37fa03b39c",
+              "nextWorkflowItemId": "0dbdeae1-c92f-4c14-ad36-1c0ead965c53"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 6",
                 "encounterDesc": "WEEK 6",
-                "previousEncounterId": "d6550ad2-0426-404b-8689-217da3cd8092",
-                "nextEncounterId": "03d52d12-e705-42bf-9d39-f3550f7269c7",
+                "previousEncounterId": "b0721ebc-f4aa-4346-99c3-05b4d3697118",
+                "nextEncounterId": "e51c9c6c-a71f-4183-9ac6-289ebd7a2052",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2257,28 +2257,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 42"
                 },
-                "uuid": "c9444ea0-6495-4fe0-9f0c-6330c1d82081"
+                "uuid": "b61568de-0450-42de-ad7e-ff09af060cd1"
               },
               "workflowItemActivity": {
                 "activityName": "Dosing",
                 "activityDesc": "Dosing of Drug A - 2 times a week",
-                "previousActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
-                "nextActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
+                "nextActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "60e00e4a-f20c-45ee-b032-3b68c916aea1"
+                "uuid": "16799187-3b3e-4556-8d4d-027c63fdcdb4"
               },
-              "uuid": "d574d37d-bdbe-4dad-b664-2d042970c43c",
-              "previousWorkflowItemId": "35939135-e916-4c5c-a6b5-53aa5efb6729",
-              "nextWorkflowItemId": "6a92635b-7e6e-4370-b8d6-467df44119b2"
+              "uuid": "0dbdeae1-c92f-4c14-ad36-1c0ead965c53",
+              "previousWorkflowItemId": "9d937023-96d1-4ef5-8f15-9f0ba60006a9",
+              "nextWorkflowItemId": "cc6fdb6d-c2fd-4d85-beb3-d57423883365"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 7",
                 "encounterDesc": "WEEK 7",
-                "previousEncounterId": "c9444ea0-6495-4fe0-9f0c-6330c1d82081",
-                "nextEncounterId": "80e777e7-250d-4fdc-8a0c-072dbab6587b",
+                "previousEncounterId": "b61568de-0450-42de-ad7e-ff09af060cd1",
+                "nextEncounterId": "a74e8a73-b528-4fdb-9880-7f25e723587f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2303,13 +2303,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 49"
                 },
-                "uuid": "03d52d12-e705-42bf-9d39-f3550f7269c7"
+                "uuid": "e51c9c6c-a71f-4183-9ac6-289ebd7a2052"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2328,19 +2328,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "6a92635b-7e6e-4370-b8d6-467df44119b2",
-              "previousWorkflowItemId": "d574d37d-bdbe-4dad-b664-2d042970c43c",
-              "nextWorkflowItemId": "5dab8ce9-b4b1-4833-b02f-7321ee710ca9"
+              "uuid": "cc6fdb6d-c2fd-4d85-beb3-d57423883365",
+              "previousWorkflowItemId": "0dbdeae1-c92f-4c14-ad36-1c0ead965c53",
+              "nextWorkflowItemId": "dfc7e646-09a7-46df-afde-4ecd2c56eb18"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 7",
                 "encounterDesc": "WEEK 7",
-                "previousEncounterId": "c9444ea0-6495-4fe0-9f0c-6330c1d82081",
-                "nextEncounterId": "80e777e7-250d-4fdc-8a0c-072dbab6587b",
+                "previousEncounterId": "b61568de-0450-42de-ad7e-ff09af060cd1",
+                "nextEncounterId": "a74e8a73-b528-4fdb-9880-7f25e723587f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2365,28 +2365,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 49"
                 },
-                "uuid": "03d52d12-e705-42bf-9d39-f3550f7269c7"
+                "uuid": "e51c9c6c-a71f-4183-9ac6-289ebd7a2052"
               },
               "workflowItemActivity": {
                 "activityName": "Dosing",
                 "activityDesc": "Dosing of Drug A - 2 times a week",
-                "previousActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
-                "nextActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
+                "nextActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "60e00e4a-f20c-45ee-b032-3b68c916aea1"
+                "uuid": "16799187-3b3e-4556-8d4d-027c63fdcdb4"
               },
-              "uuid": "5dab8ce9-b4b1-4833-b02f-7321ee710ca9",
-              "previousWorkflowItemId": "6a92635b-7e6e-4370-b8d6-467df44119b2",
-              "nextWorkflowItemId": "e2c9e18e-a9a5-4d1d-8a59-c0a794d1e669"
+              "uuid": "dfc7e646-09a7-46df-afde-4ecd2c56eb18",
+              "previousWorkflowItemId": "cc6fdb6d-c2fd-4d85-beb3-d57423883365",
+              "nextWorkflowItemId": "8a98ffcb-74bd-414e-9f16-8f58d3ce57f7"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 7",
                 "encounterDesc": "WEEK 7",
-                "previousEncounterId": "c9444ea0-6495-4fe0-9f0c-6330c1d82081",
-                "nextEncounterId": "80e777e7-250d-4fdc-8a0c-072dbab6587b",
+                "previousEncounterId": "b61568de-0450-42de-ad7e-ff09af060cd1",
+                "nextEncounterId": "a74e8a73-b528-4fdb-9880-7f25e723587f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2411,28 +2411,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 49"
                 },
-                "uuid": "03d52d12-e705-42bf-9d39-f3550f7269c7"
+                "uuid": "e51c9c6c-a71f-4183-9ac6-289ebd7a2052"
               },
               "workflowItemActivity": {
                 "activityName": "Plasma Biomarker",
                 "activityDesc": "Biomarker assessments for xxx",
-                "previousActivityId": "60e00e4a-f20c-45ee-b032-3b68c916aea1",
-                "nextActivityId": "821adb01-e81d-41b7-852a-5a9711aa6843",
+                "previousActivityId": "16799187-3b3e-4556-8d4d-027c63fdcdb4",
+                "nextActivityId": "5f4ff366-e8c1-48b4-90f6-ea7708604ee1",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "ed956c33-082e-495b-8d51-75d2bef4a48b"
+                "uuid": "4cbe5fb7-6386-44a2-ab75-03d054c55636"
               },
-              "uuid": "e2c9e18e-a9a5-4d1d-8a59-c0a794d1e669",
-              "previousWorkflowItemId": "5dab8ce9-b4b1-4833-b02f-7321ee710ca9",
-              "nextWorkflowItemId": "f1ad074b-8641-4787-b6ba-edd9462fdd9e"
+              "uuid": "8a98ffcb-74bd-414e-9f16-8f58d3ce57f7",
+              "previousWorkflowItemId": "dfc7e646-09a7-46df-afde-4ecd2c56eb18",
+              "nextWorkflowItemId": "8429c8f7-ed32-48f1-a275-4d395e764420"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 7",
                 "encounterDesc": "WEEK 7",
-                "previousEncounterId": "c9444ea0-6495-4fe0-9f0c-6330c1d82081",
-                "nextEncounterId": "80e777e7-250d-4fdc-8a0c-072dbab6587b",
+                "previousEncounterId": "b61568de-0450-42de-ad7e-ff09af060cd1",
+                "nextEncounterId": "a74e8a73-b528-4fdb-9880-7f25e723587f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2457,28 +2457,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 49"
                 },
-                "uuid": "03d52d12-e705-42bf-9d39-f3550f7269c7"
+                "uuid": "e51c9c6c-a71f-4183-9ac6-289ebd7a2052"
               },
               "workflowItemActivity": {
                 "activityName": "PK",
                 "activityDesc": "PK Sample",
-                "previousActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "821adb01-e81d-41b7-852a-5a9711aa6843"
+                "uuid": "5f4ff366-e8c1-48b4-90f6-ea7708604ee1"
               },
-              "uuid": "f1ad074b-8641-4787-b6ba-edd9462fdd9e",
-              "previousWorkflowItemId": "e2c9e18e-a9a5-4d1d-8a59-c0a794d1e669",
-              "nextWorkflowItemId": "e024a370-f61c-4bce-9a18-7f9b5ccd6b7d"
+              "uuid": "8429c8f7-ed32-48f1-a275-4d395e764420",
+              "previousWorkflowItemId": "8a98ffcb-74bd-414e-9f16-8f58d3ce57f7",
+              "nextWorkflowItemId": "0fe04a95-adf6-43a3-bfa9-94d5e5ca65f8"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 8",
                 "encounterDesc": "WEEK 8",
-                "previousEncounterId": "03d52d12-e705-42bf-9d39-f3550f7269c7",
-                "nextEncounterId": "6641ff69-d61f-488e-afdb-f775a37c53e4",
+                "previousEncounterId": "e51c9c6c-a71f-4183-9ac6-289ebd7a2052",
+                "nextEncounterId": "63fc6fc3-c333-492f-b6ed-f7d5cbeee859",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2503,13 +2503,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 56"
                 },
-                "uuid": "80e777e7-250d-4fdc-8a0c-072dbab6587b"
+                "uuid": "a74e8a73-b528-4fdb-9880-7f25e723587f"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2528,19 +2528,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "e024a370-f61c-4bce-9a18-7f9b5ccd6b7d",
-              "previousWorkflowItemId": "f1ad074b-8641-4787-b6ba-edd9462fdd9e",
-              "nextWorkflowItemId": "64cd6de0-d7ff-46da-b568-9689b90331c7"
+              "uuid": "0fe04a95-adf6-43a3-bfa9-94d5e5ca65f8",
+              "previousWorkflowItemId": "8429c8f7-ed32-48f1-a275-4d395e764420",
+              "nextWorkflowItemId": "39e1ad7a-c19d-48ff-b9e8-6d1ed90960b3"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 8",
                 "encounterDesc": "WEEK 8",
-                "previousEncounterId": "03d52d12-e705-42bf-9d39-f3550f7269c7",
-                "nextEncounterId": "6641ff69-d61f-488e-afdb-f775a37c53e4",
+                "previousEncounterId": "e51c9c6c-a71f-4183-9ac6-289ebd7a2052",
+                "nextEncounterId": "63fc6fc3-c333-492f-b6ed-f7d5cbeee859",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2565,28 +2565,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 56"
                 },
-                "uuid": "80e777e7-250d-4fdc-8a0c-072dbab6587b"
+                "uuid": "a74e8a73-b528-4fdb-9880-7f25e723587f"
               },
               "workflowItemActivity": {
                 "activityName": "Biochemistry",
                 "activityDesc": "Biochemistry assessment in plasma samples",
-                "previousActivityId": "c7f8d532-1068-4e0e-9009-8a553135c7bd",
-                "nextActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
+                "previousActivityId": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a",
+                "nextActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "27afa229-5aad-40b3-bb89-458baeb0b26f"
+                "uuid": "ea1462db-d1af-47d6-b774-029d81261503"
               },
-              "uuid": "64cd6de0-d7ff-46da-b568-9689b90331c7",
-              "previousWorkflowItemId": "e024a370-f61c-4bce-9a18-7f9b5ccd6b7d",
-              "nextWorkflowItemId": "002a1adc-94e5-4c02-80da-a387de48678a"
+              "uuid": "39e1ad7a-c19d-48ff-b9e8-6d1ed90960b3",
+              "previousWorkflowItemId": "0fe04a95-adf6-43a3-bfa9-94d5e5ca65f8",
+              "nextWorkflowItemId": "5d765c81-13c7-493c-92c7-b89cac8023ae"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 8",
                 "encounterDesc": "WEEK 8",
-                "previousEncounterId": "03d52d12-e705-42bf-9d39-f3550f7269c7",
-                "nextEncounterId": "6641ff69-d61f-488e-afdb-f775a37c53e4",
+                "previousEncounterId": "e51c9c6c-a71f-4183-9ac6-289ebd7a2052",
+                "nextEncounterId": "63fc6fc3-c333-492f-b6ed-f7d5cbeee859",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2611,28 +2611,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 56"
                 },
-                "uuid": "80e777e7-250d-4fdc-8a0c-072dbab6587b"
+                "uuid": "a74e8a73-b528-4fdb-9880-7f25e723587f"
               },
               "workflowItemActivity": {
                 "activityName": "Demographics",
                 "activityDesc": "Demographics",
-                "previousActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
-                "nextActivityId": "60e00e4a-f20c-45ee-b032-3b68c916aea1",
+                "previousActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
+                "nextActivityId": "16799187-3b3e-4556-8d4d-027c63fdcdb4",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "67a62643-c638-4b2d-b22d-fad7c3e92ce4"
+                "uuid": "58e48a2c-29f5-415d-a530-ae0826e554ba"
               },
-              "uuid": "002a1adc-94e5-4c02-80da-a387de48678a",
-              "previousWorkflowItemId": "64cd6de0-d7ff-46da-b568-9689b90331c7",
-              "nextWorkflowItemId": "75fa0f36-b1b9-4949-9e49-e39a9a2bda21"
+              "uuid": "5d765c81-13c7-493c-92c7-b89cac8023ae",
+              "previousWorkflowItemId": "39e1ad7a-c19d-48ff-b9e8-6d1ed90960b3",
+              "nextWorkflowItemId": "c03728da-5161-4193-a181-26859bc34c44"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 9",
                 "encounterDesc": "WEEK 9",
-                "previousEncounterId": "80e777e7-250d-4fdc-8a0c-072dbab6587b",
-                "nextEncounterId": "938d2c59-a524-4c0f-bf70-45b706f34baf",
+                "previousEncounterId": "a74e8a73-b528-4fdb-9880-7f25e723587f",
+                "nextEncounterId": "304c5f91-656c-48da-9c17-508af7b4658f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2657,13 +2657,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 63"
                 },
-                "uuid": "6641ff69-d61f-488e-afdb-f775a37c53e4"
+                "uuid": "63fc6fc3-c333-492f-b6ed-f7d5cbeee859"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2682,19 +2682,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "75fa0f36-b1b9-4949-9e49-e39a9a2bda21",
-              "previousWorkflowItemId": "002a1adc-94e5-4c02-80da-a387de48678a",
-              "nextWorkflowItemId": "c7eede9e-67f2-4933-b258-9cc4cb195a9b"
+              "uuid": "c03728da-5161-4193-a181-26859bc34c44",
+              "previousWorkflowItemId": "5d765c81-13c7-493c-92c7-b89cac8023ae",
+              "nextWorkflowItemId": "e3f8279d-c806-4a22-b892-7090608db0ef"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 9",
                 "encounterDesc": "WEEK 9",
-                "previousEncounterId": "80e777e7-250d-4fdc-8a0c-072dbab6587b",
-                "nextEncounterId": "938d2c59-a524-4c0f-bf70-45b706f34baf",
+                "previousEncounterId": "a74e8a73-b528-4fdb-9880-7f25e723587f",
+                "nextEncounterId": "304c5f91-656c-48da-9c17-508af7b4658f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2719,28 +2719,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 63"
                 },
-                "uuid": "6641ff69-d61f-488e-afdb-f775a37c53e4"
+                "uuid": "63fc6fc3-c333-492f-b6ed-f7d5cbeee859"
               },
               "workflowItemActivity": {
                 "activityName": "Dosing",
                 "activityDesc": "Dosing of Drug A - 2 times a week",
-                "previousActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
-                "nextActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
+                "nextActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "60e00e4a-f20c-45ee-b032-3b68c916aea1"
+                "uuid": "16799187-3b3e-4556-8d4d-027c63fdcdb4"
               },
-              "uuid": "c7eede9e-67f2-4933-b258-9cc4cb195a9b",
-              "previousWorkflowItemId": "75fa0f36-b1b9-4949-9e49-e39a9a2bda21",
-              "nextWorkflowItemId": "63364142-7b59-47bf-a645-c4f905e9fec7"
+              "uuid": "e3f8279d-c806-4a22-b892-7090608db0ef",
+              "previousWorkflowItemId": "c03728da-5161-4193-a181-26859bc34c44",
+              "nextWorkflowItemId": "e280f551-39ad-4d88-b93a-3610ab9de129"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 9",
                 "encounterDesc": "WEEK 9",
-                "previousEncounterId": "80e777e7-250d-4fdc-8a0c-072dbab6587b",
-                "nextEncounterId": "938d2c59-a524-4c0f-bf70-45b706f34baf",
+                "previousEncounterId": "a74e8a73-b528-4fdb-9880-7f25e723587f",
+                "nextEncounterId": "304c5f91-656c-48da-9c17-508af7b4658f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2765,28 +2765,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 63"
                 },
-                "uuid": "6641ff69-d61f-488e-afdb-f775a37c53e4"
+                "uuid": "63fc6fc3-c333-492f-b6ed-f7d5cbeee859"
               },
               "workflowItemActivity": {
                 "activityName": "PK",
                 "activityDesc": "PK Sample",
-                "previousActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "821adb01-e81d-41b7-852a-5a9711aa6843"
+                "uuid": "5f4ff366-e8c1-48b4-90f6-ea7708604ee1"
               },
-              "uuid": "63364142-7b59-47bf-a645-c4f905e9fec7",
-              "previousWorkflowItemId": "c7eede9e-67f2-4933-b258-9cc4cb195a9b",
-              "nextWorkflowItemId": "784b4bee-66fe-4ac0-9e14-d38fda94c55b"
+              "uuid": "e280f551-39ad-4d88-b93a-3610ab9de129",
+              "previousWorkflowItemId": "e3f8279d-c806-4a22-b892-7090608db0ef",
+              "nextWorkflowItemId": "fa1c9c82-7d0b-45c1-8fa4-6cf485de09fa"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 10",
                 "encounterDesc": "WEEK 10",
-                "previousEncounterId": "6641ff69-d61f-488e-afdb-f775a37c53e4",
-                "nextEncounterId": "27cf20b4-310f-4f7c-b2be-f15569b1c376",
+                "previousEncounterId": "63fc6fc3-c333-492f-b6ed-f7d5cbeee859",
+                "nextEncounterId": "c477a011-69b7-4d05-aa2f-ba507ff995e9",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2811,13 +2811,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 70"
                 },
-                "uuid": "938d2c59-a524-4c0f-bf70-45b706f34baf"
+                "uuid": "304c5f91-656c-48da-9c17-508af7b4658f"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2836,19 +2836,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "784b4bee-66fe-4ac0-9e14-d38fda94c55b",
-              "previousWorkflowItemId": "63364142-7b59-47bf-a645-c4f905e9fec7",
-              "nextWorkflowItemId": "ea4dc72c-0348-41c0-ae00-b91a816ebe50"
+              "uuid": "fa1c9c82-7d0b-45c1-8fa4-6cf485de09fa",
+              "previousWorkflowItemId": "e280f551-39ad-4d88-b93a-3610ab9de129",
+              "nextWorkflowItemId": "8b5cf33e-fcb7-47e8-b3d4-b75a34f5b8e5"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 10",
                 "encounterDesc": "WEEK 10",
-                "previousEncounterId": "6641ff69-d61f-488e-afdb-f775a37c53e4",
-                "nextEncounterId": "27cf20b4-310f-4f7c-b2be-f15569b1c376",
+                "previousEncounterId": "63fc6fc3-c333-492f-b6ed-f7d5cbeee859",
+                "nextEncounterId": "c477a011-69b7-4d05-aa2f-ba507ff995e9",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2873,28 +2873,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 70"
                 },
-                "uuid": "938d2c59-a524-4c0f-bf70-45b706f34baf"
+                "uuid": "304c5f91-656c-48da-9c17-508af7b4658f"
               },
               "workflowItemActivity": {
                 "activityName": "Dosing",
                 "activityDesc": "Dosing of Drug A - 2 times a week",
-                "previousActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
-                "nextActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
+                "nextActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "60e00e4a-f20c-45ee-b032-3b68c916aea1"
+                "uuid": "16799187-3b3e-4556-8d4d-027c63fdcdb4"
               },
-              "uuid": "ea4dc72c-0348-41c0-ae00-b91a816ebe50",
-              "previousWorkflowItemId": "784b4bee-66fe-4ac0-9e14-d38fda94c55b",
-              "nextWorkflowItemId": "3de09a22-1b01-498d-a8d9-69f03ad2430d"
+              "uuid": "8b5cf33e-fcb7-47e8-b3d4-b75a34f5b8e5",
+              "previousWorkflowItemId": "fa1c9c82-7d0b-45c1-8fa4-6cf485de09fa",
+              "nextWorkflowItemId": "bcacc1f6-2944-4f1a-b839-edd48228e9ef"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 10",
                 "encounterDesc": "WEEK 10",
-                "previousEncounterId": "6641ff69-d61f-488e-afdb-f775a37c53e4",
-                "nextEncounterId": "27cf20b4-310f-4f7c-b2be-f15569b1c376",
+                "previousEncounterId": "63fc6fc3-c333-492f-b6ed-f7d5cbeee859",
+                "nextEncounterId": "c477a011-69b7-4d05-aa2f-ba507ff995e9",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2919,28 +2919,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 70"
                 },
-                "uuid": "938d2c59-a524-4c0f-bf70-45b706f34baf"
+                "uuid": "304c5f91-656c-48da-9c17-508af7b4658f"
               },
               "workflowItemActivity": {
                 "activityName": "Plasma Biomarker",
                 "activityDesc": "Biomarker assessments for xxx",
-                "previousActivityId": "60e00e4a-f20c-45ee-b032-3b68c916aea1",
-                "nextActivityId": "821adb01-e81d-41b7-852a-5a9711aa6843",
+                "previousActivityId": "16799187-3b3e-4556-8d4d-027c63fdcdb4",
+                "nextActivityId": "5f4ff366-e8c1-48b4-90f6-ea7708604ee1",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "ed956c33-082e-495b-8d51-75d2bef4a48b"
+                "uuid": "4cbe5fb7-6386-44a2-ab75-03d054c55636"
               },
-              "uuid": "3de09a22-1b01-498d-a8d9-69f03ad2430d",
-              "previousWorkflowItemId": "ea4dc72c-0348-41c0-ae00-b91a816ebe50",
-              "nextWorkflowItemId": "deb43f1e-dac8-428f-adaa-c8f5ab3487fd"
+              "uuid": "bcacc1f6-2944-4f1a-b839-edd48228e9ef",
+              "previousWorkflowItemId": "8b5cf33e-fcb7-47e8-b3d4-b75a34f5b8e5",
+              "nextWorkflowItemId": "2ef52ef2-d968-46d5-bd68-3987517eb43d"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 11",
                 "encounterDesc": "WEEK 11",
-                "previousEncounterId": "938d2c59-a524-4c0f-bf70-45b706f34baf",
-                "nextEncounterId": "dc062e84-9e73-468f-b568-9964f1499dfe",
+                "previousEncounterId": "304c5f91-656c-48da-9c17-508af7b4658f",
+                "nextEncounterId": "6aaee373-a24e-4eda-bd16-6a47c435f1c2",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -2965,13 +2965,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 77"
                 },
-                "uuid": "27cf20b4-310f-4f7c-b2be-f15569b1c376"
+                "uuid": "c477a011-69b7-4d05-aa2f-ba507ff995e9"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2990,19 +2990,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "deb43f1e-dac8-428f-adaa-c8f5ab3487fd",
-              "previousWorkflowItemId": "3de09a22-1b01-498d-a8d9-69f03ad2430d",
-              "nextWorkflowItemId": "e913f874-70dd-408f-b284-175e5a238524"
+              "uuid": "2ef52ef2-d968-46d5-bd68-3987517eb43d",
+              "previousWorkflowItemId": "bcacc1f6-2944-4f1a-b839-edd48228e9ef",
+              "nextWorkflowItemId": "2c080386-4900-4364-9291-84f86825a037"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 11",
                 "encounterDesc": "WEEK 11",
-                "previousEncounterId": "938d2c59-a524-4c0f-bf70-45b706f34baf",
-                "nextEncounterId": "dc062e84-9e73-468f-b568-9964f1499dfe",
+                "previousEncounterId": "304c5f91-656c-48da-9c17-508af7b4658f",
+                "nextEncounterId": "6aaee373-a24e-4eda-bd16-6a47c435f1c2",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3027,28 +3027,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 77"
                 },
-                "uuid": "27cf20b4-310f-4f7c-b2be-f15569b1c376"
+                "uuid": "c477a011-69b7-4d05-aa2f-ba507ff995e9"
               },
               "workflowItemActivity": {
                 "activityName": "Biochemistry",
                 "activityDesc": "Biochemistry assessment in plasma samples",
-                "previousActivityId": "c7f8d532-1068-4e0e-9009-8a553135c7bd",
-                "nextActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
+                "previousActivityId": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a",
+                "nextActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "27afa229-5aad-40b3-bb89-458baeb0b26f"
+                "uuid": "ea1462db-d1af-47d6-b774-029d81261503"
               },
-              "uuid": "e913f874-70dd-408f-b284-175e5a238524",
-              "previousWorkflowItemId": "deb43f1e-dac8-428f-adaa-c8f5ab3487fd",
-              "nextWorkflowItemId": "aa596337-4156-4203-bdba-6ba60fbd96fe"
+              "uuid": "2c080386-4900-4364-9291-84f86825a037",
+              "previousWorkflowItemId": "2ef52ef2-d968-46d5-bd68-3987517eb43d",
+              "nextWorkflowItemId": "35f063cf-9b54-4470-bff9-3b6995ce5e75"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 11",
                 "encounterDesc": "WEEK 11",
-                "previousEncounterId": "938d2c59-a524-4c0f-bf70-45b706f34baf",
-                "nextEncounterId": "dc062e84-9e73-468f-b568-9964f1499dfe",
+                "previousEncounterId": "304c5f91-656c-48da-9c17-508af7b4658f",
+                "nextEncounterId": "6aaee373-a24e-4eda-bd16-6a47c435f1c2",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3073,28 +3073,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 77"
                 },
-                "uuid": "27cf20b4-310f-4f7c-b2be-f15569b1c376"
+                "uuid": "c477a011-69b7-4d05-aa2f-ba507ff995e9"
               },
               "workflowItemActivity": {
                 "activityName": "Demographics",
                 "activityDesc": "Demographics",
-                "previousActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
-                "nextActivityId": "60e00e4a-f20c-45ee-b032-3b68c916aea1",
+                "previousActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
+                "nextActivityId": "16799187-3b3e-4556-8d4d-027c63fdcdb4",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "67a62643-c638-4b2d-b22d-fad7c3e92ce4"
+                "uuid": "58e48a2c-29f5-415d-a530-ae0826e554ba"
               },
-              "uuid": "aa596337-4156-4203-bdba-6ba60fbd96fe",
-              "previousWorkflowItemId": "e913f874-70dd-408f-b284-175e5a238524",
-              "nextWorkflowItemId": "5276ae17-05f5-4a96-93fb-f1aac10093b9"
+              "uuid": "35f063cf-9b54-4470-bff9-3b6995ce5e75",
+              "previousWorkflowItemId": "2c080386-4900-4364-9291-84f86825a037",
+              "nextWorkflowItemId": "7e2f41ed-c5eb-485e-8472-a97159f30bcd"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 12",
                 "encounterDesc": "WEEK 12",
-                "previousEncounterId": "27cf20b4-310f-4f7c-b2be-f15569b1c376",
-                "nextEncounterId": "545ab02b-b837-400b-bb41-3e5a2f2638f3",
+                "previousEncounterId": "c477a011-69b7-4d05-aa2f-ba507ff995e9",
+                "nextEncounterId": "089263a7-a009-43b1-9f3e-72f9e370197f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3119,13 +3119,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 84"
                 },
-                "uuid": "dc062e84-9e73-468f-b568-9964f1499dfe"
+                "uuid": "6aaee373-a24e-4eda-bd16-6a47c435f1c2"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -3144,19 +3144,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "5276ae17-05f5-4a96-93fb-f1aac10093b9",
-              "previousWorkflowItemId": "aa596337-4156-4203-bdba-6ba60fbd96fe",
-              "nextWorkflowItemId": "52b7e1d5-2c4a-4979-9f3f-6cde0dde09f1"
+              "uuid": "7e2f41ed-c5eb-485e-8472-a97159f30bcd",
+              "previousWorkflowItemId": "35f063cf-9b54-4470-bff9-3b6995ce5e75",
+              "nextWorkflowItemId": "dd4e56e4-6b0b-459a-b77f-be78a8281acc"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 12",
                 "encounterDesc": "WEEK 12",
-                "previousEncounterId": "27cf20b4-310f-4f7c-b2be-f15569b1c376",
-                "nextEncounterId": "545ab02b-b837-400b-bb41-3e5a2f2638f3",
+                "previousEncounterId": "c477a011-69b7-4d05-aa2f-ba507ff995e9",
+                "nextEncounterId": "089263a7-a009-43b1-9f3e-72f9e370197f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3181,28 +3181,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 84"
                 },
-                "uuid": "dc062e84-9e73-468f-b568-9964f1499dfe"
+                "uuid": "6aaee373-a24e-4eda-bd16-6a47c435f1c2"
               },
               "workflowItemActivity": {
                 "activityName": "Dosing",
                 "activityDesc": "Dosing of Drug A - 2 times a week",
-                "previousActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
-                "nextActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
+                "nextActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "60e00e4a-f20c-45ee-b032-3b68c916aea1"
+                "uuid": "16799187-3b3e-4556-8d4d-027c63fdcdb4"
               },
-              "uuid": "52b7e1d5-2c4a-4979-9f3f-6cde0dde09f1",
-              "previousWorkflowItemId": "5276ae17-05f5-4a96-93fb-f1aac10093b9",
-              "nextWorkflowItemId": "a375e907-6fef-41a4-bbc8-8ac0ae5e1a24"
+              "uuid": "dd4e56e4-6b0b-459a-b77f-be78a8281acc",
+              "previousWorkflowItemId": "7e2f41ed-c5eb-485e-8472-a97159f30bcd",
+              "nextWorkflowItemId": "c423c539-1096-44a0-b633-69fe9625e771"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 13",
                 "encounterDesc": "WEEK 13",
-                "previousEncounterId": "dc062e84-9e73-468f-b568-9964f1499dfe",
-                "nextEncounterId": "23ad9951-1ba3-4f60-b62b-f8f6cef04e73",
+                "previousEncounterId": "6aaee373-a24e-4eda-bd16-6a47c435f1c2",
+                "nextEncounterId": "444e2e28-f17b-40af-9fcb-863278da083f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3227,13 +3227,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 91"
                 },
-                "uuid": "545ab02b-b837-400b-bb41-3e5a2f2638f3"
+                "uuid": "089263a7-a009-43b1-9f3e-72f9e370197f"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -3252,19 +3252,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "a375e907-6fef-41a4-bbc8-8ac0ae5e1a24",
-              "previousWorkflowItemId": "52b7e1d5-2c4a-4979-9f3f-6cde0dde09f1",
-              "nextWorkflowItemId": "b8bd1b8a-b844-45f6-8dcc-e15d50df9342"
+              "uuid": "c423c539-1096-44a0-b633-69fe9625e771",
+              "previousWorkflowItemId": "dd4e56e4-6b0b-459a-b77f-be78a8281acc",
+              "nextWorkflowItemId": "e50c7549-277b-4a22-8138-bd07cd6dbb75"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 13",
                 "encounterDesc": "WEEK 13",
-                "previousEncounterId": "dc062e84-9e73-468f-b568-9964f1499dfe",
-                "nextEncounterId": "23ad9951-1ba3-4f60-b62b-f8f6cef04e73",
+                "previousEncounterId": "6aaee373-a24e-4eda-bd16-6a47c435f1c2",
+                "nextEncounterId": "444e2e28-f17b-40af-9fcb-863278da083f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3289,28 +3289,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 91"
                 },
-                "uuid": "545ab02b-b837-400b-bb41-3e5a2f2638f3"
+                "uuid": "089263a7-a009-43b1-9f3e-72f9e370197f"
               },
               "workflowItemActivity": {
                 "activityName": "Dosing",
                 "activityDesc": "Dosing of Drug A - 2 times a week",
-                "previousActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
-                "nextActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
+                "nextActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "60e00e4a-f20c-45ee-b032-3b68c916aea1"
+                "uuid": "16799187-3b3e-4556-8d4d-027c63fdcdb4"
               },
-              "uuid": "b8bd1b8a-b844-45f6-8dcc-e15d50df9342",
-              "previousWorkflowItemId": "a375e907-6fef-41a4-bbc8-8ac0ae5e1a24",
-              "nextWorkflowItemId": "854e1570-3091-4e5a-a3c3-291e59fd290f"
+              "uuid": "e50c7549-277b-4a22-8138-bd07cd6dbb75",
+              "previousWorkflowItemId": "c423c539-1096-44a0-b633-69fe9625e771",
+              "nextWorkflowItemId": "c0655da2-84b1-4f9d-8bce-68164b0f70f5"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 13",
                 "encounterDesc": "WEEK 13",
-                "previousEncounterId": "dc062e84-9e73-468f-b568-9964f1499dfe",
-                "nextEncounterId": "23ad9951-1ba3-4f60-b62b-f8f6cef04e73",
+                "previousEncounterId": "6aaee373-a24e-4eda-bd16-6a47c435f1c2",
+                "nextEncounterId": "444e2e28-f17b-40af-9fcb-863278da083f",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3335,28 +3335,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 91"
                 },
-                "uuid": "545ab02b-b837-400b-bb41-3e5a2f2638f3"
+                "uuid": "089263a7-a009-43b1-9f3e-72f9e370197f"
               },
               "workflowItemActivity": {
                 "activityName": "Plasma Biomarker",
                 "activityDesc": "Biomarker assessments for xxx",
-                "previousActivityId": "60e00e4a-f20c-45ee-b032-3b68c916aea1",
-                "nextActivityId": "821adb01-e81d-41b7-852a-5a9711aa6843",
+                "previousActivityId": "16799187-3b3e-4556-8d4d-027c63fdcdb4",
+                "nextActivityId": "5f4ff366-e8c1-48b4-90f6-ea7708604ee1",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "ed956c33-082e-495b-8d51-75d2bef4a48b"
+                "uuid": "4cbe5fb7-6386-44a2-ab75-03d054c55636"
               },
-              "uuid": "854e1570-3091-4e5a-a3c3-291e59fd290f",
-              "previousWorkflowItemId": "b8bd1b8a-b844-45f6-8dcc-e15d50df9342",
-              "nextWorkflowItemId": "e8447833-69e6-4d9c-9c7e-e65eb03a8933"
+              "uuid": "c0655da2-84b1-4f9d-8bce-68164b0f70f5",
+              "previousWorkflowItemId": "e50c7549-277b-4a22-8138-bd07cd6dbb75",
+              "nextWorkflowItemId": "5d3b965d-a038-4a02-8aa6-8469f68653d4"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 14",
                 "encounterDesc": "WEEK 14",
-                "previousEncounterId": "545ab02b-b837-400b-bb41-3e5a2f2638f3",
-                "nextEncounterId": "d73a2352-f8b0-4f47-aade-b84233d77829",
+                "previousEncounterId": "089263a7-a009-43b1-9f3e-72f9e370197f",
+                "nextEncounterId": "878eb852-1277-47dc-a3d6-0cc4e1bdb018",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3381,13 +3381,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 99"
                 },
-                "uuid": "23ad9951-1ba3-4f60-b62b-f8f6cef04e73"
+                "uuid": "444e2e28-f17b-40af-9fcb-863278da083f"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -3406,19 +3406,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "e8447833-69e6-4d9c-9c7e-e65eb03a8933",
-              "previousWorkflowItemId": "854e1570-3091-4e5a-a3c3-291e59fd290f",
-              "nextWorkflowItemId": "2415e747-db8d-416f-8d85-3ae87d7cf1d4"
+              "uuid": "5d3b965d-a038-4a02-8aa6-8469f68653d4",
+              "previousWorkflowItemId": "c0655da2-84b1-4f9d-8bce-68164b0f70f5",
+              "nextWorkflowItemId": "05f1634d-8e39-4c50-9ffa-19a10002925b"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 14",
                 "encounterDesc": "WEEK 14",
-                "previousEncounterId": "545ab02b-b837-400b-bb41-3e5a2f2638f3",
-                "nextEncounterId": "d73a2352-f8b0-4f47-aade-b84233d77829",
+                "previousEncounterId": "089263a7-a009-43b1-9f3e-72f9e370197f",
+                "nextEncounterId": "878eb852-1277-47dc-a3d6-0cc4e1bdb018",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3443,28 +3443,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 99"
                 },
-                "uuid": "23ad9951-1ba3-4f60-b62b-f8f6cef04e73"
+                "uuid": "444e2e28-f17b-40af-9fcb-863278da083f"
               },
               "workflowItemActivity": {
                 "activityName": "Biochemistry",
                 "activityDesc": "Biochemistry assessment in plasma samples",
-                "previousActivityId": "c7f8d532-1068-4e0e-9009-8a553135c7bd",
-                "nextActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
+                "previousActivityId": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a",
+                "nextActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "27afa229-5aad-40b3-bb89-458baeb0b26f"
+                "uuid": "ea1462db-d1af-47d6-b774-029d81261503"
               },
-              "uuid": "2415e747-db8d-416f-8d85-3ae87d7cf1d4",
-              "previousWorkflowItemId": "e8447833-69e6-4d9c-9c7e-e65eb03a8933",
-              "nextWorkflowItemId": "44c0c36f-ee83-4601-a75a-652b88760a64"
+              "uuid": "05f1634d-8e39-4c50-9ffa-19a10002925b",
+              "previousWorkflowItemId": "5d3b965d-a038-4a02-8aa6-8469f68653d4",
+              "nextWorkflowItemId": "6580edf4-b90d-40df-adc7-2efa8ae1edc4"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 14",
                 "encounterDesc": "WEEK 14",
-                "previousEncounterId": "545ab02b-b837-400b-bb41-3e5a2f2638f3",
-                "nextEncounterId": "d73a2352-f8b0-4f47-aade-b84233d77829",
+                "previousEncounterId": "089263a7-a009-43b1-9f3e-72f9e370197f",
+                "nextEncounterId": "878eb852-1277-47dc-a3d6-0cc4e1bdb018",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3489,28 +3489,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 99"
                 },
-                "uuid": "23ad9951-1ba3-4f60-b62b-f8f6cef04e73"
+                "uuid": "444e2e28-f17b-40af-9fcb-863278da083f"
               },
               "workflowItemActivity": {
                 "activityName": "Demographics",
                 "activityDesc": "Demographics",
-                "previousActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
-                "nextActivityId": "60e00e4a-f20c-45ee-b032-3b68c916aea1",
+                "previousActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
+                "nextActivityId": "16799187-3b3e-4556-8d4d-027c63fdcdb4",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "67a62643-c638-4b2d-b22d-fad7c3e92ce4"
+                "uuid": "58e48a2c-29f5-415d-a530-ae0826e554ba"
               },
-              "uuid": "44c0c36f-ee83-4601-a75a-652b88760a64",
-              "previousWorkflowItemId": "2415e747-db8d-416f-8d85-3ae87d7cf1d4",
-              "nextWorkflowItemId": "f9593828-0e07-4d1a-aeb2-2c693f8ed9c9"
+              "uuid": "6580edf4-b90d-40df-adc7-2efa8ae1edc4",
+              "previousWorkflowItemId": "05f1634d-8e39-4c50-9ffa-19a10002925b",
+              "nextWorkflowItemId": "feadf6bb-be63-4bd2-8813-956d183eb500"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 15",
                 "encounterDesc": "WEEK 15",
-                "previousEncounterId": "23ad9951-1ba3-4f60-b62b-f8f6cef04e73",
-                "nextEncounterId": "cb24ed95-0c32-4913-a617-6989fbe47002",
+                "previousEncounterId": "444e2e28-f17b-40af-9fcb-863278da083f",
+                "nextEncounterId": "0f2211b2-d98f-4c6b-a119-553c210f3051",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3535,13 +3535,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 105"
                 },
-                "uuid": "d73a2352-f8b0-4f47-aade-b84233d77829"
+                "uuid": "878eb852-1277-47dc-a3d6-0cc4e1bdb018"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -3560,19 +3560,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "f9593828-0e07-4d1a-aeb2-2c693f8ed9c9",
-              "previousWorkflowItemId": "44c0c36f-ee83-4601-a75a-652b88760a64",
-              "nextWorkflowItemId": "d79e51ba-6863-4064-8a14-d80b61c3bd23"
+              "uuid": "feadf6bb-be63-4bd2-8813-956d183eb500",
+              "previousWorkflowItemId": "6580edf4-b90d-40df-adc7-2efa8ae1edc4",
+              "nextWorkflowItemId": "3520a5f3-36fd-46e3-a163-b4308dc1480e"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 15",
                 "encounterDesc": "WEEK 15",
-                "previousEncounterId": "23ad9951-1ba3-4f60-b62b-f8f6cef04e73",
-                "nextEncounterId": "cb24ed95-0c32-4913-a617-6989fbe47002",
+                "previousEncounterId": "444e2e28-f17b-40af-9fcb-863278da083f",
+                "nextEncounterId": "0f2211b2-d98f-4c6b-a119-553c210f3051",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3597,28 +3597,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 105"
                 },
-                "uuid": "d73a2352-f8b0-4f47-aade-b84233d77829"
+                "uuid": "878eb852-1277-47dc-a3d6-0cc4e1bdb018"
               },
               "workflowItemActivity": {
                 "activityName": "Dosing",
                 "activityDesc": "Dosing of Drug A - 2 times a week",
-                "previousActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
-                "nextActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
+                "nextActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "60e00e4a-f20c-45ee-b032-3b68c916aea1"
+                "uuid": "16799187-3b3e-4556-8d4d-027c63fdcdb4"
               },
-              "uuid": "d79e51ba-6863-4064-8a14-d80b61c3bd23",
-              "previousWorkflowItemId": "f9593828-0e07-4d1a-aeb2-2c693f8ed9c9",
-              "nextWorkflowItemId": "6294b27c-4396-4b8b-957c-3f3ef57f921b"
+              "uuid": "3520a5f3-36fd-46e3-a163-b4308dc1480e",
+              "previousWorkflowItemId": "feadf6bb-be63-4bd2-8813-956d183eb500",
+              "nextWorkflowItemId": "e7b21008-eb47-485f-b799-7a705b850028"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 16",
                 "encounterDesc": "WEEK 16",
-                "previousEncounterId": "d73a2352-f8b0-4f47-aade-b84233d77829",
-                "nextEncounterId": "73435464-ced0-44c6-aec9-248e434d50ab",
+                "previousEncounterId": "878eb852-1277-47dc-a3d6-0cc4e1bdb018",
+                "nextEncounterId": "d69f1b0f-a1fc-40cc-be1a-53c8dc25b7b9",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3643,13 +3643,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 112"
                 },
-                "uuid": "cb24ed95-0c32-4913-a617-6989fbe47002"
+                "uuid": "0f2211b2-d98f-4c6b-a119-553c210f3051"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -3668,19 +3668,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "6294b27c-4396-4b8b-957c-3f3ef57f921b",
-              "previousWorkflowItemId": "d79e51ba-6863-4064-8a14-d80b61c3bd23",
-              "nextWorkflowItemId": "db2f740d-5d22-4f14-9fd0-5d38d7415937"
+              "uuid": "e7b21008-eb47-485f-b799-7a705b850028",
+              "previousWorkflowItemId": "3520a5f3-36fd-46e3-a163-b4308dc1480e",
+              "nextWorkflowItemId": "5ac60185-5876-4c94-9863-def5c2461a17"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 16",
                 "encounterDesc": "WEEK 16",
-                "previousEncounterId": "d73a2352-f8b0-4f47-aade-b84233d77829",
-                "nextEncounterId": "73435464-ced0-44c6-aec9-248e434d50ab",
+                "previousEncounterId": "878eb852-1277-47dc-a3d6-0cc4e1bdb018",
+                "nextEncounterId": "d69f1b0f-a1fc-40cc-be1a-53c8dc25b7b9",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3705,28 +3705,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 112"
                 },
-                "uuid": "cb24ed95-0c32-4913-a617-6989fbe47002"
+                "uuid": "0f2211b2-d98f-4c6b-a119-553c210f3051"
               },
               "workflowItemActivity": {
                 "activityName": "Dosing",
                 "activityDesc": "Dosing of Drug A - 2 times a week",
-                "previousActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
-                "nextActivityId": "ed956c33-082e-495b-8d51-75d2bef4a48b",
+                "previousActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
+                "nextActivityId": "4cbe5fb7-6386-44a2-ab75-03d054c55636",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "60e00e4a-f20c-45ee-b032-3b68c916aea1"
+                "uuid": "16799187-3b3e-4556-8d4d-027c63fdcdb4"
               },
-              "uuid": "db2f740d-5d22-4f14-9fd0-5d38d7415937",
-              "previousWorkflowItemId": "6294b27c-4396-4b8b-957c-3f3ef57f921b",
-              "nextWorkflowItemId": "d1762bb2-0a5c-44d8-9e83-41537d85f596"
+              "uuid": "5ac60185-5876-4c94-9863-def5c2461a17",
+              "previousWorkflowItemId": "e7b21008-eb47-485f-b799-7a705b850028",
+              "nextWorkflowItemId": "e0b7e616-6c60-4b7c-999a-e348f77d16cd"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Week 16",
                 "encounterDesc": "WEEK 16",
-                "previousEncounterId": "d73a2352-f8b0-4f47-aade-b84233d77829",
-                "nextEncounterId": "73435464-ced0-44c6-aec9-248e434d50ab",
+                "previousEncounterId": "878eb852-1277-47dc-a3d6-0cc4e1bdb018",
+                "nextEncounterId": "d69f1b0f-a1fc-40cc-be1a-53c8dc25b7b9",
                 "encounterType": {
                   "code": "C25716",
                   "codeSystem": "http://www.cdisc.org",
@@ -3751,27 +3751,27 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "end of day 112"
                 },
-                "uuid": "cb24ed95-0c32-4913-a617-6989fbe47002"
+                "uuid": "0f2211b2-d98f-4c6b-a119-553c210f3051"
               },
               "workflowItemActivity": {
                 "activityName": "Plasma Biomarker",
                 "activityDesc": "Biomarker assessments for xxx",
-                "previousActivityId": "60e00e4a-f20c-45ee-b032-3b68c916aea1",
-                "nextActivityId": "821adb01-e81d-41b7-852a-5a9711aa6843",
+                "previousActivityId": "16799187-3b3e-4556-8d4d-027c63fdcdb4",
+                "nextActivityId": "5f4ff366-e8c1-48b4-90f6-ea7708604ee1",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "ed956c33-082e-495b-8d51-75d2bef4a48b"
+                "uuid": "4cbe5fb7-6386-44a2-ab75-03d054c55636"
               },
-              "uuid": "d1762bb2-0a5c-44d8-9e83-41537d85f596",
-              "previousWorkflowItemId": "db2f740d-5d22-4f14-9fd0-5d38d7415937",
-              "nextWorkflowItemId": "60d0fe2d-0022-46ed-881c-f1591d1080fd"
+              "uuid": "e0b7e616-6c60-4b7c-999a-e348f77d16cd",
+              "previousWorkflowItemId": "5ac60185-5876-4c94-9863-def5c2461a17",
+              "nextWorkflowItemId": "b0e5a663-1713-47ef-a834-3857bfd71311"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Follow up",
                 "encounterDesc": "FOLLOW-UP",
-                "previousEncounterId": "cb24ed95-0c32-4913-a617-6989fbe47002",
+                "previousEncounterId": "0f2211b2-d98f-4c6b-a119-553c210f3051",
                 "nextEncounterId": null,
                 "encounterType": {
                   "code": "C25716",
@@ -3793,13 +3793,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "73435464-ced0-44c6-aec9-248e434d50ab"
+                "uuid": "d69f1b0f-a1fc-40cc-be1a-53c8dc25b7b9"
               },
               "workflowItemActivity": {
                 "activityName": "Hematology",
                 "activityDesc": "Hematology assessment in blood samples",
-                "previousActivityId": "360049f3-d759-4595-85b3-343462d390b8",
-                "nextActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
+                "previousActivityId": "01981777-b0ad-448b-b031-03c3278bee00",
+                "nextActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -3818,18 +3818,18 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c7f8d532-1068-4e0e-9009-8a553135c7bd"
+                "uuid": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a"
               },
-              "uuid": "60d0fe2d-0022-46ed-881c-f1591d1080fd",
-              "previousWorkflowItemId": "d1762bb2-0a5c-44d8-9e83-41537d85f596",
-              "nextWorkflowItemId": "60adbf30-ce1a-47cd-9268-2b78c2ff0beb"
+              "uuid": "b0e5a663-1713-47ef-a834-3857bfd71311",
+              "previousWorkflowItemId": "e0b7e616-6c60-4b7c-999a-e348f77d16cd",
+              "nextWorkflowItemId": "d17db169-39c5-4ed8-9344-fecb80001e88"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Follow up",
                 "encounterDesc": "FOLLOW-UP",
-                "previousEncounterId": "cb24ed95-0c32-4913-a617-6989fbe47002",
+                "previousEncounterId": "0f2211b2-d98f-4c6b-a119-553c210f3051",
                 "nextEncounterId": null,
                 "encounterType": {
                   "code": "C25716",
@@ -3851,27 +3851,27 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "73435464-ced0-44c6-aec9-248e434d50ab"
+                "uuid": "d69f1b0f-a1fc-40cc-be1a-53c8dc25b7b9"
               },
               "workflowItemActivity": {
                 "activityName": "Biochemistry",
                 "activityDesc": "Biochemistry assessment in plasma samples",
-                "previousActivityId": "c7f8d532-1068-4e0e-9009-8a553135c7bd",
-                "nextActivityId": "67a62643-c638-4b2d-b22d-fad7c3e92ce4",
+                "previousActivityId": "3ca91cd7-2c74-46bb-8e0d-8fac61f5d09a",
+                "nextActivityId": "58e48a2c-29f5-415d-a530-ae0826e554ba",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "27afa229-5aad-40b3-bb89-458baeb0b26f"
+                "uuid": "ea1462db-d1af-47d6-b774-029d81261503"
               },
-              "uuid": "60adbf30-ce1a-47cd-9268-2b78c2ff0beb",
-              "previousWorkflowItemId": "60d0fe2d-0022-46ed-881c-f1591d1080fd",
-              "nextWorkflowItemId": "121e0c7f-5b7d-4de0-b0b3-436f24097e8d"
+              "uuid": "d17db169-39c5-4ed8-9344-fecb80001e88",
+              "previousWorkflowItemId": "b0e5a663-1713-47ef-a834-3857bfd71311",
+              "nextWorkflowItemId": "c5dec849-ab07-4ac5-8129-dba744fc2476"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Follow up",
                 "encounterDesc": "FOLLOW-UP",
-                "previousEncounterId": "cb24ed95-0c32-4913-a617-6989fbe47002",
+                "previousEncounterId": "0f2211b2-d98f-4c6b-a119-553c210f3051",
                 "nextEncounterId": null,
                 "encounterType": {
                   "code": "C25716",
@@ -3893,19 +3893,19 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "73435464-ced0-44c6-aec9-248e434d50ab"
+                "uuid": "d69f1b0f-a1fc-40cc-be1a-53c8dc25b7b9"
               },
               "workflowItemActivity": {
                 "activityName": "Demographics",
                 "activityDesc": "Demographics",
-                "previousActivityId": "27afa229-5aad-40b3-bb89-458baeb0b26f",
-                "nextActivityId": "60e00e4a-f20c-45ee-b032-3b68c916aea1",
+                "previousActivityId": "ea1462db-d1af-47d6-b774-029d81261503",
+                "nextActivityId": "16799187-3b3e-4556-8d4d-027c63fdcdb4",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "67a62643-c638-4b2d-b22d-fad7c3e92ce4"
+                "uuid": "58e48a2c-29f5-415d-a530-ae0826e554ba"
               },
-              "uuid": "121e0c7f-5b7d-4de0-b0b3-436f24097e8d",
-              "previousWorkflowItemId": "60adbf30-ce1a-47cd-9268-2b78c2ff0beb",
+              "uuid": "c5dec849-ab07-4ac5-8129-dba744fc2476",
+              "previousWorkflowItemId": "d17db169-39c5-4ed8-9344-fecb80001e88",
               "nextWorkflowItemId": null
             }
           ]

@@ -134,7 +134,7 @@
             "studyEpochName": "Run In",
             "studyEpochDesc": "The run in",
             "previousStudyEpochId": null,
-            "nextStudyEpochId": "0080dae2-8e45-4cfd-828f-d5777b4e5f21",
+            "nextStudyEpochId": "4ed21efb-0958-48af-a0d6-962d348e4d50",
             "studyEpochType": {
               "code": "C98779",
               "codeSystem": "http://www.cdisc.org",
@@ -146,7 +146,7 @@
                 "encounterName": "Encounter 1",
                 "encounterDesc": "desc",
                 "previousEncounterId": null,
-                "nextEncounterId": "47e4fed1-7ad8-41fd-be02-087e1e028570",
+                "nextEncounterId": "bae0c721-4ed1-4b8c-b684-59b76c700a9f",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -167,12 +167,12 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "11cbd3b8-7a12-4b3a-a715-a570a765c30a"
+                "uuid": "852c1d8a-a942-46e0-b779-d39a2d71e705"
               },
               {
                 "encounterName": "Encounter 2",
                 "encounterDesc": "desc",
-                "previousEncounterId": "11cbd3b8-7a12-4b3a-a715-a570a765c30a",
+                "previousEncounterId": "852c1d8a-a942-46e0-b779-d39a2d71e705",
                 "nextEncounterId": null,
                 "encounterType": {
                   "code": "C7652x",
@@ -194,10 +194,10 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "47e4fed1-7ad8-41fd-be02-087e1e028570"
+                "uuid": "bae0c721-4ed1-4b8c-b684-59b76c700a9f"
               }
             ],
-            "uuid": "d19d6dd0-1ef0-46c3-8286-1745408b094c"
+            "uuid": "35d2cee2-fdb2-43fc-a235-0c7db0f10c7e"
           },
           "studyElements": [
             {
@@ -233,8 +233,8 @@
           "studyEpoch": {
             "studyEpochName": "Treatment",
             "studyEpochDesc": "The drug!",
-            "previousStudyEpochId": "d19d6dd0-1ef0-46c3-8286-1745408b094c",
-            "nextStudyEpochId": "9311196e-c195-4406-a5fc-f34a254eac69",
+            "previousStudyEpochId": "35d2cee2-fdb2-43fc-a235-0c7db0f10c7e",
+            "nextStudyEpochId": "094fad65-347d-4af3-90e1-1872c40f3368",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -242,7 +242,7 @@
               "decode": "Treatment Epoch"
             },
             "encounters": [],
-            "uuid": "0080dae2-8e45-4cfd-828f-d5777b4e5f21"
+            "uuid": "4ed21efb-0958-48af-a0d6-962d348e4d50"
           },
           "studyElements": [
             {
@@ -274,7 +274,7 @@
           "studyEpoch": {
             "studyEpochName": "Follow Up",
             "studyEpochDesc": "Go away",
-            "previousStudyEpochId": "0080dae2-8e45-4cfd-828f-d5777b4e5f21",
+            "previousStudyEpochId": "4ed21efb-0958-48af-a0d6-962d348e4d50",
             "nextStudyEpochId": null,
             "studyEpochType": {
               "code": "C99158",
@@ -283,7 +283,7 @@
               "decode": "Clinical Study Follow-up"
             },
             "encounters": [],
-            "uuid": "9311196e-c195-4406-a5fc-f34a254eac69"
+            "uuid": "094fad65-347d-4af3-90e1-1872c40f3368"
           },
           "studyElements": [
             {
@@ -316,7 +316,7 @@
             "studyEpochName": "Run In",
             "studyEpochDesc": "The run in",
             "previousStudyEpochId": null,
-            "nextStudyEpochId": "0080dae2-8e45-4cfd-828f-d5777b4e5f21",
+            "nextStudyEpochId": "4ed21efb-0958-48af-a0d6-962d348e4d50",
             "studyEpochType": {
               "code": "C98779",
               "codeSystem": "http://www.cdisc.org",
@@ -328,7 +328,7 @@
                 "encounterName": "Encounter 1",
                 "encounterDesc": "desc",
                 "previousEncounterId": null,
-                "nextEncounterId": "47e4fed1-7ad8-41fd-be02-087e1e028570",
+                "nextEncounterId": "bae0c721-4ed1-4b8c-b684-59b76c700a9f",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -349,12 +349,12 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "11cbd3b8-7a12-4b3a-a715-a570a765c30a"
+                "uuid": "852c1d8a-a942-46e0-b779-d39a2d71e705"
               },
               {
                 "encounterName": "Encounter 2",
                 "encounterDesc": "desc",
-                "previousEncounterId": "11cbd3b8-7a12-4b3a-a715-a570a765c30a",
+                "previousEncounterId": "852c1d8a-a942-46e0-b779-d39a2d71e705",
                 "nextEncounterId": null,
                 "encounterType": {
                   "code": "C7652x",
@@ -376,10 +376,10 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "47e4fed1-7ad8-41fd-be02-087e1e028570"
+                "uuid": "bae0c721-4ed1-4b8c-b684-59b76c700a9f"
               }
             ],
-            "uuid": "d19d6dd0-1ef0-46c3-8286-1745408b094c"
+            "uuid": "35d2cee2-fdb2-43fc-a235-0c7db0f10c7e"
           },
           "studyElements": [
             {
@@ -415,8 +415,8 @@
           "studyEpoch": {
             "studyEpochName": "Treatment",
             "studyEpochDesc": "The drug!",
-            "previousStudyEpochId": "d19d6dd0-1ef0-46c3-8286-1745408b094c",
-            "nextStudyEpochId": "9311196e-c195-4406-a5fc-f34a254eac69",
+            "previousStudyEpochId": "35d2cee2-fdb2-43fc-a235-0c7db0f10c7e",
+            "nextStudyEpochId": "094fad65-347d-4af3-90e1-1872c40f3368",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -424,7 +424,7 @@
               "decode": "Treatment Epoch"
             },
             "encounters": [],
-            "uuid": "0080dae2-8e45-4cfd-828f-d5777b4e5f21"
+            "uuid": "4ed21efb-0958-48af-a0d6-962d348e4d50"
           },
           "studyElements": [
             {
@@ -456,7 +456,7 @@
           "studyEpoch": {
             "studyEpochName": "Follow Up",
             "studyEpochDesc": "Go away",
-            "previousStudyEpochId": "0080dae2-8e45-4cfd-828f-d5777b4e5f21",
+            "previousStudyEpochId": "4ed21efb-0958-48af-a0d6-962d348e4d50",
             "nextStudyEpochId": null,
             "studyEpochType": {
               "code": "C99158",
@@ -465,7 +465,7 @@
               "decode": "Clinical Study Follow-up"
             },
             "encounters": [],
-            "uuid": "9311196e-c195-4406-a5fc-f34a254eac69"
+            "uuid": "094fad65-347d-4af3-90e1-1872c40f3368"
           },
           "studyElements": [
             {
@@ -557,7 +557,7 @@
                 "encounterName": "Encounter 1",
                 "encounterDesc": "desc",
                 "previousEncounterId": null,
-                "nextEncounterId": "47e4fed1-7ad8-41fd-be02-087e1e028570",
+                "nextEncounterId": "bae0c721-4ed1-4b8c-b684-59b76c700a9f",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -578,13 +578,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "11cbd3b8-7a12-4b3a-a715-a570a765c30a"
+                "uuid": "852c1d8a-a942-46e0-b779-d39a2d71e705"
               },
               "workflowItemActivity": {
                 "activityName": "A1",
                 "activityDesc": "Activity_1",
                 "previousActivityId": null,
-                "nextActivityId": "98921913-58d8-415f-841d-64e08ac74ec2",
+                "nextActivityId": "76a46cae-2e71-4eee-9812-71119e232d22",
                 "definedProcedures": [
                   {
                     "procedureType": "Specimen Collection",
@@ -597,18 +597,18 @@
                   }
                 ],
                 "studyDataCollection": [],
-                "uuid": "1f8f24e4-c7ff-487c-a818-765c4809b78b"
+                "uuid": "f9f7b524-bf32-487f-a92a-e035fe7826f8"
               },
-              "uuid": "dfaafef3-c178-4f86-88cf-7ebda121e247",
+              "uuid": "354a3cdc-d204-4b01-b8cd-2ff3e85f2a70",
               "previousWorkflowItemId": null,
-              "nextWorkflowItemId": "be22cadf-0c5b-43cb-bbd9-51640950682b"
+              "nextWorkflowItemId": "09dddaf0-07ee-463a-a48b-485629d64676"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "Encounter 2",
                 "encounterDesc": "desc",
-                "previousEncounterId": "11cbd3b8-7a12-4b3a-a715-a570a765c30a",
+                "previousEncounterId": "852c1d8a-a942-46e0-b779-d39a2d71e705",
                 "nextEncounterId": null,
                 "encounterType": {
                   "code": "C7652x",
@@ -630,12 +630,12 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "47e4fed1-7ad8-41fd-be02-087e1e028570"
+                "uuid": "bae0c721-4ed1-4b8c-b684-59b76c700a9f"
               },
               "workflowItemActivity": {
                 "activityName": "A2",
                 "activityDesc": "Activity_2",
-                "previousActivityId": "1f8f24e4-c7ff-487c-a818-765c4809b78b",
+                "previousActivityId": "f9f7b524-bf32-487f-a92a-e035fe7826f8",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -645,10 +645,10 @@
                     "crfLink": "Link 1"
                   }
                 ],
-                "uuid": "98921913-58d8-415f-841d-64e08ac74ec2"
+                "uuid": "76a46cae-2e71-4eee-9812-71119e232d22"
               },
-              "uuid": "be22cadf-0c5b-43cb-bbd9-51640950682b",
-              "previousWorkflowItemId": "dfaafef3-c178-4f86-88cf-7ebda121e247",
+              "uuid": "09dddaf0-07ee-463a-a48b-485629d64676",
+              "previousWorkflowItemId": "354a3cdc-d204-4b01-b8cd-2ff3e85f2a70",
               "nextWorkflowItemId": null
             }
           ]
@@ -700,7 +700,7 @@
             "studyEpochName": "Run In",
             "studyEpochDesc": "The run in",
             "previousStudyEpochId": null,
-            "nextStudyEpochId": "0080dae2-8e45-4cfd-828f-d5777b4e5f21",
+            "nextStudyEpochId": "4ed21efb-0958-48af-a0d6-962d348e4d50",
             "studyEpochType": {
               "code": "C98779",
               "codeSystem": "http://www.cdisc.org",
@@ -712,7 +712,7 @@
                 "encounterName": "Encounter 1",
                 "encounterDesc": "desc",
                 "previousEncounterId": null,
-                "nextEncounterId": "47e4fed1-7ad8-41fd-be02-087e1e028570",
+                "nextEncounterId": "bae0c721-4ed1-4b8c-b684-59b76c700a9f",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -733,12 +733,12 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "11cbd3b8-7a12-4b3a-a715-a570a765c30a"
+                "uuid": "852c1d8a-a942-46e0-b779-d39a2d71e705"
               },
               {
                 "encounterName": "Encounter 2",
                 "encounterDesc": "desc",
-                "previousEncounterId": "11cbd3b8-7a12-4b3a-a715-a570a765c30a",
+                "previousEncounterId": "852c1d8a-a942-46e0-b779-d39a2d71e705",
                 "nextEncounterId": null,
                 "encounterType": {
                   "code": "C7652x",
@@ -760,10 +760,10 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "47e4fed1-7ad8-41fd-be02-087e1e028570"
+                "uuid": "bae0c721-4ed1-4b8c-b684-59b76c700a9f"
               }
             ],
-            "uuid": "d19d6dd0-1ef0-46c3-8286-1745408b094c"
+            "uuid": "35d2cee2-fdb2-43fc-a235-0c7db0f10c7e"
           },
           "studyElements": [
             {
@@ -799,8 +799,8 @@
           "studyEpoch": {
             "studyEpochName": "Treatment",
             "studyEpochDesc": "The drug!",
-            "previousStudyEpochId": "d19d6dd0-1ef0-46c3-8286-1745408b094c",
-            "nextStudyEpochId": "9311196e-c195-4406-a5fc-f34a254eac69",
+            "previousStudyEpochId": "35d2cee2-fdb2-43fc-a235-0c7db0f10c7e",
+            "nextStudyEpochId": "094fad65-347d-4af3-90e1-1872c40f3368",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -808,7 +808,7 @@
               "decode": "Treatment Epoch"
             },
             "encounters": [],
-            "uuid": "0080dae2-8e45-4cfd-828f-d5777b4e5f21"
+            "uuid": "4ed21efb-0958-48af-a0d6-962d348e4d50"
           },
           "studyElements": [
             {
@@ -840,7 +840,7 @@
           "studyEpoch": {
             "studyEpochName": "Follow Up",
             "studyEpochDesc": "Go away",
-            "previousStudyEpochId": "0080dae2-8e45-4cfd-828f-d5777b4e5f21",
+            "previousStudyEpochId": "4ed21efb-0958-48af-a0d6-962d348e4d50",
             "nextStudyEpochId": null,
             "studyEpochType": {
               "code": "C99158",
@@ -849,7 +849,7 @@
               "decode": "Clinical Study Follow-up"
             },
             "encounters": [],
-            "uuid": "9311196e-c195-4406-a5fc-f34a254eac69"
+            "uuid": "094fad65-347d-4af3-90e1-1872c40f3368"
           },
           "studyElements": [
             {
@@ -882,7 +882,7 @@
             "studyEpochName": "Run In",
             "studyEpochDesc": "The run in",
             "previousStudyEpochId": null,
-            "nextStudyEpochId": "0080dae2-8e45-4cfd-828f-d5777b4e5f21",
+            "nextStudyEpochId": "4ed21efb-0958-48af-a0d6-962d348e4d50",
             "studyEpochType": {
               "code": "C98779",
               "codeSystem": "http://www.cdisc.org",
@@ -894,7 +894,7 @@
                 "encounterName": "Encounter 1",
                 "encounterDesc": "desc",
                 "previousEncounterId": null,
-                "nextEncounterId": "47e4fed1-7ad8-41fd-be02-087e1e028570",
+                "nextEncounterId": "bae0c721-4ed1-4b8c-b684-59b76c700a9f",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -915,12 +915,12 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "11cbd3b8-7a12-4b3a-a715-a570a765c30a"
+                "uuid": "852c1d8a-a942-46e0-b779-d39a2d71e705"
               },
               {
                 "encounterName": "Encounter 2",
                 "encounterDesc": "desc",
-                "previousEncounterId": "11cbd3b8-7a12-4b3a-a715-a570a765c30a",
+                "previousEncounterId": "852c1d8a-a942-46e0-b779-d39a2d71e705",
                 "nextEncounterId": null,
                 "encounterType": {
                   "code": "C7652x",
@@ -942,10 +942,10 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "47e4fed1-7ad8-41fd-be02-087e1e028570"
+                "uuid": "bae0c721-4ed1-4b8c-b684-59b76c700a9f"
               }
             ],
-            "uuid": "d19d6dd0-1ef0-46c3-8286-1745408b094c"
+            "uuid": "35d2cee2-fdb2-43fc-a235-0c7db0f10c7e"
           },
           "studyElements": [
             {
@@ -981,8 +981,8 @@
           "studyEpoch": {
             "studyEpochName": "Treatment",
             "studyEpochDesc": "The drug!",
-            "previousStudyEpochId": "d19d6dd0-1ef0-46c3-8286-1745408b094c",
-            "nextStudyEpochId": "9311196e-c195-4406-a5fc-f34a254eac69",
+            "previousStudyEpochId": "35d2cee2-fdb2-43fc-a235-0c7db0f10c7e",
+            "nextStudyEpochId": "094fad65-347d-4af3-90e1-1872c40f3368",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -990,7 +990,7 @@
               "decode": "Treatment Epoch"
             },
             "encounters": [],
-            "uuid": "0080dae2-8e45-4cfd-828f-d5777b4e5f21"
+            "uuid": "4ed21efb-0958-48af-a0d6-962d348e4d50"
           },
           "studyElements": [
             {
@@ -1022,7 +1022,7 @@
           "studyEpoch": {
             "studyEpochName": "Follow Up",
             "studyEpochDesc": "Go away",
-            "previousStudyEpochId": "0080dae2-8e45-4cfd-828f-d5777b4e5f21",
+            "previousStudyEpochId": "4ed21efb-0958-48af-a0d6-962d348e4d50",
             "nextStudyEpochId": null,
             "studyEpochType": {
               "code": "C99158",
@@ -1031,7 +1031,7 @@
               "decode": "Clinical Study Follow-up"
             },
             "encounters": [],
-            "uuid": "9311196e-c195-4406-a5fc-f34a254eac69"
+            "uuid": "094fad65-347d-4af3-90e1-1872c40f3368"
           },
           "studyElements": [
             {
