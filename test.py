@@ -17,8 +17,8 @@ def save_as_file(data, filename):
     json.dump(data, outfile, indent=2)
 
 if __name__ == "__main__":
-  service = Service(sys.argv)
-  service.get("")
+  #service = Service(sys.argv)
+  #service.get("")
   for study in studies:
     data = study.json()
     save_as_file(data, study.__name__)

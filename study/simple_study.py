@@ -106,8 +106,7 @@ class SimpleStudy():
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='PARALLEL')
 
     design_1 = study_design_data([intent], design_1_type, int_model, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [workflow], [])
-    design_2 = study_design_data([intent], design_2_type, int_model, study_cells, [indication_1, indication_2], [objective_1], [population_1], [ii_1], [], [])
-    designs = [design_1, design_2]
+    designs = [design_1]
     final = code_data("C1113x", "http://www.cdisc.org", "1", "FINAL")
     protocol_version_1 = study_protocol_version_data("Short", "Very Official", "Public Voice", "Incomprehensible", "1", None, "2022-01-01", final)
     protocol_version_2 = study_protocol_version_data("Shorter", "Very Official", "Public Voice", "Incomprehensible", "1", "Amendment 1", "2022-02-01", final)
