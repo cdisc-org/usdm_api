@@ -378,8 +378,9 @@ class DDR():
     # Study Identifiers
     phase = code_data("C49686", "http://www.cdisc.org", "2022-03-25", "Phase II Trial")
     study_type = code_data("C98388", "http://www.cdisc.org", "2022-03-25", "Interventional Study")
-    registry_type = code_data("C2365x", "http://www.cdisc.org", "1", "REGISTRY_STUDY_IDENTIFIER")
-    sponsor_type = code_data("C2365y", "http://www.cdisc.org", "1", "SPONSOR_STUDY_IDENTIFIER")
+    registry_type = code_for('Organization', 'organizationType', submission_value='Clinical Study Registry')
+    sponsor_type = code_for('Organization', 'organizationType', submission_value='Clinical Study Sponsor')
+    regulator_type = code_for('Organization', 'organizationType', submission_value='Regulatory Agency')
     organisation_1 = organization_data("DUNS", "123456789", "ACME Pharma", sponsor_type)
     organisation_2 = organization_data("USGOV", "CT-GOV", "ClinicalTrials.gov", registry_type)
     identifier_1 = study_identifier_data("NCT04298021", organisation_2)

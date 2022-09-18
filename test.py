@@ -8,7 +8,7 @@ from pandas import json_normalize
 import json
 
 #studies = [ SimpleStudy, DDR, BMS ]
-studies = [ SimpleStudy ]
+studies = [ SimpleStudy, DDR ]
 identifiers = ["NCT04298023", "ACME-5678", "XYZ01235"] 
 #studies = [ DDR ]
 #identifiers = ["ACME-5678"] 
