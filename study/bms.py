@@ -1,5 +1,3 @@
-#from ast import BinOp
-#from telnetlib import DM
 from factory.factory import *
 
 class BMS():
@@ -254,7 +252,6 @@ class BMS():
     indications = [indication_1, indication_2]
 
     # Intercurrent Events
-    # None
     i_event_1 = intercurrent_event_data(
       "Termination", 
       "Termination",
