@@ -4,7 +4,6 @@ class RocheWA42380():
 
   def json():
 
-    # <<<<< Visit Rules need adding >>>>>
     # Rules
     study_rule_data = [
       # Element Start Rules
@@ -13,13 +12,60 @@ class RocheWA42380():
       "First dose of a treatment epoch, where the does is placebo",
       "28 days after first dose of the previous treatment epoch",
 
-      # Element Start Rules
+      # Element End Rules
       # Index 4, zero based.
       "As soon as possibe once screening is complete",
       "After 28 days, where the does is XXX",
       "After 28 days, where the does is XXX",
       "After day 60",
 
+      # Visit Start Rules
+      # Index 8
+      "Start of screening epoch",
+      "4 hours pprior to end of screening epoch",
+      "15 minutes after the end of basline epoch"
+      # Index 11
+      "24 hours after the start of the treatment epoch"
+      "3 days after the start of the treatment epoch"
+      "4 days after the start of the treatment epoch"
+      "5 days after the start of the treatment epoch"
+      "6 days after the start of the treatment epoch"
+      "7 days after the start of the treatment epoch"
+      "8 days after the start of the treatment epoch"
+      "9 days after the start of the treatment epoch"
+      "10 days after the start of the treatment epoch"
+      "11 days after the start of the treatment epoch"
+      # Index 21
+      "12 days after the start of the treatment epoch"
+      "13 days after the start of the treatment epoch"
+      "14 days after the start of the treatment epoch"
+      "15 days after the start of the treatment epoch"
+      "16 days after the start of the treatment epoch"
+      "17 days after the start of the treatment epoch"
+      "18 days after the start of the treatment epoch"
+      "19 days after the start of the treatment epoch"
+      "20 days after the start of the treatment epoch"
+      "21 days after the start of the treatment epoch"
+      # Index 31
+      "22 days after the start of the treatment epoch"
+      "23 days after the start of the treatment epoch"
+      "24 days after the start of the treatment epoch"
+      "25 days after the start of the treatment epoch"
+      "26 days after the start of the treatment epoch"
+      "27 days after the start of the treatment epoch"
+      "28 days after the start of the treatment epoch"
+      "35 days (+/- 3 days) after the start of the treatment epoch"
+      "45 days (+/- 3 days) after the start of the treatment epoch"
+      "60 days (+/- 3 days) after the start of the treatment epoch"
+
+      # Visit End Rules
+      # Index 41
+      "Start of treatment epoch",
+      # No visit 2 end rule
+      # No visit 2 end rule
+      # Days 3 to 28 no end rule
+      # Days 35, 45 no end rule
+      "At visit completion (trial exit)"
     ]
 
     rules = []
@@ -32,30 +78,49 @@ class RocheWA42380():
     # <<<<< More to be added >>>>>
     # Study Data
     raw_study_data = [
-      # Chemistry
-      ( "bicarbonate", "bicarbonate", "" ),
-      ( "total carbon dioxide", "total carbon dioxide", "" ),
-      ( "sodium	sodium", "" ),
-      ( "potassium", "potassium", "" ),
-      ( "chloride", "chloride", "" ),
-      ( "glucose", "glucose", "" ),
-      ( "BUN", "Blood urea nitrogen", "" ),
+      # Demographics
+      ( "Age", "Age", ""),
+      ( "Sex", "Sex", ""),
+      ( "Race", "Race", ""),
+
+      # Physical Examination (3)
+      ( "Head", "", ""),
+      ( "Eyes", "", ""),
+      ( "Ears", "", ""),
+      ( "Nose", "", ""),
+      ( "Throat", "", ""),
+      ( "Cardiovascular", "", ""),
+      ( "Dermatologi", "", ""),
+      ( "Musculoskeletal", "", ""),
+      ( "Respiratory", "", ""),
+      ( "Gastrointestinal", "", ""),
+      ( "Genitourinary", "", ""),
+      ( "Neurologic", "", ""),
+
+      # Chemistry (15)
+      ( "Bicarbonate", "bicarbonate", "" ),
+      ( "Total carbon dioxide", "total carbon dioxide", "" ),
+      ( "Sodium", "sodium", "" ),
+      ( "Potassium", "potassium", "" ),
+      ( "Chloride", "chloride", "" ),
+      ( "Glucose", "glucose", "" ),
+      ( "Blood urea nitrogen", "Blood urea nitrogen", "" ),
       ( "Urea", "Urea", "" ),
-      ( "creatinine", "creatinine", "" ),
-      ( "total protein", "total protein", "" ),
-      ( "albumin	albumin", "" ),
-      ( "phosphorus", "phosphorus", "" ),
-      ( "calcium", "calcium", "" ),
-      ( "total bilirubin", "total bilirubin", "" ),
-      ( "ALP", "Alkaline Phosphatase, """ ),
-      ( "ALT", "Alanine Transaminase, """ ),
+      ( "Creatinine", "creatinine", "" ),
+      ( "Total protein", "total protein", "" ),
+      ( "Albumin", "albumin", "" ),
+      ( "Phosphorus", "Phosphorus", "" ),
+      ( "Calcium", "Calcium", "" ),
+      ( "Total bilirubin", "Total bilirubin", "" ),
+      ( "ALP", "Alkaline Phosphatase", "" ),
+      ( "ALT", "Alanine Transaminase", "" ),
       ( "AST", "Aspartate Aminotransferase", "" ),
-      ( "uric acid", "uric acid", "" ),
+      ( "Uric acid", "uric acid", "" ),
       ( "LDH", "Lactate Dehydrogenase", "" ),
-      ( "ferritin", "ferritin", "" ),
+      ( "Ferritin", "ferritin", "" ),
       ( "D-dimer", "D-dimer", "" ),
 
-      # Hematology (index 21, 0 based)
+      # Hematology (35)
       ( "RBC", "Red Blood Cell count", "" ),
       ( "HCT", "Hematocrit", "" ),
       ( "WBC", "White blood Cell count", "" ),
@@ -64,48 +129,50 @@ class RocheWA42380():
       ( "", "differential count (neutrophils, eosinophils, basophils, monocytes, lymphocytes)", ""),
       ( "", "lymphocyte subsets (T cells, B cells, and NK cells)", ""),
 
-      # Vital Signs (28)
+      # Vital Signs (42)
       ( "Respiratory rate", "respiratory rate", ""),
       ( "Pulse rate", "pulse rate", ""),
-      ( "Systolic blood pressure" "sysolic blodd pressure", ""),
+      ( "Systolic blood pressure", "sysolic blodd pressure", ""),
       ( "Diastolic blood pressures", "diastolic blood pressures", ""),
       ( "Body temperature, ", "body temperature", ""),
       ( "Oxygen saturation", "oxygen saturation", ""),
       ( "NEWS2", "National Early Warning Score 2", ""),
       
-      #DM (35)
+      # Weight (49) 
       ( "Weight", "Weight", "" ),
 
     ]
     study_data_items = []
     for data in raw_study_data:
+      print(data)
       study_data_items.append(study_data_data(*data))
 
-    # <<<<< Activities need linking to SD and Procedures >>>>>
     # Activities
     # Short Name, Description, Procedures, Study Data
     study_activity_data = [
       ("Informed consent", "Informed consent", [], []),
       ("Inclusion/exclusion criteria", "Inclusion/exclusion criteria", [], []),
-      ("Demographic data", "Demographic data", [], []),
+      ("Demographics", "Demographic data", study_data_items[0:3], []),
       ("Randomization", "Randomization", [], []),
       ("Medical history", "Medical history", [], []),
-      ("Complete physical examination", "Complete physical examination", [], []),
-      ("Weight", "Weight", [], []),
+      ("Physical examination", "Complete physical examination", study_data_items[3:15], []),
+      ("Weight", "Weight", study_data_items[49:50], []),
       ("COVID-19 diagnosis", "COVID-19 diagnosis", [], []),
       ("Chest X-ray/CT scan", "Chest X-ray/CT scan", [], []),
       ("ECG", "Electrocardiogram", [], []),
       ("Pregnancy test", "Pregnancy test", [], []),
+      # 11
       ("PaO2/FiO2", "arterial oxygen partial pressure/fraction of inspired oxygen", [], []),
       ("SpO2", "peripheral capillary oxygen saturation", [], []),
-      ("Vital signs", "Vital signs", [], []),
+      ("Vital signs", "Vital signs", study_data_items[42:49], []),
       ("Ordinal scoring", "Ordinal scoring", [], []),
       ("Adverse events", "Adverse events", [], []),
       ("Concomitant medications", "Concomitant medications", [], []),
-      ("Hematology", "Hematology", [], []),
-      ("Chemistry", "Chemistry", [], []),
+      ("Hematology", "Hematology", study_data_items[35:42], []),
+      ("Chemistry", "Chemistry", study_data_items[15:35], []),
       ("Study drug administration", "Study drug administration", [], []),
       ("Central Labs", "Central Labs", [], []),
+      # 21
       ("Serum PD (CRP, IL-6, sIL-6R)", "", [], []),
       ("Serum PK", "Serum pharmacokinetic", [], []),
       ("Serum sample for exploratory biomarkers", "Serum sample for exploratory biomarkers", [], []),
@@ -139,6 +206,7 @@ class RocheWA42380():
       ("Day 6", "Day 6", a_visit, hospital_setting, in_person_mode, None, None),
       ("Day 7", "Day 7", a_visit, hospital_setting, in_person_mode, None, None),
       ("Day 8", "Day 8", a_visit, hospital_setting, in_person_mode, None, None),
+      # 11
       ("Day 9", "Day 9", a_visit, hospital_setting, in_person_mode, None, None),
       ("Day 10", "Day 10", a_visit, hospital_setting, in_person_mode, None, None),
       ("Day 11", "Day 11", a_visit, hospital_setting, in_person_mode, None, None),
@@ -149,6 +217,7 @@ class RocheWA42380():
       ("Day 16", "Day 16", a_visit, hospital_setting, in_person_mode, None, None),
       ("Day 17", "Day 17", a_visit, hospital_setting, in_person_mode, None, None),
       ("Day 18", "Day 18", a_visit, hospital_setting, in_person_mode, None, None),
+      # 21
       ("Day 19", "Day 19", a_visit, hospital_setting, in_person_mode, None, None),
       ("Day 20", "Day 20", a_visit, hospital_setting, in_person_mode, None, None),
       ("Day 21", "Day 21", a_visit, hospital_setting, in_person_mode, None, None),
@@ -159,6 +228,7 @@ class RocheWA42380():
       ("Day 26", "Day 26", a_visit, hospital_setting, in_person_mode, None, None),
       ("Day 27", "Day 27", a_visit, hospital_setting, in_person_mode, None, None),
       ("Day 28", "Day 28", a_visit, hospital_setting, in_person_mode, None, None),
+      # 31
       ("Day 35", "Day 35", a_visit, hospital_setting, in_person_mode, None, None),
       ("Day 45", "Day 45", a_visit, hospital_setting, in_person_mode, None, None),
       ("Day 60", "Day 60", a_visit, hospital_setting, in_person_mode, None, None)
@@ -168,7 +238,6 @@ class RocheWA42380():
     for encounter in study_encounter_data:
       encounters.append(encounter_data(*encounter))
     double_link(encounters, 'previousEncounterId', 'nextEncounterId')
-
     
     # <<<<< Need setting up >>>>>
     # Work Flow Items
@@ -176,59 +245,326 @@ class RocheWA42380():
       [ encounters[0], activities[0] ], 
       [ encounters[0], activities[1] ], 
       [ encounters[0], activities[2] ], 
-      [ encounters[1], activities[2] ], 
-      [ encounters[1], activities[5] ], 
+      [ encounters[0], activities[5] ], 
+      [ encounters[0], activities[7] ], 
+      [ encounters[0], activities[8] ], 
+      [ encounters[0], activities[9] ], 
+      [ encounters[0], activities[10] ], 
+      [ encounters[0], activities[11] ], 
+      [ encounters[0], activities[12] ], 
+      [ encounters[0], activities[13] ], 
+      [ encounters[0], activities[17] ], 
+      [ encounters[0], activities[18] ], 
+
+      [ encounters[1], activities[1] ], 
+      [ encounters[1], activities[3] ], 
+      [ encounters[1], activities[4] ], 
       [ encounters[1], activities[6] ], 
-      [ encounters[1], activities[7] ], 
-      [ encounters[2], activities[2] ], 
-      [ encounters[2], activities[5] ], 
-      [ encounters[3], activities[2] ], 
-      [ encounters[3], activities[5] ], 
-      [ encounters[3], activities[6] ],
-      [ encounters[3], activities[7] ],
-      [ encounters[4], activities[2] ],
-      [ encounters[4], activities[5] ],
-      [ encounters[5], activities[2] ],
-      [ encounters[5], activities[5] ],
-      [ encounters[5], activities[6] ],
-      [ encounters[6], activities[2] ], 
-      [ encounters[6], activities[3] ],
-      [ encounters[6], activities[4] ],
-      [ encounters[6], activities[7] ],
-      [ encounters[7], activities[2] ],
-      [ encounters[7], activities[5] ], 
-      [ encounters[8], activities[2] ], 
-      [ encounters[8], activities[5] ],
-      [ encounters[8], activities[6] ],
-      [ encounters[8], activities[7] ],
-      [ encounters[9], activities[2] ], 
-      [ encounters[9], activities[3] ],
-      [ encounters[9], activities[4] ],
-      [ encounters[10], activities[2] ],
-      [ encounters[10], activities[5] ],
-      [ encounters[10], activities[7] ],
-      [ encounters[11], activities[2] ],
-      [ encounters[11], activities[5] ],
-      [ encounters[11], activities[6] ],
-      [ encounters[12], activities[2] ],
-      [ encounters[12], activities[3] ],
-      [ encounters[12], activities[4] ],
-      [ encounters[13], activities[2] ],
-      [ encounters[13], activities[5] ],
-      [ encounters[14], activities[2] ],
-      [ encounters[14], activities[5] ],
-      [ encounters[14], activities[6] ],
-      [ encounters[15], activities[2] ], 
-      [ encounters[15], activities[3] ],
-      [ encounters[15], activities[4] ],
-      [ encounters[16], activities[2] ],
-      [ encounters[16], activities[5] ],
-      [ encounters[17], activities[2] ],
-      [ encounters[17], activities[5] ],
-      [ encounters[17], activities[6] ],
-      [ encounters[18], activities[2] ],
-      [ encounters[18], activities[3] ],
-      [ encounters[18], activities[4] ]
+      [ encounters[1], activities[12] ], 
+      [ encounters[1], activities[13] ], 
+      [ encounters[1], activities[14] ], 
+      [ encounters[1], activities[15] ], 
+      [ encounters[1], activities[16] ], 
+      [ encounters[1], activities[17] ], 
+      [ encounters[1], activities[18] ], 
+      [ encounters[1], activities[19] ], 
+      [ encounters[1], activities[20] ], 
+      [ encounters[1], activities[21] ], 
+      [ encounters[1], activities[22] ], 
+      [ encounters[1], activities[23] ], 
+      [ encounters[1], activities[24] ], 
+      [ encounters[1], activities[25] ], 
+      [ encounters[1], activities[26] ], 
+      [ encounters[1], activities[27] ], 
+
+      [ encounters[2], activities[12] ], 
+      [ encounters[2], activities[13] ], 
+      [ encounters[2], activities[21] ], 
+      [ encounters[2], activities[22] ], 
+
+      [ encounters[3], activities[12] ], 
+      [ encounters[3], activities[13] ], 
+      [ encounters[3], activities[14] ], 
+      [ encounters[3], activities[15] ], 
+      [ encounters[3], activities[16] ], 
+      [ encounters[3], activities[17] ], 
+      [ encounters[3], activities[18] ], 
+      [ encounters[3], activities[19] ], 
+      [ encounters[3], activities[21] ], 
+      [ encounters[3], activities[22] ], 
+      [ encounters[3], activities[23] ], 
+      [ encounters[3], activities[24] ], 
+      [ encounters[3], activities[26] ], 
+
+      [ encounters[4], activities[12] ], 
+      [ encounters[4], activities[13] ], 
+      [ encounters[4], activities[21] ], 
+      [ encounters[4], activities[22] ], 
+
+      [ encounters[5], activities[13] ], 
+      [ encounters[5], activities[11] ], 
+      [ encounters[5], activities[12] ], 
+      [ encounters[5], activities[14] ], 
+      [ encounters[5], activities[15] ], 
+      [ encounters[5], activities[16] ], 
+      [ encounters[5], activities[17] ], 
+      [ encounters[5], activities[18] ], 
+      [ encounters[5], activities[21] ], 
+      [ encounters[5], activities[23] ], 
+      [ encounters[5], activities[24] ], 
+      [ encounters[5], activities[26] ], 
+      [ encounters[5], activities[27] ], 
+
+      [ encounters[6], activities[13] ], 
+      [ encounters[6], activities[11] ], 
+      [ encounters[6], activities[12] ], 
+      [ encounters[6], activities[14] ], 
+      [ encounters[6], activities[15] ], 
+      [ encounters[6], activities[16] ], 
+      [ encounters[6], activities[24] ], 
+
+      [ encounters[7], activities[13] ], 
+      [ encounters[7], activities[11] ], 
+      [ encounters[7], activities[12] ], 
+      [ encounters[7], activities[14] ], 
+      [ encounters[7], activities[15] ], 
+      [ encounters[7], activities[16] ], 
+      [ encounters[7], activities[24] ], 
+
+      [ encounters[8], activities[13] ], 
+      [ encounters[8], activities[11] ], 
+      [ encounters[8], activities[12] ], 
+      [ encounters[8], activities[14] ], 
+      [ encounters[8], activities[15] ], 
+      [ encounters[8], activities[16] ], 
+      [ encounters[8], activities[24] ], 
+
+      [ encounters[9], activities[8] ], 
+      [ encounters[9], activities[13] ], 
+      [ encounters[9], activities[11] ], 
+      [ encounters[9], activities[12] ], 
+      [ encounters[9], activities[14] ], 
+      [ encounters[9], activities[15] ], 
+      [ encounters[9], activities[16] ], 
+      [ encounters[9], activities[17] ], 
+      [ encounters[9], activities[18] ], 
+      [ encounters[9], activities[21] ], 
+      [ encounters[9], activities[22] ], 
+      [ encounters[9], activities[23] ], 
+      [ encounters[9], activities[24] ], 
+      [ encounters[9], activities[26] ], 
+      [ encounters[9], activities[27] ], 
+
+      [ encounters[10], activities[13] ], 
+      [ encounters[10], activities[11] ], 
+      [ encounters[10], activities[12] ], 
+      [ encounters[10], activities[14] ], 
+      [ encounters[10], activities[15] ], 
+      [ encounters[10], activities[16] ], 
+
+      [ encounters[11], activities[13] ], 
+      [ encounters[11], activities[11] ], 
+      [ encounters[11], activities[12] ], 
+      [ encounters[11], activities[14] ], 
+      [ encounters[11], activities[15] ], 
+      [ encounters[11], activities[16] ], 
+
+      [ encounters[12], activities[13] ], 
+      [ encounters[12], activities[11] ], 
+      [ encounters[12], activities[12] ], 
+      [ encounters[12], activities[14] ], 
+      [ encounters[12], activities[15] ], 
+      [ encounters[12], activities[16] ], 
+      [ encounters[12], activities[17] ], 
+      [ encounters[12], activities[18] ], 
+      [ encounters[12], activities[24] ], 
+
+      [ encounters[13], activities[13] ], 
+      [ encounters[13], activities[11] ], 
+      [ encounters[13], activities[12] ], 
+      [ encounters[13], activities[14] ], 
+      [ encounters[13], activities[15] ], 
+      [ encounters[13], activities[16] ], 
+
+      [ encounters[14], activities[13] ], 
+      [ encounters[14], activities[11] ], 
+      [ encounters[14], activities[12] ], 
+      [ encounters[14], activities[14] ], 
+      [ encounters[14], activities[15] ], 
+      [ encounters[14], activities[16] ], 
+
+      [ encounters[15], activities[13] ], 
+      [ encounters[15], activities[11] ], 
+      [ encounters[15], activities[12] ], 
+      [ encounters[15], activities[14] ], 
+      [ encounters[15], activities[15] ], 
+      [ encounters[15], activities[16] ], 
+
+      [ encounters[16], activities[8] ], 
+      [ encounters[16], activities[13] ], 
+      [ encounters[16], activities[11] ], 
+      [ encounters[16], activities[12] ], 
+      [ encounters[16], activities[14] ], 
+      [ encounters[16], activities[15] ], 
+      [ encounters[16], activities[16] ], 
+      [ encounters[16], activities[17] ], 
+      [ encounters[16], activities[18] ], 
+      [ encounters[16], activities[21] ], 
+      [ encounters[16], activities[22] ], 
+      [ encounters[16], activities[23] ], 
+      [ encounters[16], activities[24] ], 
+      [ encounters[16], activities[26] ], 
+
+      [ encounters[17], activities[13] ], 
+      [ encounters[17], activities[11] ], 
+      [ encounters[17], activities[12] ], 
+      [ encounters[17], activities[14] ], 
+      [ encounters[17], activities[15] ], 
+      [ encounters[17], activities[16] ], 
+
+      [ encounters[18], activities[13] ], 
+      [ encounters[18], activities[11] ], 
+      [ encounters[18], activities[12] ], 
+      [ encounters[18], activities[14] ], 
+      [ encounters[18], activities[15] ], 
+      [ encounters[18], activities[16] ], 
+
+      [ encounters[19], activities[13] ], 
+      [ encounters[19], activities[11] ], 
+      [ encounters[19], activities[12] ], 
+      [ encounters[19], activities[14] ], 
+      [ encounters[19], activities[15] ], 
+      [ encounters[19], activities[16] ], 
+
+      [ encounters[20], activities[13] ], 
+      [ encounters[20], activities[11] ], 
+      [ encounters[20], activities[12] ], 
+      [ encounters[20], activities[14] ], 
+      [ encounters[20], activities[15] ], 
+      [ encounters[20], activities[16] ], 
+
+      [ encounters[21], activities[13] ], 
+      [ encounters[21], activities[11] ], 
+      [ encounters[21], activities[12] ], 
+      [ encounters[21], activities[14] ], 
+      [ encounters[21], activities[15] ], 
+      [ encounters[21], activities[16] ], 
+
+      [ encounters[22], activities[13] ], 
+      [ encounters[22], activities[11] ], 
+      [ encounters[22], activities[12] ], 
+      [ encounters[22], activities[14] ], 
+      [ encounters[22], activities[15] ], 
+      [ encounters[22], activities[16] ], 
+
+      [ encounters[23], activities[8] ], 
+      [ encounters[23], activities[13] ], 
+      [ encounters[23], activities[11] ], 
+      [ encounters[23], activities[12] ], 
+      [ encounters[23], activities[14] ], 
+      [ encounters[23], activities[15] ], 
+      [ encounters[23], activities[16] ], 
+      [ encounters[23], activities[17] ], 
+      [ encounters[23], activities[18] ], 
+      [ encounters[23], activities[21] ], 
+      [ encounters[23], activities[22] ], 
+      [ encounters[23], activities[23] ], 
+      [ encounters[23], activities[24] ], 
+      [ encounters[23], activities[26] ], 
+
+      [ encounters[24], activities[13] ], 
+      [ encounters[24], activities[11] ], 
+      [ encounters[24], activities[12] ], 
+      [ encounters[24], activities[14] ], 
+      [ encounters[24], activities[15] ], 
+      [ encounters[24], activities[16] ], 
+
+      [ encounters[25], activities[13] ], 
+      [ encounters[25], activities[11] ], 
+      [ encounters[25], activities[12] ], 
+      [ encounters[25], activities[14] ], 
+      [ encounters[25], activities[15] ], 
+      [ encounters[25], activities[16] ], 
+
+      [ encounters[26], activities[13] ], 
+      [ encounters[26], activities[11] ], 
+      [ encounters[26], activities[12] ], 
+      [ encounters[26], activities[14] ], 
+      [ encounters[26], activities[15] ], 
+      [ encounters[26], activities[16] ], 
+
+      [ encounters[27], activities[13] ], 
+      [ encounters[27], activities[11] ], 
+      [ encounters[27], activities[12] ], 
+      [ encounters[27], activities[14] ], 
+      [ encounters[27], activities[15] ], 
+      [ encounters[27], activities[16] ], 
+
+      [ encounters[28], activities[13] ], 
+      [ encounters[28], activities[11] ], 
+      [ encounters[28], activities[12] ], 
+      [ encounters[28], activities[14] ], 
+      [ encounters[28], activities[15] ], 
+      [ encounters[28], activities[16] ], 
+
+      [ encounters[29], activities[13] ], 
+      [ encounters[29], activities[11] ], 
+      [ encounters[29], activities[12] ], 
+      [ encounters[29], activities[14] ], 
+      [ encounters[29], activities[15] ], 
+      [ encounters[29], activities[16] ], 
+
+      [ encounters[30], activities[8] ], 
+      [ encounters[30], activities[13] ], 
+      [ encounters[30], activities[11] ], 
+      [ encounters[30], activities[12] ], 
+      [ encounters[30], activities[14] ], 
+      [ encounters[30], activities[15] ], 
+      [ encounters[30], activities[16] ], 
+      [ encounters[30], activities[17] ], 
+      [ encounters[30], activities[18] ], 
+      [ encounters[30], activities[21] ], 
+      [ encounters[30], activities[22] ], 
+      [ encounters[30], activities[23] ], 
+      [ encounters[30], activities[24] ], 
+      [ encounters[30], activities[26] ], 
+      [ encounters[30], activities[27] ], 
+
+      [ encounters[31], activities[24] ], 
+      [ encounters[31], activities[13] ], 
+      [ encounters[31], activities[12] ], 
+      [ encounters[31], activities[14] ], 
+      [ encounters[31], activities[15] ], 
+      [ encounters[31], activities[16] ], 
+      [ encounters[31], activities[17] ], 
+      [ encounters[31], activities[18] ], 
+      [ encounters[31], activities[21] ], 
+      [ encounters[31], activities[22] ], 
+      [ encounters[31], activities[23] ], 
+
+      [ encounters[32], activities[24] ], 
+      [ encounters[32], activities[13] ], 
+      [ encounters[32], activities[12] ], 
+      [ encounters[32], activities[14] ], 
+      [ encounters[32], activities[15] ], 
+      [ encounters[32], activities[16] ], 
+      [ encounters[32], activities[17] ], 
+      [ encounters[32], activities[18] ], 
+
+      [ encounters[33], activities[8] ], 
+      [ encounters[33], activities[24] ], 
+      [ encounters[33], activities[13] ], 
+      [ encounters[33], activities[12] ], 
+      [ encounters[33], activities[14] ], 
+      [ encounters[33], activities[15] ], 
+      [ encounters[33], activities[16] ], 
+      [ encounters[33], activities[17] ], 
+      [ encounters[33], activities[18] ], 
+      [ encounters[33], activities[21] ], 
+      [ encounters[33], activities[22] ], 
+      [ encounters[33], activities[23] ], 
+      [ encounters[33], activities[25] ]
+
     ]
     wfis = []
     for item in wfi_links:
@@ -328,8 +664,8 @@ class RocheWA42380():
     follow_up = code_for('StudyEpoch', 'studyEpochType', submission_value='FOLLOW-UP')
     # Fields: name, description, epoch_type, encounters
     raw_epoch_data = [
-      ("Screening", "Screening", screening, [encounters[0]]),
-      ("Treatment", "Treatment", treatment, [ encounters[14], encounters[15], encounters[16], encounters[17] ]),
+      ("Screening", "Screening", screening, [ encounters[0] ]),
+      ("Treatment", "Treatment", treatment, encounters[14:17]),
       ("Follow-up", "Follow-up", follow_up, [ encounters[18] ])
     ]
     epochs = []
@@ -341,9 +677,9 @@ class RocheWA42380():
     # Elements
     # Fields: name, description, start rule, end rule
     raw_element_data = [
-      ("Screening", "Screening", rules[35], rules[40]),
-      ("Treatment", "Tocilizumab in combination with standard of care", rules[36], rules[41]),
-      ("Palcebo", "Placebo in combination with standard of care", rules[39], rules[44]),
+      ("Screening", "Screening", rules[0], rules[4]),
+      ("Treatment", "Tocilizumab in combination with standard of care", None, None),
+      ("Palcebo", "Placebo in combination with standard of care", None, None),
       ("Follow Up", "Follow up", None, None),
     ]
     elements = []
