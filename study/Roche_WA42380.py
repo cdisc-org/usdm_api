@@ -144,7 +144,7 @@ class RocheWA42380():
     ]
     study_data_items = []
     for data in raw_study_data:
-      print(data)
+      #print(data)
       study_data_items.append(study_data_data(*data))
 
     # Activities
