@@ -665,8 +665,8 @@ class RocheWA42380():
     # Fields: name, description, epoch_type, encounters
     raw_epoch_data = [
       ("Screening", "Screening", screening, [ encounters[0] ]),
-      ("Treatment", "Treatment", treatment, encounters[14:17]),
-      ("Follow-up", "Follow-up", follow_up, [ encounters[18] ])
+      ("Treatment", "Treatment", treatment, encounters[1:31]),
+      ("Follow-up", "Follow-up", follow_up, encounters[31:34])
     ]
     epochs = []
     for epoch in raw_epoch_data:
@@ -731,7 +731,7 @@ class RocheWA42380():
     identifiers = [identifier_1, identifier_2, identifier_3]
 
     # Assemble complete study
-    study_title = "TCZ"
+    study_title = "Tocilizumab in Patients With Severe COVID-19 Pneumonia"
     phase = code_data("C49686", "http://www.cdisc.org", "2022-03-25", "Phase III Trial")
     study_type = code_data("C98388", "http://www.cdisc.org", "2022-03-25", "Interventional Study")
     return study_data(study_title, "1", study_type, phase, identifiers, protocol_versions, designs)

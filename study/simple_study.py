@@ -113,4 +113,4 @@ class SimpleStudy():
     protocol_version_2 = study_protocol_version_data("Shorter", "Very Official", "Public Voice", "Incomprehensible", "1", "Amendment 1", "2022-02-01", final)
     protocol_versions = [protocol_version_1, protocol_version_2]
 
-    return study_data("New Title", "1", study_type, phase, identifiers, protocol_versions, designs)
+    return study_data("Small Simple Test Study (SSTS)", "1", study_type, phase, identifiers, protocol_versions, designs)
