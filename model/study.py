@@ -12,6 +12,7 @@ class Study(ApiBaseModel):
   studyVersion: str
   studyType: Union[Code, UUID, None]
   studyPhase: Union[Code, UUID, None]
+  businessTherapeuticAreas: Union[Code, UUID] = []
   studyIdentifiers: Union[List[StudyIdentifier], List[UUID], None] = []
   studyProtocolVersions: Union[List[StudyProtocolVersion], List[UUID], None] = []
   studyDesigns: Union[List[StudyDesign], List[UUID], None] = []

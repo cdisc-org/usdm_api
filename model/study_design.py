@@ -17,6 +17,7 @@ class StudyDesign(ApiBaseModel):
   trialIntentTypes: Union[List[Code], List[UUID]]
   trialType: Union[Code, UUID]
   interventionModel: Union[Code, UUID]
+  therapeuticAreas: Union[Code, UUID] = []
   studyCells: Union[List[StudyCell], List[UUID], None] = []
   studyIndications: Union[List[Indication], List[UUID], None] = []
   studyInvestigationalInterventions: Union[List[InvestigationalIntervention], List[UUID], None] = []
