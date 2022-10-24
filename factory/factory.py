@@ -219,10 +219,10 @@ def study_data(title, version, type, phase, business_therapeutic_areas, identifi
     "studyDesigns": designs
   }
 
-def study_design_data(intent, type, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands):
+def study_design_data(intent, types, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands):
   return {
     "trialIntentTypes": intent,
-    "trialType": type,
+    "trialType": types,
     "interventionModel": model,
     "therapeuticAreas:": therapeutic_areas,
     "studyCells": cells,

@@ -102,14 +102,15 @@ class SimpleStudy():
     study_cells.append(study_cell_data(study_arm_2, study_epoch_3, [study_element_4]))
 
     intent = code_for('StudyDesign', 'trialIntentType', c_code='C15714')
-    design_1_type = code_for('StudyDesign', 'trialType', submission_value='BIOSIMILARITY')
-    design_2_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
+    trial_1_type = code_for('StudyDesign', 'trialType', submission_value='BIOSIMILARITY')
+    trial_2_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
+    trial_types = [trial_1_type, trial_2_type]
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='PARALLEL')
 
     ta = code_data("123456789", "SNOMED", "2022", "Something")
     therapeutic_areas = [ta]
 
-    design_1 = study_design_data([intent], design_1_type, int_model, therapeutic_areas, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [workflow], [])
+    design_1 = study_design_data([intent], trial_types, int_model, therapeutic_areas, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [workflow], [])
     designs = [design_1]
     final = code_data("C1113x", "http://www.cdisc.org", "1", "FINAL")
     protocol_version_1 = study_protocol_version_data("Short", "Very Official", "Public Voice", "Incomprehensible", "1", None, "2022-01-01", final)
