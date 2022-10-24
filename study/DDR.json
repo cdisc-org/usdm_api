@@ -137,7 +137,7 @@
             "studyEpochName": "SCREEN",
             "studyEpochDesc": "Screening",
             "previousStudyEpochId": null,
-            "nextStudyEpochId": "436e0929-8996-4c08-b55d-41838c55bd7f",
+            "nextStudyEpochId": "51bf1e89-8283-42f9-a891-b9cc77d8c4f8",
             "studyEpochType": {
               "code": "C48262",
               "codeSystem": "http://www.cdisc.org",
@@ -149,7 +149,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -170,10 +170,10 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               }
             ],
-            "uuid": "d496a95f-225f-448c-8670-77a829c71b85"
+            "uuid": "a854104e-5465-4ce8-a43c-3b44a606b72f"
           },
           "studyElements": [
             {
@@ -209,8 +209,8 @@
           "studyEpoch": {
             "studyEpochName": "RUN-IN",
             "studyEpochDesc": "Run-In",
-            "previousStudyEpochId": "d496a95f-225f-448c-8670-77a829c71b85",
-            "nextStudyEpochId": "a9c99fa0-6e60-4635-bd2e-d640e749efb0",
+            "previousStudyEpochId": "a854104e-5465-4ce8-a43c-3b44a606b72f",
+            "nextStudyEpochId": "c353f54c-d649-40bf-a08d-f3adbdc1f6c7",
             "studyEpochType": {
               "code": "C98779",
               "codeSystem": "http://www.cdisc.org",
@@ -221,8 +221,8 @@
               {
                 "encounterName": "RUN-IN VISIT 1",
                 "encounterDesc": "",
-                "previousEncounterId": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe",
-                "nextEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
+                "previousEncounterId": "72f5d702-6edf-40f4-9a52-21deb4dc95fe",
+                "nextEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -247,13 +247,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D5"
                 },
-                "uuid": "205b2547-bfd9-43df-95f1-baf9230cc89d"
+                "uuid": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53"
               },
               {
                 "encounterName": "RUN-IN VISIT 2",
                 "encounterDesc": "",
-                "previousEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
-                "nextEncounterId": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc",
+                "previousEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
+                "nextEncounterId": "355d2930-8a76-40b6-87dd-7336d97af74e",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -278,13 +278,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D3"
                 },
-                "uuid": "44a71b04-dc4b-4528-9958-82252fed5e58"
+                "uuid": "ad2aaa2b-5948-4f39-994b-d175db78a59b"
               },
               {
                 "encounterName": "RUN-IN VISIT 3",
                 "encounterDesc": "",
-                "previousEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
-                "nextEncounterId": "2f1a6ced-0477-4729-b54f-9335709be34a",
+                "previousEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
+                "nextEncounterId": "187e632d-3a2d-4710-a8fc-2048c8fad4bf",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -309,10 +309,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D1"
                 },
-                "uuid": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc"
+                "uuid": "355d2930-8a76-40b6-87dd-7336d97af74e"
               }
             ],
-            "uuid": "436e0929-8996-4c08-b55d-41838c55bd7f"
+            "uuid": "51bf1e89-8283-42f9-a891-b9cc77d8c4f8"
           },
           "studyElements": [
             {
@@ -348,8 +348,8 @@
           "studyEpoch": {
             "studyEpochName": "TREATMENT 1",
             "studyEpochDesc": "Treatment Cycle 1",
-            "previousStudyEpochId": "436e0929-8996-4c08-b55d-41838c55bd7f",
-            "nextStudyEpochId": "6c6897c9-cbcd-465b-8e1e-8c49628d3f26",
+            "previousStudyEpochId": "51bf1e89-8283-42f9-a891-b9cc77d8c4f8",
+            "nextStudyEpochId": "a4ab41b3-b972-47e4-995c-30a6b530a185",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -360,8 +360,8 @@
               {
                 "encounterName": "CYCLE 1, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc",
-                "nextEncounterId": "d9513923-fa2b-4c55-986e-1e6c8a240f76",
+                "previousEncounterId": "355d2930-8a76-40b6-87dd-7336d97af74e",
+                "nextEncounterId": "a511b79e-49e5-4001-9fcb-7ffd098cbb62",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -386,13 +386,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "2f1a6ced-0477-4729-b54f-9335709be34a"
+                "uuid": "187e632d-3a2d-4710-a8fc-2048c8fad4bf"
               },
               {
                 "encounterName": "CYCLE 1, TREATMENT DAY 3",
                 "encounterDesc": "",
-                "previousEncounterId": "2f1a6ced-0477-4729-b54f-9335709be34a",
-                "nextEncounterId": "d71cfbc7-7911-4878-8a90-ac19ae4cbf62",
+                "previousEncounterId": "187e632d-3a2d-4710-a8fc-2048c8fad4bf",
+                "nextEncounterId": "c8223d0c-9755-44fd-a962-1743e7148ad9",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -417,13 +417,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D3"
                 },
-                "uuid": "d9513923-fa2b-4c55-986e-1e6c8a240f76"
+                "uuid": "a511b79e-49e5-4001-9fcb-7ffd098cbb62"
               },
               {
                 "encounterName": "CYCLE 1, TREATMENT DAY 5",
                 "encounterDesc": "",
-                "previousEncounterId": "d9513923-fa2b-4c55-986e-1e6c8a240f76",
-                "nextEncounterId": "feb8f619-cc69-4e3a-b6d8-8a7a7e626b29",
+                "previousEncounterId": "a511b79e-49e5-4001-9fcb-7ffd098cbb62",
+                "nextEncounterId": "4cf53429-0198-4c46-b31e-bf3fabfad865",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -448,10 +448,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D5"
                 },
-                "uuid": "d71cfbc7-7911-4878-8a90-ac19ae4cbf62"
+                "uuid": "c8223d0c-9755-44fd-a962-1743e7148ad9"
               }
             ],
-            "uuid": "a9c99fa0-6e60-4635-bd2e-d640e749efb0"
+            "uuid": "c353f54c-d649-40bf-a08d-f3adbdc1f6c7"
           },
           "studyElements": [
             {
@@ -487,8 +487,8 @@
           "studyEpoch": {
             "studyEpochName": "TREATMENT 2",
             "studyEpochDesc": "Treatment Cycle 2",
-            "previousStudyEpochId": "a9c99fa0-6e60-4635-bd2e-d640e749efb0",
-            "nextStudyEpochId": "17a81bb5-1dad-4c22-92df-24ba931b968b",
+            "previousStudyEpochId": "c353f54c-d649-40bf-a08d-f3adbdc1f6c7",
+            "nextStudyEpochId": "a66ce508-14f3-4442-a9ae-dccadf409574",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -499,8 +499,8 @@
               {
                 "encounterName": "CYCLE 2, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "d71cfbc7-7911-4878-8a90-ac19ae4cbf62",
-                "nextEncounterId": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b",
+                "previousEncounterId": "c8223d0c-9755-44fd-a962-1743e7148ad9",
+                "nextEncounterId": "0a995a77-0887-49fc-bcb8-148c690a5cac",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -525,13 +525,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "feb8f619-cc69-4e3a-b6d8-8a7a7e626b29"
+                "uuid": "4cf53429-0198-4c46-b31e-bf3fabfad865"
               },
               {
                 "encounterName": "CYCLE 2, TREATMENT DAY 3",
                 "encounterDesc": "",
-                "previousEncounterId": "feb8f619-cc69-4e3a-b6d8-8a7a7e626b29",
-                "nextEncounterId": "ed4779b8-2f37-44f3-99d1-a5ca463b6ae2",
+                "previousEncounterId": "4cf53429-0198-4c46-b31e-bf3fabfad865",
+                "nextEncounterId": "1a5dbc0c-80a5-47ae-9fd3-c6eb19adf2fb",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -556,10 +556,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D3"
                 },
-                "uuid": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b"
+                "uuid": "0a995a77-0887-49fc-bcb8-148c690a5cac"
               }
             ],
-            "uuid": "6c6897c9-cbcd-465b-8e1e-8c49628d3f26"
+            "uuid": "a4ab41b3-b972-47e4-995c-30a6b530a185"
           },
           "studyElements": [
             {
@@ -595,8 +595,8 @@
           "studyEpoch": {
             "studyEpochName": "TREATMENT X",
             "studyEpochDesc": "Treatment Cycle X",
-            "previousStudyEpochId": "6c6897c9-cbcd-465b-8e1e-8c49628d3f26",
-            "nextStudyEpochId": "02821bbc-8b14-4c49-8aab-43417fb9ae5b",
+            "previousStudyEpochId": "a4ab41b3-b972-47e4-995c-30a6b530a185",
+            "nextStudyEpochId": "da6669ff-891e-4162-8468-32aac1dd2cdc",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -607,8 +607,8 @@
               {
                 "encounterName": "CYCLE X, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b",
-                "nextEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
+                "previousEncounterId": "0a995a77-0887-49fc-bcb8-148c690a5cac",
+                "nextEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -633,13 +633,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "ed4779b8-2f37-44f3-99d1-a5ca463b6ae2"
+                "uuid": "1a5dbc0c-80a5-47ae-9fd3-c6eb19adf2fb"
               },
               {
                 "encounterName": "CYCLE X, TREATMENT DAY 4",
                 "encounterDesc": "",
-                "previousEncounterId": "ed4779b8-2f37-44f3-99d1-a5ca463b6ae2",
-                "nextEncounterId": "736d3515-0b55-4af1-b920-3a2fed981e34",
+                "previousEncounterId": "1a5dbc0c-80a5-47ae-9fd3-c6eb19adf2fb",
+                "nextEncounterId": "136526cf-19a9-439c-9508-7c4725495f23",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -664,10 +664,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D4"
                 },
-                "uuid": "bdb3d851-078f-4ce9-a005-3413db5a32dc"
+                "uuid": "cc4d815e-cf14-400f-adb8-c5bd428e093a"
               }
             ],
-            "uuid": "17a81bb5-1dad-4c22-92df-24ba931b968b"
+            "uuid": "a66ce508-14f3-4442-a9ae-dccadf409574"
           },
           "studyElements": [
             {
@@ -703,7 +703,7 @@
           "studyEpoch": {
             "studyEpochName": "FOLLOW-UP",
             "studyEpochDesc": "Follow-up",
-            "previousStudyEpochId": "17a81bb5-1dad-4c22-92df-24ba931b968b",
+            "previousStudyEpochId": "a66ce508-14f3-4442-a9ae-dccadf409574",
             "nextStudyEpochId": null,
             "studyEpochType": {
               "code": "C99158",
@@ -715,8 +715,8 @@
               {
                 "encounterName": "FU 1",
                 "encounterDesc": "",
-                "previousEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
-                "nextEncounterId": "117b9a11-b5ad-4ad3-bdd1-b4671e46b428",
+                "previousEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
+                "nextEncounterId": "73f06891-9ea6-4c18-9b5c-b1b13a116c54",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -741,12 +741,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "W2"
                 },
-                "uuid": "736d3515-0b55-4af1-b920-3a2fed981e34"
+                "uuid": "136526cf-19a9-439c-9508-7c4725495f23"
               },
               {
                 "encounterName": "FU 2",
                 "encounterDesc": "",
-                "previousEncounterId": "736d3515-0b55-4af1-b920-3a2fed981e34",
+                "previousEncounterId": "136526cf-19a9-439c-9508-7c4725495f23",
                 "nextEncounterId": null,
                 "encounterType": {
                   "code": "C7653x",
@@ -772,10 +772,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "W6"
                 },
-                "uuid": "117b9a11-b5ad-4ad3-bdd1-b4671e46b428"
+                "uuid": "73f06891-9ea6-4c18-9b5c-b1b13a116c54"
               }
             ],
-            "uuid": "02821bbc-8b14-4c49-8aab-43417fb9ae5b"
+            "uuid": "da6669ff-891e-4162-8468-32aac1dd2cdc"
           },
           "studyElements": [
             {
@@ -812,7 +812,7 @@
             "studyEpochName": "SCREEN",
             "studyEpochDesc": "Screening",
             "previousStudyEpochId": null,
-            "nextStudyEpochId": "436e0929-8996-4c08-b55d-41838c55bd7f",
+            "nextStudyEpochId": "51bf1e89-8283-42f9-a891-b9cc77d8c4f8",
             "studyEpochType": {
               "code": "C48262",
               "codeSystem": "http://www.cdisc.org",
@@ -824,7 +824,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -845,10 +845,10 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               }
             ],
-            "uuid": "d496a95f-225f-448c-8670-77a829c71b85"
+            "uuid": "a854104e-5465-4ce8-a43c-3b44a606b72f"
           },
           "studyElements": [
             {
@@ -884,8 +884,8 @@
           "studyEpoch": {
             "studyEpochName": "RUN-IN",
             "studyEpochDesc": "Run-In",
-            "previousStudyEpochId": "d496a95f-225f-448c-8670-77a829c71b85",
-            "nextStudyEpochId": "a9c99fa0-6e60-4635-bd2e-d640e749efb0",
+            "previousStudyEpochId": "a854104e-5465-4ce8-a43c-3b44a606b72f",
+            "nextStudyEpochId": "c353f54c-d649-40bf-a08d-f3adbdc1f6c7",
             "studyEpochType": {
               "code": "C98779",
               "codeSystem": "http://www.cdisc.org",
@@ -896,8 +896,8 @@
               {
                 "encounterName": "RUN-IN VISIT 1",
                 "encounterDesc": "",
-                "previousEncounterId": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe",
-                "nextEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
+                "previousEncounterId": "72f5d702-6edf-40f4-9a52-21deb4dc95fe",
+                "nextEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -922,13 +922,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D5"
                 },
-                "uuid": "205b2547-bfd9-43df-95f1-baf9230cc89d"
+                "uuid": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53"
               },
               {
                 "encounterName": "RUN-IN VISIT 2",
                 "encounterDesc": "",
-                "previousEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
-                "nextEncounterId": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc",
+                "previousEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
+                "nextEncounterId": "355d2930-8a76-40b6-87dd-7336d97af74e",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -953,13 +953,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D3"
                 },
-                "uuid": "44a71b04-dc4b-4528-9958-82252fed5e58"
+                "uuid": "ad2aaa2b-5948-4f39-994b-d175db78a59b"
               },
               {
                 "encounterName": "RUN-IN VISIT 3",
                 "encounterDesc": "",
-                "previousEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
-                "nextEncounterId": "2f1a6ced-0477-4729-b54f-9335709be34a",
+                "previousEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
+                "nextEncounterId": "187e632d-3a2d-4710-a8fc-2048c8fad4bf",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -984,10 +984,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D1"
                 },
-                "uuid": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc"
+                "uuid": "355d2930-8a76-40b6-87dd-7336d97af74e"
               }
             ],
-            "uuid": "436e0929-8996-4c08-b55d-41838c55bd7f"
+            "uuid": "51bf1e89-8283-42f9-a891-b9cc77d8c4f8"
           },
           "studyElements": [
             {
@@ -1023,8 +1023,8 @@
           "studyEpoch": {
             "studyEpochName": "TREATMENT 1",
             "studyEpochDesc": "Treatment Cycle 1",
-            "previousStudyEpochId": "436e0929-8996-4c08-b55d-41838c55bd7f",
-            "nextStudyEpochId": "6c6897c9-cbcd-465b-8e1e-8c49628d3f26",
+            "previousStudyEpochId": "51bf1e89-8283-42f9-a891-b9cc77d8c4f8",
+            "nextStudyEpochId": "a4ab41b3-b972-47e4-995c-30a6b530a185",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -1035,8 +1035,8 @@
               {
                 "encounterName": "CYCLE 1, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc",
-                "nextEncounterId": "d9513923-fa2b-4c55-986e-1e6c8a240f76",
+                "previousEncounterId": "355d2930-8a76-40b6-87dd-7336d97af74e",
+                "nextEncounterId": "a511b79e-49e5-4001-9fcb-7ffd098cbb62",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -1061,13 +1061,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "2f1a6ced-0477-4729-b54f-9335709be34a"
+                "uuid": "187e632d-3a2d-4710-a8fc-2048c8fad4bf"
               },
               {
                 "encounterName": "CYCLE 1, TREATMENT DAY 3",
                 "encounterDesc": "",
-                "previousEncounterId": "2f1a6ced-0477-4729-b54f-9335709be34a",
-                "nextEncounterId": "d71cfbc7-7911-4878-8a90-ac19ae4cbf62",
+                "previousEncounterId": "187e632d-3a2d-4710-a8fc-2048c8fad4bf",
+                "nextEncounterId": "c8223d0c-9755-44fd-a962-1743e7148ad9",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -1092,13 +1092,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D3"
                 },
-                "uuid": "d9513923-fa2b-4c55-986e-1e6c8a240f76"
+                "uuid": "a511b79e-49e5-4001-9fcb-7ffd098cbb62"
               },
               {
                 "encounterName": "CYCLE 1, TREATMENT DAY 5",
                 "encounterDesc": "",
-                "previousEncounterId": "d9513923-fa2b-4c55-986e-1e6c8a240f76",
-                "nextEncounterId": "feb8f619-cc69-4e3a-b6d8-8a7a7e626b29",
+                "previousEncounterId": "a511b79e-49e5-4001-9fcb-7ffd098cbb62",
+                "nextEncounterId": "4cf53429-0198-4c46-b31e-bf3fabfad865",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -1123,10 +1123,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D5"
                 },
-                "uuid": "d71cfbc7-7911-4878-8a90-ac19ae4cbf62"
+                "uuid": "c8223d0c-9755-44fd-a962-1743e7148ad9"
               }
             ],
-            "uuid": "a9c99fa0-6e60-4635-bd2e-d640e749efb0"
+            "uuid": "c353f54c-d649-40bf-a08d-f3adbdc1f6c7"
           },
           "studyElements": [
             {
@@ -1162,8 +1162,8 @@
           "studyEpoch": {
             "studyEpochName": "TREATMENT 2",
             "studyEpochDesc": "Treatment Cycle 2",
-            "previousStudyEpochId": "a9c99fa0-6e60-4635-bd2e-d640e749efb0",
-            "nextStudyEpochId": "17a81bb5-1dad-4c22-92df-24ba931b968b",
+            "previousStudyEpochId": "c353f54c-d649-40bf-a08d-f3adbdc1f6c7",
+            "nextStudyEpochId": "a66ce508-14f3-4442-a9ae-dccadf409574",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -1174,8 +1174,8 @@
               {
                 "encounterName": "CYCLE 2, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "d71cfbc7-7911-4878-8a90-ac19ae4cbf62",
-                "nextEncounterId": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b",
+                "previousEncounterId": "c8223d0c-9755-44fd-a962-1743e7148ad9",
+                "nextEncounterId": "0a995a77-0887-49fc-bcb8-148c690a5cac",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -1200,13 +1200,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "feb8f619-cc69-4e3a-b6d8-8a7a7e626b29"
+                "uuid": "4cf53429-0198-4c46-b31e-bf3fabfad865"
               },
               {
                 "encounterName": "CYCLE 2, TREATMENT DAY 3",
                 "encounterDesc": "",
-                "previousEncounterId": "feb8f619-cc69-4e3a-b6d8-8a7a7e626b29",
-                "nextEncounterId": "ed4779b8-2f37-44f3-99d1-a5ca463b6ae2",
+                "previousEncounterId": "4cf53429-0198-4c46-b31e-bf3fabfad865",
+                "nextEncounterId": "1a5dbc0c-80a5-47ae-9fd3-c6eb19adf2fb",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -1231,10 +1231,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D3"
                 },
-                "uuid": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b"
+                "uuid": "0a995a77-0887-49fc-bcb8-148c690a5cac"
               }
             ],
-            "uuid": "6c6897c9-cbcd-465b-8e1e-8c49628d3f26"
+            "uuid": "a4ab41b3-b972-47e4-995c-30a6b530a185"
           },
           "studyElements": [
             {
@@ -1270,8 +1270,8 @@
           "studyEpoch": {
             "studyEpochName": "TREATMENT X",
             "studyEpochDesc": "Treatment Cycle X",
-            "previousStudyEpochId": "6c6897c9-cbcd-465b-8e1e-8c49628d3f26",
-            "nextStudyEpochId": "02821bbc-8b14-4c49-8aab-43417fb9ae5b",
+            "previousStudyEpochId": "a4ab41b3-b972-47e4-995c-30a6b530a185",
+            "nextStudyEpochId": "da6669ff-891e-4162-8468-32aac1dd2cdc",
             "studyEpochType": {
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
@@ -1282,8 +1282,8 @@
               {
                 "encounterName": "CYCLE X, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b",
-                "nextEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
+                "previousEncounterId": "0a995a77-0887-49fc-bcb8-148c690a5cac",
+                "nextEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -1308,13 +1308,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "ed4779b8-2f37-44f3-99d1-a5ca463b6ae2"
+                "uuid": "1a5dbc0c-80a5-47ae-9fd3-c6eb19adf2fb"
               },
               {
                 "encounterName": "CYCLE X, TREATMENT DAY 4",
                 "encounterDesc": "",
-                "previousEncounterId": "ed4779b8-2f37-44f3-99d1-a5ca463b6ae2",
-                "nextEncounterId": "736d3515-0b55-4af1-b920-3a2fed981e34",
+                "previousEncounterId": "1a5dbc0c-80a5-47ae-9fd3-c6eb19adf2fb",
+                "nextEncounterId": "136526cf-19a9-439c-9508-7c4725495f23",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -1339,10 +1339,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D4"
                 },
-                "uuid": "bdb3d851-078f-4ce9-a005-3413db5a32dc"
+                "uuid": "cc4d815e-cf14-400f-adb8-c5bd428e093a"
               }
             ],
-            "uuid": "17a81bb5-1dad-4c22-92df-24ba931b968b"
+            "uuid": "a66ce508-14f3-4442-a9ae-dccadf409574"
           },
           "studyElements": [
             {
@@ -1378,7 +1378,7 @@
           "studyEpoch": {
             "studyEpochName": "FOLLOW-UP",
             "studyEpochDesc": "Follow-up",
-            "previousStudyEpochId": "17a81bb5-1dad-4c22-92df-24ba931b968b",
+            "previousStudyEpochId": "a66ce508-14f3-4442-a9ae-dccadf409574",
             "nextStudyEpochId": null,
             "studyEpochType": {
               "code": "C99158",
@@ -1390,8 +1390,8 @@
               {
                 "encounterName": "FU 1",
                 "encounterDesc": "",
-                "previousEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
-                "nextEncounterId": "117b9a11-b5ad-4ad3-bdd1-b4671e46b428",
+                "previousEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
+                "nextEncounterId": "73f06891-9ea6-4c18-9b5c-b1b13a116c54",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -1416,12 +1416,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "W2"
                 },
-                "uuid": "736d3515-0b55-4af1-b920-3a2fed981e34"
+                "uuid": "136526cf-19a9-439c-9508-7c4725495f23"
               },
               {
                 "encounterName": "FU 2",
                 "encounterDesc": "",
-                "previousEncounterId": "736d3515-0b55-4af1-b920-3a2fed981e34",
+                "previousEncounterId": "136526cf-19a9-439c-9508-7c4725495f23",
                 "nextEncounterId": null,
                 "encounterType": {
                   "code": "C7653x",
@@ -1447,10 +1447,10 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "W6"
                 },
-                "uuid": "117b9a11-b5ad-4ad3-bdd1-b4671e46b428"
+                "uuid": "73f06891-9ea6-4c18-9b5c-b1b13a116c54"
               }
             ],
-            "uuid": "02821bbc-8b14-4c49-8aab-43417fb9ae5b"
+            "uuid": "da6669ff-891e-4162-8468-32aac1dd2cdc"
           },
           "studyElements": [
             {
@@ -1888,7 +1888,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -1909,13 +1909,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "IC",
                 "activityDesc": "Informed consent",
                 "previousActivityId": null,
-                "nextActivityId": "bfb3621a-3dad-4f44-80c5-ded5a554396a",
+                "nextActivityId": "c910f1ca-bfbf-4be8-ba79-9184f97090c2",
                 "definedProcedures": [
                   {
                     "procedureType": "Remote ICF collection",
@@ -1928,11 +1928,11 @@
                   }
                 ],
                 "studyDataCollection": [],
-                "uuid": "0404867b-102e-43e2-94f0-ac80597bee38"
+                "uuid": "0119e7c6-08f9-4066-a220-c850a43ccc6d"
               },
-              "uuid": "bce70772-a29f-48d9-8591-e5d43a3286c4",
+              "uuid": "33852798-1a22-4877-8b2d-68a4ae4834b9",
               "previousWorkflowItemId": null,
-              "nextWorkflowItemId": "e3fa69ae-4720-43cc-a20f-2400a8a29643"
+              "nextWorkflowItemId": "9c741bec-5bfb-47a8-b3f0-cc7942324e9e"
             },
             {
               "workflowItemDesc": "",
@@ -1940,7 +1940,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -1961,20 +1961,20 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "EC",
                 "activityDesc": "Eligibility criteria",
-                "previousActivityId": "0404867b-102e-43e2-94f0-ac80597bee38",
-                "nextActivityId": "09a6b7cc-b96b-4032-a767-00e9f6c0b3a3",
+                "previousActivityId": "0119e7c6-08f9-4066-a220-c850a43ccc6d",
+                "nextActivityId": "017ff762-2dc5-4256-a0ab-b22766e338b0",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "bfb3621a-3dad-4f44-80c5-ded5a554396a"
+                "uuid": "c910f1ca-bfbf-4be8-ba79-9184f97090c2"
               },
-              "uuid": "e3fa69ae-4720-43cc-a20f-2400a8a29643",
-              "previousWorkflowItemId": "bce70772-a29f-48d9-8591-e5d43a3286c4",
-              "nextWorkflowItemId": "e1e1ecb8-7ee0-49bb-98a0-b17391bdc668"
+              "uuid": "9c741bec-5bfb-47a8-b3f0-cc7942324e9e",
+              "previousWorkflowItemId": "33852798-1a22-4877-8b2d-68a4ae4834b9",
+              "nextWorkflowItemId": "1960e03c-d8b2-410a-ac69-3ab991c0f2d0"
             },
             {
               "workflowItemDesc": "",
@@ -1982,7 +1982,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2003,13 +2003,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "DM",
                 "activityDesc": "Demography",
-                "previousActivityId": "bfb3621a-3dad-4f44-80c5-ded5a554396a",
-                "nextActivityId": "b2219649-a46c-4926-ae61-a4a2b33e5b77",
+                "previousActivityId": "c910f1ca-bfbf-4be8-ba79-9184f97090c2",
+                "nextActivityId": "b47b0371-5e67-4038-b4ce-8b635a48a19b",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2018,11 +2018,11 @@
                     "crfLink": "https://www.dropbox.com/s/7m1vxxxauxe0c97/DM_XML.xml?dl=1"
                   }
                 ],
-                "uuid": "09a6b7cc-b96b-4032-a767-00e9f6c0b3a3"
+                "uuid": "017ff762-2dc5-4256-a0ab-b22766e338b0"
               },
-              "uuid": "e1e1ecb8-7ee0-49bb-98a0-b17391bdc668",
-              "previousWorkflowItemId": "e3fa69ae-4720-43cc-a20f-2400a8a29643",
-              "nextWorkflowItemId": "05a0351f-fb27-4f78-8c49-a1b1e24c16fa"
+              "uuid": "1960e03c-d8b2-410a-ac69-3ab991c0f2d0",
+              "previousWorkflowItemId": "9c741bec-5bfb-47a8-b3f0-cc7942324e9e",
+              "nextWorkflowItemId": "81471294-433b-427a-b960-f2b66ef9522d"
             },
             {
               "workflowItemDesc": "",
@@ -2030,7 +2030,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2051,20 +2051,20 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "MH",
                 "activityDesc": "Medical history",
-                "previousActivityId": "09a6b7cc-b96b-4032-a767-00e9f6c0b3a3",
-                "nextActivityId": "a822a5a0-f8b0-4a34-aa35-403031fa113b",
+                "previousActivityId": "017ff762-2dc5-4256-a0ab-b22766e338b0",
+                "nextActivityId": "7d8f8f61-d8a6-49ce-b946-2a1636dac956",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "b2219649-a46c-4926-ae61-a4a2b33e5b77"
+                "uuid": "b47b0371-5e67-4038-b4ce-8b635a48a19b"
               },
-              "uuid": "05a0351f-fb27-4f78-8c49-a1b1e24c16fa",
-              "previousWorkflowItemId": "e1e1ecb8-7ee0-49bb-98a0-b17391bdc668",
-              "nextWorkflowItemId": "97a18329-1618-422a-a9cc-85a6a28dac30"
+              "uuid": "81471294-433b-427a-b960-f2b66ef9522d",
+              "previousWorkflowItemId": "1960e03c-d8b2-410a-ac69-3ab991c0f2d0",
+              "nextWorkflowItemId": "783f5f74-54cc-40a0-9ffe-e771c51dc77f"
             },
             {
               "workflowItemDesc": "",
@@ -2072,7 +2072,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2093,13 +2093,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "DC",
                 "activityDesc": "Disease characteristics",
-                "previousActivityId": "b2219649-a46c-4926-ae61-a4a2b33e5b77",
-                "nextActivityId": "b6b5060e-2fc6-4c0c-8c98-bae0961aaefe",
+                "previousActivityId": "b47b0371-5e67-4038-b4ce-8b635a48a19b",
+                "nextActivityId": "d2c2be7c-cfdd-46eb-8a6b-07cb37f7f045",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2113,11 +2113,11 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "a822a5a0-f8b0-4a34-aa35-403031fa113b"
+                "uuid": "7d8f8f61-d8a6-49ce-b946-2a1636dac956"
               },
-              "uuid": "97a18329-1618-422a-a9cc-85a6a28dac30",
-              "previousWorkflowItemId": "05a0351f-fb27-4f78-8c49-a1b1e24c16fa",
-              "nextWorkflowItemId": "9cfe2b30-ef58-4d1e-abc8-f3a7cb31009a"
+              "uuid": "783f5f74-54cc-40a0-9ffe-e771c51dc77f",
+              "previousWorkflowItemId": "81471294-433b-427a-b960-f2b66ef9522d",
+              "nextWorkflowItemId": "adc1595f-1525-4ed1-acaa-d89a89d47e70"
             },
             {
               "workflowItemDesc": "",
@@ -2125,7 +2125,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2146,20 +2146,20 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "PE",
                 "activityDesc": "Physical exam",
-                "previousActivityId": "a822a5a0-f8b0-4a34-aa35-403031fa113b",
-                "nextActivityId": "3f246406-e736-496d-9fe8-6f75688a8242",
+                "previousActivityId": "7d8f8f61-d8a6-49ce-b946-2a1636dac956",
+                "nextActivityId": "6b4400e7-ce5f-4fdc-8680-ae2d293ed066",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "b6b5060e-2fc6-4c0c-8c98-bae0961aaefe"
+                "uuid": "d2c2be7c-cfdd-46eb-8a6b-07cb37f7f045"
               },
-              "uuid": "9cfe2b30-ef58-4d1e-abc8-f3a7cb31009a",
-              "previousWorkflowItemId": "97a18329-1618-422a-a9cc-85a6a28dac30",
-              "nextWorkflowItemId": "ece65da3-d925-457c-b760-da00832b7be0"
+              "uuid": "adc1595f-1525-4ed1-acaa-d89a89d47e70",
+              "previousWorkflowItemId": "783f5f74-54cc-40a0-9ffe-e771c51dc77f",
+              "nextWorkflowItemId": "ba0bff90-aeb4-4e8b-8662-1ec8708f1760"
             },
             {
               "workflowItemDesc": "",
@@ -2167,7 +2167,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2188,13 +2188,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "VS1",
                 "activityDesc": "Height",
-                "previousActivityId": "b6b5060e-2fc6-4c0c-8c98-bae0961aaefe",
-                "nextActivityId": "465edda9-4627-4a19-b7f8-b6c7b1a180ff",
+                "previousActivityId": "d2c2be7c-cfdd-46eb-8a6b-07cb37f7f045",
+                "nextActivityId": "0a70d1e3-b609-4879-95da-c53c6f1db78b",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2203,11 +2203,11 @@
                     "crfLink": "https://www.dropbox.com/s/42dhfj2ani8rfjd/height.yaml?dl=1"
                   }
                 ],
-                "uuid": "3f246406-e736-496d-9fe8-6f75688a8242"
+                "uuid": "6b4400e7-ce5f-4fdc-8680-ae2d293ed066"
               },
-              "uuid": "ece65da3-d925-457c-b760-da00832b7be0",
-              "previousWorkflowItemId": "9cfe2b30-ef58-4d1e-abc8-f3a7cb31009a",
-              "nextWorkflowItemId": "931f3fa9-e1c3-4b4f-a688-2f45a2aead86"
+              "uuid": "ba0bff90-aeb4-4e8b-8662-1ec8708f1760",
+              "previousWorkflowItemId": "adc1595f-1525-4ed1-acaa-d89a89d47e70",
+              "nextWorkflowItemId": "4b794d8b-d288-4167-91cf-ee4dbb44143a"
             },
             {
               "workflowItemDesc": "",
@@ -2215,7 +2215,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2236,13 +2236,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "ECG",
                 "activityDesc": "12-lead ECG",
-                "previousActivityId": "3f246406-e736-496d-9fe8-6f75688a8242",
-                "nextActivityId": "c0c43f98-7389-46ea-8160-2c564a3b8f8e",
+                "previousActivityId": "6b4400e7-ce5f-4fdc-8680-ae2d293ed066",
+                "nextActivityId": "d7fa17d1-80d0-4d0b-8538-1d2846e4e415",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2256,11 +2256,11 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "465edda9-4627-4a19-b7f8-b6c7b1a180ff"
+                "uuid": "0a70d1e3-b609-4879-95da-c53c6f1db78b"
               },
-              "uuid": "931f3fa9-e1c3-4b4f-a688-2f45a2aead86",
-              "previousWorkflowItemId": "ece65da3-d925-457c-b760-da00832b7be0",
-              "nextWorkflowItemId": "9ef24025-1f7f-4ad7-87e6-2e2a39027fa2"
+              "uuid": "4b794d8b-d288-4167-91cf-ee4dbb44143a",
+              "previousWorkflowItemId": "ba0bff90-aeb4-4e8b-8662-1ec8708f1760",
+              "nextWorkflowItemId": "9419f73a-d9a9-44e6-93ca-21696aaa8f36"
             },
             {
               "workflowItemDesc": "",
@@ -2268,7 +2268,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2289,13 +2289,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "LB1",
                 "activityDesc": "Hematology (predose)",
-                "previousActivityId": "465edda9-4627-4a19-b7f8-b6c7b1a180ff",
-                "nextActivityId": "c699c18d-51af-447c-82af-4ec82fe2d375",
+                "previousActivityId": "0a70d1e3-b609-4879-95da-c53c6f1db78b",
+                "nextActivityId": "fe7b180a-722d-4939-95e0-79934db68974",
                 "definedProcedures": [
                   {
                     "procedureType": "Blood sample collection",
@@ -2328,11 +2328,11 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c0c43f98-7389-46ea-8160-2c564a3b8f8e"
+                "uuid": "d7fa17d1-80d0-4d0b-8538-1d2846e4e415"
               },
-              "uuid": "9ef24025-1f7f-4ad7-87e6-2e2a39027fa2",
-              "previousWorkflowItemId": "931f3fa9-e1c3-4b4f-a688-2f45a2aead86",
-              "nextWorkflowItemId": "7da43d26-84f9-4f02-a070-4ad15ce41b3e"
+              "uuid": "9419f73a-d9a9-44e6-93ca-21696aaa8f36",
+              "previousWorkflowItemId": "4b794d8b-d288-4167-91cf-ee4dbb44143a",
+              "nextWorkflowItemId": "80b66785-a8df-427f-913a-6a2dc86d6100"
             },
             {
               "workflowItemDesc": "",
@@ -2340,7 +2340,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2361,13 +2361,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "LB2",
                 "activityDesc": "Chemistry (predose)",
-                "previousActivityId": "c0c43f98-7389-46ea-8160-2c564a3b8f8e",
-                "nextActivityId": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c",
+                "previousActivityId": "d7fa17d1-80d0-4d0b-8538-1d2846e4e415",
+                "nextActivityId": "b294a891-5a15-4733-9562-632a5c8dd590",
                 "definedProcedures": [
                   {
                     "procedureType": "Blood sample collection",
@@ -2400,11 +2400,11 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c699c18d-51af-447c-82af-4ec82fe2d375"
+                "uuid": "fe7b180a-722d-4939-95e0-79934db68974"
               },
-              "uuid": "7da43d26-84f9-4f02-a070-4ad15ce41b3e",
-              "previousWorkflowItemId": "9ef24025-1f7f-4ad7-87e6-2e2a39027fa2",
-              "nextWorkflowItemId": "39feeb69-2880-4f73-8bb3-ecfa7a81cfd3"
+              "uuid": "80b66785-a8df-427f-913a-6a2dc86d6100",
+              "previousWorkflowItemId": "9419f73a-d9a9-44e6-93ca-21696aaa8f36",
+              "nextWorkflowItemId": "d90f91dc-1907-4289-a870-2ce0b0d33c83"
             },
             {
               "workflowItemDesc": "",
@@ -2412,7 +2412,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2433,20 +2433,20 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "LB3",
                 "activityDesc": "Serology",
-                "previousActivityId": "c699c18d-51af-447c-82af-4ec82fe2d375",
-                "nextActivityId": "6ebaf96e-e4c9-4f78-8a71-d6c8352a9d61",
+                "previousActivityId": "fe7b180a-722d-4939-95e0-79934db68974",
+                "nextActivityId": "2e5537e1-afb2-4f08-b32a-4aa502247e40",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c"
+                "uuid": "b294a891-5a15-4733-9562-632a5c8dd590"
               },
-              "uuid": "39feeb69-2880-4f73-8bb3-ecfa7a81cfd3",
-              "previousWorkflowItemId": "7da43d26-84f9-4f02-a070-4ad15ce41b3e",
-              "nextWorkflowItemId": "54e88bf0-874c-4efe-9a69-5b43a42ab358"
+              "uuid": "d90f91dc-1907-4289-a870-2ce0b0d33c83",
+              "previousWorkflowItemId": "80b66785-a8df-427f-913a-6a2dc86d6100",
+              "nextWorkflowItemId": "9485073c-ce73-4441-87c3-4687fe9ae188"
             },
             {
               "workflowItemDesc": "",
@@ -2454,7 +2454,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2475,13 +2475,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "LB4",
                 "activityDesc": "Urinalysis",
-                "previousActivityId": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c",
-                "nextActivityId": "a6a3d774-8b98-437a-941b-ece7b32a3689",
+                "previousActivityId": "b294a891-5a15-4733-9562-632a5c8dd590",
+                "nextActivityId": "39c82177-4479-4459-9b79-9ac0852375e2",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2490,11 +2490,11 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "6ebaf96e-e4c9-4f78-8a71-d6c8352a9d61"
+                "uuid": "2e5537e1-afb2-4f08-b32a-4aa502247e40"
               },
-              "uuid": "54e88bf0-874c-4efe-9a69-5b43a42ab358",
-              "previousWorkflowItemId": "39feeb69-2880-4f73-8bb3-ecfa7a81cfd3",
-              "nextWorkflowItemId": "55a4e7d2-71c2-408e-a768-6058551d77cd"
+              "uuid": "9485073c-ce73-4441-87c3-4687fe9ae188",
+              "previousWorkflowItemId": "d90f91dc-1907-4289-a870-2ce0b0d33c83",
+              "nextWorkflowItemId": "8838dec8-349a-49fe-a8a3-326553f4188b"
             },
             {
               "workflowItemDesc": "",
@@ -2502,7 +2502,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2523,13 +2523,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "PREG",
                 "activityDesc": "Pregnancy test",
-                "previousActivityId": "6ebaf96e-e4c9-4f78-8a71-d6c8352a9d61",
-                "nextActivityId": "116fc952-fe0f-468e-aaf2-2b1e796d47f2",
+                "previousActivityId": "2e5537e1-afb2-4f08-b32a-4aa502247e40",
+                "nextActivityId": "752b2fb4-188a-4b2b-899e-03a51de5d208",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2538,11 +2538,11 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "a6a3d774-8b98-437a-941b-ece7b32a3689"
+                "uuid": "39c82177-4479-4459-9b79-9ac0852375e2"
               },
-              "uuid": "55a4e7d2-71c2-408e-a768-6058551d77cd",
-              "previousWorkflowItemId": "54e88bf0-874c-4efe-9a69-5b43a42ab358",
-              "nextWorkflowItemId": "cc22e89f-be81-4141-aade-60216c11a592"
+              "uuid": "8838dec8-349a-49fe-a8a3-326553f4188b",
+              "previousWorkflowItemId": "9485073c-ce73-4441-87c3-4687fe9ae188",
+              "nextWorkflowItemId": "c1586847-d944-4330-800e-0c02f0eee36d"
             },
             {
               "workflowItemDesc": "",
@@ -2550,7 +2550,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2571,13 +2571,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "VS2",
                 "activityDesc": "Weight",
-                "previousActivityId": "672a4f1e-a9e5-4783-bd74-ca443c7ecccc",
-                "nextActivityId": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c",
+                "previousActivityId": "47ca0a71-8302-41a4-9908-b70d66aada1a",
+                "nextActivityId": "92d14dd1-5d65-4488-aaa7-0447c1d28f77",
                 "definedProcedures": [
                   {
                     "procedureType": "Weight measurement",
@@ -2596,11 +2596,11 @@
                     "crfLink": "https://www.dropbox.com/s/b2mfhiri5a5z34t/weight.yaml?dl=1"
                   }
                 ],
-                "uuid": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa"
+                "uuid": "b089ba78-3916-4133-997f-0d94a74a45ec"
               },
-              "uuid": "cc22e89f-be81-4141-aade-60216c11a592",
-              "previousWorkflowItemId": "55a4e7d2-71c2-408e-a768-6058551d77cd",
-              "nextWorkflowItemId": "32fb1cd8-cfae-4143-b030-ec157a712a86"
+              "uuid": "c1586847-d944-4330-800e-0c02f0eee36d",
+              "previousWorkflowItemId": "8838dec8-349a-49fe-a8a3-326553f4188b",
+              "nextWorkflowItemId": "357d09be-a863-444b-a178-12a3bd61c7e1"
             },
             {
               "workflowItemDesc": "",
@@ -2608,7 +2608,7 @@
                 "encounterName": "SCREENING VISIT",
                 "encounterDesc": "",
                 "previousEncounterId": null,
-                "nextEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
+                "nextEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2629,12 +2629,12 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe"
+                "uuid": "72f5d702-6edf-40f4-9a52-21deb4dc95fe"
               },
               "workflowItemActivity": {
                 "activityName": "VS3",
                 "activityDesc": "Vital signs",
-                "previousActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -2649,19 +2649,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c"
+                "uuid": "92d14dd1-5d65-4488-aaa7-0447c1d28f77"
               },
-              "uuid": "32fb1cd8-cfae-4143-b030-ec157a712a86",
-              "previousWorkflowItemId": "cc22e89f-be81-4141-aade-60216c11a592",
-              "nextWorkflowItemId": "4f1d5470-c57c-49c8-9c63-9fe007b07e21"
+              "uuid": "357d09be-a863-444b-a178-12a3bd61c7e1",
+              "previousWorkflowItemId": "c1586847-d944-4330-800e-0c02f0eee36d",
+              "nextWorkflowItemId": "9e93d93d-63ae-46ad-a440-047439e33938"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 1",
                 "encounterDesc": "",
-                "previousEncounterId": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe",
-                "nextEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
+                "previousEncounterId": "72f5d702-6edf-40f4-9a52-21deb4dc95fe",
+                "nextEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2686,13 +2686,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D5"
                 },
-                "uuid": "205b2547-bfd9-43df-95f1-baf9230cc89d"
+                "uuid": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53"
               },
               "workflowItemActivity": {
                 "activityName": "ECG",
                 "activityDesc": "12-lead ECG",
-                "previousActivityId": "3f246406-e736-496d-9fe8-6f75688a8242",
-                "nextActivityId": "c0c43f98-7389-46ea-8160-2c564a3b8f8e",
+                "previousActivityId": "6b4400e7-ce5f-4fdc-8680-ae2d293ed066",
+                "nextActivityId": "d7fa17d1-80d0-4d0b-8538-1d2846e4e415",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2706,19 +2706,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "465edda9-4627-4a19-b7f8-b6c7b1a180ff"
+                "uuid": "0a70d1e3-b609-4879-95da-c53c6f1db78b"
               },
-              "uuid": "4f1d5470-c57c-49c8-9c63-9fe007b07e21",
-              "previousWorkflowItemId": "32fb1cd8-cfae-4143-b030-ec157a712a86",
-              "nextWorkflowItemId": "0dd789f5-8b9f-4e07-a92e-235d8c9fab46"
+              "uuid": "9e93d93d-63ae-46ad-a440-047439e33938",
+              "previousWorkflowItemId": "357d09be-a863-444b-a178-12a3bd61c7e1",
+              "nextWorkflowItemId": "c60a633f-3629-42de-9c76-4fdb7bbed65a"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 1",
                 "encounterDesc": "",
-                "previousEncounterId": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe",
-                "nextEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
+                "previousEncounterId": "72f5d702-6edf-40f4-9a52-21deb4dc95fe",
+                "nextEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2743,28 +2743,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D5"
                 },
-                "uuid": "205b2547-bfd9-43df-95f1-baf9230cc89d"
+                "uuid": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53"
               },
               "workflowItemActivity": {
                 "activityName": "LB3",
                 "activityDesc": "Serology",
-                "previousActivityId": "c699c18d-51af-447c-82af-4ec82fe2d375",
-                "nextActivityId": "6ebaf96e-e4c9-4f78-8a71-d6c8352a9d61",
+                "previousActivityId": "fe7b180a-722d-4939-95e0-79934db68974",
+                "nextActivityId": "2e5537e1-afb2-4f08-b32a-4aa502247e40",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c"
+                "uuid": "b294a891-5a15-4733-9562-632a5c8dd590"
               },
-              "uuid": "0dd789f5-8b9f-4e07-a92e-235d8c9fab46",
-              "previousWorkflowItemId": "4f1d5470-c57c-49c8-9c63-9fe007b07e21",
-              "nextWorkflowItemId": "fe6360a2-9c69-463e-ace5-5789a5807bf9"
+              "uuid": "c60a633f-3629-42de-9c76-4fdb7bbed65a",
+              "previousWorkflowItemId": "9e93d93d-63ae-46ad-a440-047439e33938",
+              "nextWorkflowItemId": "51594ca2-0ad9-4e5c-9c4e-e22d05aefb94"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 1",
                 "encounterDesc": "",
-                "previousEncounterId": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe",
-                "nextEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
+                "previousEncounterId": "72f5d702-6edf-40f4-9a52-21deb4dc95fe",
+                "nextEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2789,13 +2789,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D5"
                 },
-                "uuid": "205b2547-bfd9-43df-95f1-baf9230cc89d"
+                "uuid": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53"
               },
               "workflowItemActivity": {
                 "activityName": "HO",
                 "activityDesc": "Hospitalization",
-                "previousActivityId": "116fc952-fe0f-468e-aaf2-2b1e796d47f2",
-                "nextActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "752b2fb4-188a-4b2b-899e-03a51de5d208",
+                "nextActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "definedProcedures": [
                   {
                     "procedureType": "Hospitalisation",
@@ -2808,19 +2808,19 @@
                   }
                 ],
                 "studyDataCollection": [],
-                "uuid": "672a4f1e-a9e5-4783-bd74-ca443c7ecccc"
+                "uuid": "47ca0a71-8302-41a4-9908-b70d66aada1a"
               },
-              "uuid": "fe6360a2-9c69-463e-ace5-5789a5807bf9",
-              "previousWorkflowItemId": "0dd789f5-8b9f-4e07-a92e-235d8c9fab46",
-              "nextWorkflowItemId": "9760da4c-4a3d-4d74-b33d-f5aaa900e2a4"
+              "uuid": "51594ca2-0ad9-4e5c-9c4e-e22d05aefb94",
+              "previousWorkflowItemId": "c60a633f-3629-42de-9c76-4fdb7bbed65a",
+              "nextWorkflowItemId": "7c90666a-1f75-4d77-88c1-e6f0cc1cc6c8"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 1",
                 "encounterDesc": "",
-                "previousEncounterId": "fa3e1fe9-368b-4739-b8e8-222ad8d631fe",
-                "nextEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
+                "previousEncounterId": "72f5d702-6edf-40f4-9a52-21deb4dc95fe",
+                "nextEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2845,12 +2845,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D5"
                 },
-                "uuid": "205b2547-bfd9-43df-95f1-baf9230cc89d"
+                "uuid": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53"
               },
               "workflowItemActivity": {
                 "activityName": "VS3",
                 "activityDesc": "Vital signs",
-                "previousActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -2865,19 +2865,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c"
+                "uuid": "92d14dd1-5d65-4488-aaa7-0447c1d28f77"
               },
-              "uuid": "9760da4c-4a3d-4d74-b33d-f5aaa900e2a4",
-              "previousWorkflowItemId": "fe6360a2-9c69-463e-ace5-5789a5807bf9",
-              "nextWorkflowItemId": "19fb0cbe-4048-45db-a3e9-fe0ffd4cffc6"
+              "uuid": "7c90666a-1f75-4d77-88c1-e6f0cc1cc6c8",
+              "previousWorkflowItemId": "51594ca2-0ad9-4e5c-9c4e-e22d05aefb94",
+              "nextWorkflowItemId": "3c616950-ef09-4b29-9b89-55d3b1e5fc91"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 2",
                 "encounterDesc": "",
-                "previousEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
-                "nextEncounterId": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc",
+                "previousEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
+                "nextEncounterId": "355d2930-8a76-40b6-87dd-7336d97af74e",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2902,28 +2902,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D3"
                 },
-                "uuid": "44a71b04-dc4b-4528-9958-82252fed5e58"
+                "uuid": "ad2aaa2b-5948-4f39-994b-d175db78a59b"
               },
               "workflowItemActivity": {
                 "activityName": "PE",
                 "activityDesc": "Physical exam",
-                "previousActivityId": "a822a5a0-f8b0-4a34-aa35-403031fa113b",
-                "nextActivityId": "3f246406-e736-496d-9fe8-6f75688a8242",
+                "previousActivityId": "7d8f8f61-d8a6-49ce-b946-2a1636dac956",
+                "nextActivityId": "6b4400e7-ce5f-4fdc-8680-ae2d293ed066",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "b6b5060e-2fc6-4c0c-8c98-bae0961aaefe"
+                "uuid": "d2c2be7c-cfdd-46eb-8a6b-07cb37f7f045"
               },
-              "uuid": "19fb0cbe-4048-45db-a3e9-fe0ffd4cffc6",
-              "previousWorkflowItemId": "9760da4c-4a3d-4d74-b33d-f5aaa900e2a4",
-              "nextWorkflowItemId": "bf841d01-43fa-4e13-8365-8a871ee4c5c0"
+              "uuid": "3c616950-ef09-4b29-9b89-55d3b1e5fc91",
+              "previousWorkflowItemId": "7c90666a-1f75-4d77-88c1-e6f0cc1cc6c8",
+              "nextWorkflowItemId": "ff156754-27e1-48d0-a250-8234b5c3da29"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 2",
                 "encounterDesc": "",
-                "previousEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
-                "nextEncounterId": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc",
+                "previousEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
+                "nextEncounterId": "355d2930-8a76-40b6-87dd-7336d97af74e",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -2948,13 +2948,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D3"
                 },
-                "uuid": "44a71b04-dc4b-4528-9958-82252fed5e58"
+                "uuid": "ad2aaa2b-5948-4f39-994b-d175db78a59b"
               },
               "workflowItemActivity": {
                 "activityName": "ECG",
                 "activityDesc": "12-lead ECG",
-                "previousActivityId": "3f246406-e736-496d-9fe8-6f75688a8242",
-                "nextActivityId": "c0c43f98-7389-46ea-8160-2c564a3b8f8e",
+                "previousActivityId": "6b4400e7-ce5f-4fdc-8680-ae2d293ed066",
+                "nextActivityId": "d7fa17d1-80d0-4d0b-8538-1d2846e4e415",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -2968,19 +2968,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "465edda9-4627-4a19-b7f8-b6c7b1a180ff"
+                "uuid": "0a70d1e3-b609-4879-95da-c53c6f1db78b"
               },
-              "uuid": "bf841d01-43fa-4e13-8365-8a871ee4c5c0",
-              "previousWorkflowItemId": "19fb0cbe-4048-45db-a3e9-fe0ffd4cffc6",
-              "nextWorkflowItemId": "dc77443c-b703-4a3a-bf1e-0c6d1b785e26"
+              "uuid": "ff156754-27e1-48d0-a250-8234b5c3da29",
+              "previousWorkflowItemId": "3c616950-ef09-4b29-9b89-55d3b1e5fc91",
+              "nextWorkflowItemId": "77abc817-7824-4bfd-8afc-d8947ec6bd59"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 2",
                 "encounterDesc": "",
-                "previousEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
-                "nextEncounterId": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc",
+                "previousEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
+                "nextEncounterId": "355d2930-8a76-40b6-87dd-7336d97af74e",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3005,28 +3005,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D3"
                 },
-                "uuid": "44a71b04-dc4b-4528-9958-82252fed5e58"
+                "uuid": "ad2aaa2b-5948-4f39-994b-d175db78a59b"
               },
               "workflowItemActivity": {
                 "activityName": "LB3",
                 "activityDesc": "Serology",
-                "previousActivityId": "c699c18d-51af-447c-82af-4ec82fe2d375",
-                "nextActivityId": "6ebaf96e-e4c9-4f78-8a71-d6c8352a9d61",
+                "previousActivityId": "fe7b180a-722d-4939-95e0-79934db68974",
+                "nextActivityId": "2e5537e1-afb2-4f08-b32a-4aa502247e40",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c"
+                "uuid": "b294a891-5a15-4733-9562-632a5c8dd590"
               },
-              "uuid": "dc77443c-b703-4a3a-bf1e-0c6d1b785e26",
-              "previousWorkflowItemId": "bf841d01-43fa-4e13-8365-8a871ee4c5c0",
-              "nextWorkflowItemId": "aeb9facd-0ca6-4c9d-a0a2-2eb3df42d278"
+              "uuid": "77abc817-7824-4bfd-8afc-d8947ec6bd59",
+              "previousWorkflowItemId": "ff156754-27e1-48d0-a250-8234b5c3da29",
+              "nextWorkflowItemId": "19e8feef-8204-45c7-9bb6-864992dcea91"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 2",
                 "encounterDesc": "",
-                "previousEncounterId": "205b2547-bfd9-43df-95f1-baf9230cc89d",
-                "nextEncounterId": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc",
+                "previousEncounterId": "4c521c14-002b-427f-a4b3-a4c1bf9c9b53",
+                "nextEncounterId": "355d2930-8a76-40b6-87dd-7336d97af74e",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3051,12 +3051,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D3"
                 },
-                "uuid": "44a71b04-dc4b-4528-9958-82252fed5e58"
+                "uuid": "ad2aaa2b-5948-4f39-994b-d175db78a59b"
               },
               "workflowItemActivity": {
                 "activityName": "VS3",
                 "activityDesc": "Vital signs",
-                "previousActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -3071,19 +3071,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c"
+                "uuid": "92d14dd1-5d65-4488-aaa7-0447c1d28f77"
               },
-              "uuid": "aeb9facd-0ca6-4c9d-a0a2-2eb3df42d278",
-              "previousWorkflowItemId": "dc77443c-b703-4a3a-bf1e-0c6d1b785e26",
-              "nextWorkflowItemId": "3dc33d71-f8df-4cfc-b12f-ef2e180018c5"
+              "uuid": "19e8feef-8204-45c7-9bb6-864992dcea91",
+              "previousWorkflowItemId": "77abc817-7824-4bfd-8afc-d8947ec6bd59",
+              "nextWorkflowItemId": "9c6ab605-0f6e-4a5a-babc-b413f5954ae6"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 3",
                 "encounterDesc": "",
-                "previousEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
-                "nextEncounterId": "2f1a6ced-0477-4729-b54f-9335709be34a",
+                "previousEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
+                "nextEncounterId": "187e632d-3a2d-4710-a8fc-2048c8fad4bf",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3108,13 +3108,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D1"
                 },
-                "uuid": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc"
+                "uuid": "355d2930-8a76-40b6-87dd-7336d97af74e"
               },
               "workflowItemActivity": {
                 "activityName": "ECG",
                 "activityDesc": "12-lead ECG",
-                "previousActivityId": "3f246406-e736-496d-9fe8-6f75688a8242",
-                "nextActivityId": "c0c43f98-7389-46ea-8160-2c564a3b8f8e",
+                "previousActivityId": "6b4400e7-ce5f-4fdc-8680-ae2d293ed066",
+                "nextActivityId": "d7fa17d1-80d0-4d0b-8538-1d2846e4e415",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -3128,19 +3128,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "465edda9-4627-4a19-b7f8-b6c7b1a180ff"
+                "uuid": "0a70d1e3-b609-4879-95da-c53c6f1db78b"
               },
-              "uuid": "3dc33d71-f8df-4cfc-b12f-ef2e180018c5",
-              "previousWorkflowItemId": "aeb9facd-0ca6-4c9d-a0a2-2eb3df42d278",
-              "nextWorkflowItemId": "f6027072-371c-4e0d-8f60-18394faa5172"
+              "uuid": "9c6ab605-0f6e-4a5a-babc-b413f5954ae6",
+              "previousWorkflowItemId": "19e8feef-8204-45c7-9bb6-864992dcea91",
+              "nextWorkflowItemId": "3c34e879-3d26-4528-9624-d60ec7f85460"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 3",
                 "encounterDesc": "",
-                "previousEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
-                "nextEncounterId": "2f1a6ced-0477-4729-b54f-9335709be34a",
+                "previousEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
+                "nextEncounterId": "187e632d-3a2d-4710-a8fc-2048c8fad4bf",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3165,13 +3165,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D1"
                 },
-                "uuid": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc"
+                "uuid": "355d2930-8a76-40b6-87dd-7336d97af74e"
               },
               "workflowItemActivity": {
                 "activityName": "LB1",
                 "activityDesc": "Hematology (predose)",
-                "previousActivityId": "465edda9-4627-4a19-b7f8-b6c7b1a180ff",
-                "nextActivityId": "c699c18d-51af-447c-82af-4ec82fe2d375",
+                "previousActivityId": "0a70d1e3-b609-4879-95da-c53c6f1db78b",
+                "nextActivityId": "fe7b180a-722d-4939-95e0-79934db68974",
                 "definedProcedures": [
                   {
                     "procedureType": "Blood sample collection",
@@ -3204,19 +3204,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c0c43f98-7389-46ea-8160-2c564a3b8f8e"
+                "uuid": "d7fa17d1-80d0-4d0b-8538-1d2846e4e415"
               },
-              "uuid": "f6027072-371c-4e0d-8f60-18394faa5172",
-              "previousWorkflowItemId": "3dc33d71-f8df-4cfc-b12f-ef2e180018c5",
-              "nextWorkflowItemId": "ab58e4f6-e32f-470b-9366-46b3a69dc7c3"
+              "uuid": "3c34e879-3d26-4528-9624-d60ec7f85460",
+              "previousWorkflowItemId": "9c6ab605-0f6e-4a5a-babc-b413f5954ae6",
+              "nextWorkflowItemId": "22c9cb71-7ef0-4bbc-98e1-d43b3026d331"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 3",
                 "encounterDesc": "",
-                "previousEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
-                "nextEncounterId": "2f1a6ced-0477-4729-b54f-9335709be34a",
+                "previousEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
+                "nextEncounterId": "187e632d-3a2d-4710-a8fc-2048c8fad4bf",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3241,13 +3241,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D1"
                 },
-                "uuid": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc"
+                "uuid": "355d2930-8a76-40b6-87dd-7336d97af74e"
               },
               "workflowItemActivity": {
                 "activityName": "LB2",
                 "activityDesc": "Chemistry (predose)",
-                "previousActivityId": "c0c43f98-7389-46ea-8160-2c564a3b8f8e",
-                "nextActivityId": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c",
+                "previousActivityId": "d7fa17d1-80d0-4d0b-8538-1d2846e4e415",
+                "nextActivityId": "b294a891-5a15-4733-9562-632a5c8dd590",
                 "definedProcedures": [
                   {
                     "procedureType": "Blood sample collection",
@@ -3280,19 +3280,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c699c18d-51af-447c-82af-4ec82fe2d375"
+                "uuid": "fe7b180a-722d-4939-95e0-79934db68974"
               },
-              "uuid": "ab58e4f6-e32f-470b-9366-46b3a69dc7c3",
-              "previousWorkflowItemId": "f6027072-371c-4e0d-8f60-18394faa5172",
-              "nextWorkflowItemId": "686a6709-5bbf-4a74-8b0d-0c20b5d2b4dd"
+              "uuid": "22c9cb71-7ef0-4bbc-98e1-d43b3026d331",
+              "previousWorkflowItemId": "3c34e879-3d26-4528-9624-d60ec7f85460",
+              "nextWorkflowItemId": "38fd20a0-89f3-4879-9711-6559dfdfe134"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 3",
                 "encounterDesc": "",
-                "previousEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
-                "nextEncounterId": "2f1a6ced-0477-4729-b54f-9335709be34a",
+                "previousEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
+                "nextEncounterId": "187e632d-3a2d-4710-a8fc-2048c8fad4bf",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3317,28 +3317,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D1"
                 },
-                "uuid": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc"
+                "uuid": "355d2930-8a76-40b6-87dd-7336d97af74e"
               },
               "workflowItemActivity": {
                 "activityName": "LB3",
                 "activityDesc": "Serology",
-                "previousActivityId": "c699c18d-51af-447c-82af-4ec82fe2d375",
-                "nextActivityId": "6ebaf96e-e4c9-4f78-8a71-d6c8352a9d61",
+                "previousActivityId": "fe7b180a-722d-4939-95e0-79934db68974",
+                "nextActivityId": "2e5537e1-afb2-4f08-b32a-4aa502247e40",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c"
+                "uuid": "b294a891-5a15-4733-9562-632a5c8dd590"
               },
-              "uuid": "686a6709-5bbf-4a74-8b0d-0c20b5d2b4dd",
-              "previousWorkflowItemId": "ab58e4f6-e32f-470b-9366-46b3a69dc7c3",
-              "nextWorkflowItemId": "8122cb7a-bea3-4761-958b-dc1ba9108d7e"
+              "uuid": "38fd20a0-89f3-4879-9711-6559dfdfe134",
+              "previousWorkflowItemId": "22c9cb71-7ef0-4bbc-98e1-d43b3026d331",
+              "nextWorkflowItemId": "860c1d9e-abb2-46e7-ad41-6d1ad26323e2"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 3",
                 "encounterDesc": "",
-                "previousEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
-                "nextEncounterId": "2f1a6ced-0477-4729-b54f-9335709be34a",
+                "previousEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
+                "nextEncounterId": "187e632d-3a2d-4710-a8fc-2048c8fad4bf",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3363,13 +3363,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D1"
                 },
-                "uuid": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc"
+                "uuid": "355d2930-8a76-40b6-87dd-7336d97af74e"
               },
               "workflowItemActivity": {
                 "activityName": "LB4",
                 "activityDesc": "Urinalysis",
-                "previousActivityId": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c",
-                "nextActivityId": "a6a3d774-8b98-437a-941b-ece7b32a3689",
+                "previousActivityId": "b294a891-5a15-4733-9562-632a5c8dd590",
+                "nextActivityId": "39c82177-4479-4459-9b79-9ac0852375e2",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -3378,19 +3378,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "6ebaf96e-e4c9-4f78-8a71-d6c8352a9d61"
+                "uuid": "2e5537e1-afb2-4f08-b32a-4aa502247e40"
               },
-              "uuid": "8122cb7a-bea3-4761-958b-dc1ba9108d7e",
-              "previousWorkflowItemId": "686a6709-5bbf-4a74-8b0d-0c20b5d2b4dd",
-              "nextWorkflowItemId": "7189026d-a3c5-41d7-85d7-ebd24c78fa4c"
+              "uuid": "860c1d9e-abb2-46e7-ad41-6d1ad26323e2",
+              "previousWorkflowItemId": "38fd20a0-89f3-4879-9711-6559dfdfe134",
+              "nextWorkflowItemId": "7e3a4180-1948-4e32-91ab-b28fa42aed03"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 3",
                 "encounterDesc": "",
-                "previousEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
-                "nextEncounterId": "2f1a6ced-0477-4729-b54f-9335709be34a",
+                "previousEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
+                "nextEncounterId": "187e632d-3a2d-4710-a8fc-2048c8fad4bf",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3415,13 +3415,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D1"
                 },
-                "uuid": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc"
+                "uuid": "355d2930-8a76-40b6-87dd-7336d97af74e"
               },
               "workflowItemActivity": {
                 "activityName": "PREG",
                 "activityDesc": "Pregnancy test",
-                "previousActivityId": "6ebaf96e-e4c9-4f78-8a71-d6c8352a9d61",
-                "nextActivityId": "116fc952-fe0f-468e-aaf2-2b1e796d47f2",
+                "previousActivityId": "2e5537e1-afb2-4f08-b32a-4aa502247e40",
+                "nextActivityId": "752b2fb4-188a-4b2b-899e-03a51de5d208",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -3430,19 +3430,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "a6a3d774-8b98-437a-941b-ece7b32a3689"
+                "uuid": "39c82177-4479-4459-9b79-9ac0852375e2"
               },
-              "uuid": "7189026d-a3c5-41d7-85d7-ebd24c78fa4c",
-              "previousWorkflowItemId": "8122cb7a-bea3-4761-958b-dc1ba9108d7e",
-              "nextWorkflowItemId": "7a912133-d746-454a-94dc-83cd3e1e2142"
+              "uuid": "7e3a4180-1948-4e32-91ab-b28fa42aed03",
+              "previousWorkflowItemId": "860c1d9e-abb2-46e7-ad41-6d1ad26323e2",
+              "nextWorkflowItemId": "f8af1a7a-eb90-4373-87d8-7c454875deed"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "RUN-IN VISIT 3",
                 "encounterDesc": "",
-                "previousEncounterId": "44a71b04-dc4b-4528-9958-82252fed5e58",
-                "nextEncounterId": "2f1a6ced-0477-4729-b54f-9335709be34a",
+                "previousEncounterId": "ad2aaa2b-5948-4f39-994b-d175db78a59b",
+                "nextEncounterId": "187e632d-3a2d-4710-a8fc-2048c8fad4bf",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3467,12 +3467,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "-D1"
                 },
-                "uuid": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc"
+                "uuid": "355d2930-8a76-40b6-87dd-7336d97af74e"
               },
               "workflowItemActivity": {
                 "activityName": "VS3",
                 "activityDesc": "Vital signs",
-                "previousActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -3487,19 +3487,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c"
+                "uuid": "92d14dd1-5d65-4488-aaa7-0447c1d28f77"
               },
-              "uuid": "7a912133-d746-454a-94dc-83cd3e1e2142",
-              "previousWorkflowItemId": "7189026d-a3c5-41d7-85d7-ebd24c78fa4c",
-              "nextWorkflowItemId": "63f4ae0f-7a85-4dd6-aea7-002731866f93"
+              "uuid": "f8af1a7a-eb90-4373-87d8-7c454875deed",
+              "previousWorkflowItemId": "7e3a4180-1948-4e32-91ab-b28fa42aed03",
+              "nextWorkflowItemId": "c9d2cd2c-b165-460d-8ed2-7e09a4df8ef9"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE 1, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc",
-                "nextEncounterId": "d9513923-fa2b-4c55-986e-1e6c8a240f76",
+                "previousEncounterId": "355d2930-8a76-40b6-87dd-7336d97af74e",
+                "nextEncounterId": "a511b79e-49e5-4001-9fcb-7ffd098cbb62",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3524,28 +3524,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "2f1a6ced-0477-4729-b54f-9335709be34a"
+                "uuid": "187e632d-3a2d-4710-a8fc-2048c8fad4bf"
               },
               "workflowItemActivity": {
                 "activityName": "LB3",
                 "activityDesc": "Serology",
-                "previousActivityId": "c699c18d-51af-447c-82af-4ec82fe2d375",
-                "nextActivityId": "6ebaf96e-e4c9-4f78-8a71-d6c8352a9d61",
+                "previousActivityId": "fe7b180a-722d-4939-95e0-79934db68974",
+                "nextActivityId": "2e5537e1-afb2-4f08-b32a-4aa502247e40",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c"
+                "uuid": "b294a891-5a15-4733-9562-632a5c8dd590"
               },
-              "uuid": "63f4ae0f-7a85-4dd6-aea7-002731866f93",
-              "previousWorkflowItemId": "7a912133-d746-454a-94dc-83cd3e1e2142",
-              "nextWorkflowItemId": "e34d7748-2ca3-440d-97d2-f449dcbc1966"
+              "uuid": "c9d2cd2c-b165-460d-8ed2-7e09a4df8ef9",
+              "previousWorkflowItemId": "f8af1a7a-eb90-4373-87d8-7c454875deed",
+              "nextWorkflowItemId": "e6da2d40-2503-4e1b-851e-cba81e1622fd"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE 1, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc",
-                "nextEncounterId": "d9513923-fa2b-4c55-986e-1e6c8a240f76",
+                "previousEncounterId": "355d2930-8a76-40b6-87dd-7336d97af74e",
+                "nextEncounterId": "a511b79e-49e5-4001-9fcb-7ffd098cbb62",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3570,13 +3570,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "2f1a6ced-0477-4729-b54f-9335709be34a"
+                "uuid": "187e632d-3a2d-4710-a8fc-2048c8fad4bf"
               },
               "workflowItemActivity": {
                 "activityName": "EX",
                 "activityDesc": "Ensure availability of medication X",
-                "previousActivityId": "a6a3d774-8b98-437a-941b-ece7b32a3689",
-                "nextActivityId": "672a4f1e-a9e5-4783-bd74-ca443c7ecccc",
+                "previousActivityId": "39c82177-4479-4459-9b79-9ac0852375e2",
+                "nextActivityId": "47ca0a71-8302-41a4-9908-b70d66aada1a",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -3585,19 +3585,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "116fc952-fe0f-468e-aaf2-2b1e796d47f2"
+                "uuid": "752b2fb4-188a-4b2b-899e-03a51de5d208"
               },
-              "uuid": "e34d7748-2ca3-440d-97d2-f449dcbc1966",
-              "previousWorkflowItemId": "63f4ae0f-7a85-4dd6-aea7-002731866f93",
-              "nextWorkflowItemId": "2ab57ad0-d6e6-4e35-9e8c-bb6b01d4bb97"
+              "uuid": "e6da2d40-2503-4e1b-851e-cba81e1622fd",
+              "previousWorkflowItemId": "c9d2cd2c-b165-460d-8ed2-7e09a4df8ef9",
+              "nextWorkflowItemId": "3e21fc77-f7df-4ecd-8bf7-bf1cc13735d2"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE 1, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc",
-                "nextEncounterId": "d9513923-fa2b-4c55-986e-1e6c8a240f76",
+                "previousEncounterId": "355d2930-8a76-40b6-87dd-7336d97af74e",
+                "nextEncounterId": "a511b79e-49e5-4001-9fcb-7ffd098cbb62",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3622,13 +3622,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "2f1a6ced-0477-4729-b54f-9335709be34a"
+                "uuid": "187e632d-3a2d-4710-a8fc-2048c8fad4bf"
               },
               "workflowItemActivity": {
                 "activityName": "HO",
                 "activityDesc": "Hospitalization",
-                "previousActivityId": "116fc952-fe0f-468e-aaf2-2b1e796d47f2",
-                "nextActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "752b2fb4-188a-4b2b-899e-03a51de5d208",
+                "nextActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "definedProcedures": [
                   {
                     "procedureType": "Hospitalisation",
@@ -3641,19 +3641,19 @@
                   }
                 ],
                 "studyDataCollection": [],
-                "uuid": "672a4f1e-a9e5-4783-bd74-ca443c7ecccc"
+                "uuid": "47ca0a71-8302-41a4-9908-b70d66aada1a"
               },
-              "uuid": "2ab57ad0-d6e6-4e35-9e8c-bb6b01d4bb97",
-              "previousWorkflowItemId": "e34d7748-2ca3-440d-97d2-f449dcbc1966",
-              "nextWorkflowItemId": "627bed38-9cbf-4c2b-af35-b0a8476b2323"
+              "uuid": "3e21fc77-f7df-4ecd-8bf7-bf1cc13735d2",
+              "previousWorkflowItemId": "e6da2d40-2503-4e1b-851e-cba81e1622fd",
+              "nextWorkflowItemId": "3a9ea7a5-b7a2-4ef1-960a-39d71d40eaac"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE 1, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc",
-                "nextEncounterId": "d9513923-fa2b-4c55-986e-1e6c8a240f76",
+                "previousEncounterId": "355d2930-8a76-40b6-87dd-7336d97af74e",
+                "nextEncounterId": "a511b79e-49e5-4001-9fcb-7ffd098cbb62",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3678,13 +3678,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "2f1a6ced-0477-4729-b54f-9335709be34a"
+                "uuid": "187e632d-3a2d-4710-a8fc-2048c8fad4bf"
               },
               "workflowItemActivity": {
                 "activityName": "VS2",
                 "activityDesc": "Weight",
-                "previousActivityId": "672a4f1e-a9e5-4783-bd74-ca443c7ecccc",
-                "nextActivityId": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c",
+                "previousActivityId": "47ca0a71-8302-41a4-9908-b70d66aada1a",
+                "nextActivityId": "92d14dd1-5d65-4488-aaa7-0447c1d28f77",
                 "definedProcedures": [
                   {
                     "procedureType": "Weight measurement",
@@ -3703,19 +3703,19 @@
                     "crfLink": "https://www.dropbox.com/s/b2mfhiri5a5z34t/weight.yaml?dl=1"
                   }
                 ],
-                "uuid": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa"
+                "uuid": "b089ba78-3916-4133-997f-0d94a74a45ec"
               },
-              "uuid": "627bed38-9cbf-4c2b-af35-b0a8476b2323",
-              "previousWorkflowItemId": "2ab57ad0-d6e6-4e35-9e8c-bb6b01d4bb97",
-              "nextWorkflowItemId": "330720d4-2bd4-45cb-bf58-b9bf0cfefbbd"
+              "uuid": "3a9ea7a5-b7a2-4ef1-960a-39d71d40eaac",
+              "previousWorkflowItemId": "3e21fc77-f7df-4ecd-8bf7-bf1cc13735d2",
+              "nextWorkflowItemId": "529c3d44-ed8b-4294-83db-951dc0bbb21a"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE 1, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "80b1b61b-56af-4431-b1f1-1e46f60fa9fc",
-                "nextEncounterId": "d9513923-fa2b-4c55-986e-1e6c8a240f76",
+                "previousEncounterId": "355d2930-8a76-40b6-87dd-7336d97af74e",
+                "nextEncounterId": "a511b79e-49e5-4001-9fcb-7ffd098cbb62",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3740,12 +3740,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "2f1a6ced-0477-4729-b54f-9335709be34a"
+                "uuid": "187e632d-3a2d-4710-a8fc-2048c8fad4bf"
               },
               "workflowItemActivity": {
                 "activityName": "VS3",
                 "activityDesc": "Vital signs",
-                "previousActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -3760,19 +3760,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c"
+                "uuid": "92d14dd1-5d65-4488-aaa7-0447c1d28f77"
               },
-              "uuid": "330720d4-2bd4-45cb-bf58-b9bf0cfefbbd",
-              "previousWorkflowItemId": "627bed38-9cbf-4c2b-af35-b0a8476b2323",
-              "nextWorkflowItemId": "1630a4ce-cdef-4762-9374-d2b8a227f9cc"
+              "uuid": "529c3d44-ed8b-4294-83db-951dc0bbb21a",
+              "previousWorkflowItemId": "3a9ea7a5-b7a2-4ef1-960a-39d71d40eaac",
+              "nextWorkflowItemId": "47948fc4-53ba-4300-9551-d3b40d7501bc"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE 1, TREATMENT DAY 3",
                 "encounterDesc": "",
-                "previousEncounterId": "2f1a6ced-0477-4729-b54f-9335709be34a",
-                "nextEncounterId": "d71cfbc7-7911-4878-8a90-ac19ae4cbf62",
+                "previousEncounterId": "187e632d-3a2d-4710-a8fc-2048c8fad4bf",
+                "nextEncounterId": "c8223d0c-9755-44fd-a962-1743e7148ad9",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3797,12 +3797,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D3"
                 },
-                "uuid": "d9513923-fa2b-4c55-986e-1e6c8a240f76"
+                "uuid": "a511b79e-49e5-4001-9fcb-7ffd098cbb62"
               },
               "workflowItemActivity": {
                 "activityName": "VS3",
                 "activityDesc": "Vital signs",
-                "previousActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -3817,19 +3817,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c"
+                "uuid": "92d14dd1-5d65-4488-aaa7-0447c1d28f77"
               },
-              "uuid": "1630a4ce-cdef-4762-9374-d2b8a227f9cc",
-              "previousWorkflowItemId": "330720d4-2bd4-45cb-bf58-b9bf0cfefbbd",
-              "nextWorkflowItemId": "58740888-5296-479b-9085-c5f3ba48c28f"
+              "uuid": "47948fc4-53ba-4300-9551-d3b40d7501bc",
+              "previousWorkflowItemId": "529c3d44-ed8b-4294-83db-951dc0bbb21a",
+              "nextWorkflowItemId": "77d80273-067c-4bba-8c4b-29fd218e5127"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE 1, TREATMENT DAY 5",
                 "encounterDesc": "",
-                "previousEncounterId": "d9513923-fa2b-4c55-986e-1e6c8a240f76",
-                "nextEncounterId": "feb8f619-cc69-4e3a-b6d8-8a7a7e626b29",
+                "previousEncounterId": "a511b79e-49e5-4001-9fcb-7ffd098cbb62",
+                "nextEncounterId": "4cf53429-0198-4c46-b31e-bf3fabfad865",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3854,12 +3854,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D5"
                 },
-                "uuid": "d71cfbc7-7911-4878-8a90-ac19ae4cbf62"
+                "uuid": "c8223d0c-9755-44fd-a962-1743e7148ad9"
               },
               "workflowItemActivity": {
                 "activityName": "VS3",
                 "activityDesc": "Vital signs",
-                "previousActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -3874,19 +3874,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c"
+                "uuid": "92d14dd1-5d65-4488-aaa7-0447c1d28f77"
               },
-              "uuid": "58740888-5296-479b-9085-c5f3ba48c28f",
-              "previousWorkflowItemId": "1630a4ce-cdef-4762-9374-d2b8a227f9cc",
-              "nextWorkflowItemId": "364ed39a-099b-4d06-935e-39cb73e7e992"
+              "uuid": "77d80273-067c-4bba-8c4b-29fd218e5127",
+              "previousWorkflowItemId": "47948fc4-53ba-4300-9551-d3b40d7501bc",
+              "nextWorkflowItemId": "fee1a0ee-8c2a-41c4-97a1-dc1851ab32e5"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE 2, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "d71cfbc7-7911-4878-8a90-ac19ae4cbf62",
-                "nextEncounterId": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b",
+                "previousEncounterId": "c8223d0c-9755-44fd-a962-1743e7148ad9",
+                "nextEncounterId": "0a995a77-0887-49fc-bcb8-148c690a5cac",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3911,28 +3911,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "feb8f619-cc69-4e3a-b6d8-8a7a7e626b29"
+                "uuid": "4cf53429-0198-4c46-b31e-bf3fabfad865"
               },
               "workflowItemActivity": {
                 "activityName": "LB3",
                 "activityDesc": "Serology",
-                "previousActivityId": "c699c18d-51af-447c-82af-4ec82fe2d375",
-                "nextActivityId": "6ebaf96e-e4c9-4f78-8a71-d6c8352a9d61",
+                "previousActivityId": "fe7b180a-722d-4939-95e0-79934db68974",
+                "nextActivityId": "2e5537e1-afb2-4f08-b32a-4aa502247e40",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c"
+                "uuid": "b294a891-5a15-4733-9562-632a5c8dd590"
               },
-              "uuid": "364ed39a-099b-4d06-935e-39cb73e7e992",
-              "previousWorkflowItemId": "58740888-5296-479b-9085-c5f3ba48c28f",
-              "nextWorkflowItemId": "651843c1-4160-458a-b69f-4bb6f7851857"
+              "uuid": "fee1a0ee-8c2a-41c4-97a1-dc1851ab32e5",
+              "previousWorkflowItemId": "77d80273-067c-4bba-8c4b-29fd218e5127",
+              "nextWorkflowItemId": "9832e641-179b-4fe3-bf57-f80487c52bbd"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE 2, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "d71cfbc7-7911-4878-8a90-ac19ae4cbf62",
-                "nextEncounterId": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b",
+                "previousEncounterId": "c8223d0c-9755-44fd-a962-1743e7148ad9",
+                "nextEncounterId": "0a995a77-0887-49fc-bcb8-148c690a5cac",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -3957,13 +3957,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "feb8f619-cc69-4e3a-b6d8-8a7a7e626b29"
+                "uuid": "4cf53429-0198-4c46-b31e-bf3fabfad865"
               },
               "workflowItemActivity": {
                 "activityName": "EX",
                 "activityDesc": "Ensure availability of medication X",
-                "previousActivityId": "a6a3d774-8b98-437a-941b-ece7b32a3689",
-                "nextActivityId": "672a4f1e-a9e5-4783-bd74-ca443c7ecccc",
+                "previousActivityId": "39c82177-4479-4459-9b79-9ac0852375e2",
+                "nextActivityId": "47ca0a71-8302-41a4-9908-b70d66aada1a",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -3972,19 +3972,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "116fc952-fe0f-468e-aaf2-2b1e796d47f2"
+                "uuid": "752b2fb4-188a-4b2b-899e-03a51de5d208"
               },
-              "uuid": "651843c1-4160-458a-b69f-4bb6f7851857",
-              "previousWorkflowItemId": "364ed39a-099b-4d06-935e-39cb73e7e992",
-              "nextWorkflowItemId": "f458a530-79bf-4ff8-8f10-514684c06c68"
+              "uuid": "9832e641-179b-4fe3-bf57-f80487c52bbd",
+              "previousWorkflowItemId": "fee1a0ee-8c2a-41c4-97a1-dc1851ab32e5",
+              "nextWorkflowItemId": "3f8259cd-9098-410b-aacb-924ddc143b19"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE 2, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "d71cfbc7-7911-4878-8a90-ac19ae4cbf62",
-                "nextEncounterId": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b",
+                "previousEncounterId": "c8223d0c-9755-44fd-a962-1743e7148ad9",
+                "nextEncounterId": "0a995a77-0887-49fc-bcb8-148c690a5cac",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4009,13 +4009,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "feb8f619-cc69-4e3a-b6d8-8a7a7e626b29"
+                "uuid": "4cf53429-0198-4c46-b31e-bf3fabfad865"
               },
               "workflowItemActivity": {
                 "activityName": "HO",
                 "activityDesc": "Hospitalization",
-                "previousActivityId": "116fc952-fe0f-468e-aaf2-2b1e796d47f2",
-                "nextActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "752b2fb4-188a-4b2b-899e-03a51de5d208",
+                "nextActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "definedProcedures": [
                   {
                     "procedureType": "Hospitalisation",
@@ -4028,19 +4028,19 @@
                   }
                 ],
                 "studyDataCollection": [],
-                "uuid": "672a4f1e-a9e5-4783-bd74-ca443c7ecccc"
+                "uuid": "47ca0a71-8302-41a4-9908-b70d66aada1a"
               },
-              "uuid": "f458a530-79bf-4ff8-8f10-514684c06c68",
-              "previousWorkflowItemId": "651843c1-4160-458a-b69f-4bb6f7851857",
-              "nextWorkflowItemId": "e546a85e-d5b4-4b35-ac12-d000f0f3182f"
+              "uuid": "3f8259cd-9098-410b-aacb-924ddc143b19",
+              "previousWorkflowItemId": "9832e641-179b-4fe3-bf57-f80487c52bbd",
+              "nextWorkflowItemId": "76e68a62-d723-4509-ad4e-92c517f0b306"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE 2, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "d71cfbc7-7911-4878-8a90-ac19ae4cbf62",
-                "nextEncounterId": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b",
+                "previousEncounterId": "c8223d0c-9755-44fd-a962-1743e7148ad9",
+                "nextEncounterId": "0a995a77-0887-49fc-bcb8-148c690a5cac",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4065,13 +4065,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "feb8f619-cc69-4e3a-b6d8-8a7a7e626b29"
+                "uuid": "4cf53429-0198-4c46-b31e-bf3fabfad865"
               },
               "workflowItemActivity": {
                 "activityName": "VS2",
                 "activityDesc": "Weight",
-                "previousActivityId": "672a4f1e-a9e5-4783-bd74-ca443c7ecccc",
-                "nextActivityId": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c",
+                "previousActivityId": "47ca0a71-8302-41a4-9908-b70d66aada1a",
+                "nextActivityId": "92d14dd1-5d65-4488-aaa7-0447c1d28f77",
                 "definedProcedures": [
                   {
                     "procedureType": "Weight measurement",
@@ -4090,19 +4090,19 @@
                     "crfLink": "https://www.dropbox.com/s/b2mfhiri5a5z34t/weight.yaml?dl=1"
                   }
                 ],
-                "uuid": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa"
+                "uuid": "b089ba78-3916-4133-997f-0d94a74a45ec"
               },
-              "uuid": "e546a85e-d5b4-4b35-ac12-d000f0f3182f",
-              "previousWorkflowItemId": "f458a530-79bf-4ff8-8f10-514684c06c68",
-              "nextWorkflowItemId": "1a17e688-0be6-4915-968d-502b7cb496d6"
+              "uuid": "76e68a62-d723-4509-ad4e-92c517f0b306",
+              "previousWorkflowItemId": "3f8259cd-9098-410b-aacb-924ddc143b19",
+              "nextWorkflowItemId": "26a25912-7dd6-4bf5-b440-4b99162b9fcb"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE 2, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "d71cfbc7-7911-4878-8a90-ac19ae4cbf62",
-                "nextEncounterId": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b",
+                "previousEncounterId": "c8223d0c-9755-44fd-a962-1743e7148ad9",
+                "nextEncounterId": "0a995a77-0887-49fc-bcb8-148c690a5cac",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4127,12 +4127,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "feb8f619-cc69-4e3a-b6d8-8a7a7e626b29"
+                "uuid": "4cf53429-0198-4c46-b31e-bf3fabfad865"
               },
               "workflowItemActivity": {
                 "activityName": "VS3",
                 "activityDesc": "Vital signs",
-                "previousActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -4147,19 +4147,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c"
+                "uuid": "92d14dd1-5d65-4488-aaa7-0447c1d28f77"
               },
-              "uuid": "1a17e688-0be6-4915-968d-502b7cb496d6",
-              "previousWorkflowItemId": "e546a85e-d5b4-4b35-ac12-d000f0f3182f",
-              "nextWorkflowItemId": "60759344-3b32-4c5f-9087-b772c2bd4516"
+              "uuid": "26a25912-7dd6-4bf5-b440-4b99162b9fcb",
+              "previousWorkflowItemId": "76e68a62-d723-4509-ad4e-92c517f0b306",
+              "nextWorkflowItemId": "b4a36f96-72ed-4e4a-8697-7d51435e0628"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE 2, TREATMENT DAY 3",
                 "encounterDesc": "",
-                "previousEncounterId": "feb8f619-cc69-4e3a-b6d8-8a7a7e626b29",
-                "nextEncounterId": "ed4779b8-2f37-44f3-99d1-a5ca463b6ae2",
+                "previousEncounterId": "4cf53429-0198-4c46-b31e-bf3fabfad865",
+                "nextEncounterId": "1a5dbc0c-80a5-47ae-9fd3-c6eb19adf2fb",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4184,12 +4184,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D3"
                 },
-                "uuid": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b"
+                "uuid": "0a995a77-0887-49fc-bcb8-148c690a5cac"
               },
               "workflowItemActivity": {
                 "activityName": "VS3",
                 "activityDesc": "Vital signs",
-                "previousActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -4204,19 +4204,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c"
+                "uuid": "92d14dd1-5d65-4488-aaa7-0447c1d28f77"
               },
-              "uuid": "60759344-3b32-4c5f-9087-b772c2bd4516",
-              "previousWorkflowItemId": "1a17e688-0be6-4915-968d-502b7cb496d6",
-              "nextWorkflowItemId": "0fe4afd5-a1a6-4e9d-be81-12dab1df7968"
+              "uuid": "b4a36f96-72ed-4e4a-8697-7d51435e0628",
+              "previousWorkflowItemId": "26a25912-7dd6-4bf5-b440-4b99162b9fcb",
+              "nextWorkflowItemId": "a0f99fc0-417b-4776-a779-8321dfe21b65"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE X, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b",
-                "nextEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
+                "previousEncounterId": "0a995a77-0887-49fc-bcb8-148c690a5cac",
+                "nextEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4241,28 +4241,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "ed4779b8-2f37-44f3-99d1-a5ca463b6ae2"
+                "uuid": "1a5dbc0c-80a5-47ae-9fd3-c6eb19adf2fb"
               },
               "workflowItemActivity": {
                 "activityName": "LB3",
                 "activityDesc": "Serology",
-                "previousActivityId": "c699c18d-51af-447c-82af-4ec82fe2d375",
-                "nextActivityId": "6ebaf96e-e4c9-4f78-8a71-d6c8352a9d61",
+                "previousActivityId": "fe7b180a-722d-4939-95e0-79934db68974",
+                "nextActivityId": "2e5537e1-afb2-4f08-b32a-4aa502247e40",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c"
+                "uuid": "b294a891-5a15-4733-9562-632a5c8dd590"
               },
-              "uuid": "0fe4afd5-a1a6-4e9d-be81-12dab1df7968",
-              "previousWorkflowItemId": "60759344-3b32-4c5f-9087-b772c2bd4516",
-              "nextWorkflowItemId": "1b57572b-578f-4a9e-a592-f8219c8518b4"
+              "uuid": "a0f99fc0-417b-4776-a779-8321dfe21b65",
+              "previousWorkflowItemId": "b4a36f96-72ed-4e4a-8697-7d51435e0628",
+              "nextWorkflowItemId": "5343130b-528b-4541-bf72-a19ff18245fa"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE X, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b",
-                "nextEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
+                "previousEncounterId": "0a995a77-0887-49fc-bcb8-148c690a5cac",
+                "nextEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4287,13 +4287,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "ed4779b8-2f37-44f3-99d1-a5ca463b6ae2"
+                "uuid": "1a5dbc0c-80a5-47ae-9fd3-c6eb19adf2fb"
               },
               "workflowItemActivity": {
                 "activityName": "EX",
                 "activityDesc": "Ensure availability of medication X",
-                "previousActivityId": "a6a3d774-8b98-437a-941b-ece7b32a3689",
-                "nextActivityId": "672a4f1e-a9e5-4783-bd74-ca443c7ecccc",
+                "previousActivityId": "39c82177-4479-4459-9b79-9ac0852375e2",
+                "nextActivityId": "47ca0a71-8302-41a4-9908-b70d66aada1a",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -4302,19 +4302,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "116fc952-fe0f-468e-aaf2-2b1e796d47f2"
+                "uuid": "752b2fb4-188a-4b2b-899e-03a51de5d208"
               },
-              "uuid": "1b57572b-578f-4a9e-a592-f8219c8518b4",
-              "previousWorkflowItemId": "0fe4afd5-a1a6-4e9d-be81-12dab1df7968",
-              "nextWorkflowItemId": "a5153be6-bb25-47e7-bf6f-eda4fc049e12"
+              "uuid": "5343130b-528b-4541-bf72-a19ff18245fa",
+              "previousWorkflowItemId": "a0f99fc0-417b-4776-a779-8321dfe21b65",
+              "nextWorkflowItemId": "c45bbc1c-0679-4b86-b921-606882693352"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE X, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b",
-                "nextEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
+                "previousEncounterId": "0a995a77-0887-49fc-bcb8-148c690a5cac",
+                "nextEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4339,13 +4339,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "ed4779b8-2f37-44f3-99d1-a5ca463b6ae2"
+                "uuid": "1a5dbc0c-80a5-47ae-9fd3-c6eb19adf2fb"
               },
               "workflowItemActivity": {
                 "activityName": "HO",
                 "activityDesc": "Hospitalization",
-                "previousActivityId": "116fc952-fe0f-468e-aaf2-2b1e796d47f2",
-                "nextActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "752b2fb4-188a-4b2b-899e-03a51de5d208",
+                "nextActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "definedProcedures": [
                   {
                     "procedureType": "Hospitalisation",
@@ -4358,19 +4358,19 @@
                   }
                 ],
                 "studyDataCollection": [],
-                "uuid": "672a4f1e-a9e5-4783-bd74-ca443c7ecccc"
+                "uuid": "47ca0a71-8302-41a4-9908-b70d66aada1a"
               },
-              "uuid": "a5153be6-bb25-47e7-bf6f-eda4fc049e12",
-              "previousWorkflowItemId": "1b57572b-578f-4a9e-a592-f8219c8518b4",
-              "nextWorkflowItemId": "fe56b652-ac5c-46b6-9977-cd37947ca67a"
+              "uuid": "c45bbc1c-0679-4b86-b921-606882693352",
+              "previousWorkflowItemId": "5343130b-528b-4541-bf72-a19ff18245fa",
+              "nextWorkflowItemId": "069ad31d-e88a-493f-b043-e0e150aecedf"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE X, TREATMENT DAY 1",
                 "encounterDesc": "",
-                "previousEncounterId": "56e7d35e-b76d-4b38-9bdd-f9260e8a3b7b",
-                "nextEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
+                "previousEncounterId": "0a995a77-0887-49fc-bcb8-148c690a5cac",
+                "nextEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4395,12 +4395,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D1"
                 },
-                "uuid": "ed4779b8-2f37-44f3-99d1-a5ca463b6ae2"
+                "uuid": "1a5dbc0c-80a5-47ae-9fd3-c6eb19adf2fb"
               },
               "workflowItemActivity": {
                 "activityName": "VS3",
                 "activityDesc": "Vital signs",
-                "previousActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -4415,19 +4415,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c"
+                "uuid": "92d14dd1-5d65-4488-aaa7-0447c1d28f77"
               },
-              "uuid": "fe56b652-ac5c-46b6-9977-cd37947ca67a",
-              "previousWorkflowItemId": "a5153be6-bb25-47e7-bf6f-eda4fc049e12",
-              "nextWorkflowItemId": "0ff5678b-9e9d-4a1b-8278-eef00ca5ad59"
+              "uuid": "069ad31d-e88a-493f-b043-e0e150aecedf",
+              "previousWorkflowItemId": "c45bbc1c-0679-4b86-b921-606882693352",
+              "nextWorkflowItemId": "6bffe883-c311-46f2-997d-cb82e60b3b91"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "CYCLE X, TREATMENT DAY 4",
                 "encounterDesc": "",
-                "previousEncounterId": "ed4779b8-2f37-44f3-99d1-a5ca463b6ae2",
-                "nextEncounterId": "736d3515-0b55-4af1-b920-3a2fed981e34",
+                "previousEncounterId": "1a5dbc0c-80a5-47ae-9fd3-c6eb19adf2fb",
+                "nextEncounterId": "136526cf-19a9-439c-9508-7c4725495f23",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4452,12 +4452,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "D4"
                 },
-                "uuid": "bdb3d851-078f-4ce9-a005-3413db5a32dc"
+                "uuid": "cc4d815e-cf14-400f-adb8-c5bd428e093a"
               },
               "workflowItemActivity": {
                 "activityName": "VS3",
                 "activityDesc": "Vital signs",
-                "previousActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -4472,19 +4472,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c"
+                "uuid": "92d14dd1-5d65-4488-aaa7-0447c1d28f77"
               },
-              "uuid": "0ff5678b-9e9d-4a1b-8278-eef00ca5ad59",
-              "previousWorkflowItemId": "fe56b652-ac5c-46b6-9977-cd37947ca67a",
-              "nextWorkflowItemId": "f917342f-7632-4c46-ab66-f4373d278260"
+              "uuid": "6bffe883-c311-46f2-997d-cb82e60b3b91",
+              "previousWorkflowItemId": "069ad31d-e88a-493f-b043-e0e150aecedf",
+              "nextWorkflowItemId": "94be71da-354c-4917-acb4-87b00db7a653"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "FU 1",
                 "encounterDesc": "",
-                "previousEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
-                "nextEncounterId": "117b9a11-b5ad-4ad3-bdd1-b4671e46b428",
+                "previousEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
+                "nextEncounterId": "73f06891-9ea6-4c18-9b5c-b1b13a116c54",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4509,28 +4509,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "W2"
                 },
-                "uuid": "736d3515-0b55-4af1-b920-3a2fed981e34"
+                "uuid": "136526cf-19a9-439c-9508-7c4725495f23"
               },
               "workflowItemActivity": {
                 "activityName": "PE",
                 "activityDesc": "Physical exam",
-                "previousActivityId": "a822a5a0-f8b0-4a34-aa35-403031fa113b",
-                "nextActivityId": "3f246406-e736-496d-9fe8-6f75688a8242",
+                "previousActivityId": "7d8f8f61-d8a6-49ce-b946-2a1636dac956",
+                "nextActivityId": "6b4400e7-ce5f-4fdc-8680-ae2d293ed066",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "b6b5060e-2fc6-4c0c-8c98-bae0961aaefe"
+                "uuid": "d2c2be7c-cfdd-46eb-8a6b-07cb37f7f045"
               },
-              "uuid": "f917342f-7632-4c46-ab66-f4373d278260",
-              "previousWorkflowItemId": "0ff5678b-9e9d-4a1b-8278-eef00ca5ad59",
-              "nextWorkflowItemId": "12e90cb6-3fe4-4226-bf75-3a99f55b4491"
+              "uuid": "94be71da-354c-4917-acb4-87b00db7a653",
+              "previousWorkflowItemId": "6bffe883-c311-46f2-997d-cb82e60b3b91",
+              "nextWorkflowItemId": "a82cba97-4455-4ab9-992f-d9a8246fcccc"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "FU 1",
                 "encounterDesc": "",
-                "previousEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
-                "nextEncounterId": "117b9a11-b5ad-4ad3-bdd1-b4671e46b428",
+                "previousEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
+                "nextEncounterId": "73f06891-9ea6-4c18-9b5c-b1b13a116c54",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4555,13 +4555,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "W2"
                 },
-                "uuid": "736d3515-0b55-4af1-b920-3a2fed981e34"
+                "uuid": "136526cf-19a9-439c-9508-7c4725495f23"
               },
               "workflowItemActivity": {
                 "activityName": "ECG",
                 "activityDesc": "12-lead ECG",
-                "previousActivityId": "3f246406-e736-496d-9fe8-6f75688a8242",
-                "nextActivityId": "c0c43f98-7389-46ea-8160-2c564a3b8f8e",
+                "previousActivityId": "6b4400e7-ce5f-4fdc-8680-ae2d293ed066",
+                "nextActivityId": "d7fa17d1-80d0-4d0b-8538-1d2846e4e415",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -4575,19 +4575,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "465edda9-4627-4a19-b7f8-b6c7b1a180ff"
+                "uuid": "0a70d1e3-b609-4879-95da-c53c6f1db78b"
               },
-              "uuid": "12e90cb6-3fe4-4226-bf75-3a99f55b4491",
-              "previousWorkflowItemId": "f917342f-7632-4c46-ab66-f4373d278260",
-              "nextWorkflowItemId": "fa8c2a85-e03f-45ed-9031-f40c723e316e"
+              "uuid": "a82cba97-4455-4ab9-992f-d9a8246fcccc",
+              "previousWorkflowItemId": "94be71da-354c-4917-acb4-87b00db7a653",
+              "nextWorkflowItemId": "5ad7fcec-3514-4aba-84c5-fc74f9c7c90e"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "FU 1",
                 "encounterDesc": "",
-                "previousEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
-                "nextEncounterId": "117b9a11-b5ad-4ad3-bdd1-b4671e46b428",
+                "previousEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
+                "nextEncounterId": "73f06891-9ea6-4c18-9b5c-b1b13a116c54",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4612,13 +4612,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "W2"
                 },
-                "uuid": "736d3515-0b55-4af1-b920-3a2fed981e34"
+                "uuid": "136526cf-19a9-439c-9508-7c4725495f23"
               },
               "workflowItemActivity": {
                 "activityName": "LB1",
                 "activityDesc": "Hematology (predose)",
-                "previousActivityId": "465edda9-4627-4a19-b7f8-b6c7b1a180ff",
-                "nextActivityId": "c699c18d-51af-447c-82af-4ec82fe2d375",
+                "previousActivityId": "0a70d1e3-b609-4879-95da-c53c6f1db78b",
+                "nextActivityId": "fe7b180a-722d-4939-95e0-79934db68974",
                 "definedProcedures": [
                   {
                     "procedureType": "Blood sample collection",
@@ -4651,19 +4651,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c0c43f98-7389-46ea-8160-2c564a3b8f8e"
+                "uuid": "d7fa17d1-80d0-4d0b-8538-1d2846e4e415"
               },
-              "uuid": "fa8c2a85-e03f-45ed-9031-f40c723e316e",
-              "previousWorkflowItemId": "12e90cb6-3fe4-4226-bf75-3a99f55b4491",
-              "nextWorkflowItemId": "b7a1aa72-10d1-4c63-ae1d-a7e92d1bbc3c"
+              "uuid": "5ad7fcec-3514-4aba-84c5-fc74f9c7c90e",
+              "previousWorkflowItemId": "a82cba97-4455-4ab9-992f-d9a8246fcccc",
+              "nextWorkflowItemId": "7c378718-f9f4-4b48-ab3c-edeb4a0be915"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "FU 1",
                 "encounterDesc": "",
-                "previousEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
-                "nextEncounterId": "117b9a11-b5ad-4ad3-bdd1-b4671e46b428",
+                "previousEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
+                "nextEncounterId": "73f06891-9ea6-4c18-9b5c-b1b13a116c54",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4688,13 +4688,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "W2"
                 },
-                "uuid": "736d3515-0b55-4af1-b920-3a2fed981e34"
+                "uuid": "136526cf-19a9-439c-9508-7c4725495f23"
               },
               "workflowItemActivity": {
                 "activityName": "LB2",
                 "activityDesc": "Chemistry (predose)",
-                "previousActivityId": "c0c43f98-7389-46ea-8160-2c564a3b8f8e",
-                "nextActivityId": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c",
+                "previousActivityId": "d7fa17d1-80d0-4d0b-8538-1d2846e4e415",
+                "nextActivityId": "b294a891-5a15-4733-9562-632a5c8dd590",
                 "definedProcedures": [
                   {
                     "procedureType": "Blood sample collection",
@@ -4727,19 +4727,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "c699c18d-51af-447c-82af-4ec82fe2d375"
+                "uuid": "fe7b180a-722d-4939-95e0-79934db68974"
               },
-              "uuid": "b7a1aa72-10d1-4c63-ae1d-a7e92d1bbc3c",
-              "previousWorkflowItemId": "fa8c2a85-e03f-45ed-9031-f40c723e316e",
-              "nextWorkflowItemId": "6e8ba4ab-56a3-4a41-8570-21aba6aa7fb8"
+              "uuid": "7c378718-f9f4-4b48-ab3c-edeb4a0be915",
+              "previousWorkflowItemId": "5ad7fcec-3514-4aba-84c5-fc74f9c7c90e",
+              "nextWorkflowItemId": "a095dc08-6f9a-4da7-951d-d5b868146f73"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "FU 1",
                 "encounterDesc": "",
-                "previousEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
-                "nextEncounterId": "117b9a11-b5ad-4ad3-bdd1-b4671e46b428",
+                "previousEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
+                "nextEncounterId": "73f06891-9ea6-4c18-9b5c-b1b13a116c54",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4764,28 +4764,28 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "W2"
                 },
-                "uuid": "736d3515-0b55-4af1-b920-3a2fed981e34"
+                "uuid": "136526cf-19a9-439c-9508-7c4725495f23"
               },
               "workflowItemActivity": {
                 "activityName": "LB3",
                 "activityDesc": "Serology",
-                "previousActivityId": "c699c18d-51af-447c-82af-4ec82fe2d375",
-                "nextActivityId": "6ebaf96e-e4c9-4f78-8a71-d6c8352a9d61",
+                "previousActivityId": "fe7b180a-722d-4939-95e0-79934db68974",
+                "nextActivityId": "2e5537e1-afb2-4f08-b32a-4aa502247e40",
                 "definedProcedures": [],
                 "studyDataCollection": [],
-                "uuid": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c"
+                "uuid": "b294a891-5a15-4733-9562-632a5c8dd590"
               },
-              "uuid": "6e8ba4ab-56a3-4a41-8570-21aba6aa7fb8",
-              "previousWorkflowItemId": "b7a1aa72-10d1-4c63-ae1d-a7e92d1bbc3c",
-              "nextWorkflowItemId": "a15bd154-e7d6-4c35-a872-31d7a0b5e3ca"
+              "uuid": "a095dc08-6f9a-4da7-951d-d5b868146f73",
+              "previousWorkflowItemId": "7c378718-f9f4-4b48-ab3c-edeb4a0be915",
+              "nextWorkflowItemId": "f0a8f8ab-382b-484c-9095-867793d35185"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "FU 1",
                 "encounterDesc": "",
-                "previousEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
-                "nextEncounterId": "117b9a11-b5ad-4ad3-bdd1-b4671e46b428",
+                "previousEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
+                "nextEncounterId": "73f06891-9ea6-4c18-9b5c-b1b13a116c54",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4810,13 +4810,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "W2"
                 },
-                "uuid": "736d3515-0b55-4af1-b920-3a2fed981e34"
+                "uuid": "136526cf-19a9-439c-9508-7c4725495f23"
               },
               "workflowItemActivity": {
                 "activityName": "LB4",
                 "activityDesc": "Urinalysis",
-                "previousActivityId": "56db1ddb-b755-40ae-8e26-a8bb76a48a6c",
-                "nextActivityId": "a6a3d774-8b98-437a-941b-ece7b32a3689",
+                "previousActivityId": "b294a891-5a15-4733-9562-632a5c8dd590",
+                "nextActivityId": "39c82177-4479-4459-9b79-9ac0852375e2",
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
@@ -4825,19 +4825,19 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "6ebaf96e-e4c9-4f78-8a71-d6c8352a9d61"
+                "uuid": "2e5537e1-afb2-4f08-b32a-4aa502247e40"
               },
-              "uuid": "a15bd154-e7d6-4c35-a872-31d7a0b5e3ca",
-              "previousWorkflowItemId": "6e8ba4ab-56a3-4a41-8570-21aba6aa7fb8",
-              "nextWorkflowItemId": "6ac05bfa-7c5f-4001-894e-0d165543c710"
+              "uuid": "f0a8f8ab-382b-484c-9095-867793d35185",
+              "previousWorkflowItemId": "a095dc08-6f9a-4da7-951d-d5b868146f73",
+              "nextWorkflowItemId": "82fa5e03-783e-4003-88b7-1376d17be278"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "FU 1",
                 "encounterDesc": "",
-                "previousEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
-                "nextEncounterId": "117b9a11-b5ad-4ad3-bdd1-b4671e46b428",
+                "previousEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
+                "nextEncounterId": "73f06891-9ea6-4c18-9b5c-b1b13a116c54",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4862,13 +4862,13 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "W2"
                 },
-                "uuid": "736d3515-0b55-4af1-b920-3a2fed981e34"
+                "uuid": "136526cf-19a9-439c-9508-7c4725495f23"
               },
               "workflowItemActivity": {
                 "activityName": "VS2",
                 "activityDesc": "Weight",
-                "previousActivityId": "672a4f1e-a9e5-4783-bd74-ca443c7ecccc",
-                "nextActivityId": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c",
+                "previousActivityId": "47ca0a71-8302-41a4-9908-b70d66aada1a",
+                "nextActivityId": "92d14dd1-5d65-4488-aaa7-0447c1d28f77",
                 "definedProcedures": [
                   {
                     "procedureType": "Weight measurement",
@@ -4887,19 +4887,19 @@
                     "crfLink": "https://www.dropbox.com/s/b2mfhiri5a5z34t/weight.yaml?dl=1"
                   }
                 ],
-                "uuid": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa"
+                "uuid": "b089ba78-3916-4133-997f-0d94a74a45ec"
               },
-              "uuid": "6ac05bfa-7c5f-4001-894e-0d165543c710",
-              "previousWorkflowItemId": "a15bd154-e7d6-4c35-a872-31d7a0b5e3ca",
-              "nextWorkflowItemId": "64ff200c-0f17-4f59-ad88-47e858d8e13f"
+              "uuid": "82fa5e03-783e-4003-88b7-1376d17be278",
+              "previousWorkflowItemId": "f0a8f8ab-382b-484c-9095-867793d35185",
+              "nextWorkflowItemId": "a7043f41-4f0b-4167-ab5c-dd4318dd91a0"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "FU 1",
                 "encounterDesc": "",
-                "previousEncounterId": "bdb3d851-078f-4ce9-a005-3413db5a32dc",
-                "nextEncounterId": "117b9a11-b5ad-4ad3-bdd1-b4671e46b428",
+                "previousEncounterId": "cc4d815e-cf14-400f-adb8-c5bd428e093a",
+                "nextEncounterId": "73f06891-9ea6-4c18-9b5c-b1b13a116c54",
                 "encounterType": {
                   "code": "C7652x",
                   "codeSystem": "http://www.cdisc.org",
@@ -4924,12 +4924,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "W2"
                 },
-                "uuid": "736d3515-0b55-4af1-b920-3a2fed981e34"
+                "uuid": "136526cf-19a9-439c-9508-7c4725495f23"
               },
               "workflowItemActivity": {
                 "activityName": "VS3",
                 "activityDesc": "Vital signs",
-                "previousActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -4944,18 +4944,18 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c"
+                "uuid": "92d14dd1-5d65-4488-aaa7-0447c1d28f77"
               },
-              "uuid": "64ff200c-0f17-4f59-ad88-47e858d8e13f",
-              "previousWorkflowItemId": "6ac05bfa-7c5f-4001-894e-0d165543c710",
-              "nextWorkflowItemId": "3eb6cfe8-edd9-4733-a64c-a5ce6627fc8a"
+              "uuid": "a7043f41-4f0b-4167-ab5c-dd4318dd91a0",
+              "previousWorkflowItemId": "82fa5e03-783e-4003-88b7-1376d17be278",
+              "nextWorkflowItemId": "4735df6a-08d0-4b4e-8dc7-0f76befdb506"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterName": "FU 2",
                 "encounterDesc": "",
-                "previousEncounterId": "736d3515-0b55-4af1-b920-3a2fed981e34",
+                "previousEncounterId": "136526cf-19a9-439c-9508-7c4725495f23",
                 "nextEncounterId": null,
                 "encounterType": {
                   "code": "C7653x",
@@ -4981,12 +4981,12 @@
                 "transitionEndRule": {
                   "transitionRuleDesc": "W6"
                 },
-                "uuid": "117b9a11-b5ad-4ad3-bdd1-b4671e46b428"
+                "uuid": "73f06891-9ea6-4c18-9b5c-b1b13a116c54"
               },
               "workflowItemActivity": {
                 "activityName": "VS3",
                 "activityDesc": "Vital signs",
-                "previousActivityId": "af1c9f46-a958-4f95-a3e7-3d18e99d1faa",
+                "previousActivityId": "b089ba78-3916-4133-997f-0d94a74a45ec",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
@@ -5001,10 +5001,10 @@
                     "crfLink": ""
                   }
                 ],
-                "uuid": "98d1c3d8-467d-4b34-8406-e4d0f9a82a2c"
+                "uuid": "92d14dd1-5d65-4488-aaa7-0447c1d28f77"
               },
-              "uuid": "3eb6cfe8-edd9-4733-a64c-a5ce6627fc8a",
-              "previousWorkflowItemId": "64ff200c-0f17-4f59-ad88-47e858d8e13f",
+              "uuid": "4735df6a-08d0-4b4e-8dc7-0f76befdb506",
+              "previousWorkflowItemId": "a7043f41-4f0b-4167-ab5c-dd4318dd91a0",
               "nextWorkflowItemId": null
             }
           ]
