@@ -207,22 +207,24 @@ def study_indication_data(description, indications):
     "indicationDesc": description
   }
 
-def study_data(title, version, type, phase, identifiers, protocol_versions, designs):
+def study_data(title, version, type, phase, business_therapeutic_areas, identifiers, protocol_versions, designs):
   return {
     "studyTitle": title,
     "studyVersion": version,
     "studyType":  type,
     "studyPhase":  phase,
+    "businessTherapeuticAreas": business_therapeutic_areas,
     "studyIdentifiers": identifiers,
     "studyProtocolVersions": protocol_versions,
     "studyDesigns": designs
   }
 
-def study_design_data(intent, type, model, cells, indications, objectives, populations, interventions, workflows, estimands):
+def study_design_data(intent, type, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands):
   return {
     "trialIntentTypes": intent,
     "trialType": type,
     "interventionModel": model,
+    "therapeuticAreas:": therapeutic_areas,
     "studyCells": cells,
     "studyIndications": indications,
     "studyObjectives": objectives,

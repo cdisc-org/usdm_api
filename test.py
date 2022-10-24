@@ -8,7 +8,7 @@ from pandas import json_normalize
 import json
 
 #studies = [ SimpleStudy, DDR, BMS, RocheWA42380 ]
-studies = [ SimpleStudy, RocheWA42380 ]
+studies = [ SimpleStudy ] #, RocheWA42380 ]
 
 def save_as_file(data, filename):
   with open('study/%s.json' % (filename), 'w', encoding='utf-8') as outfile:
