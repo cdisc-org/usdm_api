@@ -358,7 +358,10 @@ class DDR():
     design_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='PARALLEL')
 
-    design_1 = study_design_data([intent], design_type, int_model, study_cells, indications, objectives, [population_1], ii, [workflow], estimands)
+    ta = code_data("123456789", "SNOMED", "2022", "Something")
+    therapeutic_areas = [ta]
+
+    design_1 = study_design_data([intent], [design_type], int_model, therapeutic_areas, study_cells, indications, objectives, [population_1], ii, [workflow], estimands)
     designs = [design_1]
 
     # Protocol versions    
@@ -388,7 +391,10 @@ class DDR():
     identifier_3 = study_identifier_data("AP002020202", organisation_1)
     identifiers = [identifier_1, identifier_2, identifier_3]
 
+    bta = code_data("12345", "Sponsor", "2022", "Business Unit A")
+    business_therapeutic_areas = [bta]
+
     # Assemble complete study
     study_title = "Umbrella Study of DDR (DNA-Damage Response) Targeting Agents in Advanced Biliary Tract Cancer"
-    return study_data(study_title, "1", study_type, phase, identifiers, protocol_versions, designs)
+    return study_data(study_title, "1", study_type, phase, business_therapeutic_areas, identifiers, protocol_versions, designs)
 
