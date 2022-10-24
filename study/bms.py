@@ -338,7 +338,7 @@ class BMS():
     ta = code_data("123456789", "SNOMED", "2022", "Something")
     therapeutic_areas = [ta]
 
-    design_1 = study_design_data([intent], design_type, int_model, therapeutic_areas, study_cells, indications, objectives, [study_population_1], ii, [workflow], estimands)
+    design_1 = study_design_data([intent], [design_type], int_model, therapeutic_areas, study_cells, indications, objectives, [study_population_1], ii, [workflow], estimands)
     designs = [design_1]
 
     # Protocol versions
