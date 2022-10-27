@@ -13,7 +13,6 @@ WORKDIR /install
 COPY requirements.txt /requirements.txt
 
 RUN pip install --prefix=/install -r /requirements.txt
-RUN pip install --prefix=/install uvicorn
 
 FROM base
 ARG DDF_SERVICE_PROJ_KEY_ARG
