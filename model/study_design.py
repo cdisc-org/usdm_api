@@ -14,6 +14,8 @@ import pandas as pd
 
 class StudyDesign(ApiBaseModel):
   uuid: Union[UUID, None] = None
+  studyDesignName: str
+  studyDesignDescription: str
   trialIntentTypes: Union[List[Code], List[UUID]]
   trialType: Union[List[Code], List[UUID]]
   interventionModel: Union[Code, UUID]
