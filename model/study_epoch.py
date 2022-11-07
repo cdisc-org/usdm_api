@@ -6,10 +6,10 @@ from .encounter import Encounter
 from uuid import UUID
 
 class StudyEpoch(ApiBaseModel):
-  uuid: Union[UUID, None] = None
+  studyEpochId: str
   studyEpochName: str
   studyEpochDesc: str
-  previousStudyEpochId: Union[UUID, None] = None
-  nextStudyEpochId: Union[UUID, None] = None
   studyEpochType: Union[Code, UUID]
+  previousStudyEpochId: str
+  nextStudyEpochId: str
   encounters: Union[List[Encounter], List[UUID]]

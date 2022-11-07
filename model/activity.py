@@ -6,7 +6,7 @@ from .study_data import StudyData
 from uuid import UUID
 
 class Activity(ApiBaseModel):
-  uuid: Union[UUID, None] = None
+  activityId: str
   activityName: str
   activityDesc: str
   previousActivityId: Union[UUID, None] = None

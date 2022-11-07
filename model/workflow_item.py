@@ -1,13 +1,10 @@
 from typing import Union
 from .api_base_model import ApiBaseModel
-from .activity import Activity
-from .encounter import Encounter
-from uuid import UUID
 
 class WorkflowItem(ApiBaseModel):
-  uuid: Union[UUID, None] = None
+  workflowItemId: str
   workflowItemDesc: str
-  previousWorkflowItemId: Union[UUID, None] = None
-  nextWorkflowItemId: Union[UUID, None] = None
-  workflowItemEncounter: Union[Encounter, UUID, None] = None
-  workflowItemActivity: Union[Activity, UUID, None] = None
+  previousWorkflowItemId: Union[str, None] = None
+  nextWorkflowItemId: Union[str, None] = None
+  workflowItemEncounterId: Union[str, None] = None
+  workflowItemActivityId: Union[str, None] = None

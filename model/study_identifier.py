@@ -4,7 +4,7 @@ from .api_base_model import ApiBaseModel
 from .organisation import Organisation
 
 class StudyIdentifier(ApiBaseModel):
-  uuid: Union[UUID, None]
+  studyIdentifierId: str
   studyIdentifier: str
   studyIdentifierScope: Union[UUID, Organisation]
 

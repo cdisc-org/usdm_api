@@ -4,7 +4,7 @@ from .api_base_model import ApiBaseModel
 from .code import Code
 
 class Organisation(ApiBaseModel):
-  uuid: Union[UUID, None]
+  organizationId: str
   organisationIdentifierScheme: str
   organisationIdentifier: str
   organisationName: str

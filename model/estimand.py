@@ -7,7 +7,7 @@ from .intercurrent_event import IntercurrentEvent
 from uuid import UUID
 
 class Estimand(ApiBaseModel):
-  uuid: Union[UUID, None] = None
+  estimandId: str
   summaryMeasure: str
   analysisPopulation: Union[AnalysisPopulation, UUID]
   treatment: Union[InvestigationalIntervention, UUID]

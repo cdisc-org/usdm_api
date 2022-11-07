@@ -8,7 +8,7 @@ class PreviousProcedure(ApiBaseModel):
   procedureCode: Union[Code, UUID]
 
 class Procedure(ApiBaseModel):
-  uuid: Union[UUID, None] = None
+  procedureId: str
   procedureType: str
   procedureCode: Union[Code, UUID]
   

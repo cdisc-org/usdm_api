@@ -1,6 +1,9 @@
+from tkinter import E
 from typing import List, Union
+from .activity import Activity
 from .api_base_model import ApiBaseModel
 from .code import Code
+from .encounter import Encounter
 from .study_cell import StudyCell
 from .indication import Indication
 from .investigational_intervention import InvestigationalIntervention
@@ -13,20 +16,22 @@ from uuid import UUID
 import pandas as pd
 
 class StudyDesign(ApiBaseModel):
-  uuid: Union[UUID, None] = None
+  studyDesignId: str
   studyDesignName: str
   studyDesignDescription: str
   trialIntentTypes: Union[List[Code], List[UUID]]
   trialType: Union[List[Code], List[UUID]]
   interventionModel: Union[Code, UUID]
-  therapeuticAreas: Union[List[Code], List[UUID]] = []
   studyCells: Union[List[StudyCell], List[UUID], None] = []
   studyIndications: Union[List[Indication], List[UUID], None] = []
   studyInvestigationalInterventions: Union[List[InvestigationalIntervention], List[UUID], None] = []
-  studyPopulations: Union[List[StudyDesignPopulation], List[UUID], None] = []
+  studyStudyDesignPopulations: Union[List[StudyDesignPopulation], List[UUID], None] = []
   studyObjectives: Union[List[Objective], List[UUID], None] = []
   studyWorkflows: Union[List[Workflow], List[UUID], None] = []
+  therapeuticAreas: Union[List[Code], List[UUID]] = []
   studyEstimands: Union[List[Estimand], List[UUID], None] = []
+  encounters: Union[List[Encounter], List[UUID], None] = []
+  activities: Union[List[Activity], List[UUID], None] = []
 
   @classmethod
   def search(cls, store, uuid):

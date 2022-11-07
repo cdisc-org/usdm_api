@@ -6,7 +6,7 @@ from .study_element import StudyElement
 from uuid import UUID
 
 class StudyCell(ApiBaseModel):
-  uuid: Union[UUID, None] = None
+  studyCellId: str
   studyArm: Union[StudyArm, UUID, None]
   studyEpoch: Union[StudyEpoch, UUID, None]
   studyElements: Union[List[StudyElement], List[UUID], None] = []

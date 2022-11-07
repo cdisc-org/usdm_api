@@ -1,16 +1,15 @@
-from typing import List, Union
+from typing import Union
 from .api_base_model import ApiBaseModel
 from .code import Code
 from .transition_rule import TransitionRule
-from .activity import Activity
 from uuid import UUID
 
 class Encounter(ApiBaseModel):
-  uuid: Union[UUID, None] = None
+  encounterId: str
   encounterName: str
   encounterDesc: str
-  previousEncounterId: Union[UUID, None] = None
-  nextEncounterId: Union[UUID, None] = None
+  previousEncounterId: str
+  nextEncounterId: str
   encounterType: Union[Code, UUID, None] = None
   encounterEnvironmentalSetting: Union[Code, UUID, None] = None
   encounterContactMode: Union[Code, UUID, None] = None
