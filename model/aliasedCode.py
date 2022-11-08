@@ -6,5 +6,5 @@ from uuid import UUID
 
 class AliasedCode(ApiBaseModel):
   aliasedCodeId: str
-  standardCode: str
-  standardCodeAliases: Union[List[Code], List[UUID]] = []
+  standardCode: Code
+  standardCodeAliases: List[Code] = []

@@ -10,6 +10,6 @@ class Estimand(ApiBaseModel):
   estimandId: str
   summaryMeasure: str
   analysisPopulation: Union[AnalysisPopulation, UUID]
-  treatment: Union[InvestigationalIntervention, UUID]
-  variableOfInterest: Union[Endpoint, UUID]
+  treatment: Union[str, None] = None
+  variableOfInterest: Union[str, None] = None
   intercurrentEvents: Union[List[IntercurrentEvent], List[UUID]]
