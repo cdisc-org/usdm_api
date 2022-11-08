@@ -30,8 +30,9 @@ def double_link(items, prev, next):
     else:
       item[next] = items[idx+1]['uuid']
     
-def code_data(code, system, version, decode):
+def code_data(id, code, system, version, decode):
   return {
+    "codeId": id,
     "code": code,
     "codeSystem": system,
     "codeSystemVersion": version,
@@ -41,10 +42,11 @@ def code_data(code, system, version, decode):
 def code_for(klass, attribute, **kwargs):
   if 'c_code' in kwargs:
     entry = _find_ct_entry(klass, attribute, 'conceptId', kwargs['c_code'])
-    return code_data(entry['conceptId'], "http://www.cdisc.org", "2022-03-25", entry['preferredTerm'])
+    # TODO: Where does the codeId come from here?
+    return code_data("todo_1", entry['conceptId'], "http://www.cdisc.org", "2022-03-25", entry['preferredTerm'])
   elif 'submission_value' in kwargs:
     entry = _find_ct_entry(klass, attribute, 'submissionValue', kwargs['submission_value'])
-    return code_data(entry['conceptId'], "http://www.cdisc.org", "2022-03-25", entry['preferredTerm'])
+    return code_data("todo_1", entry['conceptId'], "http://www.cdisc.org", "2022-03-25", entry['preferredTerm'])
   else:
     raise Exception("Need to specify either a C Code or Submission value when selecting a CT value.")
 
@@ -66,8 +68,9 @@ def workflow_item_data(description, from_pit, to_pit, previous, encounter, activ
     "activity": activity
   }
 
-def activity_data(name, description, procedures, study_data):
+def activity_data(id, name, description, procedures, study_data):
   return {
+    "activityId": id,
     "activityName": name,
     "activityDesc": description,
     "previousActivityId": None,
@@ -76,21 +79,24 @@ def activity_data(name, description, procedures, study_data):
     "studyDataCollection": study_data
   }
 
-def procedure_data(the_type, the_code):
+def procedure_data(the_id, the_type, the_code):
   return {
+    "procedureId": the_id,
     "procedureType": the_type,
     "procedureCode": the_code
   }
 
-def study_data_data(name, description, link):
+def study_data_data(id, name, description, link):
   return {
+    "studyDataId": id,
     "studyDataName": name,
     "studyDataDesc": description,
     "crfLink": link
   }
 
-def encounter_data(name, description, encounter_type, env_setting, contact_mode, start_rule=None, end_rule=None):
+def encounter_data(id, name, description, encounter_type, env_setting, contact_mode, start_rule=None, end_rule=None):
   return {
+    "encounterId": id,
     "encounterName": name,
     "encounterDesc": description,
     "previousEncounterId": None,
@@ -138,14 +144,16 @@ def intercurrent_event_data(name, description, strategy):
            "intercurrentEventStrategy": strategy
   }
 
-def study_identifier_data(identifier, organisation):
+def study_identifier_data(id, identifier, organisation):
   return {
+    "studyIdentifierId": id,
     "studyIdentifier": identifier,
     "studyIdentifierScope": organisation
   }
 
-def organization_data(identifier_scheme, org_identifier, org_name, organisation_type):
+def organization_data(id, identifier_scheme, org_identifier, org_name, organisation_type):
   return {
+    "organizationId": id,
     "organisationIdentifierScheme": identifier_scheme,
     "organisationIdentifier": org_identifier,
     "organisationName": org_name,
@@ -157,13 +165,15 @@ def analysis_population_data(description):
     "populationDesc": description
   }
 
-def study_design_population_data(description):
+def study_design_population_data(id, description):
   return {
+    "studyDesignPopulationId": id,
     "populationDesc": description
   }
   
-def study_arm_data(name, description, arm_type, origin_description, origin_type):
+def study_arm_data(id, name, description, arm_type, origin_description, origin_type):
   return {
+    "studyArmId": id,
     "studyArmName": name,
     "studyArmDesc": description,
     "studyArmType": arm_type,
@@ -171,8 +181,9 @@ def study_arm_data(name, description, arm_type, origin_description, origin_type)
     "studyArmDataOriginType": origin_type,
   }
 
-def study_epoch_data(name, description, epoch_type, encounters):
+def study_epoch_data(id, name, description, epoch_type, encounters):
   return {
+    "studyEpochId": id,
     "studyEpochName": name,
     "studyEpochDesc": description,
     "previousStudyEpochId": None,
@@ -181,28 +192,32 @@ def study_epoch_data(name, description, epoch_type, encounters):
     "encounters": encounters
   }
 
-def study_cell_data(arm, epoch, elements):
+def study_cell_data(id, arm, epoch, elements):
   return {
+    "studyCellId": id,
     "studyArm": arm,
     "studyEpoch": epoch,
     "studyElements": elements
   }
 
-def study_element_data(name, description, start=None, end=None):
+def study_element_data(id, name, description, start=None, end=None):
   return {
+    "studyElementId": id,
     "studyElementName": name,
     "studyElementDesc": description,
     "transitionStartRule": start,
     "transitionEndRule": end
   }
 
-def transition_rule_data(description):
+def transition_rule_data(id, description):
   return {
+    "transitionRuleId": id,
     "transitionRuleDesc": description
   }
 
-def study_indication_data(description, indications):
+def study_indication_data(id, description, indications):
   return {
+    "indicationId": id,
     "codes": indications,
     "indicationDesc": description
   }
@@ -219,23 +234,29 @@ def study_data(title, version, type, phase, business_therapeutic_areas, identifi
     "studyDesigns": designs
   }
 
-def study_design_data(intent, types, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands):
+def study_design_data(id, name, description, intent, types, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands, encounters, activities):
   return {
+    "studyDesignId": id,
+    "studyDesignName": name,
+    "studyDesignDescription": description,
     "trialIntentTypes": intent,
     "trialType": types,
     "interventionModel": model,
-    "therapeuticAreas:": therapeutic_areas,
     "studyCells": cells,
     "studyIndications": indications,
-    "studyObjectives": objectives,
-    "studyPopulations": populations,
     "studyInvestigationalInterventions": interventions,
+    "studyStudyDesignPopulations": populations,
+    "studyObjectives": objectives,
     "studyWorkflows": workflows,
-    "studyEstimands": estimands
+    "therapeuticAreas:": therapeutic_areas,
+    "studyEstimands": estimands,
+    "encounters": encounters,
+    "activities": activities,
   }
 
-def study_protocol_version_data(brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):
+def study_protocol_version_data(id, brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):
   return {
+    "studyProtocolVersionId": id,
     "briefTitle": brief_title,
     "officialTitle": official_title,
     "publicTitle": public_title,
@@ -253,8 +274,9 @@ def workflow_item_data(description, encounter, activity):
     'workflowItemActivity': activity,
   }
 
-def workflow_data(description, items):
+def workflow_data(id, description, items):
   return {
+    'workflowId': id,
     'workflowDesc': description,
     'workflowItems': items
   }
