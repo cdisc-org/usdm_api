@@ -5,6 +5,6 @@ from uuid import UUID
 
 class Endpoint(ApiBaseModel):
   endpointId: str
-  endpointDesc: str
-  endpointPurposeDesc: str
+  endpointDescription: str
+  endpointPurposeDescription: str
   endpointLevel: Union[Code, UUID, None]

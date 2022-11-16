@@ -8,7 +8,7 @@ from uuid import UUID
 class StudyEpoch(ApiBaseModel):
   studyEpochId: str
   studyEpochName: str
-  studyEpochDesc: str
+  studyEpochDescription: str
   studyEpochType: Union[Code, UUID]
   previousStudyEpochId: str
   nextStudyEpochId: str

@@ -8,7 +8,7 @@ from uuid import UUID
 class Activity(ApiBaseModel):
   activityId: str
   activityName: str
-  activityDesc: str
+  activityDescription: str
   previousActivityId: Union[str, None] = None
   nextActivityId: Union[str, None] = None
   definedProcedures: Union[List[Procedure], List[UUID]] = []

@@ -5,5 +5,5 @@ from uuid import UUID
 
 class Indication(ApiBaseModel):
   indicationId: str
-  indicationDesc: str
+  indicationDescription: str
   codes: Union[List[Code], List[UUID], None]

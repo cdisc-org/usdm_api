@@ -6,7 +6,7 @@ from uuid import UUID
 class StudyArm(ApiBaseModel):
   studyArmId: str
   studyArmName: str
-  studyArmDesc: str
+  studyArmDescription: str
   studyArmType: Union[Code, UUID]
-  studyArmDataOriginDesc: str
+  studyArmDataOriginDescription: str
   studyArmDataOriginType: Union[Code, UUID]

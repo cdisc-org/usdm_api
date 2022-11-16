@@ -7,7 +7,7 @@ from uuid import UUID
 class Encounter(ApiBaseModel):
   encounterId: str
   encounterName: str
-  encounterDesc: str
+  encounterDescription: str
   previousEncounterId: Union[str, None] = None
   nextEncounterId: Union[str, None] = None
   encounterType: Union[Code, UUID, None] = None

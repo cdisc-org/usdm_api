@@ -5,5 +5,5 @@ from uuid import UUID
 
 class InvestigationalIntervention(ApiBaseModel):
   investigationalInterventionId: str
-  interventionDesc: str
+  interventionDescription: str
   codes: Union[List[Code], List[UUID], None]  
