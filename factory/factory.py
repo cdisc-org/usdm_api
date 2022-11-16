@@ -52,7 +52,7 @@ def code_for(klass, attribute, **kwargs):
 
 def workflow_data(description, start, end, items):
   return {
-    "workflow_desc": description,
+    "workflow_description": description,
     "workflow_start_point": start,
     "workflow_end_point": end,
     "workflow_item": items
@@ -72,7 +72,7 @@ def activity_data(id, name, description, procedures, study_data):
   return {
     "activityId": id,
     "activityName": name,
-    "activityDesc": description,
+    "activityDescription": description,
     "previousActivityId": None,
     "nextActivityId": None,
     "definedProcedures": procedures,
@@ -90,7 +90,7 @@ def study_data_data(id, name, description, link):
   return {
     "studyDataId": id,
     "studyDataName": name,
-    "studyDataDesc": description,
+    "studyDataDescription": description,
     "crfLink": link
   }
 
@@ -98,7 +98,7 @@ def encounter_data(id, name, description, encounter_type, env_setting, contact_m
   return {
     "encounterId": id,
     "encounterName": name,
-    "encounterDesc": description,
+    "encounterDescription": description,
     "previousEncounterId": None,
     "nextEncounterId": None,
     "encounterType": encounter_type,
@@ -118,19 +118,19 @@ def point_in_time_data(start, end, pit_type):
 def investigational_intervention_data(description, codes):
   return {
     "codes": codes,
-    "interventionDesc": description,
+    "interventionDescription": description,
   }
 
 def endpoint_data(description, purpose, level):
   return {
-    "endpointDesc": description,
-    "endpointPurposeDesc": purpose,
+    "endpointDescription": description,
+    "endpointPurposeDescription": purpose,
     "endpointLevel": level
   }
 
 def objective_data(description, level, endpoints):
   return {
-    "objectiveDesc": description,
+    "objectiveDescription": description,
     "objectiveLevel": level,
     "objectiveEndpoints": endpoints
   }
@@ -140,7 +140,7 @@ def estimand_data(measure, population, treatment, variable, events):
 
 def intercurrent_event_data(name, description, strategy):
   return { "intercurrentEventName": name, 
-           "intercurrentEventDesc": description,
+           "intercurrentEventDescription": description,
            "intercurrentEventStrategy": strategy
   }
 
@@ -162,22 +162,22 @@ def organization_data(id, identifier_scheme, org_identifier, org_name, organisat
 
 def analysis_population_data(description):
   return {
-    "populationDesc": description
+    "populationDescription": description
   }
 
 def study_design_population_data(id, description):
   return {
     "studyDesignPopulationId": id,
-    "populationDesc": description
+    "populationDescription": description
   }
   
 def study_arm_data(id, name, description, arm_type, origin_description, origin_type):
   return {
     "studyArmId": id,
     "studyArmName": name,
-    "studyArmDesc": description,
+    "studyArmDescription": description,
     "studyArmType": arm_type,
-    "studyArmDataOriginDesc": origin_description,
+    "studyArmDataOriginDescription": origin_description,
     "studyArmDataOriginType": origin_type,
   }
 
@@ -185,7 +185,7 @@ def study_epoch_data(id, name, description, epoch_type, encounters):
   return {
     "studyEpochId": id,
     "studyEpochName": name,
-    "studyEpochDesc": description,
+    "studyEpochDescription": description,
     "previousStudyEpochId": None,
     "nextStudyEpochId": None,
     "studyEpochType": epoch_type,
@@ -204,7 +204,7 @@ def study_element_data(id, name, description, start=None, end=None):
   return {
     "studyElementId": id,
     "studyElementName": name,
-    "studyElementDesc": description,
+    "studyElementDescription": description,
     "transitionStartRule": start,
     "transitionEndRule": end
   }
@@ -212,14 +212,14 @@ def study_element_data(id, name, description, start=None, end=None):
 def transition_rule_data(id, description):
   return {
     "transitionRuleId": id,
-    "transitionRuleDesc": description
+    "transitionRuleDescription": description
   }
 
 def study_indication_data(id, description, indications):
   return {
     "indicationId": id,
     "codes": indications,
-    "indicationDesc": description
+    "indicationDescription": description
   }
 
 def study_data(title, version, type, phase, business_therapeutic_areas, identifiers, protocol_versions, designs):
