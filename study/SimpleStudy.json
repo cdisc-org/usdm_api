@@ -156,7 +156,7 @@
           "studyArm": {
             "studyArmId": "study_arm_id_1",
             "studyArmName": "Placebo",
-            "studyArmDesc": "The Placebo Arm",
+            "studyArmDescription": "The Placebo Arm",
             "studyArmType": {
               "codeId": "todo_1",
               "code": "C174268",
@@ -164,7 +164,7 @@
               "codeSystemVersion": "2022-03-25",
               "decode": "Placebo Control Arm"
             },
-            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
               "codeId": "0012",
               "code": "C6574y",
@@ -176,9 +176,9 @@
           "studyEpoch": {
             "studyEpochId": "study_epoch_data_id_1",
             "studyEpochName": "Run In",
-            "studyEpochDesc": "The run in",
+            "studyEpochDescription": "The run in",
             "previousStudyEpochId": null,
-            "nextStudyEpochId": "81cf19b8-5af6-46c2-8caf-8176615c6910",
+            "nextStudyEpochId": "2a7c2bb7-8241-4348-877a-79dcc40c4cbd",
             "studyEpochType": {
               "codeId": "todo_1",
               "code": "C98779",
@@ -190,9 +190,9 @@
               {
                 "encounterId": "encounter_1",
                 "encounterName": "Encounter 1",
-                "encounterDesc": "desc",
+                "encounterDescription": "desc",
                 "previousEncounterId": null,
-                "nextEncounterId": "e9533ff4-6723-4166-b6ba-60272f1182f2",
+                "nextEncounterId": "66be48cf-19bd-4483-984c-fe5cc4f288da",
                 "encounterType": {
                   "codeId": "0002",
                   "code": "C7652x",
@@ -216,13 +216,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "f2455095-b736-40e6-a94a-fe2fbf4011ae"
+                "uuid": "6d7cf57b-0ed8-4c0f-83a4-ea179c6e3417"
               },
               {
                 "encounterId": "encounter_1",
                 "encounterName": "Encounter 2",
-                "encounterDesc": "desc",
-                "previousEncounterId": "f2455095-b736-40e6-a94a-fe2fbf4011ae",
+                "encounterDescription": "desc",
+                "previousEncounterId": "6d7cf57b-0ed8-4c0f-83a4-ea179c6e3417",
                 "nextEncounterId": null,
                 "encounterType": {
                   "codeId": "0002",
@@ -247,23 +247,23 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "e9533ff4-6723-4166-b6ba-60272f1182f2"
+                "uuid": "66be48cf-19bd-4483-984c-fe5cc4f288da"
               }
             ],
-            "uuid": "18737505-b13a-4f3c-8636-46c4b4bcc971"
+            "uuid": "6353e204-f5a9-4a92-9687-74fa7e2b4b16"
           },
           "studyElements": [
             {
               "studyElementId": "element_1",
               "studyElementName": "Element 1",
-              "studyElementDesc": "First element",
+              "studyElementDescription": "First element",
               "transitionStartRule": {
                 "transitionRuleId": "start_1",
-                "transitionRuleDesc": "Start Rule"
+                "transitionRuleDescription": "Start Rule"
               },
               "transitionEndRule": {
                 "transitionRuleId": "end_1",
-                "transitionRuleDesc": "End Rule"
+                "transitionRuleDescription": "End Rule"
               }
             }
           ]
@@ -273,7 +273,7 @@
           "studyArm": {
             "studyArmId": "study_arm_id_1",
             "studyArmName": "Placebo",
-            "studyArmDesc": "The Placebo Arm",
+            "studyArmDescription": "The Placebo Arm",
             "studyArmType": {
               "codeId": "todo_1",
               "code": "C174268",
@@ -281,7 +281,7 @@
               "codeSystemVersion": "2022-03-25",
               "decode": "Placebo Control Arm"
             },
-            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
               "codeId": "0012",
               "code": "C6574y",
@@ -293,9 +293,9 @@
           "studyEpoch": {
             "studyEpochId": "study_epoch_data_id_2",
             "studyEpochName": "Treatment",
-            "studyEpochDesc": "The drug!",
-            "previousStudyEpochId": "18737505-b13a-4f3c-8636-46c4b4bcc971",
-            "nextStudyEpochId": "589de8b2-c3e1-403c-aba4-c8882f719734",
+            "studyEpochDescription": "The drug!",
+            "previousStudyEpochId": "6353e204-f5a9-4a92-9687-74fa7e2b4b16",
+            "nextStudyEpochId": "b5514f06-b7d1-45c7-92df-d0f0eabe5243",
             "studyEpochType": {
               "codeId": "todo_1",
               "code": "C101526",
@@ -304,13 +304,13 @@
               "decode": "Treatment Epoch"
             },
             "encounters": [],
-            "uuid": "81cf19b8-5af6-46c2-8caf-8176615c6910"
+            "uuid": "2a7c2bb7-8241-4348-877a-79dcc40c4cbd"
           },
           "studyElements": [
             {
               "studyElementId": "element_2",
               "studyElementName": "Element 2",
-              "studyElementDesc": "Second element",
+              "studyElementDescription": "Second element",
               "transitionStartRule": null,
               "transitionEndRule": null
             }
@@ -321,7 +321,7 @@
           "studyArm": {
             "studyArmId": "study_arm_id_1",
             "studyArmName": "Placebo",
-            "studyArmDesc": "The Placebo Arm",
+            "studyArmDescription": "The Placebo Arm",
             "studyArmType": {
               "codeId": "todo_1",
               "code": "C174268",
@@ -329,7 +329,7 @@
               "codeSystemVersion": "2022-03-25",
               "decode": "Placebo Control Arm"
             },
-            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
               "codeId": "0012",
               "code": "C6574y",
@@ -341,8 +341,8 @@
           "studyEpoch": {
             "studyEpochId": "study_epoch_data_id_3",
             "studyEpochName": "Follow Up",
-            "studyEpochDesc": "Go away",
-            "previousStudyEpochId": "81cf19b8-5af6-46c2-8caf-8176615c6910",
+            "studyEpochDescription": "Go away",
+            "previousStudyEpochId": "2a7c2bb7-8241-4348-877a-79dcc40c4cbd",
             "nextStudyEpochId": null,
             "studyEpochType": {
               "codeId": "todo_1",
@@ -352,13 +352,13 @@
               "decode": "Clinical Study Follow-up"
             },
             "encounters": [],
-            "uuid": "589de8b2-c3e1-403c-aba4-c8882f719734"
+            "uuid": "b5514f06-b7d1-45c7-92df-d0f0eabe5243"
           },
           "studyElements": [
             {
               "studyElementId": "element_4",
               "studyElementName": "Element 4",
-              "studyElementDesc": "Fourth element",
+              "studyElementDescription": "Fourth element",
               "transitionStartRule": null,
               "transitionEndRule": null
             }
@@ -369,7 +369,7 @@
           "studyArm": {
             "studyArmId": "study_arm_id_2",
             "studyArmName": "Active",
-            "studyArmDesc": "Super Drug Arm",
+            "studyArmDescription": "Super Drug Arm",
             "studyArmType": {
               "codeId": "todo_1",
               "code": "C15538",
@@ -377,7 +377,7 @@
               "codeSystemVersion": "2022-03-25",
               "decode": "Protocol Treatment Arm"
             },
-            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
               "codeId": "0012",
               "code": "C6574y",
@@ -389,9 +389,9 @@
           "studyEpoch": {
             "studyEpochId": "study_epoch_data_id_1",
             "studyEpochName": "Run In",
-            "studyEpochDesc": "The run in",
+            "studyEpochDescription": "The run in",
             "previousStudyEpochId": null,
-            "nextStudyEpochId": "81cf19b8-5af6-46c2-8caf-8176615c6910",
+            "nextStudyEpochId": "2a7c2bb7-8241-4348-877a-79dcc40c4cbd",
             "studyEpochType": {
               "codeId": "todo_1",
               "code": "C98779",
@@ -403,9 +403,9 @@
               {
                 "encounterId": "encounter_1",
                 "encounterName": "Encounter 1",
-                "encounterDesc": "desc",
+                "encounterDescription": "desc",
                 "previousEncounterId": null,
-                "nextEncounterId": "e9533ff4-6723-4166-b6ba-60272f1182f2",
+                "nextEncounterId": "66be48cf-19bd-4483-984c-fe5cc4f288da",
                 "encounterType": {
                   "codeId": "0002",
                   "code": "C7652x",
@@ -429,13 +429,13 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "f2455095-b736-40e6-a94a-fe2fbf4011ae"
+                "uuid": "6d7cf57b-0ed8-4c0f-83a4-ea179c6e3417"
               },
               {
                 "encounterId": "encounter_1",
                 "encounterName": "Encounter 2",
-                "encounterDesc": "desc",
-                "previousEncounterId": "f2455095-b736-40e6-a94a-fe2fbf4011ae",
+                "encounterDescription": "desc",
+                "previousEncounterId": "6d7cf57b-0ed8-4c0f-83a4-ea179c6e3417",
                 "nextEncounterId": null,
                 "encounterType": {
                   "codeId": "0002",
@@ -460,23 +460,23 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "e9533ff4-6723-4166-b6ba-60272f1182f2"
+                "uuid": "66be48cf-19bd-4483-984c-fe5cc4f288da"
               }
             ],
-            "uuid": "18737505-b13a-4f3c-8636-46c4b4bcc971"
+            "uuid": "6353e204-f5a9-4a92-9687-74fa7e2b4b16"
           },
           "studyElements": [
             {
               "studyElementId": "element_1",
               "studyElementName": "Element 1",
-              "studyElementDesc": "First element",
+              "studyElementDescription": "First element",
               "transitionStartRule": {
                 "transitionRuleId": "start_1",
-                "transitionRuleDesc": "Start Rule"
+                "transitionRuleDescription": "Start Rule"
               },
               "transitionEndRule": {
                 "transitionRuleId": "end_1",
-                "transitionRuleDesc": "End Rule"
+                "transitionRuleDescription": "End Rule"
               }
             }
           ]
@@ -486,7 +486,7 @@
           "studyArm": {
             "studyArmId": "study_arm_id_2",
             "studyArmName": "Active",
-            "studyArmDesc": "Super Drug Arm",
+            "studyArmDescription": "Super Drug Arm",
             "studyArmType": {
               "codeId": "todo_1",
               "code": "C15538",
@@ -494,7 +494,7 @@
               "codeSystemVersion": "2022-03-25",
               "decode": "Protocol Treatment Arm"
             },
-            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
               "codeId": "0012",
               "code": "C6574y",
@@ -506,9 +506,9 @@
           "studyEpoch": {
             "studyEpochId": "study_epoch_data_id_2",
             "studyEpochName": "Treatment",
-            "studyEpochDesc": "The drug!",
-            "previousStudyEpochId": "18737505-b13a-4f3c-8636-46c4b4bcc971",
-            "nextStudyEpochId": "589de8b2-c3e1-403c-aba4-c8882f719734",
+            "studyEpochDescription": "The drug!",
+            "previousStudyEpochId": "6353e204-f5a9-4a92-9687-74fa7e2b4b16",
+            "nextStudyEpochId": "b5514f06-b7d1-45c7-92df-d0f0eabe5243",
             "studyEpochType": {
               "codeId": "todo_1",
               "code": "C101526",
@@ -517,13 +517,13 @@
               "decode": "Treatment Epoch"
             },
             "encounters": [],
-            "uuid": "81cf19b8-5af6-46c2-8caf-8176615c6910"
+            "uuid": "2a7c2bb7-8241-4348-877a-79dcc40c4cbd"
           },
           "studyElements": [
             {
               "studyElementId": "element_3",
               "studyElementName": "Element 3",
-              "studyElementDesc": "Third element",
+              "studyElementDescription": "Third element",
               "transitionStartRule": null,
               "transitionEndRule": null
             }
@@ -534,7 +534,7 @@
           "studyArm": {
             "studyArmId": "study_arm_id_2",
             "studyArmName": "Active",
-            "studyArmDesc": "Super Drug Arm",
+            "studyArmDescription": "Super Drug Arm",
             "studyArmType": {
               "codeId": "todo_1",
               "code": "C15538",
@@ -542,7 +542,7 @@
               "codeSystemVersion": "2022-03-25",
               "decode": "Protocol Treatment Arm"
             },
-            "studyArmDataOriginDesc": "Captured subject data",
+            "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
               "codeId": "0012",
               "code": "C6574y",
@@ -554,8 +554,8 @@
           "studyEpoch": {
             "studyEpochId": "study_epoch_data_id_3",
             "studyEpochName": "Follow Up",
-            "studyEpochDesc": "Go away",
-            "previousStudyEpochId": "81cf19b8-5af6-46c2-8caf-8176615c6910",
+            "studyEpochDescription": "Go away",
+            "previousStudyEpochId": "2a7c2bb7-8241-4348-877a-79dcc40c4cbd",
             "nextStudyEpochId": null,
             "studyEpochType": {
               "codeId": "todo_1",
@@ -565,13 +565,13 @@
               "decode": "Clinical Study Follow-up"
             },
             "encounters": [],
-            "uuid": "589de8b2-c3e1-403c-aba4-c8882f719734"
+            "uuid": "b5514f06-b7d1-45c7-92df-d0f0eabe5243"
           },
           "studyElements": [
             {
               "studyElementId": "element_4",
               "studyElementName": "Element 4",
-              "studyElementDesc": "Fourth element",
+              "studyElementDescription": "Fourth element",
               "transitionStartRule": null,
               "transitionEndRule": null
             }
@@ -590,7 +590,7 @@
               "decode": "BAD STUFF"
             }
           ],
-          "indicationDesc": "Something bad"
+          "indicationDescription": "Something bad"
         }
       ],
       "studyInvestigationalInterventions": [
@@ -611,18 +611,18 @@
               "decode": "MODEL 2"
             }
           ],
-          "interventionDesc": "Intervention 1"
+          "interventionDescription": "Intervention 1"
         }
       ],
       "studyStudyDesignPopulations": [
         {
           "studyDesignPopulationId": "population_1",
-          "populationDesc": "Population 1"
+          "populationDescription": "Population 1"
         }
       ],
       "studyObjectives": [
         {
-          "objectiveDesc": "Objective Level 1",
+          "objectiveDescription": "Objective Level 1",
           "objectiveLevel": {
             "codeId": "0007",
             "code": "C9844x",
@@ -632,8 +632,8 @@
           },
           "objectiveEndpoints": [
             {
-              "endpointDesc": "Endpoint 1",
-              "endpointPurposeDesc": "level description",
+              "endpointDescription": "Endpoint 1",
+              "endpointPurposeDescription": "level description",
               "endpointLevel": {
                 "codeId": "0005",
                 "code": "C9834x",
@@ -643,8 +643,8 @@
               }
             },
             {
-              "endpointDesc": "Endpoint 2",
-              "endpointPurposeDesc": "level description",
+              "endpointDescription": "Endpoint 2",
+              "endpointPurposeDescription": "level description",
               "endpointLevel": {
                 "codeId": "0006",
                 "code": "C9834x",
@@ -666,9 +666,9 @@
               "workflowItemEncounter": {
                 "encounterId": "encounter_1",
                 "encounterName": "Encounter 1",
-                "encounterDesc": "desc",
+                "encounterDescription": "desc",
                 "previousEncounterId": null,
-                "nextEncounterId": "e9533ff4-6723-4166-b6ba-60272f1182f2",
+                "nextEncounterId": "66be48cf-19bd-4483-984c-fe5cc4f288da",
                 "encounterType": {
                   "codeId": "0002",
                   "code": "C7652x",
@@ -692,14 +692,14 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "f2455095-b736-40e6-a94a-fe2fbf4011ae"
+                "uuid": "6d7cf57b-0ed8-4c0f-83a4-ea179c6e3417"
               },
               "workflowItemActivity": {
                 "activityId": "activity_1",
                 "activityName": "A1",
-                "activityDesc": "Activity_1",
+                "activityDescription": "Activity_1",
                 "previousActivityId": null,
-                "nextActivityId": "6a8b4b44-23dd-4823-a31f-311ce418199c",
+                "nextActivityId": "9107c7c6-4931-47b3-95a9-5e1e231cccc7",
                 "definedProcedures": [
                   {
                     "procedureId": "proc_id",
@@ -714,19 +714,19 @@
                   }
                 ],
                 "studyDataCollection": [],
-                "uuid": "11c92dec-92b1-4136-a782-68489cac634a"
+                "uuid": "58886751-464b-4a56-904b-0e2673c7e818"
               },
-              "uuid": "ac82f542-0b1f-4155-903e-b0576888be63",
+              "uuid": "016e25c7-6f01-437a-81d4-3c502fef7323",
               "previousWorkflowItemId": null,
-              "nextWorkflowItemId": "4721da4d-3fe3-43d4-a645-2fe44ae6b87f"
+              "nextWorkflowItemId": "af26e4ff-a8d8-411b-b719-f72f48d59d3e"
             },
             {
               "workflowItemDesc": "",
               "workflowItemEncounter": {
                 "encounterId": "encounter_1",
                 "encounterName": "Encounter 2",
-                "encounterDesc": "desc",
-                "previousEncounterId": "f2455095-b736-40e6-a94a-fe2fbf4011ae",
+                "encounterDescription": "desc",
+                "previousEncounterId": "6d7cf57b-0ed8-4c0f-83a4-ea179c6e3417",
                 "nextEncounterId": null,
                 "encounterType": {
                   "codeId": "0002",
@@ -751,27 +751,27 @@
                 },
                 "transitionStartRule": null,
                 "transitionEndRule": null,
-                "uuid": "e9533ff4-6723-4166-b6ba-60272f1182f2"
+                "uuid": "66be48cf-19bd-4483-984c-fe5cc4f288da"
               },
               "workflowItemActivity": {
                 "activityId": "activity_2",
                 "activityName": "A2",
-                "activityDesc": "Activity_2",
-                "previousActivityId": "11c92dec-92b1-4136-a782-68489cac634a",
+                "activityDescription": "Activity_2",
+                "previousActivityId": "58886751-464b-4a56-904b-0e2673c7e818",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
                     "studyDataId": "study_data_id",
                     "studyDataName": "Study Data 1",
-                    "studyDataDesc": "Something",
+                    "studyDataDescription": "Something",
                     "crfLink": "Link 1"
                   }
                 ],
-                "uuid": "6a8b4b44-23dd-4823-a31f-311ce418199c"
+                "uuid": "9107c7c6-4931-47b3-95a9-5e1e231cccc7"
               },
-              "uuid": "4721da4d-3fe3-43d4-a645-2fe44ae6b87f",
-              "previousWorkflowItemId": "ac82f542-0b1f-4155-903e-b0576888be63",
+              "uuid": "af26e4ff-a8d8-411b-b719-f72f48d59d3e",
+              "previousWorkflowItemId": "016e25c7-6f01-437a-81d4-3c502fef7323",
               "nextWorkflowItemId": null
             }
           ]
