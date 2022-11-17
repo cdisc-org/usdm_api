@@ -203,6 +203,7 @@ def study_indication_data(id, description, indications):
 
 def study_data(title, version, type, phase, business_therapeutic_areas, identifiers, protocol_versions, designs):
   return {
+    "studyId": None,
     "studyTitle": title,
     "studyVersion": version,
     "studyType":  type,
