@@ -3,6 +3,9 @@ from factory.factory import *
 class SimpleStudy():
 
   def json():
+
+    reset_code_index()
+    
     procedure_code = code_data("767002", "SNOMED-CT", "2022-05-31", "White blood cell count")           
     procedure_1 = procedure_data("proc_id", "Specimen Collection", procedure_code)
     study_data_1 = study_data_data("study_data_id", "Study Data 1", "Something", "Link 1")
