@@ -12,4 +12,4 @@ class StudyEpoch(ApiBaseModel):
   studyEpochType: Union[Code, UUID]
   previousStudyEpochId: str
   nextStudyEpochId: str
-  encounters: Union[List[Encounter], List[UUID]]
+  encounters: List[str] = []
