@@ -1,5 +1,11 @@
 import yaml
 
+code_index = 0
+
+def reset_code_index():
+  global code_index
+  code_index = 0
+
 # def soa(df):
 #   encounters = []
 #   activities = []
@@ -27,9 +33,11 @@ def double_link(items, id, prev, next):
     else:
       item[next] = items[idx+1][id]
     
-def code_data(id, code, system, version, decode):
+def code_data(code, system, version, decode):
+  global code_index
+  code_index += 1
   return {
-    "codeId": id,
+    "codeId": "code_%s" % (code_index),
     "code": code,
     "codeSystem": system,
     "codeSystemVersion": version,
@@ -39,11 +47,10 @@ def code_data(id, code, system, version, decode):
 def code_for(klass, attribute, **kwargs):
   if 'c_code' in kwargs:
     entry = _find_ct_entry(klass, attribute, 'conceptId', kwargs['c_code'])
-    # TODO: Where does the codeId come from here?
-    return code_data("todo_1", entry['conceptId'], "http://www.cdisc.org", "2022-03-25", entry['preferredTerm'])
+    return code_data(entry['conceptId'], "http://www.cdisc.org", "2022-03-25", entry['preferredTerm'])
   elif 'submission_value' in kwargs:
     entry = _find_ct_entry(klass, attribute, 'submissionValue', kwargs['submission_value'])
-    return code_data("todo_1", entry['conceptId'], "http://www.cdisc.org", "2022-03-25", entry['preferredTerm'])
+    return code_data(entry['conceptId'], "http://www.cdisc.org", "2022-03-25", entry['preferredTerm'])
   else:
     raise Exception("Need to specify either a C Code or Submission value when selecting a CT value.")
 

@@ -3,7 +3,7 @@ from factory.factory import *
 class SimpleStudy():
 
   def json():
-    procedure_code = code_data("0001", "767002", "SNOMED-CT", "2022-05-31", "White blood cell count")           
+    procedure_code = code_data("767002", "SNOMED-CT", "2022-05-31", "White blood cell count")           
     procedure_1 = procedure_data("proc_id", "Specimen Collection", procedure_code)
     study_data_1 = study_data_data("study_data_id", "Study Data 1", "Something", "Link 1")
     activity_1 = activity_data("activity_1", "A1", "Activity_1", [procedure_1], [])
@@ -11,7 +11,7 @@ class SimpleStudy():
     activities = [activity_1, activity_2]
     double_link(activities, 'activityId', 'previousActivityId', 'nextActivityId')
 
-    encounter_type = code_data("0002", "C7652x", "http://www.cdisc.org", "1", "SITE VISIT")
+    encounter_type = code_data("C7652x", "http://www.cdisc.org", "1", "SITE VISIT")
     env_setting = code_for('Encounter', 'encounterEnvironmentalSetting', c_code='C51282')    
     env_contact_mode = code_for('Encounter', 'encounterContactMode', c_code='C175574')    
     encounter_1 = encounter_data("encounter_1", "Encounter 1", "desc", encounter_type, env_setting, env_contact_mode)
@@ -34,8 +34,8 @@ class SimpleStudy():
     ii_1 = investigational_intervention_data(
       "Intervention 1", 
       [ 
-        code_data("0003", "C7639x", "http://www.cdisc.org", "1", "MODEL 1"), 
-        code_data("0004", "C7639y", "http://www.cdisc.org", "1", "MODEL 2")
+        code_data("C7639x", "http://www.cdisc.org", "1", "MODEL 1"), 
+        code_data("C7639y", "http://www.cdisc.org", "1", "MODEL 2")
       ]
     )
 
@@ -44,21 +44,21 @@ class SimpleStudy():
     endpoint_1 = endpoint_data(
       "Endpoint 1", 
       "level description",
-      code_data("0005", "C9834x", "http://www.cdisc.org", "1", "PURPOSE")
+      code_data("C9834x", "http://www.cdisc.org", "1", "PURPOSE")
       )
     endpoint_2 = endpoint_data(
       "Endpoint 2",
       "level description",
-      code_data("0006", "C9834x", "http://www.cdisc.org", "1", "PURPOSE"),
+      code_data("C9834x", "http://www.cdisc.org", "1", "PURPOSE"),
       )
     objective_1 = objective_data(
       "Objective Level 1", 
-      code_data("0007", "C9844x", "http://www.cdisc.org", "1", "OBJ LEVEL"), 
+      code_data("C9844x", "http://www.cdisc.org", "1", "OBJ LEVEL"), 
       [endpoint_1, endpoint_2]
     )
 
-    phase = code_data("0008", "C49686", "http://www.cdisc.org", "2022-03-25", "Phase IIa Trial")
-    study_type = code_data("0009", "C98388", "http://www.cdisc.org", "2022-03-25", "Interventional Study")
+    phase = code_data("C49686", "http://www.cdisc.org", "2022-03-25", "Phase IIa Trial")
+    study_type = code_data("C98388", "http://www.cdisc.org", "2022-03-25", "Interventional Study")
     registry_type = code_for('Organization', 'organizationType', submission_value='Clinical Study Registry')
     sponsor_type = code_for('Organization', 'organizationType', submission_value='Clinical Study Sponsor')
     regulator_type = code_for('Organization', 'organizationType', submission_value='Regulatory Agency')
@@ -70,9 +70,9 @@ class SimpleStudy():
     identifier_3 = study_identifier_data("study_identifier_id_3", "ACME-5678", organisation_1)
     identifiers = [identifier_1, identifier_2, identifier_3]
 
-    indication_1 = study_indication_data("study_idication_id_1", "Something bad", [code_data("0010", "C6666x", "http://www.cdisc.org", "1", "BAD STUFF")])
-    indication_2 = study_indication_data("study_idication_id_2", "Something similarly bad", [code_data("0011", "C6666y", "http://www.cdisc.org", "1", "BAD SIMILAR STUFF")])
-    origin_type = code_data("0012", "C6574y", "http://www.cdisc.org", "1", "SUBJECT DATA")
+    indication_1 = study_indication_data("study_idication_id_1", "Something bad", [code_data("C6666x", "http://www.cdisc.org", "1", "BAD STUFF")])
+    indication_2 = study_indication_data("study_idication_id_2", "Something similarly bad", [code_data("C6666y", "http://www.cdisc.org", "1", "BAD SIMILAR STUFF")])
+    origin_type = code_data("C6574y", "http://www.cdisc.org", "1", "SUBJECT DATA")
     treatment = code_for('StudyArm', 'studyArmType', submission_value='Treatment Arm')
     placebo = code_for('StudyArm', 'studyArmType', submission_value='Placebo Comparator Arm')
     study_arm_1 = study_arm_data("study_arm_id_1", "Placebo", "The Placebo Arm", placebo, "Captured subject data", origin_type)
@@ -109,16 +109,16 @@ class SimpleStudy():
     trial_types = [trial_1_type, trial_2_type]
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='PARALLEL')
 
-    ta = code_data("0013", "123456789", "SNOMED", "2022", "Something")
+    ta = code_data("123456789", "SNOMED", "2022", "Something")
     therapeutic_areas = [ta]
 
     design_1 = study_design_data("study_design_1", "Study Design", "foobar", [intent], trial_types, int_model, therapeutic_areas, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [workflow], [], [], [])
     designs = [design_1]
-    final = code_data("0014", "C1113x", "http://www.cdisc.org", "1", "FINAL")
+    final = code_data("C1113x", "http://www.cdisc.org", "1", "FINAL")
     protocol_version_1 = study_protocol_version_data("study_protocol_data_1", "Short", "Very Official", "Public Voice", "Incomprehensible", "1", None, "2022-01-01", final)
     protocol_version_2 = study_protocol_version_data("study_protocol_data_2", "Shorter", "Very Official", "Public Voice", "Incomprehensible", "1", "Amendment 1", "2022-02-01", final)
     protocol_versions = [protocol_version_1, protocol_version_2]
 
-    bta = code_data("0015", "12345", "Sponsor", "2022", "Business Unit A")
+    bta = code_data("12345", "Sponsor", "2022", "Business Unit A")
     business_therapeutic_areas = [bta]
     return study_data("Small Simple Test Study (SSTS)", "1", study_type, phase, business_therapeutic_areas, identifiers, protocol_versions, designs)
