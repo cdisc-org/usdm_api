@@ -1,5 +1,4 @@
 import yaml
-from uuid import uuid4
 
 # def soa(df):
 #   encounters = []
@@ -17,18 +16,16 @@ from uuid import uuid4
 #       if row[column].upper() == "X":
 #         workflow_item_data("WFI %s,%s)", None, None, encounters[column], activities[row])
 
-def double_link(items, prev, next):
-  for item in items:
-    item['uuid'] = str(uuid4())
+def double_link(items, id, prev, next):
   for idx, item in enumerate(items):
     if idx == 0:
       item[prev] = None
     else:
-      item[prev] = items[idx-1]['uuid']
+      item[prev] = items[idx-1][id]
     if idx == len(items)-1:  
       item[next] = None
     else:
-      item[next] = items[idx+1]['uuid']
+      item[next] = items[idx+1][id]
     
 def code_data(id, code, system, version, decode):
   return {
@@ -49,24 +46,6 @@ def code_for(klass, attribute, **kwargs):
     return code_data("todo_1", entry['conceptId'], "http://www.cdisc.org", "2022-03-25", entry['preferredTerm'])
   else:
     raise Exception("Need to specify either a C Code or Submission value when selecting a CT value.")
-
-def workflow_data(description, start, end, items):
-  return {
-    "workflow_description": description,
-    "workflow_start_point": start,
-    "workflow_end_point": end,
-    "workflow_item": items
-  }
-
-def workflow_item_data(description, from_pit, to_pit, previous, encounter, activity):
-  return {
-    "description": description,
-    "from_point_in_time": from_pit,
-    "to_point_in_time": to_pit,
-    "previous_workflow_item": previous,
-    "encounter": encounter,
-    "activity": activity
-  }
 
 def activity_data(id, name, description, procedures, study_data):
   return {
@@ -106,13 +85,6 @@ def encounter_data(id, name, description, encounter_type, env_setting, contact_m
     "encounterContactMode": contact_mode,
     "transitionStartRule": start_rule,
     "transitionEndRule": end_rule
-  }
-
-def point_in_time_data(start, end, pit_type):
-  return {
-    "start_date": start,
-    "end_date": end,
-    "point_in_time_type": pit_type
   }
 
 def investigational_intervention_data(description, codes):
@@ -267,8 +239,9 @@ def study_protocol_version_data(id, brief_title, official_title, public_title, s
     "protocolStatus": status
   }
 
-def workflow_item_data(description, encounter, activity):
+def workflow_item_data(id, description, encounter, activity):
   return {
+    'workflowItemId': id,
     'workflowItemDesc': description,
     'workflowItemEncounter': encounter,
     'workflowItemActivity': activity,

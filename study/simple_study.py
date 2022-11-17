@@ -9,25 +9,27 @@ class SimpleStudy():
     activity_1 = activity_data("activity_1", "A1", "Activity_1", [procedure_1], [])
     activity_2 = activity_data("activity_2", "A2", "Activity_2", [], [study_data_1])
     activities = [activity_1, activity_2]
-    double_link(activities, 'previousActivityId', 'nextActivityId')
+    double_link(activities, 'activityId', 'previousActivityId', 'nextActivityId')
 
     encounter_type = code_data("0002", "C7652x", "http://www.cdisc.org", "1", "SITE VISIT")
     env_setting = code_for('Encounter', 'encounterEnvironmentalSetting', c_code='C51282')    
     env_contact_mode = code_for('Encounter', 'encounterContactMode', c_code='C175574')    
     encounter_1 = encounter_data("encounter_1", "Encounter 1", "desc", encounter_type, env_setting, env_contact_mode)
-    encounter_2 = encounter_data("encounter_1", "Encounter 2", "desc", encounter_type, env_setting, env_contact_mode)
+    encounter_2 = encounter_data("encounter_2", "Encounter 2", "desc", encounter_type, env_setting, env_contact_mode)
     encounters = [encounter_1, encounter_2]
-    double_link(encounters, 'previousEncounterId', 'nextEncounterId')
+    double_link(encounters, 'encounterId', 'previousEncounterId', 'nextEncounterId')
 
     wfi_links = [
       [encounter_1, activity_1],
       [encounter_2, activity_2]
     ]
     wfis = []
-    for item in wfi_links:
-      wfis.append(workflow_item_data("", item[0], item[1]))
+    for idx, item in enumerate(wfi_links):
+      id = "workflow_item_%s" % (idx + 1)
+      description = "Workflow item %s" % (idx + 1)
+      wfis.append(workflow_item_data(id, description, item[0], item[1]))
     workflow = workflow_data("workflow_1", "Schedule of Activities", wfis)
-    double_link(wfis, 'previousWorkflowItemId', 'nextWorkflowItemId')  
+    double_link(wfis, 'workflowItemId', 'previousWorkflowItemId', 'nextWorkflowItemId')  
 
     ii_1 = investigational_intervention_data(
       "Intervention 1", 
@@ -83,7 +85,7 @@ class SimpleStudy():
     study_epoch_2 = study_epoch_data("study_epoch_data_id_2", "Treatment", "The drug!", treatment, [])
     study_epoch_3 = study_epoch_data("study_epoch_data_id_3", "Follow Up", "Go away", follow_up, [])
     epochs = [study_epoch_1, study_epoch_2, study_epoch_3]
-    double_link(epochs, 'previousStudyEpochId', 'nextStudyEpochId')
+    double_link(epochs, 'studyEpochId', 'previousStudyEpochId', 'nextStudyEpochId')
     #print(epochs)
 
     start_rule = transition_rule_data("start_1", "Start Rule")
