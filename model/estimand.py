@@ -9,7 +9,7 @@ from uuid import UUID
 class Estimand(ApiBaseModel):
   estimandId: str
   summaryMeasure: str
-  analysisPopulation: Union[AnalysisPopulation, UUID]
+  analysisPopulation: AnalysisPopulation
   treatment: Union[str, None] = None
   variableOfInterest: Union[str, None] = None
-  intercurrentEvents: Union[List[IntercurrentEvent], List[UUID]]
+  intercurrentEvents: List[IntercurrentEvent] = []

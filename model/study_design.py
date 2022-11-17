@@ -19,19 +19,19 @@ class StudyDesign(ApiBaseModel):
   studyDesignId: str
   studyDesignName: str
   studyDesignDescription: str
-  trialIntentTypes: Union[List[Code], List[UUID]]
-  trialType: Union[List[Code], List[UUID]]
-  interventionModel: Union[Code, UUID]
-  studyCells: Union[List[StudyCell], List[UUID], None] = []
-  studyIndications: Union[List[Indication], List[UUID], None] = []
-  studyInvestigationalInterventions: Union[List[InvestigationalIntervention], List[UUID], None] = []
-  studyStudyDesignPopulations: Union[List[StudyDesignPopulation], List[UUID], None] = []
-  studyObjectives: Union[List[Objective], List[UUID], None] = []
-  studyWorkflows: Union[List[Workflow], List[UUID], None] = []
-  therapeuticAreas: Union[List[Code], List[UUID]] = []
-  studyEstimands: Union[List[Estimand], List[UUID], None] = []
-  encounters: Union[List[Encounter], List[UUID], None] = []
-  activities: Union[List[Activity], List[UUID], None] = []
+  trialIntentTypes: List[Code] = []
+  trialType: List[Code] = []
+  interventionModel: Code
+  studyCells: List[StudyCell] = []
+  studyIndications: List[Indication] = []
+  studyInvestigationalInterventions: List[InvestigationalIntervention] = []
+  studyStudyDesignPopulations: List[StudyDesignPopulation] = []
+  studyObjectives: List[Objective] = []
+  studyWorkflows: List[Workflow] = []
+  therapeuticAreas: List[Code] = []
+  studyEstimands: List[Estimand] = []
+  encounters: List[Encounter] = []
+  activities: List[Activity] = []
 
   @classmethod
   def search(cls, store, uuid):

@@ -13,4 +13,4 @@ class StudyProtocolVersion(ApiBaseModel):
   protocolVersion: str
   protocolAmendment: Union[str, None] = None
   protocolEffectiveDate: date
-  protocolStatus: Union[UUID, Code]
+  protocolStatus: Code

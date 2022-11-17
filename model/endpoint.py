@@ -7,4 +7,4 @@ class Endpoint(ApiBaseModel):
   endpointId: str
   endpointDescription: str
   endpointPurposeDescription: str
-  endpointLevel: Union[Code, UUID, None]
+  endpointLevel: Union[Code, None] = None

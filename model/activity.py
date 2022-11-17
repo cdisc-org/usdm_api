@@ -11,5 +11,5 @@ class Activity(ApiBaseModel):
   activityDescription: str
   previousActivityId: Union[str, None] = None
   nextActivityId: Union[str, None] = None
-  definedProcedures: Union[List[Procedure], List[UUID]] = []
-  studyDataCollection: Union[List[StudyData], List[UUID]] = []
+  definedProcedures: List[Procedure] = []
+  studyDataCollection: List[StudyData] = []

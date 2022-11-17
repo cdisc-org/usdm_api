@@ -8,5 +8,5 @@ class StudyElement(ApiBaseModel):
   studyElementId: str
   studyElementName: str
   studyElementDescription: str
-  transitionStartRule: Union[TransitionRule, UUID, None] = None
-  transitionEndRule: Union[TransitionRule, UUID, None] = None
+  transitionStartRule: Union[TransitionRule, None] = None
+  transitionEndRule: Union[TransitionRule, None] = None

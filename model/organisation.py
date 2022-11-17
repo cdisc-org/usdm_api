@@ -8,7 +8,7 @@ class Organisation(ApiBaseModel):
   organisationIdentifierScheme: str
   organisationIdentifier: str
   organisationName: str
-  organisationType: Union[UUID, Code]
+  organisationType: Code
 
   @classmethod
   def global_reuse(cls):

@@ -6,7 +6,7 @@ from .organisation import Organisation
 class StudyIdentifier(ApiBaseModel):
   studyIdentifierId: str
   studyIdentifier: str
-  studyIdentifierScope: Union[UUID, Organisation]
+  studyIdentifierScope: Organisation
 
   @classmethod
   def scope_reuse(cls):
