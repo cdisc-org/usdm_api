@@ -6,10 +6,10 @@ from .study_data import StudyData
 from uuid import UUID
 
 class Activity(ApiBaseModel):
-  uuid: Union[UUID, None] = None
+  activityId: str
   activityName: str
-  activityDesc: str
-  previousActivityId: Union[UUID, None] = None
-  nextActivityId: Union[UUID, None] = None
-  definedProcedures: Union[List[Procedure], List[UUID]] = []
-  studyDataCollection: Union[List[StudyData], List[UUID]] = []
+  activityDescription: str
+  previousActivityId: Union[str, None] = None
+  nextActivityId: Union[str, None] = None
+  definedProcedures: List[Procedure] = []
+  studyDataCollection: List[StudyData] = []

@@ -1,9 +1,7 @@
-from typing import Union
-from uuid import UUID
 from .api_base_model import ApiBaseModel
 
 class Code(ApiBaseModel):
-  uuid: Union[UUID, None]
+  codeId: str
   code: str
   codeSystem: str
   codeSystemVersion: str

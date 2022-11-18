@@ -5,7 +5,7 @@ from .endpoint import Endpoint
 from uuid import UUID
 
 class Objective(ApiBaseModel):
-  uuid: Union[UUID, None] = None
-  objectiveDesc: str
-  objectiveLevel: Union[Code, UUID, None]
-  objectiveEndpoints: Union[List[Endpoint], List[UUID], None]
+  objectiveId: str
+  objectiveDescription: str
+  objectiveLevel: Union[Code, None] = None
+  objectiveEndpoints: List[Endpoint] = []

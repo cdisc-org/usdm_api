@@ -7,15 +7,15 @@ from .study_design import *
 from uuid import UUID
 
 class Study(ApiBaseModel):
-  uuid: Union[UUID, None]
+  studyId: Union[UUID, None] = None
   studyTitle: str
   studyVersion: str
-  studyType: Union[Code, UUID, None]
-  studyPhase: Union[Code, UUID, None]
-  businessTherapeuticAreas: Union[List[Code], List[UUID]] = []
-  studyIdentifiers: Union[List[StudyIdentifier], List[UUID], None] = []
-  studyProtocolVersions: Union[List[StudyProtocolVersion], List[UUID], None] = []
-  studyDesigns: Union[List[StudyDesign], List[UUID], None] = []
+  studyType: Union[Code, None] = None
+  studyPhase: Union[Code, None] = None
+  businessTherapeuticAreas: List[Code] = []
+  studyIdentifiers: List[StudyIdentifier] = []
+  studyProtocolVersions: List[StudyProtocolVersion] = []
+  studyDesigns: List[StudyDesign] = []
 
   @classmethod
   def scope_reuse(cls):

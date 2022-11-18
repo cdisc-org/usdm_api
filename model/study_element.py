@@ -1,14 +1,12 @@
-from typing import List, Union
+from typing import Union
 from .api_base_model import ApiBaseModel
 from .transition_rule import TransitionRule
-from .encounter import Encounter
-from .activity import Activity
 
 from uuid import UUID
 
 class StudyElement(ApiBaseModel):
-  uuid: Union[UUID, None] = None
+  studyElementId: str
   studyElementName: str
-  studyElementDesc: str
-  transitionStartRule: Union[TransitionRule, UUID, None] = None
-  transitionEndRule: Union[TransitionRule, UUID, None] = None
+  studyElementDescription: str
+  transitionStartRule: Union[TransitionRule, None] = None
+  transitionEndRule: Union[TransitionRule, None] = None
