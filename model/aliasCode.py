@@ -4,7 +4,7 @@ from .code import Code
 
 from uuid import UUID
 
-class AliasedCode(ApiBaseModel):
-  aliasedCodeId: str
+class AliasCode(ApiBaseModel):
+  aliasCodeId: str
   standardCode: Code
   standardCodeAliases: List[Code] = []
