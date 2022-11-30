@@ -16,7 +16,7 @@ class SimpleStudy():
 
     encounter_type = code_data("C7652x", "http://www.cdisc.org", "1", "SITE VISIT")
     env_setting = code_for('Encounter', 'encounterEnvironmentalSetting', c_code='C51282')    
-    env_contact_mode = code_for('Encounter', 'encounterContactMode', c_code='C175574')    
+    env_contact_mode = code_for('Encounter', 'encounterContactModes', c_code='C175574')    
     encounter_1 = encounter_data("encounter_1", "Encounter 1", "desc", encounter_type, env_setting, env_contact_mode)
     encounter_2 = encounter_data("encounter_2", "Encounter 2", "desc", encounter_type, env_setting, env_contact_mode)
     encounters = [encounter_1, encounter_2]

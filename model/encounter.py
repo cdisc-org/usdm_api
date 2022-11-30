@@ -12,6 +12,6 @@ class Encounter(ApiBaseModel):
   nextEncounterId: Union[str, None] = None
   encounterType: Union[Code, None] = None
   encounterEnvironmentalSetting: Union[Code, None] = None
-  encounterContactMode: List[Code] = None
+  encounterContactModes: List[Code] = None
   transitionStartRule: Union[TransitionRule, None] = None
   transitionEndRule: Union[TransitionRule, None] = None

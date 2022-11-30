@@ -90,7 +90,7 @@ def encounter_data(id, name, description, encounter_type, env_setting, contact_m
     "nextEncounterId": None,
     "encounterType": encounter_type,
     "encounterEnvironmentalSetting": env_setting,
-    "encounterContactMode": contact_mode,
+    "encounterContactModes": [contact_mode],
     "transitionStartRule": start_rule,
     "transitionEndRule": end_rule
   }
