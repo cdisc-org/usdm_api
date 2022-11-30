@@ -62,7 +62,8 @@ def activity_data(id, name, description, procedures, study_data):
     "previousActivityId": None,
     "nextActivityId": None,
     "definedProcedures": procedures,
-    "studyDataCollection": study_data
+    "studyDataCollection": study_data,
+    "activityIsOptional": True
   }
 
 def procedure_data(the_id, the_type, the_code):

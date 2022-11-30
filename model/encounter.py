@@ -1,4 +1,4 @@
-from typing import Union
+from typing import List, Union
 from .api_base_model import ApiBaseModel
 from .code import Code
 from .transition_rule import TransitionRule
@@ -12,6 +12,6 @@ class Encounter(ApiBaseModel):
   nextEncounterId: Union[str, None] = None
   encounterType: Union[Code, None] = None
   encounterEnvironmentalSetting: Union[Code, None] = None
-  encounterContactMode: Union[Code, None] = None
+  encounterContactMode: List[Code] = None
   transitionStartRule: Union[TransitionRule, None] = None
   transitionEndRule: Union[TransitionRule, None] = None

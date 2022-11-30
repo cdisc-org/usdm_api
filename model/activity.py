@@ -13,3 +13,4 @@ class Activity(ApiBaseModel):
   nextActivityId: Union[str, None] = None
   definedProcedures: List[Procedure] = []
   studyDataCollection: List[StudyData] = []
+  activityIsOptional: bool
