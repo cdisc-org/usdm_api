@@ -54,7 +54,7 @@ def code_for(klass, attribute, **kwargs):
   else:
     raise Exception("Need to specify either a C Code or Submission value when selecting a CT value.")
 
-def activity_data(id, name, description, procedures, study_data):
+def activity_data(id, name, description, procedures, study_data, optional=False):
   return {
     "activityId": id,
     "activityName": name,
@@ -63,14 +63,15 @@ def activity_data(id, name, description, procedures, study_data):
     "nextActivityId": None,
     "definedProcedures": procedures,
     "studyDataCollection": study_data,
-    "activityIsOptional": True
+    "activityIsOptional": optional
   }
 
-def procedure_data(the_id, the_type, the_code):
+def procedure_data(the_id, the_type, the_code, optional=False):
   return {
     "procedureId": the_id,
     "procedureType": the_type,
-    "procedureCode": the_code
+    "procedureCode": the_code,
+    "procedureIsOptional": optional
   }
 
 def study_data_data(id, name, description, link):

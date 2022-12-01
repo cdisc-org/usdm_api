@@ -208,13 +208,15 @@
                   "codeSystemVersion": "2022-03-25",
                   "decode": "Clinic"
                 },
-                "encounterContactMode": {
-                  "codeId": "code_4",
-                  "code": "C175574",
-                  "codeSystem": "http://www.cdisc.org",
-                  "codeSystemVersion": "2022-03-25",
-                  "decode": "In Person"
-                },
+                "encounterContactModes": [
+                  {
+                    "codeId": "code_4",
+                    "code": "C175574",
+                    "codeSystem": "http://www.cdisc.org",
+                    "codeSystemVersion": "2022-03-25",
+                    "decode": "In Person"
+                  }
+                ],
                 "transitionStartRule": null,
                 "transitionEndRule": null
               },
@@ -238,13 +240,15 @@
                   "codeSystemVersion": "2022-03-25",
                   "decode": "Clinic"
                 },
-                "encounterContactMode": {
-                  "codeId": "code_4",
-                  "code": "C175574",
-                  "codeSystem": "http://www.cdisc.org",
-                  "codeSystemVersion": "2022-03-25",
-                  "decode": "In Person"
-                },
+                "encounterContactModes": [
+                  {
+                    "codeId": "code_4",
+                    "code": "C175574",
+                    "codeSystem": "http://www.cdisc.org",
+                    "codeSystemVersion": "2022-03-25",
+                    "decode": "In Person"
+                  }
+                ],
                 "transitionStartRule": null,
                 "transitionEndRule": null
               }
@@ -416,13 +420,15 @@
                   "codeSystemVersion": "2022-03-25",
                   "decode": "Clinic"
                 },
-                "encounterContactMode": {
-                  "codeId": "code_4",
-                  "code": "C175574",
-                  "codeSystem": "http://www.cdisc.org",
-                  "codeSystemVersion": "2022-03-25",
-                  "decode": "In Person"
-                },
+                "encounterContactModes": [
+                  {
+                    "codeId": "code_4",
+                    "code": "C175574",
+                    "codeSystem": "http://www.cdisc.org",
+                    "codeSystemVersion": "2022-03-25",
+                    "decode": "In Person"
+                  }
+                ],
                 "transitionStartRule": null,
                 "transitionEndRule": null
               },
@@ -446,13 +452,15 @@
                   "codeSystemVersion": "2022-03-25",
                   "decode": "Clinic"
                 },
-                "encounterContactMode": {
-                  "codeId": "code_4",
-                  "code": "C175574",
-                  "codeSystem": "http://www.cdisc.org",
-                  "codeSystemVersion": "2022-03-25",
-                  "decode": "In Person"
-                },
+                "encounterContactModes": [
+                  {
+                    "codeId": "code_4",
+                    "code": "C175574",
+                    "codeSystem": "http://www.cdisc.org",
+                    "codeSystemVersion": "2022-03-25",
+                    "decode": "In Person"
+                  }
+                ],
                 "transitionStartRule": null,
                 "transitionEndRule": null
               }
@@ -675,13 +683,15 @@
                   "codeSystemVersion": "2022-03-25",
                   "decode": "Clinic"
                 },
-                "encounterContactMode": {
-                  "codeId": "code_4",
-                  "code": "C175574",
-                  "codeSystem": "http://www.cdisc.org",
-                  "codeSystemVersion": "2022-03-25",
-                  "decode": "In Person"
-                },
+                "encounterContactModes": [
+                  {
+                    "codeId": "code_4",
+                    "code": "C175574",
+                    "codeSystem": "http://www.cdisc.org",
+                    "codeSystemVersion": "2022-03-25",
+                    "decode": "In Person"
+                  }
+                ],
                 "transitionStartRule": null,
                 "transitionEndRule": null
               },
@@ -701,10 +711,12 @@
                       "codeSystem": "SNOMED-CT",
                       "codeSystemVersion": "2022-05-31",
                       "decode": "White blood cell count"
-                    }
+                    },
+                    "procedureIsOptional": false
                   }
                 ],
-                "studyDataCollection": []
+                "studyDataCollection": [],
+                "activityIsOptional": false
               },
               "previousWorkflowItemId": null,
               "nextWorkflowItemId": "workflow_item_2"
@@ -732,13 +744,15 @@
                   "codeSystemVersion": "2022-03-25",
                   "decode": "Clinic"
                 },
-                "encounterContactMode": {
-                  "codeId": "code_4",
-                  "code": "C175574",
-                  "codeSystem": "http://www.cdisc.org",
-                  "codeSystemVersion": "2022-03-25",
-                  "decode": "In Person"
-                },
+                "encounterContactModes": [
+                  {
+                    "codeId": "code_4",
+                    "code": "C175574",
+                    "codeSystem": "http://www.cdisc.org",
+                    "codeSystemVersion": "2022-03-25",
+                    "decode": "In Person"
+                  }
+                ],
                 "transitionStartRule": null,
                 "transitionEndRule": null
               },
@@ -756,7 +770,8 @@
                     "studyDataDescription": "Something",
                     "crfLink": "Link 1"
                   }
-                ]
+                ],
+                "activityIsOptional": false
               },
               "previousWorkflowItemId": "workflow_item_1",
               "nextWorkflowItemId": null
