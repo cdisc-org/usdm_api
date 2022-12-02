@@ -69,6 +69,10 @@ annotations = {
       'summary': "Create a study",
       'description': "Create an entire study including all child element with a single post"
     },
+    'put': {
+      'summary': "Update a study",
+      'description': "Update an entire study including all child element with a single put"
+    },
     'get': {
       'summary': "List the studies",
       'description': "Return the identifiers for all the studies in the repository"
