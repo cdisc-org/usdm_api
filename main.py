@@ -152,7 +152,7 @@ store = Store()
   responses=standard_responses)
 async def create_study(study: Study):
   study.recursive_save(store)
-  return study.uuid
+  return study.studyId
 
 @app.put("/v1/studyDefinitions/{uuid}", 
   tags=["Production"], 
@@ -161,12 +161,11 @@ async def create_study(study: Study):
   status_code=status.HTTP_200_OK,
   response_model=UUID,
   responses=standard_responses)
-async def update_study(uuid: str):
-  if uuid not in Study.list(store):
+async def update_study(study: Study):
+  if study.studyId not in Study.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
-  study = Study.recursive_read(store, uuid)
-  study.recursive_save(store, scope=uuid)
-  return study.uuid
+  study.recursive_save(store, scope=study.studyId)
+  return study.studyId
 
 @app.get("/v1/studyDefinitions/{uuid}", 
   tags=["Production"], 
