@@ -15,7 +15,7 @@ from model.activity import *
 from model.transition_rule import *
 from model.encounter import *
 
-VERSION = "1.3 Provisional (0.27)"
+VERSION = "1.4 Provisional (0.28)"
 SYSTEM_NAME = "Simple API for DDF"
 
 tags_metadata = [
@@ -68,6 +68,10 @@ annotations = {
     'post': {
       'summary': "Create a study",
       'description': "Create an entire study including all child element with a single post"
+    },
+    'put': {
+      'summary': "Update a study",
+      'description': "Update an entire study including all child element with a single put"
     },
     'get': {
       'summary': "List the studies",
@@ -148,7 +152,20 @@ store = Store()
   responses=standard_responses)
 async def create_study(study: Study):
   study.recursive_save(store)
-  return study.uuid
+  return study.studyId
+
+@app.put("/v1/studyDefinitions/{uuid}", 
+  tags=["Production"], 
+  summary=annotations['study_definition']['put']['summary'],
+  description=annotations['study_definition']['put']['description'], 
+  status_code=status.HTTP_200_OK,
+  response_model=UUID,
+  responses=standard_responses)
+async def update_study(study: Study):
+  if study.studyId not in Study.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  study.recursive_save(store, scope=study.studyId)
+  return study.studyId
 
 @app.get("/v1/studyDefinitions/{uuid}", 
   tags=["Production"], 

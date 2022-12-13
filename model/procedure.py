@@ -12,6 +12,7 @@ class Procedure(ApiBaseModel):
   procedureType: str
   procedureCode: Code
   procedureIsOptional: bool
+  procedureIsOptionalReason: str
   
   @classmethod
   def scope_reuse(cls):
