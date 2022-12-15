@@ -91,22 +91,22 @@ class SimpleStudy():
     study_element_4 = study_element_data()
 
     study_cells = []
-    study_cells.append(study_cell_data("study_cell_1", study_arm_1, study_epoch_1, [study_element_1]))
-    study_cells.append(study_cell_data("study_cell_2", study_arm_1, study_epoch_2, [study_element_2]))
-    study_cells.append(study_cell_data("study_cell_3", study_arm_1, study_epoch_3, [study_element_4]))
-    study_cells.append(study_cell_data("study_cell_4", study_arm_2, study_epoch_1, [study_element_1]))
-    study_cells.append(study_cell_data("study_cell_5", study_arm_2, study_epoch_2, [study_element_3]))
-    study_cells.append(study_cell_data("study_cell_6", study_arm_2, study_epoch_3, [study_element_4]))
+    study_cells.append(study_cell_data(study_arm_1, study_epoch_1, [study_element_1]))
+    study_cells.append(study_cell_data(study_arm_1, study_epoch_2, [study_element_2]))
+    study_cells.append(study_cell_data(study_arm_1, study_epoch_3, [study_element_4]))
+    study_cells.append(study_cell_data(study_arm_2, study_epoch_1, [study_element_1]))
+    study_cells.append(study_cell_data(study_arm_2, study_epoch_2, [study_element_3]))
+    study_cells.append(study_cell_data(study_arm_2, study_epoch_3, [study_element_4]))
 
     intent = code_for('StudyDesign', 'trialIntentType', c_code='C15714')
     trial_1_type = code_for('StudyDesign', 'trialType', submission_value='BIOSIMILARITY')
     trial_2_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
-    trial_types = [trial_1_type, trial_2_type]
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='PARALLEL')
 
     therapeutic_areas = [code_data()]
 
-    design_1 = study_design_data("study_design_1", "Study Design", "foobar", [intent], trial_types, int_model, therapeutic_areas, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [workflow], [], [], [])
+    trial_types = [trial_1_type, trial_2_type]
+    design_1 = study_design_data([intent], trial_types, int_model, therapeutic_areas, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [workflow], [], [], [])
     designs = [design_1]
     protocol_version_1 = study_protocol_version_data("study_protocol_data_1", "Short", "Very Official", "Public Voice", "Incomprehensible", "1", None, "2022-01-01", code_data())
     protocol_version_2 = study_protocol_version_data("study_protocol_data_2", "Shorter", "Very Official", "Public Voice", "Incomprehensible", "1", "Amendment 1", "2022-02-01", code_data())

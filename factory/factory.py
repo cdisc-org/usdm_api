@@ -32,6 +32,16 @@ class DDFFakerProvider(BaseProvider):
         "activityIsOptional": optional,
         "activityIsOptionalReason": fake.sentence()
       }
+    def address(self):
+      return {
+          "text": "123",
+          "line": "fake",
+          "city": "street",
+          "district": "district 19",
+          "state": "TX",
+          "postalCode": "12345",
+          "country": "USA"
+      }
     def code(self):
       global code_index
       code_index += 1
@@ -57,19 +67,25 @@ class DDFFakerProvider(BaseProvider):
         "transitionEndRule": None
       }
     def endpoint(self):
+      i = fake.random.randint(1, 999)
       return {
-        "endpointDescription": "Endpoint %s" % fake.random.randint(1, 999),
+        "endpointId": "endpoint_%s" % i,
+        "endpointDescription": "Endpoint %s" % i,
         "endpointPurposeDescription": fake.sentence(),
         "endpointLevel": fake.code()
       }
     def investigational_intervention(self):
+      i = fake.random.randint(1, 999)
       return {
+        "investigationalInterventionId": "intervention_%s" % i,
+        "interventionDescription": "Intervention %s" % i,
         "codes": [fake.code(), fake.code()],
-        "interventionDescription": "intervention_%s" % fake.random.randint(1, 999),
       }
     def objective(self):
+      i = fake.random.randint(1, 999)
       return {
-        "objectiveDescription": "Objective Level %s" % fake.random.randint(1, 999),
+        "objectiveId": "objective_%s" % i,
+        "objectiveDescription": "Objective Level %s" % i,
         "objectiveLevel": fake.code(),
         "objectiveEndpoints": [fake.endpoint(), fake.endpoint()]
       }
@@ -82,9 +98,10 @@ class DDFFakerProvider(BaseProvider):
         "organisationIdentifierScheme": org_identity[0],
         "organisationIdentifier": org_identity[1],
         "organisationName": org_identity[2],
-        "organisationType": code
+        "organisationType": code,
+        "organizationLegalAddress": fake.address()
       }
-    def procedure_data(self, code, optional):
+    def procedure(self, code, optional):
       return {
         "procedureId": "procedure_%s" % fake.random.randint(1, 999),
         "procedureType": "Specimen Collection",
@@ -101,6 +118,13 @@ class DDFFakerProvider(BaseProvider):
         "studyArmDataOriginDescription": "Captured subject data",
         "studyArmDataOriginType": fake.code(),
       }
+    def study_cell(self, arm, epoch, elements):
+      return {
+        "studyCellId": "study_cell_%s" % fake.random.randint(1, 999),
+        "studyArm": arm,
+        "studyEpoch": epoch,
+        "studyElements": elements
+      }
     def study_data(self):
       i = fake.random.randint(1, 999)
       return {
@@ -109,11 +133,36 @@ class DDFFakerProvider(BaseProvider):
         "studyDataDescription": fake.sentence(),
         "crfLink": "Link %s" % i,
       }
+    def study_design(self, intent, types, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands, encounters, activities):
+      i = fake.random.randint(1, 999)
+      return {
+        "studyDesignId": "study_design_%s" % i,
+        "studyDesignName": "Study Design%s" % i,
+        "studyDesignDescription": fake.sentence(),
+        "trialIntentTypes": intent,
+        "trialType": types,
+        "interventionModel": model,
+        "studyCells": cells,
+        "studyIndications": indications,
+        "studyInvestigationalInterventions": interventions,
+        "studyStudyDesignPopulations": populations,
+        "studyObjectives": objectives,
+        "studyWorkflows": workflows,
+        "therapeuticAreas:": therapeutic_areas,
+        "studyEstimands": estimands,
+        "encounters": encounters,
+        "activities": activities,
+        "studyDesignRationale": fake.sentence()
+      }
     def study_design_population(self):
       i = fake.random.randint(1, 999)
       return {
         'studyDesignPopulationId': "population_%s" % i,
-        'populationDescription': "Population %s" % i
+        'populationDescription': "Population %s" % i,
+        'plannedNumberOfParticipants': i,
+        'plannedMaximumAgeOfParticipants': str(i),  
+        'plannedMinimumAgeOfParticipants': str(i),
+        'plannedSexOfParticipants': [fake.code()]
       }
     def study_element(self):
       global element_index
@@ -159,9 +208,11 @@ class DDFFakerProvider(BaseProvider):
       i = fake.random.randint(1, 999)
       return {
         'workflowItemId': "workflow_item_%s" % i,
-        'workflowItemDesc': "Workflow item %s" % i,
-        'workflowItemEncounter': encounter,
-        'workflowItemActivity': activity,
+        'workflowItemDescription': "Workflow item %s" % i,
+        'previousWorkflowItemId': None,
+        'nextWorkflowItemId': None,
+        'workflowItemEncounterId': encounter,
+        'workflowItemActivityId': activity,
       }
     def workflow(self, items):
       i = fake.random.randint(1, 999)
@@ -233,7 +284,7 @@ def activity_data(procedures, study_data, optional=False):
   return fake.activity(procedures, study_data, optional)
 
 def procedure_data(the_code, optional=False):
-  return fake.procedure_data(the_code, optional)
+  return fake.procedure(the_code, optional)
 
 def study_data_data():
   return fake.study_data()
@@ -279,13 +330,8 @@ def study_arm_data(arm_type):
 def study_epoch_data(epoch_type, encounters):
   return fake.study_epoch(epoch_type, encounters)
 
-def study_cell_data(id, arm, epoch, elements):
-  return {
-    "studyCellId": id,
-    "studyArm": arm,
-    "studyEpoch": epoch,
-    "studyElements": elements
-  }
+def study_cell_data(arm, epoch, elements):
+  return fake.study_cell(arm, epoch, elements)
 
 def study_element_data():
   return fake.study_element()
@@ -306,28 +352,13 @@ def study_data(title, version, type, phase, business_therapeutic_areas, identifi
     "businessTherapeuticAreas": business_therapeutic_areas,
     "studyIdentifiers": identifiers,
     "studyProtocolVersions": protocol_versions,
-    "studyDesigns": designs
+    "studyDesigns": designs,
+    "studyRationale": fake.sentence(),
+    "studyAcronym": "ABC"
   }
 
-def study_design_data(id, name, description, intent, types, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands, encounters, activities):
-  return {
-    "studyDesignId": id,
-    "studyDesignName": name,
-    "studyDesignDescription": description,
-    "trialIntentTypes": intent,
-    "trialType": types,
-    "interventionModel": model,
-    "studyCells": cells,
-    "studyIndications": indications,
-    "studyInvestigationalInterventions": interventions,
-    "studyStudyDesignPopulations": populations,
-    "studyObjectives": objectives,
-    "studyWorkflows": workflows,
-    "therapeuticAreas:": therapeutic_areas,
-    "studyEstimands": estimands,
-    "encounters": encounters,
-    "activities": activities,
-  }
+def study_design_data(intent, types, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands, encounters, activities):
+  return fake.study_design(intent, types, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands, encounters, activities)
 
 def study_protocol_version_data(id, brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):
   return {
