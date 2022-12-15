@@ -32,6 +32,7 @@ class StudyDesign(ApiBaseModel):
   studyEstimands: List[Estimand] = []
   encounters: List[Encounter] = []
   activities: List[Activity] = []
+  studyDesignRationale: str
 
   @classmethod
   def search(cls, store, uuid):

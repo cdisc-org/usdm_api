@@ -17,6 +17,8 @@ class Study(ApiBaseModel):
   studyIdentifiers: List[StudyIdentifier] = []
   studyProtocolVersions: List[StudyProtocolVersion] = []
   studyDesigns: List[StudyDesign] = []
+  studyRationale: str
+  studyAcronym: str
 
   @classmethod
   def scope_reuse(cls):

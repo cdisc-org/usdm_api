@@ -2,3 +2,4 @@ fastapi
 deta
 pyyaml
 pandas
+Faker
