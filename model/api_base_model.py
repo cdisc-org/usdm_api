@@ -19,11 +19,10 @@ class ApiBaseModel(BaseModel):
       self.uuid = uuid
     return uuid
 
-  def recursive_save(self, store, scope=None):
+  def recursive_save(self, store, scope=None, use_scope=False):
 
     from .klass import Klass
 
-    use_scope = False
     if scope == None:
       scope = str(uuid4()) # Any unique string but use a UUID.
       use_scope = True
