@@ -165,7 +165,8 @@ async def create_study(study: Study):
 async def update_study(uuid: str, study: Study):
   if uuid not in Study.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
-  study.recursive_save(store, scope=uuid)
+  study.studyId = uuid
+  study.recursive_save(store, scope=uuid, use_scope=True)
   return study.studyId
 
 @app.get("/v1/studyDefinitions/{uuid}", 
