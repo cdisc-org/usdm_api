@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException, status, Response
-from uuid import UUID
+from uuid import UUID, uuid4
 from store.store import Store
 from model.study import *
 from model.study_identifier import *
@@ -151,7 +151,8 @@ store = Store()
   response_model=UUID,
   responses=standard_responses)
 async def create_study(study: Study):
-  study.recursive_save(store)
+  study.studyId = str(uuid4())
+  study.recursive_save(store, scope=study.studyId, use_scope=True)
   return study.studyId
 
 @app.put("/v1/studyDefinitions/{uuid}", 
@@ -161,10 +162,10 @@ async def create_study(study: Study):
   status_code=status.HTTP_200_OK,
   response_model=UUID,
   responses=standard_responses)
-async def update_study(study: Study):
-  if study.studyId not in Study.list(store):
+async def update_study(uuid: str, study: Study):
+  if uuid not in Study.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
-  study.recursive_save(store, scope=study.studyId)
+  study.recursive_save(store, scope=uuid)
   return study.studyId
 
 @app.get("/v1/studyDefinitions/{uuid}", 
