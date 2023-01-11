@@ -1,6 +1,9 @@
+from tkinter import E
 from typing import List, Union
+from .activity import Activity
 from .api_base_model import ApiBaseModel
 from .code import Code
+from .encounter import Encounter
 from .study_cell import StudyCell
 from .indication import Indication
 from .investigational_intervention import InvestigationalIntervention
@@ -13,17 +16,23 @@ from uuid import UUID
 import pandas as pd
 
 class StudyDesign(ApiBaseModel):
-  uuid: Union[UUID, None] = None
-  trialIntentTypes: Union[List[Code], List[UUID]]
-  trialType: Union[Code, UUID]
-  interventionModel: Union[Code, UUID]
-  studyCells: Union[List[StudyCell], List[UUID], None] = []
-  studyIndications: Union[List[Indication], List[UUID], None] = []
-  studyInvestigationalInterventions: Union[List[InvestigationalIntervention], List[UUID], None] = []
-  studyPopulations: Union[List[StudyDesignPopulation], List[UUID], None] = []
-  studyObjectives: Union[List[Objective], List[UUID], None] = []
-  studyWorkflows: Union[List[Workflow], List[UUID], None] = []
-  studyEstimands: Union[List[Estimand], List[UUID], None] = []
+  studyDesignId: str
+  studyDesignName: str
+  studyDesignDescription: str
+  trialIntentTypes: List[Code] = []
+  trialType: List[Code] = []
+  interventionModel: Code
+  studyCells: List[StudyCell] = []
+  studyIndications: List[Indication] = []
+  studyInvestigationalInterventions: List[InvestigationalIntervention] = []
+  studyStudyDesignPopulations: List[StudyDesignPopulation] = []
+  studyObjectives: List[Objective] = []
+  studyWorkflows: List[Workflow] = []
+  therapeuticAreas: List[Code] = []
+  studyEstimands: List[Estimand] = []
+  encounters: List[Encounter] = []
+  activities: List[Activity] = []
+  studyDesignRationale: str
 
   @classmethod
   def search(cls, store, uuid):

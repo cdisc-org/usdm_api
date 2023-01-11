@@ -6,23 +6,23 @@ import json
 class ApiBaseModel(BaseModel):
 
   def save(self, store, scope, use_scope=False):
-    #print("UUID:", self.uuid)
     if use_scope:
       uuid = scope
-    elif self.uuid != None:
+    elif hasattr(self, "uuid") and self.uuid != None:
+      print("UUID:", self.uuid)
       uuid = str(self.uuid)
       self.uuid = None
     else:
       uuid = str(uuid4())
     uuid = store.put(self, self.__class__, uuid, scope)
-    self.uuid = uuid
+    if hasattr(self, "uuid"):
+      self.uuid = uuid
     return uuid
 
-  def recursive_save(self, store, scope=None):
+  def recursive_save(self, store, scope=None, use_scope=False):
 
     from .klass import Klass
 
-    use_scope = False
     if scope == None:
       scope = str(uuid4()) # Any unique string but use a UUID.
       use_scope = True
@@ -51,7 +51,8 @@ class ApiBaseModel(BaseModel):
         if getattr(self, key) != None:
           setattr(self, key, klass.recursive_save(getattr(self, key), store, scope)) 
     uuid = self.save(store, scope, use_scope)
-    self.uuid = uuid
+    if hasattr(self, "uuid"):
+      self.uuid = uuid
     return uuid
 
   @classmethod

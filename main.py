@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException, status, Response
-from uuid import UUID
+from uuid import UUID, uuid4
 from store.store import Store
 from model.study import *
 from model.study_identifier import *
@@ -15,7 +15,7 @@ from model.activity import *
 from model.transition_rule import *
 from model.encounter import *
 
-VERSION = "1.1 Provisional (0.23)"
+VERSION = "1.5 Provisional (0.29)"
 SYSTEM_NAME = "Simple API for DDF"
 
 tags_metadata = [
@@ -68,6 +68,10 @@ annotations = {
     'post': {
       'summary': "Create a study",
       'description': "Create an entire study including all child element with a single post"
+    },
+    'put': {
+      'summary': "Update a study",
+      'description': "Update an entire study including all child element with a single put"
     },
     'get': {
       'summary': "List the studies",
@@ -147,8 +151,23 @@ store = Store()
   response_model=UUID,
   responses=standard_responses)
 async def create_study(study: Study):
-  study.recursive_save(store)
-  return study.uuid
+  study.studyId = str(uuid4())
+  study.recursive_save(store, scope=study.studyId, use_scope=True)
+  return study.studyId
+
+@app.put("/v1/studyDefinitions/{uuid}", 
+  tags=["Production"], 
+  summary=annotations['study_definition']['put']['summary'],
+  description=annotations['study_definition']['put']['description'], 
+  status_code=status.HTTP_200_OK,
+  response_model=UUID,
+  responses=standard_responses)
+async def update_study(uuid: str, study: Study):
+  if uuid not in Study.list(store):
+    raise HTTPException(status_code=404, detail="Item not found")
+  study.studyId = uuid
+  study.recursive_save(store, scope=uuid, use_scope=True)
+  return study.studyId
 
 @app.get("/v1/studyDefinitions/{uuid}", 
   tags=["Production"], 

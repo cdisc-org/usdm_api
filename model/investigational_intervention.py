@@ -4,6 +4,6 @@ from .code import Code
 from uuid import UUID
 
 class InvestigationalIntervention(ApiBaseModel):
-  uuid: Union[UUID, None] = None
-  codes: Union[List[Code], List[UUID], None]  
-  interventionDesc: str
+  investigationalInterventionId: str
+  interventionDescription: str
+  codes: List[Code] = []

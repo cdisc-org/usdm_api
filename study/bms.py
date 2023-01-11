@@ -335,7 +335,10 @@ class BMS():
     design_type = code_for('StudyDesign', 'trialType', submission_value='EFFICACY')
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='SEQUENTIAL')
 
-    design_1 = study_design_data([intent], design_type, int_model, study_cells, indications, objectives, [study_population_1], ii, [workflow], estimands)
+    ta = code_data("123456789", "SNOMED", "2022", "Something")
+    therapeutic_areas = [ta]
+
+    design_1 = study_design_data([intent], [design_type], int_model, therapeutic_areas, study_cells, indications, objectives, [study_population_1], ii, [workflow], estimands)
     designs = [design_1]
 
     # Protocol versions
@@ -368,8 +371,10 @@ class BMS():
     identifiers = [identifier_1, identifier_2, identifier_3, identifier_4]
 
     # Assemble complete study
+    bta = code_data("12345", "Sponsor", "2022", "Business Unit A")
+    business_therapeutic_areas = [bta]
     study_title = "BMS Test Study"
     phase = code_data("C49686", "http://www.cdisc.org", "2022-03-25", "Phase II Trial")
     study_type = code_data("C98388", "http://www.cdisc.org", "2022-03-25", "Interventional Study")
-    return study_data(study_title, "1", study_type, phase, identifiers, protocol_versions, designs)
+    return study_data(study_title, "1", study_type, phase, business_therapeutic_areas, identifiers, protocol_versions, designs)
 

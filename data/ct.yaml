@@ -1,5 +1,5 @@
 Encounter:
-  encounterContactMode:
+  encounterContactModes:
     conceptId: C171445
     definition: Terminology relevant to the means by which interaction occurs between
       the subject and person or entity.

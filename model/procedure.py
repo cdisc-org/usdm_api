@@ -8,9 +8,11 @@ class PreviousProcedure(ApiBaseModel):
   procedureCode: Union[Code, UUID]
 
 class Procedure(ApiBaseModel):
-  uuid: Union[UUID, None] = None
+  procedureId: str
   procedureType: str
-  procedureCode: Union[Code, UUID]
+  procedureCode: Code
+  procedureIsOptional: bool
+  procedureIsOptionalReason: str
   
   @classmethod
   def scope_reuse(cls):

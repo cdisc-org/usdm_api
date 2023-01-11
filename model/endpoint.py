@@ -1,10 +1,10 @@
-from typing import List, Union
+from typing import Union
 from .api_base_model import ApiBaseModel
 from .code import Code
 from uuid import UUID
 
 class Endpoint(ApiBaseModel):
-  uuid: Union[UUID, None] = None
-  endpointDesc: str
-  endpointPurposeDesc: str
-  endpointLevel: Union[Code, UUID, None]
+  endpointId: str
+  endpointDescription: str
+  endpointPurposeDescription: str
+  endpointLevel: Union[Code, None] = None

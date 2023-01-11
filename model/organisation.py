@@ -1,14 +1,15 @@
 from typing import Union
-from uuid import UUID
 from .api_base_model import ApiBaseModel
 from .code import Code
+from .address import Address
 
 class Organisation(ApiBaseModel):
-  uuid: Union[UUID, None]
+  organizationId: str
   organisationIdentifierScheme: str
   organisationIdentifier: str
   organisationName: str
-  organisationType: Union[UUID, Code]
+  organisationType: Code
+  organizationLegalAddress: Union[Address, None] = None
 
   @classmethod
   def global_reuse(cls):

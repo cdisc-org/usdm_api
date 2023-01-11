@@ -1,5 +1,236 @@
 import yaml
-from uuid import uuid4
+import random
+import string
+from faker import Faker
+from faker.providers import BaseProvider
+
+code_index = 0
+rule_index = 0
+element_index = 0
+fake = Faker()
+Faker.seed(4321)
+
+code_system_list = ["http://www.cdisc.org", "SNOMED-CT"]
+organization_list = [
+  ["DUNS", "123456789", "ACME Pharma"],
+  ["FDA", "CT-GOV", "ClinicalTrials.gov"],
+  ["EMA", "EudraCT", "European Union Drug Regulating Authorities Clinical Trials Database"]
+]
+study_identifier_list = ["CT-GOV-1234", "EU-5678", "ACME-5678"]
+
+class DDFFakerProvider(BaseProvider):
+    def activity(self, procedures, study_data, optional):
+      i = fake.random.randint(1, 999)
+      return {
+        "activityId": "activity_%s" % i,
+        "activityName": "Activity %s" % i,
+        "activityDescription": fake.sentence(),
+        "previousActivityId": None,
+        "nextActivityId": None,
+        "definedProcedures": procedures,
+        "studyDataCollection": study_data,
+        "activityIsOptional": optional,
+        "activityIsOptionalReason": fake.sentence()
+      }
+    def address(self):
+      return {
+          "text": "123",
+          "line": "fake",
+          "city": "street",
+          "district": "district 19",
+          "state": "TX",
+          "postalCode": "12345",
+          "country": "USA"
+      }
+    def code(self):
+      global code_index
+      code_index += 1
+      return {
+        "codeId": "code_%s" % (code_index),
+        "code": str(fake.random.randint(100000, 999999)),
+        "codeSystem": code_system_list[fake.random.randint(0,len(code_system_list)-1)],
+        "codeSystemVersion": "2022-03-25",
+        "decode": fake.sentence()
+      }
+    def encounter(self, type, env_setting, contact_mode):
+      i = fake.random.randint(1, 999)
+      return {
+        "encounterId": "encounter_%s" % i,
+        "encounterName": "Encounter %s" % i,
+        "encounterDescription": fake.sentence(),
+        "previousEncounterId": None,
+        "nextEncounterId": None,
+        "encounterType": type,
+        "encounterEnvironmentalSetting": env_setting,
+        "encounterContactModes": [contact_mode],
+        "transitionStartRule": None,
+        "transitionEndRule": None
+      }
+    def endpoint(self):
+      i = fake.random.randint(1, 999)
+      return {
+        "endpointId": "endpoint_%s" % i,
+        "endpointDescription": "Endpoint %s" % i,
+        "endpointPurposeDescription": fake.sentence(),
+        "endpointLevel": fake.code()
+      }
+    def investigational_intervention(self):
+      i = fake.random.randint(1, 999)
+      return {
+        "investigationalInterventionId": "intervention_%s" % i,
+        "interventionDescription": "Intervention %s" % i,
+        "codes": [fake.code(), fake.code()],
+      }
+    def objective(self):
+      i = fake.random.randint(1, 999)
+      return {
+        "objectiveId": "objective_%s" % i,
+        "objectiveDescription": "Objective Level %s" % i,
+        "objectiveLevel": fake.code(),
+        "objectiveEndpoints": [fake.endpoint(), fake.endpoint()]
+      }
+    def organization(self, code=None):
+      if code == None:
+        code = fake.code()
+      org_identity = organization_list[fake.random.randint(0,len(organization_list)-1)]
+      return {
+        "organizationId": "organization_%s" % fake.random.randint(1, 999),
+        "organisationIdentifierScheme": org_identity[0],
+        "organisationIdentifier": org_identity[1],
+        "organisationName": org_identity[2],
+        "organisationType": code,
+        "organizationLegalAddress": fake.address()
+      }
+    def procedure(self, code, optional):
+      return {
+        "procedureId": "procedure_%s" % fake.random.randint(1, 999),
+        "procedureType": "Specimen Collection",
+        "procedureCode": code,
+        "procedureIsOptional": optional,
+        "procedureIsOptionalReason": fake.sentence()
+      }
+    def study_arm(self, code):
+      return {
+        "studyArmId": "study_arm_%s" % fake.random.randint(1, 999),
+        "studyArmName": "Active",
+        "studyArmDescription": fake.sentence(),
+        "studyArmType": code,
+        "studyArmDataOriginDescription": "Captured subject data",
+        "studyArmDataOriginType": fake.code(),
+      }
+    def study_cell(self, arm, epoch, elements):
+      return {
+        "studyCellId": "study_cell_%s" % fake.random.randint(1, 999),
+        "studyArm": arm,
+        "studyEpoch": epoch,
+        "studyElements": elements
+      }
+    def study_data(self):
+      i = fake.random.randint(1, 999)
+      return {
+        "studyDataId": "studydata_%s" % i,
+        "studyDataName": "Study Data %s" % i,
+        "studyDataDescription": fake.sentence(),
+        "crfLink": "Link %s" % i,
+      }
+    def study_design(self, intent, types, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands, encounters, activities):
+      i = fake.random.randint(1, 999)
+      return {
+        "studyDesignId": "study_design_%s" % i,
+        "studyDesignName": "Study Design%s" % i,
+        "studyDesignDescription": fake.sentence(),
+        "trialIntentTypes": intent,
+        "trialType": types,
+        "interventionModel": model,
+        "studyCells": cells,
+        "studyIndications": indications,
+        "studyInvestigationalInterventions": interventions,
+        "studyStudyDesignPopulations": populations,
+        "studyObjectives": objectives,
+        "studyWorkflows": workflows,
+        "therapeuticAreas:": therapeutic_areas,
+        "studyEstimands": estimands,
+        "encounters": encounters,
+        "activities": activities,
+        "studyDesignRationale": fake.sentence()
+      }
+    def study_design_population(self):
+      i = fake.random.randint(1, 999)
+      return {
+        'studyDesignPopulationId': "population_%s" % i,
+        'populationDescription': "Population %s" % i,
+        'plannedNumberOfParticipants': i,
+        'plannedMaximumAgeOfParticipants': str(i),  
+        'plannedMinimumAgeOfParticipants': str(i),
+        'plannedSexOfParticipants': [fake.code()]
+      }
+    def study_element(self):
+      global element_index
+      element_index += 1
+      return {
+        "studyElementId": "element_%s" % (element_index),
+        "studyElementName": "Element %s" % (element_index),
+        "studyElementDescription": "%s Element" % (element_index),
+        "transitionStartRule": fake.transition_rule(),
+        "transitionEndRule": fake.transition_rule()
+      }
+    def study_epoch(self, epoch_type, encounters):
+      i = fake.random.randint(1, 999)
+      return {
+        "studyEpochId": "study_epoch_%s" % i,
+        "studyEpochName": "Study Epoch %s" % i,
+        "studyEpochDescription": fake.sentence(),
+        "previousStudyEpochId": None,
+        "nextStudyEpochId": None,
+        "studyEpochType": epoch_type,
+        "encounters": encounters
+      }
+    def study_identifier(self, organisation):
+      return {
+        "studyIdentifierId": "study_identifier_%s" % fake.random.randint(1, 999),
+        "studyIdentifier": study_identifier_list[fake.random.randint(0,len(study_identifier_list)-1)],
+        "studyIdentifierScope": organisation
+      }
+    def study_indication(self):
+      return {
+        "indicationId": "study_indication_%s" % fake.random.randint(1, 999),
+        "codes": [fake.code()],
+        "indicationDescription": fake.sentence()
+      }
+    def transition_rule(self):
+      global rule_index
+      rule_index += 1
+      return {
+        "transitionRuleId": "rule_%s" % (rule_index),
+        "transitionRuleDescription": "Rule: %s" % fake.sentence()
+      }
+    def workflow_item(self, encounter, activity):
+      i = fake.random.randint(1, 999)
+      return {
+        'workflowItemId': "workflow_item_%s" % i,
+        'workflowItemDescription': "Workflow item %s" % i,
+        'previousWorkflowItemId': None,
+        'nextWorkflowItemId': None,
+        'workflowItemEncounterId': encounter,
+        'workflowItemActivityId': activity,
+      }
+    def workflow(self, items):
+      i = fake.random.randint(1, 999)
+      return {
+        'workflowId': "workflow_%s" % i,
+        'workflowDesc': "Schedule of Activities",
+        'workflowItems': items
+      }
+
+fake.add_provider(DDFFakerProvider)
+
+def reset_code_index():
+  global code_index
+  code_index = 0
+  global rule_index
+  rule_index = 0
+  global element_index
+  element_index = 0
 
 # def soa(df):
 #   encounters = []
@@ -17,223 +248,121 @@ from uuid import uuid4
 #       if row[column].upper() == "X":
 #         workflow_item_data("WFI %s,%s)", None, None, encounters[column], activities[row])
 
-def double_link(items, prev, next):
-  for item in items:
-    item['uuid'] = str(uuid4())
+def double_link(items, id, prev, next):
   for idx, item in enumerate(items):
     if idx == 0:
       item[prev] = None
     else:
-      item[prev] = items[idx-1]['uuid']
+      item[prev] = items[idx-1][id]
     if idx == len(items)-1:  
       item[next] = None
     else:
-      item[next] = items[idx+1]['uuid']
+      item[next] = items[idx+1][id]
     
-def code_data(code, system, version, decode):
-  return {
-    "code": code,
-    "codeSystem": system,
-    "codeSystemVersion": version,
-    "decode": decode
-  }
+def code_data():
+  return fake.code()
 
 def code_for(klass, attribute, **kwargs):
-  if 'c_code' in kwargs:
-    entry = _find_ct_entry(klass, attribute, 'conceptId', kwargs['c_code'])
-    return code_data(entry['conceptId'], "http://www.cdisc.org", "2022-03-25", entry['preferredTerm'])
-  elif 'submission_value' in kwargs:
-    entry = _find_ct_entry(klass, attribute, 'submissionValue', kwargs['submission_value'])
-    return code_data(entry['conceptId'], "http://www.cdisc.org", "2022-03-25", entry['preferredTerm'])
+  if 'c_code' in kwargs or 'submission_value' in kwargs:
+    if 'c_code' in kwargs:
+      entry = _find_ct_entry(klass, attribute, 'conceptId', kwargs['c_code'])
+    elif 'submission_value' in kwargs:
+      entry = _find_ct_entry(klass, attribute, 'submissionValue', kwargs['submission_value'])
+    global code_index
+    code_index += 1
+    return {
+      "codeId": "code_%s" % (code_index),
+      "code": entry['conceptId'],
+      "codeSystem": "http://www.cdisc.org",
+      "codeSystemVersion": "2022-03-25",
+      "decode": entry['preferredTerm']
+    }
   else:
     raise Exception("Need to specify either a C Code or Submission value when selecting a CT value.")
 
-def workflow_data(description, start, end, items):
-  return {
-    "workflow_desc": description,
-    "workflow_start_point": start,
-    "workflow_end_point": end,
-    "workflow_item": items
-  }
+def activity_data(procedures, study_data, optional=False):
+  return fake.activity(procedures, study_data, optional)
 
-def workflow_item_data(description, from_pit, to_pit, previous, encounter, activity):
-  return {
-    "description": description,
-    "from_point_in_time": from_pit,
-    "to_point_in_time": to_pit,
-    "previous_workflow_item": previous,
-    "encounter": encounter,
-    "activity": activity
-  }
+def procedure_data(the_code, optional=False):
+  return fake.procedure(the_code, optional)
 
-def activity_data(name, description, procedures, study_data):
-  return {
-    "activityName": name,
-    "activityDesc": description,
-    "previousActivityId": None,
-    "nextActivityId": None,
-    "definedProcedures": procedures,
-    "studyDataCollection": study_data
-  }
+def study_data_data():
+  return fake.study_data()
 
-def procedure_data(the_type, the_code):
-  return {
-    "procedureType": the_type,
-    "procedureCode": the_code
-  }
+def encounter_data(encounter_type, env_setting, contact_mode):
+  return fake.encounter(encounter_type, env_setting, contact_mode)
 
-def study_data_data(name, description, link):
-  return {
-    "studyDataName": name,
-    "studyDataDesc": description,
-    "crfLink": link
-  }
+def investigational_intervention_data():
+  return fake.investigational_intervention()
 
-def encounter_data(name, description, encounter_type, env_setting, contact_mode, start_rule=None, end_rule=None):
-  return {
-    "encounterName": name,
-    "encounterDesc": description,
-    "previousEncounterId": None,
-    "nextEncounterId": None,
-    "encounterType": encounter_type,
-    "encounterEnvironmentalSetting": env_setting,
-    "encounterContactMode": contact_mode,
-    "transitionStartRule": start_rule,
-    "transitionEndRule": end_rule
-  }
+def endpoint_data():
+  return fake.endpoint()
 
-def point_in_time_data(start, end, pit_type):
-  return {
-    "start_date": start,
-    "end_date": end,
-    "point_in_time_type": pit_type
-  }
-
-def investigational_intervention_data(description, codes):
-  return {
-    "codes": codes,
-    "interventionDesc": description,
-  }
-
-def endpoint_data(description, purpose, level):
-  return {
-    "endpointDesc": description,
-    "endpointPurposeDesc": purpose,
-    "endpointLevel": level
-  }
-
-def objective_data(description, level, endpoints):
-  return {
-    "objectiveDesc": description,
-    "objectiveLevel": level,
-    "objectiveEndpoints": endpoints
-  }
+def objective_data():
+  return fake.objective()
 
 def estimand_data(measure, population, treatment, variable, events):
   return { "summaryMeasure": measure, "analysisPopulation": population, "treatment": treatment, "variableOfInterest": variable, "intercurrentEvents": events }
 
 def intercurrent_event_data(name, description, strategy):
   return { "intercurrentEventName": name, 
-           "intercurrentEventDesc": description,
+           "intercurrentEventDescription": description,
            "intercurrentEventStrategy": strategy
   }
 
-def study_identifier_data(identifier, organisation):
-  return {
-    "studyIdentifier": identifier,
-    "studyIdentifierScope": organisation
-  }
+def study_identifier_data(organisation):
+  return fake.study_identifier(organisation)
 
-def organization_data(identifier_scheme, org_identifier, org_name, organisation_type):
-  return {
-    "organisationIdentifierScheme": identifier_scheme,
-    "organisationIdentifier": org_identifier,
-    "organisationName": org_name,
-    "organisationType": organisation_type
-  }
+def organization_data(organisation_type):
+  return fake.organization(organisation_type)
 
 def analysis_population_data(description):
   return {
-    "populationDesc": description
+    "populationDescription": description
   }
 
-def study_design_population_data(description):
-  return {
-    "populationDesc": description
-  }
+def study_design_population_data():
+  return fake.study_design_population()
   
-def study_arm_data(name, description, arm_type, origin_description, origin_type):
-  return {
-    "studyArmName": name,
-    "studyArmDesc": description,
-    "studyArmType": arm_type,
-    "studyArmDataOriginDesc": origin_description,
-    "studyArmDataOriginType": origin_type,
-  }
+def study_arm_data(arm_type):
+  return fake.study_arm(arm_type)
 
-def study_epoch_data(name, description, epoch_type, encounters):
-  return {
-    "studyEpochName": name,
-    "studyEpochDesc": description,
-    "previousStudyEpochId": None,
-    "nextStudyEpochId": None,
-    "studyEpochType": epoch_type,
-    "encounters": encounters
-  }
+def study_epoch_data(epoch_type, encounters):
+  return fake.study_epoch(epoch_type, encounters)
 
 def study_cell_data(arm, epoch, elements):
-  return {
-    "studyArm": arm,
-    "studyEpoch": epoch,
-    "studyElements": elements
-  }
+  return fake.study_cell(arm, epoch, elements)
 
-def study_element_data(name, description, start=None, end=None):
-  return {
-    "studyElementName": name,
-    "studyElementDesc": description,
-    "transitionStartRule": start,
-    "transitionEndRule": end
-  }
+def study_element_data():
+  return fake.study_element()
 
-def transition_rule_data(description):
-  return {
-    "transitionRuleDesc": description
-  }
+def transition_rule_data():
+  return fake.transition_rule()
 
-def study_indication_data(description, indications):
-  return {
-    "codes": indications,
-    "indicationDesc": description
-  }
+def study_indication_data():
+  return fake.study_indication()
 
-def study_data(title, version, type, phase, identifiers, protocol_versions, designs):
+def study_data(title, version, type, phase, business_therapeutic_areas, identifiers, protocol_versions, designs):
   return {
+    "studyId": None,
     "studyTitle": title,
     "studyVersion": version,
     "studyType":  type,
     "studyPhase":  phase,
+    "businessTherapeuticAreas": business_therapeutic_areas,
     "studyIdentifiers": identifiers,
     "studyProtocolVersions": protocol_versions,
-    "studyDesigns": designs
+    "studyDesigns": designs,
+    "studyRationale": fake.sentence(),
+    "studyAcronym": "ABC"
   }
 
-def study_design_data(intent, type, model, cells, indications, objectives, populations, interventions, workflows, estimands):
-  return {
-    "trialIntentTypes": intent,
-    "trialType": type,
-    "interventionModel": model,
-    "studyCells": cells,
-    "studyIndications": indications,
-    "studyObjectives": objectives,
-    "studyPopulations": populations,
-    "studyInvestigationalInterventions": interventions,
-    "studyWorkflows": workflows,
-    "studyEstimands": estimands
-  }
+def study_design_data(intent, types, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands, encounters, activities):
+  return fake.study_design(intent, types, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands, encounters, activities)
 
-def study_protocol_version_data(brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):
+def study_protocol_version_data(id, brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):
   return {
+    "studyProtocolVersionId": id,
     "briefTitle": brief_title,
     "officialTitle": official_title,
     "publicTitle": public_title,
@@ -244,18 +373,11 @@ def study_protocol_version_data(brief_title, official_title, public_title, scien
     "protocolStatus": status
   }
 
-def workflow_item_data(description, encounter, activity):
-  return {
-    'workflowItemDesc': description,
-    'workflowItemEncounter': encounter,
-    'workflowItemActivity': activity,
-  }
+def workflow_item_data(encounter, activity):
+  return fake.workflow_item(encounter, activity)
 
-def workflow_data(description, items):
-  return {
-    'workflowDesc': description,
-    'workflowItems': items
-  }
+def workflow_data(items):
+  return fake.workflow(items)
 
 # Internal methods
 def _find_ct_entry(klass, attribute, name, value):

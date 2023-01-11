@@ -1,7 +1,11 @@
-from typing import List, Union
 from .api_base_model import ApiBaseModel
-from uuid import UUID
+from typing import List
+from .code import Code
 
 class StudyDesignPopulation(ApiBaseModel):
-  uuid: Union[UUID, None] = None
-  populationDesc: str
+  studyDesignPopulationId: str
+  populationDescription: str
+  plannedNumberOfParticipants: int
+  plannedMaximumAgeOfParticipants: str  
+  plannedMinimumAgeOfParticipants: str
+  plannedSexOfParticipants: List[Code] = []
