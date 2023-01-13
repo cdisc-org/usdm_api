@@ -781,13 +781,13 @@
                       "codeSystemVersion": "2022-03-25",
                       "decode": "Sometimes war political box purpose take."
                     },
-                    "procedureIsOptional": false,
-                    "procedureIsOptionalReason": "Main improve discuss."
+                    "procedureIsConditional": false,
+                    "procedureIsConditionalReason": "Main improve discuss."
                   }
                 ],
                 "studyDataCollection": [],
-                "activityIsOptional": false,
-                "activityIsOptionalReason": "Little fast then go hope attention friend peace."
+                "activityIsConditional": false,
+                "activityIsConditionalReason": "Little fast then go hope attention friend peace."
               }
             },
             {
@@ -842,8 +842,8 @@
                     "crfLink": "Link 673"
                   }
                 ],
-                "activityIsOptional": false,
-                "activityIsOptionalReason": "Suffer federal lot next senior statement."
+                "activityIsConditional": false,
+                "activityIsConditionalReason": "Suffer federal lot next senior statement."
               }
             }
           ]

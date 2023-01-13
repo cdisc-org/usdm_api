@@ -29,8 +29,8 @@ class DDFFakerProvider(BaseProvider):
         "nextActivityId": None,
         "definedProcedures": procedures,
         "studyDataCollection": study_data,
-        "activityIsOptional": optional,
-        "activityIsOptionalReason": fake.sentence()
+        "activityIsConditional": optional,
+        "activityIsConditionalReason": fake.sentence()
       }
     def address(self):
       return {
@@ -106,8 +106,8 @@ class DDFFakerProvider(BaseProvider):
         "procedureId": "procedure_%s" % fake.random.randint(1, 999),
         "procedureType": "Specimen Collection",
         "procedureCode": code,
-        "procedureIsOptional": optional,
-        "procedureIsOptionalReason": fake.sentence()
+        "procedureIsConditional": optional,
+        "procedureIsConditionalReason": fake.sentence()
       }
     def study_arm(self, code):
       return {

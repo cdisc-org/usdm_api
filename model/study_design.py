@@ -1,7 +1,7 @@
-from tkinter import E
 from typing import List, Union
 from .activity import Activity
 from .api_base_model import ApiBaseModel
+from .aliasCode import AliasCode
 from .code import Code
 from .encounter import Encounter
 from .study_cell import StudyCell
@@ -33,6 +33,7 @@ class StudyDesign(ApiBaseModel):
   encounters: List[Encounter] = []
   activities: List[Activity] = []
   studyDesignRationale: str
+  studyDesignBlindingScheme: AliasCode = None
 
   @classmethod
   def search(cls, store, uuid):
