@@ -14,4 +14,4 @@ class Activity(ApiBaseModel):
   definedProcedures: List[Procedure] = []
   studyDataCollection: List[StudyData] = []
   activityIsConditional: bool
-  activityIsConditionalReason: Union[str, None] = None
+  activityIsConditionalReason: str
