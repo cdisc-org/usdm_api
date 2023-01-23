@@ -219,7 +219,7 @@ Organization:
     synonyms:
     - Organization Type Value Set Terminology
     terms:
-    - conceptId: C93453
+    - conceptId: Clinical Study Registry
       definition: An organization (typically a government agency) that administers
         the registration of studies. (BRIDG)
       preferredTerm: Study Registry
@@ -852,6 +852,22 @@ StudyDesign:
         product safety and/or efficacy.
       preferredTerm: Water Effect Trial
       submissionValue: WATER EFFECT
+  studyDesignBlindingSchema:
+    conceptId: C99999
+    definition: A terminology codelist relevant to the type of primary outcome or
+          endpoint that the protocol is designed to evaluate.
+    extensible: 'true'
+    name: Study Design Blinding Schema
+    preferredTerm: CDISC SDTM Study Design Blinding Schema Terminology
+    submissionValue: TTYPE
+    synonyms:
+    - Study Design Blinding Schema
+    terms:
+    - conceptId: C15228
+      definition: A study in which neither the subject nor the study personnel interacting with
+       the subject or data during the study knows what intervention a subject is receiving.
+      preferredTerm: Double Blind Study
+      submissionValue: DOUBLE BLIND
 StudyEpoch:
   studyEpochType:
     conceptId: C99079

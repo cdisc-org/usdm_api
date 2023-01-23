@@ -4,19 +4,48 @@ import string
 from faker import Faker
 from faker.providers import BaseProvider
 
+alias_code_index = 0
 code_index = 0
 rule_index = 0
 element_index = 0
 fake = Faker()
 Faker.seed(4321)
 
-code_system_list = ["http://www.cdisc.org", "SNOMED-CT"]
+code_list = ["C15228", "C187674", "C156592", "C49659", "C28233"]
+code_system_list = ["http://www.cdisc.org", "SNOMED-CT", "ISO 3166‑1 alpha3"]
 organization_list = [
   ["DUNS", "123456789", "ACME Pharma"],
   ["FDA", "CT-GOV", "ClinicalTrials.gov"],
   ["EMA", "EudraCT", "European Union Drug Regulating Authorities Clinical Trials Database"]
 ]
 study_identifier_list = ["CT-GOV-1234", "EU-5678", "ACME-5678"]
+
+def code_for(klass, attribute, **kwargs):
+  if 'c_code' in kwargs or 'submission_value' in kwargs:
+    if 'c_code' in kwargs:
+      entry = _find_ct_entry(klass, attribute, 'conceptId', kwargs['c_code'])
+    elif 'submission_value' in kwargs:
+      entry = _find_ct_entry(klass, attribute, 'submissionValue', kwargs['submission_value'])
+    global code_index
+    code_index += 1
+    return {
+      "codeId": "code_%s" % (code_index),
+      "code": entry['conceptId'],
+      "codeSystem": "http://www.cdisc.org",
+      "codeSystemVersion": "2022-03-25",
+      "decode": entry['preferredTerm']
+    }
+  else:
+    raise Exception("Need to specify either a C Code or Submission value when selecting a CT value.")
+
+# Internal methods
+def _find_ct_entry(klass, attribute, name, value):
+  with open("data/ct.yaml") as file:
+    ct = yaml.load(file, Loader=yaml.FullLoader)
+    for entry in ct[klass][attribute]['terms']:
+      if entry[name] == value:
+        return entry
+    raise Exception("Could not find CT match for (%s, %s, %s, %s)." % (klass, attribute, name, value))        
 
 class DDFFakerProvider(BaseProvider):
     def activity(self, procedures, study_data, optional):
@@ -40,17 +69,30 @@ class DDFFakerProvider(BaseProvider):
           "district": "district 19",
           "state": "TX",
           "postalCode": "12345",
-          "country": "USA"
+          "country": {
+              "code": "USA",
+              "codeSystem": "ISO 3166 1 alpha3",
+              "codeSystemVersion": "",
+              "decode": "United States of America"
+          }
+      }
+    def alias_code(self):
+      global alias_code_index
+      alias_code_index += 1
+      return {
+        "aliasCodeId": "alias_code_%s" % (code_index),
+        "standardCode": code_for('StudyDesign', 'studyDesignBlindingSchema', submission_value='DOUBLE BLIND'),
+        "standardCodeAliases": []
       }
     def code(self):
       global code_index
       code_index += 1
       return {
         "codeId": "code_%s" % (code_index),
-        "code": str(fake.random.randint(100000, 999999)),
+        "code": code_list[fake.random.randint(0,len(code_list)-1)],
         "codeSystem": code_system_list[fake.random.randint(0,len(code_system_list)-1)],
         "codeSystemVersion": "2022-03-25",
-        "decode": fake.sentence()
+        "decode": "The preferred term for code_%s" % (code_index)
       }
     def encounter(self, type, env_setting, contact_mode):
       i = fake.random.randint(1, 999)
@@ -90,15 +132,13 @@ class DDFFakerProvider(BaseProvider):
         "objectiveEndpoints": [fake.endpoint(), fake.endpoint()]
       }
     def organization(self, code=None):
-      if code == None:
-        code = fake.code()
       org_identity = organization_list[fake.random.randint(0,len(organization_list)-1)]
       return {
         "organizationId": "organization_%s" % fake.random.randint(1, 999),
         "organisationIdentifierScheme": org_identity[0],
         "organisationIdentifier": org_identity[1],
         "organisationName": org_identity[2],
-        "organisationType": code,
+        "organisationType": code if code else fake.code(codeId=None, code=None, codeSystem=None, codeSystemVersion=None, decode=None),
         "organizationLegalAddress": fake.address()
       }
     def procedure(self, code, optional):
@@ -152,7 +192,8 @@ class DDFFakerProvider(BaseProvider):
         "studyEstimands": estimands,
         "encounters": encounters,
         "activities": activities,
-        "studyDesignRationale": fake.sentence()
+        "studyDesignRationale": fake.sentence(),
+        "studyDesignBlindingScheme": fake.alias_code()
       }
     def study_design_population(self):
       i = fake.random.randint(1, 999)
@@ -262,24 +303,6 @@ def double_link(items, id, prev, next):
 def code_data():
   return fake.code()
 
-def code_for(klass, attribute, **kwargs):
-  if 'c_code' in kwargs or 'submission_value' in kwargs:
-    if 'c_code' in kwargs:
-      entry = _find_ct_entry(klass, attribute, 'conceptId', kwargs['c_code'])
-    elif 'submission_value' in kwargs:
-      entry = _find_ct_entry(klass, attribute, 'submissionValue', kwargs['submission_value'])
-    global code_index
-    code_index += 1
-    return {
-      "codeId": "code_%s" % (code_index),
-      "code": entry['conceptId'],
-      "codeSystem": "http://www.cdisc.org",
-      "codeSystemVersion": "2022-03-25",
-      "decode": entry['preferredTerm']
-    }
-  else:
-    raise Exception("Need to specify either a C Code or Submission value when selecting a CT value.")
-
 def activity_data(procedures, study_data, optional=False):
   return fake.activity(procedures, study_data, optional)
 
@@ -378,13 +401,3 @@ def workflow_item_data(encounter, activity):
 
 def workflow_data(items):
   return fake.workflow(items)
-
-# Internal methods
-def _find_ct_entry(klass, attribute, name, value):
-  with open("data/ct.yaml") as file:
-    ct = yaml.load(file, Loader=yaml.FullLoader)
-    for entry in ct[klass][attribute]['terms']:
-      if entry[name] == value:
-        return entry
-    raise Exception("Could not find CT match for (%s, %s, %s, %s)." % (klass, attribute, name, value))        
-

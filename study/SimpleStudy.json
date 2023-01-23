@@ -4,88 +4,98 @@
   "studyVersion": "1",
   "studyType": {
     "codeId": "code_12",
-    "code": "892930",
+    "code": "C15228",
     "codeSystem": "SNOMED-CT",
     "codeSystemVersion": "2022-03-25",
-    "decode": "Agency final hand clear number fire."
+    "decode": "The preferred term for code_12"
   },
   "studyPhase": {
     "codeId": "code_11",
-    "code": "207161",
-    "codeSystem": "SNOMED-CT",
+    "code": "C187674",
+    "codeSystem": "ISO 3166\u20111 alpha3",
     "codeSystemVersion": "2022-03-25",
-    "decode": "Positive everybody act night."
+    "decode": "The preferred term for code_11"
   },
   "businessTherapeuticAreas": [
     {
-      "codeId": "code_31",
-      "code": "671092",
+      "codeId": "code_32",
+      "code": "C49659",
       "codeSystem": "http://www.cdisc.org",
       "codeSystemVersion": "2022-03-25",
-      "decode": "Raise character police than grow candidate animal."
+      "decode": "The preferred term for code_32"
     }
   ],
   "studyIdentifiers": [
     {
-      "studyIdentifierId": "study_identifier_962",
-      "studyIdentifier": "EU-5678",
+      "studyIdentifierId": "study_identifier_46",
+      "studyIdentifier": "CT-GOV-1234",
       "studyIdentifierScope": {
-        "organizationId": "organization_241",
+        "organizationId": "organization_647",
+        "organisationIdentifierScheme": "DUNS",
+        "organisationIdentifier": "123456789",
+        "organisationName": "ACME Pharma",
+        "organisationType": {
+          "codeId": "code_13",
+          "code": "Clinical Study Registry",
+          "codeSystem": "http://www.cdisc.org",
+          "codeSystemVersion": "2022-03-25",
+          "decode": "Study Registry"
+        },
+        "organizationLegalAddress": {
+          "text": "123",
+          "line": "fake",
+          "city": "street",
+          "district": "district 19",
+          "state": "TX",
+          "postalCode": "12345",
+          "country": {
+            "code": "USA",
+            "codeSystem": "ISO 3166 1 alpha3",
+            "codeSystemVersion": "",
+            "decode": "United States of America"
+          }
+        }
+      }
+    },
+    {
+      "studyIdentifierId": "study_identifier_235",
+      "studyIdentifier": "CT-GOV-1234",
+      "studyIdentifierScope": {
+        "organizationId": "organization_779",
+        "organisationIdentifierScheme": "DUNS",
+        "organisationIdentifier": "123456789",
+        "organisationName": "ACME Pharma",
+        "organisationType": {
+          "codeId": "code_15",
+          "code": "C188863",
+          "codeSystem": "http://www.cdisc.org",
+          "codeSystemVersion": "2022-03-25",
+          "decode": "Regulatory Agency"
+        },
+        "organizationLegalAddress": {
+          "text": "123",
+          "line": "fake",
+          "city": "street",
+          "district": "district 19",
+          "state": "TX",
+          "postalCode": "12345",
+          "country": {
+            "code": "USA",
+            "codeSystem": "ISO 3166 1 alpha3",
+            "codeSystemVersion": "",
+            "decode": "United States of America"
+          }
+        }
+      }
+    },
+    {
+      "studyIdentifierId": "study_identifier_335",
+      "studyIdentifier": "ACME-5678",
+      "studyIdentifierScope": {
+        "organizationId": "organization_268",
         "organisationIdentifierScheme": "FDA",
         "organisationIdentifier": "CT-GOV",
         "organisationName": "ClinicalTrials.gov",
-        "organisationType": {
-          "codeId": "code_13",
-          "code": "C93453",
-          "codeSystem": "http://www.cdisc.org",
-          "codeSystemVersion": "2022-03-25",
-          "decode": "Study Registry"
-        },
-        "organizationLegalAddress": {
-          "text": "123",
-          "line": "fake",
-          "city": "street",
-          "district": "district 19",
-          "state": "TX",
-          "postalCode": "12345",
-          "country": "USA"
-        }
-      }
-    },
-    {
-      "studyIdentifierId": "study_identifier_414",
-      "studyIdentifier": "EU-5678",
-      "studyIdentifierScope": {
-        "organizationId": "organization_887",
-        "organisationIdentifierScheme": "EMA",
-        "organisationIdentifier": "EudraCT",
-        "organisationName": "European Union Drug Regulating Authorities Clinical Trials Database",
-        "organisationType": {
-          "codeId": "code_13",
-          "code": "C93453",
-          "codeSystem": "http://www.cdisc.org",
-          "codeSystemVersion": "2022-03-25",
-          "decode": "Study Registry"
-        },
-        "organizationLegalAddress": {
-          "text": "123",
-          "line": "fake",
-          "city": "street",
-          "district": "district 19",
-          "state": "TX",
-          "postalCode": "12345",
-          "country": "USA"
-        }
-      }
-    },
-    {
-      "studyIdentifierId": "study_identifier_968",
-      "studyIdentifier": "CT-GOV-1234",
-      "studyIdentifierScope": {
-        "organizationId": "organization_903",
-        "organisationIdentifierScheme": "EMA",
-        "organisationIdentifier": "EudraCT",
-        "organisationName": "European Union Drug Regulating Authorities Clinical Trials Database",
         "organisationType": {
           "codeId": "code_14",
           "code": "C70793",
@@ -100,7 +110,12 @@
           "district": "district 19",
           "state": "TX",
           "postalCode": "12345",
-          "country": "USA"
+          "country": {
+            "code": "USA",
+            "codeSystem": "ISO 3166 1 alpha3",
+            "codeSystemVersion": "",
+            "decode": "United States of America"
+          }
         }
       }
     }
@@ -116,11 +131,11 @@
       "protocolAmendment": null,
       "protocolEffectiveDate": "2022-01-01",
       "protocolStatus": {
-        "codeId": "code_29",
-        "code": "880911",
-        "codeSystem": "SNOMED-CT",
+        "codeId": "code_30",
+        "code": "C187674",
+        "codeSystem": "http://www.cdisc.org",
         "codeSystemVersion": "2022-03-25",
-        "decode": "Candidate enjoy subject be idea story movie less."
+        "decode": "The preferred term for code_30"
       }
     },
     {
@@ -133,19 +148,19 @@
       "protocolAmendment": "Amendment 1",
       "protocolEffectiveDate": "2022-02-01",
       "protocolStatus": {
-        "codeId": "code_30",
-        "code": "967999",
-        "codeSystem": "SNOMED-CT",
+        "codeId": "code_31",
+        "code": "C156592",
+        "codeSystem": "ISO 3166\u20111 alpha3",
         "codeSystemVersion": "2022-03-25",
-        "decode": "Trip international out level enough attention."
+        "decode": "The preferred term for code_31"
       }
     }
   ],
   "studyDesigns": [
     {
-      "studyDesignId": "study_design_233",
-      "studyDesignName": "Study Design233",
-      "studyDesignDescription": "School wonder decade business enter shoulder.",
+      "studyDesignId": "study_design_802",
+      "studyDesignName": "Study Design802",
+      "studyDesignDescription": "Can partner lead particular.",
       "trialIntentTypes": [
         {
           "codeId": "code_24",
@@ -180,11 +195,11 @@
       },
       "studyCells": [
         {
-          "studyCellId": "study_cell_691",
+          "studyCellId": "study_cell_698",
           "studyArm": {
-            "studyArmId": "study_arm_183",
+            "studyArmId": "study_arm_156",
             "studyArmName": "Active",
-            "studyArmDescription": "Defense money stand kitchen become environmental support.",
+            "studyArmDescription": "Bank someone daughter process.",
             "studyArmType": {
               "codeId": "code_18",
               "code": "C174268",
@@ -195,18 +210,18 @@
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
               "codeId": "code_19",
-              "code": "834284",
+              "code": "C15228",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
-              "decode": "Represent there agent tonight."
+              "decode": "The preferred term for code_19"
             }
           },
           "studyEpoch": {
-            "studyEpochId": "study_epoch_296",
-            "studyEpochName": "Study Epoch 296",
-            "studyEpochDescription": "Explain several can partner lead particular ready show.",
+            "studyEpochId": "study_epoch_201",
+            "studyEpochName": "Study Epoch 201",
+            "studyEpochDescription": "At those clearly resource finish role method.",
             "previousStudyEpochId": null,
-            "nextStudyEpochId": "study_epoch_985",
+            "nextStudyEpochId": "study_epoch_356",
             "studyEpochType": {
               "codeId": "code_21",
               "code": "C98779",
@@ -216,17 +231,17 @@
             },
             "encounters": [
               {
-                "encounterId": "encounter_590",
-                "encounterName": "Encounter 590",
-                "encounterDescription": "House institution month.",
+                "encounterId": "encounter_720",
+                "encounterName": "Encounter 720",
+                "encounterDescription": "Suffer federal lot next senior statement.",
                 "previousEncounterId": null,
-                "nextEncounterId": "encounter_199",
+                "nextEncounterId": "encounter_884",
                 "encounterType": {
                   "codeId": "code_2",
-                  "code": "757472",
-                  "codeSystem": "SNOMED-CT",
+                  "code": "C156592",
+                  "codeSystem": "ISO 3166\u20111 alpha3",
                   "codeSystemVersion": "2022-03-25",
-                  "decode": "Artist series attorney."
+                  "decode": "The preferred term for code_2"
                 },
                 "encounterEnvironmentalSetting": {
                   "codeId": "code_3",
@@ -248,17 +263,17 @@
                 "transitionEndRule": null
               },
               {
-                "encounterId": "encounter_199",
-                "encounterName": "Encounter 199",
-                "encounterDescription": "Point religious everyone assume prove.",
-                "previousEncounterId": "encounter_590",
+                "encounterId": "encounter_884",
+                "encounterName": "Encounter 884",
+                "encounterDescription": "Final artist series attorney office house institution month.",
+                "previousEncounterId": "encounter_720",
                 "nextEncounterId": null,
                 "encounterType": {
                   "codeId": "code_2",
-                  "code": "757472",
-                  "codeSystem": "SNOMED-CT",
+                  "code": "C156592",
+                  "codeSystem": "ISO 3166\u20111 alpha3",
                   "codeSystemVersion": "2022-03-25",
-                  "decode": "Artist series attorney."
+                  "decode": "The preferred term for code_2"
                 },
                 "encounterEnvironmentalSetting": {
                   "codeId": "code_3",
@@ -288,21 +303,21 @@
               "studyElementDescription": "1 Element",
               "transitionStartRule": {
                 "transitionRuleId": "rule_1",
-                "transitionRuleDescription": "Rule: Food whole civil former land."
+                "transitionRuleDescription": "Rule: Dog tend two idea war son."
               },
               "transitionEndRule": {
                 "transitionRuleId": "rule_2",
-                "transitionRuleDescription": "Rule: Right memory more worry sea improve."
+                "transitionRuleDescription": "Rule: Than group happy."
               }
             }
           ]
         },
         {
-          "studyCellId": "study_cell_637",
+          "studyCellId": "study_cell_714",
           "studyArm": {
-            "studyArmId": "study_arm_183",
+            "studyArmId": "study_arm_156",
             "studyArmName": "Active",
-            "studyArmDescription": "Defense money stand kitchen become environmental support.",
+            "studyArmDescription": "Bank someone daughter process.",
             "studyArmType": {
               "codeId": "code_18",
               "code": "C174268",
@@ -313,18 +328,18 @@
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
               "codeId": "code_19",
-              "code": "834284",
+              "code": "C15228",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
-              "decode": "Represent there agent tonight."
+              "decode": "The preferred term for code_19"
             }
           },
           "studyEpoch": {
-            "studyEpochId": "study_epoch_985",
-            "studyEpochName": "Study Epoch 985",
-            "studyEpochDescription": "Behind significant us later court.",
-            "previousStudyEpochId": "study_epoch_296",
-            "nextStudyEpochId": "study_epoch_266",
+            "studyEpochId": "study_epoch_356",
+            "studyEpochName": "Study Epoch 356",
+            "studyEpochDescription": "Positive everybody act night.",
+            "previousStudyEpochId": "study_epoch_201",
+            "nextStudyEpochId": "study_epoch_775",
             "studyEpochType": {
               "codeId": "code_22",
               "code": "C101526",
@@ -341,21 +356,21 @@
               "studyElementDescription": "2 Element",
               "transitionStartRule": {
                 "transitionRuleId": "rule_3",
-                "transitionRuleDescription": "Rule: Memory modern child international always professor customer course."
+                "transitionRuleDescription": "Rule: Hospital civil growth."
               },
               "transitionEndRule": {
                 "transitionRuleId": "rule_4",
-                "transitionRuleDescription": "Rule: Less past national role."
+                "transitionRuleDescription": "Rule: Learn simply concern defense money."
               }
             }
           ]
         },
         {
-          "studyCellId": "study_cell_246",
+          "studyCellId": "study_cell_380",
           "studyArm": {
-            "studyArmId": "study_arm_183",
+            "studyArmId": "study_arm_156",
             "studyArmName": "Active",
-            "studyArmDescription": "Defense money stand kitchen become environmental support.",
+            "studyArmDescription": "Bank someone daughter process.",
             "studyArmType": {
               "codeId": "code_18",
               "code": "C174268",
@@ -366,17 +381,17 @@
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
               "codeId": "code_19",
-              "code": "834284",
+              "code": "C15228",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
-              "decode": "Represent there agent tonight."
+              "decode": "The preferred term for code_19"
             }
           },
           "studyEpoch": {
-            "studyEpochId": "study_epoch_266",
-            "studyEpochName": "Study Epoch 266",
-            "studyEpochDescription": "Magazine remain soon consumer care model student bring.",
-            "previousStudyEpochId": "study_epoch_985",
+            "studyEpochId": "study_epoch_775",
+            "studyEpochName": "Study Epoch 775",
+            "studyEpochDescription": "Happen explain bag investment article over.",
+            "previousStudyEpochId": "study_epoch_356",
             "nextStudyEpochId": null,
             "studyEpochType": {
               "codeId": "code_23",
@@ -394,21 +409,21 @@
               "studyElementDescription": "4 Element",
               "transitionStartRule": {
                 "transitionRuleId": "rule_7",
-                "transitionRuleDescription": "Rule: Ask treat left various baby."
+                "transitionRuleDescription": "Rule: After team upon every pick."
               },
               "transitionEndRule": {
                 "transitionRuleId": "rule_8",
-                "transitionRuleDescription": "Rule: Agent especially prove wall community."
+                "transitionRuleDescription": "Rule: At Republican western."
               }
             }
           ]
         },
         {
-          "studyCellId": "study_cell_516",
+          "studyCellId": "study_cell_159",
           "studyArm": {
-            "studyArmId": "study_arm_763",
+            "studyArmId": "study_arm_444",
             "studyArmName": "Active",
-            "studyArmDescription": "Language arrive today inside theory dream present.",
+            "studyArmDescription": "Character recognize wait red up be white.",
             "studyArmType": {
               "codeId": "code_17",
               "code": "C15538",
@@ -419,18 +434,18 @@
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
               "codeId": "code_20",
-              "code": "407322",
-              "codeSystem": "SNOMED-CT",
+              "code": "C28233",
+              "codeSystem": "ISO 3166\u20111 alpha3",
               "codeSystemVersion": "2022-03-25",
-              "decode": "Pick sport at Republican western race have."
+              "decode": "The preferred term for code_20"
             }
           },
           "studyEpoch": {
-            "studyEpochId": "study_epoch_296",
-            "studyEpochName": "Study Epoch 296",
-            "studyEpochDescription": "Explain several can partner lead particular ready show.",
+            "studyEpochId": "study_epoch_201",
+            "studyEpochName": "Study Epoch 201",
+            "studyEpochDescription": "At those clearly resource finish role method.",
             "previousStudyEpochId": null,
-            "nextStudyEpochId": "study_epoch_985",
+            "nextStudyEpochId": "study_epoch_356",
             "studyEpochType": {
               "codeId": "code_21",
               "code": "C98779",
@@ -440,17 +455,17 @@
             },
             "encounters": [
               {
-                "encounterId": "encounter_590",
-                "encounterName": "Encounter 590",
-                "encounterDescription": "House institution month.",
+                "encounterId": "encounter_720",
+                "encounterName": "Encounter 720",
+                "encounterDescription": "Suffer federal lot next senior statement.",
                 "previousEncounterId": null,
-                "nextEncounterId": "encounter_199",
+                "nextEncounterId": "encounter_884",
                 "encounterType": {
                   "codeId": "code_2",
-                  "code": "757472",
-                  "codeSystem": "SNOMED-CT",
+                  "code": "C156592",
+                  "codeSystem": "ISO 3166\u20111 alpha3",
                   "codeSystemVersion": "2022-03-25",
-                  "decode": "Artist series attorney."
+                  "decode": "The preferred term for code_2"
                 },
                 "encounterEnvironmentalSetting": {
                   "codeId": "code_3",
@@ -472,17 +487,17 @@
                 "transitionEndRule": null
               },
               {
-                "encounterId": "encounter_199",
-                "encounterName": "Encounter 199",
-                "encounterDescription": "Point religious everyone assume prove.",
-                "previousEncounterId": "encounter_590",
+                "encounterId": "encounter_884",
+                "encounterName": "Encounter 884",
+                "encounterDescription": "Final artist series attorney office house institution month.",
+                "previousEncounterId": "encounter_720",
                 "nextEncounterId": null,
                 "encounterType": {
                   "codeId": "code_2",
-                  "code": "757472",
-                  "codeSystem": "SNOMED-CT",
+                  "code": "C156592",
+                  "codeSystem": "ISO 3166\u20111 alpha3",
                   "codeSystemVersion": "2022-03-25",
-                  "decode": "Artist series attorney."
+                  "decode": "The preferred term for code_2"
                 },
                 "encounterEnvironmentalSetting": {
                   "codeId": "code_3",
@@ -512,21 +527,21 @@
               "studyElementDescription": "1 Element",
               "transitionStartRule": {
                 "transitionRuleId": "rule_1",
-                "transitionRuleDescription": "Rule: Food whole civil former land."
+                "transitionRuleDescription": "Rule: Dog tend two idea war son."
               },
               "transitionEndRule": {
                 "transitionRuleId": "rule_2",
-                "transitionRuleDescription": "Rule: Right memory more worry sea improve."
+                "transitionRuleDescription": "Rule: Than group happy."
               }
             }
           ]
         },
         {
-          "studyCellId": "study_cell_891",
+          "studyCellId": "study_cell_296",
           "studyArm": {
-            "studyArmId": "study_arm_763",
+            "studyArmId": "study_arm_444",
             "studyArmName": "Active",
-            "studyArmDescription": "Language arrive today inside theory dream present.",
+            "studyArmDescription": "Character recognize wait red up be white.",
             "studyArmType": {
               "codeId": "code_17",
               "code": "C15538",
@@ -537,18 +552,18 @@
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
               "codeId": "code_20",
-              "code": "407322",
-              "codeSystem": "SNOMED-CT",
+              "code": "C28233",
+              "codeSystem": "ISO 3166\u20111 alpha3",
               "codeSystemVersion": "2022-03-25",
-              "decode": "Pick sport at Republican western race have."
+              "decode": "The preferred term for code_20"
             }
           },
           "studyEpoch": {
-            "studyEpochId": "study_epoch_985",
-            "studyEpochName": "Study Epoch 985",
-            "studyEpochDescription": "Behind significant us later court.",
-            "previousStudyEpochId": "study_epoch_296",
-            "nextStudyEpochId": "study_epoch_266",
+            "studyEpochId": "study_epoch_356",
+            "studyEpochName": "Study Epoch 356",
+            "studyEpochDescription": "Positive everybody act night.",
+            "previousStudyEpochId": "study_epoch_201",
+            "nextStudyEpochId": "study_epoch_775",
             "studyEpochType": {
               "codeId": "code_22",
               "code": "C101526",
@@ -565,21 +580,21 @@
               "studyElementDescription": "3 Element",
               "transitionStartRule": {
                 "transitionRuleId": "rule_5",
-                "transitionRuleDescription": "Rule: Onto box election family particular everything."
+                "transitionRuleDescription": "Rule: Kitchen become environmental support record value."
               },
               "transitionEndRule": {
                 "transitionRuleId": "rule_6",
-                "transitionRuleDescription": "Rule: Lead company success real development film poor among."
+                "transitionRuleDescription": "Rule: Agent tonight seat language arrive today inside theory."
               }
             }
           ]
         },
         {
-          "studyCellId": "study_cell_323",
+          "studyCellId": "study_cell_866",
           "studyArm": {
-            "studyArmId": "study_arm_763",
+            "studyArmId": "study_arm_444",
             "studyArmName": "Active",
-            "studyArmDescription": "Language arrive today inside theory dream present.",
+            "studyArmDescription": "Character recognize wait red up be white.",
             "studyArmType": {
               "codeId": "code_17",
               "code": "C15538",
@@ -590,17 +605,17 @@
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
               "codeId": "code_20",
-              "code": "407322",
-              "codeSystem": "SNOMED-CT",
+              "code": "C28233",
+              "codeSystem": "ISO 3166\u20111 alpha3",
               "codeSystemVersion": "2022-03-25",
-              "decode": "Pick sport at Republican western race have."
+              "decode": "The preferred term for code_20"
             }
           },
           "studyEpoch": {
-            "studyEpochId": "study_epoch_266",
-            "studyEpochName": "Study Epoch 266",
-            "studyEpochDescription": "Magazine remain soon consumer care model student bring.",
-            "previousStudyEpochId": "study_epoch_985",
+            "studyEpochId": "study_epoch_775",
+            "studyEpochName": "Study Epoch 775",
+            "studyEpochDescription": "Happen explain bag investment article over.",
+            "previousStudyEpochId": "study_epoch_356",
             "nextStudyEpochId": null,
             "studyEpochType": {
               "codeId": "code_23",
@@ -618,11 +633,11 @@
               "studyElementDescription": "4 Element",
               "transitionStartRule": {
                 "transitionRuleId": "rule_7",
-                "transitionRuleDescription": "Rule: Ask treat left various baby."
+                "transitionRuleDescription": "Rule: After team upon every pick."
               },
               "transitionEndRule": {
                 "transitionRuleId": "rule_8",
-                "transitionRuleDescription": "Rule: Agent especially prove wall community."
+                "transitionRuleDescription": "Rule: At Republican western."
               }
             }
           ]
@@ -630,93 +645,93 @@
       ],
       "studyIndications": [
         {
-          "indicationId": "study_indication_819",
+          "indicationId": "study_indication_114",
           "codes": [
             {
               "codeId": "code_16",
-              "code": "352791",
-              "codeSystem": "http://www.cdisc.org",
+              "code": "C28233",
+              "codeSystem": "SNOMED-CT",
               "codeSystemVersion": "2022-03-25",
-              "decode": "Group happy when hospital."
+              "decode": "The preferred term for code_16"
             }
           ],
-          "indicationDescription": "Hour near learn simply."
+          "indicationDescription": "Foot reach car official skin current."
         }
       ],
       "studyInvestigationalInterventions": [
         {
-          "investigationalInterventionId": "intervention_897",
-          "interventionDescription": "Intervention 897",
+          "investigationalInterventionId": "intervention_944",
+          "interventionDescription": "Intervention 944",
           "codes": [
             {
               "codeId": "code_5",
-              "code": "945356",
+              "code": "C28233",
               "codeSystem": "SNOMED-CT",
               "codeSystemVersion": "2022-03-25",
-              "decode": "Team on true big partner room."
+              "decode": "The preferred term for code_5"
             },
             {
               "codeId": "code_6",
-              "code": "162795",
-              "codeSystem": "SNOMED-CT",
+              "code": "C15228",
+              "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
-              "decode": "Vote dog carry machine structure feel."
+              "decode": "The preferred term for code_6"
             }
           ]
         }
       ],
       "studyStudyDesignPopulations": [
         {
-          "studyDesignPopulationId": "population_672",
-          "populationDescription": "Population 672",
-          "plannedNumberOfParticipants": 672,
-          "plannedMaximumAgeOfParticipants": "672",
-          "plannedMinimumAgeOfParticipants": "672",
+          "studyDesignPopulationId": "population_686",
+          "populationDescription": "Population 686",
+          "plannedNumberOfParticipants": 686,
+          "plannedMaximumAgeOfParticipants": "686",
+          "plannedMinimumAgeOfParticipants": "686",
           "plannedSexOfParticipants": [
             {
               "codeId": "code_7",
-              "code": "785302",
-              "codeSystem": "http://www.cdisc.org",
+              "code": "C28233",
+              "codeSystem": "ISO 3166\u20111 alpha3",
               "codeSystemVersion": "2022-03-25",
-              "decode": "Four foot Democrat ago stock."
+              "decode": "The preferred term for code_7"
             }
           ]
         }
       ],
       "studyObjectives": [
         {
-          "objectiveId": "objective_416",
-          "objectiveDescription": "Objective Level 416",
+          "objectiveId": "objective_569",
+          "objectiveDescription": "Objective Level 569",
           "objectiveLevel": {
             "codeId": "code_8",
-            "code": "374017",
-            "codeSystem": "http://www.cdisc.org",
+            "code": "C49659",
+            "codeSystem": "SNOMED-CT",
             "codeSystemVersion": "2022-03-25",
-            "decode": "Walk set design deal next off sell foot."
+            "decode": "The preferred term for code_8"
           },
           "objectiveEndpoints": [
             {
-              "endpointId": "endpoint_705",
-              "endpointDescription": "Endpoint 705",
-              "endpointPurposeDescription": "Car official skin current charge.",
+              "endpointId": "endpoint_882",
+              "endpointDescription": "Endpoint 882",
+              "endpointPurposeDescription": "Some night color speech tonight example vote dog.",
               "endpointLevel": {
                 "codeId": "code_9",
-                "code": "185439",
-                "codeSystem": "http://www.cdisc.org",
+                "code": "C187674",
+                "codeSystem": "ISO 3166\u20111 alpha3",
                 "codeSystemVersion": "2022-03-25",
-                "decode": "Daughter process attorney collection likely."
+                "decode": "The preferred term for code_9"
               }
             },
             {
-              "endpointId": "endpoint_558",
-              "endpointDescription": "Endpoint 558",
-              "endpointPurposeDescription": "Be white strong time question whether sister.",
+              "endpointId": "endpoint_496",
+              "endpointDescription": "Endpoint 496",
+              "endpointPurposeDescription": "Structure feel pretty president arm four.",
               "endpointLevel": {
                 "codeId": "code_10",
-                "code": "952069",
-                "codeSystem": "http://www.cdisc.org",
+                "code": "C156592",
+                "codeSystem": "ISO 3166\u20111 alpha3",
                 "codeSystemVersion": "2022-03-25",
-                "decode": "Myself before between thought."
+                "decode": "The preferred term for code_10"
               }
             }
           ]
@@ -724,26 +739,26 @@
       ],
       "studyWorkflows": [
         {
-          "workflowId": "workflow_569",
+          "workflowId": "workflow_654",
           "workflowDesc": "Schedule of Activities",
           "workflowItems": [
             {
-              "workflowItemId": "workflow_item_603",
-              "workflowItemDescription": "Workflow item 603",
+              "workflowItemId": "workflow_item_199",
+              "workflowItemDescription": "Workflow item 199",
               "previousWorkflowItemId": null,
-              "nextWorkflowItemId": "workflow_item_759",
+              "nextWorkflowItemId": "workflow_item_196",
               "workflowItemEncounterId": {
-                "encounterId": "encounter_590",
-                "encounterName": "Encounter 590",
-                "encounterDescription": "House institution month.",
+                "encounterId": "encounter_720",
+                "encounterName": "Encounter 720",
+                "encounterDescription": "Suffer federal lot next senior statement.",
                 "previousEncounterId": null,
-                "nextEncounterId": "encounter_199",
+                "nextEncounterId": "encounter_884",
                 "encounterType": {
                   "codeId": "code_2",
-                  "code": "757472",
-                  "codeSystem": "SNOMED-CT",
+                  "code": "C156592",
+                  "codeSystem": "ISO 3166\u20111 alpha3",
                   "codeSystemVersion": "2022-03-25",
-                  "decode": "Artist series attorney."
+                  "decode": "The preferred term for code_2"
                 },
                 "encounterEnvironmentalSetting": {
                   "codeId": "code_3",
@@ -765,48 +780,48 @@
                 "transitionEndRule": null
               },
               "workflowItemActivityId": {
-                "activityId": "activity_664",
-                "activityName": "Activity 664",
-                "activityDescription": "World personal decision front politics.",
+                "activityId": "activity_673",
+                "activityName": "Activity 673",
+                "activityDescription": "Knowledge color according mother just see.",
                 "previousActivityId": null,
-                "nextActivityId": "activity_200",
+                "nextActivityId": "activity_869",
                 "definedProcedures": [
                   {
-                    "procedureId": "procedure_601",
+                    "procedureId": "procedure_418",
                     "procedureType": "Specimen Collection",
                     "procedureCode": {
                       "codeId": "code_1",
-                      "code": "366632",
+                      "code": "C156592",
                       "codeSystem": "http://www.cdisc.org",
                       "codeSystemVersion": "2022-03-25",
-                      "decode": "Sometimes war political box purpose take."
+                      "decode": "The preferred term for code_1"
                     },
                     "procedureIsConditional": false,
-                    "procedureIsConditionalReason": "Main improve discuss."
+                    "procedureIsConditionalReason": "War political box purpose."
                   }
                 ],
                 "studyDataCollection": [],
                 "activityIsConditional": false,
-                "activityIsConditionalReason": "Little fast then go hope attention friend peace."
+                "activityIsConditionalReason": "World personal decision front politics."
               }
             },
             {
-              "workflowItemId": "workflow_item_759",
-              "workflowItemDescription": "Workflow item 759",
-              "previousWorkflowItemId": "workflow_item_603",
+              "workflowItemId": "workflow_item_196",
+              "workflowItemDescription": "Workflow item 196",
+              "previousWorkflowItemId": "workflow_item_199",
               "nextWorkflowItemId": null,
               "workflowItemEncounterId": {
-                "encounterId": "encounter_199",
-                "encounterName": "Encounter 199",
-                "encounterDescription": "Point religious everyone assume prove.",
-                "previousEncounterId": "encounter_590",
+                "encounterId": "encounter_884",
+                "encounterName": "Encounter 884",
+                "encounterDescription": "Final artist series attorney office house institution month.",
+                "previousEncounterId": "encounter_720",
                 "nextEncounterId": null,
                 "encounterType": {
                   "codeId": "code_2",
-                  "code": "757472",
-                  "codeSystem": "SNOMED-CT",
+                  "code": "C156592",
+                  "codeSystem": "ISO 3166\u20111 alpha3",
                   "codeSystemVersion": "2022-03-25",
-                  "decode": "Artist series attorney."
+                  "decode": "The preferred term for code_2"
                 },
                 "encounterEnvironmentalSetting": {
                   "codeId": "code_3",
@@ -828,22 +843,22 @@
                 "transitionEndRule": null
               },
               "workflowItemActivityId": {
-                "activityId": "activity_200",
-                "activityName": "Activity 200",
-                "activityDescription": "Each ask film radio rate you.",
-                "previousActivityId": "activity_664",
+                "activityId": "activity_869",
+                "activityName": "Activity 869",
+                "activityDescription": "Little fast then go hope attention friend peace.",
+                "previousActivityId": "activity_673",
                 "nextActivityId": null,
                 "definedProcedures": [],
                 "studyDataCollection": [
                   {
-                    "studyDataId": "studydata_673",
-                    "studyDataName": "Study Data 673",
-                    "studyDataDescription": "Knowledge color according mother just see.",
-                    "crfLink": "Link 673"
+                    "studyDataId": "studydata_875",
+                    "studyDataName": "Study Data 875",
+                    "studyDataDescription": "Only main improve discuss.",
+                    "crfLink": "Link 875"
                   }
                 ],
                 "activityIsConditional": false,
-                "activityIsConditionalReason": "Suffer federal lot next senior statement."
+                "activityIsConditionalReason": "Gas rather run house laugh."
               }
             }
           ]
@@ -852,18 +867,29 @@
       "therapeuticAreas:": [
         {
           "codeId": "code_28",
-          "code": "522722",
-          "codeSystem": "http://www.cdisc.org",
+          "code": "C28233",
+          "codeSystem": "SNOMED-CT",
           "codeSystemVersion": "2022-03-25",
-          "decode": "Author character Republican card market."
+          "decode": "The preferred term for code_28"
         }
       ],
       "studyEstimands": [],
       "encounters": [],
       "activities": [],
-      "studyDesignRationale": "About high south personal candidate school."
+      "studyDesignRationale": "Which behind significant us later.",
+      "studyDesignBlindingScheme": {
+        "aliasCodeId": "alias_code_28",
+        "standardCode": {
+          "codeId": "code_29",
+          "code": "C15228",
+          "codeSystem": "http://www.cdisc.org",
+          "codeSystemVersion": "2022-03-25",
+          "decode": "Double Blind Study"
+        },
+        "standardCodeAliases": []
+      }
     }
   ],
-  "studyRationale": "Read economic fast design guess level level.",
+  "studyRationale": "Soon consumer care model student bring power.",
   "studyAcronym": "ABC"
 }
