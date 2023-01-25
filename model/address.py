@@ -1,4 +1,5 @@
 from .api_base_model import ApiBaseModel
+from .code import Code
 
 class Address(ApiBaseModel):
 
@@ -8,4 +9,4 @@ class Address(ApiBaseModel):
   district: str
   state: str
   postalCode: str
-  country: str
+  country: Code

@@ -63,7 +63,7 @@ class SimpleStudy():
     regulator_type = code_for('Organization', 'organizationType', submission_value='Regulatory Agency')
     organisation_1 = organization_data(sponsor_type)
     organisation_2 = organization_data(registry_type)
-    organisation_3 = organization_data(registry_type)
+    organisation_3 = organization_data(regulator_type)
     identifier_1 = study_identifier_data(organisation_2)
     identifier_2 = study_identifier_data(organisation_3)
     identifier_3 = study_identifier_data(organisation_1)

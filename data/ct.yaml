@@ -219,7 +219,7 @@ Organization:
     synonyms:
     - Organization Type Value Set Terminology
     terms:
-    - conceptId: C93453
+    - conceptId: Clinical Study Registry
       definition: An organization (typically a government agency) that administers
         the registration of studies. (BRIDG)
       preferredTerm: Study Registry
@@ -852,6 +852,47 @@ StudyDesign:
         product safety and/or efficacy.
       preferredTerm: Water Effect Trial
       submissionValue: WATER EFFECT
+  studyDesignBlindingSchema:
+    conceptId: C99999
+    definition: A terminology codelist relevant to the type of primary outcome or
+          endpoint that the protocol is designed to evaluate.
+    extensible: 'true'
+    name: Study Design Blinding Schema
+    preferredTerm: CDISC SDTM Study Design Blinding Schema Terminology
+    submissionValue: TTYPE
+    synonyms:
+    - Study Design Blinding Schema
+    terms:
+    - conceptId: C66735
+      definition: A terminology codelist relevant to the type of blinding for the trial.
+      preferredTerm: CDISC SDTM Trial Blinding Schema Terminology
+      submissionValue: TBLIND
+    - conceptId: C15228
+      definition: A study in which neither the subject nor the study personnel interacting with
+       the subject or data during the study knows what intervention a subject is receiving.
+      preferredTerm: Double Blind Study
+      submissionValue: DOUBLE BLIND
+    - conceptId: C187674
+      definition: A study in which the study personnel who measure, record, or assess the subject
+       do not know which intervention the subject is receiving or, in the context of observational 
+       studies, do not know the external factors to which a subject has been exposed.
+      preferredTerm: Observer Blind Study
+      submissionValue: OBSERVER BLIND
+    - conceptId: C156592
+      definition: A study in which the therapeutic treatment is open label but the dosing
+       information of the investigational medicinal product (IMP) is double-blinded.
+      preferredTerm: Open Label for Treatment And Double Blind to Dose
+      submissionValue: OPEN LABEL TO TREATMENT AND DOUBLE BLIND TO IMP DOSE
+    - conceptId: C49659
+      definition: A study in which subjects and study personnel know which intervention
+       each subject is receiving.
+      preferredTerm: Open Label Study
+      submissionValue: OPEN LABEL
+    - conceptId: C28233
+      definition: A study in which one party, either the subject or study personnel,
+       does not know which intervention is administered to the subject.
+      preferredTerm: Single Blind Study
+      submissionValue: SINGLE BLIND
 StudyEpoch:
   studyEpochType:
     conceptId: C99079

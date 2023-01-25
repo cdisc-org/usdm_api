@@ -15,7 +15,7 @@ from model.activity import *
 from model.transition_rule import *
 from model.encounter import *
 
-VERSION = "1.5 Provisional (0.29)"
+VERSION = "1.6 Provisional (0.30)"
 SYSTEM_NAME = "Simple API for DDF"
 
 tags_metadata = [
@@ -152,7 +152,7 @@ store = Store()
   responses=standard_responses)
 async def create_study(study: Study):
   study.studyId = str(uuid4())
-  study.recursive_save(store, scope=study.studyId, use_scope=True)
+  study.save(store, scope=study.studyId, use_scope=True)
   return study.studyId
 
 @app.put("/v1/studyDefinitions/{uuid}", 
@@ -166,7 +166,7 @@ async def update_study(uuid: str, study: Study):
   if uuid not in Study.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
   study.studyId = uuid
-  study.recursive_save(store, scope=uuid, use_scope=True)
+  study.save(store, scope=uuid, use_scope=True)
   return study.studyId
 
 @app.get("/v1/studyDefinitions/{uuid}", 
@@ -177,7 +177,7 @@ async def update_study(uuid: str, study: Study):
 async def read_full_study(uuid: str):
   if uuid not in Study.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
-  return Study.recursive_read(store, uuid)
+  return Study.read(store, uuid)
 
 @app.get("/v1/studyDefinitions/{uuid}/history", 
   tags=["Production"], 
