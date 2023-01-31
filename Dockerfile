@@ -21,4 +21,4 @@ WORKDIR /project
 COPY --from=builder /install /usr/local
 ADD . /project
 
-ENTRYPOINT ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+ENTRYPOINT ["python", "-m", "uvicorn", "main:app",  "--host", "0.0.0.0", "--port", "80"]
