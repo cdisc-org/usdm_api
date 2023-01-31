@@ -1,5 +1,8 @@
 from typing import List, Union
 from .api_base_model import ApiBaseModel
+from .biomedical_concept import BiomedicalConcept
+from .biomedical_concept_category import BiomedicalConceptCategory
+from .biomedical_concept_surrogate import BiomedicalConceptSurrogate
 from .procedure import Procedure
 from .study_data import StudyData
 
@@ -15,3 +18,6 @@ class Activity(ApiBaseModel):
   studyDataCollection: List[StudyData] = []
   activityIsConditional: bool
   activityIsConditionalReason: str
+  biomedicalConcept: BiomedicalConcept
+  bcCategories: BiomedicalConceptCategory
+  bcSurrogates: BiomedicalConceptSurrogate
