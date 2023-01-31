@@ -3,26 +3,26 @@
   "studyTitle": "Small Simple Test Study (SSTS)",
   "studyVersion": "1",
   "studyType": {
-    "codeId": "code_16",
+    "codeId": "code_24",
     "code": "C28233",
     "codeSystem": "http://www.cdisc.org",
     "codeSystemVersion": "2022-03-25",
-    "decode": "The preferred term for code_16"
+    "decode": "The preferred term for code_24"
   },
   "studyPhase": {
-    "codeId": "code_15",
+    "codeId": "code_23",
     "code": "C15228",
     "codeSystem": "http://www.cdisc.org",
     "codeSystemVersion": "2022-03-25",
-    "decode": "The preferred term for code_15"
+    "decode": "The preferred term for code_23"
   },
   "businessTherapeuticAreas": [
     {
-      "codeId": "code_36",
+      "codeId": "code_44",
       "code": "C187674",
       "codeSystem": "SNOMED-CT",
       "codeSystemVersion": "2022-03-25",
-      "decode": "The preferred term for code_36"
+      "decode": "The preferred term for code_44"
     }
   ],
   "studyIdentifiers": [
@@ -35,7 +35,7 @@
         "organisationIdentifier": "EudraCT",
         "organisationName": "European Union Drug Regulating Authorities Clinical Trials Database",
         "organisationType": {
-          "codeId": "code_17",
+          "codeId": "code_25",
           "code": "Clinical Study Registry",
           "codeSystem": "http://www.cdisc.org",
           "codeSystemVersion": "2022-03-25",
@@ -66,7 +66,7 @@
         "organisationIdentifier": "EudraCT",
         "organisationName": "European Union Drug Regulating Authorities Clinical Trials Database",
         "organisationType": {
-          "codeId": "code_19",
+          "codeId": "code_27",
           "code": "C188863",
           "codeSystem": "http://www.cdisc.org",
           "codeSystemVersion": "2022-03-25",
@@ -97,7 +97,7 @@
         "organisationIdentifier": "CT-GOV",
         "organisationName": "ClinicalTrials.gov",
         "organisationType": {
-          "codeId": "code_18",
+          "codeId": "code_26",
           "code": "C70793",
           "codeSystem": "http://www.cdisc.org",
           "codeSystemVersion": "2022-03-25",
@@ -131,11 +131,11 @@
       "protocolAmendment": null,
       "protocolEffectiveDate": "2022-01-01",
       "protocolStatus": {
-        "codeId": "code_34",
+        "codeId": "code_42",
         "code": "C15228",
         "codeSystem": "http://www.cdisc.org",
         "codeSystemVersion": "2022-03-25",
-        "decode": "The preferred term for code_34"
+        "decode": "The preferred term for code_42"
       }
     },
     {
@@ -148,11 +148,11 @@
       "protocolAmendment": "Amendment 1",
       "protocolEffectiveDate": "2022-02-01",
       "protocolStatus": {
-        "codeId": "code_35",
+        "codeId": "code_43",
         "code": "C187674",
         "codeSystem": "http://www.cdisc.org",
         "codeSystemVersion": "2022-03-25",
-        "decode": "The preferred term for code_35"
+        "decode": "The preferred term for code_43"
       }
     }
   ],
@@ -163,7 +163,7 @@
       "studyDesignDescription": "A brief description for Study Design25",
       "trialIntentTypes": [
         {
-          "codeId": "code_28",
+          "codeId": "code_36",
           "code": "C15714",
           "codeSystem": "http://www.cdisc.org",
           "codeSystemVersion": "2022-03-25",
@@ -172,14 +172,14 @@
       ],
       "trialType": [
         {
-          "codeId": "code_29",
+          "codeId": "code_37",
           "code": "C158288",
           "codeSystem": "http://www.cdisc.org",
           "codeSystemVersion": "2022-03-25",
           "decode": "Biosimilarity Study"
         },
         {
-          "codeId": "code_30",
+          "codeId": "code_38",
           "code": "C49666",
           "codeSystem": "http://www.cdisc.org",
           "codeSystemVersion": "2022-03-25",
@@ -187,7 +187,7 @@
         }
       ],
       "interventionModel": {
-        "codeId": "code_31",
+        "codeId": "code_39",
         "code": "C82639",
         "codeSystem": "http://www.cdisc.org",
         "codeSystemVersion": "2022-03-25",
@@ -201,7 +201,7 @@
             "studyArmName": "Active",
             "studyArmDescription": "A brief description for study_arm_488",
             "studyArmType": {
-              "codeId": "code_22",
+              "codeId": "code_30",
               "code": "C174268",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -209,7 +209,7 @@
             },
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
-              "codeId": "code_23",
+              "codeId": "code_31",
               "code": "C188866",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -223,7 +223,7 @@
             "previousStudyEpochId": null,
             "nextStudyEpochId": "study_epoch_240",
             "studyEpochType": {
-              "codeId": "code_25",
+              "codeId": "code_33",
               "code": "C98779",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -237,14 +237,14 @@
                 "previousEncounterId": null,
                 "nextEncounterId": "encounter_618",
                 "encounterType": {
-                  "codeId": "code_6",
+                  "codeId": "code_14",
                   "code": "C49659",
                   "codeSystem": "SNOMED-CT",
                   "codeSystemVersion": "2022-03-25",
-                  "decode": "The preferred term for code_6"
+                  "decode": "The preferred term for code_14"
                 },
                 "encounterEnvironmentalSetting": {
-                  "codeId": "code_7",
+                  "codeId": "code_15",
                   "code": "C51282",
                   "codeSystem": "http://www.cdisc.org",
                   "codeSystemVersion": "2022-03-25",
@@ -252,7 +252,7 @@
                 },
                 "encounterContactModes": [
                   {
-                    "codeId": "code_8",
+                    "codeId": "code_16",
                     "code": "C175574",
                     "codeSystem": "http://www.cdisc.org",
                     "codeSystemVersion": "2022-03-25",
@@ -269,14 +269,14 @@
                 "previousEncounterId": "encounter_421",
                 "nextEncounterId": null,
                 "encounterType": {
-                  "codeId": "code_6",
+                  "codeId": "code_14",
                   "code": "C49659",
                   "codeSystem": "SNOMED-CT",
                   "codeSystemVersion": "2022-03-25",
-                  "decode": "The preferred term for code_6"
+                  "decode": "The preferred term for code_14"
                 },
                 "encounterEnvironmentalSetting": {
-                  "codeId": "code_7",
+                  "codeId": "code_15",
                   "code": "C51282",
                   "codeSystem": "http://www.cdisc.org",
                   "codeSystemVersion": "2022-03-25",
@@ -284,7 +284,7 @@
                 },
                 "encounterContactModes": [
                   {
-                    "codeId": "code_8",
+                    "codeId": "code_16",
                     "code": "C175574",
                     "codeSystem": "http://www.cdisc.org",
                     "codeSystemVersion": "2022-03-25",
@@ -319,7 +319,7 @@
             "studyArmName": "Active",
             "studyArmDescription": "A brief description for study_arm_488",
             "studyArmType": {
-              "codeId": "code_22",
+              "codeId": "code_30",
               "code": "C174268",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -327,7 +327,7 @@
             },
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
-              "codeId": "code_23",
+              "codeId": "code_31",
               "code": "C188866",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -341,7 +341,7 @@
             "previousStudyEpochId": "study_epoch_304",
             "nextStudyEpochId": "study_epoch_897",
             "studyEpochType": {
-              "codeId": "code_26",
+              "codeId": "code_34",
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -372,7 +372,7 @@
             "studyArmName": "Active",
             "studyArmDescription": "A brief description for study_arm_488",
             "studyArmType": {
-              "codeId": "code_22",
+              "codeId": "code_30",
               "code": "C174268",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -380,7 +380,7 @@
             },
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
-              "codeId": "code_23",
+              "codeId": "code_31",
               "code": "C188866",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -394,7 +394,7 @@
             "previousStudyEpochId": "study_epoch_240",
             "nextStudyEpochId": null,
             "studyEpochType": {
-              "codeId": "code_27",
+              "codeId": "code_35",
               "code": "C99158",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -425,7 +425,7 @@
             "studyArmName": "Active",
             "studyArmDescription": "A brief description for study_arm_200",
             "studyArmType": {
-              "codeId": "code_21",
+              "codeId": "code_29",
               "code": "C15538",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -433,7 +433,7 @@
             },
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
-              "codeId": "code_24",
+              "codeId": "code_32",
               "code": "C188866",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -447,7 +447,7 @@
             "previousStudyEpochId": null,
             "nextStudyEpochId": "study_epoch_240",
             "studyEpochType": {
-              "codeId": "code_25",
+              "codeId": "code_33",
               "code": "C98779",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -461,14 +461,14 @@
                 "previousEncounterId": null,
                 "nextEncounterId": "encounter_618",
                 "encounterType": {
-                  "codeId": "code_6",
+                  "codeId": "code_14",
                   "code": "C49659",
                   "codeSystem": "SNOMED-CT",
                   "codeSystemVersion": "2022-03-25",
-                  "decode": "The preferred term for code_6"
+                  "decode": "The preferred term for code_14"
                 },
                 "encounterEnvironmentalSetting": {
-                  "codeId": "code_7",
+                  "codeId": "code_15",
                   "code": "C51282",
                   "codeSystem": "http://www.cdisc.org",
                   "codeSystemVersion": "2022-03-25",
@@ -476,7 +476,7 @@
                 },
                 "encounterContactModes": [
                   {
-                    "codeId": "code_8",
+                    "codeId": "code_16",
                     "code": "C175574",
                     "codeSystem": "http://www.cdisc.org",
                     "codeSystemVersion": "2022-03-25",
@@ -493,14 +493,14 @@
                 "previousEncounterId": "encounter_421",
                 "nextEncounterId": null,
                 "encounterType": {
-                  "codeId": "code_6",
+                  "codeId": "code_14",
                   "code": "C49659",
                   "codeSystem": "SNOMED-CT",
                   "codeSystemVersion": "2022-03-25",
-                  "decode": "The preferred term for code_6"
+                  "decode": "The preferred term for code_14"
                 },
                 "encounterEnvironmentalSetting": {
-                  "codeId": "code_7",
+                  "codeId": "code_15",
                   "code": "C51282",
                   "codeSystem": "http://www.cdisc.org",
                   "codeSystemVersion": "2022-03-25",
@@ -508,7 +508,7 @@
                 },
                 "encounterContactModes": [
                   {
-                    "codeId": "code_8",
+                    "codeId": "code_16",
                     "code": "C175574",
                     "codeSystem": "http://www.cdisc.org",
                     "codeSystemVersion": "2022-03-25",
@@ -543,7 +543,7 @@
             "studyArmName": "Active",
             "studyArmDescription": "A brief description for study_arm_200",
             "studyArmType": {
-              "codeId": "code_21",
+              "codeId": "code_29",
               "code": "C15538",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -551,7 +551,7 @@
             },
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
-              "codeId": "code_24",
+              "codeId": "code_32",
               "code": "C188866",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -565,7 +565,7 @@
             "previousStudyEpochId": "study_epoch_304",
             "nextStudyEpochId": "study_epoch_897",
             "studyEpochType": {
-              "codeId": "code_26",
+              "codeId": "code_34",
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -596,7 +596,7 @@
             "studyArmName": "Active",
             "studyArmDescription": "A brief description for study_arm_200",
             "studyArmType": {
-              "codeId": "code_21",
+              "codeId": "code_29",
               "code": "C15538",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -604,7 +604,7 @@
             },
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
-              "codeId": "code_24",
+              "codeId": "code_32",
               "code": "C188866",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -618,7 +618,7 @@
             "previousStudyEpochId": "study_epoch_240",
             "nextStudyEpochId": null,
             "studyEpochType": {
-              "codeId": "code_27",
+              "codeId": "code_35",
               "code": "C99158",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -648,11 +648,11 @@
           "indicationId": "study_indication_446",
           "codes": [
             {
-              "codeId": "code_20",
+              "codeId": "code_28",
               "code": "C187674",
               "codeSystem": "ISO 3166\u20111 alpha3",
               "codeSystemVersion": "2022-03-25",
-              "decode": "The preferred term for code_20"
+              "decode": "The preferred term for code_28"
             }
           ],
           "indicationDescription": "A brief description for study_indication_446"
@@ -664,14 +664,14 @@
           "interventionDescription": "Intervention 966",
           "codes": [
             {
-              "codeId": "code_9",
+              "codeId": "code_17",
               "code": "XX031ZA",
               "codeSystem": "ATC",
               "codeSystemVersion": "2021",
               "decode": "SubstX"
             },
             {
-              "codeId": "code_10",
+              "codeId": "code_18",
               "code": "L01XK01",
               "codeSystem": "ATC",
               "codeSystemVersion": "14-12-2021",
@@ -689,11 +689,11 @@
           "plannedMinimumAgeOfParticipants": "849",
           "plannedSexOfParticipants": [
             {
-              "codeId": "code_11",
+              "codeId": "code_19",
               "code": "C49659",
               "codeSystem": "SNOMED-CT",
               "codeSystemVersion": "2022-03-25",
-              "decode": "The preferred term for code_11"
+              "decode": "The preferred term for code_19"
             }
           ]
         }
@@ -703,7 +703,7 @@
           "objectiveId": "objective_939",
           "objectiveDescription": "Objective Level 939",
           "objectiveLevel": {
-            "codeId": "code_12",
+            "codeId": "code_20",
             "code": "C85826",
             "codeSystem": "http://www.cdisc.org",
             "codeSystemVersion": "2022-03-25",
@@ -715,7 +715,7 @@
               "endpointDescription": "Endpoint 175",
               "endpointPurposeDescription": "A brief description for Endpoint 175",
               "endpointLevel": {
-                "codeId": "code_13",
+                "codeId": "code_21",
                 "code": "C94496",
                 "codeSystem": "http://www.cdisc.org",
                 "codeSystemVersion": "2022-03-25",
@@ -727,7 +727,7 @@
               "endpointDescription": "Endpoint 461",
               "endpointPurposeDescription": "A brief description for Endpoint 461",
               "endpointLevel": {
-                "codeId": "code_14",
+                "codeId": "code_22",
                 "code": "C139173",
                 "codeSystem": "http://www.cdisc.org",
                 "codeSystemVersion": "2022-03-25",
@@ -754,14 +754,14 @@
                 "previousEncounterId": null,
                 "nextEncounterId": "encounter_618",
                 "encounterType": {
-                  "codeId": "code_6",
+                  "codeId": "code_14",
                   "code": "C49659",
                   "codeSystem": "SNOMED-CT",
                   "codeSystemVersion": "2022-03-25",
-                  "decode": "The preferred term for code_6"
+                  "decode": "The preferred term for code_14"
                 },
                 "encounterEnvironmentalSetting": {
-                  "codeId": "code_7",
+                  "codeId": "code_15",
                   "code": "C51282",
                   "codeSystem": "http://www.cdisc.org",
                   "codeSystemVersion": "2022-03-25",
@@ -769,7 +769,7 @@
                 },
                 "encounterContactModes": [
                   {
-                    "codeId": "code_8",
+                    "codeId": "code_16",
                     "code": "C175574",
                     "codeSystem": "http://www.cdisc.org",
                     "codeSystemVersion": "2022-03-25",
@@ -803,79 +803,129 @@
                 "studyDataCollection": [],
                 "activityIsConditional": false,
                 "activityIsConditionalReason": "Because of a stipulation or requirement",
-                "biomedicalConcept": {
-                  "biomedicalConceptId": "biomedical_concept_1",
-                  "bcName": "Biomedical Concept_1",
-                  "bcSynonyms": [
-                    "bc_1"
-                  ],
-                  "bcReference": "BC ref_1",
-                  "bcProperties": [
-                    {
-                      "bcPropertyId": "bc_property_1",
-                      "bcPropertyName": "BC Property 1",
-                      "bcPropertyRequired": false,
-                      "bcPropertyEnabled": false,
-                      "bcPropertyDatatype": "STRING",
-                      "bcPropertyResponseCodes": [
-                        {
-                          "responseCodeId": "response_code_1",
-                          "responseCodeEnabled": false,
-                          "code": {
-                            "codeId": "code_2",
-                            "code": "C187674",
-                            "codeSystem": "ISO 3166\u20111 alpha3",
-                            "codeSystemVersion": "2022-03-25",
-                            "decode": "The preferred term for code_2"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                "bcCategories": {
-                  "biomedicalConceptCategoryId": "bc_categories_1",
-                  "bcCategoryParents": [],
-                  "bcCategoryChildren": [],
-                  "bcCategoryName": "BC Categories 1",
-                  "bcCategoryDescription": "A brief description for BC Categories 1",
-                  "bcCategoryMembers": {
-                    "biomedicalConceptId": "biomedical_concept_2",
-                    "bcName": "Biomedical Concept_2",
+                "biomedicalConcepts": [
+                  {
+                    "biomedicalConceptId": "biomedical_concept_1",
+                    "bcName": "Biomedical Concept_1",
                     "bcSynonyms": [
-                      "bc_2"
+                      "bc_1"
                     ],
-                    "bcReference": "BC ref_2",
+                    "bcReference": "BC ref_1",
                     "bcProperties": [
                       {
-                        "bcPropertyId": "bc_property_2",
-                        "bcPropertyName": "BC Property 2",
+                        "bcPropertyId": "bc_property_1",
+                        "bcPropertyName": "BC Property 1",
                         "bcPropertyRequired": false,
                         "bcPropertyEnabled": false,
                         "bcPropertyDatatype": "STRING",
                         "bcPropertyResponseCodes": [
                           {
-                            "responseCodeId": "response_code_2",
+                            "responseCodeId": "response_code_1",
                             "responseCodeEnabled": false,
                             "code": {
-                              "codeId": "code_3",
-                              "code": "C156592",
-                              "codeSystem": "http://www.cdisc.org",
+                              "codeId": "code_2",
+                              "code": "C187674",
+                              "codeSystem": "ISO 3166\u20111 alpha3",
                               "codeSystemVersion": "2022-03-25",
-                              "decode": "The preferred term for code_3"
+                              "decode": "The preferred term for code_2"
                             }
                           }
-                        ]
+                        ],
+                        "bcPropertyDefinition": {
+                          "aliasCodeId": "alias_code_1",
+                          "standardCode": {
+                            "codeId": "code_3",
+                            "code": "C15228",
+                            "codeSystem": "http://www.cdisc.org",
+                            "codeSystemVersion": "2022-03-25",
+                            "decode": "Double Blind Study"
+                          },
+                          "standardCodeAliases": []
+                        }
                       }
-                    ]
+                    ],
+                    "bcConceptDefinition": {
+                      "aliasCodeId": "alias_code_2",
+                      "standardCode": {
+                        "codeId": "code_4",
+                        "code": "C15228",
+                        "codeSystem": "http://www.cdisc.org",
+                        "codeSystemVersion": "2022-03-25",
+                        "decode": "Double Blind Study"
+                      },
+                      "standardCodeAliases": []
+                    }
                   }
-                },
-                "bcSurrogates": {
-                  "bcSurrogateId": "bc_surrogate_2",
-                  "bcSurrogateName": "BC Surrogate 2",
-                  "bcSurrogateDescription": "A brief description for BC Surrogate 2",
-                  "bcSurrogateReference": ""
-                }
+                ],
+                "bcCategories": [
+                  {
+                    "biomedicalConceptCategoryId": "bc_category_1",
+                    "bcCategoryParents": [],
+                    "bcCategoryChildren": [],
+                    "bcCategoryName": "BC Category 1",
+                    "bcCategoryDescription": "A brief description for BC Category 1",
+                    "bcCategoryMembers": {
+                      "biomedicalConceptId": "biomedical_concept_2",
+                      "bcName": "Biomedical Concept_2",
+                      "bcSynonyms": [
+                        "bc_2"
+                      ],
+                      "bcReference": "BC ref_2",
+                      "bcProperties": [
+                        {
+                          "bcPropertyId": "bc_property_2",
+                          "bcPropertyName": "BC Property 2",
+                          "bcPropertyRequired": false,
+                          "bcPropertyEnabled": false,
+                          "bcPropertyDatatype": "STRING",
+                          "bcPropertyResponseCodes": [
+                            {
+                              "responseCodeId": "response_code_2",
+                              "responseCodeEnabled": false,
+                              "code": {
+                                "codeId": "code_5",
+                                "code": "C156592",
+                                "codeSystem": "http://www.cdisc.org",
+                                "codeSystemVersion": "2022-03-25",
+                                "decode": "The preferred term for code_5"
+                              }
+                            }
+                          ],
+                          "bcPropertyDefinition": {
+                            "aliasCodeId": "alias_code_3",
+                            "standardCode": {
+                              "codeId": "code_6",
+                              "code": "C15228",
+                              "codeSystem": "http://www.cdisc.org",
+                              "codeSystemVersion": "2022-03-25",
+                              "decode": "Double Blind Study"
+                            },
+                            "standardCodeAliases": []
+                          }
+                        }
+                      ],
+                      "bcConceptDefinition": {
+                        "aliasCodeId": "alias_code_4",
+                        "standardCode": {
+                          "codeId": "code_7",
+                          "code": "C15228",
+                          "codeSystem": "http://www.cdisc.org",
+                          "codeSystemVersion": "2022-03-25",
+                          "decode": "Double Blind Study"
+                        },
+                        "standardCodeAliases": []
+                      }
+                    }
+                  }
+                ],
+                "bcSurrogates": [
+                  {
+                    "bcSurrogateId": "bc_surrogate_2",
+                    "bcSurrogateName": "BC Surrogate 2",
+                    "bcSurrogateDescription": "A brief description for BC Surrogate 2",
+                    "bcSurrogateReference": ""
+                  }
+                ]
               }
             },
             {
@@ -890,14 +940,14 @@
                 "previousEncounterId": "encounter_421",
                 "nextEncounterId": null,
                 "encounterType": {
-                  "codeId": "code_6",
+                  "codeId": "code_14",
                   "code": "C49659",
                   "codeSystem": "SNOMED-CT",
                   "codeSystemVersion": "2022-03-25",
-                  "decode": "The preferred term for code_6"
+                  "decode": "The preferred term for code_14"
                 },
                 "encounterEnvironmentalSetting": {
-                  "codeId": "code_7",
+                  "codeId": "code_15",
                   "code": "C51282",
                   "codeSystem": "http://www.cdisc.org",
                   "codeSystemVersion": "2022-03-25",
@@ -905,7 +955,7 @@
                 },
                 "encounterContactModes": [
                   {
-                    "codeId": "code_8",
+                    "codeId": "code_16",
                     "code": "C175574",
                     "codeSystem": "http://www.cdisc.org",
                     "codeSystemVersion": "2022-03-25",
@@ -932,79 +982,129 @@
                 ],
                 "activityIsConditional": false,
                 "activityIsConditionalReason": "Because of a stipulation or requirement",
-                "biomedicalConcept": {
-                  "biomedicalConceptId": "biomedical_concept_3",
-                  "bcName": "Biomedical Concept_3",
-                  "bcSynonyms": [
-                    "bc_3"
-                  ],
-                  "bcReference": "BC ref_3",
-                  "bcProperties": [
-                    {
-                      "bcPropertyId": "bc_property_3",
-                      "bcPropertyName": "BC Property 3",
-                      "bcPropertyRequired": false,
-                      "bcPropertyEnabled": false,
-                      "bcPropertyDatatype": "STRING",
-                      "bcPropertyResponseCodes": [
-                        {
-                          "responseCodeId": "response_code_3",
-                          "responseCodeEnabled": false,
-                          "code": {
-                            "codeId": "code_4",
-                            "code": "C15228",
-                            "codeSystem": "http://www.cdisc.org",
-                            "codeSystemVersion": "2022-03-25",
-                            "decode": "The preferred term for code_4"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                "bcCategories": {
-                  "biomedicalConceptCategoryId": "bc_categories_2",
-                  "bcCategoryParents": [],
-                  "bcCategoryChildren": [],
-                  "bcCategoryName": "BC Categories 2",
-                  "bcCategoryDescription": "A brief description for BC Categories 2",
-                  "bcCategoryMembers": {
-                    "biomedicalConceptId": "biomedical_concept_4",
-                    "bcName": "Biomedical Concept_4",
+                "biomedicalConcepts": [
+                  {
+                    "biomedicalConceptId": "biomedical_concept_3",
+                    "bcName": "Biomedical Concept_3",
                     "bcSynonyms": [
-                      "bc_4"
+                      "bc_3"
                     ],
-                    "bcReference": "BC ref_4",
+                    "bcReference": "BC ref_3",
                     "bcProperties": [
                       {
-                        "bcPropertyId": "bc_property_4",
-                        "bcPropertyName": "BC Property 4",
+                        "bcPropertyId": "bc_property_3",
+                        "bcPropertyName": "BC Property 3",
                         "bcPropertyRequired": false,
                         "bcPropertyEnabled": false,
                         "bcPropertyDatatype": "STRING",
                         "bcPropertyResponseCodes": [
                           {
-                            "responseCodeId": "response_code_4",
+                            "responseCodeId": "response_code_3",
                             "responseCodeEnabled": false,
                             "code": {
-                              "codeId": "code_5",
-                              "code": "C28233",
+                              "codeId": "code_8",
+                              "code": "C15228",
                               "codeSystem": "http://www.cdisc.org",
                               "codeSystemVersion": "2022-03-25",
-                              "decode": "The preferred term for code_5"
+                              "decode": "The preferred term for code_8"
                             }
                           }
-                        ]
+                        ],
+                        "bcPropertyDefinition": {
+                          "aliasCodeId": "alias_code_5",
+                          "standardCode": {
+                            "codeId": "code_9",
+                            "code": "C15228",
+                            "codeSystem": "http://www.cdisc.org",
+                            "codeSystemVersion": "2022-03-25",
+                            "decode": "Double Blind Study"
+                          },
+                          "standardCodeAliases": []
+                        }
                       }
-                    ]
+                    ],
+                    "bcConceptDefinition": {
+                      "aliasCodeId": "alias_code_6",
+                      "standardCode": {
+                        "codeId": "code_10",
+                        "code": "C15228",
+                        "codeSystem": "http://www.cdisc.org",
+                        "codeSystemVersion": "2022-03-25",
+                        "decode": "Double Blind Study"
+                      },
+                      "standardCodeAliases": []
+                    }
                   }
-                },
-                "bcSurrogates": {
-                  "bcSurrogateId": "bc_surrogate_4",
-                  "bcSurrogateName": "BC Surrogate 4",
-                  "bcSurrogateDescription": "A brief description for BC Surrogate 4",
-                  "bcSurrogateReference": ""
-                }
+                ],
+                "bcCategories": [
+                  {
+                    "biomedicalConceptCategoryId": "bc_category_2",
+                    "bcCategoryParents": [],
+                    "bcCategoryChildren": [],
+                    "bcCategoryName": "BC Category 2",
+                    "bcCategoryDescription": "A brief description for BC Category 2",
+                    "bcCategoryMembers": {
+                      "biomedicalConceptId": "biomedical_concept_4",
+                      "bcName": "Biomedical Concept_4",
+                      "bcSynonyms": [
+                        "bc_4"
+                      ],
+                      "bcReference": "BC ref_4",
+                      "bcProperties": [
+                        {
+                          "bcPropertyId": "bc_property_4",
+                          "bcPropertyName": "BC Property 4",
+                          "bcPropertyRequired": false,
+                          "bcPropertyEnabled": false,
+                          "bcPropertyDatatype": "STRING",
+                          "bcPropertyResponseCodes": [
+                            {
+                              "responseCodeId": "response_code_4",
+                              "responseCodeEnabled": false,
+                              "code": {
+                                "codeId": "code_11",
+                                "code": "C28233",
+                                "codeSystem": "http://www.cdisc.org",
+                                "codeSystemVersion": "2022-03-25",
+                                "decode": "The preferred term for code_11"
+                              }
+                            }
+                          ],
+                          "bcPropertyDefinition": {
+                            "aliasCodeId": "alias_code_7",
+                            "standardCode": {
+                              "codeId": "code_12",
+                              "code": "C15228",
+                              "codeSystem": "http://www.cdisc.org",
+                              "codeSystemVersion": "2022-03-25",
+                              "decode": "Double Blind Study"
+                            },
+                            "standardCodeAliases": []
+                          }
+                        }
+                      ],
+                      "bcConceptDefinition": {
+                        "aliasCodeId": "alias_code_8",
+                        "standardCode": {
+                          "codeId": "code_13",
+                          "code": "C15228",
+                          "codeSystem": "http://www.cdisc.org",
+                          "codeSystemVersion": "2022-03-25",
+                          "decode": "Double Blind Study"
+                        },
+                        "standardCodeAliases": []
+                      }
+                    }
+                  }
+                ],
+                "bcSurrogates": [
+                  {
+                    "bcSurrogateId": "bc_surrogate_4",
+                    "bcSurrogateName": "BC Surrogate 4",
+                    "bcSurrogateDescription": "A brief description for BC Surrogate 4",
+                    "bcSurrogateReference": ""
+                  }
+                ]
               }
             }
           ]
@@ -1012,11 +1112,11 @@
       ],
       "therapeuticAreas:": [
         {
-          "codeId": "code_32",
+          "codeId": "code_40",
           "code": "C49659",
           "codeSystem": "SNOMED-CT",
           "codeSystemVersion": "2022-03-25",
-          "decode": "The preferred term for code_32"
+          "decode": "The preferred term for code_40"
         }
       ],
       "studyEstimands": [],
@@ -1024,9 +1124,9 @@
       "activities": [],
       "studyDesignRationale": "Because of a stipulation or requirement",
       "studyDesignBlindingScheme": {
-        "aliasCodeId": "alias_code_1",
+        "aliasCodeId": "alias_code_9",
         "standardCode": {
-          "codeId": "code_33",
+          "codeId": "code_41",
           "code": "C15228",
           "codeSystem": "http://www.cdisc.org",
           "codeSystemVersion": "2022-03-25",

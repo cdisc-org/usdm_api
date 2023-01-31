@@ -6,7 +6,7 @@ from faker.providers import BaseProvider
 
 alias_code_index = 0
 biomedical_concept_index = 0
-bc_categories_index = 0
+bc_category_index = 0
 bc_property_index = 0
 bc_surrogate_index = 0
 response_code_index = 0
@@ -65,9 +65,9 @@ class DDFFakerProvider(BaseProvider):
         "studyDataCollection": study_data,
         "activityIsConditional": optional,
         "activityIsConditionalReason": fake.reason(),
-        "biomedicalConcept": fake.biomedical_concept(),
-        "bcCategories": fake.bc_categories(),
-        "bcSurrogates": fake.bc_surrogate()
+        "biomedicalConcepts": [fake.biomedical_concept()],
+        "bcCategories": [fake.bc_category()],
+        "bcSurrogates": [fake.bc_surrogate()]
       }
     def address(self):
       return {
@@ -100,17 +100,18 @@ class DDFFakerProvider(BaseProvider):
         "bcName": "Biomedical Concept_%s" % (biomedical_concept_index),
         "bcSynonyms": ["bc_%s" % (biomedical_concept_index)],
         "bcReference": "BC ref_%s" % (biomedical_concept_index),
-        "bcProperties": [fake.bc_property()]
+        "bcProperties": [fake.bc_property()],
+        "bcConceptDefinition": fake.alias_code()
       }
-    def bc_categories(self):
-      global bc_categories_index
-      bc_categories_index += 1
+    def bc_category(self):
+      global bc_category_index
+      bc_category_index += 1
       return {
-        "biomedicalConceptCategoryId": "bc_categories_%s" % (bc_categories_index),
+        "biomedicalConceptCategoryId": "bc_category_%s" % (bc_category_index),
         "bcCategoryParents": [],
         "bcCategoryChildren": [],
-        "bcCategoryName": "BC Categories %s" % (bc_categories_index),
-        "bcCategoryDescription": fake.description("BC Categories %s" % (bc_categories_index)),
+        "bcCategoryName": "BC Category %s" % (bc_category_index),
+        "bcCategoryDescription": fake.description("BC Category %s" % (bc_category_index)),
         "bcCategoryMembers": fake.biomedical_concept()
       }
     def bc_property(self):
@@ -122,7 +123,8 @@ class DDFFakerProvider(BaseProvider):
         "bcPropertyRequired": False,
         "bcPropertyEnabled": False,
         "bcPropertyDatatype": "STRING",
-        "bcPropertyResponseCodes": [fake.response_code()]
+        "bcPropertyResponseCodes": [fake.response_code()],
+        "bcPropertyDefinition": fake.alias_code()
       }
     def bc_surrogate(self):
       global bc_surrogate_index

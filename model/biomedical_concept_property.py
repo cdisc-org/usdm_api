@@ -1,4 +1,5 @@
 from typing import List
+from .aliasCode import AliasCode
 from .api_base_model import ApiBaseModel
 from .response_code import ResponseCode
 
@@ -9,3 +10,4 @@ class BiomedicalConceptProperty(ApiBaseModel):
   bcPropertyEnabled: bool
   bcPropertyDatatype: str
   bcPropertyResponseCodes: List[ResponseCode] = []
+  bcPropertyDefinition: AliasCode

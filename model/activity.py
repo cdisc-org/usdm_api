@@ -18,6 +18,6 @@ class Activity(ApiBaseModel):
   studyDataCollection: List[StudyData] = []
   activityIsConditional: bool
   activityIsConditionalReason: str
-  biomedicalConcept: BiomedicalConcept
-  bcCategories: BiomedicalConceptCategory
-  bcSurrogates: BiomedicalConceptSurrogate
+  biomedicalConcepts: List[BiomedicalConcept] = []
+  bcCategories: List[BiomedicalConceptCategory] = []
+  bcSurrogates: List[BiomedicalConceptSurrogate] = []
