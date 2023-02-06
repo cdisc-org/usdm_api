@@ -65,9 +65,9 @@ class DDFFakerProvider(BaseProvider):
         "studyDataCollection": study_data,
         "activityIsConditional": optional,
         "activityIsConditionalReason": fake.reason(),
-        "biomedicalConcepts": [fake.biomedical_concept()],
-        "bcCategories": [fake.bc_category()],
-        "bcSurrogates": [fake.bc_surrogate()]
+        "biomedicalConcepts": ["ID_TBD"],
+        "bcCategories": ["ID_TBD"],
+        "bcSurrogates": ["ID_TBD"]
       }
     def address(self):
       return {
@@ -101,18 +101,18 @@ class DDFFakerProvider(BaseProvider):
         "bcSynonyms": ["bc_%s" % (biomedical_concept_index)],
         "bcReference": "BC ref_%s" % (biomedical_concept_index),
         "bcProperties": [fake.bc_property()],
-        "bcConceptDefinition": fake.alias_code()
+        "bcConceptCode": fake.alias_code()
       }
     def bc_category(self):
       global bc_category_index
       bc_category_index += 1
       return {
         "biomedicalConceptCategoryId": "bc_category_%s" % (bc_category_index),
-        "bcCategoryParents": [],
-        "bcCategoryChildren": [],
+        "bcCategoryParents": ["ID_TBD"],
+        "bcCategoryChildren": ["ID_TBD"],
         "bcCategoryName": "BC Category %s" % (bc_category_index),
         "bcCategoryDescription": fake.description("BC Category %s" % (bc_category_index)),
-        "bcCategoryMembers": fake.biomedical_concept()
+        "bcCategoryMemberIds": ["ID_TBD"]
       }
     def bc_property(self):
       global bc_property_index
@@ -124,7 +124,7 @@ class DDFFakerProvider(BaseProvider):
         "bcPropertyEnabled": False,
         "bcPropertyDatatype": "STRING",
         "bcPropertyResponseCodes": [fake.response_code()],
-        "bcPropertyDefinition": fake.alias_code()
+        "bcPropertyConceptCode": fake.alias_code()
       }
     def bc_surrogate(self):
       global bc_surrogate_index
@@ -259,7 +259,10 @@ class DDFFakerProvider(BaseProvider):
         "encounters": encounters,
         "activities": activities,
         "studyDesignRationale": fake.reason(),
-        "studyDesignBlindingScheme": fake.alias_code()
+        "studyDesignBlindingScheme": fake.alias_code(),
+        "biomedicalConceptIds": fake.biomedical_concept(),
+        "bcCategoryIds": fake.bc_category(),
+        "bcSurrogateIds": fake.bc_surrogate()
       }
     def study_design_population(self):
       i = fake.random.randint(1, 999)
@@ -319,8 +322,8 @@ class DDFFakerProvider(BaseProvider):
         'workflowItemDescription': "Workflow item %s" % i,
         'previousWorkflowItemId': None,
         'nextWorkflowItemId': None,
-        'workflowItemEncounterId': encounter,
-        'workflowItemActivityId': activity,
+        'workflowItemEncounterId': "ID_TBD",
+        'workflowItemActivityId': "ID_TBD",
       }
     def workflow(self, items):
       i = fake.random.randint(1, 999)

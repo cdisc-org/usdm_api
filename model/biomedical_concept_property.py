@@ -10,4 +10,4 @@ class BiomedicalConceptProperty(ApiBaseModel):
   bcPropertyEnabled: bool
   bcPropertyDatatype: str
   bcPropertyResponseCodes: List[ResponseCode] = []
-  bcPropertyDefinition: AliasCode
+  bcPropertyConceptCode: AliasCode

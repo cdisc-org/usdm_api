@@ -9,4 +9,4 @@ class BiomedicalConcept(ApiBaseModel):
   bcSynonyms: List[str] = []
   bcReference: str
   bcProperties: List[BiomedicalConceptProperty] = []
-  bcConceptDefinition: AliasCode
+  bcConceptCode: AliasCode
