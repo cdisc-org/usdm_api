@@ -62,7 +62,6 @@ class DDFFakerProvider(BaseProvider):
         "previousActivityId": None,
         "nextActivityId": None,
         "definedProcedures": procedures,
-        "studyDataCollection": study_data,
         "activityIsConditional": optional,
         "activityIsConditionalReason": fake.reason(),
         "biomedicalConcepts": ["ID_TBD"],
