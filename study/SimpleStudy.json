@@ -785,7 +785,7 @@
         },
         "standardCodeAliases": []
       },
-      "biomedicalConceptIds": {
+      "biomedicalConcepts": {
         "biomedicalConceptId": "biomedical_concept_1",
         "bcName": "Biomedical Concept_1",
         "bcSynonyms": [
@@ -837,12 +837,12 @@
           "standardCodeAliases": []
         }
       },
-      "bcCategoryIds": {
+      "bcCategories": {
         "biomedicalConceptCategoryId": "bc_category_1",
-        "bcCategoryParents": [
+        "bcCategoryParentIds": [
           "ID_TBD"
         ],
-        "bcCategoryChildren": [
+        "bcCategoryChildrenIds": [
           "ID_TBD"
         ],
         "bcCategoryName": "BC Category 1",
@@ -851,7 +851,7 @@
           "ID_TBD"
         ]
       },
-      "bcSurrogateIds": {
+      "bcSurrogates": {
         "bcSurrogateId": "bc_surrogate_1",
         "bcSurrogateName": "BC Surrogate 1",
         "bcSurrogateDescription": "A brief description for BC Surrogate 1",

@@ -3,8 +3,8 @@ from .api_base_model import ApiBaseModel
 
 class BiomedicalConceptCategory(ApiBaseModel):
   biomedicalConceptCategoryId: str
-  bcCategoryParents: List[str] = []
-  bcCategoryChildren: List[str] = []
+  bcCategoryParentIds: List[str] = []
+  bcCategoryChildrenIds: List[str] = []
   bcCategoryName: str
   bcCategoryDescription: str
   bcCategoryMemberIds: List[str] = []

@@ -107,8 +107,8 @@ class DDFFakerProvider(BaseProvider):
       bc_category_index += 1
       return {
         "biomedicalConceptCategoryId": "bc_category_%s" % (bc_category_index),
-        "bcCategoryParents": ["ID_TBD"],
-        "bcCategoryChildren": ["ID_TBD"],
+        "bcCategoryParentIds": ["ID_TBD"],
+        "bcCategoryChildrenIds": ["ID_TBD"],
         "bcCategoryName": "BC Category %s" % (bc_category_index),
         "bcCategoryDescription": fake.description("BC Category %s" % (bc_category_index)),
         "bcCategoryMemberIds": ["ID_TBD"]
@@ -259,9 +259,9 @@ class DDFFakerProvider(BaseProvider):
         "activities": activities,
         "studyDesignRationale": fake.reason(),
         "studyDesignBlindingScheme": fake.alias_code(),
-        "biomedicalConceptIds": fake.biomedical_concept(),
-        "bcCategoryIds": fake.bc_category(),
-        "bcSurrogateIds": fake.bc_surrogate()
+        "biomedicalConcepts": fake.biomedical_concept(),
+        "bcCategories": fake.bc_category(),
+        "bcSurrogates": fake.bc_surrogate()
       }
     def study_design_population(self):
       i = fake.random.randint(1, 999)

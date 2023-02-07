@@ -36,9 +36,9 @@ class StudyDesign(ApiBaseModel):
   activities: List[Activity] = []
   studyDesignRationale: str
   studyDesignBlindingScheme: AliasCode = None
-  biomedicalConceptIds: List[BiomedicalConcept] = []
-  bcCategoryIds: List[BiomedicalConceptCategory] = []
-  bcSurrogateIds: List[BiomedicalConceptSurrogate] = []
+  biomedicalConcepts: List[BiomedicalConcept] = []
+  bcCategories: List[BiomedicalConceptCategory] = []
+  bcSurrogates: List[BiomedicalConceptSurrogate] = []
 
   @classmethod
   def search(cls, store, uuid):
