@@ -259,9 +259,9 @@ class DDFFakerProvider(BaseProvider):
         "activities": activities,
         "studyDesignRationale": fake.reason(),
         "studyDesignBlindingScheme": fake.alias_code(),
-        "biomedicalConcepts": fake.biomedical_concept(),
-        "bcCategories": fake.bc_category(),
-        "bcSurrogates": fake.bc_surrogate()
+        "biomedicalConcepts": [fake.biomedical_concept()],
+        "bcCategories": [fake.bc_category()],
+        "bcSurrogates": [fake.bc_surrogate()]
       }
     def study_design_population(self):
       i = fake.random.randint(1, 999)

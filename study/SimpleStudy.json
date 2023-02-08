@@ -785,78 +785,84 @@
         },
         "standardCodeAliases": []
       },
-      "biomedicalConcepts": {
-        "biomedicalConceptId": "biomedical_concept_1",
-        "bcName": "Biomedical Concept_1",
-        "bcSynonyms": [
-          "bc_1"
-        ],
-        "bcReference": "BC ref_1",
-        "bcProperties": [
-          {
-            "bcPropertyId": "bc_property_1",
-            "bcPropertyName": "BC Property 1",
-            "bcPropertyRequired": false,
-            "bcPropertyEnabled": false,
-            "bcPropertyDatatype": "STRING",
-            "bcPropertyResponseCodes": [
-              {
-                "responseCodeId": "response_code_1",
-                "responseCodeEnabled": false,
-                "code": {
-                  "codeId": "code_30",
-                  "code": "C156592",
-                  "codeSystem": "ISO 3166\u20111 alpha3",
-                  "codeSystemVersion": "2022-03-25",
-                  "decode": "The preferred term for code_30"
+      "biomedicalConcepts": [
+        {
+          "biomedicalConceptId": "biomedical_concept_1",
+          "bcName": "Biomedical Concept_1",
+          "bcSynonyms": [
+            "bc_1"
+          ],
+          "bcReference": "BC ref_1",
+          "bcProperties": [
+            {
+              "bcPropertyId": "bc_property_1",
+              "bcPropertyName": "BC Property 1",
+              "bcPropertyRequired": false,
+              "bcPropertyEnabled": false,
+              "bcPropertyDatatype": "STRING",
+              "bcPropertyResponseCodes": [
+                {
+                  "responseCodeId": "response_code_1",
+                  "responseCodeEnabled": false,
+                  "code": {
+                    "codeId": "code_30",
+                    "code": "C156592",
+                    "codeSystem": "ISO 3166\u20111 alpha3",
+                    "codeSystemVersion": "2022-03-25",
+                    "decode": "The preferred term for code_30"
+                  }
                 }
+              ],
+              "bcPropertyConceptCode": {
+                "aliasCodeId": "alias_code_2",
+                "standardCode": {
+                  "codeId": "code_31",
+                  "code": "C15228",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Double Blind Study"
+                },
+                "standardCodeAliases": []
               }
-            ],
-            "bcPropertyConceptCode": {
-              "aliasCodeId": "alias_code_2",
-              "standardCode": {
-                "codeId": "code_31",
-                "code": "C15228",
-                "codeSystem": "http://www.cdisc.org",
-                "codeSystemVersion": "2022-03-25",
-                "decode": "Double Blind Study"
-              },
-              "standardCodeAliases": []
             }
+          ],
+          "bcConceptCode": {
+            "aliasCodeId": "alias_code_3",
+            "standardCode": {
+              "codeId": "code_32",
+              "code": "C15228",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Double Blind Study"
+            },
+            "standardCodeAliases": []
           }
-        ],
-        "bcConceptCode": {
-          "aliasCodeId": "alias_code_3",
-          "standardCode": {
-            "codeId": "code_32",
-            "code": "C15228",
-            "codeSystem": "http://www.cdisc.org",
-            "codeSystemVersion": "2022-03-25",
-            "decode": "Double Blind Study"
-          },
-          "standardCodeAliases": []
         }
-      },
-      "bcCategories": {
-        "biomedicalConceptCategoryId": "bc_category_1",
-        "bcCategoryParentIds": [
-          "ID_TBD"
-        ],
-        "bcCategoryChildrenIds": [
-          "ID_TBD"
-        ],
-        "bcCategoryName": "BC Category 1",
-        "bcCategoryDescription": "A brief description for BC Category 1",
-        "bcCategoryMemberIds": [
-          "ID_TBD"
-        ]
-      },
-      "bcSurrogates": {
-        "bcSurrogateId": "bc_surrogate_1",
-        "bcSurrogateName": "BC Surrogate 1",
-        "bcSurrogateDescription": "A brief description for BC Surrogate 1",
-        "bcSurrogateReference": ""
-      }
+      ],
+      "bcCategories": [
+        {
+          "biomedicalConceptCategoryId": "bc_category_1",
+          "bcCategoryParentIds": [
+            "ID_TBD"
+          ],
+          "bcCategoryChildrenIds": [
+            "ID_TBD"
+          ],
+          "bcCategoryName": "BC Category 1",
+          "bcCategoryDescription": "A brief description for BC Category 1",
+          "bcCategoryMemberIds": [
+            "ID_TBD"
+          ]
+        }
+      ],
+      "bcSurrogates": [
+        {
+          "bcSurrogateId": "bc_surrogate_1",
+          "bcSurrogateName": "BC Surrogate 1",
+          "bcSurrogateDescription": "A brief description for BC Surrogate 1",
+          "bcSurrogateReference": ""
+        }
+      ]
     }
   ],
   "studyRationale": "Place but and.",
