@@ -1,9 +1,6 @@
 from typing import List, Union
 from .api_base_model import ApiBaseModel
 from .procedure import Procedure
-from .study_data import StudyData
-
-from uuid import UUID
 
 class Activity(ApiBaseModel):
   activityId: str
@@ -12,6 +9,8 @@ class Activity(ApiBaseModel):
   previousActivityId: Union[str, None] = None
   nextActivityId: Union[str, None] = None
   definedProcedures: List[Procedure] = []
-  studyDataCollection: List[StudyData] = []
   activityIsConditional: bool
   activityIsConditionalReason: str
+  biomedicalConcepts: List[str] = []
+  bcCategories: List[str] = []
+  bcSurrogates: List[str] = []

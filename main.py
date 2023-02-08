@@ -9,13 +9,12 @@ from model.code import *
 from model.ct import *
 from model.study_arm import *
 from model.study_cell import *
-from model.study_data import *
 from model.procedure import *
 from model.activity import *
 from model.transition_rule import *
 from model.encounter import *
 
-VERSION = "1.6 Provisional (0.30)"
+VERSION = "1.7 Provisional (0.31)"
 SYSTEM_NAME = "Simple API for DDF"
 
 tags_metadata = [

@@ -18,11 +18,11 @@
   },
   "businessTherapeuticAreas": [
     {
-      "codeId": "code_32",
-      "code": "C15228",
+      "codeId": "code_35",
+      "code": "C49659",
       "codeSystem": "SNOMED-CT",
       "codeSystemVersion": "2022-03-25",
-      "decode": "The preferred term for code_32"
+      "decode": "The preferred term for code_35"
     }
   ],
   "studyIdentifiers": [
@@ -131,11 +131,11 @@
       "protocolAmendment": null,
       "protocolEffectiveDate": "2022-01-01",
       "protocolStatus": {
-        "codeId": "code_30",
-        "code": "C156592",
+        "codeId": "code_33",
+        "code": "C187674",
         "codeSystem": "ISO 3166\u20111 alpha3",
         "codeSystemVersion": "2022-03-25",
-        "decode": "The preferred term for code_30"
+        "decode": "The preferred term for code_33"
       }
     },
     {
@@ -148,11 +148,11 @@
       "protocolAmendment": "Amendment 1",
       "protocolEffectiveDate": "2022-02-01",
       "protocolStatus": {
-        "codeId": "code_31",
-        "code": "C187674",
-        "codeSystem": "ISO 3166\u20111 alpha3",
+        "codeId": "code_34",
+        "code": "C15228",
+        "codeSystem": "SNOMED-CT",
         "codeSystemVersion": "2022-03-25",
-        "decode": "The preferred term for code_31"
+        "decode": "The preferred term for code_34"
       }
     }
   ],
@@ -747,119 +747,16 @@
               "workflowItemDescription": "Workflow item 927",
               "previousWorkflowItemId": null,
               "nextWorkflowItemId": "workflow_item_691",
-              "workflowItemEncounterId": {
-                "encounterId": "encounter_375",
-                "encounterName": "Encounter 375",
-                "encounterDescription": "A brief description for Encounter 375",
-                "previousEncounterId": null,
-                "nextEncounterId": "encounter_117",
-                "encounterType": {
-                  "codeId": "code_2",
-                  "code": "C187674",
-                  "codeSystem": "ISO 3166\u20111 alpha3",
-                  "codeSystemVersion": "2022-03-25",
-                  "decode": "The preferred term for code_2"
-                },
-                "encounterEnvironmentalSetting": {
-                  "codeId": "code_3",
-                  "code": "C51282",
-                  "codeSystem": "http://www.cdisc.org",
-                  "codeSystemVersion": "2022-03-25",
-                  "decode": "Clinic"
-                },
-                "encounterContactModes": [
-                  {
-                    "codeId": "code_4",
-                    "code": "C175574",
-                    "codeSystem": "http://www.cdisc.org",
-                    "codeSystemVersion": "2022-03-25",
-                    "decode": "In Person"
-                  }
-                ],
-                "transitionStartRule": null,
-                "transitionEndRule": null
-              },
-              "workflowItemActivityId": {
-                "activityId": "activity_66",
-                "activityName": "Activity 66",
-                "activityDescription": "A brief description for Activity 66",
-                "previousActivityId": null,
-                "nextActivityId": "activity_968",
-                "definedProcedures": [
-                  {
-                    "procedureId": "procedure_418",
-                    "procedureType": "Specimen Collection",
-                    "procedureCode": {
-                      "codeId": "code_1",
-                      "code": "C156592",
-                      "codeSystem": "http://www.cdisc.org",
-                      "codeSystemVersion": "2022-03-25",
-                      "decode": "The preferred term for code_1"
-                    },
-                    "procedureIsConditional": false,
-                    "procedureIsConditionalReason": "Because of a stipulation or requirement"
-                  }
-                ],
-                "studyDataCollection": [],
-                "activityIsConditional": false,
-                "activityIsConditionalReason": "Because of a stipulation or requirement"
-              }
+              "workflowItemEncounterId": "ID_TBD",
+              "workflowItemActivityId": "ID_TBD"
             },
             {
               "workflowItemId": "workflow_item_691",
               "workflowItemDescription": "Workflow item 691",
               "previousWorkflowItemId": "workflow_item_927",
               "nextWorkflowItemId": null,
-              "workflowItemEncounterId": {
-                "encounterId": "encounter_117",
-                "encounterName": "Encounter 117",
-                "encounterDescription": "A brief description for Encounter 117",
-                "previousEncounterId": "encounter_375",
-                "nextEncounterId": null,
-                "encounterType": {
-                  "codeId": "code_2",
-                  "code": "C187674",
-                  "codeSystem": "ISO 3166\u20111 alpha3",
-                  "codeSystemVersion": "2022-03-25",
-                  "decode": "The preferred term for code_2"
-                },
-                "encounterEnvironmentalSetting": {
-                  "codeId": "code_3",
-                  "code": "C51282",
-                  "codeSystem": "http://www.cdisc.org",
-                  "codeSystemVersion": "2022-03-25",
-                  "decode": "Clinic"
-                },
-                "encounterContactModes": [
-                  {
-                    "codeId": "code_4",
-                    "code": "C175574",
-                    "codeSystem": "http://www.cdisc.org",
-                    "codeSystemVersion": "2022-03-25",
-                    "decode": "In Person"
-                  }
-                ],
-                "transitionStartRule": null,
-                "transitionEndRule": null
-              },
-              "workflowItemActivityId": {
-                "activityId": "activity_968",
-                "activityName": "Activity 968",
-                "activityDescription": "A brief description for Activity 968",
-                "previousActivityId": "activity_66",
-                "nextActivityId": null,
-                "definedProcedures": [],
-                "studyDataCollection": [
-                  {
-                    "studyDataId": "studydata_818",
-                    "studyDataName": "Study Data 818",
-                    "studyDataDescription": "A brief description for Study Data 818",
-                    "crfLink": "Link 818"
-                  }
-                ],
-                "activityIsConditional": false,
-                "activityIsConditionalReason": "Because of a stipulation or requirement"
-              }
+              "workflowItemEncounterId": "ID_TBD",
+              "workflowItemActivityId": "ID_TBD"
             }
           ]
         }
@@ -878,7 +775,7 @@
       "activities": [],
       "studyDesignRationale": "Because of a stipulation or requirement",
       "studyDesignBlindingScheme": {
-        "aliasCodeId": "alias_code_28",
+        "aliasCodeId": "alias_code_1",
         "standardCode": {
           "codeId": "code_29",
           "code": "C15228",
@@ -887,9 +784,87 @@
           "decode": "Double Blind Study"
         },
         "standardCodeAliases": []
-      }
+      },
+      "biomedicalConcepts": [
+        {
+          "biomedicalConceptId": "biomedical_concept_1",
+          "bcName": "Biomedical Concept_1",
+          "bcSynonyms": [
+            "bc_1"
+          ],
+          "bcReference": "BC ref_1",
+          "bcProperties": [
+            {
+              "bcPropertyId": "bc_property_1",
+              "bcPropertyName": "BC Property 1",
+              "bcPropertyRequired": false,
+              "bcPropertyEnabled": false,
+              "bcPropertyDatatype": "STRING",
+              "bcPropertyResponseCodes": [
+                {
+                  "responseCodeId": "response_code_1",
+                  "responseCodeEnabled": false,
+                  "code": {
+                    "codeId": "code_30",
+                    "code": "C156592",
+                    "codeSystem": "ISO 3166\u20111 alpha3",
+                    "codeSystemVersion": "2022-03-25",
+                    "decode": "The preferred term for code_30"
+                  }
+                }
+              ],
+              "bcPropertyConceptCode": {
+                "aliasCodeId": "alias_code_2",
+                "standardCode": {
+                  "codeId": "code_31",
+                  "code": "C15228",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2022-03-25",
+                  "decode": "Double Blind Study"
+                },
+                "standardCodeAliases": []
+              }
+            }
+          ],
+          "bcConceptCode": {
+            "aliasCodeId": "alias_code_3",
+            "standardCode": {
+              "codeId": "code_32",
+              "code": "C15228",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Double Blind Study"
+            },
+            "standardCodeAliases": []
+          }
+        }
+      ],
+      "bcCategories": [
+        {
+          "biomedicalConceptCategoryId": "bc_category_1",
+          "bcCategoryParentIds": [
+            "ID_TBD"
+          ],
+          "bcCategoryChildrenIds": [
+            "ID_TBD"
+          ],
+          "bcCategoryName": "BC Category 1",
+          "bcCategoryDescription": "A brief description for BC Category 1",
+          "bcCategoryMemberIds": [
+            "ID_TBD"
+          ]
+        }
+      ],
+      "bcSurrogates": [
+        {
+          "bcSurrogateId": "bc_surrogate_1",
+          "bcSurrogateName": "BC Surrogate 1",
+          "bcSurrogateDescription": "A brief description for BC Surrogate 1",
+          "bcSurrogateReference": ""
+        }
+      ]
     }
   ],
-  "studyRationale": "Wrong agency walk set design deal.",
+  "studyRationale": "Place but and.",
   "studyAcronym": "ABC"
 }

@@ -2,6 +2,9 @@ from typing import List, Union
 from .activity import Activity
 from .api_base_model import ApiBaseModel
 from .aliasCode import AliasCode
+from .biomedical_concept import BiomedicalConcept
+from .biomedical_concept_category import BiomedicalConceptCategory
+from .biomedical_concept_surrogate import BiomedicalConceptSurrogate
 from .code import Code
 from .encounter import Encounter
 from .study_cell import StudyCell
@@ -12,7 +15,6 @@ from .objective import Objective
 from .workflow import Workflow
 from .workflow_item import WorkflowItem
 from .estimand import Estimand
-from uuid import UUID
 import pandas as pd
 
 class StudyDesign(ApiBaseModel):
@@ -34,6 +36,9 @@ class StudyDesign(ApiBaseModel):
   activities: List[Activity] = []
   studyDesignRationale: str
   studyDesignBlindingScheme: AliasCode = None
+  biomedicalConcepts: List[BiomedicalConcept] = []
+  bcCategories: List[BiomedicalConceptCategory] = []
+  bcSurrogates: List[BiomedicalConceptSurrogate] = []
 
   @classmethod
   def search(cls, store, uuid):
