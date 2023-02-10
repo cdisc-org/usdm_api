@@ -105,7 +105,7 @@ def endpoint_data(id, description, purpose, level):
     "endpointId": id,
     "endpointDescription": description,
     "endpointPurposeDescription": purpose,
-    "endpointLevel": level
+    "endpointLevel": level,
   }
 
 def objective_data(id, description, level, endpoints):
@@ -113,7 +113,7 @@ def objective_data(id, description, level, endpoints):
     "objectiveId": id,
     "objectiveDescription": description,
     "objectiveLevel": level,
-    "objectiveEndpoints": endpoints
+    "objectiveEndpoints": endpoints,
   }
 
 def estimand_data(id, measure, population, treatment, variable, events):
@@ -123,7 +123,7 @@ def estimand_data(id, measure, population, treatment, variable, events):
     "analysisPopulation": population, 
     "treatment": treatment, 
     "variableOfInterest": variable, 
-    "intercurrentEvents": events 
+    "intercurrentEvents": events,
   }
 
 def intercurrent_event_data(id, name, description, strategy):
@@ -131,14 +131,14 @@ def intercurrent_event_data(id, name, description, strategy):
     "intercurrentEventId": id,
     "intercurrentEventName": name, 
     "intercurrentEventDescription": description,
-    "intercurrentEventStrategy": strategy
+    "intercurrentEventStrategy": strategy,
   }
 
 def study_identifier_data(id, identifier, organisation):
   return {
     "studyIdentifierId": id,
     "studyIdentifier": identifier,
-    "studyIdentifierScope": organisation
+    "studyIdentifierScope": organisation,
   }
 
 def organization_data(id, identifier_scheme, org_identifier, org_name, organisation_type, **kwargs):
@@ -148,13 +148,13 @@ def organization_data(id, identifier_scheme, org_identifier, org_name, organisat
     "organisationIdentifier": org_identifier,
     "organisationName": org_name,
     "organisationType": organisation_type,
-    "organizationLegalAddress": kwargs['address'] if 'address' in kwargs else None
+    "organizationLegalAddress": kwargs['address'] if 'address' in kwargs else None,
   }
 
 def analysis_population_data(id, description):
   return {
     "analysisPopulationId": id,
-    "populationDescription": description
+    "populationDescription": description,
   }
 
 def study_design_population_data(id, description, **kwargs):
@@ -164,7 +164,7 @@ def study_design_population_data(id, description, **kwargs):
     "plannedNumberOfParticipants": kwargs['num'] if 'num' in kwargs else 0,
     "plannedMaximumAgeOfParticipants": kwargs['max_age'] if 'max_age' in kwargs else "",  
     "plannedMinimumAgeOfParticipants": kwargs['min_age'] if 'min_age' in kwargs else "",
-    "plannedSexOfParticipants": kwargs['sex'] if 'sex' in kwargs else []
+    "plannedSexOfParticipants": kwargs['sex'] if 'sex' in kwargs else [],
   }
   
 def study_arm_data(id, name, description, arm_type, origin_description, origin_type):
@@ -185,7 +185,7 @@ def study_epoch_data(id, name, description, epoch_type, encounters):
     "studyEpochType": epoch_type,
     "previousStudyEpochId": None,
     "nextStudyEpochId": None,
-    "encounters": encounters
+    "encounters": encounters,
   }
 
 def study_cell_data(id, arm, epoch, elements):
@@ -193,7 +193,7 @@ def study_cell_data(id, arm, epoch, elements):
     "studyCellId": id,
     "studyArm": arm,
     "studyEpoch": epoch,
-    "studyElements": elements
+    "studyElements": elements,
   }
 
 def study_element_data(id, name, description, **kwargs):
@@ -208,7 +208,7 @@ def study_element_data(id, name, description, **kwargs):
 def transition_rule_data(id, description):
   return {
     "transitionRuleId": id,
-    "transitionRuleDescription": description
+    "transitionRuleDescription": description,
   }
 
 def study_indication_data(id, description, indications):
@@ -268,7 +268,7 @@ def study_protocol_version_data(id, brief_title, official_title, public_title, s
     "protocolVersion": version,
     "protocolAmendment": amendment,
     "protocolEffectiveDate": effective_date,
-    "protocolStatus": status
+    "protocolStatus": status,
   }
 
 def workflow_item_data(id, description, **kwargs):
@@ -285,7 +285,64 @@ def workflow_data(id, description, items):
   return {
     'workflowId': id,
     'workflowDescription': description,
-    'workflowItems': items
+    'workflowItems': items,
+  }
+
+def address_data(text, line, city, district, state, postal_code, country):
+  return{
+    "text": text,
+    "line": line,
+    "city": city,
+    "district": district,
+    "state": state,
+    "postalCode": postal_code,
+    "country": country,
+  }
+
+def alias_code_data(id, code, **kwargs):
+  return{
+    "aliasCodeId": id,
+    "standardCode": code,
+    "standardCodeAliases": kwargs['code_alias'] if 'code_alias' in kwargs else [],
+  }
+
+def biomedical_concept_data(id, name, reference, concept_code, **kwargs):
+  return {
+    "biomedicalConceptId": id,
+    "bcName": name,
+    "bcSynonyms": kwargs['synonyms'] if 'synonyms' in kwargs else [],
+    "bcReference": reference,
+    "bcProperties": kwargs['properties'] if 'properties' in kwargs else [],
+    "bcConceptCode": concept_code,
+  }
+
+def bc_category_data(id, name, description, **kwargs):
+  return {
+    "biomedicalConceptCategoryId": id, 
+    "bcCategoryParentIds": kwargs['parent_ids'] if 'parent_ids' in kwargs else [],
+    "bcCategoryChildrenIds": kwargs['children_ids'] if 'children_ids' in kwargs else [],
+    "bcCategoryName": name,
+    "bcCategoryDescription": description,
+    "bcCategoryMemberIds": kwargs['member_ids'] if 'member_ids' in kwargs else [],
+  }
+
+def bc_property_data(id, name, required, enabled, datatype, concept_code, **kwargs):
+  return {
+    "bcPropertyId": id,
+    "bcPropertyName": name,
+    "bcPropertyRequired": required,
+    "bcPropertyEnabled": enabled,
+    "bcPropertyDatatype": datatype,
+    "bcPropertyResponseCodes": kwargs['response_codes'] if 'response_codes' in kwargs else [],
+    "bcPropertyConceptCode": concept_code,
+  }
+
+def bc_surrogate_data(id, name, description, reference):
+  return {
+    "bcSurrogateId": id,
+    "bcSurrogateName": name,
+    "bcSurrogateDescription": description,
+    "bcSurrogateReference": reference,
   }
 
 # Internal methods

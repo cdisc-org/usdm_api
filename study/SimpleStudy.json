@@ -18,7 +18,7 @@
   },
   "businessTherapeuticAreas": [
     {
-      "codeId": "code_29",
+      "codeId": "code_30",
       "code": "12345",
       "codeSystem": "Sponsor",
       "codeSystemVersion": "2022",
@@ -41,7 +41,21 @@
           "codeSystemVersion": "2022-03-25",
           "decode": "Study Registry"
         },
-        "organizationLegalAddress": null
+        "organizationLegalAddress": {
+          "text": "123",
+          "line": "fake street",
+          "city": "some town",
+          "district": "district 19",
+          "state": "TX",
+          "postalCode": "12345",
+          "country": {
+            "codeId": "code_15",
+            "code": "USA",
+            "codeSystem": "ISO 3166 1 alpha3",
+            "codeSystemVersion": "",
+            "decode": "United States of America"
+          }
+        }
       }
     },
     {
@@ -59,7 +73,21 @@
           "codeSystemVersion": "2022-03-25",
           "decode": "Study Registry"
         },
-        "organizationLegalAddress": null
+        "organizationLegalAddress": {
+          "text": "123",
+          "line": "fake street",
+          "city": "some town",
+          "district": "district 19",
+          "state": "TX",
+          "postalCode": "12345",
+          "country": {
+            "codeId": "code_15",
+            "code": "USA",
+            "codeSystem": "ISO 3166 1 alpha3",
+            "codeSystemVersion": "",
+            "decode": "United States of America"
+          }
+        }
       }
     },
     {
@@ -77,7 +105,21 @@
           "codeSystemVersion": "2022-03-25",
           "decode": "Clinical Study Sponsor"
         },
-        "organizationLegalAddress": null
+        "organizationLegalAddress": {
+          "text": "123",
+          "line": "fake street",
+          "city": "some town",
+          "district": "district 19",
+          "state": "TX",
+          "postalCode": "12345",
+          "country": {
+            "codeId": "code_15",
+            "code": "USA",
+            "codeSystem": "ISO 3166 1 alpha3",
+            "codeSystemVersion": "",
+            "decode": "United States of America"
+          }
+        }
       }
     }
   ],
@@ -92,7 +134,7 @@
       "protocolAmendment": null,
       "protocolEffectiveDate": "2022-01-01",
       "protocolStatus": {
-        "codeId": "code_28",
+        "codeId": "code_29",
         "code": "C1113x",
         "codeSystem": "http://www.cdisc.org",
         "codeSystemVersion": "1",
@@ -109,7 +151,7 @@
       "protocolAmendment": "Amendment 1",
       "protocolEffectiveDate": "2022-02-01",
       "protocolStatus": {
-        "codeId": "code_28",
+        "codeId": "code_29",
         "code": "C1113x",
         "codeSystem": "http://www.cdisc.org",
         "codeSystemVersion": "1",
@@ -124,7 +166,7 @@
       "studyDesignDescription": "foobar",
       "trialIntentTypes": [
         {
-          "codeId": "code_23",
+          "codeId": "code_24",
           "code": "C15714",
           "codeSystem": "http://www.cdisc.org",
           "codeSystemVersion": "2022-03-25",
@@ -133,14 +175,14 @@
       ],
       "trialType": [
         {
-          "codeId": "code_24",
+          "codeId": "code_25",
           "code": "C158288",
           "codeSystem": "http://www.cdisc.org",
           "codeSystemVersion": "2022-03-25",
           "decode": "Biosimilarity Study"
         },
         {
-          "codeId": "code_25",
+          "codeId": "code_26",
           "code": "C49666",
           "codeSystem": "http://www.cdisc.org",
           "codeSystemVersion": "2022-03-25",
@@ -148,7 +190,7 @@
         }
       ],
       "interventionModel": {
-        "codeId": "code_26",
+        "codeId": "code_27",
         "code": "C82639",
         "codeSystem": "http://www.cdisc.org",
         "codeSystemVersion": "2022-03-25",
@@ -162,7 +204,7 @@
             "studyArmName": "Placebo",
             "studyArmDescription": "The Placebo Arm",
             "studyArmType": {
-              "codeId": "code_19",
+              "codeId": "code_20",
               "code": "C174268",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -170,7 +212,7 @@
             },
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
-              "codeId": "code_17",
+              "codeId": "code_18",
               "code": "C6574y",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "1",
@@ -182,7 +224,7 @@
             "studyEpochName": "Run In",
             "studyEpochDescription": "The run in",
             "studyEpochType": {
-              "codeId": "code_20",
+              "codeId": "code_21",
               "code": "C98779",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -276,7 +318,7 @@
             "studyArmName": "Placebo",
             "studyArmDescription": "The Placebo Arm",
             "studyArmType": {
-              "codeId": "code_19",
+              "codeId": "code_20",
               "code": "C174268",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -284,7 +326,7 @@
             },
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
-              "codeId": "code_17",
+              "codeId": "code_18",
               "code": "C6574y",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "1",
@@ -296,7 +338,7 @@
             "studyEpochName": "Treatment",
             "studyEpochDescription": "The drug!",
             "studyEpochType": {
-              "codeId": "code_21",
+              "codeId": "code_22",
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -323,7 +365,7 @@
             "studyArmName": "Placebo",
             "studyArmDescription": "The Placebo Arm",
             "studyArmType": {
-              "codeId": "code_19",
+              "codeId": "code_20",
               "code": "C174268",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -331,7 +373,7 @@
             },
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
-              "codeId": "code_17",
+              "codeId": "code_18",
               "code": "C6574y",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "1",
@@ -343,7 +385,7 @@
             "studyEpochName": "Follow Up",
             "studyEpochDescription": "Go away",
             "studyEpochType": {
-              "codeId": "code_22",
+              "codeId": "code_23",
               "code": "C99158",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -370,7 +412,7 @@
             "studyArmName": "Active",
             "studyArmDescription": "Super Drug Arm",
             "studyArmType": {
-              "codeId": "code_18",
+              "codeId": "code_19",
               "code": "C15538",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -378,7 +420,7 @@
             },
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
-              "codeId": "code_17",
+              "codeId": "code_18",
               "code": "C6574y",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "1",
@@ -390,7 +432,7 @@
             "studyEpochName": "Run In",
             "studyEpochDescription": "The run in",
             "studyEpochType": {
-              "codeId": "code_20",
+              "codeId": "code_21",
               "code": "C98779",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -484,7 +526,7 @@
             "studyArmName": "Active",
             "studyArmDescription": "Super Drug Arm",
             "studyArmType": {
-              "codeId": "code_18",
+              "codeId": "code_19",
               "code": "C15538",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -492,7 +534,7 @@
             },
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
-              "codeId": "code_17",
+              "codeId": "code_18",
               "code": "C6574y",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "1",
@@ -504,7 +546,7 @@
             "studyEpochName": "Treatment",
             "studyEpochDescription": "The drug!",
             "studyEpochType": {
-              "codeId": "code_21",
+              "codeId": "code_22",
               "code": "C101526",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -531,7 +573,7 @@
             "studyArmName": "Active",
             "studyArmDescription": "Super Drug Arm",
             "studyArmType": {
-              "codeId": "code_18",
+              "codeId": "code_19",
               "code": "C15538",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -539,7 +581,7 @@
             },
             "studyArmDataOriginDescription": "Captured subject data",
             "studyArmDataOriginType": {
-              "codeId": "code_17",
+              "codeId": "code_18",
               "code": "C6574y",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "1",
@@ -551,7 +593,7 @@
             "studyEpochName": "Follow Up",
             "studyEpochDescription": "Go away",
             "studyEpochType": {
-              "codeId": "code_22",
+              "codeId": "code_23",
               "code": "C99158",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "2022-03-25",
@@ -578,7 +620,7 @@
           "indicationDescription": "Something bad",
           "codes": [
             {
-              "codeId": "code_15",
+              "codeId": "code_16",
               "code": "C6666x",
               "codeSystem": "http://www.cdisc.org",
               "codeSystemVersion": "1",
@@ -780,7 +822,7 @@
       ],
       "therapeuticAreas:": [
         {
-          "codeId": "code_27",
+          "codeId": "code_28",
           "code": "123456789",
           "codeSystem": "SNOMED",
           "codeSystemVersion": "2022",
