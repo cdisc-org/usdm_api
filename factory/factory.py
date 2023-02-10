@@ -1,4 +1,5 @@
 import yaml
+from model.activity import Activity
 
 code_index = 0
 
@@ -54,73 +55,83 @@ def code_for(klass, attribute, **kwargs):
   else:
     raise Exception("Need to specify either a C Code or Submission value when selecting a CT value.")
 
-def activity_data(id, name, description, procedures, study_data):
+def activity_data(id, name, description, procedures, **kwargs):
   return {
     "activityId": id,
     "activityName": name,
     "activityDescription": description,
-    "previousActivityId": None,
-    "nextActivityId": None,
+    "previousActivityId": kwargs['previous_activity_id'] if 'previous_activity_id' in kwargs else None,
+    "nextActivityId": kwargs['next_activity_id'] if 'next_activity_id' in kwargs else None,
     "definedProcedures": procedures,
-    "studyDataCollection": study_data
+    "activityIsConditional": kwargs['conditional'] if 'conditional' in kwargs else False,
+    "activityIsConditionalReason": kwargs['conditional_reason'] if 'conditional_reason' in kwargs else "",
+    "biomedicalConcepts": kwargs['biomedical_concepts'] if 'biomedical_concepts' in kwargs else [],
+    "bcCategories": kwargs['bc_categories'] if 'bc_categories' in kwargs else [],
+    "bcSurrogates": kwargs['bc_surrogates'] if 'bc_surrogates' in kwargs else [],
   }
 
-def procedure_data(the_id, the_type, the_code):
+def procedure_data(the_id, the_type, the_code, **kwargs):
   return {
     "procedureId": the_id,
     "procedureType": the_type,
-    "procedureCode": the_code
+    "procedureCode": the_code,
+    "procedureIsConditional": kwargs['conditional'] if 'conditional' in kwargs else False,
+    "procedureIsConditionalReason": kwargs['conditional_reason'] if 'conditional_reason' in kwargs else "",
   }
 
-def study_data_data(id, name, description, link):
-  return {
-    "studyDataId": id,
-    "studyDataName": name,
-    "studyDataDescription": description,
-    "crfLink": link
-  }
-
-def encounter_data(id, name, description, encounter_type, env_setting, contact_mode, start_rule=None, end_rule=None):
+def encounter_data(id, name, description, encounter_type, env_setting, contact_mode, **kwargs):
   return {
     "encounterId": id,
     "encounterName": name,
     "encounterDescription": description,
-    "previousEncounterId": None,
-    "nextEncounterId": None,
+    "previousEncounterId": kwargs['previous_activity_id'] if 'previous_activity_id' in kwargs else None,
+    "nextEncounterId": kwargs['next_activity_id'] if 'next_activity_id' in kwargs else None,
     "encounterType": encounter_type,
     "encounterEnvironmentalSetting": env_setting,
     "encounterContactMode": contact_mode,
-    "transitionStartRule": start_rule,
-    "transitionEndRule": end_rule
+    "transitionStartRule": kwargs['start_rule'] if 'start_rule' in kwargs else None,
+    "transitionEndRule": kwargs['end_rule'] if 'end_rule' in kwargs else None,
   }
 
-def investigational_intervention_data(description, codes):
+def investigational_intervention_data(id, description, codes):
   return {
-    "codes": codes,
+    "investigationalInterventionId": id,
     "interventionDescription": description,
+    "codes": codes,
   }
 
-def endpoint_data(description, purpose, level):
+def endpoint_data(id, description, purpose, level):
   return {
+    "endpointId": id,
     "endpointDescription": description,
     "endpointPurposeDescription": purpose,
     "endpointLevel": level
   }
 
-def objective_data(description, level, endpoints):
+def objective_data(id, description, level, endpoints):
   return {
+    "objectiveId": id,
     "objectiveDescription": description,
     "objectiveLevel": level,
     "objectiveEndpoints": endpoints
   }
 
-def estimand_data(measure, population, treatment, variable, events):
-  return { "summaryMeasure": measure, "analysisPopulation": population, "treatment": treatment, "variableOfInterest": variable, "intercurrentEvents": events }
+def estimand_data(id, measure, population, treatment, variable, events):
+  return {
+    "estimandId": id, 
+    "summaryMeasure": measure, 
+    "analysisPopulation": population, 
+    "treatment": treatment, 
+    "variableOfInterest": variable, 
+    "intercurrentEvents": events 
+  }
 
-def intercurrent_event_data(name, description, strategy):
-  return { "intercurrentEventName": name, 
-           "intercurrentEventDescription": description,
-           "intercurrentEventStrategy": strategy
+def intercurrent_event_data(id, name, description, strategy):
+  return { 
+    "intercurrentEventId": id,
+    "intercurrentEventName": name, 
+    "intercurrentEventDescription": description,
+    "intercurrentEventStrategy": strategy
   }
 
 def study_identifier_data(id, identifier, organisation):
@@ -130,24 +141,30 @@ def study_identifier_data(id, identifier, organisation):
     "studyIdentifierScope": organisation
   }
 
-def organization_data(id, identifier_scheme, org_identifier, org_name, organisation_type):
+def organization_data(id, identifier_scheme, org_identifier, org_name, organisation_type, **kwargs):
   return {
     "organizationId": id,
     "organisationIdentifierScheme": identifier_scheme,
     "organisationIdentifier": org_identifier,
     "organisationName": org_name,
-    "organisationType": organisation_type
+    "organisationType": organisation_type,
+    "organizationLegalAddress": kwargs['address'] if 'address' in kwargs else None
   }
 
-def analysis_population_data(description):
+def analysis_population_data(id, description):
   return {
+    "analysisPopulationId": id,
     "populationDescription": description
   }
 
-def study_design_population_data(id, description):
+def study_design_population_data(id, description, **kwargs):
   return {
     "studyDesignPopulationId": id,
-    "populationDescription": description
+    "populationDescription": description,
+    "plannedNumberOfParticipants": kwargs['num'] if 'num' in kwargs else 0,
+    "plannedMaximumAgeOfParticipants": kwargs['max_age'] if 'max_age' in kwargs else "",  
+    "plannedMinimumAgeOfParticipants": kwargs['min_age'] if 'min_age' in kwargs else "",
+    "plannedSexOfParticipants": kwargs['sex'] if 'sex' in kwargs else []
   }
   
 def study_arm_data(id, name, description, arm_type, origin_description, origin_type):
@@ -165,9 +182,9 @@ def study_epoch_data(id, name, description, epoch_type, encounters):
     "studyEpochId": id,
     "studyEpochName": name,
     "studyEpochDescription": description,
+    "studyEpochType": epoch_type,
     "previousStudyEpochId": None,
     "nextStudyEpochId": None,
-    "studyEpochType": epoch_type,
     "encounters": encounters
   }
 
@@ -179,13 +196,13 @@ def study_cell_data(id, arm, epoch, elements):
     "studyElements": elements
   }
 
-def study_element_data(id, name, description, start=None, end=None):
+def study_element_data(id, name, description, **kwargs):
   return {
     "studyElementId": id,
     "studyElementName": name,
     "studyElementDescription": description,
-    "transitionStartRule": start,
-    "transitionEndRule": end
+    "transitionStartRule": kwargs['start'] if 'start' in kwargs else None,
+    "transitionEndRule": kwargs['end'] if 'end' in kwargs else None,
   }
 
 def transition_rule_data(id, description):
@@ -197,12 +214,13 @@ def transition_rule_data(id, description):
 def study_indication_data(id, description, indications):
   return {
     "indicationId": id,
+    "indicationDescription": description,
     "codes": indications,
-    "indicationDescription": description
   }
 
-def study_data(title, version, type, phase, business_therapeutic_areas, identifiers, protocol_versions, designs):
+def study_data(title, version, type, phase, business_therapeutic_areas, identifiers, protocol_versions, designs, **kwargs):
   return {
+    "studyId": kwargs['id'] if 'id' in kwargs else None,
     "studyTitle": title,
     "studyVersion": version,
     "studyType":  type,
@@ -210,10 +228,12 @@ def study_data(title, version, type, phase, business_therapeutic_areas, identifi
     "businessTherapeuticAreas": business_therapeutic_areas,
     "studyIdentifiers": identifiers,
     "studyProtocolVersions": protocol_versions,
-    "studyDesigns": designs
+    "studyDesigns": designs,
+    "studyRationale": kwargs['rationale'] if 'rationale' in kwargs else "",
+    "studyAcronym": kwargs['acronym'] if 'acronym' in kwargs else "",
   }
 
-def study_design_data(id, name, description, intent, types, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands, encounters, activities):
+def study_design_data(id, name, description, intent, types, model, therapeutic_areas, cells, indications, objectives, populations, interventions, workflows, estimands, encounters, activities, rationale, **kwargs):
   return {
     "studyDesignId": id,
     "studyDesignName": name,
@@ -231,6 +251,11 @@ def study_design_data(id, name, description, intent, types, model, therapeutic_a
     "studyEstimands": estimands,
     "encounters": encounters,
     "activities": activities,
+    "studyDesignRationale": rationale,
+    "studyDesignBlindingScheme": kwargs['scheme'] if 'scheme' in kwargs else None,
+    "biomedicalConcepts": kwargs['biomedical_concepts'] if 'biomedical_concepts' in kwargs else [],
+    "bcCategories": kwargs['bc_categories'] if 'bc_categories' in kwargs else [],
+    "bcSurrogates": kwargs['bc_surrogates'] if 'bc_surrogates' in kwargs else [],
   }
 
 def study_protocol_version_data(id, brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):
@@ -246,18 +271,20 @@ def study_protocol_version_data(id, brief_title, official_title, public_title, s
     "protocolStatus": status
   }
 
-def workflow_item_data(id, description, encounter, activity):
+def workflow_item_data(id, description, **kwargs):
   return {
     'workflowItemId': id,
-    'workflowItemDesc': description,
-    'workflowItemEncounter': encounter,
-    'workflowItemActivity': activity,
+    'workflowItemDescription': description,
+    'previousWorkflowItemId': kwargs['previous_workflow_id'] if 'previous_workflow_id' in kwargs else None,
+    'nextWorkflowItemId': kwargs['next_workflow_id'] if 'next_workflow_id' in kwargs else None,
+    'workflowItemEncounterId': kwargs['encounter'] if 'encounter' in kwargs else None,
+    'workflowItemActivityId': kwargs['activity'] if 'activity' in kwargs else None,
   }
 
 def workflow_data(id, description, items):
   return {
     'workflowId': id,
-    'workflowDesc': description,
+    'workflowDescription': description,
     'workflowItems': items
   }
 
