@@ -121,7 +121,15 @@ class SimpleStudy():
     ta = code_data("123456789", "SNOMED", "2022", "Something")
     therapeutic_areas = [ta]
 
-    design_1 = study_design_data("study_design_1", "Study Design", "foobar", [intent], trial_types, int_model, therapeutic_areas, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [workflow], [], [], [], "")
+    blood_presure_code = code_data("C25299", "http://www.cdisc.org", "2022-03-25", "Diastolic Blood Pressure")
+    blood_presure_code_alias_1 = code_data("8462-4", "http://loinc.org/", "2022-03-25", "Diastolic Blood Pressure")
+    blood_presure_code_alias_2 = code_data("271650006", "SNOMED-CT", "2003", "Diastolic Blood Pressure")
+    blood_presure_code_alias_3 = code_data("4154790", "OHSDI","","Diastolic Blood Pressure")
+    blood_pressure_alias = alias_code_data("id_123", blood_presure_code, code_alias=[blood_presure_code_alias_1, blood_presure_code_alias_2, blood_presure_code_alias_3])
+    biomedical_concept = [biomedical_concept_data("id_1234", "Diastolic Blood Pressure", "", blood_pressure_alias)]
+    bc_surrogate = [bc_surrogate_data("id456", "Diastolic blood pressure", "Diastolic blood pressure", "")]
+    
+    design_1 = study_design_data("study_design_1", "Study Design", "foobar", [intent], trial_types, int_model, therapeutic_areas, study_cells, [indication_1], [objective_1], [population_1], [ii_1], [workflow], [], [], [], "", biomedical_concepts=biomedical_concept, bc_surrogates=bc_surrogate)
     designs = [design_1]
     final = code_data("C1113x", "http://www.cdisc.org", "1", "FINAL")
     protocol_version_1 = study_protocol_version_data("study_protocol_data_1", "Short", "Very Official", "Public Voice", "Incomprehensible", "1", None, "2022-01-01", final)

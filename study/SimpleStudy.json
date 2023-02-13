@@ -18,7 +18,7 @@
   },
   "businessTherapeuticAreas": [
     {
-      "codeId": "code_30",
+      "codeId": "code_34",
       "code": "12345",
       "codeSystem": "Sponsor",
       "codeSystemVersion": "2022",
@@ -134,7 +134,7 @@
       "protocolAmendment": null,
       "protocolEffectiveDate": "2022-01-01",
       "protocolStatus": {
-        "codeId": "code_29",
+        "codeId": "code_33",
         "code": "C1113x",
         "codeSystem": "http://www.cdisc.org",
         "codeSystemVersion": "1",
@@ -151,7 +151,7 @@
       "protocolAmendment": "Amendment 1",
       "protocolEffectiveDate": "2022-02-01",
       "protocolStatus": {
-        "codeId": "code_29",
+        "codeId": "code_33",
         "code": "C1113x",
         "codeSystem": "http://www.cdisc.org",
         "codeSystemVersion": "1",
@@ -834,9 +834,57 @@
       "activities": [],
       "studyDesignRationale": "",
       "studyDesignBlindingScheme": null,
-      "biomedicalConcepts": [],
+      "biomedicalConcepts": [
+        {
+          "biomedicalConceptId": "id_1234",
+          "bcName": "Diastolic Blood Pressure",
+          "bcSynonyms": [],
+          "bcReference": "",
+          "bcProperties": [],
+          "bcConceptCode": {
+            "aliasCodeId": "id_123",
+            "standardCode": {
+              "codeId": "code_29",
+              "code": "C25299",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2022-03-25",
+              "decode": "Diastolic Blood Pressure"
+            },
+            "standardCodeAliases": [
+              {
+                "codeId": "code_30",
+                "code": "8462-4",
+                "codeSystem": "http://loinc.org/",
+                "codeSystemVersion": "2022-03-25",
+                "decode": "Diastolic Blood Pressure"
+              },
+              {
+                "codeId": "code_31",
+                "code": "271650006",
+                "codeSystem": "SNOMED-CT",
+                "codeSystemVersion": "2003",
+                "decode": "Diastolic Blood Pressure"
+              },
+              {
+                "codeId": "code_32",
+                "code": "4154790",
+                "codeSystem": "OHSDI",
+                "codeSystemVersion": "",
+                "decode": "Diastolic Blood Pressure"
+              }
+            ]
+          }
+        }
+      ],
       "bcCategories": [],
-      "bcSurrogates": []
+      "bcSurrogates": [
+        {
+          "bcSurrogateId": "id456",
+          "bcSurrogateName": "Diastolic blood pressure",
+          "bcSurrogateDescription": "Diastolic blood pressure",
+          "bcSurrogateReference": ""
+        }
+      ]
     }
   ],
   "studyRationale": "",
