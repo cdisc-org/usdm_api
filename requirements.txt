@@ -4,4 +4,3 @@ deta
 pyyaml
 pandas
 uvicorn
-Faker
