@@ -14,3 +14,4 @@ class Activity(ApiBaseModel):
   biomedicalConcepts: List[str] = []
   bcCategories: List[str] = []
   bcSurrogates: List[str] = []
+  activityScheduleTimelineEntryId: str

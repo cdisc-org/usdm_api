@@ -7,3 +7,5 @@ class Timing(ApiBaseModel):
   timingValue: str
   timingRelativeToFrom: Code
   timingWindow: str
+  relativeFromScheduledInstanceId: str
+  relativeToScheduledInstanceId: str

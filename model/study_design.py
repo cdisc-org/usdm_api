@@ -12,7 +12,7 @@ from .indication import Indication
 from .investigational_intervention import InvestigationalIntervention
 from .study_design_population import StudyDesignPopulation
 from .objective import Objective
-from .timeline import Timeline
+from .schedule_timeline import ScheduleTimeline
 from .workflow import Workflow
 from .workflow_item import WorkflowItem
 from .estimand import Estimand
@@ -30,7 +30,7 @@ class StudyDesign(ApiBaseModel):
   studyInvestigationalInterventions: List[InvestigationalIntervention] = []
   studyStudyDesignPopulations: List[StudyDesignPopulation] = []
   studyObjectives: List[Objective] = []
-  studyWorkflows: List[Timeline] = []
+  studyScheduleTimelines: List[ScheduleTimeline] = []
   therapeuticAreas: List[Code] = []
   studyEstimands: List[Estimand] = []
   encounters: List[Encounter] = []
