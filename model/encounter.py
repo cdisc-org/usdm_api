@@ -2,8 +2,7 @@ from typing import List, Union
 
 from .api_base_model import ApiBaseModel
 from .code import Code
-from .condition import Condition
-from .timing import Timing
+from .transition_rule import TransitionRule
 
 
 class Encounter(ApiBaseModel):
@@ -15,6 +14,6 @@ class Encounter(ApiBaseModel):
   encounterType: Union[Code, None] = None
   encounterEnvironmentalSetting: Union[Code, None] = None
   encounterContactModes: List[Code] = []
-  transitionStartRule: Union[Condition, None] = None
-  transitionEndRule: Union[Condition, None] = None
-  encounterScheduledAt: Union[Timing, None] = None
+  transitionStartRule: Union[TransitionRule, None] = None
+  transitionEndRule: Union[TransitionRule, None] = None
+  encounterScheduledAtTimingId: Union[str, None] = None

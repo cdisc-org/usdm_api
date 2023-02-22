@@ -6,8 +6,7 @@ from .timing import Timing
 class ScheduledInstance(ApiBaseModel):
     scheduledInstanceId: str
     scheduleSequenceNumber: int
-    entryScheduleSequenceId: str
-    scheduledInstanceScheduleTimelineExitId: str
+    scheduleTimelineExitId: str
     scheduledInstanceEncounterId: str
     secheduledInstanceTimingIds: List[str] = []
 
