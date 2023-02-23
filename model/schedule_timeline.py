@@ -9,6 +9,6 @@ class ScheduleTimeline(ApiBaseModel):
     scheduleTimelineName: str
     scheduleTimelineDescription: str
     entryCondition: str
-    entryScheduledInstanceId: str
-    scheduleTimelineScheduleTimelineExits: List[ScheduleTimelineExit] = []
+    scheduleTimelineEntryId: str
+    scheduleTimelineExits: List[ScheduleTimelineExit] = []
     scheduleTimelineInstances: List[ScheduledInstance] = []
