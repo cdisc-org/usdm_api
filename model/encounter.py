@@ -1,8 +1,9 @@
 from typing import List, Union
+
 from .api_base_model import ApiBaseModel
 from .code import Code
 from .transition_rule import TransitionRule
-from uuid import UUID
+
 
 class Encounter(ApiBaseModel):
   encounterId: str
@@ -15,3 +16,4 @@ class Encounter(ApiBaseModel):
   encounterContactModes: List[Code] = []
   transitionStartRule: Union[TransitionRule, None] = None
   transitionEndRule: Union[TransitionRule, None] = None
+  encounterScheduledAtTimingId: Union[str, None] = None

@@ -246,7 +246,7 @@ def study_design_data(id, name, description, intent, types, model, therapeutic_a
     "studyInvestigationalInterventions": interventions,
     "studyStudyDesignPopulations": populations,
     "studyObjectives": objectives,
-    "studyWorkflows": workflows,
+    "studyScheduleTimelines": workflows,
     "therapeuticAreas:": therapeutic_areas,
     "studyEstimands": estimands,
     "encounters": encounters,
