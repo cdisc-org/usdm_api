@@ -14,7 +14,7 @@ from model.activity import *
 from model.transition_rule import *
 from model.encounter import *
 
-VERSION = "1.7 Provisional (0.31)"
+VERSION = "2.0 Provisional (0.32)"
 SYSTEM_NAME = "Simple API for DDF"
 
 tags_metadata = [
@@ -107,7 +107,7 @@ store = Store()
 #   tags=["Simulator"],
 #   summary="Obtain system name and version",
 #   description="Obtain the name of the micro service and the current version.")
-# @app.get("/v1/", 
+# @app.get("/v2/", 
 #   tags=["Simulator"],
 #   summary="Obtain system name and version",
 #   description="Obtain the name of the micro service and the current version.")
@@ -115,7 +115,7 @@ store = Store()
 #   return { "system": SYSTEM_NAME, "version": VERSION }
 
 # Controlled Terminology, aka Terms
-# @app.get("/v1/terms/", 
+# @app.get("/v2/terms/", 
 #   tags=["Simulator"],
 #   summary="Return Controlled Terminology",
 #   description="Return the specified Controlled Terminology (CT) for the specified class and attribute. This is the CT defined within the model specification")
@@ -123,7 +123,7 @@ store = Store()
 #   return CT().search(klass, attribute)
   
 # Study Definitions
-# @app.get("/v1/study_definitions/list", 
+# @app.get("/v2/study_definitions/list", 
 #   tags=["proposed"], 
 #   summary=annotations['study_definition']['get']['summary'],
 #   description=annotations['study_definition']['get']['description'], 
@@ -131,7 +131,7 @@ store = Store()
 # async def list_studies():
 #   return Study.list(store)
 
-# @app.get("/v1/studyDefinitions", 
+# @app.get("/v2/studyDefinitions", 
 #   tags=['Search'], 
 #   summary='Study definition for specified identifier',
 #   description='Returns the uuid for the study with the matching identifier.',
@@ -142,7 +142,7 @@ store = Store()
 #     raise HTTPException(status_code=404, detail="Item not found")
 #   return result
 
-@app.post("/v1/studyDefinitions", 
+@app.post("/v2/studyDefinitions", 
   tags=["Production"], 
   summary=annotations['study_definition']['post']['summary'],
   description=annotations['study_definition']['post']['description'], 
@@ -154,7 +154,7 @@ async def create_study(study: Study):
   study.save(store, scope=study.studyId, use_scope=True)
   return study.studyId
 
-@app.put("/v1/studyDefinitions/{uuid}", 
+@app.put("/v2/studyDefinitions/{uuid}", 
   tags=["Production"], 
   summary=annotations['study_definition']['put']['summary'],
   description=annotations['study_definition']['put']['description'], 
@@ -168,7 +168,7 @@ async def update_study(uuid: str, study: Study):
   study.save(store, scope=uuid, use_scope=True)
   return study.studyId
 
-@app.get("/v1/studyDefinitions/{uuid}", 
+@app.get("/v2/studyDefinitions/{uuid}", 
   tags=["Production"], 
   summary=annotations['study_definition']['get_uuid']['summary'],
   description=annotations['study_definition']['get_uuid']['description'],
@@ -178,7 +178,7 @@ async def read_full_study(uuid: str):
     raise HTTPException(status_code=404, detail="Item not found")
   return Study.read(store, uuid)
 
-@app.get("/v1/studyDefinitions/{uuid}/history", 
+@app.get("/v2/studyDefinitions/{uuid}/history", 
   tags=["Production"], 
   summary="Returns the study history",
   description="Returns the history for the specified study",
@@ -190,7 +190,7 @@ async def read_study_history(uuid: str):
   return []
 
 # Studies
-# @app.get("/v1/studies/list", 
+# @app.get("/v2/studies/list", 
 #   tags=["potential"], 
 #   summary=annotations['study']['get']['summary'],
 #   description=annotations['study']['get']['description'], 
@@ -198,7 +198,7 @@ async def read_study_history(uuid: str):
 # async def list_studies():
 #   return Study.list(store)
 
-# @app.get("/v1/studies/{uuid}", 
+# @app.get("/v2/studies/{uuid}", 
 #   tags=["potential"], 
 #   summary=annotations['study']['get_uuid']['summary'],
 #   description=annotations['study']['get_uuid']['description'])
@@ -208,14 +208,14 @@ async def read_study_history(uuid: str):
 #   return Study.read(store, uuid)
 
 # # Study Identifiers
-# @app.get("/v1/study_identifiers/list", 
+# @app.get("/v2/study_identifiers/list", 
 #   tags=["potential"],
 #   response_model=List[UUID]
 # )
 # async def list_study_identifiers():
 #   return StudyIdentifier.list(store)
 
-# @app.get("/v1/studyIdentifiers", 
+# @app.get("/v2/studyIdentifiers", 
 #   tags=["Sections"], 
 #   summary='Study identifiers for a study',
 #   description='Returns all the identifiers for a specified study.',
@@ -224,88 +224,88 @@ async def read_study_history(uuid: str):
 # async def study_identifiers_search(study_uuid: UUID):
 #   return StudyIdentifier.search(store, str(study_uuid))
 
-# @app.post("/v1/study_identifiers", 
+# @app.post("/v2/study_identifiers", 
 #   tags=["potential"], 
 #   status_code=status.HTTP_201_CREATED)
 # async def create_study_identifier(identifier: StudyIdentifier):
 #   identifier.recursive_save(store, None)
 #   return identifier.uuid
 
-# @app.get("/v1/study_identifiers/{uuid}", response_model=StudyIdentifier, tags=["potential"])
+# @app.get("/v2/study_identifiers/{uuid}", response_model=StudyIdentifier, tags=["potential"])
 # async def read_study_identifier(uuid: UUID):
 #   if str(uuid) not in StudyIdentifier.list(store):
 #     raise HTTPException(status_code=404, detail="Item not found")
 #   return StudyIdentifier.read(store, str(uuid))
 
 # Organisations
-# @app.get("/v1/organisations/list", 
+# @app.get("/v2/organisations/list", 
 #   tags=["potential"], 
 #   response_model=List[UUID]
 # )
 # async def list_organisations():
 #   return Organisation.list(store)
 
-# @app.post("/v1/organisations", 
+# @app.post("/v2/organisations", 
 #   tags=["potential"], 
 #   status_code=status.HTTP_201_CREATED)
 # async def create_organisation(org: Organisation):
 #   org.save(store, None)
 #   return org.uuid
 
-# @app.get("/v1/organisations/{uuid}", response_model=Organisation, tags=["potential"])
+# @app.get("/v2/organisations/{uuid}", response_model=Organisation, tags=["potential"])
 # async def read_organisation(uuid: UUID):
 #   if str(uuid) not in Organisation.list(store):
 #     raise HTTPException(status_code=404, detail="Item not found")
 #   return Organisation.read(store, str(uuid))
 
-# @app.get("/v1/organisation_full/{uuid}", tags=["potential"])
+# @app.get("/v2/organisation_full/{uuid}", tags=["potential"])
 # async def read_organisation_full(uuid: UUID):
 #   if str(uuid) not in Organisation.list(store):
 #     raise HTTPException(status_code=404, detail="Item not found")
 #   return Organisation.recursive_read(store, str(uuid))
 
 # Study Protocol Version
-# @app.get("/v1/study_protocol_versions/list", 
+# @app.get("/v2/study_protocol_versions/list", 
 #   tags=["potential"], 
 #   response_model=List[UUID]
 # )
 # async def list_study_protocol_versions():
 #   return StudyProtocolVersion.list(store)
 
-# @app.post("/v1/study_protocol_versions", 
+# @app.post("/v2/study_protocol_versions", 
 #   tags=["potential"], 
 #   status_code=status.HTTP_201_CREATED)
 # async def create_protocol_version(version: StudyProtocolVersion):
 #   version.save(store, None)
 #   return version.uuid
 
-# @app.get("/v1/study_protocol_versions/{uuid}", response_model=StudyProtocolVersion, tags=["potential"])
+# @app.get("/v2/study_protocol_versions/{uuid}", response_model=StudyProtocolVersion, tags=["potential"])
 # async def read_study_protocol_version(uuid: UUID):
 #   if str(uuid) not in StudyProtocolVersion.list(store):
 #     raise HTTPException(status_code=404, detail="Item not found")
 #   return StudyProtocolVersion.read(store, str(uuid))
 
 # Study Design
-# @app.get("/v1/study_designs/list", 
+# @app.get("/v2/study_designs/list", 
 #   tags=["potential"], 
 #   response_model=List[UUID])
 # async def list_study_designs():
 #   return StudyDesign.list(store)
 
-# @app.post("/v1/study_designs", 
+# @app.post("/v2/study_designs", 
 #   tags=["potential"], 
 #   status_code=status.HTTP_201_CREATED)
 # async def create_study_design(item: StudyDesign):
 #   item.save(store, None)
 #   return item.uuid
 
-# @app.get("/v1/study_designs/{uuid}", response_model=StudyDesign, tags=["potential"])
+# @app.get("/v2/study_designs/{uuid}", response_model=StudyDesign, tags=["potential"])
 # async def read_study_design(uuid: UUID):
 #   if str(uuid) not in StudyDesign.list(store):
 #     raise HTTPException(status_code=404, detail="Item not found")
 #   return StudyDesign.read(store, str(uuid))
 
-@app.get("/v1/studyDesigns", 
+@app.get("/v2/studyDesigns", 
   tags=['Production'],
   summary='Study designs for a study',
   description='Returns all the study designs for a specified study.',
@@ -315,7 +315,7 @@ async def read_study_history(uuid: str):
 async def search_study_design(study_uuid: UUID):
   return StudyDesign.search(store, str(study_uuid))
 
-# @app.get("/v1/studyDesigns/{uuid}/soa", 
+# @app.get("/v2/studyDesigns/{uuid}/soa", 
 #   tags=["SoA"],
 #   summary='SoA for the specified study design',
 #   description='Returns a SoA for the specified study design. The SoA returned is a JSON structure (pandas dataframe to JSON) representing the SoA for the study.',
