@@ -10,11 +10,15 @@
     "decode": "Interventional Study"
   },
   "studyPhase": {
-    "codeId": "code_10",
-    "code": "C49686",
-    "codeSystem": "http://www.cdisc.org",
-    "codeSystemVersion": "2022-03-25",
-    "decode": "Phase IIa Trial"
+    "aliasCodeId": "alias_1",
+    "standardCode": {
+      "codeId": "code_10",
+      "code": "C49686",
+      "codeSystem": "http://www.cdisc.org",
+      "codeSystemVersion": "2022-03-25",
+      "decode": "Phase IIa Trial"
+    },
+    "standardCodeAliases": []
   },
   "businessTherapeuticAreas": [
     {

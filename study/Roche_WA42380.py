@@ -193,43 +193,43 @@ class RocheWA42380():
     remote_audio_mode = code_for('Encounter', 'encounterContactModes', c_code='C171525')    
     # Fields: name, description, encounter_type, env_setting, contact_mode, start_rule=None, end_rule=None
     study_encounter_data = [
-      ("Screening", "SCREENING", a_visit, clinic_setting, in_person_mode, None),
-      ("Baseline", "BASELINE", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 1", "Day 1", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 2A", "Day 2A", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 2B", "Day 2B", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 3", "Day 3", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 4", "Day 4", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 5", "Day 5", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 6", "Day 6", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 7", "Day 7", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 8", "Day 8", a_visit, hospital_setting, in_person_mode, None),
+      ("encounter_1", "Screening", "SCREENING", a_visit, clinic_setting, in_person_mode),
+      ("encounter_2", "Baseline", "BASELINE", a_visit, hospital_setting, in_person_mode),
+      ("encounter_3", "Day 1", "Day 1", a_visit, hospital_setting, in_person_mode),
+      ("encounter_4", "Day 2A", "Day 2A", a_visit, hospital_setting, in_person_mode),
+      ("encounter_5", "Day 2B", "Day 2B", a_visit, hospital_setting, in_person_mode),
+      ("encounter_6", "Day 3", "Day 3", a_visit, hospital_setting, in_person_mode),
+      ("encounter_7", "Day 4", "Day 4", a_visit, hospital_setting, in_person_mode),
+      ("encounter_8", "Day 5", "Day 5", a_visit, hospital_setting, in_person_mode),
+      ("encounter_9", "Day 6", "Day 6", a_visit, hospital_setting, in_person_mode),
+      ("encounter_10", "Day 7", "Day 7", a_visit, hospital_setting, in_person_mode),
+      ("encounter_11", "Day 8", "Day 8", a_visit, hospital_setting, in_person_mode),
       # 11
-      ("Day 9", "Day 9", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 10", "Day 10", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 11", "Day 11", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 12", "Day 12", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 13", "Day 13", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 14", "Day 14", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 15", "Day 15", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 16", "Day 16", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 17", "Day 17", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 18", "Day 18", a_visit, hospital_setting, in_person_mode, None),
+      ("encounter_12", "Day 9", "Day 9", a_visit, hospital_setting, in_person_mode),
+      ("encounter_13", "Day 10", "Day 10", a_visit, hospital_setting, in_person_mode),
+      ("encounter_14", "Day 11", "Day 11", a_visit, hospital_setting, in_person_mode),
+      ("encounter_15", "Day 12", "Day 12", a_visit, hospital_setting, in_person_mode),
+      ("encounter_16", "Day 13", "Day 13", a_visit, hospital_setting, in_person_mode),
+      ("encounter_17", "Day 14", "Day 14", a_visit, hospital_setting, in_person_mode),
+      ("encounter_18", "Day 15", "Day 15", a_visit, hospital_setting, in_person_mode),
+      ("encounter_19", "Day 16", "Day 16", a_visit, hospital_setting, in_person_mode),
+      ("encounter_20", "Day 17", "Day 17", a_visit, hospital_setting, in_person_mode),
+      ("encounter_21", "Day 18", "Day 18", a_visit, hospital_setting, in_person_mode),
       # 21
-      ("Day 19", "Day 19", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 20", "Day 20", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 21", "Day 21", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 22", "Day 22", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 23", "Day 23", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 24", "Day 24", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 25", "Day 25", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 26", "Day 26", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 27", "Day 27", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 28", "Day 28", a_visit, hospital_setting, in_person_mode, None),
+      ("encounter_22", "Day 19", "Day 19", a_visit, hospital_setting, in_person_mode),
+      ("encounter_23", "Day 20", "Day 20", a_visit, hospital_setting, in_person_mode),
+      ("encounter_24", "Day 21", "Day 21", a_visit, hospital_setting, in_person_mode),
+      ("encounter_25", "Day 22", "Day 22", a_visit, hospital_setting, in_person_mode),
+      ("encounter_26", "Day 23", "Day 23", a_visit, hospital_setting, in_person_mode),
+      ("encounter_27", "Day 24", "Day 24", a_visit, hospital_setting, in_person_mode),
+      ("encounter_28", "Day 25", "Day 25", a_visit, hospital_setting, in_person_mode),
+      ("encounter_29", "Day 26", "Day 26", a_visit, hospital_setting, in_person_mode),
+      ("encounter_30", "Day 27", "Day 27", a_visit, hospital_setting, in_person_mode),
+      ("encounter_31", "Day 28", "Day 28", a_visit, hospital_setting, in_person_mode),
       # 31
-      ("Day 35", "Day 35", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 45", "Day 45", a_visit, hospital_setting, in_person_mode, None),
-      ("Day 60", "Day 60", a_visit, hospital_setting, in_person_mode, None),
+      ("encounter_32", "Day 35", "Day 35", a_visit, hospital_setting, in_person_mode),
+      ("encounter_33", "Day 45", "Day 45", a_visit, hospital_setting, in_person_mode),
+      ("encounter_34", "Day 60", "Day 60", a_visit, hospital_setting, in_person_mode),
     ]
 
     encounters = []
@@ -650,8 +650,8 @@ class RocheWA42380():
 
     # <<<<< Need setting up >>>>>
     # Estimands
-    estimand_1 = estimand_data("estimand_1", "Measure 1", analysis_population_1, ii_1, endpoint_1, [i_event_1])
-    estimand_2 = estimand_data("estimand_2", "Measure 2", analysis_population_2, ii_1, endpoint_1, [i_event_2, i_event_3, i_event_4])
+    estimand_1 = estimand_data("estimand_1", "Measure 1", analysis_population_1, "Treatment with substX", "Blood Pressure", [i_event_1])
+    estimand_2 = estimand_data("estimand_2", "Measure 2", analysis_population_2, "Treatment with substX", "Blood Pressure", [i_event_2, i_event_3, i_event_4])
     estimands = [estimand_1, estimand_2]
 
     # Study Arms
@@ -670,11 +670,13 @@ class RocheWA42380():
     screening = code_for('StudyEpoch', 'studyEpochType', submission_value='SCREENING') 
     treatment = code_for('StudyEpoch', 'studyEpochType', submission_value='TREATMENT')
     follow_up = code_for('StudyEpoch', 'studyEpochType', submission_value='FOLLOW-UP')
+    encounter_ids_2 = [encounter['encounterId'] for encounter in encounters[1:31]]
+    encounter_ids_3 = [encounter['encounterId'] for encounter in encounters[31:34]]
     # Fields: name, description, epoch_type, encounters
     raw_epoch_data = [
-      ("epoch_1", "Screening", "Screening", screening, [ encounters[0] ]),
-      ("epoch_2", "Treatment", "Treatment", treatment, encounters[1:31]),
-      ("epoch_3", "Follow-up", "Follow-up", follow_up, encounters[31:34])
+      ("epoch_1", "Screening", "Screening", screening, [encounters[0]['encounterId']]),
+      ("epoch_2", "Treatment", "Treatment", treatment, encounter_ids_2),
+      ("epoch_3", "Follow-up", "Follow-up", follow_up, encounter_ids_3)
     ]
     epochs = []
     for epoch in raw_epoch_data:
@@ -710,7 +712,8 @@ class RocheWA42380():
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='SEQUENTIAL')
     ta = code_data("123456789", "SNOMED", "2022", "Something")
     therapeutic_areas = [ta]
-    design_1 = study_design_data("study_design_1", "Study Design 1", "The first study design", [intent], [design_type], int_model, therapeutic_areas, study_cells, indications, objectives, [study_population_1], ii, [workflow], estimands, None, None, None)
+    timeline = schedule_timeline_data("timeline_1", "Timeline 1", "The first timeline", "Condition for Entry", "timeline_entry_1")
+    design_1 = study_design_data("study_design_1", "Study Design 1", "The first study design", [intent], [design_type], int_model, therapeutic_areas, study_cells, indications, objectives, [study_population_1], ii, [timeline], estimands, [], [], "Study Design rationale")
     designs = [design_1]
 
     # Protocol versions
@@ -743,7 +746,7 @@ class RocheWA42380():
 
     # Assemble complete study
     study_title = "Tocilizumab in Patients With Severe COVID-19 Pneumonia"
-    phase = code_data("C49686", "http://www.cdisc.org", "2022-03-25", "Phase III Trial")
+    phase = alias_code_data("alias_1", code_data("C49686", "http://www.cdisc.org", "2022-03-25", "Phase III Trial"))
     study_type = code_data("C98388", "http://www.cdisc.org", "2022-03-25", "Interventional Study")
     bta = code_data("12345", "Sponsor", "2022", "Business Unit A")
     business_therapeutic_areas = [bta]

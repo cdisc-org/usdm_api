@@ -64,7 +64,7 @@ class SimpleStudy():
       [endpoint_1, endpoint_2]
     )
 
-    phase = code_data("C49686", "http://www.cdisc.org", "2022-03-25", "Phase IIa Trial")
+    phase = alias_code_data("alias_1", code_data("C49686", "http://www.cdisc.org", "2022-03-25", "Phase IIa Trial"))
     study_type = code_data("C98388", "http://www.cdisc.org", "2022-03-25", "Interventional Study")
     registry_type = code_for('Organization', 'organizationType', submission_value='Clinical Study Registry')
     sponsor_type = code_for('Organization', 'organizationType', submission_value='Clinical Study Sponsor')

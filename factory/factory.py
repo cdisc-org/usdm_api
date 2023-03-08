@@ -345,6 +345,17 @@ def bc_surrogate_data(id, name, description, reference):
     "bcSurrogateReference": reference,
   }
 
+def schedule_timeline_data(id, name, desc, entry_condition, timeline_entry, **kwargs):
+  return{
+    "scheduleTimelineId": id,
+    "scheduleTimelineName": name,
+    "scheduleTimelineDescription": desc,
+    "entryCondition": entry_condition,
+    "scheduleTimelineEntryId": timeline_entry,
+    "scheduleTimelineExits": kwargs['scheduleTimelineExits'] if 'scheduleTimelineExits' in kwargs else [],
+    "scheduleTimelineInstances": kwargs['scheduleTimelineInstances'] if 'scheduleTimelineInstances' in kwargs else [],
+  }
+
 # Internal methods
 def _find_ct_entry(klass, attribute, name, value):
   with open("data/ct.yaml") as file:
