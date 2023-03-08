@@ -7,70 +7,68 @@ class RocheWA42380():
     # Rules
     study_rule_data = [
       # Element Start Rules
-      "Informed consent",
-      "First dose of a treatment epoch, where the does is XXX",
-      "First dose of a treatment epoch, where the does is placebo",
-      "28 days after first dose of the previous treatment epoch",
+      ("Informed consent", "Rule 1"),
+      ("First dose of a treatment epoch, where the does is XXX", "Rule 2"),
+      ("First dose of a treatment epoch, where the does is placebo", "Rule 3"),
+      ("28 days after first dose of the previous treatment epoch", "Rule 4"),
 
       # Element End Rules
-      # Index 4, zero based.
-      "As soon as possibe once screening is complete",
-      "After 28 days, where the does is XXX",
-      "After 28 days, where the does is XXX",
-      "After day 60",
+      ("As soon as possibe once screening is complete", "Rule 5"),
+      ("After 28 days, where the does is XXX", "Rule 6"),
+      ("After 28 days, where the does is XXX", "Rule 7"),
+      ("After day 60", "Rule 8"),
 
       # Visit Start Rules
-      # Index 8
-      "Start of screening epoch",
-      "4 hours pprior to end of screening epoch",
-      "15 minutes after the end of basline epoch"
-      # Index 11
-      "24 hours after the start of the treatment epoch"
-      "3 days after the start of the treatment epoch"
-      "4 days after the start of the treatment epoch"
-      "5 days after the start of the treatment epoch"
-      "6 days after the start of the treatment epoch"
-      "7 days after the start of the treatment epoch"
-      "8 days after the start of the treatment epoch"
-      "9 days after the start of the treatment epoch"
-      "10 days after the start of the treatment epoch"
-      "11 days after the start of the treatment epoch"
-      # Index 21
-      "12 days after the start of the treatment epoch"
-      "13 days after the start of the treatment epoch"
-      "14 days after the start of the treatment epoch"
-      "15 days after the start of the treatment epoch"
-      "16 days after the start of the treatment epoch"
-      "17 days after the start of the treatment epoch"
-      "18 days after the start of the treatment epoch"
-      "19 days after the start of the treatment epoch"
-      "20 days after the start of the treatment epoch"
-      "21 days after the start of the treatment epoch"
-      # Index 31
-      "22 days after the start of the treatment epoch"
-      "23 days after the start of the treatment epoch"
-      "24 days after the start of the treatment epoch"
-      "25 days after the start of the treatment epoch"
-      "26 days after the start of the treatment epoch"
-      "27 days after the start of the treatment epoch"
-      "28 days after the start of the treatment epoch"
-      "35 days (+/- 3 days) after the start of the treatment epoch"
-      "45 days (+/- 3 days) after the start of the treatment epoch"
-      "60 days (+/- 3 days) after the start of the treatment epoch"
+      ("Start of screening epoch", "Rule 8"),
+      ("4 hours pprior to end of screening epoch", "Rule 9"),
+      ("15 minutes after the end of basline epoch", "Rule 10"),
+
+      ("24 hours after the start of the treatment epoch", "Rule 11"),
+      ("3 days after the start of the treatment epoch", "Rule 12"),
+      ("4 days after the start of the treatment epoch", "Rule 13"),
+      ("5 days after the start of the treatment epoch", "Rule 14"),
+      ("6 days after the start of the treatment epoch", "Rule 15"),
+      ("7 days after the start of the treatment epoch", "Rule 16"),
+      ("8 days after the start of the treatment epoch", "Rule 17"),
+      ("9 days after the start of the treatment epoch", "Rule 18"),
+      ("10 days after the start of the treatment epoch", "Rule 19"),
+      ("11 days after the start of the treatment epoch", "Rule 20"),
+ 
+      ("12 days after the start of the treatment epoch", "Rule 21"),
+      ("13 days after the start of the treatment epoch", "Rule 22"),
+      ("14 days after the start of the treatment epoch", "Rule 23"),
+      ("15 days after the start of the treatment epoch", "Rule 24"),
+      ("16 days after the start of the treatment epoch", "Rule 25"),
+      ("17 days after the start of the treatment epoch", "Rule 26"),
+      ("18 days after the start of the treatment epoch", "Rule 27"),
+      ("19 days after the start of the treatment epoch", "Rule 28"),
+      ("20 days after the start of the treatment epoch", "Rule 29"),
+      ("21 days after the start of the treatment epoch", "Rule 30"),
+   
+      ("22 days after the start of the treatment epoch", "Rule 31"),
+      ("23 days after the start of the treatment epoch", "Rule 32"),
+      ("24 days after the start of the treatment epoch", "Rule 33"),
+      ("25 days after the start of the treatment epoch", "Rule 34"),
+      ("26 days after the start of the treatment epoch", "Rule 35"),
+      ("27 days after the start of the treatment epoch", "Rule 36"),
+      ("28 days after the start of the treatment epoch", "Rule 37"),
+      ("35 days (+/- 3 days) after the start of the treatment epoch", "Rule 38"),
+      ("45 days (+/- 3 days) after the start of the treatment epoch", "Rule 39"),
+      ("60 days (+/- 3 days) after the start of the treatment epoch", "Rule 40"),
 
       # Visit End Rules
-      # Index 41
-      "Start of treatment epoch",
+
+      ("Start of treatment epoch", "Rule 41"),
       # No visit 2 end rule
       # No visit 2 end rule
       # Days 3 to 28 no end rule
       # Days 35, 45 no end rule
-      "At visit completion (trial exit)"
+      ("At visit completion (trial exit)", "Rule 42"),
     ]
 
     rules = []
     for rule in study_rule_data:
-      rules.append(transition_rule_data(rule))
+      rules.append(transition_rule_data(rule[0], rule[1]))
 
     # <<<<< To be added >>>>>
     # Procedures
@@ -144,8 +142,8 @@ class RocheWA42380():
     ]
     study_data_items = []
     for data in raw_study_data:
-      #print(data)
-      study_data_items.append(study_data_data(*data))
+      # print(*data)
+      study_data_items.append(study_indication_data(*data))
 
     # Activities
     # Short Name, Description, Procedures, Study Data
@@ -184,60 +182,60 @@ class RocheWA42380():
     activities = []
     for activity in study_activity_data:
       activities.append(activity_data(*activity))
-    double_link(activities, 'previousActivityId', 'nextActivityId')
+    double_link(activities, 'activityId', 'previousActivityId', 'nextActivityId')
 
     # Visits
     # Codes
     a_visit = code_for('Encounter', 'encounterType', submission_value='Visit')   
     clinic_setting = code_for('Encounter', 'encounterEnvironmentalSetting', c_code='C51282')   
     hospital_setting = code_for('Encounter', 'encounterEnvironmentalSetting', c_code='C16696')   
-    in_person_mode = code_for('Encounter', 'encounterContactMode', c_code='C175574')    
-    remote_audio_mode = code_for('Encounter', 'encounterContactMode', c_code='C171525')    
+    in_person_mode = code_for('Encounter', 'encounterContactModes', c_code='C175574')    
+    remote_audio_mode = code_for('Encounter', 'encounterContactModes', c_code='C171525')    
     # Fields: name, description, encounter_type, env_setting, contact_mode, start_rule=None, end_rule=None
     study_encounter_data = [
-      ("Screening", "SCREENING", a_visit, clinic_setting, in_person_mode, None, None),
-      ("Baseline", "BASELINE", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 1", "Day 1", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 2A", "Day 2A", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 2B", "Day 2B", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 3", "Day 3", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 4", "Day 4", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 5", "Day 5", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 6", "Day 6", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 7", "Day 7", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 8", "Day 8", a_visit, hospital_setting, in_person_mode, None, None),
+      ("Screening", "SCREENING", a_visit, clinic_setting, in_person_mode, None),
+      ("Baseline", "BASELINE", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 1", "Day 1", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 2A", "Day 2A", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 2B", "Day 2B", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 3", "Day 3", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 4", "Day 4", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 5", "Day 5", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 6", "Day 6", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 7", "Day 7", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 8", "Day 8", a_visit, hospital_setting, in_person_mode, None),
       # 11
-      ("Day 9", "Day 9", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 10", "Day 10", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 11", "Day 11", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 12", "Day 12", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 13", "Day 13", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 14", "Day 14", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 15", "Day 15", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 16", "Day 16", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 17", "Day 17", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 18", "Day 18", a_visit, hospital_setting, in_person_mode, None, None),
+      ("Day 9", "Day 9", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 10", "Day 10", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 11", "Day 11", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 12", "Day 12", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 13", "Day 13", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 14", "Day 14", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 15", "Day 15", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 16", "Day 16", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 17", "Day 17", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 18", "Day 18", a_visit, hospital_setting, in_person_mode, None),
       # 21
-      ("Day 19", "Day 19", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 20", "Day 20", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 21", "Day 21", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 22", "Day 22", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 23", "Day 23", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 24", "Day 24", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 25", "Day 25", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 26", "Day 26", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 27", "Day 27", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 28", "Day 28", a_visit, hospital_setting, in_person_mode, None, None),
+      ("Day 19", "Day 19", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 20", "Day 20", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 21", "Day 21", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 22", "Day 22", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 23", "Day 23", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 24", "Day 24", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 25", "Day 25", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 26", "Day 26", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 27", "Day 27", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 28", "Day 28", a_visit, hospital_setting, in_person_mode, None),
       # 31
-      ("Day 35", "Day 35", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 45", "Day 45", a_visit, hospital_setting, in_person_mode, None, None),
-      ("Day 60", "Day 60", a_visit, hospital_setting, in_person_mode, None, None)
+      ("Day 35", "Day 35", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 45", "Day 45", a_visit, hospital_setting, in_person_mode, None),
+      ("Day 60", "Day 60", a_visit, hospital_setting, in_person_mode, None),
     ]
 
     encounters = []
     for encounter in study_encounter_data:
       encounters.append(encounter_data(*encounter))
-    double_link(encounters, 'previousEncounterId', 'nextEncounterId')
+    double_link(encounters, 'encounterId', 'previousEncounterId', 'nextEncounterId')
     
     # <<<<< Need setting up >>>>>
     # Work Flow Items
@@ -567,25 +565,30 @@ class RocheWA42380():
 
     ]
     wfis = []
+    workflow_count = 0
     for item in wfi_links:
-      wfis.append(workflow_item_data("", item[0], item[1]))
-    workflow = workflow_data("Workflow 1", wfis)
-    double_link(wfis, 'previousWorkflowItemId', 'nextWorkflowItemId')  
+      workflow_count = workflow_count + 1
+      id = 'workflowItem%s' % workflow_count
+      desc = 'Workflow Item %s' % workflow_count
+      wfis.append(workflow_item_data(id, desc, encounter=item[0]["encounterId"], activity=item[1]["activityId"]))
+    workflow = workflow_data("workflow1", "Workflow 1", wfis)
+    double_link(wfis, 'workflowItemId', 'previousWorkflowItemId', 'nextWorkflowItemId')  
 
     # <<<<< Need setting up >>>>>
     # Investigational Interventions
     ii_code_1 = code_data( "XX031ZA", "ATC", "2021", "SubstX")
-    ii_1 = investigational_intervention_data("Treatment with substX", [ii_code_1])
+    ii_1 = investigational_intervention_data("ii_1", "Treatment with substX", [ii_code_1])
     ii = [ii_1]
 						
     # <<<<< Need setting up >>>>>
     # Study Populations
-    study_population_1 = study_design_population_data("A metastatic cancer population")
+    study_population_1 = study_design_population_data("study_population_1", "A metastatic cancer population")
 
     # <<<<< Need setting up >>>>>
     # Endpoints
     primary_endpoint = code_for('Endpoint', 'endpointLevel', submission_value='Primary Endpoint')
     endpoint_1 = endpoint_data(
+      "endpoint_1",
       "Survival rate after cycle 8 of treatment",
       "EFFICACY",
       primary_endpoint
@@ -595,6 +598,7 @@ class RocheWA42380():
     # Objectives
     primary_objective = code_for('Objective', 'objectiveLevel', submission_value='Study Primary Objective')
     objective_1 = objective_data(
+      "objective_1",
       "Evaluate sensitivity index from baseline to end of study (16 weeks)", 
       primary_objective, 
       [endpoint_1]
@@ -608,28 +612,32 @@ class RocheWA42380():
     code_2 = code_data( "44054006", "SNOMED", "2022", "Diabetes mellitus type 2 (disorder)"	)
     code_3 = code_data( "E10", "ICD-10-CM", "10", "Type 1 diabetes mellitus")
     code_4 = code_data( "44635009", "SNOMED", "2022", "Diabetes mellitus type 1 (disorder)"	)
-    indication_1 = study_indication_data("Diabetes Type II", [code_1, code_2])
-    indication_2 = study_indication_data("Diabetes Type I", [code_3, code_4])
+    indication_1 = study_indication_data("indication_1", "Diabetes Type II", [code_1, code_2])
+    indication_2 = study_indication_data("indication_2", "Diabetes Type I", [code_3, code_4])
     indications = [indication_1, indication_2]
 
     # <<<<< Need setting up >>>>>
     # Intercurrent Events
     i_event_1 = intercurrent_event_data(
+      "i_event_1",
       "Termination", 
       "Termination",
       "Patients with out of range lab values before dosing will be excluded"
     )
     i_event_2 = intercurrent_event_data(
+      "i_event_2",
       "Missed dose",
       "Missed dose",
       "Patients with 1 missed dose will be included. Patients with >1 missed dose will be excluded"
     )
     i_event_3 = intercurrent_event_data(
+      "i_event_3",
       "Termination",
       "Termination",
       "Patients with out of range lab values before dosing will be excluded"
     )
     i_event_4 = intercurrent_event_data(
+      "i_event_4",
       "Out of range lab values",
       "Out of range lab values",
       "Patients with out of range lab values before dosing will be excluded"
@@ -637,13 +645,13 @@ class RocheWA42380():
 
     # <<<<< Need setting up >>>>>
     # Analysis Populations
-    analysis_population_1 = analysis_population_data("ITT")
-    analysis_population_2 = analysis_population_data("PP")
+    analysis_population_1 = analysis_population_data("analysis_population_1", "ITT")
+    analysis_population_2 = analysis_population_data("analysis_population_2", "PP")
 
     # <<<<< Need setting up >>>>>
     # Estimands
-    estimand_1 = estimand_data("Measure 1", analysis_population_1, ii_1, endpoint_1, [i_event_1])
-    estimand_2 = estimand_data("Measure 2", analysis_population_2, ii_1, endpoint_1, [i_event_2, i_event_3, i_event_4])
+    estimand_1 = estimand_data("estimand_1", "Measure 1", analysis_population_1, ii_1, endpoint_1, [i_event_1])
+    estimand_2 = estimand_data("estimand_2", "Measure 2", analysis_population_2, ii_1, endpoint_1, [i_event_2, i_event_3, i_event_4])
     estimands = [estimand_1, estimand_2]
 
     # Study Arms
@@ -652,8 +660,8 @@ class RocheWA42380():
     treatment = code_for('StudyArm', 'studyArmType', submission_value='Treatment Arm')
     placebo = code_for('StudyArm', 'studyArmType', submission_value='Placebo Comparator Arm')
     # Fields: name, description, arm_type, origin_description, origin_type
-    study_arm_1 = study_arm_data("TCZ+SOC", "Tocilizumab with SOC", treatment, "Captured subject data", origin_type)
-    study_arm_2 = study_arm_data("Placebo+SOC", "Palcebo with SOC", placebo, "Captured subject data", origin_type)
+    study_arm_1 = study_arm_data("study_arm_1", "TCZ+SOC", "Tocilizumab with SOC", treatment, "Captured subject data", origin_type)
+    study_arm_2 = study_arm_data("study_arm_2", "Placebo+SOC", "Palcebo with SOC", placebo, "Captured subject data", origin_type)
 
     # <<<<< Links to encounters need setting up >>>>>
     # Epochs
@@ -664,36 +672,36 @@ class RocheWA42380():
     follow_up = code_for('StudyEpoch', 'studyEpochType', submission_value='FOLLOW-UP')
     # Fields: name, description, epoch_type, encounters
     raw_epoch_data = [
-      ("Screening", "Screening", screening, [ encounters[0] ]),
-      ("Treatment", "Treatment", treatment, encounters[1:31]),
-      ("Follow-up", "Follow-up", follow_up, encounters[31:34])
+      ("epoch_1", "Screening", "Screening", screening, [ encounters[0] ]),
+      ("epoch_2", "Treatment", "Treatment", treatment, encounters[1:31]),
+      ("epoch_3", "Follow-up", "Follow-up", follow_up, encounters[31:34])
     ]
     epochs = []
     for epoch in raw_epoch_data:
       epochs.append(study_epoch_data(*epoch))
-    double_link(epochs, 'previousStudyEpochId', 'nextStudyEpochId')
+    double_link(epochs, "studyEpochId", 'previousStudyEpochId', 'nextStudyEpochId')
 
     # <<<<< Rules need updatting >>>>>
     # Elements
     # Fields: name, description, start rule, end rule
     raw_element_data = [
-      ("Screening", "Screening", rules[0], rules[4]),
-      ("Treatment", "Tocilizumab in combination with standard of care", None, None),
-      ("Palcebo", "Placebo in combination with standard of care", None, None),
-      ("Follow Up", "Follow up", None, None),
+      ("study_element_1", "Screening", "Screening", rules[0], rules[4]),
+      ("study_element_2", "Treatment", "Tocilizumab in combination with standard of care", None, None),
+      ("study_element_3", "Palcebo", "Placebo in combination with standard of care", None, None),
+      ("study_element_4", "Follow Up", "Follow up", None, None),
     ]
     elements = []
     for element in raw_element_data:
-      elements.append(study_element_data(*element))
+      elements.append(study_element_data(*element[0:3], start=element[3], end=element[4]))
 
     # Study Cells
     study_cells = []
-    study_cells.append(study_cell_data(study_arm_1, epochs[0], [ elements[0] ]))
-    study_cells.append(study_cell_data(study_arm_1, epochs[1], [ elements[1] ]))
-    study_cells.append(study_cell_data(study_arm_1, epochs[2], [ elements[3] ]))
-    study_cells.append(study_cell_data(study_arm_2, epochs[0], [ elements[0] ]))
-    study_cells.append(study_cell_data(study_arm_2, epochs[1], [ elements[2] ]))
-    study_cells.append(study_cell_data(study_arm_2, epochs[2], [ elements[3] ]))
+    study_cells.append(study_cell_data("study_cell_1", study_arm_1, epochs[0], [ elements[0] ]))
+    study_cells.append(study_cell_data("study_cell_2", study_arm_1, epochs[1], [ elements[1] ]))
+    study_cells.append(study_cell_data("study_cell_3", study_arm_1, epochs[2], [ elements[3] ]))
+    study_cells.append(study_cell_data("study_cell_4", study_arm_2, epochs[0], [ elements[0] ]))
+    study_cells.append(study_cell_data("study_cell_5", study_arm_2, epochs[1], [ elements[2] ]))
+    study_cells.append(study_cell_data("study_cell_6", study_arm_2, epochs[2], [ elements[3] ]))
 
     # <<<<< Need setting up >>>>>
     # Study Design
@@ -702,13 +710,14 @@ class RocheWA42380():
     int_model = code_for('StudyDesign', 'interventionModel', submission_value='SEQUENTIAL')
     ta = code_data("123456789", "SNOMED", "2022", "Something")
     therapeutic_areas = [ta]
-    design_1 = study_design_data([intent], [design_type], int_model, therapeutic_areas, study_cells, indications, objectives, [study_population_1], ii, [workflow], estimands)
+    design_1 = study_design_data("study_design_1", "Study Design 1", "The first study design", [intent], [design_type], int_model, therapeutic_areas, study_cells, indications, objectives, [study_population_1], ii, [workflow], estimands, None, None, None)
     designs = [design_1]
 
     # Protocol versions
     # Fields: brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):
     draft_status = code_for('StudyProtocolVersion', 'protocolStatus', submission_value='Draft')
     protocol_version_1 = study_protocol_version_data(
+      "study_protocol_version_1",
       "COVACTA", 
       "A Study to Evaluate the Safety and Efficacy of Tocilizumab in Patients With Severe COVID-19 Pneumonia", 
       "",
@@ -724,12 +733,12 @@ class RocheWA42380():
     registry_type = code_for('Organization', 'organizationType', submission_value='Clinical Study Registry')
     sponsor_type = code_for('Organization', 'organizationType', submission_value='Clinical Study Sponsor')
     regulator_type = code_for('Organization', 'organizationType', submission_value='Regulatory Agency')
-    organisation_1 = organization_data("DUNS", "482242971", "F. Hoffmann-la Roche Ag", sponsor_type)
-    organisation_2 = organization_data("USGOV", "CT-GOV", "ClinicalTrials.gov", registry_type)
-    organisation_3 = organization_data("EMA", "EudraCT", "European Union Drug Regulating Authorities Clinical Trials Database", regulator_type)
-    identifier_1 = study_identifier_data("WA42380", organisation_1)
-    identifier_2 = study_identifier_data("NCT04320615", organisation_2)
-    identifier_3 = study_identifier_data("2020-001154-22", organisation_3)
+    organisation_1 = organization_data("organization_1", "DUNS", "482242971", "F. Hoffmann-la Roche Ag", sponsor_type)
+    organisation_2 = organization_data("organization_2", "USGOV", "CT-GOV", "ClinicalTrials.gov", registry_type)
+    organisation_3 = organization_data("organization_3", "EMA", "EudraCT", "European Union Drug Regulating Authorities Clinical Trials Database", regulator_type)
+    identifier_1 = study_identifier_data("study_identifier_1", "WA42380", organisation_1)
+    identifier_2 = study_identifier_data("study_identifier_2", "NCT04320615", organisation_2)
+    identifier_3 = study_identifier_data("study_identifier_3", "2020-001154-22", organisation_3)
     identifiers = [identifier_1, identifier_2, identifier_3]
 
     # Assemble complete study

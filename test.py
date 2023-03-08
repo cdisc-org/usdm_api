@@ -7,7 +7,7 @@ import pandas as pd
 from pandas import json_normalize
 import json
 
-studies = [ SimpleStudy]
+studies = [ RocheWA42380, SimpleStudy]
 #studies = [ SimpleStudy, DDR, BMS ]
 
 def save_as_file(data, filename):

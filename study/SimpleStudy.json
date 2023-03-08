@@ -700,7 +700,7 @@
           ]
         }
       ],
-      "studyWorkflows": [
+      "studyScheduleTimelines": [
         {
           "workflowId": "workflow_1",
           "workflowDescription": "Schedule of Activities",
