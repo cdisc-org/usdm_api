@@ -68,6 +68,7 @@ def activity_data(id, name, description, procedures, **kwargs):
     "biomedicalConcepts": kwargs['biomedical_concepts'] if 'biomedical_concepts' in kwargs else [],
     "bcCategories": kwargs['bc_categories'] if 'bc_categories' in kwargs else [],
     "bcSurrogates": kwargs['bc_surrogates'] if 'bc_surrogates' in kwargs else [],
+    "activityTimelineId": kwargs['activity_timeline_id'] if 'activity_timeline_id' in kwargs else "",
   }
 
 def procedure_data(the_id, the_type, the_code, **kwargs):

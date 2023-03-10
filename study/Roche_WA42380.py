@@ -148,36 +148,36 @@ class RocheWA42380():
     # Activities
     # Short Name, Description, Procedures, Study Data
     study_activity_data = [
-      ("Informed consent", "Informed consent", [], []),
-      ("Inclusion/exclusion criteria", "Inclusion/exclusion criteria", [], []),
-      ("Demographics", "Demographic data", [], study_data_items[0:3]),
-      ("Randomization", "Randomization", [], []),
-      ("Medical history", "Medical history", [], []),
-      ("Physical examination", "Complete physical examination", [], study_data_items[3:15]),
-      ("Weight", "Weight", [], study_data_items[49:50]),
-      ("COVID-19 diagnosis", "COVID-19 diagnosis", [], []),
-      ("Chest X-ray/CT scan", "Chest X-ray/CT scan", [], []),
-      ("ECG", "Electrocardiogram", [], []),
-      ("Pregnancy test", "Pregnancy test", [], []),
+      ("activity_1", "Informed consent", "Informed consent", []),
+      ("activity_2", "Inclusion/exclusion criteria", "Inclusion/exclusion criteria", []),
+      ("activity_3", "Demographics", "Demographic data", [procedure_data("procedure_1", "Demographic", code_data( "XX031ZA", "ATC", "2021", "SubstX"))]),
+      ("activity_4", "Randomization", "Randomization", []),
+      ("activity_5", "Medical history", "Medical history", []),
+      ("activity_6", "Physical examination", "Complete physical examination", [procedure_data("procedure_2", "Physical", code_data( "XX031ZA", "ATC", "2021", "SubstX"))]),
+      ("activity_7", "Weight", "Weight", [procedure_data("procedure_2", "Physical", code_data( "XX031ZA", "ATC", "2021", "SubstX"))]),
+      ("activity_8", "COVID-19 diagnosis", "COVID-19 diagnosis", []),
+      ("activity_9", "Chest X-ray/CT scan", "Chest X-ray/CT scan", []),
+      ("activity_10", "ECG", "Electrocardiogram", []),
+      ("activity_11", "Pregnancy test", "Pregnancy test", []),
       # 11
-      ("PaO2/FiO2", "arterial oxygen partial pressure/fraction of inspired oxygen", [], []),
-      ("SpO2", "peripheral capillary oxygen saturation", [], []),
-      ("Vital signs", "Vital signs", [], study_data_items[42:49]),
-      ("Ordinal scoring", "Ordinal scoring", [], []),
-      ("Adverse events", "Adverse events", [], []),
-      ("Concomitant medications", "Concomitant medications", [], []),
-      ("Hematology", "Hematology", [], study_data_items[35:42]),
-      ("Chemistry", "Chemistry", [], study_data_items[15:35]),
-      ("Study drug administration", "Study drug administration", [], []),
-      ("Central Labs", "Central Labs", [], []),
+      ("activity_12", "PaO2/FiO2", "arterial oxygen partial pressure/fraction of inspired oxygen", []),
+      ("activity_13", "SpO2", "peripheral capillary oxygen saturation", []),
+      ("activity_14", "Vital signs", "Vital signs", [procedure_data("procedure_3", "Vital", code_data( "XX031ZA", "ATC", "2021", "SubstX"))]),
+      ("activity_15", "Ordinal scoring", "Ordinal scoring", []),
+      ("activity_16", "Adverse events", "Adverse events", []),
+      ("activity_17", "Concomitant medications", "Concomitant medications", []),
+      ("activity_18", "Hematology", "Hematology", [procedure_data("procedure_4", "Hematology", code_data( "XX031ZA", "ATC", "2021", "SubstX"))]),
+      ("activity_19", "Chemistry", "Chemistry", [procedure_data("procedure_5", "Chemistry", code_data( "XX031ZA", "ATC", "2021", "SubstX"))]),
+      ("activity_20", "Study drug administration", "Study drug administration", []),
+      ("activity_21", "Central Labs", "Central Labs", []),
       # 21
-      ("Serum PD (CRP, IL-6, sIL-6R)", "", [], []),
-      ("Serum PK", "Serum pharmacokinetic", [], []),
-      ("Serum sample for exploratory biomarkers", "Serum sample for exploratory biomarkers", [], []),
-      ("SARS-CoV-2 viral load", "SARS-CoV-2 viral load", [], []),
-      ("Serum SARS-CoV-2 antibody titer", "Serum SARS-CoV-2 antibody titer", [], []),
-      ("Cryopreserved PBMCs", "Cryopreserved peripheral blood mononuclear cells", [], []),
-      ("Whole blood in PAXgene tubes for RNA analyses", "", [], []),
+      ("activity_22", "Serum PD (CRP, IL-6, sIL-6R)", "", []),
+      ("activity_23", "Serum PK", "Serum pharmacokinetic", []),
+      ("activity_24", "Serum sample for exploratory biomarkers", "Serum sample for exploratory biomarkers", []),
+      ("activity_25", "SARS-CoV-2 viral load", "SARS-CoV-2 viral load", []),
+      ("activity_26", "Serum SARS-CoV-2 antibody titer", "Serum SARS-CoV-2 antibody titer", []),
+      ("activity_27", "Cryopreserved PBMCs", "Cryopreserved peripheral blood mononuclear cells", []),
+      ("activity_28", "Whole blood in PAXgene tubes for RNA analyses", "", []),
     ]
     activities = []
     for activity in study_activity_data:
@@ -713,7 +713,7 @@ class RocheWA42380():
     ta = code_data("123456789", "SNOMED", "2022", "Something")
     therapeutic_areas = [ta]
     timeline = schedule_timeline_data("timeline_1", "Timeline 1", "The first timeline", "Condition for Entry", "timeline_entry_1")
-    design_1 = study_design_data("study_design_1", "Study Design 1", "The first study design", [intent], [design_type], int_model, therapeutic_areas, study_cells, indications, objectives, [study_population_1], ii, [timeline], estimands, [], [], "Study Design rationale")
+    design_1 = study_design_data("study_design_1", "Study Design 1", "The first study design", [intent], [design_type], int_model, therapeutic_areas, study_cells, indications, objectives, [study_population_1], ii, [timeline], estimands, encounters, activities, "Study Design rationale")
     designs = [design_1]
 
     # Protocol versions

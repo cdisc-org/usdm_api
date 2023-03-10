@@ -769,7 +769,8 @@
                 "activityIsConditionalReason": "",
                 "biomedicalConcepts": [],
                 "bcCategories": [],
-                "bcSurrogates": []
+                "bcSurrogates": [],
+                "activityTimelineId": ""
               }
             },
             {
@@ -818,7 +819,8 @@
                 "activityIsConditionalReason": "",
                 "biomedicalConcepts": [],
                 "bcCategories": [],
-                "bcSurrogates": []
+                "bcSurrogates": [],
+                "activityTimelineId": ""
               }
             }
           ]
