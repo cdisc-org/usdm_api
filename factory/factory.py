@@ -288,8 +288,9 @@ def workflow_data(id, description, items):
     'workflowItems': items,
   }
 
-def address_data(text, line, city, district, state, postal_code, country):
+def address_data(id, text, line, city, district, state, postal_code, country):
   return{
+    "addressId": id,
     "text": text,
     "line": line,
     "city": city,
