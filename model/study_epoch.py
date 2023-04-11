@@ -10,6 +10,6 @@ class StudyEpoch(ApiBaseModel):
   studyEpochName: str
   studyEpochDescription: str
   studyEpochType: Code
-  previousStudyEpochId: str
-  nextStudyEpochId: str
-  encounters: List[str] = []
+  previousStudyEpochId: Union[str, None] = None
+  nextStudyEpochId: Union[str, None] = None
+  encounterIds: List[str] = []

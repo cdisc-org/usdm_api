@@ -70,7 +70,7 @@ class SimpleStudy():
     sponsor_type = code_for('Organization', 'organizationType', submission_value='Clinical Study Sponsor')
     regulator_type = code_for('Organization', 'organizationType', submission_value='Regulatory Agency')
     country_code = code_data("USA", "ISO 3166 1 alpha3", "", "United States of America")
-    address = address_data("123", "fake street", "some town", "district 19", "TX", "12345", country_code)
+    address = address_data("fake_123", "123", "fake street", "some town", "district 19", "TX", "12345", country_code)
     organisation_1 = organization_data("organization_1", "DUNS", "123456789", "ACME Pharma", sponsor_type, address=address)
     organisation_2 = organization_data("organization_2", "FDA", "CT-GOV", "ClinicalTrials.gov", registry_type, address=address)
     organisation_3 = organization_data("organization_3", "EMA", "EudraCT", "European Union Drug Regulating Authorities Clinical Trials Database", registry_type, address=address)
