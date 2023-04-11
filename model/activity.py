@@ -11,7 +11,7 @@ class Activity(ApiBaseModel):
   definedProcedures: List[Procedure] = []
   activityIsConditional: bool
   activityIsConditionalReason: str
-  biomedicalConcepts: List[str] = []
-  bcCategories: List[str] = []
-  bcSurrogates: List[str] = []
+  biomedicalConceptIds: List[str] = []
+  bcCategoryIds: List[str] = []
+  bcSurrogateIds: List[str] = []
   activityTimelineId: Union[str, None] = None
