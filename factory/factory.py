@@ -256,6 +256,9 @@ def study_design_data(id, name, description, intent, types, model, therapeutic_a
     "biomedicalConcepts": kwargs['biomedical_concepts'] if 'biomedical_concepts' in kwargs else [],
     "bcCategories": kwargs['bc_categories'] if 'bc_categories' in kwargs else [],
     "bcSurrogates": kwargs['bc_surrogates'] if 'bc_surrogates' in kwargs else [],
+    "biomedicalConcepts": kwargs['biomedical_concepts'] if 'biomedical_concepts' in kwargs else [],
+    "studyArms": kwargs['studyArms'] if 'studyArms' in kwargs else [],
+    "studyEpochs": kwargs['studyEpochs'] if 'studyEpochs' in kwargs else [],
   }
 
 def study_protocol_version_data(id, brief_title, official_title, public_title, scientific_title, version, amendment, effective_date, status):
