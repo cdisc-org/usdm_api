@@ -154,38 +154,38 @@ async def create_study(study: Study):
   study.save(store, scope=study.studyId, use_scope=True)
   return study.studyId
 
-@app.put("/v2/studyDefinitions/{uuid}", 
+@app.put("/v2/studyDefinitions/{studyId}", 
   tags=["Production"], 
   summary=annotations['study_definition']['put']['summary'],
   description=annotations['study_definition']['put']['description'], 
   status_code=status.HTTP_200_OK,
   response_model=UUID,
   responses=standard_responses)
-async def update_study(uuid: str, study: Study):
-  if uuid not in Study.list(store):
+async def update_study(studyId: str, study: Study):
+  if studyId not in Study.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
-  study.studyId = uuid
-  study.save(store, scope=uuid, use_scope=True)
+  study.studyId = studyId
+  study.save(store, scope=studyId, use_scope=True)
   return study.studyId
 
-@app.get("/v2/studyDefinitions/{uuid}", 
+@app.get("/v2/studyDefinitions/{studyId}", 
   tags=["Production"], 
   summary=annotations['study_definition']['get_uuid']['summary'],
   description=annotations['study_definition']['get_uuid']['description'],
   responses=standard_responses)
-async def read_full_study(uuid: str):
-  if uuid not in Study.list(store):
+async def read_full_study(studyId: str):
+  if studyId not in Study.list(store):
     raise HTTPException(status_code=404, detail="Item not found")
-  return Study.read(store, uuid)
+  return Study.read(store, studyId)
 
-@app.get("/v2/studyDefinitions/{uuid}/history", 
+@app.get("/v2/studyDefinitions/{studyId}/history", 
   tags=["Production"], 
   summary="Returns the study history",
   description="Returns the history for the specified study",
   response_model=List[Study],
   responses=standard_responses)
-async def read_study_history(uuid: str):
-  if uuid not in Study.list(store):
+async def read_study_history(studyId: str):
+  if studyId not in Study.list(store):
     raise HTTPException(status_code=501, detail="Not implemented")
   return []
 
@@ -221,8 +221,8 @@ async def read_study_history(uuid: str):
 #   description='Returns all the identifiers for a specified study.',
 #   response_model=List[StudyIdentifier]
 # )
-# async def study_identifiers_search(study_uuid: UUID):
-#   return StudyIdentifier.search(store, str(study_uuid))
+# async def study_identifiers_search(studyId: UUID):
+#   return StudyIdentifier.search(store, str(studyId))
 
 # @app.post("/v2/study_identifiers", 
 #   tags=["potential"], 
@@ -312,8 +312,8 @@ async def read_study_history(uuid: str):
   response_model=List[StudyDesign],
   responses=standard_responses
 )
-async def search_study_design(study_uuid: UUID):
-  return StudyDesign.search(store, str(study_uuid))
+async def search_study_design(studyId: UUID):
+  return StudyDesign.search(store, str(studyId))
 
 # @app.get("/v2/studyDesigns/{uuid}/soa", 
 #   tags=["SoA"],
