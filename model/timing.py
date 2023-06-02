@@ -10,3 +10,6 @@ class Timing(ApiBaseModel):
   timingWindow: Union[str, None] = None
   relativeFromScheduledInstanceId: Union[str, None] = None
   relativeToScheduledInstanceId: Union[str, None] = None
+  timingDescription: str
+  timingWindowLower: str
+  timingWindowUpper: str
