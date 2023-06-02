@@ -191,8 +191,8 @@ def study_epoch_data(id, name, description, epoch_type, encounters):
 def study_cell_data(id, arm, epoch, elements):
   return {
     "studyCellId": id,
-    "studyArm": arm,
-    "studyEpoch": epoch,
+    "studyArmId": arm,
+    "studyEpochId": epoch,
     "studyElements": elements,
   }
 

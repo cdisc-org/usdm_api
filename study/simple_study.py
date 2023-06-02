@@ -105,12 +105,12 @@ class SimpleStudy():
     study_element_4 = study_element_data("element_4", "Element 4", "Fourth element")
 
     study_cells = []
-    study_cells.append(study_cell_data("study_cell_1", study_arm_1, study_epoch_1, [study_element_1]))
-    study_cells.append(study_cell_data("study_cell_2", study_arm_1, study_epoch_2, [study_element_2]))
-    study_cells.append(study_cell_data("study_cell_3", study_arm_1, study_epoch_3, [study_element_4]))
-    study_cells.append(study_cell_data("study_cell_4", study_arm_2, study_epoch_1, [study_element_1]))
-    study_cells.append(study_cell_data("study_cell_5", study_arm_2, study_epoch_2, [study_element_3]))
-    study_cells.append(study_cell_data("study_cell_6", study_arm_2, study_epoch_3, [study_element_4]))
+    study_cells.append(study_cell_data("study_cell_1", "study_arm_id_1", "study_epoch_data_id_1", [study_element_1]))
+    study_cells.append(study_cell_data("study_cell_2", "study_arm_id_1", "study_epoch_data_id_2", [study_element_2]))
+    study_cells.append(study_cell_data("study_cell_3", "study_arm_id_1", "study_epoch_data_id_3", [study_element_4]))
+    study_cells.append(study_cell_data("study_cell_4", "study_arm_id_2", "study_epoch_data_id_1", [study_element_1]))
+    study_cells.append(study_cell_data("study_cell_5", "study_arm_id_2", "study_epoch_data_id_2", [study_element_3]))
+    study_cells.append(study_cell_data("study_cell_6", "study_arm_id_2", "study_epoch_data_id_3", [study_element_4]))
 
     intent = code_for('StudyDesign', 'trialIntentType', c_code='C15714')
     trial_1_type = code_for('StudyDesign', 'trialType', submission_value='BIOSIMILARITY')
