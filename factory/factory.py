@@ -320,11 +320,11 @@ def biomedical_concept_data(id, name, reference, concept_code, **kwargs):
 def bc_category_data(id, name, description, **kwargs):
   return {
     "biomedicalConceptCategoryId": id, 
-    "bcCategoryParentIds": kwargs['parent_ids'] if 'parent_ids' in kwargs else [],
-    "bcCategoryChildrenIds": kwargs['children_ids'] if 'children_ids' in kwargs else [],
+    "bcCategoryChildIds": kwargs['children_ids'] if 'children_ids' in kwargs else [],
     "bcCategoryName": name,
     "bcCategoryDescription": description,
     "bcCategoryMemberIds": kwargs['member_ids'] if 'member_ids' in kwargs else [],
+    "bcCategoryCode": kwargs['bcCategoryCode'] if 'bcCategoryCode' in kwargs else [],
   }
 
 def bc_property_data(id, name, required, enabled, datatype, concept_code, **kwargs):
