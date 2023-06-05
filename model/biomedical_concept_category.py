@@ -1,6 +1,6 @@
 from typing import List
 from .api_base_model import ApiBaseModel
-from .aliasCode import AliasCode
+from .alias_code import AliasCode
 
 class BiomedicalConceptCategory(ApiBaseModel):
   biomedicalConceptCategoryId: str
