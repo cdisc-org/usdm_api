@@ -1,16 +1,10 @@
 from enum import Enum
 from typing import List, Dict, Union, Literal
-
 from .api_base_model import ApiBaseModel
 from .timing import Timing
 
-class ScheduledInstanceType(Enum):
-    ACTIVITY = "ACTIVITY"
-    DECISION = "DECISION"
-
 class ScheduledInstance(ApiBaseModel):
     scheduledInstanceId: str
-    #scheduledInstanceType: ScheduledInstanceType
     scheduledInstanceType: Literal['ACTIVITY', 'DECISION']
     scheduleTimelineExitId: Union[str, None] = None
     scheduledInstanceTimings: List[Timing] = []
