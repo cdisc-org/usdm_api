@@ -1,4 +1,4 @@
-from typing import List, Union
+from typing import List
 from .api_base_model import ApiBaseModel
 from .code import Code
 

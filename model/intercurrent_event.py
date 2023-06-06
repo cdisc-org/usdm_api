@@ -1,5 +1,5 @@
-from .api_base_model import ApiBaseModel
 from typing import Union
+from .api_base_model import ApiBaseModel
 
 class IntercurrentEvent(ApiBaseModel):
   intercurrentEventId: str
