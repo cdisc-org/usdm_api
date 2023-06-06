@@ -12,6 +12,7 @@ from .indication import Indication
 from .investigational_intervention import InvestigationalIntervention
 from .study_arm import StudyArm
 from .study_epoch import StudyEpoch
+from .study_element import StudyElement
 from .study_design_population import StudyDesignPopulation
 from .objective import Objective
 from .schedule_timeline import ScheduleTimeline
@@ -44,6 +45,7 @@ class StudyDesign(ApiBaseModel):
   bcSurrogates: List[BiomedicalConceptSurrogate] = []
   studyArms: List[StudyArm]
   studyEpochs: List[StudyEpoch]
+  studyElements: List[StudyElement]
 
   @classmethod
   def search(cls, store, uuid):
