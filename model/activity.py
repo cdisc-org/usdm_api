@@ -10,7 +10,7 @@ class Activity(ApiBaseModel):
   nextActivityId: Union[str, None] = None
   definedProcedures: List[Procedure] = []
   activityIsConditional: bool
-  activityIsConditionalReason: str
+  activityIsConditionalReason: Union[str, None] = None
   biomedicalConceptIds: List[str] = []
   bcCategoryIds: List[str] = []
   bcSurrogateIds: List[str] = []
