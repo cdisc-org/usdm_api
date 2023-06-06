@@ -1,0 +1,1693 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Simple API for DDF",
+    "description": "A simple TransCelerate Digital Data Flow (DDF) Study Definitions Repository API.",
+    "version": "2.1 Provisional (0.33)"
+  },
+  "paths": {
+    "/v2/studyDefinitions": {
+      "post": {
+        "tags": [
+          "Production"
+        ],
+        "summary": "Create a study",
+        "description": "Create an entire study including all child element with a single post",
+        "operationId": "create_study_v2_studyDefinitions_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Study"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Response Create Study V2 Studydefinitions Post",
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "detail": "string",
+            "message": "string",
+            "status_code": "string"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "detail": "string",
+            "message": "string",
+            "status_code": "string"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/studyDefinitions/{uuid}": {
+      "get": {
+        "tags": [
+          "Production"
+        ],
+        "summary": "Return a study",
+        "description": "Return an entire study including all child elements",
+        "operationId": "read_full_study_v2_studyDefinitions__uuid__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Uuid",
+              "type": "string"
+            },
+            "name": "uuid",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "detail": "string",
+            "message": "string",
+            "status_code": "string"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "detail": "string",
+            "message": "string",
+            "status_code": "string"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Production"
+        ],
+        "summary": "Update a study",
+        "description": "Update an entire study including all child element with a single put",
+        "operationId": "update_study_v2_studyDefinitions__uuid__put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Uuid",
+              "type": "string"
+            },
+            "name": "uuid",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Study"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Response Update Study V2 Studydefinitions  Uuid  Put",
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "detail": "string",
+            "message": "string",
+            "status_code": "string"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "detail": "string",
+            "message": "string",
+            "status_code": "string"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/studyDefinitions/{uuid}/history": {
+      "get": {
+        "tags": [
+          "Production"
+        ],
+        "summary": "Returns the study history",
+        "description": "Returns the history for the specified study",
+        "operationId": "read_study_history_v2_studyDefinitions__uuid__history_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Uuid",
+              "type": "string"
+            },
+            "name": "uuid",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Response Read Study History V2 Studydefinitions  Uuid  History Get",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Study"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "detail": "string",
+            "message": "string",
+            "status_code": "string"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "detail": "string",
+            "message": "string",
+            "status_code": "string"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/studyDesigns": {
+      "get": {
+        "tags": [
+          "Production"
+        ],
+        "summary": "Study designs for a study",
+        "description": "Returns all the study designs for a specified study.",
+        "operationId": "search_study_design_v2_studyDesigns_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "title": "Study Uuid",
+              "type": "string",
+              "format": "uuid"
+            },
+            "name": "study_uuid",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Response Search Study Design V2 Studydesigns Get",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StudyDesign"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "detail": "string",
+            "message": "string",
+            "status_code": "string"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "detail": "string",
+            "message": "string",
+            "status_code": "string"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Activity": {
+        "title": "Activity",
+        "required": [
+          "activityId",
+          "activityName",
+          "activityDescription",
+          "activityIsConditional",
+          "activityIsConditionalReason"
+        ],
+        "type": "object",
+        "properties": {
+          "activityId": {
+            "title": "Activityid",
+            "type": "string"
+          },
+          "activityName": {
+            "title": "Activityname",
+            "type": "string"
+          },
+          "activityDescription": {
+            "title": "Activitydescription",
+            "type": "string"
+          },
+          "previousActivityId": {
+            "title": "Previousactivityid",
+            "type": "string"
+          },
+          "nextActivityId": {
+            "title": "Nextactivityid",
+            "type": "string"
+          },
+          "definedProcedures": {
+            "title": "Definedprocedures",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Procedure"
+            },
+            "default": []
+          },
+          "activityIsConditional": {
+            "title": "Activityisconditional",
+            "type": "boolean"
+          },
+          "activityIsConditionalReason": {
+            "title": "Activityisconditionalreason",
+            "type": "string"
+          },
+          "biomedicalConceptIds": {
+            "title": "Biomedicalconceptids",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": []
+          },
+          "bcCategoryIds": {
+            "title": "Bccategoryids",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": []
+          },
+          "bcSurrogateIds": {
+            "title": "Bcsurrogateids",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": []
+          },
+          "activityTimelineId": {
+            "title": "Activitytimelineid",
+            "type": "string"
+          }
+        }
+      },
+      "Address": {
+        "title": "Address",
+        "required": [
+          "addressId",
+          "text",
+          "line",
+          "city",
+          "district",
+          "state",
+          "postalCode",
+          "country"
+        ],
+        "type": "object",
+        "properties": {
+          "addressId": {
+            "title": "Addressid",
+            "type": "string"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "line": {
+            "title": "Line",
+            "type": "string"
+          },
+          "city": {
+            "title": "City",
+            "type": "string"
+          },
+          "district": {
+            "title": "District",
+            "type": "string"
+          },
+          "state": {
+            "title": "State",
+            "type": "string"
+          },
+          "postalCode": {
+            "title": "Postalcode",
+            "type": "string"
+          },
+          "country": {
+            "$ref": "#/components/schemas/Code"
+          }
+        }
+      },
+      "AliasCode": {
+        "title": "AliasCode",
+        "required": [
+          "aliasCodeId",
+          "standardCode"
+        ],
+        "type": "object",
+        "properties": {
+          "aliasCodeId": {
+            "title": "Aliascodeid",
+            "type": "string"
+          },
+          "standardCode": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "standardCodeAliases": {
+            "title": "Standardcodealiases",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "default": []
+          }
+        }
+      },
+      "AnalysisPopulation": {
+        "title": "AnalysisPopulation",
+        "required": [
+          "analysisPopulationId",
+          "populationDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "analysisPopulationId": {
+            "title": "Analysispopulationid",
+            "type": "string"
+          },
+          "populationDescription": {
+            "title": "Populationdescription",
+            "type": "string"
+          }
+        }
+      },
+      "BiomedicalConcept": {
+        "title": "BiomedicalConcept",
+        "required": [
+          "biomedicalConceptId",
+          "bcName",
+          "bcReference",
+          "bcConceptCode"
+        ],
+        "type": "object",
+        "properties": {
+          "biomedicalConceptId": {
+            "title": "Biomedicalconceptid",
+            "type": "string"
+          },
+          "bcName": {
+            "title": "Bcname",
+            "type": "string"
+          },
+          "bcSynonyms": {
+            "title": "Bcsynonyms",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": []
+          },
+          "bcReference": {
+            "title": "Bcreference",
+            "type": "string"
+          },
+          "bcProperties": {
+            "title": "Bcproperties",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BiomedicalConceptProperty"
+            },
+            "default": []
+          },
+          "bcConceptCode": {
+            "$ref": "#/components/schemas/AliasCode"
+          }
+        }
+      },
+      "BiomedicalConceptCategory": {
+        "title": "BiomedicalConceptCategory",
+        "required": [
+          "biomedicalConceptCategoryId",
+          "bcCategoryName",
+          "bcCategoryDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "biomedicalConceptCategoryId": {
+            "title": "Biomedicalconceptcategoryid",
+            "type": "string"
+          },
+          "bcCategoryParentIds": {
+            "title": "Bccategoryparentids",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": []
+          },
+          "bcCategoryChildrenIds": {
+            "title": "Bccategorychildrenids",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": []
+          },
+          "bcCategoryName": {
+            "title": "Bccategoryname",
+            "type": "string"
+          },
+          "bcCategoryDescription": {
+            "title": "Bccategorydescription",
+            "type": "string"
+          },
+          "bcCategoryMemberIds": {
+            "title": "Bccategorymemberids",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": []
+          }
+        }
+      },
+      "BiomedicalConceptProperty": {
+        "title": "BiomedicalConceptProperty",
+        "required": [
+          "bcPropertyId",
+          "bcPropertyName",
+          "bcPropertyRequired",
+          "bcPropertyEnabled",
+          "bcPropertyDatatype",
+          "bcPropertyConceptCode"
+        ],
+        "type": "object",
+        "properties": {
+          "bcPropertyId": {
+            "title": "Bcpropertyid",
+            "type": "string"
+          },
+          "bcPropertyName": {
+            "title": "Bcpropertyname",
+            "type": "string"
+          },
+          "bcPropertyRequired": {
+            "title": "Bcpropertyrequired",
+            "type": "boolean"
+          },
+          "bcPropertyEnabled": {
+            "title": "Bcpropertyenabled",
+            "type": "boolean"
+          },
+          "bcPropertyDatatype": {
+            "title": "Bcpropertydatatype",
+            "type": "string"
+          },
+          "bcPropertyResponseCodes": {
+            "title": "Bcpropertyresponsecodes",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseCode"
+            },
+            "default": []
+          },
+          "bcPropertyConceptCode": {
+            "$ref": "#/components/schemas/AliasCode"
+          }
+        }
+      },
+      "BiomedicalConceptSurrogate": {
+        "title": "BiomedicalConceptSurrogate",
+        "required": [
+          "bcSurrogateId",
+          "bcSurrogateName",
+          "bcSurrogateDescription",
+          "bcSurrogateReference"
+        ],
+        "type": "object",
+        "properties": {
+          "bcSurrogateId": {
+            "title": "Bcsurrogateid",
+            "type": "string"
+          },
+          "bcSurrogateName": {
+            "title": "Bcsurrogatename",
+            "type": "string"
+          },
+          "bcSurrogateDescription": {
+            "title": "Bcsurrogatedescription",
+            "type": "string"
+          },
+          "bcSurrogateReference": {
+            "title": "Bcsurrogatereference",
+            "type": "string"
+          }
+        }
+      },
+      "Code": {
+        "title": "Code",
+        "required": [
+          "codeId",
+          "code",
+          "codeSystem",
+          "codeSystemVersion",
+          "decode"
+        ],
+        "type": "object",
+        "properties": {
+          "codeId": {
+            "title": "Codeid",
+            "type": "string"
+          },
+          "code": {
+            "title": "Code",
+            "type": "string"
+          },
+          "codeSystem": {
+            "title": "Codesystem",
+            "type": "string"
+          },
+          "codeSystemVersion": {
+            "title": "Codesystemversion",
+            "type": "string"
+          },
+          "decode": {
+            "title": "Decode",
+            "type": "string"
+          }
+        }
+      },
+      "Encounter": {
+        "title": "Encounter",
+        "required": [
+          "encounterId",
+          "encounterName",
+          "encounterDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "encounterId": {
+            "title": "Encounterid",
+            "type": "string"
+          },
+          "encounterName": {
+            "title": "Encountername",
+            "type": "string"
+          },
+          "encounterDescription": {
+            "title": "Encounterdescription",
+            "type": "string"
+          },
+          "previousEncounterId": {
+            "title": "Previousencounterid",
+            "type": "string"
+          },
+          "nextEncounterId": {
+            "title": "Nextencounterid",
+            "type": "string"
+          },
+          "encounterType": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "encounterEnvironmentalSetting": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "encounterContactModes": {
+            "title": "Encountercontactmodes",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "default": []
+          },
+          "transitionStartRule": {
+            "$ref": "#/components/schemas/TransitionRule"
+          },
+          "transitionEndRule": {
+            "$ref": "#/components/schemas/TransitionRule"
+          },
+          "encounterScheduledAtTimingId": {
+            "title": "Encounterscheduledattimingid",
+            "type": "string"
+          }
+        }
+      },
+      "Endpoint": {
+        "title": "Endpoint",
+        "required": [
+          "endpointId",
+          "endpointDescription",
+          "endpointPurposeDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "endpointId": {
+            "title": "Endpointid",
+            "type": "string"
+          },
+          "endpointDescription": {
+            "title": "Endpointdescription",
+            "type": "string"
+          },
+          "endpointPurposeDescription": {
+            "title": "Endpointpurposedescription",
+            "type": "string"
+          },
+          "endpointLevel": {
+            "$ref": "#/components/schemas/Code"
+          }
+        }
+      },
+      "Estimand": {
+        "title": "Estimand",
+        "required": [
+          "estimandId",
+          "summaryMeasure",
+          "analysisPopulation"
+        ],
+        "type": "object",
+        "properties": {
+          "estimandId": {
+            "title": "Estimandid",
+            "type": "string"
+          },
+          "summaryMeasure": {
+            "title": "Summarymeasure",
+            "type": "string"
+          },
+          "analysisPopulation": {
+            "$ref": "#/components/schemas/AnalysisPopulation"
+          },
+          "treatment": {
+            "title": "Treatment",
+            "type": "string"
+          },
+          "variableOfInterest": {
+            "title": "Variableofinterest",
+            "type": "string"
+          },
+          "intercurrentEvents": {
+            "title": "Intercurrentevents",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IntercurrentEvent"
+            },
+            "default": []
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "title": "HTTPValidationError",
+        "type": "object",
+        "properties": {
+          "detail": {
+            "title": "Detail",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "Indication": {
+        "title": "Indication",
+        "required": [
+          "indicationId",
+          "indicationDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "indicationId": {
+            "title": "Indicationid",
+            "type": "string"
+          },
+          "indicationDescription": {
+            "title": "Indicationdescription",
+            "type": "string"
+          },
+          "codes": {
+            "title": "Codes",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "default": []
+          }
+        }
+      },
+      "IntercurrentEvent": {
+        "title": "IntercurrentEvent",
+        "required": [
+          "intercurrentEventId",
+          "intercurrentEventName",
+          "intercurrentEventDescription",
+          "intercurrentEventStrategy"
+        ],
+        "type": "object",
+        "properties": {
+          "intercurrentEventId": {
+            "title": "Intercurrenteventid",
+            "type": "string"
+          },
+          "intercurrentEventName": {
+            "title": "Intercurrenteventname",
+            "type": "string"
+          },
+          "intercurrentEventDescription": {
+            "title": "Intercurrenteventdescription",
+            "type": "string"
+          },
+          "intercurrentEventStrategy": {
+            "title": "Intercurrenteventstrategy",
+            "type": "string"
+          }
+        }
+      },
+      "InvestigationalIntervention": {
+        "title": "InvestigationalIntervention",
+        "required": [
+          "investigationalInterventionId",
+          "interventionDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "investigationalInterventionId": {
+            "title": "Investigationalinterventionid",
+            "type": "string"
+          },
+          "interventionDescription": {
+            "title": "Interventiondescription",
+            "type": "string"
+          },
+          "codes": {
+            "title": "Codes",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "default": []
+          }
+        }
+      },
+      "Objective": {
+        "title": "Objective",
+        "required": [
+          "objectiveId",
+          "objectiveDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "objectiveId": {
+            "title": "Objectiveid",
+            "type": "string"
+          },
+          "objectiveDescription": {
+            "title": "Objectivedescription",
+            "type": "string"
+          },
+          "objectiveLevel": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "objectiveEndpoints": {
+            "title": "Objectiveendpoints",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Endpoint"
+            },
+            "default": []
+          }
+        }
+      },
+      "Organisation": {
+        "title": "Organisation",
+        "required": [
+          "organisationId",
+          "organisationIdentifierScheme",
+          "organisationIdentifier",
+          "organisationName",
+          "organisationType"
+        ],
+        "type": "object",
+        "properties": {
+          "organisationId": {
+            "title": "Organisationid",
+            "type": "string"
+          },
+          "organisationIdentifierScheme": {
+            "title": "Organisationidentifierscheme",
+            "type": "string"
+          },
+          "organisationIdentifier": {
+            "title": "Organisationidentifier",
+            "type": "string"
+          },
+          "organisationName": {
+            "title": "Organisationname",
+            "type": "string"
+          },
+          "organisationType": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "organizationLegalAddress": {
+            "$ref": "#/components/schemas/Address"
+          }
+        }
+      },
+      "Procedure": {
+        "title": "Procedure",
+        "required": [
+          "procedureId",
+          "procedureType",
+          "procedureName",
+          "procedureDescription",
+          "procedureCode",
+          "procedureIsConditional",
+          "procedureIsConditionalReason"
+        ],
+        "type": "object",
+        "properties": {
+          "procedureId": {
+            "title": "Procedureid",
+            "type": "string"
+          },
+          "procedureType": {
+            "title": "Proceduretype",
+            "type": "string"
+          },
+          "procedureName": {
+            "title": "Procedurename",
+            "type": "string"
+          },
+          "procedureDescription": {
+            "title": "Proceduredescription",
+            "type": "string"
+          },
+          "procedureCode": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "procedureIsConditional": {
+            "title": "Procedureisconditional",
+            "type": "boolean"
+          },
+          "procedureIsConditionalReason": {
+            "title": "Procedureisconditionalreason",
+            "type": "string"
+          }
+        }
+      },
+      "ResponseCode": {
+        "title": "ResponseCode",
+        "required": [
+          "responseCodeId",
+          "responseCodeEnabled",
+          "code"
+        ],
+        "type": "object",
+        "properties": {
+          "responseCodeId": {
+            "title": "Responsecodeid",
+            "type": "string"
+          },
+          "responseCodeEnabled": {
+            "title": "Responsecodeenabled",
+            "type": "boolean"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Code"
+          }
+        }
+      },
+      "ScheduleTimeline": {
+        "title": "ScheduleTimeline",
+        "required": [
+          "scheduleTimelineId",
+          "scheduleTimelineName",
+          "scheduleTimelineDescription",
+          "entryCondition"
+        ],
+        "type": "object",
+        "properties": {
+          "scheduleTimelineId": {
+            "title": "Scheduletimelineid",
+            "type": "string"
+          },
+          "scheduleTimelineName": {
+            "title": "Scheduletimelinename",
+            "type": "string"
+          },
+          "scheduleTimelineDescription": {
+            "title": "Scheduletimelinedescription",
+            "type": "string"
+          },
+          "entryCondition": {
+            "title": "Entrycondition",
+            "type": "string"
+          },
+          "scheduleTimelineEntryId": {
+            "title": "Scheduletimelineentryid",
+            "type": "string"
+          },
+          "scheduleTimelineExits": {
+            "title": "Scheduletimelineexits",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ScheduleTimelineExit"
+            },
+            "default": []
+          },
+          "scheduleTimelineInstances": {
+            "title": "Scheduletimelineinstances",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ScheduledInstance"
+            },
+            "default": []
+          }
+        }
+      },
+      "ScheduleTimelineExit": {
+        "title": "ScheduleTimelineExit",
+        "required": [
+          "scheduleTimelineExitId"
+        ],
+        "type": "object",
+        "properties": {
+          "scheduleTimelineExitId": {
+            "title": "Scheduletimelineexitid",
+            "type": "string"
+          }
+        }
+      },
+      "ScheduledInstance": {
+        "title": "ScheduledInstance",
+        "required": [
+          "scheduledInstanceId",
+          "scheduledInstanceType",
+          "scheduleSequenceNumber"
+        ],
+        "type": "object",
+        "properties": {
+          "scheduledInstanceId": {
+            "title": "Scheduledinstanceid",
+            "type": "string"
+          },
+          "scheduledInstanceType": {
+            "$ref": "#/components/schemas/ScheduledInstanceType"
+          },
+          "scheduleSequenceNumber": {
+            "title": "Schedulesequencenumber",
+            "type": "integer"
+          },
+          "scheduleTimelineExitId": {
+            "title": "Scheduletimelineexitid",
+            "type": "string"
+          },
+          "scheduledInstanceEncounterId": {
+            "title": "Scheduledinstanceencounterid",
+            "type": "string"
+          },
+          "scheduledInstanceTimings": {
+            "title": "Scheduledinstancetimings",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Timing"
+            },
+            "default": []
+          },
+          "scheduledInstanceTimelineId": {
+            "title": "Scheduledinstancetimelineid",
+            "type": "string"
+          }
+        }
+      },
+      "ScheduledInstanceType": {
+        "title": "ScheduledInstanceType",
+        "enum": [
+          1,
+          2
+        ],
+        "description": "An enumeration."
+      },
+      "Study": {
+        "title": "Study",
+        "required": [
+          "studyTitle",
+          "studyVersion",
+          "studyRationale",
+          "studyAcronym"
+        ],
+        "type": "object",
+        "properties": {
+          "studyId": {
+            "title": "Studyid",
+            "type": "string",
+            "format": "uuid"
+          },
+          "studyTitle": {
+            "title": "Studytitle",
+            "type": "string"
+          },
+          "studyVersion": {
+            "title": "Studyversion",
+            "type": "string"
+          },
+          "studyType": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "studyPhase": {
+            "$ref": "#/components/schemas/AliasCode"
+          },
+          "businessTherapeuticAreas": {
+            "title": "Businesstherapeuticareas",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "default": []
+          },
+          "studyIdentifiers": {
+            "title": "Studyidentifiers",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StudyIdentifier"
+            },
+            "default": []
+          },
+          "studyProtocolVersions": {
+            "title": "Studyprotocolversions",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StudyProtocolVersion"
+            },
+            "default": []
+          },
+          "studyDesigns": {
+            "title": "Studydesigns",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StudyDesign"
+            },
+            "default": []
+          },
+          "studyRationale": {
+            "title": "Studyrationale",
+            "type": "string"
+          },
+          "studyAcronym": {
+            "title": "Studyacronym",
+            "type": "string"
+          }
+        }
+      },
+      "StudyArm": {
+        "title": "StudyArm",
+        "required": [
+          "studyArmId",
+          "studyArmName",
+          "studyArmDescription",
+          "studyArmType",
+          "studyArmDataOriginDescription",
+          "studyArmDataOriginType"
+        ],
+        "type": "object",
+        "properties": {
+          "studyArmId": {
+            "title": "Studyarmid",
+            "type": "string"
+          },
+          "studyArmName": {
+            "title": "Studyarmname",
+            "type": "string"
+          },
+          "studyArmDescription": {
+            "title": "Studyarmdescription",
+            "type": "string"
+          },
+          "studyArmType": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "studyArmDataOriginDescription": {
+            "title": "Studyarmdataorigindescription",
+            "type": "string"
+          },
+          "studyArmDataOriginType": {
+            "$ref": "#/components/schemas/Code"
+          }
+        }
+      },
+      "StudyCell": {
+        "title": "StudyCell",
+        "required": [
+          "studyCellId"
+        ],
+        "type": "object",
+        "properties": {
+          "studyCellId": {
+            "title": "Studycellid",
+            "type": "string"
+          },
+          "studyArm": {
+            "$ref": "#/components/schemas/StudyArm"
+          },
+          "studyEpoch": {
+            "$ref": "#/components/schemas/StudyEpoch"
+          },
+          "studyElements": {
+            "title": "Studyelements",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StudyElement"
+            },
+            "default": []
+          }
+        }
+      },
+      "StudyDesign": {
+        "title": "StudyDesign",
+        "required": [
+          "studyDesignId",
+          "studyDesignName",
+          "studyDesignDescription",
+          "interventionModel",
+          "studyDesignRationale"
+        ],
+        "type": "object",
+        "properties": {
+          "studyDesignId": {
+            "title": "Studydesignid",
+            "type": "string"
+          },
+          "studyDesignName": {
+            "title": "Studydesignname",
+            "type": "string"
+          },
+          "studyDesignDescription": {
+            "title": "Studydesigndescription",
+            "type": "string"
+          },
+          "trialIntentTypes": {
+            "title": "Trialintenttypes",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "default": []
+          },
+          "trialType": {
+            "title": "Trialtype",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "default": []
+          },
+          "interventionModel": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "studyCells": {
+            "title": "Studycells",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StudyCell"
+            },
+            "default": []
+          },
+          "studyIndications": {
+            "title": "Studyindications",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Indication"
+            },
+            "default": []
+          },
+          "studyInvestigationalInterventions": {
+            "title": "Studyinvestigationalinterventions",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvestigationalIntervention"
+            },
+            "default": []
+          },
+          "studyPopulations": {
+            "title": "Studypopulations",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StudyDesignPopulation"
+            },
+            "default": []
+          },
+          "studyObjectives": {
+            "title": "Studyobjectives",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Objective"
+            },
+            "default": []
+          },
+          "studyScheduleTimelines": {
+            "title": "Studyscheduletimelines",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ScheduleTimeline"
+            },
+            "default": []
+          },
+          "therapeuticAreas": {
+            "title": "Therapeuticareas",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "default": []
+          },
+          "studyEstimands": {
+            "title": "Studyestimands",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Estimand"
+            },
+            "default": []
+          },
+          "encounters": {
+            "title": "Encounters",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Encounter"
+            },
+            "default": []
+          },
+          "activities": {
+            "title": "Activities",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Activity"
+            },
+            "default": []
+          },
+          "studyDesignRationale": {
+            "title": "Studydesignrationale",
+            "type": "string"
+          },
+          "studyDesignBlindingScheme": {
+            "$ref": "#/components/schemas/AliasCode"
+          },
+          "biomedicalConcepts": {
+            "title": "Biomedicalconcepts",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BiomedicalConcept"
+            },
+            "default": []
+          },
+          "bcCategories": {
+            "title": "Bccategories",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BiomedicalConceptCategory"
+            },
+            "default": []
+          },
+          "bcSurrogates": {
+            "title": "Bcsurrogates",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BiomedicalConceptSurrogate"
+            },
+            "default": []
+          }
+        }
+      },
+      "StudyDesignPopulation": {
+        "title": "StudyDesignPopulation",
+        "required": [
+          "studyDesignPopulationId",
+          "populationDescription",
+          "plannedNumberOfParticipants",
+          "plannedMaximumAgeOfParticipants",
+          "plannedMinimumAgeOfParticipants"
+        ],
+        "type": "object",
+        "properties": {
+          "studyDesignPopulationId": {
+            "title": "Studydesignpopulationid",
+            "type": "string"
+          },
+          "populationDescription": {
+            "title": "Populationdescription",
+            "type": "string"
+          },
+          "plannedNumberOfParticipants": {
+            "title": "Plannednumberofparticipants",
+            "type": "integer"
+          },
+          "plannedMaximumAgeOfParticipants": {
+            "title": "Plannedmaximumageofparticipants",
+            "type": "string"
+          },
+          "plannedMinimumAgeOfParticipants": {
+            "title": "Plannedminimumageofparticipants",
+            "type": "string"
+          },
+          "plannedSexOfParticipants": {
+            "title": "Plannedsexofparticipants",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "default": []
+          }
+        }
+      },
+      "StudyElement": {
+        "title": "StudyElement",
+        "required": [
+          "studyElementId",
+          "studyElementName",
+          "studyElementDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "studyElementId": {
+            "title": "Studyelementid",
+            "type": "string"
+          },
+          "studyElementName": {
+            "title": "Studyelementname",
+            "type": "string"
+          },
+          "studyElementDescription": {
+            "title": "Studyelementdescription",
+            "type": "string"
+          },
+          "transitionStartRule": {
+            "$ref": "#/components/schemas/TransitionRule"
+          },
+          "transitionEndRule": {
+            "$ref": "#/components/schemas/TransitionRule"
+          }
+        }
+      },
+      "StudyEpoch": {
+        "title": "StudyEpoch",
+        "required": [
+          "studyEpochId",
+          "studyEpochName",
+          "studyEpochDescription",
+          "studyEpochType"
+        ],
+        "type": "object",
+        "properties": {
+          "studyEpochId": {
+            "title": "Studyepochid",
+            "type": "string"
+          },
+          "studyEpochName": {
+            "title": "Studyepochname",
+            "type": "string"
+          },
+          "studyEpochDescription": {
+            "title": "Studyepochdescription",
+            "type": "string"
+          },
+          "studyEpochType": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "previousStudyEpochId": {
+            "title": "Previousstudyepochid",
+            "type": "string"
+          },
+          "nextStudyEpochId": {
+            "title": "Nextstudyepochid",
+            "type": "string"
+          },
+          "encounterIds": {
+            "title": "Encounterids",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": []
+          }
+        }
+      },
+      "StudyIdentifier": {
+        "title": "StudyIdentifier",
+        "required": [
+          "studyIdentifierId",
+          "studyIdentifier",
+          "studyIdentifierScope"
+        ],
+        "type": "object",
+        "properties": {
+          "studyIdentifierId": {
+            "title": "Studyidentifierid",
+            "type": "string"
+          },
+          "studyIdentifier": {
+            "title": "Studyidentifier",
+            "type": "string"
+          },
+          "studyIdentifierScope": {
+            "$ref": "#/components/schemas/Organisation"
+          }
+        }
+      },
+      "StudyProtocolVersion": {
+        "title": "StudyProtocolVersion",
+        "required": [
+          "studyProtocolVersionId",
+          "briefTitle",
+          "officialTitle",
+          "publicTitle",
+          "scientificTitle",
+          "protocolVersion",
+          "protocolEffectiveDate",
+          "protocolStatus"
+        ],
+        "type": "object",
+        "properties": {
+          "studyProtocolVersionId": {
+            "title": "Studyprotocolversionid",
+            "type": "string"
+          },
+          "briefTitle": {
+            "title": "Brieftitle",
+            "type": "string"
+          },
+          "officialTitle": {
+            "title": "Officialtitle",
+            "type": "string"
+          },
+          "publicTitle": {
+            "title": "Publictitle",
+            "type": "string"
+          },
+          "scientificTitle": {
+            "title": "Scientifictitle",
+            "type": "string"
+          },
+          "protocolVersion": {
+            "title": "Protocolversion",
+            "type": "string"
+          },
+          "protocolAmendment": {
+            "title": "Protocolamendment",
+            "type": "string"
+          },
+          "protocolEffectiveDate": {
+            "title": "Protocoleffectivedate",
+            "type": "string",
+            "format": "date"
+          },
+          "protocolStatus": {
+            "$ref": "#/components/schemas/Code"
+          }
+        }
+      },
+      "Timing": {
+        "title": "Timing",
+        "required": [
+          "timingId",
+          "timingType",
+          "timingValue",
+          "timingRelativeToFrom",
+          "timingWindow"
+        ],
+        "type": "object",
+        "properties": {
+          "timingId": {
+            "title": "Timingid",
+            "type": "string"
+          },
+          "timingType": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "timingValue": {
+            "title": "Timingvalue",
+            "type": "string"
+          },
+          "timingRelativeToFrom": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "timingWindow": {
+            "title": "Timingwindow",
+            "type": "string"
+          },
+          "relativeFromScheduledInstanceId": {
+            "title": "Relativefromscheduledinstanceid",
+            "type": "string"
+          },
+          "relativeToScheduledInstanceId": {
+            "title": "Relativetoscheduledinstanceid",
+            "type": "string"
+          }
+        }
+      },
+      "TransitionRule": {
+        "title": "TransitionRule",
+        "required": [
+          "transitionRuleId",
+          "transitionRuleDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "transitionRuleId": {
+            "title": "Transitionruleid",
+            "type": "string"
+          },
+          "transitionRuleDescription": {
+            "title": "Transitionruledescription",
+            "type": "string"
+          }
+        }
+      },
+      "ValidationError": {
+        "title": "ValidationError",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "loc": {
+            "title": "Location",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Production",
+      "description": "Routes that form the production specification."
+    }
+  ]
+}
