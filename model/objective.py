@@ -5,6 +5,6 @@ from .endpoint import Endpoint
 
 class Objective(ApiBaseModel):
   objectiveId: str
-  objectiveDescription: Union[str, None] = None
+  objectiveDescription: str
   objectiveLevel: Union[Code, None] = None
   objectiveEndpoints: List[Endpoint] = []

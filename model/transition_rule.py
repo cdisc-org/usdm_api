@@ -3,4 +3,4 @@ from .api_base_model import ApiBaseModel
 
 class TransitionRule(ApiBaseModel):
   transitionRuleId: str
-  transitionRuleDescription: Union[str, None] = None
+  transitionRuleDescription: str

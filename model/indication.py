@@ -4,5 +4,5 @@ from .code import Code
 
 class Indication(ApiBaseModel):
   indicationId: str
-  indicationDescription: Union[str, None] = None
+  indicationDescription: str
   codes: List[Code] = []

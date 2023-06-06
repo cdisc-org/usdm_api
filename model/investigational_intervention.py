@@ -4,5 +4,5 @@ from .code import Code
 
 class InvestigationalIntervention(ApiBaseModel):
   investigationalInterventionId: str
-  interventionDescription: Union[str, None] = None
+  interventionDescription: str
   codes: List[Code] = []

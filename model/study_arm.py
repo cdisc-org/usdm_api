@@ -7,5 +7,5 @@ class StudyArm(ApiBaseModel):
   studyArmName: str
   studyArmDescription: Union[str, None] = None
   studyArmType: Code
-  studyArmDataOriginDescription: Union[str, None] = None
+  studyArmDataOriginDescription: str
   studyArmDataOriginType: Code

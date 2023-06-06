@@ -4,6 +4,6 @@ from .code import Code
 
 class Endpoint(ApiBaseModel):
   endpointId: str
-  endpointDescription: Union[str, None] = None
-  endpointPurposeDescription: Union[str, None] = None
+  endpointDescription: str
+  endpointPurposeDescription: str
   endpointLevel: Union[Code, None] = None
