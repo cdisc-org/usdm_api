@@ -39,14 +39,14 @@
           },
           "400": {
             "description": "Bad Request",
-            "status_code": "string",
             "detail": "string",
+            "status_code": "string",
             "message": "string"
           },
           "401": {
             "description": "Unauthorized",
-            "status_code": "string",
             "detail": "string",
+            "status_code": "string",
             "message": "string"
           },
           "422": {
@@ -86,20 +86,22 @@
             "description": "Successful Response",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "$ref": "#/components/schemas/Study"
+                }
               }
             }
           },
           "400": {
             "description": "Bad Request",
-            "status_code": "string",
             "detail": "string",
+            "status_code": "string",
             "message": "string"
           },
           "401": {
             "description": "Unauthorized",
-            "status_code": "string",
             "detail": "string",
+            "status_code": "string",
             "message": "string"
           },
           "422": {
@@ -157,14 +159,14 @@
           },
           "400": {
             "description": "Bad Request",
-            "status_code": "string",
             "detail": "string",
+            "status_code": "string",
             "message": "string"
           },
           "401": {
             "description": "Unauthorized",
-            "status_code": "string",
             "detail": "string",
+            "status_code": "string",
             "message": "string"
           },
           "422": {
@@ -216,14 +218,14 @@
           },
           "400": {
             "description": "Bad Request",
-            "status_code": "string",
             "detail": "string",
+            "status_code": "string",
             "message": "string"
           },
           "401": {
             "description": "Unauthorized",
-            "status_code": "string",
             "detail": "string",
+            "status_code": "string",
             "message": "string"
           },
           "422": {
@@ -276,14 +278,14 @@
           },
           "400": {
             "description": "Bad Request",
-            "status_code": "string",
             "detail": "string",
+            "status_code": "string",
             "message": "string"
           },
           "401": {
             "description": "Unauthorized",
-            "status_code": "string",
             "detail": "string",
+            "status_code": "string",
             "message": "string"
           },
           "422": {
