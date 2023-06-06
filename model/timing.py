@@ -6,10 +6,10 @@ class Timing(ApiBaseModel):
   timingId: str
   timingType: Code
   timingValue: str
+  timingDescription: str
   timingRelativeToFrom: Code
-  timingWindow: Union[str, None] = None
   relativeFromScheduledInstanceId: Union[str, None] = None
   relativeToScheduledInstanceId: Union[str, None] = None
-  timingDescription: str
-  timingWindowLower: str
-  timingWindowUpper: str
+  timingWindowLower: Union[str, None] = None
+  timingWindowUpper: Union[str, None] = None
+  timingWindow: Union[str, None] = None
