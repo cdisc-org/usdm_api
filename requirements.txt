@@ -1,6 +1,2 @@
 fastapi
-flask
-deta
-pyyaml
-pandas
 uvicorn
