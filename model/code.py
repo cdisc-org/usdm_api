@@ -6,8 +6,3 @@ class Code(ApiBaseModel):
   codeSystem: str
   codeSystemVersion: str
   decode: str
-  
-  @classmethod
-  def global_reuse(cls):
-    return True
-

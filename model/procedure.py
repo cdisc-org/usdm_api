@@ -10,7 +10,3 @@ class Procedure(ApiBaseModel):
   procedureCode: Code
   procedureIsConditional: bool
   procedureIsConditionalReason: Union[str, None] = None
-  
-  @classmethod
-  def scope_reuse(cls):
-    return True

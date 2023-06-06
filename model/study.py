@@ -19,19 +19,3 @@ class Study(ApiBaseModel):
   studyDesigns: List[StudyDesign] = []
   studyRationale: str
   studyAcronym: str
-
-  @classmethod
-  def scope_reuse(cls):
-    return False
-  
-  @classmethod
-  def search(cls, store, identifier):
-    identifiers = store.get_by_klass("StudyIdentifier")
-    for item in identifiers:
-      result = store.get("", item['uuid'])
-      if result['studyIdentifier'] == identifier:
-        studies = store.get_by_klass("Study")
-        for study in studies:
-          if result['uuid'] in study['studyIdentifiers']:
-            return study['uuid']
-    return None
