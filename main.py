@@ -1,17 +1,6 @@
 from fastapi import FastAPI, HTTPException, status
 from model.study import *
 from uuid import UUID, uuid4
-# from model.study_identifier import *
-# from model.organisation import *
-# from model.study_protocol_version import *
-# from model.code import *
-# from model.ct import *
-# from model.study_arm import *
-# from model.study_cell import *
-# from model.procedure import *
-# from model.activity import *
-# from model.transition_rule import *
-# from model.encounter import *
 
 VERSION = "2.0 Provisional (0.34)"
 SYSTEM_NAME = "Simple API for DDF"
