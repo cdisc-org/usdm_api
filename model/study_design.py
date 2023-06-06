@@ -39,13 +39,13 @@ class StudyDesign(ApiBaseModel):
   encounters: List[Encounter] = []
   activities: List[Activity] = []
   studyDesignRationale: str
-  studyDesignBlindingScheme: AliasCode = None
+  studyDesignBlindingScheme: Union[AliasCode, None] = None
   biomedicalConcepts: List[BiomedicalConcept] = []
   bcCategories: List[BiomedicalConceptCategory] = []
   bcSurrogates: List[BiomedicalConceptSurrogate] = []
-  studyArms: List[StudyArm]
-  studyEpochs: List[StudyEpoch]
-  studyElements: List[StudyElement]
+  studyArms: List[StudyArm] = []
+  studyEpochs: List[StudyEpoch] = []
+  studyElements: List[StudyElement] = []
 
   @classmethod
   def search(cls, store, uuid):
