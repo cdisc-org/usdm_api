@@ -14,7 +14,7 @@ from model.activity import *
 from model.transition_rule import *
 from model.encounter import *
 
-VERSION = "2.0 Provisional (0.32)"
+VERSION = "2.0 Provisional (0.34)"
 SYSTEM_NAME = "Simple API for DDF"
 
 tags_metadata = [
