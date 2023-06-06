@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Union
 from .api_base_model import ApiBaseModel
 from .alias_code import AliasCode
 
@@ -8,4 +8,4 @@ class BiomedicalConceptCategory(ApiBaseModel):
   bcCategoryName: str
   bcCategoryDescription: str
   bcCategoryMemberIds: List[str] = []
-  bcCategoryCode: AliasCode
+  bcCategoryCode: Union[AliasCode, None] = None
