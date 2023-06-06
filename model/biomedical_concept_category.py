@@ -6,6 +6,6 @@ class BiomedicalConceptCategory(ApiBaseModel):
   biomedicalConceptCategoryId: str
   bcCategoryChildIds: List[str] = []
   bcCategoryName: str
-  bcCategoryDescription: str
+  bcCategoryDescription: Union[str, None] = None
   bcCategoryMemberIds: List[str] = []
   bcCategoryCode: Union[AliasCode, None] = None

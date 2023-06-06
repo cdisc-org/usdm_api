@@ -5,7 +5,7 @@ from .procedure import Procedure
 class Activity(ApiBaseModel):
   activityId: str
   activityName: str
-  activityDescription: str
+  activityDescription: Union[str, None] = None
   previousActivityId: Union[str, None] = None
   nextActivityId: Union[str, None] = None
   definedProcedures: List[Procedure] = []

@@ -5,5 +5,5 @@ from uuid import UUID
 
 class Workflow(ApiBaseModel):
   workflowId: str
-  workflowDescription: str
+  workflowDescription: Union[str, None] = None
   workflowItems: List[WorkflowItem] = []

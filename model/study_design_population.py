@@ -1,12 +1,11 @@
+from typing import List, Union
 from pydantic import NonNegativeInt
-from typing import List
-
 from .api_base_model import ApiBaseModel
 from .code import Code
 
 class StudyDesignPopulation(ApiBaseModel):
   studyDesignPopulationId: str
-  populationDescription: str
+  populationDescription: Union[str, None] = None
   plannedNumberOfParticipants: NonNegativeInt
   plannedMaximumAgeOfParticipants: str  
   plannedMinimumAgeOfParticipants: str

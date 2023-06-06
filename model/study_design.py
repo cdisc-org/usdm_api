@@ -24,7 +24,7 @@ import pandas as pd
 class StudyDesign(ApiBaseModel):
   studyDesignId: str
   studyDesignName: str
-  studyDesignDescription: str
+  studyDesignDescription: Union[str, None] = None
   trialIntentTypes: List[Code] = []
   trialType: List[Code] = []
   interventionModel: Code

@@ -1,5 +1,6 @@
+from typing import Union
 from .api_base_model import ApiBaseModel
 
 class AnalysisPopulation(ApiBaseModel):
   analysisPopulationId: str
-  populationDescription: str
+  populationDescription: Union[str, None] = None

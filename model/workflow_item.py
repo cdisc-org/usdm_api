@@ -3,7 +3,7 @@ from .api_base_model import ApiBaseModel
 
 class WorkflowItem(ApiBaseModel):
   workflowItemId: str
-  workflowItemDescription: str
+  workflowItemDescription: Union[str, None] = None
   previousWorkflowItemId: Union[str, None] = None
   nextWorkflowItemId: Union[str, None] = None
   workflowItemEncounterId: Union[str, None] = None
