@@ -1,4 +1,3 @@
-from enum import Enum
 from typing import List, Dict, Union, Literal
 from .api_base_model import ApiBaseModel
 from .timing import Timing
@@ -9,12 +8,12 @@ class ScheduledInstance(ApiBaseModel):
     scheduleTimelineExitId: Union[str, None] = None
     scheduledInstanceTimings: List[Timing] = []
     scheduledInstanceTimelineId: Union[str, None] = None
-    defaultConditionId: str
-    epochId: str
+    defaultConditionId: Union[str, None] = None
+    epochId: Union[str, None] = None
 
 class ScheduledActivityInstance(ScheduledInstance):
     activityIds: List[str] = []
-    scheduledActivityInstanceEncounterId: str
+    scheduledActivityInstanceEncounterId: Union[str, None] = None
 
 class ScheduledDecisionInstance(ScheduledInstance):
     conditionAssignments: Dict[str, str] = []
