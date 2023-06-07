@@ -3,7 +3,7 @@
   "info": {
     "title": "Simple API for DDF",
     "description": "A simple TransCelerate Digital Data Flow (DDF) Study Definitions Repository API.",
-    "version": "2.0 Provisional (0.34)"
+    "version": "1.14 Provisional (0.34)"
   },
   "paths": {
     "/v2/studyDefinitions": {
@@ -39,14 +39,14 @@
           },
           "400": {
             "description": "Bad Request",
-            "detail": "string",
             "status_code": "string",
+            "detail": "string",
             "message": "string"
           },
           "401": {
             "description": "Unauthorized",
-            "detail": "string",
             "status_code": "string",
+            "detail": "string",
             "message": "string"
           },
           "422": {
@@ -94,14 +94,14 @@
           },
           "400": {
             "description": "Bad Request",
-            "detail": "string",
             "status_code": "string",
+            "detail": "string",
             "message": "string"
           },
           "401": {
             "description": "Unauthorized",
-            "detail": "string",
             "status_code": "string",
+            "detail": "string",
             "message": "string"
           },
           "422": {
@@ -159,14 +159,14 @@
           },
           "400": {
             "description": "Bad Request",
-            "detail": "string",
             "status_code": "string",
+            "detail": "string",
             "message": "string"
           },
           "401": {
             "description": "Unauthorized",
-            "detail": "string",
             "status_code": "string",
+            "detail": "string",
             "message": "string"
           },
           "422": {
@@ -218,14 +218,14 @@
           },
           "400": {
             "description": "Bad Request",
-            "detail": "string",
             "status_code": "string",
+            "detail": "string",
             "message": "string"
           },
           "401": {
             "description": "Unauthorized",
-            "detail": "string",
             "status_code": "string",
+            "detail": "string",
             "message": "string"
           },
           "422": {
@@ -278,14 +278,14 @@
           },
           "400": {
             "description": "Bad Request",
-            "detail": "string",
             "status_code": "string",
+            "detail": "string",
             "message": "string"
           },
           "401": {
             "description": "Unauthorized",
-            "detail": "string",
             "status_code": "string",
+            "detail": "string",
             "message": "string"
           },
           "422": {
@@ -1063,9 +1063,7 @@
         "title": "ScheduledInstance",
         "required": [
           "scheduledInstanceId",
-          "scheduledInstanceType",
-          "defaultConditionId",
-          "epochId"
+          "scheduledInstanceType"
         ],
         "type": "object",
         "properties": {
@@ -1426,6 +1424,7 @@
         "title": "StudyDesignPopulation",
         "required": [
           "studyDesignPopulationId",
+          "populationDescription",
           "plannedNumberOfParticipants",
           "plannedMaximumAgeOfParticipants",
           "plannedMinimumAgeOfParticipants"
