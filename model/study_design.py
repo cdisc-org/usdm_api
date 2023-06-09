@@ -26,7 +26,7 @@ class StudyDesign(ApiBaseModel):
   trialIntentTypes: List[Code] = []
   trialType: List[Code] = []
   interventionModel: Code
-  studyCells: List[StudyCell] = []
+  studyCells: List[StudyCell]
   studyIndications: List[Indication] = []
   studyInvestigationalInterventions: List[InvestigationalIntervention] = []
   studyPopulations: List[StudyDesignPopulation] = []
@@ -41,6 +41,6 @@ class StudyDesign(ApiBaseModel):
   biomedicalConcepts: List[BiomedicalConcept] = []
   bcCategories: List[BiomedicalConceptCategory] = []
   bcSurrogates: List[BiomedicalConceptSurrogate] = []
-  studyArms: List[StudyArm] = []
-  studyEpochs: List[StudyEpoch] = []
+  studyArms: List[StudyArm]
+  studyEpochs: List[StudyEpoch]
   studyElements: List[StudyElement] = []
