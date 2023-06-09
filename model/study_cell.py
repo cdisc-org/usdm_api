@@ -6,4 +6,4 @@ class StudyCell(ApiBaseModel):
   studyCellId: str
   studyArmId: str
   studyEpochId: str
-  studyElements: List[StudyElement] = []
+  studyElementIds: List[str] = []
