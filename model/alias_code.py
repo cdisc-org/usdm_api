@@ -1,10 +1,9 @@
-from typing import List, Union
+from pydantic import constr
+from typing import List
 from .api_base_model import ApiBaseModel
 from .code import Code
 
-from uuid import UUID
-
 class AliasCode(ApiBaseModel):
-  aliasCodeId: str
+  id: str = constr(min_length=1)
   standardCode: Code
   standardCodeAliases: List[Code] = []

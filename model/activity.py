@@ -1,17 +1,23 @@
+from pydantic import constr
 from typing import List, Union
 from .api_base_model import ApiBaseModel
+from .biomedical_concept import BiomedicalConcept
+from .biomedical_concept_category import BiomedicalConceptCategory
+from .biomedical_concept_surrogate import BiomedicalConceptSurrogate
 from .procedure import Procedure
+from .schedule_timeline import ScheduleTimeline
+
 
 class Activity(ApiBaseModel):
-  activityId: str
-  activityName: str
-  activityDescription: Union[str, None] = None
-  previousActivityId: Union[str, None] = None
-  nextActivityId: Union[str, None] = None
+  id: str = constr(min_length=1)
+  name: str = constr(min_length=1)
+  description: str = constr()
+  previousActivity: Union["Activity", None] = None
+  nextActivity: Union["Activity", None] = None
   definedProcedures: List[Procedure] = []
   activityIsConditional: bool
   activityIsConditionalReason: Union[str, None] = None
-  biomedicalConceptIds: List[str] = []
-  bcCategoryIds: List[str] = []
-  bcSurrogateIds: List[str] = []
-  activityTimelineId: Union[str, None] = None
+  biomedicalConcepts: List[BiomedicalConcept] = []
+  bcCategories: List[BiomedicalConceptCategory] = []
+  bcSurrogates: List[BiomedicalConceptSurrogate] = []
+  activityTimeline: Union[ScheduleTimeline, None] = None

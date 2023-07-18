@@ -1,8 +1,8 @@
-from typing import Union
+from pydantic import constr
 from .api_base_model import ApiBaseModel
 
 class IntercurrentEvent(ApiBaseModel):
-  intercurrentEventId: str
-  intercurrentEventName: str
-  intercurrentEventDescription: Union[str, None] = None
+  id: str = constr(min_length=1)
+  name: str = constr(min_length=1)
+  description: str = constr()
   intercurrentEventStrategy: str

@@ -1,8 +1,8 @@
-from typing import List, Union
+from pydantic import constr
 from .api_base_model import ApiBaseModel
 
 class BiomedicalConceptSurrogate(ApiBaseModel):
-  bcSurrogateId: str
-  bcSurrogateName: str
-  bcSurrogateDescription: Union[str, None] = None
+  id: str = constr(min_length=1)
+  name: str = constr(min_length=1)
+  description: str = constr()
   bcSurrogateReference: str
