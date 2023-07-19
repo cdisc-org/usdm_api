@@ -7,7 +7,7 @@ class BiomedicalConceptCategory(ApiBaseModel):
   id: str = constr(min_length=1)
   name: str = constr(min_length=1)
   description: str = constr()
-  bcCategoryChildren: List["BiomedicalConceptCategory"] = []
+  bcCategoryChildIds: List[str] = []
   bcCategoryDescription: Union[str, None] = None
-  bcCategoryMembers: List["BiomedicalConceptCategory"] = []
+  bcCategoryMemberIds: List[str] = []
   bcCategoryCode: Union[AliasCode, None] = None

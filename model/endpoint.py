@@ -8,3 +8,4 @@ class Endpoint(ApiBaseModel):
   description: str = constr()
   endpointPurposeDescription: str
   endpointLevel: Union[Code, None] = None
+  

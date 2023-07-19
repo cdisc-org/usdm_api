@@ -8,5 +8,5 @@ class StudyEpoch(ApiBaseModel):
   name: str = constr(min_length=1)
   description: Union[str, None] = constr()
   studyEpochType: Code
-  nextStudyEpoch: "StudyEpoch" = None
-  previousStudyEpoch: "StudyEpoch" = None
+  nextStudyEpoch: Union["StudyEpoch", None] = None
+  previousStudyEpoch: Union["StudyEpoch", None] = None

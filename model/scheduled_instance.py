@@ -18,7 +18,7 @@ class ScheduledInstance(ApiBaseModel):
   epoch: Union[StudyEpoch, None] = None
 
 class ScheduledActivityInstance(ScheduledInstance):
-  activity: List[Activity] = []
+  activityIds: List[str] = []
   scheduledActivityInstanceEncounter: Union[Encounter, None] = None
 
 class ScheduledDecisionInstance(ScheduledInstance):
