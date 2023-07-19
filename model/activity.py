@@ -2,7 +2,6 @@ from pydantic import constr
 from typing import List, Union
 from .api_base_model import ApiBaseModel
 from .procedure import Procedure
-from .schedule_timeline import ScheduleTimeline
 
 
 class Activity(ApiBaseModel):
@@ -17,4 +16,4 @@ class Activity(ApiBaseModel):
   biomedicalConceptIds: List[str] = []
   bcCategoryIds: List[str] = []
   bcSurrogateIds: List[str] = []
-  activityTimeline: Union[ScheduleTimeline, None] = None
+  activityTimelineId: Union[str, None] = None

@@ -10,6 +10,6 @@ class ScheduleTimeline(ApiBaseModel):
   name: str = constr(min_length=1)
   description: str = constr()
   entryCondition: str
-  scheduleTimelineEntry: Union[ScheduledInstance, None] = None
+  scheduleTimelineEntryId: Union[str, None] = None
   scheduleTimelineExits: List[ScheduleTimelineExit] = []
   scheduleTimelineInstances: List[ScheduledInstance] = []
