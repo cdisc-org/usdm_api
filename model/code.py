@@ -1,8 +1,6 @@
-from pydantic import constr
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithId
 
-class Code(ApiBaseModel):
-  id: str = constr(min_length=1)
+class Code(ApiBaseModelWithId):
   code: str
   codeSystem: str
   codeSystemVersion: str

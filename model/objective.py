@@ -1,11 +1,8 @@
-from pydantic import constr
 from typing import List, Union
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithIdAndDesc
 from .code import Code
 from .endpoint import Endpoint
 
-class Objective(ApiBaseModel):
-  id: str = constr(min_length=1)
-  description: str = constr()
+class Objective(ApiBaseModelWithIdAndDesc):
   objectiveLevel: Union[Code, None] = None
   objectiveEndpoints: List[Endpoint] = []

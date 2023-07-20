@@ -1,11 +1,9 @@
-from pydantic import constr
 from typing import List, Dict, Union, Literal
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithId
 from .encounter import Encounter
 from .timing import Timing
 
-class ScheduledInstance(ApiBaseModel):
-  id: str = constr(min_length=1)
+class ScheduledInstance(ApiBaseModelWithId):
   scheduledInstanceType: Literal['ACTIVITY', 'DECISION']
   scheduledInstanceTimings: List[Timing] = []
   scheduledInstanceTimelineId: Union[str, None] = None

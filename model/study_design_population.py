@@ -1,11 +1,9 @@
 from typing import List
-from pydantic import constr, NonNegativeInt
-from .api_base_model import ApiBaseModel
+from pydantic import NonNegativeInt
+from .api_base_model import ApiBaseModelWithIdAndDesc
 from .code import Code
 
-class StudyDesignPopulation(ApiBaseModel):
-  id: str = constr(min_length=1)
-  description: str = constr()
+class StudyDesignPopulation(ApiBaseModelWithIdAndDesc):
   plannedNumberOfParticipants: NonNegativeInt
   plannedMaximumAgeOfParticipants: str  
   plannedMinimumAgeOfParticipants: str

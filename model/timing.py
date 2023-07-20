@@ -1,10 +1,8 @@
-from pydantic import constr
 from typing import Union
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithId
 from .code import Code
 
-class Timing(ApiBaseModel):
-  id: str = constr(min_length=1)
+class Timing(ApiBaseModelWithId):
   timingType: Code
   timingValue: str
   timingDescription: Union[str, None] = None

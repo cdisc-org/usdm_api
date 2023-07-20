@@ -1,12 +1,8 @@
-from pydantic import constr
 from typing import List, Union
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithIdNameAndDesc
 from .alias_code import AliasCode
 
-class BiomedicalConceptCategory(ApiBaseModel):
-  id: str = constr(min_length=1)
-  name: str = constr(min_length=1)
-  description: str = constr()
+class BiomedicalConceptCategory(ApiBaseModelWithIdNameAndDesc):
   bcCategoryChildIds: List[str] = []
   bcCategoryDescription: Union[str, None] = None
   bcCategoryMemberIds: List[str] = []

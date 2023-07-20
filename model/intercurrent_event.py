@@ -1,8 +1,4 @@
-from pydantic import constr
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithIdNameAndDesc
 
-class IntercurrentEvent(ApiBaseModel):
-  id: str = constr(min_length=1)
-  name: str = constr(min_length=1)
-  description: str = constr()
+class IntercurrentEvent(ApiBaseModelWithIdNameAndDesc):
   intercurrentEventStrategy: str

@@ -1,11 +1,9 @@
 from datetime import date
-from pydantic import constr
 from typing import Union
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithId
 from .code import Code
 
-class StudyProtocolVersion(ApiBaseModel):
-  id: str = constr(min_length=1)
+class StudyProtocolVersion(ApiBaseModelWithId):
   briefTitle: str
   officialTitle: str
   publicTitle: str

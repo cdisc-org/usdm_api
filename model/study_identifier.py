@@ -1,8 +1,6 @@
-from pydantic import constr
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithId
 from .organisation import Organisation
 
-class StudyIdentifier(ApiBaseModel):
-  id: str = constr(min_length=1)
+class StudyIdentifier(ApiBaseModelWithId):
   studyIdentifier: str
   studyIdentifierScope: Organisation

@@ -1,9 +1,6 @@
-from pydantic import constr
 from typing import List
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithIdAndDesc
 from .code import Code
 
-class Indication(ApiBaseModel):
-  id: str = constr(min_length=1)
-  description: str = constr()
+class Indication(ApiBaseModelWithIdAndDesc):
   codes: List[Code] = []

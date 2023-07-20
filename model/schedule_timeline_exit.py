@@ -1,5 +1,4 @@
-from pydantic import constr
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithId
 
-class ScheduleTimelineExit(ApiBaseModel):
-  id: str = constr(min_length=1)\
+class ScheduleTimelineExit(ApiBaseModelWithId):
+  pass

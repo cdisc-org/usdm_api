@@ -1,11 +1,7 @@
-from pydantic import constr
 from typing import Union
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithIdAndDesc
 from .code import Code
 
-class Endpoint(ApiBaseModel):
-  id: str = constr(min_length=1)
-  description: str = constr()
+class Endpoint(ApiBaseModelWithIdAndDesc):
   endpointPurposeDescription: str
   endpointLevel: Union[Code, None] = None
-  

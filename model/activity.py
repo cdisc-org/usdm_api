@@ -1,13 +1,8 @@
-from pydantic import constr
 from typing import List, Union
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithIdNameAndDesc
 from .procedure import Procedure
 
-
-class Activity(ApiBaseModel):
-  id: str = constr(min_length=1)
-  name: str = constr(min_length=1)
-  description: str = constr()
+class Activity(ApiBaseModelWithIdNameAndDesc):
   previousActivityId: Union[str, None] = None
   nextActivityId: Union[str, None] = None
   definedProcedures: List[Procedure] = []

@@ -1,9 +1,7 @@
-from pydantic import constr
 from typing import List
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithId
 
-class StudyCell(ApiBaseModel):
-  id: str = constr(min_length=1)
+class StudyCell(ApiBaseModelWithId):
   studyArmId: str
   studyEpochId: str
   studyElementIds: List[str] = []

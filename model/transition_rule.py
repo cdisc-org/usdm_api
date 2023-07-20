@@ -1,6 +1,4 @@
-from pydantic import constr
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithIdAndDesc
 
-class TransitionRule(ApiBaseModel):
-  id: str = constr(min_length=1)
-  description: str = constr()
+class TransitionRule(ApiBaseModelWithIdAndDesc):
+    pass

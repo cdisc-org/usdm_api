@@ -1,12 +1,8 @@
-from pydantic import constr
 from typing import Union
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithIdNameAndDesc
 from .code import Code
 
-class Procedure(ApiBaseModel):
-  id: str = constr(min_length=1)
-  name: str = constr(min_length=1)
-  description: str = constr()
+class Procedure(ApiBaseModelWithIdNameAndDesc):
   procedureDescription: Union[str, None] = None
   procedureCode: Code
   procedureIsConditional: bool

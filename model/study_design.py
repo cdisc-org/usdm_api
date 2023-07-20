@@ -1,7 +1,6 @@
-from pydantic import constr
 from typing import List, Union
 from .activity import Activity
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithIdNameAndDesc
 from .alias_code import AliasCode
 from .code import Code
 from .encounter import Encounter
@@ -16,10 +15,7 @@ from .objective import Objective
 from .schedule_timeline import ScheduleTimeline
 from .estimand import Estimand
 
-class StudyDesign(ApiBaseModel):
-  id: str = constr(min_length=1)
-  name: str = constr(min_length=1)
-  description: str = constr()
+class StudyDesign(ApiBaseModelWithIdNameAndDesc):
   trialIntentTypes: List[Code] = []
   trialType: List[Code] = []
   interventionModel: Code
