@@ -1,8 +1,7 @@
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithId
 from .code import Code
 
-class Address(ApiBaseModel):
-  addressId: str
+class Address(ApiBaseModelWithId):
   text: str
   line: str
   city: str
