@@ -2,6 +2,9 @@ from typing import List, Union
 from .activity import Activity
 from .api_base_model import ApiBaseModelWithIdNameAndDesc
 from .alias_code import AliasCode
+from .biomedical_concept import BiomedicalConcept
+from .biomedical_concept_category import BiomedicalConceptCategory
+from .biomedical_concept_surrogate import BiomedicalConceptSurrogate
 from .code import Code
 from .encounter import Encounter
 from .study_cell import StudyCell
@@ -31,6 +34,9 @@ class StudyDesign(ApiBaseModelWithIdNameAndDesc):
   activities: List[Activity] = []
   studyDesignRationale: str
   studyDesignBlindingScheme: Union[AliasCode, None] = None
+  biomedicalConcepts: List[BiomedicalConcept] = []
+  bcCategories: List[BiomedicalConceptCategory] = []
+  bcSurrogates: List[BiomedicalConceptSurrogate] = []
   studyArms: List[StudyArm]
   studyEpochs: List[StudyEpoch]
   studyElements: List[StudyElement] = []
