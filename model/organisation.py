@@ -5,8 +5,8 @@ from .code import Code
 from .address import Address
 
 class Organisation(ApiBaseModelWithId):
-  organisationName: str = constr(min_length=1)
   organisationIdentifierScheme: str
   organisationIdentifier: str
+  organisationName: str
   organisationType: Code
   organizationLegalAddress: Union[Address, None] = None
