@@ -11,3 +11,4 @@ class Encounter(ApiBaseModelWithIdNameAndDesc):
   encounterContactModes: List[Code] = []
   transitionStartRule: Union[TransitionRule, None] = None
   transitionEndRule: Union[TransitionRule, None] = None
+  encounterScheduledAtTimingId: Union[str, None] = None
