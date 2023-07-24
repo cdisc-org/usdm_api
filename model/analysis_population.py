@@ -1,5 +1,4 @@
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithIdAndDesc
 
-class AnalysisPopulation(ApiBaseModel):
-  analysisPopulationId: str
-  populationDescription: str
+class AnalysisPopulation(ApiBaseModelWithIdAndDesc):
+  pass

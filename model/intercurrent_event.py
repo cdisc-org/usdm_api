@@ -1,8 +1,4 @@
-from typing import Union
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithIdNameAndDesc
 
-class IntercurrentEvent(ApiBaseModel):
-  intercurrentEventId: str
-  intercurrentEventName: str
-  intercurrentEventDescription: Union[str, None] = None
+class IntercurrentEvent(ApiBaseModelWithIdNameAndDesc):
   intercurrentEventStrategy: str

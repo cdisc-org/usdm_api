@@ -1,11 +1,8 @@
 from typing import Union
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithIdNameAndDesc
 from .code import Code
 
-class StudyEpoch(ApiBaseModel):
-  studyEpochId: str
-  studyEpochName: str
-  studyEpochDescription: Union[str, None] = None
+class StudyEpoch(ApiBaseModelWithIdNameAndDesc):
   studyEpochType: Code
   previousStudyEpochId: Union[str, None] = None
   nextStudyEpochId: Union[str, None] = None

@@ -1,8 +1,6 @@
-from typing import List, Union
-from .api_base_model import ApiBaseModel
+from typing import List
+from .api_base_model import ApiBaseModelWithIdAndDesc
 from .code import Code
 
-class InvestigationalIntervention(ApiBaseModel):
-  investigationalInterventionId: str
-  interventionDescription: str
+class InvestigationalIntervention(ApiBaseModelWithIdAndDesc):
   codes: List[Code] = []

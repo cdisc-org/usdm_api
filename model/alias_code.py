@@ -1,10 +1,7 @@
-from typing import List, Union
-from .api_base_model import ApiBaseModel
+from typing import List
+from .api_base_model import ApiBaseModelWithId
 from .code import Code
 
-from uuid import UUID
-
-class AliasCode(ApiBaseModel):
-  aliasCodeId: str
+class AliasCode(ApiBaseModelWithId):
   standardCode: Code
   standardCodeAliases: List[Code] = []

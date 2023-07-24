@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, status
 from model.study import *
 from uuid import UUID, uuid4
 
-VERSION = "1.14.1 Provisional (0.35)"
+VERSION = "1.15 Provisional (0.36)"
 SYSTEM_NAME = "Simple API for DDF"
 
 tags_metadata = [

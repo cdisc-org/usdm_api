@@ -1,9 +1,8 @@
 from typing import Union
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithId
 from .code import Code
 
-class Timing(ApiBaseModel):
-  timingId: str
+class Timing(ApiBaseModelWithId):
   timingType: Code
   timingValue: str
   timingDescription: Union[str, None] = None

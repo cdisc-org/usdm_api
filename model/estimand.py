@@ -1,15 +1,11 @@
 from typing import List, Union
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithId
 from .analysis_population import AnalysisPopulation
-from .investigational_intervention import InvestigationalIntervention
-from .endpoint import Endpoint
 from .intercurrent_event import IntercurrentEvent
-from uuid import UUID
 
-class Estimand(ApiBaseModel):
-  estimandId: str
+class Estimand(ApiBaseModelWithId):
   summaryMeasure: str
   analysisPopulation: AnalysisPopulation
-  treatment: Union[str, None] = None
-  variableOfInterest: Union[str, None] = None
+  treatmentId: Union[str, None] = None
+  variableOfInterestId: Union[str, None] = None
   intercurrentEvents: List[IntercurrentEvent] = []

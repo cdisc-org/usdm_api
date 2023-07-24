@@ -1,9 +1,6 @@
-from typing import Union
-from uuid import UUID
-from .api_base_model import ApiBaseModel
+from .api_base_model import ApiBaseModelWithId
 from .organisation import Organisation
 
-class StudyIdentifier(ApiBaseModel):
-  studyIdentifierId: str
+class StudyIdentifier(ApiBaseModelWithId):
   studyIdentifier: str
   studyIdentifierScope: Organisation
