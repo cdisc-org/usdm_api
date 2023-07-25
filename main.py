@@ -1,8 +1,9 @@
 from fastapi import FastAPI, HTTPException, status
 from model.study import *
+from model.wrapper import Wrapper
 from uuid import UUID, uuid4
 
-VERSION = "1.15 Provisional (0.36)"
+VERSION = "2.1 Provisional (0.36)"
 SYSTEM_NAME = "Simple API for DDF"
 
 tags_metadata = [
@@ -89,7 +90,7 @@ async def update_study(studyId: str, study: Study):
   tags=["Production"], 
   summary=annotations['study_definition']['get_uuid']['summary'],
   description=annotations['study_definition']['get_uuid']['description'],
-  response_model=Study,
+  response_model=Wrapper,
   responses=standard_responses)
 async def read_full_study(studyId: str):
   return {}
@@ -98,7 +99,7 @@ async def read_full_study(studyId: str):
   tags=["Production"], 
   summary="Returns the study history",
   description="Returns the history for the specified study",
-  response_model=List[Study],
+  response_model=List[Wrapper],
   responses=standard_responses)
 async def read_study_history(studyId: str):
   return []
