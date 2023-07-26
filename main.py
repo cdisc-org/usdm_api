@@ -66,27 +66,27 @@ app = FastAPI(
   openapi_tags = tags_metadata
 )
 
-@app.post("/v2/studyDefinitions", 
+@app.post("/v3/studyDefinitions", 
   tags=["Production"], 
   summary=annotations['study_definition']['post']['summary'],
   description=annotations['study_definition']['post']['description'], 
   status_code=status.HTTP_201_CREATED,
   response_model=UUID,
   responses=standard_responses)
-async def create_study(study: Study):
+async def create_study(study: Wrapper):
   return str(uuid4())
 
-@app.put("/v2/studyDefinitions/{studyId}", 
+@app.put("/v3/studyDefinitions/{studyId}", 
   tags=["Production"], 
   summary=annotations['study_definition']['put']['summary'],
   description=annotations['study_definition']['put']['description'], 
   status_code=status.HTTP_200_OK,
   response_model=UUID,
   responses=standard_responses)
-async def update_study(studyId: str, study: Study):
+async def update_study(studyId: str, study: Wrapper):
   return studyId
 
-@app.get("/v2/studyDefinitions/{studyId}", 
+@app.get("/v3/studyDefinitions/{studyId}", 
   tags=["Production"], 
   summary=annotations['study_definition']['get_uuid']['summary'],
   description=annotations['study_definition']['get_uuid']['description'],
@@ -95,7 +95,7 @@ async def update_study(studyId: str, study: Study):
 async def read_full_study(studyId: str):
   return {}
 
-@app.get("/v2/studyDefinitions/{studyId}/history", 
+@app.get("/v3/studyDefinitions/{studyId}/history", 
   tags=["Production"], 
   summary="Returns the study history",
   description="Returns the history for the specified study",
@@ -104,7 +104,7 @@ async def read_full_study(studyId: str):
 async def read_study_history(studyId: str):
   return []
 
-@app.get("/v2/studyDesigns", 
+@app.get("/v3/studyDesigns", 
   tags=['Production'],
   summary='Study designs for a study',
   description='Returns all the study designs for a specified study.',
