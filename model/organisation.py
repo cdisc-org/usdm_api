@@ -1,11 +1,10 @@
 from typing import Union
-from .api_base_model import ApiBaseModelWithId
+from .api_base_model import ApiBaseModelWithIdAndName
 from .code import Code
 from .address import Address
 
-class Organisation(ApiBaseModelWithId):
+class Organisation(ApiBaseModelWithIdAndName):
   organisationIdentifierScheme: str
   organisationIdentifier: str
-  organisationName: str
   organisationType: Code
   organizationLegalAddress: Union[Address, None] = None
