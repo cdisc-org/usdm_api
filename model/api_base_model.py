@@ -1,16 +1,16 @@
-from pydantic import BaseModel, constr
+from pydantic import BaseModel, Field
 
 class ApiBaseModel(BaseModel):
   pass
 
 class ApiBaseModelWithId(ApiBaseModel):
-  id: str = constr(min_length=1)
+  id: str = Field(min_length=1)
 
 class ApiBaseModelWithIdAndName(ApiBaseModelWithId):
-  name: str = constr(min_length=1)
+  name: str = Field(min_length=1)
 
 class ApiBaseModelWithIdNameAndDesc(ApiBaseModelWithIdAndName):
-  description: str = constr()
+  description: str = Field()
 
 class ApiBaseModelWithIdAndDesc(ApiBaseModelWithId):
-  description: str = constr()
+  description: str = Field()
