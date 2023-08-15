@@ -5,4 +5,4 @@ class Content(ApiBaseModelWithIdAndName):
   sectionNumber: str
   sectionTitle: str
   text: str
-  contentChildren: List["Content"]
+  contentChildrenIds: List[str] = []
