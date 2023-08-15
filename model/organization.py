@@ -3,8 +3,8 @@ from .api_base_model import ApiBaseModelWithIdAndName
 from .code import Code
 from .address import Address
 
-class Organisation(ApiBaseModelWithIdAndName):
-  organisationIdentifierScheme: str
-  organisationIdentifier: str
-  organisationType: Code
+class Organization(ApiBaseModelWithIdAndName):
+  organizationIdentifierScheme: str
+  organizationIdentifier: str
+  organizationType: Code
   organizationLegalAddress: Union[Address, None] = None
