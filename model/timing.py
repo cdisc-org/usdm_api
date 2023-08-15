@@ -11,4 +11,4 @@ class Timing(ApiBaseModelWithIdNameAndDesc):
   timingWindowLower: Union[str, None] = None
   timingWindowUpper: Union[str, None] = None
   timingWindow: Union[str, None] = None
-  label: str
+  label: str = None
