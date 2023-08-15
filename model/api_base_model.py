@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, constr
 
 class ApiBaseModel(BaseModel):
   pass
@@ -10,7 +10,7 @@ class ApiBaseModelWithIdAndName(ApiBaseModelWithId):
   name: str = Field(min_length=1)
 
 class ApiBaseModelWithIdNameAndDesc(ApiBaseModelWithIdAndName):
-  description: str = Field()
+  description: str = constr()
 
 class ApiBaseModelWithIdAndDesc(ApiBaseModelWithId):
-  description: str = Field()
+  description: str = constr()
