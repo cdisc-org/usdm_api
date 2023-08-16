@@ -6,6 +6,7 @@ from .biomedical_concept import BiomedicalConcept
 from .biomedical_concept_category import BiomedicalConceptCategory
 from .biomedical_concept_surrogate import BiomedicalConceptSurrogate
 from .code import Code
+from .content import Content
 from .encounter import Encounter
 from .study_cell import StudyCell
 from .indication import Indication
@@ -40,3 +41,4 @@ class StudyDesign(ApiBaseModelWithIdNameAndDesc):
   studyArms: List[StudyArm]
   studyEpochs: List[StudyEpoch]
   studyElements: List[StudyElement] = []
+  contents : List[Content]
