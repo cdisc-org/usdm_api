@@ -1,7 +1,7 @@
 from typing import Union
-from .api_base_model import ApiBaseModelWithIdNameAndDesc
+from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 from .transition_rule import TransitionRule
 
-class StudyElement(ApiBaseModelWithIdNameAndDesc):
+class StudyElement(ApiBaseModelWithIdNameLabelAndDesc):
   transitionStartRule: Union[TransitionRule, None] = None
   transitionEndRule: Union[TransitionRule, None] = None
