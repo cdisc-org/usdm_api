@@ -21,7 +21,7 @@ from .estimand import Estimand
 
 class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   trialIntentTypes: List[Code] = []
-  trialType: List[Code] = []
+  trialTypes: List[Code] = []
   therapeuticAreas: List[Code] = []
   interventionModel: Code
   content: List[Content]
