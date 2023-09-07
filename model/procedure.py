@@ -1,9 +1,9 @@
 from typing import Union
-from .api_base_model import ApiBaseModelWithIdNameAndDesc
+from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 from .code import Code
 
-class Procedure(ApiBaseModelWithIdNameAndDesc):
+class Procedure(ApiBaseModelWithIdNameLabelAndDesc):
   procedureType: str
-  procedureCode: Code
+  code: Code
   procedureIsConditional: bool
   procedureIsConditionalReason: Union[str, None] = None

@@ -6,11 +6,17 @@ class ApiBaseModel(BaseModel):
 class ApiBaseModelWithId(ApiBaseModel):
   id: str = Field(min_length=1)
 
+class ApiBaseModelWithIdAndDesc(ApiBaseModelWithId):
+  description: str = constr()
+
 class ApiBaseModelWithIdAndName(ApiBaseModelWithId):
   name: str = Field(min_length=1)
 
-class ApiBaseModelWithIdNameAndDesc(ApiBaseModelWithIdAndName):
+class ApiBaseModelWithIdNameAndLabel(ApiBaseModelWithIdAndName):
+  label: str = constr()
+
+class ApiBaseModelWithIdNameLabelAndDesc(ApiBaseModelWithIdNameAndLabel):
   description: str = constr()
 
-class ApiBaseModelWithIdAndDesc(ApiBaseModelWithId):
+class ApiBaseModelWithIdNameAndDesc(ApiBaseModelWithIdAndName):
   description: str = constr()

@@ -1,4 +1,4 @@
-from .api_base_model import ApiBaseModelWithIdNameAndDesc
+from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 
-class BiomedicalConceptSurrogate(ApiBaseModelWithIdNameAndDesc):
+class BiomedicalConceptSurrogate(ApiBaseModelWithIdNameLabelAndDesc):
   bcSurrogateReference: str
