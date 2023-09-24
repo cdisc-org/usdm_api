@@ -4,7 +4,7 @@ info:
   description: >-
     A simple TransCelerate Digital Data Flow (DDF) Study Definitions Repository
     API.
-  version: 2.3 Provisional (0.38)
+  version: 2.4 Provisional (0.39)
 paths:
   /v3/studyDefinitions:
     post:
@@ -608,19 +608,34 @@ components:
           type: string
           minLength: 1
           title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          type: string
+          title: Label
         description:
           type: string
           title: Description
+        text:
+          type: string
+          title: Text
+        parameterMap:
+          type: object
+          title: Parametermap
         purpose:
           type: string
           title: Purpose
-        endpointLevel:
+        level:
           anyOf:
             - $ref: '#/components/schemas/Code'
             - type: 'null'
       type: object
       required:
         - id
+        - name
+        - parameterMap
         - purpose
       title: Endpoint
     Estimand:
@@ -752,7 +767,13 @@ components:
         description:
           type: string
           title: Description
-        objectiveLevel:
+        text:
+          type: string
+          title: Text
+        parameterMap:
+          type: object
+          title: Parametermap
+        level:
           anyOf:
             - $ref: '#/components/schemas/Code'
             - type: 'null'
@@ -766,6 +787,7 @@ components:
       required:
         - id
         - name
+        - parameterMap
       title: Objective
     Organization:
       properties:
