@@ -1,7 +1,7 @@
 from typing import Union
-from .api_base_model import ApiBaseModelWithIdAndDesc
+from .syntax_template_dictionary import SyntaxTemplateDictionary
 from .code import Code
 
-class Endpoint(ApiBaseModelWithIdAndDesc):
+class Endpoint(SyntaxTemplateDictionary):
   purpose: str
-  endpointLevel: Union[Code, None] = None
+  level: Union[Code, None] = None

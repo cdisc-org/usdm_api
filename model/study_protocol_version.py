@@ -10,5 +10,5 @@ class StudyProtocolVersion(ApiBaseModelWithId):
   scientificTitle: str
   protocolVersion: str
   protocolAmendment: Union[str, None] = None
-  protocolEffectiveDate: date
+  protocolEffectiveDate: Union[date, None] = None
   protocolStatus: Code
