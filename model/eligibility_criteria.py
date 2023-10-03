@@ -1,9 +1,9 @@
 from typing import List, Union
-from .syntax_template_dictionary import SyntaxTemplateDictionary
+from .syntax_template import SyntaxTemplate
 from .code import Code
 
-class EligibilityCriteria(SyntaxTemplateDictionary):
-  category: Union[Code, None] = None
+class EligibilityCriteria(SyntaxTemplate):
+  category: Code
   identifier: str
-  nextCriterion: List["EligibilityCriteria"] = []
-  previousCriterion: List["EligibilityCriteria"] = []
+  nextCriterionId: Union[str, None] = None
+  previousCriterionId: Union[str, None] = None

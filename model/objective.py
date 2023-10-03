@@ -1,8 +1,8 @@
 from typing import List, Union
-from .syntax_template_dictionary import SyntaxTemplateDictionary
+from .syntax_template import SyntaxTemplate
 from .code import Code
 from .endpoint import Endpoint
 
-class Objective(SyntaxTemplateDictionary):
+class Objective(SyntaxTemplate):
   level: Union[Code, None] = None
   objectiveEndpoints: List[Endpoint] = []

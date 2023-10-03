@@ -1,7 +1,7 @@
 from typing import Union
-from .syntax_template_dictionary import SyntaxTemplateDictionary
+from .syntax_template import SyntaxTemplate
 from .code import Code
 
-class Endpoint(SyntaxTemplateDictionary):
+class Endpoint(SyntaxTemplate):
   purpose: str
-  level: Union[Code, None] = None
+  level: Code
