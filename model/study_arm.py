@@ -1,7 +1,7 @@
-from .api_base_model import ApiBaseModelWithIdNameAndDesc
+from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 from .code import Code
 
-class StudyArm(ApiBaseModelWithIdNameAndDesc):
+class StudyArm(ApiBaseModelWithIdNameLabelAndDesc):
   type: Code
   studyArmDataOriginDescription: str
   dataOriginType: Code
