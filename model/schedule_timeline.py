@@ -6,6 +6,6 @@ from .scheduled_instance import ScheduledInstance
 class ScheduleTimeline(ApiBaseModelWithIdNameLabelAndDesc):
   mainTimeline: bool
   entryCondition: str
-  scheduleTimelineEntryId: Union[str, None] = None
+  scheduleTimelineEntryId: Union[str, None]
   scheduleTimelineExits: List[ScheduleTimelineExit] = []
   scheduleTimelineInstances: List[ScheduledInstance] = []
