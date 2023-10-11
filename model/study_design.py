@@ -24,7 +24,6 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   trialTypes: List[Code] = []
   therapeuticAreas: List[Code] = []
   interventionModel: Code
-  contents: List[NarrativeContent] = []
   encounters: List[Encounter] = []
   activities: List[Activity] = []
   biomedicalConcepts: List[BiomedicalConcept] = []
