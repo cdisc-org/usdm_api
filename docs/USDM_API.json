@@ -1168,6 +1168,33 @@
         ],
         "title": "Endpoint"
       },
+      "Enrollment": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "quantity": {
+            "type": "string",
+            "title": "Quantity"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "code",
+          "quantity"
+        ],
+        "title": "Enrollment"
+      },
       "Estimand": {
         "properties": {
           "id": {
@@ -2298,7 +2325,8 @@
               "$ref": "#/components/schemas/StudyVersion-Input"
             },
             "type": "array",
-            "title": "Versions"
+            "title": "Versions",
+            "default": []
           },
           "documentedBy": {
             "anyOf": [
@@ -2314,8 +2342,7 @@
         "type": "object",
         "required": [
           "id",
-          "name",
-          "versions"
+          "name"
         ],
         "title": "Study"
       },
@@ -2344,7 +2371,8 @@
               "$ref": "#/components/schemas/StudyVersion-Output"
             },
             "type": "array",
-            "title": "Versions"
+            "title": "Versions",
+            "default": []
           },
           "documentedBy": {
             "anyOf": [
@@ -2360,10 +2388,148 @@
         "type": "object",
         "required": [
           "id",
-          "name",
-          "versions"
+          "name"
         ],
         "title": "Study"
+      },
+      "StudyAmendment-Input": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "number": {
+            "type": "string",
+            "title": "Number"
+          },
+          "summary": {
+            "type": "string",
+            "title": "Summary"
+          },
+          "substantialImpact": {
+            "type": "boolean",
+            "title": "Substantialimpact"
+          },
+          "primaryReason": {
+            "$ref": "#/components/schemas/StudyAmendmentReason"
+          },
+          "secondaryReason": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/StudyAmendmentReason"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "enrollment": {
+            "$ref": "#/components/schemas/Enrollment"
+          },
+          "previousId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Previousid"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "number",
+          "summary",
+          "substantialImpact",
+          "primaryReason",
+          "enrollment"
+        ],
+        "title": "StudyAmendment"
+      },
+      "StudyAmendment-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "number": {
+            "type": "string",
+            "title": "Number"
+          },
+          "summary": {
+            "type": "string",
+            "title": "Summary"
+          },
+          "substantialImpact": {
+            "type": "boolean",
+            "title": "Substantialimpact"
+          },
+          "primaryReason": {
+            "$ref": "#/components/schemas/StudyAmendmentReason"
+          },
+          "secondaryReason": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/StudyAmendmentReason"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "enrollment": {
+            "$ref": "#/components/schemas/Enrollment"
+          },
+          "previousId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Previousid"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "number",
+          "summary",
+          "substantialImpact",
+          "primaryReason",
+          "enrollment"
+        ],
+        "title": "StudyAmendment"
+      },
+      "StudyAmendmentReason": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "otherReason": {
+            "type": "string",
+            "title": "Otherreason"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "code",
+          "otherReason"
+        ],
+        "title": "StudyAmendmentReason"
       },
       "StudyArm": {
         "properties": {
@@ -3065,14 +3231,14 @@
               "$ref": "#/components/schemas/StudyProtocolDocumentVersion-Input"
             },
             "type": "array",
-            "title": "Versions"
+            "title": "Versions",
+            "default": []
           }
         },
         "type": "object",
         "required": [
           "id",
-          "name",
-          "versions"
+          "name"
         ],
         "title": "StudyProtocolDocument"
       },
@@ -3101,14 +3267,14 @@
               "$ref": "#/components/schemas/StudyProtocolDocumentVersion-Output"
             },
             "type": "array",
-            "title": "Versions"
+            "title": "Versions",
+            "default": []
           }
         },
         "type": "object",
         "required": [
           "id",
-          "name",
-          "versions"
+          "name"
         ],
         "title": "StudyProtocolDocument"
       },
@@ -3314,6 +3480,14 @@
             "title": "Approvedon",
             "default": []
           },
+          "protocolAmendments": {
+            "items": {
+              "$ref": "#/components/schemas/StudyAmendment-Input"
+            },
+            "type": "array",
+            "title": "Protocolamendments",
+            "default": []
+          },
           "businessTherapeuticAreas": {
             "items": {
               "$ref": "#/components/schemas/Code"
@@ -3414,6 +3588,14 @@
             },
             "type": "array",
             "title": "Approvedon",
+            "default": []
+          },
+          "protocolAmendments": {
+            "items": {
+              "$ref": "#/components/schemas/StudyAmendment-Output"
+            },
+            "type": "array",
+            "title": "Protocolamendments",
             "default": []
           },
           "businessTherapeuticAreas": {

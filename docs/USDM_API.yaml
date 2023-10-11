@@ -806,6 +806,26 @@ components:
       - purpose
       - level
       title: Endpoint
+    Enrollment:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        type:
+          $ref: '#/components/schemas/Code'
+        code:
+          $ref: '#/components/schemas/Code'
+        quantity:
+          type: string
+          title: Quantity
+      type: object
+      required:
+      - id
+      - type
+      - code
+      - quantity
+      title: Enrollment
     Estimand:
       properties:
         id:
@@ -1576,6 +1596,7 @@ components:
             $ref: '#/components/schemas/StudyVersion-Input'
           type: array
           title: Versions
+          default: []
         documentedBy:
           anyOf:
           - $ref: '#/components/schemas/StudyProtocolDocument-Input'
@@ -1584,7 +1605,6 @@ components:
       required:
       - id
       - name
-      - versions
       title: Study
     Study-Output:
       properties:
@@ -1607,6 +1627,7 @@ components:
             $ref: '#/components/schemas/StudyVersion-Output'
           type: array
           title: Versions
+          default: []
         documentedBy:
           anyOf:
           - $ref: '#/components/schemas/StudyProtocolDocument-Output'
@@ -1615,8 +1636,98 @@ components:
       required:
       - id
       - name
-      - versions
       title: Study
+    StudyAmendment-Input:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        number:
+          type: string
+          title: Number
+        summary:
+          type: string
+          title: Summary
+        substantialImpact:
+          type: boolean
+          title: Substantialimpact
+        primaryReason:
+          $ref: '#/components/schemas/StudyAmendmentReason'
+        secondaryReason:
+          anyOf:
+          - $ref: '#/components/schemas/StudyAmendmentReason'
+          - type: 'null'
+        enrollment:
+          $ref: '#/components/schemas/Enrollment'
+        previousId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Previousid
+      type: object
+      required:
+      - id
+      - number
+      - summary
+      - substantialImpact
+      - primaryReason
+      - enrollment
+      title: StudyAmendment
+    StudyAmendment-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        number:
+          type: string
+          title: Number
+        summary:
+          type: string
+          title: Summary
+        substantialImpact:
+          type: boolean
+          title: Substantialimpact
+        primaryReason:
+          $ref: '#/components/schemas/StudyAmendmentReason'
+        secondaryReason:
+          anyOf:
+          - $ref: '#/components/schemas/StudyAmendmentReason'
+          - type: 'null'
+        enrollment:
+          $ref: '#/components/schemas/Enrollment'
+        previousId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Previousid
+      type: object
+      required:
+      - id
+      - number
+      - summary
+      - substantialImpact
+      - primaryReason
+      - enrollment
+      title: StudyAmendment
+    StudyAmendmentReason:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        code:
+          $ref: '#/components/schemas/Code'
+        otherReason:
+          type: string
+          title: Otherreason
+      type: object
+      required:
+      - id
+      - code
+      - otherReason
+      title: StudyAmendmentReason
     StudyArm:
       properties:
         id:
@@ -2118,11 +2229,11 @@ components:
             $ref: '#/components/schemas/StudyProtocolDocumentVersion-Input'
           type: array
           title: Versions
+          default: []
       type: object
       required:
       - id
       - name
-      - versions
       title: StudyProtocolDocument
     StudyProtocolDocument-Output:
       properties:
@@ -2145,11 +2256,11 @@ components:
             $ref: '#/components/schemas/StudyProtocolDocumentVersion-Output'
           type: array
           title: Versions
+          default: []
       type: object
       required:
       - id
       - name
-      - versions
       title: StudyProtocolDocument
     StudyProtocolDocumentVersion-Input:
       properties:
@@ -2291,6 +2402,12 @@ components:
           type: array
           title: Approvedon
           default: []
+        protocolAmendments:
+          items:
+            $ref: '#/components/schemas/StudyAmendment-Input'
+          type: array
+          title: Protocolamendments
+          default: []
         businessTherapeuticAreas:
           items:
             $ref: '#/components/schemas/Code'
@@ -2353,6 +2470,12 @@ components:
             $ref: '#/components/schemas/GovernanceDate-Output'
           type: array
           title: Approvedon
+          default: []
+        protocolAmendments:
+          items:
+            $ref: '#/components/schemas/StudyAmendment-Output'
+          type: array
+          title: Protocolamendments
           default: []
         businessTherapeuticAreas:
           items:
