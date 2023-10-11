@@ -1209,7 +1209,29 @@
         ],
         "title": "Estimand"
       },
-      "GovernanceDate": {
+      "GeographicScope": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "code"
+        ],
+        "title": "GeographicScope"
+      },
+      "GovernanceDate-Input": {
         "properties": {
           "id": {
             "type": "string",
@@ -1236,6 +1258,13 @@
             "type": "string",
             "format": "date",
             "title": "Datavalue"
+          },
+          "geographicScope": {
+            "items": {
+              "$ref": "#/components/schemas/GeographicScope"
+            },
+            "type": "array",
+            "title": "Geographicscope"
           }
         },
         "type": "object",
@@ -1243,7 +1272,54 @@
           "id",
           "name",
           "type",
-          "dataValue"
+          "dataValue",
+          "geographicScope"
+        ],
+        "title": "GovernanceDate"
+      },
+      "GovernanceDate-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "dataValue": {
+            "type": "string",
+            "format": "date",
+            "title": "Datavalue"
+          },
+          "geographicScope": {
+            "items": {
+              "$ref": "#/components/schemas/GeographicScope"
+            },
+            "type": "array",
+            "title": "Geographicscope"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "dataValue",
+          "geographicScope"
         ],
         "title": "GovernanceDate"
       },
@@ -1354,6 +1430,48 @@
           "id"
         ],
         "title": "InvestigationalIntervention"
+      },
+      "NarrativeContent": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "sectionNumber": {
+            "type": "string",
+            "title": "Sectionnumber"
+          },
+          "sectionTitle": {
+            "type": "string",
+            "title": "Sectiontitle"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "contentChildIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Contentchildids",
+            "default": []
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "sectionNumber",
+          "sectionTitle"
+        ],
+        "title": "NarrativeContent"
       },
       "Objective-Input": {
         "properties": {
@@ -2175,6 +2293,13 @@
             "type": "string",
             "title": "Description"
           },
+          "versions": {
+            "items": {
+              "$ref": "#/components/schemas/StudyVersion-Input"
+            },
+            "type": "array",
+            "title": "Versions"
+          },
           "documentedBy": {
             "anyOf": [
               {
@@ -2184,13 +2309,6 @@
                 "type": "null"
               }
             ]
-          },
-          "versions": {
-            "items": {
-              "$ref": "#/components/schemas/StudyVersion-Input"
-            },
-            "type": "array",
-            "title": "Versions"
           }
         },
         "type": "object",
@@ -2221,6 +2339,13 @@
             "type": "string",
             "title": "Description"
           },
+          "versions": {
+            "items": {
+              "$ref": "#/components/schemas/StudyVersion-Output"
+            },
+            "type": "array",
+            "title": "Versions"
+          },
           "documentedBy": {
             "anyOf": [
               {
@@ -2230,13 +2355,6 @@
                 "type": "null"
               }
             ]
-          },
-          "versions": {
-            "items": {
-              "$ref": "#/components/schemas/StudyVersion-Output"
-            },
-            "type": "array",
-            "title": "Versions"
           }
         },
         "type": "object",
@@ -2501,7 +2619,7 @@
           "documentVersion": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/StudyProtocolDocumentVersion"
+                "$ref": "#/components/schemas/StudyProtocolDocumentVersion-Input"
               },
               {
                 "type": "null"
@@ -2702,7 +2820,7 @@
           "documentVersion": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/StudyProtocolDocumentVersion"
+                "$ref": "#/components/schemas/StudyProtocolDocumentVersion-Output"
               },
               {
                 "type": "null"
@@ -2944,7 +3062,7 @@
           },
           "versions": {
             "items": {
-              "$ref": "#/components/schemas/StudyProtocolDocumentVersion"
+              "$ref": "#/components/schemas/StudyProtocolDocumentVersion-Input"
             },
             "type": "array",
             "title": "Versions"
@@ -2980,7 +3098,7 @@
           },
           "versions": {
             "items": {
-              "$ref": "#/components/schemas/StudyProtocolDocumentVersion"
+              "$ref": "#/components/schemas/StudyProtocolDocumentVersion-Output"
             },
             "type": "array",
             "title": "Versions"
@@ -2994,7 +3112,7 @@
         ],
         "title": "StudyProtocolDocument"
       },
-      "StudyProtocolDocumentVersion": {
+      "StudyProtocolDocumentVersion-Input": {
         "properties": {
           "id": {
             "type": "string",
@@ -3023,6 +3141,89 @@
           },
           "protocolStatus": {
             "$ref": "#/components/schemas/Code"
+          },
+          "approvedOn": {
+            "items": {
+              "$ref": "#/components/schemas/GovernanceDate-Input"
+            },
+            "type": "array",
+            "title": "Approvedon",
+            "default": []
+          },
+          "contents": {
+            "items": {
+              "$ref": "#/components/schemas/NarrativeContent"
+            },
+            "type": "array",
+            "title": "Contents",
+            "default": []
+          },
+          "childrenId": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Childrenid",
+            "default": []
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "briefTitle",
+          "officialTitle",
+          "publicTitle",
+          "scientificTitle",
+          "protocolVersion",
+          "protocolStatus"
+        ],
+        "title": "StudyProtocolDocumentVersion"
+      },
+      "StudyProtocolDocumentVersion-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "briefTitle": {
+            "type": "string",
+            "title": "Brieftitle"
+          },
+          "officialTitle": {
+            "type": "string",
+            "title": "Officialtitle"
+          },
+          "publicTitle": {
+            "type": "string",
+            "title": "Publictitle"
+          },
+          "scientificTitle": {
+            "type": "string",
+            "title": "Scientifictitle"
+          },
+          "protocolVersion": {
+            "type": "string",
+            "title": "Protocolversion"
+          },
+          "protocolStatus": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "approvedOn": {
+            "items": {
+              "$ref": "#/components/schemas/GovernanceDate-Output"
+            },
+            "type": "array",
+            "title": "Approvedon",
+            "default": []
+          },
+          "contents": {
+            "items": {
+              "$ref": "#/components/schemas/NarrativeContent"
+            },
+            "type": "array",
+            "title": "Contents",
+            "default": []
           },
           "childrenId": {
             "items": {
@@ -3067,8 +3268,13 @@
             "type": "string",
             "title": "Studyversion"
           },
-          "approvedOn": {
-            "$ref": "#/components/schemas/GovernanceDate"
+          "studyRationale": {
+            "type": "string",
+            "title": "Studyrationale"
+          },
+          "studyAcronym": {
+            "type": "string",
+            "title": "Studyacronym"
           },
           "type": {
             "anyOf": [
@@ -3090,6 +3296,24 @@
               }
             ]
           },
+          "documentVersion": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/StudyProtocolDocumentVersion-Input"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "approvedOn": {
+            "items": {
+              "$ref": "#/components/schemas/GovernanceDate-Input"
+            },
+            "type": "array",
+            "title": "Approvedon",
+            "default": []
+          },
           "businessTherapeuticAreas": {
             "items": {
               "$ref": "#/components/schemas/Code"
@@ -3106,16 +3330,6 @@
             "title": "Studyidentifiers",
             "default": []
           },
-          "documentVersion": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/StudyProtocolDocumentVersion"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
           "studyDesigns": {
             "items": {
               "$ref": "#/components/schemas/StudyDesign-Input"
@@ -3123,21 +3337,12 @@
             "type": "array",
             "title": "Studydesigns",
             "default": []
-          },
-          "studyRationale": {
-            "type": "string",
-            "title": "Studyrationale"
-          },
-          "studyAcronym": {
-            "type": "string",
-            "title": "Studyacronym"
           }
         },
         "type": "object",
         "required": [
           "studyTitle",
           "studyVersion",
-          "approvedOn",
           "studyRationale",
           "studyAcronym"
         ],
@@ -3165,8 +3370,13 @@
             "type": "string",
             "title": "Studyversion"
           },
-          "approvedOn": {
-            "$ref": "#/components/schemas/GovernanceDate"
+          "studyRationale": {
+            "type": "string",
+            "title": "Studyrationale"
+          },
+          "studyAcronym": {
+            "type": "string",
+            "title": "Studyacronym"
           },
           "type": {
             "anyOf": [
@@ -3188,6 +3398,24 @@
               }
             ]
           },
+          "documentVersion": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/StudyProtocolDocumentVersion-Output"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "approvedOn": {
+            "items": {
+              "$ref": "#/components/schemas/GovernanceDate-Output"
+            },
+            "type": "array",
+            "title": "Approvedon",
+            "default": []
+          },
           "businessTherapeuticAreas": {
             "items": {
               "$ref": "#/components/schemas/Code"
@@ -3204,16 +3432,6 @@
             "title": "Studyidentifiers",
             "default": []
           },
-          "documentVersion": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/StudyProtocolDocumentVersion"
-              },
-              {
-                "type": "null"
-              }
-            ]
-          },
           "studyDesigns": {
             "items": {
               "$ref": "#/components/schemas/StudyDesign-Output"
@@ -3221,21 +3439,12 @@
             "type": "array",
             "title": "Studydesigns",
             "default": []
-          },
-          "studyRationale": {
-            "type": "string",
-            "title": "Studyrationale"
-          },
-          "studyAcronym": {
-            "type": "string",
-            "title": "Studyacronym"
           }
         },
         "type": "object",
         "required": [
           "studyTitle",
           "studyVersion",
-          "approvedOn",
           "studyRationale",
           "studyAcronym"
         ],

@@ -4,6 +4,6 @@ from .study_protocol_document import StudyProtocolDocument
 from .study_version import StudyVersion
 
 class Study(ApiBaseModelWithIdNameLabelAndDesc):
-  documentedBy: Union[StudyProtocolDocument, None] = None
   versions: List[StudyVersion]
+  documentedBy: Union[StudyProtocolDocument, None] = None
   

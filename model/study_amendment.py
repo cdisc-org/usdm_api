@@ -1,3 +1,4 @@
+from typing import Union
 from .api_base_model import ApiBaseModelWithId
 from .study_amendment_reason import StudyAmendmentReason
 from .enrollment import Enrollment
@@ -9,4 +10,4 @@ class StudyAmendment(ApiBaseModelWithId):
   primaryReason: StudyAmendmentReason
   secondaryReason: StudyAmendmentReason
   enrollment: Enrollment
-  previousId: str
+  previousId: Union[str, None] = None

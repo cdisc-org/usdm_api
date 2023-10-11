@@ -12,12 +12,12 @@ class StudyVersion(ApiBaseModel):
   id: Union[UUID, None] = None
   studyTitle: str
   studyVersion: str
-  approvedOn: GovernanceDate
-  type: Union[genericCode, None] = None
-  studyPhase: Union[AliasCode, None] = None
-  businessTherapeuticAreas: List[Code] = []
-  studyIdentifiers: List[StudyIdentifier] = []
-  documentVersion: Union[StudyProtocolDocumentVersion, None] = None
-  studyDesigns: List[StudyDesign] = []
   studyRationale: str
   studyAcronym: str
+  type: Union[genericCode, None] = None
+  studyPhase: Union[AliasCode, None] = None
+  documentVersion: Union[StudyProtocolDocumentVersion, None] = None
+  approvedOn: List[GovernanceDate] = []
+  businessTherapeuticAreas: List[Code] = []
+  studyIdentifiers: List[StudyIdentifier] = []
+  studyDesigns: List[StudyDesign] = []

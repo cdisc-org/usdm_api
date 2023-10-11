@@ -837,7 +837,23 @@ components:
       - treatmentId
       - variableOfInterestId
       title: Estimand
-    GovernanceDate:
+    GeographicScope:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        type:
+          $ref: '#/components/schemas/Code'
+        code:
+          $ref: '#/components/schemas/Code'
+      type: object
+      required:
+      - id
+      - type
+      - code
+      title: GeographicScope
+    GovernanceDate-Input:
       properties:
         id:
           type: string
@@ -859,12 +875,53 @@ components:
           type: string
           format: date
           title: Datavalue
+        geographicScope:
+          items:
+            $ref: '#/components/schemas/GeographicScope'
+          type: array
+          title: Geographicscope
       type: object
       required:
       - id
       - name
       - type
       - dataValue
+      - geographicScope
+      title: GovernanceDate
+    GovernanceDate-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          type: string
+          title: Label
+        description:
+          type: string
+          title: Description
+        type:
+          $ref: '#/components/schemas/Code'
+        dataValue:
+          type: string
+          format: date
+          title: Datavalue
+        geographicScope:
+          items:
+            $ref: '#/components/schemas/GeographicScope'
+          type: array
+          title: Geographicscope
+      type: object
+      required:
+      - id
+      - name
+      - type
+      - dataValue
+      - geographicScope
       title: GovernanceDate
     HTTPValidationError:
       properties:
@@ -946,6 +1003,38 @@ components:
       required:
       - id
       title: InvestigationalIntervention
+    NarrativeContent:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        sectionNumber:
+          type: string
+          title: Sectionnumber
+        sectionTitle:
+          type: string
+          title: Sectiontitle
+        text:
+          type: string
+          title: Text
+        contentChildIds:
+          items:
+            type: string
+          type: array
+          title: Contentchildids
+          default: []
+      type: object
+      required:
+      - id
+      - name
+      - sectionNumber
+      - sectionTitle
+      title: NarrativeContent
     Objective-Input:
       properties:
         id:
@@ -1482,15 +1571,15 @@ components:
         description:
           type: string
           title: Description
-        documentedBy:
-          anyOf:
-          - $ref: '#/components/schemas/StudyProtocolDocument-Input'
-          - type: 'null'
         versions:
           items:
             $ref: '#/components/schemas/StudyVersion-Input'
           type: array
           title: Versions
+        documentedBy:
+          anyOf:
+          - $ref: '#/components/schemas/StudyProtocolDocument-Input'
+          - type: 'null'
       type: object
       required:
       - id
@@ -1513,15 +1602,15 @@ components:
         description:
           type: string
           title: Description
-        documentedBy:
-          anyOf:
-          - $ref: '#/components/schemas/StudyProtocolDocument-Output'
-          - type: 'null'
         versions:
           items:
             $ref: '#/components/schemas/StudyVersion-Output'
           type: array
           title: Versions
+        documentedBy:
+          anyOf:
+          - $ref: '#/components/schemas/StudyProtocolDocument-Output'
+          - type: 'null'
       type: object
       required:
       - id
@@ -1715,7 +1804,7 @@ components:
           default: []
         documentVersion:
           anyOf:
-          - $ref: '#/components/schemas/StudyProtocolDocumentVersion'
+          - $ref: '#/components/schemas/StudyProtocolDocumentVersion-Input'
           - type: 'null'
       type: object
       required:
@@ -1859,7 +1948,7 @@ components:
           default: []
         documentVersion:
           anyOf:
-          - $ref: '#/components/schemas/StudyProtocolDocumentVersion'
+          - $ref: '#/components/schemas/StudyProtocolDocumentVersion-Output'
           - type: 'null'
       type: object
       required:
@@ -2026,7 +2115,7 @@ components:
           title: Description
         versions:
           items:
-            $ref: '#/components/schemas/StudyProtocolDocumentVersion'
+            $ref: '#/components/schemas/StudyProtocolDocumentVersion-Input'
           type: array
           title: Versions
       type: object
@@ -2053,7 +2142,7 @@ components:
           title: Description
         versions:
           items:
-            $ref: '#/components/schemas/StudyProtocolDocumentVersion'
+            $ref: '#/components/schemas/StudyProtocolDocumentVersion-Output'
           type: array
           title: Versions
       type: object
@@ -2062,7 +2151,7 @@ components:
       - name
       - versions
       title: StudyProtocolDocument
-    StudyProtocolDocumentVersion:
+    StudyProtocolDocumentVersion-Input:
       properties:
         id:
           type: string
@@ -2085,6 +2174,69 @@ components:
           title: Protocolversion
         protocolStatus:
           $ref: '#/components/schemas/Code'
+        approvedOn:
+          items:
+            $ref: '#/components/schemas/GovernanceDate-Input'
+          type: array
+          title: Approvedon
+          default: []
+        contents:
+          items:
+            $ref: '#/components/schemas/NarrativeContent'
+          type: array
+          title: Contents
+          default: []
+        childrenId:
+          items:
+            type: string
+          type: array
+          title: Childrenid
+          default: []
+      type: object
+      required:
+      - id
+      - briefTitle
+      - officialTitle
+      - publicTitle
+      - scientificTitle
+      - protocolVersion
+      - protocolStatus
+      title: StudyProtocolDocumentVersion
+    StudyProtocolDocumentVersion-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        briefTitle:
+          type: string
+          title: Brieftitle
+        officialTitle:
+          type: string
+          title: Officialtitle
+        publicTitle:
+          type: string
+          title: Publictitle
+        scientificTitle:
+          type: string
+          title: Scientifictitle
+        protocolVersion:
+          type: string
+          title: Protocolversion
+        protocolStatus:
+          $ref: '#/components/schemas/Code'
+        approvedOn:
+          items:
+            $ref: '#/components/schemas/GovernanceDate-Output'
+          type: array
+          title: Approvedon
+          default: []
+        contents:
+          items:
+            $ref: '#/components/schemas/NarrativeContent'
+          type: array
+          title: Contents
+          default: []
         childrenId:
           items:
             type: string
@@ -2115,8 +2267,12 @@ components:
         studyVersion:
           type: string
           title: Studyversion
-        approvedOn:
-          $ref: '#/components/schemas/GovernanceDate'
+        studyRationale:
+          type: string
+          title: Studyrationale
+        studyAcronym:
+          type: string
+          title: Studyacronym
         type:
           anyOf:
           - $ref: '#/components/schemas/Code'
@@ -2125,6 +2281,16 @@ components:
           anyOf:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
+        documentVersion:
+          anyOf:
+          - $ref: '#/components/schemas/StudyProtocolDocumentVersion-Input'
+          - type: 'null'
+        approvedOn:
+          items:
+            $ref: '#/components/schemas/GovernanceDate-Input'
+          type: array
+          title: Approvedon
+          default: []
         businessTherapeuticAreas:
           items:
             $ref: '#/components/schemas/Code'
@@ -2137,27 +2303,16 @@ components:
           type: array
           title: Studyidentifiers
           default: []
-        documentVersion:
-          anyOf:
-          - $ref: '#/components/schemas/StudyProtocolDocumentVersion'
-          - type: 'null'
         studyDesigns:
           items:
             $ref: '#/components/schemas/StudyDesign-Input'
           type: array
           title: Studydesigns
           default: []
-        studyRationale:
-          type: string
-          title: Studyrationale
-        studyAcronym:
-          type: string
-          title: Studyacronym
       type: object
       required:
       - studyTitle
       - studyVersion
-      - approvedOn
       - studyRationale
       - studyAcronym
       title: StudyVersion
@@ -2175,8 +2330,12 @@ components:
         studyVersion:
           type: string
           title: Studyversion
-        approvedOn:
-          $ref: '#/components/schemas/GovernanceDate'
+        studyRationale:
+          type: string
+          title: Studyrationale
+        studyAcronym:
+          type: string
+          title: Studyacronym
         type:
           anyOf:
           - $ref: '#/components/schemas/Code'
@@ -2185,6 +2344,16 @@ components:
           anyOf:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
+        documentVersion:
+          anyOf:
+          - $ref: '#/components/schemas/StudyProtocolDocumentVersion-Output'
+          - type: 'null'
+        approvedOn:
+          items:
+            $ref: '#/components/schemas/GovernanceDate-Output'
+          type: array
+          title: Approvedon
+          default: []
         businessTherapeuticAreas:
           items:
             $ref: '#/components/schemas/Code'
@@ -2197,27 +2366,16 @@ components:
           type: array
           title: Studyidentifiers
           default: []
-        documentVersion:
-          anyOf:
-          - $ref: '#/components/schemas/StudyProtocolDocumentVersion'
-          - type: 'null'
         studyDesigns:
           items:
             $ref: '#/components/schemas/StudyDesign-Output'
           type: array
           title: Studydesigns
           default: []
-        studyRationale:
-          type: string
-          title: Studyrationale
-        studyAcronym:
-          type: string
-          title: Studyacronym
       type: object
       required:
       - studyTitle
       - studyVersion
-      - approvedOn
       - studyRationale
       - studyAcronym
       title: StudyVersion
