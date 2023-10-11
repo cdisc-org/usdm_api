@@ -1,9 +1,9 @@
 from fastapi import FastAPI, HTTPException, status
-from model.study import *
+from model.study_version import *
 from model.wrapper import Wrapper
 from uuid import UUID, uuid4
 
-VERSION = "2.4.1 Provisional (0.40)"
+VERSION = "2.5"
 SYSTEM_NAME = "Simple API for DDF"
 
 tags_metadata = [
