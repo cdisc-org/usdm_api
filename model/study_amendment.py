@@ -8,6 +8,6 @@ class StudyAmendment(ApiBaseModelWithId):
   summary: str
   substantialImpact: bool
   primaryReason: StudyAmendmentReason
-  secondaryReason: StudyAmendmentReason
+  secondaryReason: Union[StudyAmendmentReason, None] = None
   enrollment: Enrollment
   previousId: Union[str, None] = None

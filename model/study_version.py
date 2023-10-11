@@ -6,6 +6,7 @@ from .alias_code import *
 from .code import Code as genericCode
 from .study_design import *
 from .governance_date import GovernanceDate
+from .study_amendment import StudyAmendment
 from uuid import UUID
 
 class StudyVersion(ApiBaseModel):
@@ -18,6 +19,7 @@ class StudyVersion(ApiBaseModel):
   studyPhase: Union[AliasCode, None] = None
   documentVersion: Union[StudyProtocolDocumentVersion, None] = None
   approvedOn: List[GovernanceDate] = []
+  protocolAmendments: List[StudyAmendment] = []
   businessTherapeuticAreas: List[Code] = []
   studyIdentifiers: List[StudyIdentifier] = []
   studyDesigns: List[StudyDesign] = []
