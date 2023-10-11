@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, status
+from fastapi import FastAPI, status
 from model.study_version import *
 from model.wrapper import Wrapper
 from uuid import UUID, uuid4
