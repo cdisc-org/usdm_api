@@ -18,6 +18,7 @@ from .study_design_population import StudyDesignPopulation
 from .objective import Objective
 from .schedule_timeline import ScheduleTimeline
 from .estimand import Estimand
+from .study_protocol_document_version import StudyProtocolDocumentVersion
 
 class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   trialIntentTypes: List[Code] = []
@@ -41,3 +42,5 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   studyObjectives: List[Objective] = []
   studyPopulations: List[StudyDesignPopulation] = []
   studyScheduleTimelines: List[ScheduleTimeline] = []
+  documentVersion: Union[StudyProtocolDocumentVersion, None] = None
+  

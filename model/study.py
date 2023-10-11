@@ -1,21 +1,7 @@
 from typing import List, Union
-from .api_base_model import ApiBaseModel
-from .study_identifier import *
-from .study_protocol_version import *
-from .alias_code import *
-from .code import Code as genericCode
-from .study_design import *
-from uuid import UUID
+from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
+from study_protocol_document import StudyProtocolDocument
 
-class Study(ApiBaseModel):
-  id: Union[UUID, None] = None
-  studyTitle: str
-  studyVersion: str
-  type: Union[genericCode, None] = None
-  studyPhase: Union[AliasCode, None] = None
-  businessTherapeuticAreas: List[Code] = []
-  studyIdentifiers: List[StudyIdentifier] = []
-  studyProtocolVersions: List[StudyProtocolVersion] = []
-  studyDesigns: List[StudyDesign] = []
-  studyRationale: str
-  studyAcronym: str
+class Study(ApiBaseModelWithIdNameLabelAndDesc):
+  documentedBy: Union[StudyProtocolDocument, None] = None
+  
