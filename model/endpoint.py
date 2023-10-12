@@ -1,4 +1,3 @@
-from typing import Union
 from .syntax_template import SyntaxTemplate
 from .code import Code
 

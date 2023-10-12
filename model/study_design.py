@@ -6,7 +6,6 @@ from .biomedical_concept import BiomedicalConcept
 from .biomedical_concept_category import BiomedicalConceptCategory
 from .biomedical_concept_surrogate import BiomedicalConceptSurrogate
 from .code import Code
-from .narrative_content import NarrativeContent
 from .encounter import Encounter
 from .study_cell import StudyCell
 from .indication import Indication
