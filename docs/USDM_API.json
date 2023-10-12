@@ -1479,7 +1479,14 @@
             "title": "Sectiontitle"
           },
           "text": {
-            "type": "string",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "title": "Text"
           },
           "contentChildIds": {
@@ -2303,8 +2310,15 @@
       "Study-Input": {
         "properties": {
           "id": {
-            "type": "string",
-            "minLength": 1,
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "title": "Id"
           },
           "name": {
@@ -2312,13 +2326,13 @@
             "minLength": 1,
             "title": "Name"
           },
-          "label": {
-            "type": "string",
-            "title": "Label"
-          },
           "description": {
             "type": "string",
             "title": "Description"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
           },
           "versions": {
             "items": {
@@ -2341,7 +2355,6 @@
         },
         "type": "object",
         "required": [
-          "id",
           "name"
         ],
         "title": "Study"
@@ -2349,8 +2362,15 @@
       "Study-Output": {
         "properties": {
           "id": {
-            "type": "string",
-            "minLength": 1,
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "title": "Id"
           },
           "name": {
@@ -2358,13 +2378,13 @@
             "minLength": 1,
             "title": "Name"
           },
-          "label": {
-            "type": "string",
-            "title": "Label"
-          },
           "description": {
             "type": "string",
             "title": "Description"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
           },
           "versions": {
             "items": {
@@ -2387,7 +2407,6 @@
         },
         "type": "object",
         "required": [
-          "id",
           "name"
         ],
         "title": "Study"
@@ -3415,15 +3434,8 @@
       "StudyVersion-Input": {
         "properties": {
           "id": {
-            "anyOf": [
-              {
-                "type": "string",
-                "format": "uuid"
-              },
-              {
-                "type": "null"
-              }
-            ],
+            "type": "string",
+            "minLength": 1,
             "title": "Id"
           },
           "studyTitle": {
@@ -3515,6 +3527,7 @@
         },
         "type": "object",
         "required": [
+          "id",
           "studyTitle",
           "studyVersion",
           "studyRationale",
@@ -3525,15 +3538,8 @@
       "StudyVersion-Output": {
         "properties": {
           "id": {
-            "anyOf": [
-              {
-                "type": "string",
-                "format": "uuid"
-              },
-              {
-                "type": "null"
-              }
-            ],
+            "type": "string",
+            "minLength": 1,
             "title": "Id"
           },
           "studyTitle": {
@@ -3625,6 +3631,7 @@
         },
         "type": "object",
         "required": [
+          "id",
           "studyTitle",
           "studyVersion",
           "studyRationale",

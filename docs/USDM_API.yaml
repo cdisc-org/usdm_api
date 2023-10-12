@@ -1040,7 +1040,9 @@ components:
           type: string
           title: Sectiontitle
         text:
-          type: string
+          anyOf:
+          - type: string
+          - type: 'null'
           title: Text
         contentChildIds:
           items:
@@ -1578,19 +1580,21 @@ components:
     Study-Input:
       properties:
         id:
-          type: string
-          minLength: 1
+          anyOf:
+          - type: string
+            format: uuid
+          - type: 'null'
           title: Id
         name:
           type: string
           minLength: 1
           title: Name
-        label:
-          type: string
-          title: Label
         description:
           type: string
           title: Description
+        label:
+          type: string
+          title: Label
         versions:
           items:
             $ref: '#/components/schemas/StudyVersion-Input'
@@ -1603,25 +1607,26 @@ components:
           - type: 'null'
       type: object
       required:
-      - id
       - name
       title: Study
     Study-Output:
       properties:
         id:
-          type: string
-          minLength: 1
+          anyOf:
+          - type: string
+            format: uuid
+          - type: 'null'
           title: Id
         name:
           type: string
           minLength: 1
           title: Name
-        label:
-          type: string
-          title: Label
         description:
           type: string
           title: Description
+        label:
+          type: string
+          title: Label
         versions:
           items:
             $ref: '#/components/schemas/StudyVersion-Output'
@@ -1634,7 +1639,6 @@ components:
           - type: 'null'
       type: object
       required:
-      - id
       - name
       title: Study
     StudyAmendment-Input:
@@ -2367,10 +2371,8 @@ components:
     StudyVersion-Input:
       properties:
         id:
-          anyOf:
-          - type: string
-            format: uuid
-          - type: 'null'
+          type: string
+          minLength: 1
           title: Id
         studyTitle:
           type: string
@@ -2428,6 +2430,7 @@ components:
           default: []
       type: object
       required:
+      - id
       - studyTitle
       - studyVersion
       - studyRationale
@@ -2436,10 +2439,8 @@ components:
     StudyVersion-Output:
       properties:
         id:
-          anyOf:
-          - type: string
-            format: uuid
-          - type: 'null'
+          type: string
+          minLength: 1
           title: Id
         studyTitle:
           type: string
@@ -2497,6 +2498,7 @@ components:
           default: []
       type: object
       required:
+      - id
       - studyTitle
       - studyVersion
       - studyRationale
