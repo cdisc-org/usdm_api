@@ -4,4 +4,3 @@ from .code import Code
 class GeographicScope(ApiBaseModelWithId):
   type: Code
   code: Code
-
