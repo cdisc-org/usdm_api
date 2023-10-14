@@ -806,26 +806,6 @@ components:
       - purpose
       - level
       title: Endpoint
-    Enrollment:
-      properties:
-        id:
-          type: string
-          minLength: 1
-          title: Id
-        type:
-          $ref: '#/components/schemas/Code'
-        code:
-          $ref: '#/components/schemas/Code'
-        quantity:
-          type: string
-          title: Quantity
-      type: object
-      required:
-      - id
-      - type
-      - code
-      - quantity
-      title: Enrollment
     Estimand:
       properties:
         id:
@@ -895,18 +875,18 @@ components:
           type: string
           format: date
           title: Datavalue
-        geographicScope:
+        geographicScopes:
           items:
             $ref: '#/components/schemas/GeographicScope'
           type: array
-          title: Geographicscope
+          title: Geographicscopes
       type: object
       required:
       - id
       - name
       - type
       - dataValue
-      - geographicScope
+      - geographicScopes
       title: GovernanceDate
     GovernanceDate-Output:
       properties:
@@ -930,18 +910,18 @@ components:
           type: string
           format: date
           title: Datavalue
-        geographicScope:
+        geographicScopes:
           items:
             $ref: '#/components/schemas/GeographicScope'
           type: array
-          title: Geographicscope
+          title: Geographicscopes
       type: object
       required:
       - id
       - name
       - type
       - dataValue
-      - geographicScope
+      - geographicScopes
       title: GovernanceDate
     HTTPValidationError:
       properties:
@@ -1587,13 +1567,16 @@ components:
           title: Id
         name:
           type: string
-          minLength: 1
           title: Name
         description:
-          type: string
+          anyOf:
+          - type: string
+          - type: 'null'
           title: Description
         label:
-          type: string
+          anyOf:
+          - type: string
+          - type: 'null'
           title: Label
         versions:
           items:
@@ -1606,8 +1589,6 @@ components:
           - $ref: '#/components/schemas/StudyProtocolDocument-Input'
           - type: 'null'
       type: object
-      required:
-      - name
       title: Study
     Study-Output:
       properties:
@@ -1619,13 +1600,16 @@ components:
           title: Id
         name:
           type: string
-          minLength: 1
           title: Name
         description:
-          type: string
+          anyOf:
+          - type: string
+          - type: 'null'
           title: Description
         label:
-          type: string
+          anyOf:
+          - type: string
+          - type: 'null'
           title: Label
         versions:
           items:
@@ -1638,8 +1622,6 @@ components:
           - $ref: '#/components/schemas/StudyProtocolDocument-Output'
           - type: 'null'
       type: object
-      required:
-      - name
       title: Study
     StudyAmendment-Input:
       properties:
@@ -1658,12 +1640,17 @@ components:
           title: Substantialimpact
         primaryReason:
           $ref: '#/components/schemas/StudyAmendmentReason'
-        secondaryReason:
-          anyOf:
-          - $ref: '#/components/schemas/StudyAmendmentReason'
-          - type: 'null'
-        enrollment:
-          $ref: '#/components/schemas/Enrollment'
+        secondaryReasons:
+          items:
+            $ref: '#/components/schemas/StudyAmendmentReason'
+          type: array
+          title: Secondaryreasons
+          default: []
+        enrollments:
+          items:
+            $ref: '#/components/schemas/SubjectEnrollment'
+          type: array
+          title: Enrollments
         previousId:
           anyOf:
           - type: string
@@ -1676,7 +1663,7 @@ components:
       - summary
       - substantialImpact
       - primaryReason
-      - enrollment
+      - enrollments
       title: StudyAmendment
     StudyAmendment-Output:
       properties:
@@ -1695,12 +1682,17 @@ components:
           title: Substantialimpact
         primaryReason:
           $ref: '#/components/schemas/StudyAmendmentReason'
-        secondaryReason:
-          anyOf:
-          - $ref: '#/components/schemas/StudyAmendmentReason'
-          - type: 'null'
-        enrollment:
-          $ref: '#/components/schemas/Enrollment'
+        secondaryReasons:
+          items:
+            $ref: '#/components/schemas/StudyAmendmentReason'
+          type: array
+          title: Secondaryreasons
+          default: []
+        enrollments:
+          items:
+            $ref: '#/components/schemas/SubjectEnrollment'
+          type: array
+          title: Enrollments
         previousId:
           anyOf:
           - type: string
@@ -1713,7 +1705,7 @@ components:
       - summary
       - substantialImpact
       - primaryReason
-      - enrollment
+      - enrollments
       title: StudyAmendment
     StudyAmendmentReason:
       properties:
@@ -2289,11 +2281,11 @@ components:
           title: Protocolversion
         protocolStatus:
           $ref: '#/components/schemas/Code'
-        approvedOn:
+        dateValues:
           items:
             $ref: '#/components/schemas/GovernanceDate-Input'
           type: array
-          title: Approvedon
+          title: Datevalues
           default: []
         contents:
           items:
@@ -2301,11 +2293,11 @@ components:
           type: array
           title: Contents
           default: []
-        childrenId:
+        childrenIds:
           items:
             type: string
           type: array
-          title: Childrenid
+          title: Childrenids
           default: []
       type: object
       required:
@@ -2340,11 +2332,11 @@ components:
           title: Protocolversion
         protocolStatus:
           $ref: '#/components/schemas/Code'
-        approvedOn:
+        dateValues:
           items:
             $ref: '#/components/schemas/GovernanceDate-Output'
           type: array
-          title: Approvedon
+          title: Datevalues
           default: []
         contents:
           items:
@@ -2352,11 +2344,11 @@ components:
           type: array
           title: Contents
           default: []
-        childrenId:
+        childrenIds:
           items:
             type: string
           type: array
-          title: Childrenid
+          title: Childrenids
           default: []
       type: object
       required:
@@ -2398,17 +2390,17 @@ components:
           anyOf:
           - $ref: '#/components/schemas/StudyProtocolDocumentVersion-Input'
           - type: 'null'
-        approvedOn:
+        dateValues:
           items:
             $ref: '#/components/schemas/GovernanceDate-Input'
           type: array
-          title: Approvedon
+          title: Datevalues
           default: []
-        protocolAmendments:
+        amendments:
           items:
             $ref: '#/components/schemas/StudyAmendment-Input'
           type: array
-          title: Protocolamendments
+          title: Amendments
           default: []
         businessTherapeuticAreas:
           items:
@@ -2466,17 +2458,17 @@ components:
           anyOf:
           - $ref: '#/components/schemas/StudyProtocolDocumentVersion-Output'
           - type: 'null'
-        approvedOn:
+        dateValues:
           items:
             $ref: '#/components/schemas/GovernanceDate-Output'
           type: array
-          title: Approvedon
+          title: Datevalues
           default: []
-        protocolAmendments:
+        amendments:
           items:
             $ref: '#/components/schemas/StudyAmendment-Output'
           type: array
-          title: Protocolamendments
+          title: Amendments
           default: []
         businessTherapeuticAreas:
           items:
@@ -2504,6 +2496,26 @@ components:
       - studyRationale
       - studyAcronym
       title: StudyVersion
+    SubjectEnrollment:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        type:
+          $ref: '#/components/schemas/Code'
+        code:
+          $ref: '#/components/schemas/Code'
+        quantity:
+          type: string
+          title: Quantity
+      type: object
+      required:
+      - id
+      - type
+      - code
+      - quantity
+      title: SubjectEnrollment
     SyntaxTemplateDictionary:
       properties:
         id:

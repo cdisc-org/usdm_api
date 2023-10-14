@@ -1168,33 +1168,6 @@
         ],
         "title": "Endpoint"
       },
-      "Enrollment": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1,
-            "title": "Id"
-          },
-          "type": {
-            "$ref": "#/components/schemas/Code"
-          },
-          "code": {
-            "$ref": "#/components/schemas/Code"
-          },
-          "quantity": {
-            "type": "string",
-            "title": "Quantity"
-          }
-        },
-        "type": "object",
-        "required": [
-          "id",
-          "type",
-          "code",
-          "quantity"
-        ],
-        "title": "Enrollment"
-      },
       "Estimand": {
         "properties": {
           "id": {
@@ -1286,12 +1259,12 @@
             "format": "date",
             "title": "Datavalue"
           },
-          "geographicScope": {
+          "geographicScopes": {
             "items": {
               "$ref": "#/components/schemas/GeographicScope"
             },
             "type": "array",
-            "title": "Geographicscope"
+            "title": "Geographicscopes"
           }
         },
         "type": "object",
@@ -1300,7 +1273,7 @@
           "name",
           "type",
           "dataValue",
-          "geographicScope"
+          "geographicScopes"
         ],
         "title": "GovernanceDate"
       },
@@ -1332,12 +1305,12 @@
             "format": "date",
             "title": "Datavalue"
           },
-          "geographicScope": {
+          "geographicScopes": {
             "items": {
               "$ref": "#/components/schemas/GeographicScope"
             },
             "type": "array",
-            "title": "Geographicscope"
+            "title": "Geographicscopes"
           }
         },
         "type": "object",
@@ -1346,7 +1319,7 @@
           "name",
           "type",
           "dataValue",
-          "geographicScope"
+          "geographicScopes"
         ],
         "title": "GovernanceDate"
       },
@@ -2323,15 +2296,28 @@
           },
           "name": {
             "type": "string",
-            "minLength": 1,
             "title": "Name"
           },
           "description": {
-            "type": "string",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "title": "Description"
           },
           "label": {
-            "type": "string",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "title": "Label"
           },
           "versions": {
@@ -2354,9 +2340,6 @@
           }
         },
         "type": "object",
-        "required": [
-          "name"
-        ],
         "title": "Study"
       },
       "Study-Output": {
@@ -2375,15 +2358,28 @@
           },
           "name": {
             "type": "string",
-            "minLength": 1,
             "title": "Name"
           },
           "description": {
-            "type": "string",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "title": "Description"
           },
           "label": {
-            "type": "string",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "title": "Label"
           },
           "versions": {
@@ -2406,9 +2402,6 @@
           }
         },
         "type": "object",
-        "required": [
-          "name"
-        ],
         "title": "Study"
       },
       "StudyAmendment-Input": {
@@ -2433,18 +2426,20 @@
           "primaryReason": {
             "$ref": "#/components/schemas/StudyAmendmentReason"
           },
-          "secondaryReason": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/StudyAmendmentReason"
-              },
-              {
-                "type": "null"
-              }
-            ]
+          "secondaryReasons": {
+            "items": {
+              "$ref": "#/components/schemas/StudyAmendmentReason"
+            },
+            "type": "array",
+            "title": "Secondaryreasons",
+            "default": []
           },
-          "enrollment": {
-            "$ref": "#/components/schemas/Enrollment"
+          "enrollments": {
+            "items": {
+              "$ref": "#/components/schemas/SubjectEnrollment"
+            },
+            "type": "array",
+            "title": "Enrollments"
           },
           "previousId": {
             "anyOf": [
@@ -2465,7 +2460,7 @@
           "summary",
           "substantialImpact",
           "primaryReason",
-          "enrollment"
+          "enrollments"
         ],
         "title": "StudyAmendment"
       },
@@ -2491,18 +2486,20 @@
           "primaryReason": {
             "$ref": "#/components/schemas/StudyAmendmentReason"
           },
-          "secondaryReason": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/StudyAmendmentReason"
-              },
-              {
-                "type": "null"
-              }
-            ]
+          "secondaryReasons": {
+            "items": {
+              "$ref": "#/components/schemas/StudyAmendmentReason"
+            },
+            "type": "array",
+            "title": "Secondaryreasons",
+            "default": []
           },
-          "enrollment": {
-            "$ref": "#/components/schemas/Enrollment"
+          "enrollments": {
+            "items": {
+              "$ref": "#/components/schemas/SubjectEnrollment"
+            },
+            "type": "array",
+            "title": "Enrollments"
           },
           "previousId": {
             "anyOf": [
@@ -2523,7 +2520,7 @@
           "summary",
           "substantialImpact",
           "primaryReason",
-          "enrollment"
+          "enrollments"
         ],
         "title": "StudyAmendment"
       },
@@ -3327,12 +3324,12 @@
           "protocolStatus": {
             "$ref": "#/components/schemas/Code"
           },
-          "approvedOn": {
+          "dateValues": {
             "items": {
               "$ref": "#/components/schemas/GovernanceDate-Input"
             },
             "type": "array",
-            "title": "Approvedon",
+            "title": "Datevalues",
             "default": []
           },
           "contents": {
@@ -3343,12 +3340,12 @@
             "title": "Contents",
             "default": []
           },
-          "childrenId": {
+          "childrenIds": {
             "items": {
               "type": "string"
             },
             "type": "array",
-            "title": "Childrenid",
+            "title": "Childrenids",
             "default": []
           }
         },
@@ -3394,12 +3391,12 @@
           "protocolStatus": {
             "$ref": "#/components/schemas/Code"
           },
-          "approvedOn": {
+          "dateValues": {
             "items": {
               "$ref": "#/components/schemas/GovernanceDate-Output"
             },
             "type": "array",
-            "title": "Approvedon",
+            "title": "Datevalues",
             "default": []
           },
           "contents": {
@@ -3410,12 +3407,12 @@
             "title": "Contents",
             "default": []
           },
-          "childrenId": {
+          "childrenIds": {
             "items": {
               "type": "string"
             },
             "type": "array",
-            "title": "Childrenid",
+            "title": "Childrenids",
             "default": []
           }
         },
@@ -3484,20 +3481,20 @@
               }
             ]
           },
-          "approvedOn": {
+          "dateValues": {
             "items": {
               "$ref": "#/components/schemas/GovernanceDate-Input"
             },
             "type": "array",
-            "title": "Approvedon",
+            "title": "Datevalues",
             "default": []
           },
-          "protocolAmendments": {
+          "amendments": {
             "items": {
               "$ref": "#/components/schemas/StudyAmendment-Input"
             },
             "type": "array",
-            "title": "Protocolamendments",
+            "title": "Amendments",
             "default": []
           },
           "businessTherapeuticAreas": {
@@ -3588,20 +3585,20 @@
               }
             ]
           },
-          "approvedOn": {
+          "dateValues": {
             "items": {
               "$ref": "#/components/schemas/GovernanceDate-Output"
             },
             "type": "array",
-            "title": "Approvedon",
+            "title": "Datevalues",
             "default": []
           },
-          "protocolAmendments": {
+          "amendments": {
             "items": {
               "$ref": "#/components/schemas/StudyAmendment-Output"
             },
             "type": "array",
-            "title": "Protocolamendments",
+            "title": "Amendments",
             "default": []
           },
           "businessTherapeuticAreas": {
@@ -3638,6 +3635,33 @@
           "studyAcronym"
         ],
         "title": "StudyVersion"
+      },
+      "SubjectEnrollment": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "quantity": {
+            "type": "string",
+            "title": "Quantity"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "code",
+          "quantity"
+        ],
+        "title": "SubjectEnrollment"
       },
       "SyntaxTemplateDictionary": {
         "properties": {
