@@ -1608,17 +1608,16 @@ components:
           title: Id
         name:
           type: string
+          minLength: 1
           title: Name
         description:
-          anyOf:
-          - type: string
-          - type: 'null'
+          type: string
           title: Description
+          default: ''
         label:
-          anyOf:
-          - type: string
-          - type: 'null'
+          type: string
           title: Label
+          default: ''
         versions:
           items:
             $ref: '#/components/schemas/StudyVersion-Input'
@@ -1643,17 +1642,16 @@ components:
           title: Id
         name:
           type: string
+          minLength: 1
           title: Name
         description:
-          anyOf:
-          - type: string
-          - type: 'null'
+          type: string
           title: Description
+          default: ''
         label:
-          anyOf:
-          - type: string
-          - type: 'null'
+          type: string
           title: Label
+          default: ''
         versions:
           items:
             $ref: '#/components/schemas/StudyVersion-Output'

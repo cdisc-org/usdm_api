@@ -2337,29 +2337,18 @@
           },
           "name": {
             "type": "string",
+            "minLength": 1,
             "title": "Name"
           },
           "description": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Description"
+            "type": "string",
+            "title": "Description",
+            "default": ""
           },
           "label": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Label"
+            "type": "string",
+            "title": "Label",
+            "default": ""
           },
           "versions": {
             "items": {
@@ -2402,29 +2391,18 @@
           },
           "name": {
             "type": "string",
+            "minLength": 1,
             "title": "Name"
           },
           "description": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Description"
+            "type": "string",
+            "title": "Description",
+            "default": ""
           },
           "label": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Label"
+            "type": "string",
+            "title": "Label",
+            "default": ""
           },
           "versions": {
             "items": {
