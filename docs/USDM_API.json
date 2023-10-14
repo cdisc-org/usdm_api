@@ -318,11 +318,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "previousActivityId": {
             "anyOf": [
@@ -427,11 +429,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "previousActivityId": {
             "anyOf": [
@@ -616,11 +620,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "text": {
             "type": "string",
@@ -649,7 +655,8 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "bcSynonyms": {
             "items": {
@@ -698,7 +705,8 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "bcSynonyms": {
             "items": {
@@ -747,11 +755,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "bcCategoryChildIds": {
             "items": {
@@ -801,11 +811,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "bcCategoryChildIds": {
             "items": {
@@ -855,7 +867,8 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "bcPropertyRequired": {
             "type": "boolean",
@@ -906,7 +919,8 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "bcPropertyRequired": {
             "type": "boolean",
@@ -957,11 +971,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "bcSurrogateReference": {
             "type": "string",
@@ -1024,11 +1040,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "type": {
             "$ref": "#/components/schemas/Code"
@@ -1127,11 +1145,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "instanceType": {
             "type": "string",
@@ -1245,11 +1265,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "type": {
             "$ref": "#/components/schemas/Code"
@@ -1291,11 +1313,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "type": {
             "$ref": "#/components/schemas/Code"
@@ -1350,11 +1374,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "codes": {
             "items": {
@@ -1386,11 +1412,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "intercurrentEventStrategy": {
             "type": "string",
@@ -1414,7 +1442,8 @@
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "codes": {
             "items": {
@@ -1494,11 +1523,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "instanceType": {
             "type": "string",
@@ -1558,11 +1589,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "instanceType": {
             "type": "string",
@@ -1622,7 +1655,8 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "type": {
             "$ref": "#/components/schemas/Code"
@@ -1670,7 +1704,8 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "type": {
             "$ref": "#/components/schemas/Code"
@@ -1718,11 +1753,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "procedureType": {
             "type": "string",
@@ -1794,11 +1831,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "mainTimeline": {
             "type": "boolean",
@@ -1860,11 +1899,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "mainTimeline": {
             "type": "boolean",
@@ -2567,11 +2608,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "type": {
             "$ref": "#/components/schemas/Code"
@@ -2640,11 +2683,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "trialIntentTypes": {
             "items": {
@@ -2841,11 +2886,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "trialIntentTypes": {
             "items": {
@@ -3042,11 +3089,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "plannedNumberOfParticipants": {
             "type": "integer",
@@ -3094,11 +3143,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "transitionStartRule": {
             "anyOf": [
@@ -3142,11 +3193,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "type": {
             "$ref": "#/components/schemas/Code"
@@ -3242,11 +3295,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "versions": {
             "items": {
@@ -3278,11 +3333,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "versions": {
             "items": {
@@ -3683,11 +3740,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "text": {
             "type": "string",
@@ -3720,11 +3779,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "type": {
             "$ref": "#/components/schemas/Code"
@@ -3816,11 +3877,13 @@
           },
           "label": {
             "type": "string",
-            "title": "Label"
+            "title": "Label",
+            "default": ""
           },
           "description": {
             "type": "string",
-            "title": "Description"
+            "title": "Description",
+            "default": ""
           },
           "text": {
             "type": "string",

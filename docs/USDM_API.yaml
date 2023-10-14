@@ -223,9 +223,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         previousActivityId:
           anyOf:
           - type: string
@@ -292,9 +294,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         previousActivityId:
           anyOf:
           - type: string
@@ -418,9 +422,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         text:
           type: string
           title: Text
@@ -443,6 +449,7 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         bcSynonyms:
           items:
             type: string
@@ -480,6 +487,7 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         bcSynonyms:
           items:
             type: string
@@ -517,9 +525,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         bcCategoryChildIds:
           items:
             type: string
@@ -554,9 +564,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         bcCategoryChildIds:
           items:
             type: string
@@ -591,6 +603,7 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         bcPropertyRequired:
           type: boolean
           title: Bcpropertyrequired
@@ -630,6 +643,7 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         bcPropertyRequired:
           type: boolean
           title: Bcpropertyrequired
@@ -669,9 +683,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         bcSurrogateReference:
           type: string
           title: Bcsurrogatereference
@@ -720,9 +736,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         type:
           $ref: '#/components/schemas/Code'
         previousEncounterId:
@@ -777,9 +795,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         instanceType:
           type: string
           enum:
@@ -866,9 +886,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         type:
           $ref: '#/components/schemas/Code'
         dataValue:
@@ -901,9 +923,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         type:
           $ref: '#/components/schemas/Code'
         dataValue:
@@ -945,9 +969,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         codes:
           items:
             $ref: '#/components/schemas/Code'
@@ -972,9 +998,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         intercurrentEventStrategy:
           type: string
           title: Intercurrenteventstrategy
@@ -993,6 +1021,7 @@ components:
         description:
           type: string
           title: Description
+          default: ''
         codes:
           items:
             $ref: '#/components/schemas/Code'
@@ -1050,9 +1079,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         instanceType:
           type: string
           enum:
@@ -1095,9 +1126,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         instanceType:
           type: string
           enum:
@@ -1140,6 +1173,7 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         type:
           $ref: '#/components/schemas/Code'
         organizationIdentifierScheme:
@@ -1173,6 +1207,7 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         type:
           $ref: '#/components/schemas/Code'
         organizationIdentifierScheme:
@@ -1206,9 +1241,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         procedureType:
           type: string
           title: Proceduretype
@@ -1260,9 +1297,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         mainTimeline:
           type: boolean
           title: Maintimeline
@@ -1307,9 +1346,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         mainTimeline:
           type: boolean
           title: Maintimeline
@@ -1741,9 +1782,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         type:
           $ref: '#/components/schemas/Code'
         studyArmDataOriginDescription:
@@ -1796,9 +1839,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         trialIntentTypes:
           items:
             $ref: '#/components/schemas/Code'
@@ -1940,9 +1985,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         trialIntentTypes:
           items:
             $ref: '#/components/schemas/Code'
@@ -2084,9 +2131,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         plannedNumberOfParticipants:
           type: integer
           minimum: 0.0
@@ -2124,9 +2173,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         transitionStartRule:
           anyOf:
           - $ref: '#/components/schemas/TransitionRule'
@@ -2153,9 +2204,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         type:
           $ref: '#/components/schemas/Code'
         previousStudyEpochId:
@@ -2221,9 +2274,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         versions:
           items:
             $ref: '#/components/schemas/StudyProtocolDocumentVersion-Input'
@@ -2248,9 +2303,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         versions:
           items:
             $ref: '#/components/schemas/StudyProtocolDocumentVersion-Output'
@@ -2533,9 +2590,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         text:
           type: string
           title: Text
@@ -2561,9 +2620,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         type:
           $ref: '#/components/schemas/Code'
         timingValue:
@@ -2617,9 +2678,11 @@ components:
         label:
           type: string
           title: Label
+          default: ''
         description:
           type: string
           title: Description
+          default: ''
         text:
           type: string
           title: Text
