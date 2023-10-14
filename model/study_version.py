@@ -16,8 +16,8 @@ class StudyVersion(ApiBaseModelWithId):
   type: Union[genericCode, None] = None
   studyPhase: Union[AliasCode, None] = None
   documentVersion: Union[StudyProtocolDocumentVersion, None] = None
-  dateValue: List[GovernanceDate] = []
-  protocolAmendments: List[StudyAmendment] = []
+  dateValues: List[GovernanceDate] = []
+  amendments: List[StudyAmendment] = []
   businessTherapeuticAreas: List[Code] = []
   studyIdentifiers: List[StudyIdentifier] = []
   studyDesigns: List[StudyDesign] = []
