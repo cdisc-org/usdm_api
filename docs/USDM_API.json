@@ -2340,6 +2340,9 @@
           }
         },
         "type": "object",
+        "required": [
+          "name"
+        ],
         "title": "Study"
       },
       "Study-Output": {
@@ -2402,6 +2405,9 @@
           }
         },
         "type": "object",
+        "required": [
+          "name"
+        ],
         "title": "Study"
       },
       "StudyAmendment-Input": {

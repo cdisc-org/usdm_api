@@ -1589,6 +1589,8 @@ components:
           - $ref: '#/components/schemas/StudyProtocolDocument-Input'
           - type: 'null'
       type: object
+      required:
+      - name
       title: Study
     Study-Output:
       properties:
@@ -1622,6 +1624,8 @@ components:
           - $ref: '#/components/schemas/StudyProtocolDocument-Output'
           - type: 'null'
       type: object
+      required:
+      - name
       title: Study
     StudyAmendment-Input:
       properties:
