@@ -2644,14 +2644,14 @@
           },
           "otherReason": {
             "type": "string",
-            "title": "Otherreason"
+            "title": "Otherreason",
+            "default": ""
           }
         },
         "type": "object",
         "required": [
           "id",
-          "code",
-          "otherReason"
+          "code"
         ],
         "title": "StudyAmendmentReason"
       },

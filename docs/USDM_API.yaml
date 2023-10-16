@@ -1819,11 +1819,11 @@ components:
         otherReason:
           type: string
           title: Otherreason
+          default: ''
       type: object
       required:
       - id
       - code
-      - otherReason
       title: StudyAmendmentReason
     StudyArm:
       properties:

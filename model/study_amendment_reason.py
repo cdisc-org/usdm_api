@@ -3,4 +3,4 @@ from .code import Code
 
 class StudyAmendmentReason(ApiBaseModelWithId):
   code: Code
-  otherReason: str
+  otherReason: str = ""
