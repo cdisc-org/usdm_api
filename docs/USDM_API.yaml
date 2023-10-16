@@ -773,6 +773,7 @@ components:
       - id
       - name
       - instanceType
+      - text
       - dictionary
       - category
       - identifier
@@ -876,6 +877,7 @@ components:
       - id
       - name
       - instanceType
+      - text
       - dictionary
       - purpose
       - level
@@ -1165,6 +1167,7 @@ components:
       - id
       - name
       - instanceType
+      - text
       - dictionary
       title: Objective
     Objective-Output:
@@ -1212,6 +1215,7 @@ components:
       - id
       - name
       - instanceType
+      - text
       - dictionary
       title: Objective
     Organization-Input:
