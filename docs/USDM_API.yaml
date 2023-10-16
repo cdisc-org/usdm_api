@@ -902,7 +902,6 @@ components:
             $ref: '#/components/schemas/IntercurrentEvent'
           type: array
           title: Intercurrentevents
-          default: []
       type: object
       required:
       - id
@@ -910,6 +909,7 @@ components:
       - analysisPopulation
       - treatmentId
       - variableOfInterestId
+      - intercurrentEvents
       title: Estimand
     GeographicScope:
       properties:

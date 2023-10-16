@@ -1294,8 +1294,7 @@
               "$ref": "#/components/schemas/IntercurrentEvent"
             },
             "type": "array",
-            "title": "Intercurrentevents",
-            "default": []
+            "title": "Intercurrentevents"
           }
         },
         "type": "object",
@@ -1304,7 +1303,8 @@
           "summaryMeasure",
           "analysisPopulation",
           "treatmentId",
-          "variableOfInterestId"
+          "variableOfInterestId",
+          "intercurrentEvents"
         ],
         "title": "Estimand"
       },
