@@ -1597,11 +1597,11 @@ components:
             type: string
           type: object
           title: Conditionassignments
-          default: []
       type: object
       required:
       - id
       - instanceType
+      - conditionAssignments
       title: ScheduledDecisionInstance
     ScheduledDecisionInstance-Output:
       properties:
@@ -1646,11 +1646,11 @@ components:
             type: string
           type: object
           title: Conditionassignments
-          default: []
       type: object
       required:
       - id
       - instanceType
+      - conditionAssignments
       title: ScheduledDecisionInstance
     Study-Input:
       properties:

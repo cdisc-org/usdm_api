@@ -2306,14 +2306,14 @@
               "type": "string"
             },
             "type": "object",
-            "title": "Conditionassignments",
-            "default": []
+            "title": "Conditionassignments"
           }
         },
         "type": "object",
         "required": [
           "id",
-          "instanceType"
+          "instanceType",
+          "conditionAssignments"
         ],
         "title": "ScheduledDecisionInstance"
       },
@@ -2389,14 +2389,14 @@
               "type": "string"
             },
             "type": "object",
-            "title": "Conditionassignments",
-            "default": []
+            "title": "Conditionassignments"
           }
         },
         "type": "object",
         "required": [
           "id",
-          "instanceType"
+          "instanceType",
+          "conditionAssignments"
         ],
         "title": "ScheduledDecisionInstance"
       },
