@@ -15,4 +15,4 @@ class ScheduledActivityInstance(ScheduledInstance):
   scheduledActivityInstanceEncounterId: Union[str, None] = None
 
 class ScheduledDecisionInstance(ScheduledInstance):
-  conditionAssignments: Dict[str, str] = []
+  conditionAssignments: Dict[str, str]
