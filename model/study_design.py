@@ -30,17 +30,17 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   biomedicalConcepts: List[BiomedicalConcept] = []
   bcCategories: List[BiomedicalConceptCategory] = []
   bcSurrogates: List[BiomedicalConceptSurrogate] = []
-  studyArms: List[StudyArm]
+  arms: List[StudyArm]
   studyCells: List[StudyCell]
-  studyDesignBlindingScheme: Union[AliasCode, None] = None
-  studyDesignRationale: str
-  studyEpochs: List[StudyEpoch]
-  studyElements: List[StudyElement] = []
-  studyEstimands: List[Estimand] = []
-  studyIndications: List[Indication] = []
-  studyInvestigationalInterventions: List[InvestigationalIntervention] = []
-  studyObjectives: List[Objective] = []
-  studyPopulations: List[StudyDesignPopulation] = []
-  studyScheduleTimelines: List[ScheduleTimeline] = []
+  blindingScheme: Union[AliasCode, None] = None
+  rationale: str
+  epochs: List[StudyEpoch]
+  elements: List[StudyElement] = []
+  estimands: List[Estimand] = []
+  indications: List[Indication] = []
+  studyInterventions: List[InvestigationalIntervention] = []
+  objectives: List[Objective] = []
+  populations: List[StudyDesignPopulation] = []
+  scheduleTimelines: List[ScheduleTimeline] = []
   documentVersion: Union[StudyProtocolDocumentVersion, None] = None
-  studyEligibilityCritieria: List[EligibilityCriteria] = []    
+  eligibilityCritieria: List[EligibilityCriteria] = []    
