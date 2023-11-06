@@ -228,30 +228,30 @@ components:
           type: string
           title: Description
           default: ''
-        previousActivityId:
+        previousId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Previousactivityid
-        nextActivityId:
+          title: Previousid
+        nextId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Nextactivityid
+          title: Nextid
         definedProcedures:
           items:
-            $ref: '#/components/schemas/Procedure'
+            $ref: '#/components/schemas/Procedure-Input'
           type: array
           title: Definedprocedures
           default: []
-        activityIsConditional:
+        isConditional:
           type: boolean
-          title: Activityisconditional
-        activityIsConditionalReason:
+          title: Isconditional
+        isConditionalReason:
           anyOf:
           - type: string
           - type: 'null'
-          title: Activityisconditionalreason
+          title: Isconditionalreason
         biomedicalConceptIds:
           items:
             type: string
@@ -270,16 +270,16 @@ components:
           type: array
           title: Bcsurrogateids
           default: []
-        activityTimelineId:
+        timelineId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Activitytimelineid
+          title: Timelineid
       type: object
       required:
       - id
       - name
-      - activityIsConditional
+      - isConditional
       title: Activity
     Activity-Output:
       properties:
@@ -299,30 +299,30 @@ components:
           type: string
           title: Description
           default: ''
-        previousActivityId:
+        previousId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Previousactivityid
-        nextActivityId:
+          title: Previousid
+        nextId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Nextactivityid
+          title: Nextid
         definedProcedures:
           items:
-            $ref: '#/components/schemas/Procedure'
+            $ref: '#/components/schemas/Procedure-Output'
           type: array
           title: Definedprocedures
           default: []
-        activityIsConditional:
+        isConditional:
           type: boolean
-          title: Activityisconditional
-        activityIsConditionalReason:
+          title: Isconditional
+        isConditionalReason:
           anyOf:
           - type: string
           - type: 'null'
-          title: Activityisconditionalreason
+          title: Isconditionalreason
         biomedicalConceptIds:
           items:
             type: string
@@ -341,16 +341,16 @@ components:
           type: array
           title: Bcsurrogateids
           default: []
-        activityTimelineId:
+        timelineId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Activitytimelineid
+          title: Timelineid
       type: object
       required:
       - id
       - name
-      - activityIsConditional
+      - isConditional
       title: Activity
     Address:
       properties:
@@ -390,6 +390,126 @@ components:
       required:
       - id
       title: Address
+    AdministrationDuration-Input:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        quantity:
+          $ref: '#/components/schemas/Quantity'
+        description:
+          type: string
+          title: Description
+        durationWillVary:
+          type: boolean
+          title: Durationwillvary
+        reasonDurationWillVary:
+          type: string
+          title: Reasondurationwillvary
+      type: object
+      required:
+      - id
+      - quantity
+      - description
+      - durationWillVary
+      - reasonDurationWillVary
+      title: AdministrationDuration
+    AdministrationDuration-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        quantity:
+          $ref: '#/components/schemas/Quantity'
+        description:
+          type: string
+          title: Description
+        durationWillVary:
+          type: boolean
+          title: Durationwillvary
+        reasonDurationWillVary:
+          type: string
+          title: Reasondurationwillvary
+      type: object
+      required:
+      - id
+      - quantity
+      - description
+      - durationWillVary
+      - reasonDurationWillVary
+      title: AdministrationDuration
+    AgentAdministration-Input:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          type: string
+          title: Label
+          default: ''
+        description:
+          type: string
+          title: Description
+          default: ''
+        duration:
+          $ref: '#/components/schemas/AdministrationDuration-Input'
+        dose:
+          $ref: '#/components/schemas/Quantity'
+        route:
+          $ref: '#/components/schemas/Code'
+        frequency:
+          $ref: '#/components/schemas/Code'
+      type: object
+      required:
+      - id
+      - name
+      - duration
+      - dose
+      - route
+      - frequency
+      title: AgentAdministration
+    AgentAdministration-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          type: string
+          title: Label
+          default: ''
+        description:
+          type: string
+          title: Description
+          default: ''
+        duration:
+          $ref: '#/components/schemas/AdministrationDuration-Output'
+        dose:
+          $ref: '#/components/schemas/Quantity'
+        route:
+          $ref: '#/components/schemas/Code'
+        frequency:
+          $ref: '#/components/schemas/Code'
+      type: object
+      required:
+      - id
+      - name
+      - duration
+      - dose
+      - route
+      - frequency
+      title: AgentAdministration
     AliasCode:
       properties:
         id:
@@ -450,20 +570,20 @@ components:
           type: string
           title: Label
           default: ''
-        bcSynonyms:
+        synonyms:
           items:
             type: string
           type: array
-          title: Bcsynonyms
+          title: Synonyms
           default: []
-        bcReference:
+        reference:
           type: string
-          title: Bcreference
-        bcProperties:
+          title: Reference
+        properties:
           items:
             $ref: '#/components/schemas/BiomedicalConceptProperty-Input'
           type: array
-          title: Bcproperties
+          title: Properties
           default: []
         code:
           $ref: '#/components/schemas/AliasCode'
@@ -471,7 +591,7 @@ components:
       required:
       - id
       - name
-      - bcReference
+      - reference
       - code
       title: BiomedicalConcept
     BiomedicalConcept-Output:
@@ -488,20 +608,20 @@ components:
           type: string
           title: Label
           default: ''
-        bcSynonyms:
+        synonyms:
           items:
             type: string
           type: array
-          title: Bcsynonyms
+          title: Synonyms
           default: []
-        bcReference:
+        reference:
           type: string
-          title: Bcreference
-        bcProperties:
+          title: Reference
+        properties:
           items:
             $ref: '#/components/schemas/BiomedicalConceptProperty-Output'
           type: array
-          title: Bcproperties
+          title: Properties
           default: []
         code:
           $ref: '#/components/schemas/AliasCode'
@@ -509,7 +629,7 @@ components:
       required:
       - id
       - name
-      - bcReference
+      - reference
       - code
       title: BiomedicalConcept
     BiomedicalConceptCategory-Input:
@@ -530,17 +650,17 @@ components:
           type: string
           title: Description
           default: ''
-        bcCategoryChildIds:
+        childrenIds:
           items:
             type: string
           type: array
-          title: Bccategorychildids
+          title: Childrenids
           default: []
-        bcCategoryMemberIds:
+        memberIds:
           items:
             type: string
           type: array
-          title: Bccategorymemberids
+          title: Memberids
           default: []
         code:
           anyOf:
@@ -569,17 +689,17 @@ components:
           type: string
           title: Description
           default: ''
-        bcCategoryChildIds:
+        childrenIds:
           items:
             type: string
           type: array
-          title: Bccategorychildids
+          title: Childrenids
           default: []
-        bcCategoryMemberIds:
+        memberIds:
           items:
             type: string
           type: array
-          title: Bccategorymemberids
+          title: Memberids
           default: []
         code:
           anyOf:
@@ -604,20 +724,20 @@ components:
           type: string
           title: Label
           default: ''
-        bcPropertyRequired:
+        isRequired:
           type: boolean
-          title: Bcpropertyrequired
-        bcPropertyEnabled:
+          title: Isrequired
+        isEnabled:
           type: boolean
-          title: Bcpropertyenabled
-        bcPropertyDatatype:
+          title: Isenabled
+        datatype:
           type: string
-          title: Bcpropertydatatype
-        bcPropertyResponseCodes:
+          title: Datatype
+        responseCodes:
           items:
             $ref: '#/components/schemas/ResponseCode'
           type: array
-          title: Bcpropertyresponsecodes
+          title: Responsecodes
           default: []
         code:
           $ref: '#/components/schemas/AliasCode'
@@ -625,9 +745,9 @@ components:
       required:
       - id
       - name
-      - bcPropertyRequired
-      - bcPropertyEnabled
-      - bcPropertyDatatype
+      - isRequired
+      - isEnabled
+      - datatype
       - code
       title: BiomedicalConceptProperty
     BiomedicalConceptProperty-Output:
@@ -644,20 +764,20 @@ components:
           type: string
           title: Label
           default: ''
-        bcPropertyRequired:
+        isRequired:
           type: boolean
-          title: Bcpropertyrequired
-        bcPropertyEnabled:
+          title: Isrequired
+        isEnabled:
           type: boolean
-          title: Bcpropertyenabled
-        bcPropertyDatatype:
+          title: Isenabled
+        datatype:
           type: string
-          title: Bcpropertydatatype
-        bcPropertyResponseCodes:
+          title: Datatype
+        responseCodes:
           items:
             $ref: '#/components/schemas/ResponseCode'
           type: array
-          title: Bcpropertyresponsecodes
+          title: Responsecodes
           default: []
         code:
           $ref: '#/components/schemas/AliasCode'
@@ -665,9 +785,9 @@ components:
       required:
       - id
       - name
-      - bcPropertyRequired
-      - bcPropertyEnabled
-      - bcPropertyDatatype
+      - isRequired
+      - isEnabled
+      - datatype
       - code
       title: BiomedicalConceptProperty
     BiomedicalConceptSurrogate:
@@ -688,9 +808,9 @@ components:
           type: string
           title: Description
           default: ''
-        bcSurrogateReference:
+        reference:
           type: string
-          title: Bcsurrogatereference
+          title: Reference
           default: ''
       type: object
       required:
@@ -758,16 +878,16 @@ components:
         identifier:
           type: string
           title: Identifier
-        nextCriterionId:
+        nextId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Nextcriterionid
-        previousCriterionId:
+          title: Nextid
+        previousId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Previouscriterionid
+          title: Previousid
       type: object
       required:
       - id
@@ -798,30 +918,30 @@ components:
           default: ''
         type:
           $ref: '#/components/schemas/Code'
-        previousEncounterId:
+        previousId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Previousencounterid
-        nextEncounterId:
+          title: Previousid
+        nextId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Nextencounterid
+          title: Nextid
         encounterScheduledAtTimingId:
           anyOf:
           - type: string
           - type: 'null'
           title: Encounterscheduledattimingid
-        encounterEnvironmentalSetting:
+        environmentalSetting:
           anyOf:
           - $ref: '#/components/schemas/Code'
           - type: 'null'
-        encounterContactModes:
+        contactModes:
           items:
             $ref: '#/components/schemas/Code'
           type: array
-          title: Encountercontactmodes
+          title: Contactmodes
           default: []
         transitionStartRule:
           anyOf:
@@ -1059,14 +1179,14 @@ components:
           type: string
           title: Description
           default: ''
-        intercurrentEventStrategy:
+        strategy:
           type: string
-          title: Intercurrenteventstrategy
+          title: Strategy
       type: object
       required:
       - id
       - name
-      - intercurrentEventStrategy
+      - strategy
       title: IntercurrentEvent
     InvestigationalIntervention:
       properties:
@@ -1109,11 +1229,11 @@ components:
           - type: string
           - type: 'null'
           title: Text
-        contentChildIds:
+        childrenIds:
           items:
             type: string
           type: array
-          title: Contentchildids
+          title: Childrenids
           default: []
       type: object
       required:
@@ -1156,11 +1276,11 @@ components:
           anyOf:
           - $ref: '#/components/schemas/Code'
           - type: 'null'
-        objectiveEndpoints:
+        endpoints:
           items:
             $ref: '#/components/schemas/Endpoint'
           type: array
-          title: Objectiveendpoints
+          title: Endpoints
           default: []
       type: object
       required:
@@ -1204,11 +1324,11 @@ components:
           anyOf:
           - $ref: '#/components/schemas/Code'
           - type: 'null'
-        objectiveEndpoints:
+        endpoints:
           items:
             $ref: '#/components/schemas/Endpoint'
           type: array
-          title: Objectiveendpoints
+          title: Endpoints
           default: []
       type: object
       required:
@@ -1234,13 +1354,13 @@ components:
           default: ''
         type:
           $ref: '#/components/schemas/Code'
-        organizationIdentifierScheme:
+        identifierScheme:
           type: string
-          title: Organizationidentifierscheme
-        organizationIdentifier:
+          title: Identifierscheme
+        identifier:
           type: string
-          title: Organizationidentifier
-        organizationLegalAddress:
+          title: Identifier
+        legalAddress:
           anyOf:
           - $ref: '#/components/schemas/Address'
           - type: 'null'
@@ -1249,8 +1369,8 @@ components:
       - id
       - name
       - type
-      - organizationIdentifierScheme
-      - organizationIdentifier
+      - identifierScheme
+      - identifier
       title: Organization
     Organization-Output:
       properties:
@@ -1268,13 +1388,13 @@ components:
           default: ''
         type:
           $ref: '#/components/schemas/Code'
-        organizationIdentifierScheme:
+        identifierScheme:
           type: string
-          title: Organizationidentifierscheme
-        organizationIdentifier:
+          title: Identifierscheme
+        identifier:
           type: string
-          title: Organizationidentifier
-        organizationLegalAddress:
+          title: Identifier
+        legalAddress:
           anyOf:
           - $ref: '#/components/schemas/Address'
           - type: 'null'
@@ -1283,10 +1403,10 @@ components:
       - id
       - name
       - type
-      - organizationIdentifierScheme
-      - organizationIdentifier
+      - identifierScheme
+      - identifier
       title: Organization
-    Procedure:
+    Procedure-Input:
       properties:
         id:
           type: string
@@ -1309,37 +1429,101 @@ components:
           title: Proceduretype
         code:
           $ref: '#/components/schemas/Code'
-        procedureIsConditional:
+        isConditional:
           type: boolean
-          title: Procedureisconditional
-        procedureIsConditionalReason:
+          title: Isconditional
+        isConditionalReason:
           anyOf:
           - type: string
           - type: 'null'
-          title: Procedureisconditionalreason
+          title: Isconditionalreason
+        studyIntervention:
+          anyOf:
+          - $ref: '#/components/schemas/StudyIntervention-Input'
+          - type: 'null'
       type: object
       required:
       - id
       - name
       - procedureType
       - code
-      - procedureIsConditional
+      - isConditional
       title: Procedure
+    Procedure-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          type: string
+          title: Label
+          default: ''
+        description:
+          type: string
+          title: Description
+          default: ''
+        procedureType:
+          type: string
+          title: Proceduretype
+        code:
+          $ref: '#/components/schemas/Code'
+        isConditional:
+          type: boolean
+          title: Isconditional
+        isConditionalReason:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Isconditionalreason
+        studyIntervention:
+          anyOf:
+          - $ref: '#/components/schemas/StudyIntervention-Output'
+          - type: 'null'
+      type: object
+      required:
+      - id
+      - name
+      - procedureType
+      - code
+      - isConditional
+      title: Procedure
+    Quantity:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        unit:
+          $ref: '#/components/schemas/Code'
+        value:
+          type: number
+          title: Value
+      type: object
+      required:
+      - id
+      - unit
+      - value
+      title: Quantity
     ResponseCode:
       properties:
         id:
           type: string
           minLength: 1
           title: Id
-        responseCodeEnabled:
+        isEnabled:
           type: boolean
-          title: Responsecodeenabled
+          title: Isenabled
         code:
           $ref: '#/components/schemas/Code'
       type: object
       required:
       - id
-      - responseCodeEnabled
+      - isEnabled
       - code
       title: ResponseCode
     ScheduleTimeline-Input:
@@ -1366,22 +1550,22 @@ components:
         entryCondition:
           type: string
           title: Entrycondition
-        scheduleTimelineEntryId:
+        entryId:
           type: string
-          title: Scheduletimelineentryid
-        scheduleTimelineExits:
+          title: Entryid
+        exits:
           items:
             $ref: '#/components/schemas/ScheduleTimelineExit'
           type: array
-          title: Scheduletimelineexits
+          title: Exits
           default: []
-        scheduleTimelineInstances:
+        instances:
           items:
             anyOf:
             - $ref: '#/components/schemas/ScheduledActivityInstance-Input'
             - $ref: '#/components/schemas/ScheduledDecisionInstance-Input'
           type: array
-          title: Scheduletimelineinstances
+          title: Instances
           default: []
       type: object
       required:
@@ -1389,7 +1573,7 @@ components:
       - name
       - mainTimeline
       - entryCondition
-      - scheduleTimelineEntryId
+      - entryId
       title: ScheduleTimeline
     ScheduleTimeline-Output:
       properties:
@@ -1415,22 +1599,22 @@ components:
         entryCondition:
           type: string
           title: Entrycondition
-        scheduleTimelineEntryId:
+        entryId:
           type: string
-          title: Scheduletimelineentryid
-        scheduleTimelineExits:
+          title: Entryid
+        exits:
           items:
             $ref: '#/components/schemas/ScheduleTimelineExit'
           type: array
-          title: Scheduletimelineexits
+          title: Exits
           default: []
-        scheduleTimelineInstances:
+        instances:
           items:
             anyOf:
             - $ref: '#/components/schemas/ScheduledActivityInstance-Output'
             - $ref: '#/components/schemas/ScheduledDecisionInstance-Output'
           type: array
-          title: Scheduletimelineinstances
+          title: Instances
           default: []
       type: object
       required:
@@ -1438,7 +1622,7 @@ components:
       - name
       - mainTimeline
       - entryCondition
-      - scheduleTimelineEntryId
+      - entryId
       title: ScheduleTimeline
     ScheduleTimelineExit:
       properties:
@@ -1462,22 +1646,22 @@ components:
           - ACTIVITY
           - DECISION
           title: Instancetype
-        scheduledInstanceTimings:
+        timings:
           items:
             $ref: '#/components/schemas/Timing'
           type: array
-          title: Scheduledinstancetimings
+          title: Timings
           default: []
-        scheduledInstanceTimelineId:
+        timelineId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Scheduledinstancetimelineid
-        scheduleTimelineExitId:
+          title: Timelineid
+        timelineExitId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Scheduletimelineexitid
+          title: Timelineexitid
         defaultConditionId:
           anyOf:
           - type: string
@@ -1494,11 +1678,11 @@ components:
           type: array
           title: Activityids
           default: []
-        scheduledActivityInstanceEncounterId:
+        encounterId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Scheduledactivityinstanceencounterid
+          title: Encounterid
       type: object
       required:
       - id
@@ -1516,22 +1700,22 @@ components:
           - ACTIVITY
           - DECISION
           title: Instancetype
-        scheduledInstanceTimings:
+        timings:
           items:
             $ref: '#/components/schemas/Timing'
           type: array
-          title: Scheduledinstancetimings
+          title: Timings
           default: []
-        scheduledInstanceTimelineId:
+        timelineId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Scheduledinstancetimelineid
-        scheduleTimelineExitId:
+          title: Timelineid
+        timelineExitId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Scheduletimelineexitid
+          title: Timelineexitid
         defaultConditionId:
           anyOf:
           - type: string
@@ -1548,11 +1732,11 @@ components:
           type: array
           title: Activityids
           default: []
-        scheduledActivityInstanceEncounterId:
+        encounterId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Scheduledactivityinstanceencounterid
+          title: Encounterid
       type: object
       required:
       - id
@@ -1570,22 +1754,22 @@ components:
           - ACTIVITY
           - DECISION
           title: Instancetype
-        scheduledInstanceTimings:
+        timings:
           items:
             $ref: '#/components/schemas/Timing'
           type: array
-          title: Scheduledinstancetimings
+          title: Timings
           default: []
-        scheduledInstanceTimelineId:
+        timelineId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Scheduledinstancetimelineid
-        scheduleTimelineExitId:
+          title: Timelineid
+        timelineExitId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Scheduletimelineexitid
+          title: Timelineexitid
         defaultConditionId:
           anyOf:
           - type: string
@@ -1619,22 +1803,22 @@ components:
           - ACTIVITY
           - DECISION
           title: Instancetype
-        scheduledInstanceTimings:
+        timings:
           items:
             $ref: '#/components/schemas/Timing'
           type: array
-          title: Scheduledinstancetimings
+          title: Timings
           default: []
-        scheduledInstanceTimelineId:
+        timelineId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Scheduledinstancetimelineid
-        scheduleTimelineExitId:
+          title: Timelineid
+        timelineExitId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Scheduletimelineexitid
+          title: Timelineexitid
         defaultConditionId:
           anyOf:
           - type: string
@@ -1845,9 +2029,9 @@ components:
           default: ''
         type:
           $ref: '#/components/schemas/Code'
-        studyArmDataOriginDescription:
+        dataOriginDescription:
           type: string
-          title: Studyarmdataorigindescription
+          title: Dataorigindescription
         dataOriginType:
           $ref: '#/components/schemas/Code'
       type: object
@@ -1855,7 +2039,7 @@ components:
       - id
       - name
       - type
-      - studyArmDataOriginDescription
+      - dataOriginDescription
       - dataOriginType
       title: StudyArm
     StudyCell:
@@ -1864,23 +2048,23 @@ components:
           type: string
           minLength: 1
           title: Id
-        studyArmId:
+        armId:
           type: string
-          title: Studyarmid
-        studyEpochId:
+          title: Armid
+        epochId:
           type: string
-          title: Studyepochid
-        studyElementIds:
+          title: Epochid
+        elementIds:
           items:
             type: string
           type: array
-          title: Studyelementids
+          title: Elementids
           default: []
       type: object
       required:
       - id
-      - studyArmId
-      - studyEpochId
+      - armId
+      - epochId
       title: StudyCell
     StudyDesign-Input:
       properties:
@@ -1950,89 +2134,89 @@ components:
           type: array
           title: Bcsurrogates
           default: []
-        studyArms:
+        arms:
           items:
             $ref: '#/components/schemas/StudyArm'
           type: array
-          title: Studyarms
+          title: Arms
         studyCells:
           items:
             $ref: '#/components/schemas/StudyCell'
           type: array
           title: Studycells
-        studyDesignBlindingScheme:
+        blindingScheme:
           anyOf:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
-        studyDesignRationale:
+        rationale:
           type: string
-          title: Studydesignrationale
-        studyEpochs:
+          title: Rationale
+        epochs:
           items:
             $ref: '#/components/schemas/StudyEpoch'
           type: array
-          title: Studyepochs
-        studyElements:
+          title: Epochs
+        elements:
           items:
-            $ref: '#/components/schemas/StudyElement'
+            $ref: '#/components/schemas/StudyElement-Input'
           type: array
-          title: Studyelements
+          title: Elements
           default: []
-        studyEstimands:
+        estimands:
           items:
             $ref: '#/components/schemas/Estimand'
           type: array
-          title: Studyestimands
+          title: Estimands
           default: []
-        studyIndications:
+        indications:
           items:
             $ref: '#/components/schemas/Indication'
           type: array
-          title: Studyindications
+          title: Indications
           default: []
-        studyInvestigationalInterventions:
+        studyInterventions:
           items:
             $ref: '#/components/schemas/InvestigationalIntervention'
           type: array
-          title: Studyinvestigationalinterventions
+          title: Studyinterventions
           default: []
-        studyObjectives:
+        objectives:
           items:
             $ref: '#/components/schemas/Objective-Input'
           type: array
-          title: Studyobjectives
+          title: Objectives
           default: []
-        studyPopulations:
+        populations:
           items:
             $ref: '#/components/schemas/StudyDesignPopulation'
           type: array
-          title: Studypopulations
+          title: Populations
           default: []
-        studyScheduleTimelines:
+        scheduleTimelines:
           items:
             $ref: '#/components/schemas/ScheduleTimeline-Input'
           type: array
-          title: Studyscheduletimelines
+          title: Scheduletimelines
           default: []
         documentVersion:
           anyOf:
           - $ref: '#/components/schemas/StudyProtocolDocumentVersion-Input'
           - type: 'null'
-        studyEligibilityCritieria:
+        eligibilityCritieria:
           items:
             $ref: '#/components/schemas/EligibilityCriteria'
           type: array
-          title: Studyeligibilitycritieria
+          title: Eligibilitycritieria
           default: []
       type: object
       required:
       - id
       - name
       - interventionModel
-      - studyArms
+      - arms
       - studyCells
-      - studyDesignRationale
-      - studyEpochs
+      - rationale
+      - epochs
       title: StudyDesign
     StudyDesign-Output:
       properties:
@@ -2102,89 +2286,89 @@ components:
           type: array
           title: Bcsurrogates
           default: []
-        studyArms:
+        arms:
           items:
             $ref: '#/components/schemas/StudyArm'
           type: array
-          title: Studyarms
+          title: Arms
         studyCells:
           items:
             $ref: '#/components/schemas/StudyCell'
           type: array
           title: Studycells
-        studyDesignBlindingScheme:
+        blindingScheme:
           anyOf:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
-        studyDesignRationale:
+        rationale:
           type: string
-          title: Studydesignrationale
-        studyEpochs:
+          title: Rationale
+        epochs:
           items:
             $ref: '#/components/schemas/StudyEpoch'
           type: array
-          title: Studyepochs
-        studyElements:
+          title: Epochs
+        elements:
           items:
-            $ref: '#/components/schemas/StudyElement'
+            $ref: '#/components/schemas/StudyElement-Output'
           type: array
-          title: Studyelements
+          title: Elements
           default: []
-        studyEstimands:
+        estimands:
           items:
             $ref: '#/components/schemas/Estimand'
           type: array
-          title: Studyestimands
+          title: Estimands
           default: []
-        studyIndications:
+        indications:
           items:
             $ref: '#/components/schemas/Indication'
           type: array
-          title: Studyindications
+          title: Indications
           default: []
-        studyInvestigationalInterventions:
+        studyInterventions:
           items:
             $ref: '#/components/schemas/InvestigationalIntervention'
           type: array
-          title: Studyinvestigationalinterventions
+          title: Studyinterventions
           default: []
-        studyObjectives:
+        objectives:
           items:
             $ref: '#/components/schemas/Objective-Output'
           type: array
-          title: Studyobjectives
+          title: Objectives
           default: []
-        studyPopulations:
+        populations:
           items:
             $ref: '#/components/schemas/StudyDesignPopulation'
           type: array
-          title: Studypopulations
+          title: Populations
           default: []
-        studyScheduleTimelines:
+        scheduleTimelines:
           items:
             $ref: '#/components/schemas/ScheduleTimeline-Output'
           type: array
-          title: Studyscheduletimelines
+          title: Scheduletimelines
           default: []
         documentVersion:
           anyOf:
           - $ref: '#/components/schemas/StudyProtocolDocumentVersion-Output'
           - type: 'null'
-        studyEligibilityCritieria:
+        eligibilityCritieria:
           items:
             $ref: '#/components/schemas/EligibilityCriteria'
           type: array
-          title: Studyeligibilitycritieria
+          title: Eligibilitycritieria
           default: []
       type: object
       required:
       - id
       - name
       - interventionModel
-      - studyArms
+      - arms
       - studyCells
-      - studyDesignRationale
-      - studyEpochs
+      - rationale
+      - epochs
       title: StudyDesign
     StudyDesignPopulation:
       properties:
@@ -2228,7 +2412,7 @@ components:
       - plannedMaximumAgeOfParticipants
       - plannedMinimumAgeOfParticipants
       title: StudyDesignPopulation
-    StudyElement:
+    StudyElement-Input:
       properties:
         id:
           type: string
@@ -2253,6 +2437,45 @@ components:
         transitionEndRule:
           anyOf:
           - $ref: '#/components/schemas/TransitionRule'
+          - type: 'null'
+        studyInterventions:
+          anyOf:
+          - $ref: '#/components/schemas/StudyIntervention-Input'
+          - type: 'null'
+      type: object
+      required:
+      - id
+      - name
+      title: StudyElement
+    StudyElement-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          type: string
+          title: Label
+          default: ''
+        description:
+          type: string
+          title: Description
+          default: ''
+        transitionStartRule:
+          anyOf:
+          - $ref: '#/components/schemas/TransitionRule'
+          - type: 'null'
+        transitionEndRule:
+          anyOf:
+          - $ref: '#/components/schemas/TransitionRule'
+          - type: 'null'
+        studyInterventions:
+          anyOf:
+          - $ref: '#/components/schemas/StudyIntervention-Output'
           - type: 'null'
       type: object
       required:
@@ -2279,16 +2502,16 @@ components:
           default: ''
         type:
           $ref: '#/components/schemas/Code'
-        previousStudyEpochId:
+        previousId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Previousstudyepochid
-        nextStudyEpochId:
+          title: Previousid
+        nextId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Nextstudyepochid
+          title: Nextid
       type: object
       required:
       - id
@@ -2329,6 +2552,94 @@ components:
       - studyIdentifier
       - studyIdentifierScope
       title: StudyIdentifier
+    StudyIntervention-Input:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          type: string
+          title: Label
+          default: ''
+        description:
+          type: string
+          title: Description
+          default: ''
+        role:
+          $ref: '#/components/schemas/Code'
+        type:
+          $ref: '#/components/schemas/Code'
+        minimumResponseDuration:
+          $ref: '#/components/schemas/Quantity'
+        codes:
+          $ref: '#/components/schemas/Code'
+        administrations:
+          $ref: '#/components/schemas/AgentAdministration-Input'
+        productDesignation:
+          $ref: '#/components/schemas/Code'
+        pharmacologicClass:
+          $ref: '#/components/schemas/Code'
+      type: object
+      required:
+      - id
+      - name
+      - role
+      - type
+      - minimumResponseDuration
+      - codes
+      - administrations
+      - productDesignation
+      - pharmacologicClass
+      title: StudyIntervention
+    StudyIntervention-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          type: string
+          title: Label
+          default: ''
+        description:
+          type: string
+          title: Description
+          default: ''
+        role:
+          $ref: '#/components/schemas/Code'
+        type:
+          $ref: '#/components/schemas/Code'
+        minimumResponseDuration:
+          $ref: '#/components/schemas/Quantity'
+        codes:
+          $ref: '#/components/schemas/Code'
+        administrations:
+          $ref: '#/components/schemas/AgentAdministration-Output'
+        productDesignation:
+          $ref: '#/components/schemas/Code'
+        pharmacologicClass:
+          $ref: '#/components/schemas/Code'
+      type: object
+      required:
+      - id
+      - name
+      - role
+      - type
+      - minimumResponseDuration
+      - codes
+      - administrations
+      - productDesignation
+      - pharmacologicClass
+      title: StudyIntervention
     StudyProtocolDocument-Input:
       properties:
         id:
@@ -2498,12 +2809,12 @@ components:
         studyTitle:
           type: string
           title: Studytitle
-        studyVersion:
+        versionIdentifier:
           type: string
-          title: Studyversion
-        studyRationale:
+          title: Versionidentifier
+        rationale:
           type: string
-          title: Studyrationale
+          title: Rationale
         studyAcronym:
           type: string
           title: Studyacronym
@@ -2553,8 +2864,8 @@ components:
       required:
       - id
       - studyTitle
-      - studyVersion
-      - studyRationale
+      - versionIdentifier
+      - rationale
       - studyAcronym
       title: StudyVersion
     StudyVersion-Output:
@@ -2566,12 +2877,12 @@ components:
         studyTitle:
           type: string
           title: Studytitle
-        studyVersion:
+        versionIdentifier:
           type: string
-          title: Studyversion
-        studyRationale:
+          title: Versionidentifier
+        rationale:
           type: string
-          title: Studyrationale
+          title: Rationale
         studyAcronym:
           type: string
           title: Studyacronym
@@ -2621,8 +2932,8 @@ components:
       required:
       - id
       - studyTitle
-      - studyVersion
-      - studyRationale
+      - versionIdentifier
+      - rationale
       - studyAcronym
       title: StudyVersion
     SubjectEnrollment:
@@ -2695,10 +3006,10 @@ components:
           default: ''
         type:
           $ref: '#/components/schemas/Code'
-        timingValue:
+        value:
           type: string
-          title: Timingvalue
-        timingRelativeToFrom:
+          title: Value
+        relativeToFrom:
           $ref: '#/components/schemas/Code'
         relativeFromScheduledInstanceId:
           anyOf:
@@ -2710,28 +3021,28 @@ components:
           - type: string
           - type: 'null'
           title: Relativetoscheduledinstanceid
-        timingWindowLower:
+        windowLower:
           anyOf:
           - type: string
           - type: 'null'
-          title: Timingwindowlower
-        timingWindowUpper:
+          title: Windowlower
+        windowUpper:
           anyOf:
           - type: string
           - type: 'null'
-          title: Timingwindowupper
-        timingWindow:
+          title: Windowupper
+        window:
           anyOf:
           - type: string
           - type: 'null'
-          title: Timingwindow
+          title: Window
       type: object
       required:
       - id
       - name
       - type
-      - timingValue
-      - timingRelativeToFrom
+      - value
+      - relativeToFrom
       title: Timing
     TransitionRule:
       properties:
