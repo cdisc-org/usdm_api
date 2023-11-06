@@ -12,7 +12,7 @@ class ScheduledInstance(ApiBaseModelWithId):
 
 class ScheduledActivityInstance(ScheduledInstance):
   activityIds: List[str] = []
-  scheduledActivityInstanceEncounterId: Union[str, None] = None
+  encounterId: Union[str, None] = None
 
 class ScheduledDecisionInstance(ScheduledInstance):
   conditionAssignments: Dict[str, str]
