@@ -9,7 +9,7 @@ from .code import Code
 from .encounter import Encounter
 from .study_cell import StudyCell
 from .indication import Indication
-from .investigational_intervention import InvestigationalIntervention
+from .study_intervention import StudyIntervention
 from .study_arm import StudyArm
 from .study_epoch import StudyEpoch
 from .study_element import StudyElement
@@ -38,7 +38,7 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   elements: List[StudyElement] = []
   estimands: List[Estimand] = []
   indications: List[Indication] = []
-  studyInterventions: List[InvestigationalIntervention] = []
+  studyInterventions: List[StudyIntervention] = []
   objectives: List[Objective] = []
   populations: List[StudyDesignPopulation] = []
   scheduleTimelines: List[ScheduleTimeline] = []
