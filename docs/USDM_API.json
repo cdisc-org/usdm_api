@@ -1672,33 +1672,6 @@
         ],
         "title": "IntercurrentEvent"
       },
-      "InvestigationalIntervention": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1,
-            "title": "Id"
-          },
-          "description": {
-            "type": "string",
-            "title": "Description",
-            "default": ""
-          },
-          "codes": {
-            "items": {
-              "$ref": "#/components/schemas/Code"
-            },
-            "type": "array",
-            "title": "Codes",
-            "default": []
-          }
-        },
-        "type": "object",
-        "required": [
-          "id"
-        ],
-        "title": "InvestigationalIntervention"
-      },
       "NarrativeContent": {
         "properties": {
           "id": {
@@ -3136,7 +3109,7 @@
           },
           "studyInterventions": {
             "items": {
-              "$ref": "#/components/schemas/InvestigationalIntervention"
+              "$ref": "#/components/schemas/StudyIntervention-Input"
             },
             "type": "array",
             "title": "Studyinterventions",
@@ -3347,7 +3320,7 @@
           },
           "studyInterventions": {
             "items": {
-              "$ref": "#/components/schemas/InvestigationalIntervention"
+              "$ref": "#/components/schemas/StudyIntervention-Output"
             },
             "type": "array",
             "title": "Studyinterventions",
@@ -3505,14 +3478,12 @@
             ]
           },
           "studyInterventions": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/StudyIntervention-Input"
-              },
-              {
-                "type": "null"
-              }
-            ]
+            "items": {
+              "$ref": "#/components/schemas/StudyIntervention-Input"
+            },
+            "type": "array",
+            "title": "Studyinterventions",
+            "default": []
           }
         },
         "type": "object",
@@ -3565,14 +3536,12 @@
             ]
           },
           "studyInterventions": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/StudyIntervention-Output"
-              },
-              {
-                "type": "null"
-              }
-            ]
+            "items": {
+              "$ref": "#/components/schemas/StudyIntervention-Output"
+            },
+            "type": "array",
+            "title": "Studyinterventions",
+            "default": []
           }
         },
         "type": "object",

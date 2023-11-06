@@ -1188,26 +1188,6 @@ components:
       - name
       - strategy
       title: IntercurrentEvent
-    InvestigationalIntervention:
-      properties:
-        id:
-          type: string
-          minLength: 1
-          title: Id
-        description:
-          type: string
-          title: Description
-          default: ''
-        codes:
-          items:
-            $ref: '#/components/schemas/Code'
-          type: array
-          title: Codes
-          default: []
-      type: object
-      required:
-      - id
-      title: InvestigationalIntervention
     NarrativeContent:
       properties:
         id:
@@ -2176,7 +2156,7 @@ components:
           default: []
         studyInterventions:
           items:
-            $ref: '#/components/schemas/InvestigationalIntervention'
+            $ref: '#/components/schemas/StudyIntervention-Input'
           type: array
           title: Studyinterventions
           default: []
@@ -2328,7 +2308,7 @@ components:
           default: []
         studyInterventions:
           items:
-            $ref: '#/components/schemas/InvestigationalIntervention'
+            $ref: '#/components/schemas/StudyIntervention-Output'
           type: array
           title: Studyinterventions
           default: []
@@ -2439,9 +2419,11 @@ components:
           - $ref: '#/components/schemas/TransitionRule'
           - type: 'null'
         studyInterventions:
-          anyOf:
-          - $ref: '#/components/schemas/StudyIntervention-Input'
-          - type: 'null'
+          items:
+            $ref: '#/components/schemas/StudyIntervention-Input'
+          type: array
+          title: Studyinterventions
+          default: []
       type: object
       required:
       - id
@@ -2474,9 +2456,11 @@ components:
           - $ref: '#/components/schemas/TransitionRule'
           - type: 'null'
         studyInterventions:
-          anyOf:
-          - $ref: '#/components/schemas/StudyIntervention-Output'
-          - type: 'null'
+          items:
+            $ref: '#/components/schemas/StudyIntervention-Output'
+          type: array
+          title: Studyinterventions
+          default: []
       type: object
       required:
       - id
