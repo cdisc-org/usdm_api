@@ -1069,10 +1069,10 @@ components:
           default: ''
         type:
           $ref: '#/components/schemas/Code'
-        dataValue:
+        dateValue:
           type: string
           format: date
-          title: Datavalue
+          title: Datevalue
         geographicScopes:
           items:
             $ref: '#/components/schemas/GeographicScope'
@@ -1083,7 +1083,7 @@ components:
       - id
       - name
       - type
-      - dataValue
+      - dateValue
       - geographicScopes
       title: GovernanceDate
     GovernanceDate-Output:
@@ -1106,10 +1106,10 @@ components:
           default: ''
         type:
           $ref: '#/components/schemas/Code'
-        dataValue:
+        dateValue:
           type: string
           format: date
-          title: Datavalue
+          title: Datevalue
         geographicScopes:
           items:
             $ref: '#/components/schemas/GeographicScope'
@@ -1120,7 +1120,7 @@ components:
       - id
       - name
       - type
-      - dataValue
+      - dateValue
       - geographicScopes
       title: GovernanceDate
     HTTPValidationError:
