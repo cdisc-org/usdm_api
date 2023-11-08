@@ -32,7 +32,7 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   bcSurrogates: List[BiomedicalConceptSurrogate] = []
   arms: List[StudyArm]
   studyCells: List[StudyCell]
-  blindingScheme: Union[AliasCode, None] = None
+  blindingSchema: Union[AliasCode, None] = None
   rationale: str
   epochs: List[StudyEpoch]
   elements: List[StudyElement] = []
@@ -43,4 +43,4 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   populations: List[StudyDesignPopulation] = []
   scheduleTimelines: List[ScheduleTimeline] = []
   documentVersion: Union[StudyProtocolDocumentVersion, None] = None
-  eligibilityCritieria: List[EligibilityCriteria] = []    
+  eligibilityCriteria: List[EligibilityCriteria] = []    
