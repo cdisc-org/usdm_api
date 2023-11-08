@@ -2124,7 +2124,7 @@ components:
             $ref: '#/components/schemas/StudyCell'
           type: array
           title: Studycells
-        blindingScheme:
+        blindingSchema:
           anyOf:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
@@ -2182,11 +2182,11 @@ components:
           anyOf:
           - $ref: '#/components/schemas/StudyProtocolDocumentVersion-Input'
           - type: 'null'
-        eligibilityCritieria:
+        eligibilityCriteria:
           items:
             $ref: '#/components/schemas/EligibilityCriteria'
           type: array
-          title: Eligibilitycritieria
+          title: Eligibilitycriteria
           default: []
       type: object
       required:
@@ -2276,7 +2276,7 @@ components:
             $ref: '#/components/schemas/StudyCell'
           type: array
           title: Studycells
-        blindingScheme:
+        blindingSchema:
           anyOf:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
@@ -2334,11 +2334,11 @@ components:
           anyOf:
           - $ref: '#/components/schemas/StudyProtocolDocumentVersion-Output'
           - type: 'null'
-        eligibilityCritieria:
+        eligibilityCriteria:
           items:
             $ref: '#/components/schemas/EligibilityCriteria'
           type: array
-          title: Eligibilitycritieria
+          title: Eligibilitycriteria
           default: []
       type: object
       required:
@@ -2958,9 +2958,6 @@ components:
           type: string
           title: Description
           default: ''
-        text:
-          type: string
-          title: Text
         parameterMap:
           type: object
           title: Parametermap

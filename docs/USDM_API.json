@@ -3062,7 +3062,7 @@
             "type": "array",
             "title": "Studycells"
           },
-          "blindingScheme": {
+          "blindingSchema": {
             "anyOf": [
               {
                 "$ref": "#/components/schemas/AliasCode"
@@ -3149,12 +3149,12 @@
               }
             ]
           },
-          "eligibilityCritieria": {
+          "eligibilityCriteria": {
             "items": {
               "$ref": "#/components/schemas/EligibilityCriteria"
             },
             "type": "array",
-            "title": "Eligibilitycritieria",
+            "title": "Eligibilitycriteria",
             "default": []
           }
         },
@@ -3273,7 +3273,7 @@
             "type": "array",
             "title": "Studycells"
           },
-          "blindingScheme": {
+          "blindingSchema": {
             "anyOf": [
               {
                 "$ref": "#/components/schemas/AliasCode"
@@ -3360,12 +3360,12 @@
               }
             ]
           },
-          "eligibilityCritieria": {
+          "eligibilityCriteria": {
             "items": {
               "$ref": "#/components/schemas/EligibilityCriteria"
             },
             "type": "array",
-            "title": "Eligibilitycritieria",
+            "title": "Eligibilitycriteria",
             "default": []
           }
         },
@@ -4235,10 +4235,6 @@
             "type": "string",
             "title": "Description",
             "default": ""
-          },
-          "text": {
-            "type": "string",
-            "title": "Text"
           },
           "parameterMap": {
             "type": "object",
