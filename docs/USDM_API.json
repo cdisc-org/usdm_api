@@ -1219,8 +1219,9 @@
             "type": "string",
             "title": "Text"
           },
-          "dictionary": {
-            "$ref": "#/components/schemas/SyntaxTemplateDictionary"
+          "dictionaryId": {
+            "type": "string",
+            "title": "Dictionaryid"
           },
           "category": {
             "$ref": "#/components/schemas/Code"
@@ -1258,7 +1259,7 @@
           "name",
           "instanceType",
           "text",
-          "dictionary",
+          "dictionaryId",
           "category",
           "identifier"
         ],
@@ -1404,8 +1405,9 @@
             "type": "string",
             "title": "Text"
           },
-          "dictionary": {
-            "$ref": "#/components/schemas/SyntaxTemplateDictionary"
+          "dictionaryId": {
+            "type": "string",
+            "title": "Dictionaryid"
           },
           "purpose": {
             "type": "string",
@@ -1421,7 +1423,7 @@
           "name",
           "instanceType",
           "text",
-          "dictionary",
+          "dictionaryId",
           "purpose",
           "level"
         ],
@@ -1468,7 +1470,7 @@
         ],
         "title": "Estimand"
       },
-      "GeographicScope": {
+      "GeographicScope-Input": {
         "properties": {
           "id": {
             "type": "string",
@@ -1479,7 +1481,29 @@
             "$ref": "#/components/schemas/Code"
           },
           "code": {
+            "$ref": "#/components/schemas/AliasCode"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "code"
+        ],
+        "title": "GeographicScope"
+      },
+      "GeographicScope-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "type": {
             "$ref": "#/components/schemas/Code"
+          },
+          "code": {
+            "$ref": "#/components/schemas/AliasCode"
           }
         },
         "type": "object",
@@ -1522,7 +1546,7 @@
           },
           "geographicScopes": {
             "items": {
-              "$ref": "#/components/schemas/GeographicScope"
+              "$ref": "#/components/schemas/GeographicScope-Input"
             },
             "type": "array",
             "title": "Geographicscopes"
@@ -1570,7 +1594,7 @@
           },
           "geographicScopes": {
             "items": {
-              "$ref": "#/components/schemas/GeographicScope"
+              "$ref": "#/components/schemas/GeographicScope-Output"
             },
             "type": "array",
             "title": "Geographicscopes"
@@ -1756,8 +1780,9 @@
             "type": "string",
             "title": "Text"
           },
-          "dictionary": {
-            "$ref": "#/components/schemas/SyntaxTemplateDictionary"
+          "dictionaryId": {
+            "type": "string",
+            "title": "Dictionaryid"
           },
           "level": {
             "anyOf": [
@@ -1784,7 +1809,7 @@
           "name",
           "instanceType",
           "text",
-          "dictionary"
+          "dictionaryId"
         ],
         "title": "Objective"
       },
@@ -1823,8 +1848,9 @@
             "type": "string",
             "title": "Text"
           },
-          "dictionary": {
-            "$ref": "#/components/schemas/SyntaxTemplateDictionary"
+          "dictionaryId": {
+            "type": "string",
+            "title": "Dictionaryid"
           },
           "level": {
             "anyOf": [
@@ -1851,7 +1877,7 @@
           "name",
           "instanceType",
           "text",
-          "dictionary"
+          "dictionaryId"
         ],
         "title": "Objective"
       },
@@ -2773,7 +2799,7 @@
           },
           "enrollments": {
             "items": {
-              "$ref": "#/components/schemas/SubjectEnrollment"
+              "$ref": "#/components/schemas/SubjectEnrollment-Input"
             },
             "type": "array",
             "title": "Enrollments"
@@ -2833,7 +2859,7 @@
           },
           "enrollments": {
             "items": {
-              "$ref": "#/components/schemas/SubjectEnrollment"
+              "$ref": "#/components/schemas/SubjectEnrollment-Output"
             },
             "type": "array",
             "title": "Enrollments"
@@ -3156,6 +3182,14 @@
             "type": "array",
             "title": "Eligibilitycriteria",
             "default": []
+          },
+          "dictionaries": {
+            "items": {
+              "$ref": "#/components/schemas/SyntaxTemplateDictionary"
+            },
+            "type": "array",
+            "title": "Dictionaries",
+            "default": []
           }
         },
         "type": "object",
@@ -3366,6 +3400,14 @@
             },
             "type": "array",
             "title": "Eligibilitycriteria",
+            "default": []
+          },
+          "dictionaries": {
+            "items": {
+              "$ref": "#/components/schemas/SyntaxTemplateDictionary"
+            },
+            "type": "array",
+            "title": "Dictionaries",
             "default": []
           }
         },
@@ -4022,15 +4064,16 @@
               }
             ]
           },
-          "documentVersion": {
+          "documentVersionId": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/StudyProtocolDocumentVersion-Input"
+                "type": "string"
               },
               {
                 "type": "null"
               }
-            ]
+            ],
+            "title": "Documentversionid"
           },
           "dateValues": {
             "items": {
@@ -4126,15 +4169,16 @@
               }
             ]
           },
-          "documentVersion": {
+          "documentVersionId": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/StudyProtocolDocumentVersion-Output"
+                "type": "string"
               },
               {
                 "type": "null"
               }
-            ]
+            ],
+            "title": "Documentversionid"
           },
           "dateValues": {
             "items": {
@@ -4187,7 +4231,7 @@
         ],
         "title": "StudyVersion"
       },
-      "SubjectEnrollment": {
+      "SubjectEnrollment-Input": {
         "properties": {
           "id": {
             "type": "string",
@@ -4198,7 +4242,34 @@
             "$ref": "#/components/schemas/Code"
           },
           "code": {
+            "$ref": "#/components/schemas/AliasCode"
+          },
+          "quantity": {
+            "type": "string",
+            "title": "Quantity"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "code",
+          "quantity"
+        ],
+        "title": "SubjectEnrollment"
+      },
+      "SubjectEnrollment-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "type": {
             "$ref": "#/components/schemas/Code"
+          },
+          "code": {
+            "$ref": "#/components/schemas/AliasCode"
           },
           "quantity": {
             "type": "string",
