@@ -6,4 +6,4 @@ from .study_intervention import StudyIntervention
 class StudyElement(ApiBaseModelWithIdNameLabelAndDesc):
   transitionStartRule: Union[TransitionRule, None] = None
   transitionEndRule: Union[TransitionRule, None] = None
-  studyInterventions: List[StudyIntervention] = []
+  studyInterventionIds: List[str] = []

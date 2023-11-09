@@ -8,4 +8,4 @@ class Procedure(ApiBaseModelWithIdNameLabelAndDesc):
   code: Code
   isConditional: bool
   isConditionalReason: Union[str, None] = None
-  studyIntervention: Union[StudyIntervention, None] = None
+  studyInterventionId: Union[str, None] = None
