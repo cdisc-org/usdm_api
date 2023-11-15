@@ -6,4 +6,4 @@ class StudyArm(ApiBaseModelWithIdNameLabelAndDesc):
   type: Code
   dataOriginDescription: str
   dataOriginType: Code
-  studySubpopulations: List[str] = []
+  studySubpopulationIds: List[str] = []
