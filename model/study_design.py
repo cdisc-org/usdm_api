@@ -18,7 +18,6 @@ from .objective import Objective
 from .schedule_timeline import ScheduleTimeline
 from .estimand import Estimand
 from .study_protocol_document_version import StudyProtocolDocumentVersion
-from .eligibility_criteria import EligibilityCriteria
 from .syntax_template_dictionary import SyntaxTemplateDictionary
 
 class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
@@ -44,5 +43,4 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   populations: List[StudyDesignPopulation] = []
   scheduleTimelines: List[ScheduleTimeline] = []
   documentVersion: Union[StudyProtocolDocumentVersion, None] = None
-  eligibilityCriteria: List[EligibilityCriteria] = []
   dictionaries: List[SyntaxTemplateDictionary] = []
