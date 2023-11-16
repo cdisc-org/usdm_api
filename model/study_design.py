@@ -40,7 +40,7 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   indications: List[Indication] = []
   studyInterventions: List[StudyIntervention] = []
   objectives: List[Objective] = []
-  populations: List[StudyDesignPopulation] = []
+  population: Union[StudyDesignPopulation, None] = None
   scheduleTimelines: List[ScheduleTimeline] = []
   documentVersion: Union[StudyProtocolDocumentVersion, None] = None
   dictionaries: List[SyntaxTemplateDictionary] = []

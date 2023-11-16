@@ -2,7 +2,7 @@ from .api_base_model import ApiBaseModelWithId
 from .code import Code
 
 class Range(ApiBaseModelWithId):
-  min: float
-  max: float
+  minValue: float
+  maxValue: float
   unit: Code
   
