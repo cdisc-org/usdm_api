@@ -3,7 +3,7 @@ info:
   title: Simple API for DDF
   description: A simple TransCelerate Digital Data Flow (DDF) Study Definitions Repository
     API.
-  version: '2.7'
+  version: '2.8'
 paths:
   /v3/studyDefinitions:
     post:
@@ -2762,7 +2762,11 @@ components:
         minimumResponseDuration:
           $ref: '#/components/schemas/Quantity'
         codes:
-          $ref: '#/components/schemas/Code'
+          items:
+            $ref: '#/components/schemas/Code'
+          type: array
+          title: Codes
+          default: []
         administrations:
           $ref: '#/components/schemas/AgentAdministration-Input'
         productDesignation:
@@ -2776,7 +2780,6 @@ components:
       - role
       - type
       - minimumResponseDuration
-      - codes
       - administrations
       - productDesignation
       - pharmacologicClass
@@ -2806,7 +2809,11 @@ components:
         minimumResponseDuration:
           $ref: '#/components/schemas/Quantity'
         codes:
-          $ref: '#/components/schemas/Code'
+          items:
+            $ref: '#/components/schemas/Code'
+          type: array
+          title: Codes
+          default: []
         administrations:
           $ref: '#/components/schemas/AgentAdministration-Output'
         productDesignation:
@@ -2820,7 +2827,6 @@ components:
       - role
       - type
       - minimumResponseDuration
-      - codes
       - administrations
       - productDesignation
       - pharmacologicClass

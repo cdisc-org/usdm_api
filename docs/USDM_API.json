@@ -3,7 +3,7 @@
   "info": {
     "title": "Simple API for DDF",
     "description": "A simple TransCelerate Digital Data Flow (DDF) Study Definitions Repository API.",
-    "version": "2.7"
+    "version": "2.8"
   },
   "paths": {
     "/v3/studyDefinitions": {
@@ -3944,7 +3944,12 @@
             "$ref": "#/components/schemas/Quantity"
           },
           "codes": {
-            "$ref": "#/components/schemas/Code"
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "type": "array",
+            "title": "Codes",
+            "default": []
           },
           "administrations": {
             "$ref": "#/components/schemas/AgentAdministration-Input"
@@ -3963,7 +3968,6 @@
           "role",
           "type",
           "minimumResponseDuration",
-          "codes",
           "administrations",
           "productDesignation",
           "pharmacologicClass"
@@ -4002,7 +4006,12 @@
             "$ref": "#/components/schemas/Quantity"
           },
           "codes": {
-            "$ref": "#/components/schemas/Code"
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "type": "array",
+            "title": "Codes",
+            "default": []
           },
           "administrations": {
             "$ref": "#/components/schemas/AgentAdministration-Output"
@@ -4021,7 +4030,6 @@
           "role",
           "type",
           "minimumResponseDuration",
-          "codes",
           "administrations",
           "productDesignation",
           "pharmacologicClass"
