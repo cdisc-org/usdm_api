@@ -1,3 +1,4 @@
+from typing import List
 from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 from .quantity import Quantity
 from .agent_adminstration import AgentAdministration
@@ -7,7 +8,7 @@ class StudyIntervention(ApiBaseModelWithIdNameLabelAndDesc):
 	role:	Code
 	type:	Code
 	minimumResponseDuration: Quantity
-	codes:	Code
+	codes: List[Code] = []
 	administrations: AgentAdministration
 	productDesignation:	Code
 	pharmacologicClass:	Code
