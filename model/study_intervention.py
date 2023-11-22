@@ -1,7 +1,7 @@
 from typing import List
 from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 from .quantity import Quantity
-from .agent_adminstration import AgentAdministration
+from .agent_administration import AgentAdministration
 from .code import Code
 
 class StudyIntervention(ApiBaseModelWithIdNameLabelAndDesc):
