@@ -6,4 +6,3 @@ class Range(ApiBaseModelWithId):
   maxValue: float
   isApproximate: bool
   unit: Code
-  

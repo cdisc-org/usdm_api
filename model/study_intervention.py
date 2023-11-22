@@ -5,10 +5,10 @@ from .agent_administration import AgentAdministration
 from .code import Code
 
 class StudyIntervention(ApiBaseModelWithIdNameLabelAndDesc):
-	role:	Code
-	type:	Code
-	minimumResponseDuration: Quantity
-	codes: List[Code] = []
-	administrations: AgentAdministration
-	productDesignation:	Code
-	pharmacologicClass:	Code
+  role:	Code
+  type:	Code
+  minimumResponseDuration: Quantity
+  codes: List[Code] = []
+  administrations: AgentAdministration
+  productDesignation:	Code
+  pharmacologicClass:	Code
