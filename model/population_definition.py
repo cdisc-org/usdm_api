@@ -1,4 +1,4 @@
-from typing import List
+from typing import Union, List
 from pydantic import NonNegativeInt
 from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 from .code import Code
@@ -7,9 +7,9 @@ from .quantity import Quantity
 from .eligibility_criteria import EligibilityCriteria
 
 class PopulationDefinition(ApiBaseModelWithIdNameLabelAndDesc):
-  plannedEnrollmentNumber: Range
-  plannedCompletionNumber: Range
-  plannedMaximumAge: Quantity  
-  plannedMinimumAge: Quantity
+  plannedEnrollmentNumber: Union[Range, None] = None
+  plannedCompletionNumber: Union[Range, None] = None
+  plannedMaximumAge: Union[Quantity, None] = None
+  plannedMinimumAge: Union[Quantity, None] = None
   plannedSex: List[Code] = []
-  criteria: List[EligibilityCriteria]
+  criteria: List[EligibilityCriteria] = []
