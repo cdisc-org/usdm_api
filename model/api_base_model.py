@@ -1,3 +1,4 @@
+from typing import Union
 from pydantic import BaseModel, Field
 
 class ApiBaseModel(BaseModel):
@@ -7,16 +8,16 @@ class ApiBaseModelWithId(ApiBaseModel):
   id: str = Field(min_length=1)
 
 class ApiBaseModelWithIdAndDesc(ApiBaseModelWithId):
-  description: str = ""
+  description: Union[str, None] = None
 
 class ApiBaseModelWithIdAndName(ApiBaseModelWithId):
   name: str = Field(min_length=1)
 
 class ApiBaseModelWithIdNameAndLabel(ApiBaseModelWithIdAndName):
-  label: str = ""
+  label: Union[str, None] = None
 
 class ApiBaseModelWithIdNameLabelAndDesc(ApiBaseModelWithIdNameAndLabel):
-  description: str = ""
+  description: Union[str, None] = None
 
 class ApiBaseModelWithIdNameAndDesc(ApiBaseModelWithIdAndName):
-  description: str = ""
+  description: Union[str, None] = None
