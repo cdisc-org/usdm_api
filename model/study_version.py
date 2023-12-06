@@ -7,12 +7,11 @@ from .code import Code as genericCode
 from .study_design import *
 from .governance_date import GovernanceDate
 from .study_amendment import StudyAmendment
+from .study_title import StudyTitle
 
 class StudyVersion(ApiBaseModelWithId):
-  studyTitle: str
   versionIdentifier: str
   rationale: str
-  studyAcronym: str
   type: Union[genericCode, None] = None
   studyPhase: Union[AliasCode, None] = None
   documentVersionId: Union[str, None] = None
@@ -21,3 +20,4 @@ class StudyVersion(ApiBaseModelWithId):
   businessTherapeuticAreas: List[Code] = []
   studyIdentifiers: List[StudyIdentifier] = []
   studyDesigns: List[StudyDesign] = []
+  studyTitleIds: List[StudyTitle]

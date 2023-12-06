@@ -1,0 +1,27 @@
+name: Generate API
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore:
+      - "main"
+jobs:
+  Diff_And_Data_Dict:
+    name: Generate Diff and Data Dict
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+      - run: |
+          pip install -r requirements.txt
+          python openapi.py main:app --out docs/USDM_API.json
+          python openapi.py main:app --out docs/USDM_API.yaml
+          git config user.name github-actions
+          git config user.email github-actions@cdisc.org
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Generate API files"
+          git push
+
+# Running locally:
+# gh act workflow_dispatch -P ubuntu-latest=catthehacker/ubuntu:act-latest --secret-file my.secrets

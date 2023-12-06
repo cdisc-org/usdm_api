@@ -14,3 +14,13 @@ docker build --pull --rm -f "Dockerfile" -t ddfservice:latest "." --build-arg DD
 ```
 docker container run -p 80:80 -dit --name ddf ddfservice:latest
 ```
+
+# Check syntax
+```
+uvicorn main:app
+```
+
+# Generate API json and yaml files
+```
+./api_docs.sh
+```

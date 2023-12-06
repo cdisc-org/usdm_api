@@ -19,6 +19,8 @@ from .schedule_timeline import ScheduleTimeline
 from .estimand import Estimand
 from .study_protocol_document_version import StudyProtocolDocumentVersion
 from .syntax_template_dictionary import SyntaxTemplateDictionary
+from .masking import Masking
+from .study_site import StudySite
 
 class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   trialIntentTypes: List[Code] = []
@@ -38,9 +40,11 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   elements: List[StudyElement] = []
   estimands: List[Estimand] = []
   indications: List[Indication] = []
+  maskingRoles: List[Masking] = []
   studyInterventions: List[StudyIntervention] = []
   objectives: List[Objective] = []
   population: Union[StudyDesignPopulation, None] = None
   scheduleTimelines: List[ScheduleTimeline] = []
   documentVersion: Union[StudyProtocolDocumentVersion, None] = None
+  appliesTo: List[StudySite] = []
   dictionaries: List[SyntaxTemplateDictionary] = []
