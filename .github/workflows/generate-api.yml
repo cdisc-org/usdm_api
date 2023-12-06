@@ -5,8 +5,8 @@ on:
     branches-ignore:
       - "main"
 jobs:
-  Diff_And_Data_Dict:
-    name: Generate Diff and Data Dict
+  Generate_API:
+    name: Generate API JSON and YML Files
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
