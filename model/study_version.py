@@ -20,4 +20,4 @@ class StudyVersion(ApiBaseModelWithId):
   businessTherapeuticAreas: List[Code] = []
   studyIdentifiers: List[StudyIdentifier] = []
   studyDesigns: List[StudyDesign] = []
-  studyTitleIds: List[StudyTitle]
+  studyTitles: List[StudyTitle]
