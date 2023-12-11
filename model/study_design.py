@@ -21,6 +21,8 @@ from .study_protocol_document_version import StudyProtocolDocumentVersion
 from .syntax_template_dictionary import SyntaxTemplateDictionary
 from .masking import Masking
 from .study_site import StudySite
+from .condition import Condition
+from .organization import Organization
 
 class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   trialIntentTypes: List[Code] = []
@@ -48,3 +50,5 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   documentVersion: Union[StudyProtocolDocumentVersion, None] = None
   appliesTo: List[StudySite] = []
   dictionaries: List[SyntaxTemplateDictionary] = []
+  conditions: List[Condition] = []
+  organizations: List[Organization] = []

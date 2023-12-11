@@ -1,10 +1,6 @@
 from typing import List, Union
-from .api_base_model import ApiBaseModelWithIdNameAndLabel
+from .organization import Organization
 
-class ResearchOrganization(ApiBaseModelWithIdNameAndLabel):
-  identifier: str
-  identifierScheme: str
-  legalAddressId: Union[str, None] = None
-  typeId: str
-  managesIds: List[str]
+class ResearchOrganization(Organization):
+  manageIds: List[str]
 
