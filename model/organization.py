@@ -1,4 +1,4 @@
-from typing import Union
+from typing import List, Literal, Union
 from .api_base_model import ApiBaseModelWithIdNameAndLabel
 from .code import Code
 from .address import Address
@@ -8,3 +8,7 @@ class Organization(ApiBaseModelWithIdNameAndLabel):
   identifierScheme: str
   identifier: str
   legalAddress: Union[Address, None] = None
+
+class ResearchOrganization(Organization):
+  manageIds: List[str]
+  instanceType: Literal['ResearchOrganization']

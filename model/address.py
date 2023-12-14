@@ -1,4 +1,4 @@
-from typing import Union
+from typing import Literal, Union
 from .api_base_model import ApiBaseModelWithId
 from .code import Code
 
@@ -10,3 +10,4 @@ class Address(ApiBaseModelWithId):
   state: Union[str, None] = None
   postalCode: Union[str, None] = None
   country: Union[Code, None] = None
+  instanceType: Literal['Address']

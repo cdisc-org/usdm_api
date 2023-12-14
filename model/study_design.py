@@ -1,4 +1,4 @@
-from typing import List, Union
+from typing import List, Literal, Union
 from .activity import Activity
 from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 from .alias_code import AliasCode
@@ -13,7 +13,7 @@ from .study_intervention import StudyIntervention
 from .study_arm import StudyArm
 from .study_epoch import StudyEpoch
 from .study_element import StudyElement
-from .study_design_population import StudyDesignPopulation
+from .population_definition import StudyDesignPopulation
 from .objective import Objective
 from .schedule_timeline import ScheduleTimeline
 from .estimand import Estimand
@@ -53,3 +53,4 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   dictionaries: List[SyntaxTemplateDictionary] = []
   conditions: List[Condition] = []
   organizations: List[Organization] = []
+  instanceType: Literal['StudyDesign']

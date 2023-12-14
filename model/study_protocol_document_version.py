@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Literal
 from .api_base_model import ApiBaseModelWithId
 from .code import Code
 from .governance_date import GovernanceDate
@@ -10,3 +10,4 @@ class StudyProtocolDocumentVersion(ApiBaseModelWithId):
   dateValues: List[GovernanceDate] = []
   contents: List[NarrativeContent] = []
   childrenIds: List[str] = []
+  instanceType: Literal['StudyProtocolDocumentVersion']

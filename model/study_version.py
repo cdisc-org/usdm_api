@@ -1,4 +1,4 @@
-from typing import List, Union
+from typing import List, Literal, Union
 from .api_base_model import ApiBaseModelWithId
 from .study_identifier import *
 from .study_protocol_document_version import *
@@ -21,3 +21,4 @@ class StudyVersion(ApiBaseModelWithId):
   studyIdentifiers: List[StudyIdentifier] = []
   studyDesigns: List[StudyDesign] = []
   titles: List[StudyTitle]
+  instanceType: Literal['StudyVersion']

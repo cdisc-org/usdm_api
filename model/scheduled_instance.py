@@ -1,9 +1,8 @@
-from typing import List, Dict, Union, Literal
+from typing import List, Literal, Dict, Union
 from .api_base_model import ApiBaseModelWithId
 from .timing import Timing
 
 class ScheduledInstance(ApiBaseModelWithId):
-  instanceType: Literal['ACTIVITY', 'DECISION']
   timings: List[Timing] = []
   timelineId: Union[str, None] = None
   timelineExitId: Union[str, None] = None
@@ -13,6 +12,8 @@ class ScheduledInstance(ApiBaseModelWithId):
 class ScheduledActivityInstance(ScheduledInstance):
   activityIds: List[str] = []
   encounterId: Union[str, None] = None
+  instanceType: Literal['ScheduledActivityInstance']
 
 class ScheduledDecisionInstance(ScheduledInstance):
   conditionAssignments: Dict[str, str]
+  instanceType: Literal['ScheduledDecisionInstance']
