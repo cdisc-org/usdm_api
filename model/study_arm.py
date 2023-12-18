@@ -7,4 +7,4 @@ class StudyArm(ApiBaseModelWithIdNameLabelAndDesc):
   dataOriginDescription: str
   dataOriginType: Code
   populationIds: List[str] = []
-  instanceType: Literal['StudyArm']
+  instanceType: Literal['StudyArm'] = 'StudyArm'

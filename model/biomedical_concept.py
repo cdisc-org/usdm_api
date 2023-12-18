@@ -8,4 +8,4 @@ class BiomedicalConcept(ApiBaseModelWithIdNameAndLabel):
   reference: str
   properties: List[BiomedicalConceptProperty] = []
   code: AliasCode
-  instanceType: Literal['BiomedicalConcept']
+  instanceType: Literal['BiomedicalConcept'] = 'BiomedicalConcept'

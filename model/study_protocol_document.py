@@ -4,4 +4,4 @@ from .study_protocol_document_version import StudyProtocolDocumentVersion
 
 class StudyProtocolDocument(ApiBaseModelWithIdNameLabelAndDesc):
   versions: List[StudyProtocolDocumentVersion] = []
-  instanceType: Literal['StudyProtocolDocument']
+  instanceType: Literal['StudyProtocolDocument'] = 'StudyProtocolDocument'

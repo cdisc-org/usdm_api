@@ -3,4 +3,4 @@ from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 
 class BiomedicalConceptSurrogate(ApiBaseModelWithIdNameLabelAndDesc):
   reference: Union[str, None] = None
-  instanceType: Literal['BiomedicalConceptSurrogate']
+  instanceType: Literal['BiomedicalConceptSurrogate'] = 'BiomedicalConceptSurrogate'

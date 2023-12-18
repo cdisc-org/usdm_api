@@ -5,4 +5,4 @@ from typing import Literal
 class ResponseCode(ApiBaseModelWithId):
   isEnabled: bool
   code: Code
-  instanceType: Literal['ResponseCode']
+  instanceType: Literal['ResponseCode'] = 'ResponseCode'

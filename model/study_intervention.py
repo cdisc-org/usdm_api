@@ -12,4 +12,4 @@ class StudyIntervention(ApiBaseModelWithIdNameLabelAndDesc):
   administrations: AgentAdministration
   productDesignation:	Code
   pharmacologicClass:	Code
-  instanceType: Literal['StudyIntervention']
+  instanceType: Literal['StudyIntervention'] = 'StudyIntervention'

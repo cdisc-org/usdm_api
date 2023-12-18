@@ -5,4 +5,4 @@ from typing import Literal
 class Endpoint(SyntaxTemplate):
   purpose: str
   level: Code
-  instanceType: Literal['Endpoint']
+  instanceType: Literal['Endpoint'] = 'Endpoint'

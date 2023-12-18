@@ -7,4 +7,4 @@ class Range(ApiBaseModelWithId):
   maxValue: float
   unit: Union[Code, None] = None
   isApproximate: bool
-  instanceType: Literal['Range']
+  instanceType: Literal['Range'] = 'Range'

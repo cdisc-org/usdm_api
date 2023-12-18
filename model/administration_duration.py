@@ -7,4 +7,4 @@ class AdministrationDuration(ApiBaseModelWithId):
 	description: str
 	durationWillVary: bool
 	reasonDurationWillVary:	str
-	instanceType: Literal['AdministrationDuration']
+	instanceType: Literal['AdministrationDuration'] = 'AdministrationDuration'

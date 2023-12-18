@@ -10,4 +10,4 @@ class GeographicScope(ApiBaseModelWithId):
 
 class SubjectEnrollment(GeographicScope):
   quantity: str
-  instanceType: Literal['SubjectEnrollment']
+  instanceType: Literal['SubjectEnrollment'] = 'SubjectEnrollment'

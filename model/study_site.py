@@ -3,4 +3,4 @@ from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 
 class StudySite(ApiBaseModelWithIdNameLabelAndDesc):
   currentEnrollmentId: Union[str, None] = None
-  instanceType: Literal['StudySite']
+  instanceType: Literal['StudySite'] = 'StudySite'

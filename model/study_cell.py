@@ -5,4 +5,4 @@ class StudyCell(ApiBaseModelWithId):
   armId: str
   epochId: str
   elementIds: List[str] = []
-  instanceType: Literal['StudyCell']
+  instanceType: Literal['StudyCell'] = 'StudyCell'

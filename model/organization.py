@@ -8,7 +8,8 @@ class Organization(ApiBaseModelWithIdNameAndLabel):
   identifierScheme: str
   identifier: str
   legalAddress: Union[Address, None] = None
+  instanceType: Literal['Organization'] = 'Organization'
 
 class ResearchOrganization(Organization):
   manageIds: List[str]
-  instanceType: Literal['ResearchOrganization']
+  instanceType: Literal['ResearchOrganization'] = 'ResearchOrganization'

@@ -8,12 +8,13 @@ class ScheduledInstance(ApiBaseModelWithId):
   timelineExitId: Union[str, None] = None
   defaultConditionId: Union[str, None] = None
   epochId: Union[str, None] = None
+  instanceType: Literal['ScheduledInstance'] = 'ScheduledInstance'
 
 class ScheduledActivityInstance(ScheduledInstance):
   activityIds: List[str] = []
   encounterId: Union[str, None] = None
-  instanceType: Literal['ScheduledActivityInstance']
+  instanceType: Literal['ScheduledActivityInstance'] = 'ScheduledActivityInstance'
 
 class ScheduledDecisionInstance(ScheduledInstance):
   conditionAssignments: Dict[str, str]
-  instanceType: Literal['ScheduledDecisionInstance']
+  instanceType: Literal['ScheduledDecisionInstance'] = 'ScheduledDecisionInstance'

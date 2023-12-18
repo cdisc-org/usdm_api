@@ -12,11 +12,12 @@ class PopulationDefinition(ApiBaseModelWithIdNameLabelAndDesc):
   plannedSex: List[Code] = []
   criteria: List[EligibilityCriteria] = []
   plannedAge: Union[Range, None] = None
+  instanceType: Literal['PopulationDefinition'] = 'PopulationDefinition'
 
 class StudyCohort(PopulationDefinition):
   characteristics: List[Characteristic] = []
-  instanceType: Literal['StudyCohort']
+  instanceType: Literal['StudyCohort'] = 'StudyCohort'
   
 class StudyDesignPopulation(PopulationDefinition):
   cohorts: List[StudyCohort] = []
-  instanceType: Literal['StudyDesignPopulation']
+  instanceType: Literal['StudyDesignPopulation'] = 'StudyDesignPopulation'
