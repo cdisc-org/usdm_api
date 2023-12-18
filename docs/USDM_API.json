@@ -2722,6 +2722,142 @@
         ],
         "title": "Range"
       },
+      "ResearchOrganization-Input": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "identifierScheme": {
+            "type": "string",
+            "title": "Identifierscheme"
+          },
+          "identifier": {
+            "type": "string",
+            "title": "Identifier"
+          },
+          "legalAddress": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Address"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "instanceType": {
+            "const": "ResearchOrganization",
+            "title": "Instancetype",
+            "default": "ResearchOrganization"
+          },
+          "manageIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Manageids"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "identifierScheme",
+          "identifier",
+          "manageIds"
+        ],
+        "title": "ResearchOrganization"
+      },
+      "ResearchOrganization-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "identifierScheme": {
+            "type": "string",
+            "title": "Identifierscheme"
+          },
+          "identifier": {
+            "type": "string",
+            "title": "Identifier"
+          },
+          "legalAddress": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Address"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "instanceType": {
+            "const": "ResearchOrganization",
+            "title": "Instancetype",
+            "default": "ResearchOrganization"
+          },
+          "manageIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Manageids"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "identifierScheme",
+          "identifier",
+          "manageIds"
+        ],
+        "title": "ResearchOrganization"
+      },
       "ResponseCode": {
         "properties": {
           "id": {
@@ -4146,7 +4282,7 @@
           },
           "organizations": {
             "items": {
-              "$ref": "#/components/schemas/Organization-Input"
+              "$ref": "#/components/schemas/ResearchOrganization-Input"
             },
             "type": "array",
             "title": "Organizations",
@@ -4416,7 +4552,7 @@
           },
           "organizations": {
             "items": {
-              "$ref": "#/components/schemas/Organization-Output"
+              "$ref": "#/components/schemas/ResearchOrganization-Output"
             },
             "type": "array",
             "title": "Organizations",

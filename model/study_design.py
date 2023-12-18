@@ -22,7 +22,7 @@ from .syntax_template_dictionary import SyntaxTemplateDictionary
 from .masking import Masking
 from .study_site import StudySite
 from .condition import Condition
-from .organization import Organization
+from .organization import ResearchOrganization
 
 class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   trialIntentTypes: List[Code] = []
@@ -52,5 +52,5 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   appliesTo: List[StudySite] = []
   dictionaries: List[SyntaxTemplateDictionary] = []
   conditions: List[Condition] = []
-  organizations: List[Organization] = []
+  organizations: List[ResearchOrganization] = []
   instanceType: Literal['StudyDesign'] = 'StudyDesign'
