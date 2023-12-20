@@ -3,8 +3,8 @@ from .quantity import Quantity
 from typing import Literal
 
 class AdministrationDuration(ApiBaseModelWithId):
-	quantity:	Quantity
-	description: str
-	durationWillVary: bool
-	reasonDurationWillVary:	str
-	instanceType: Literal['AdministrationDuration'] = 'AdministrationDuration'
+  quantity:	Quantity
+  description: str
+  durationWillVary: bool
+  reasonDurationWillVary:	str
+  instanceType: Literal['AdministrationDuration'] = 'AdministrationDuration'
