@@ -3702,8 +3702,7 @@ components:
           title: Instancetype
           default: SubjectEnrollment
         quantity:
-          type: string
-          title: Quantity
+          $ref: '#/components/schemas/Quantity'
       type: object
       required:
       - id
@@ -3727,8 +3726,7 @@ components:
           title: Instancetype
           default: SubjectEnrollment
         quantity:
-          type: string
-          title: Quantity
+          $ref: '#/components/schemas/Quantity'
       type: object
       required:
       - id
