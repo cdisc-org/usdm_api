@@ -1230,11 +1230,11 @@ components:
         instanceType:
           const: GeographicScope
           title: Instancetype
-          default: GeographicScope
       type: object
       required:
       - id
       - type
+      - instanceType
       title: GeographicScope
     GeographicScope-Output:
       properties:
@@ -1251,11 +1251,11 @@ components:
         instanceType:
           const: GeographicScope
           title: Instancetype
-          default: GeographicScope
       type: object
       required:
       - id
       - type
+      - instanceType
       title: GeographicScope
     GovernanceDate-Input:
       properties:

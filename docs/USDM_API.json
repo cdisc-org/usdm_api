@@ -1906,14 +1906,14 @@
           },
           "instanceType": {
             "const": "GeographicScope",
-            "title": "Instancetype",
-            "default": "GeographicScope"
+            "title": "Instancetype"
           }
         },
         "type": "object",
         "required": [
           "id",
-          "type"
+          "type",
+          "instanceType"
         ],
         "title": "GeographicScope"
       },
@@ -1939,14 +1939,14 @@
           },
           "instanceType": {
             "const": "GeographicScope",
-            "title": "Instancetype",
-            "default": "GeographicScope"
+            "title": "Instancetype"
           }
         },
         "type": "object",
         "required": [
           "id",
-          "type"
+          "type",
+          "instanceType"
         ],
         "title": "GeographicScope"
       },
