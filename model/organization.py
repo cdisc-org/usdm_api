@@ -4,12 +4,12 @@ from .code import Code
 from .address import Address
 
 class Organization(ApiBaseModelWithIdNameAndLabel):
-  type: Code
+  organizationType: Code
   identifierScheme: str
   identifier: str
   legalAddress: Union[Address, None] = None
-  instanceType: Literal['Organization'] = 'Organization'
+  instanceType: Literal['Organization']
 
 class ResearchOrganization(Organization):
   manageIds: List[str]
-  instanceType: Literal['ResearchOrganization'] = 'ResearchOrganization'
+  instanceType: Literal['ResearchOrganization']

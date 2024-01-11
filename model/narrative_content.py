@@ -5,5 +5,5 @@ class NarrativeContent(ApiBaseModelWithIdAndName):
   sectionNumber: str
   sectionTitle: str
   text: Union[str, None] = None
-  childrenIds: List[str] = []
-  instanceType: Literal['NarrativeContent'] = 'NarrativeContent'
+  childIds: List[str] = []
+  instanceType: Literal['NarrativeContent']

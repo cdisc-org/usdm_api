@@ -20,7 +20,6 @@ from .estimand import Estimand
 from .study_protocol_document_version import StudyProtocolDocumentVersion
 from .syntax_template_dictionary import SyntaxTemplateDictionary
 from .masking import Masking
-from .study_site import StudySite
 from .condition import Condition
 from .organization import ResearchOrganization
 
@@ -49,8 +48,7 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   population: Union[StudyDesignPopulation, None] = None
   scheduleTimelines: List[ScheduleTimeline] = []
   documentVersion: Union[StudyProtocolDocumentVersion, None] = None
-  appliesTo: List[StudySite] = []
   dictionaries: List[SyntaxTemplateDictionary] = []
   conditions: List[Condition] = []
   organizations: List[ResearchOrganization] = []
-  instanceType: Literal['StudyDesign'] = 'StudyDesign'
+  instanceType: Literal['StudyDesign']

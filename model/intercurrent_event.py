@@ -3,4 +3,4 @@ from typing import Literal
 
 class IntercurrentEvent(ApiBaseModelWithIdNameLabelAndDesc):
   strategy: str
-  instanceType: Literal['IntercurrentEvent'] = 'IntercurrentEvent'
+  instanceType: Literal['IntercurrentEvent']
