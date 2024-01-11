@@ -1,5 +1,5 @@
-from .api_base_model import ApiBaseModelWithId
 from typing import Literal
+from .api_base_model import ApiBaseModelWithId
 
 class Code(ApiBaseModelWithId):
   code: str
