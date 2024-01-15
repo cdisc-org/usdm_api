@@ -9,8 +9,8 @@ class PopulationDefinition(ApiBaseModelWithIdNameLabelAndDesc):
   includesHealthySubjects: bool
   plannedEnrollmentNumber: Union[Range, None] = None
   plannedCompletionNumber: Union[Range, None] = None
-  plannedSex: List[Code] = []
-  criteria: List[EligibilityCriterion] = []
+  plannedSex: List[Code]
+  criteria: List[EligibilityCriterion]
   plannedAge: Union[Range, None] = None
   instanceType: Literal['PopulationDefinition']
 
