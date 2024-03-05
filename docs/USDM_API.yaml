@@ -1,9 +1,9 @@
 openapi: 3.1.0
 info:
-  title: Simple API for DDF
+  title: DDF USDM API
   description: A simple TransCelerate Digital Data Flow (DDF) Study Definitions Repository
     API.
-  version: 2.9.0
+  version: 2.11.0
 paths:
   /v3/studyDefinitions:
     post:
@@ -1110,6 +1110,7 @@ components:
             $ref: '#/components/schemas/Code'
           type: array
           title: Environmentalsetting
+          default: []
         contactModes:
           items:
             $ref: '#/components/schemas/Code'
