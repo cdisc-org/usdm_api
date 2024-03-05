@@ -1,6 +1,5 @@
 from typing import List, Literal, Dict, Union
 from .api_base_model import ApiBaseModelWithId
-from .timing import Timing
 
 class ScheduledInstance(ApiBaseModelWithId):
   timelineId: Union[str, None] = None
