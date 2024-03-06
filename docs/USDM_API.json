@@ -737,7 +737,14 @@
             "$ref": "#/components/schemas/AdministrationDuration-Input"
           },
           "dose": {
-            "$ref": "#/components/schemas/Quantity"
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Quantity"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "route": {
             "$ref": "#/components/schemas/Code"
@@ -755,7 +762,6 @@
           "id",
           "name",
           "duration",
-          "dose",
           "route",
           "frequency",
           "instanceType"
@@ -800,7 +806,14 @@
             "$ref": "#/components/schemas/AdministrationDuration-Output"
           },
           "dose": {
-            "$ref": "#/components/schemas/Quantity"
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Quantity"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "route": {
             "$ref": "#/components/schemas/Code"
@@ -818,7 +831,6 @@
           "id",
           "name",
           "duration",
-          "dose",
           "route",
           "frequency",
           "instanceType"
@@ -4870,7 +4882,8 @@
               "$ref": "#/components/schemas/AgentAdministration-Input"
             },
             "type": "array",
-            "title": "Administrations"
+            "title": "Administrations",
+            "default": []
           },
           "productDesignation": {
             "$ref": "#/components/schemas/Code"
@@ -4896,7 +4909,6 @@
           "name",
           "role",
           "type",
-          "administrations",
           "productDesignation",
           "instanceType"
         ],
@@ -4965,7 +4977,8 @@
               "$ref": "#/components/schemas/AgentAdministration-Output"
             },
             "type": "array",
-            "title": "Administrations"
+            "title": "Administrations",
+            "default": []
           },
           "productDesignation": {
             "$ref": "#/components/schemas/Code"
@@ -4991,7 +5004,6 @@
           "name",
           "role",
           "type",
-          "administrations",
           "productDesignation",
           "instanceType"
         ],

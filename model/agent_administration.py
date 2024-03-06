@@ -1,3 +1,4 @@
+from typing import Union
 from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 from .quantity import Quantity
 from .administration_duration import AdministrationDuration
@@ -6,7 +7,7 @@ from typing import Literal
 
 class AgentAdministration(ApiBaseModelWithIdNameLabelAndDesc):
   duration:	AdministrationDuration
-  dose:	Quantity
+  dose:	Union[Quantity, None] = None
   route:	Code
   frequency:	Code
   instanceType: Literal['AgentAdministration']

@@ -475,7 +475,9 @@ components:
         duration:
           $ref: '#/components/schemas/AdministrationDuration-Input'
         dose:
-          $ref: '#/components/schemas/Quantity'
+          anyOf:
+          - $ref: '#/components/schemas/Quantity'
+          - type: 'null'
         route:
           $ref: '#/components/schemas/Code'
         frequency:
@@ -488,7 +490,6 @@ components:
       - id
       - name
       - duration
-      - dose
       - route
       - frequency
       - instanceType
@@ -516,7 +517,9 @@ components:
         duration:
           $ref: '#/components/schemas/AdministrationDuration-Output'
         dose:
-          $ref: '#/components/schemas/Quantity'
+          anyOf:
+          - $ref: '#/components/schemas/Quantity'
+          - type: 'null'
         route:
           $ref: '#/components/schemas/Code'
         frequency:
@@ -529,7 +532,6 @@ components:
       - id
       - name
       - duration
-      - dose
       - route
       - frequency
       - instanceType
@@ -3130,6 +3132,7 @@ components:
             $ref: '#/components/schemas/AgentAdministration-Input'
           type: array
           title: Administrations
+          default: []
         productDesignation:
           $ref: '#/components/schemas/Code'
         pharmacologicClass:
@@ -3145,7 +3148,6 @@ components:
       - name
       - role
       - type
-      - administrations
       - productDesignation
       - instanceType
       title: StudyIntervention
@@ -3188,6 +3190,7 @@ components:
             $ref: '#/components/schemas/AgentAdministration-Output'
           type: array
           title: Administrations
+          default: []
         productDesignation:
           $ref: '#/components/schemas/Code'
         pharmacologicClass:
@@ -3203,7 +3206,6 @@ components:
       - name
       - role
       - type
-      - administrations
       - productDesignation
       - instanceType
       title: StudyIntervention
