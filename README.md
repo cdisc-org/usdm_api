@@ -3,7 +3,7 @@ This repository contains the official formal definition of the Unified Study Def
 
 The API is defined by a set of python classes built using the pydantic library. These classes are then used from within FastAPI. FastAPI allows for the API specificition to be exported using the OpenAPI standard while also being executed as a server.
 
-The repo formas part of the larger DDF USDM project that can be found in the CDISC [DDF-RA](https://github.com/cdisc-org/DDF-RA) repo.
+The repo forms part of the larger DDF USDM project that can be found in the CDISC [DDF-RA](https://github.com/cdisc-org/DDF-RA) repo.
 
 # Server Execution
 To run the server use the command
