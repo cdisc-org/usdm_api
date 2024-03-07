@@ -31,14 +31,14 @@ The following coding style is used in attribute definitions. For required simple
 Required: ```attributeName: typeName```
 Optional: ```attributeName: typeName = None```
 
-The convention used for relationships and cardinality is as follows
+The convention used for relationships and cardinality is as follows:
 
 For 1:1: ```attributeName: ClassName```
 For 1:0..1: ```attributeName: Union[ClassName, None] = None```
 For 1:1..*: ```attributeName: [ClassName]```
 For 1:0..*: ```attributeName: [ClassName] = []```
 
-For cross references (note the addition of 'Id' or 'Ids')
+For cross references (note the addition of 'Id' or 'Ids') the convention is as follows:
 
 For 1:1: ```attributeNameId: str```
 For 1:0..1: ```attributeNameId: Union[str, None] = None```
