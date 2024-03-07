@@ -3108,6 +3108,33 @@
             "minLength": 1,
             "title": "Id"
           },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
           "timelineId": {
             "anyOf": [
               {
@@ -3179,6 +3206,7 @@
         "type": "object",
         "required": [
           "id",
+          "name",
           "instanceType"
         ],
         "title": "ScheduledActivityInstance"
@@ -3189,6 +3217,33 @@
             "type": "string",
             "minLength": 1,
             "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
           },
           "timelineId": {
             "anyOf": [
@@ -3249,6 +3304,7 @@
         "type": "object",
         "required": [
           "id",
+          "name",
           "instanceType",
           "conditionAssignments"
         ],
