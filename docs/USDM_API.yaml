@@ -3819,17 +3819,45 @@ components:
       properties:
         study:
           $ref: '#/components/schemas/Study-Input'
+        usdm_version:
+          type: string
+          title: Usdm Version
+        system_name:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: System Name
+        system_version:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: System Version
       type: object
       required:
       - study
+      - usdm_version
       title: Wrapper
     Wrapper-Output:
       properties:
         study:
           $ref: '#/components/schemas/Study-Output'
+        usdm_version:
+          type: string
+          title: Usdm Version
+        system_name:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: System Name
+        system_version:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: System Version
       type: object
       required:
       - study
+      - usdm_version
       title: Wrapper
 tags:
 - name: Production
