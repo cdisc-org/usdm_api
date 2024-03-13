@@ -5,6 +5,7 @@ from .code import Code
 class Timing(ApiBaseModelWithIdNameLabelAndDesc):
   type: Code
   value: str
+  valueLabel: str
   relativeToFrom: Code
   relativeFromScheduledInstanceId: Union[str, None] = None
   relativeToScheduledInstanceId: Union[str, None] = None
