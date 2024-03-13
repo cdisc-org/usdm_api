@@ -11,5 +11,5 @@ class Timing(ApiBaseModelWithIdNameLabelAndDesc):
   relativeToScheduledInstanceId: Union[str, None] = None
   windowLower: Union[str, None] = None
   windowUpper: Union[str, None] = None
-  window: Union[str, None] = None
+  windowLabel: Union[str, None] = None
   instanceType: Literal['Timing']
