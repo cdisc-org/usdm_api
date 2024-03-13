@@ -3777,11 +3777,11 @@ components:
           - type: string
           - type: 'null'
           title: Windowupper
-        window:
+        windowLabel:
           anyOf:
           - type: string
           - type: 'null'
-          title: Window
+          title: Windowlabel
         instanceType:
           const: Timing
           title: Instancetype
