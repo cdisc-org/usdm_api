@@ -5848,6 +5848,10 @@
             "type": "string",
             "title": "Value"
           },
+          "valueLabel": {
+            "type": "string",
+            "title": "Valuelabel"
+          },
           "relativeToFrom": {
             "$ref": "#/components/schemas/Code"
           },
@@ -5917,6 +5921,7 @@
           "name",
           "type",
           "value",
+          "valueLabel",
           "relativeToFrom",
           "instanceType"
         ],

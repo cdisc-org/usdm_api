@@ -3752,6 +3752,9 @@ components:
         value:
           type: string
           title: Value
+        valueLabel:
+          type: string
+          title: Valuelabel
         relativeToFrom:
           $ref: '#/components/schemas/Code'
         relativeFromScheduledInstanceId:
@@ -3788,6 +3791,7 @@ components:
       - name
       - type
       - value
+      - valueLabel
       - relativeToFrom
       - instanceType
       title: Timing
