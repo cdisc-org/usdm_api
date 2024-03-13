@@ -1475,6 +1475,16 @@ components:
           type: array
           title: Childids
           default: []
+        previousId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Previousid
+        nextId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Nextid
         instanceType:
           const: NarrativeContent
           title: Instancetype
