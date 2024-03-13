@@ -631,7 +631,7 @@
             "title": "Id"
           },
           "quantity": {
-            "$ref": "#/components/schemas/Quantity"
+            "$ref": "#/components/schemas/Quantity-Input"
           },
           "description": {
             "type": "string",
@@ -669,7 +669,7 @@
             "title": "Id"
           },
           "quantity": {
-            "$ref": "#/components/schemas/Quantity"
+            "$ref": "#/components/schemas/Quantity-Output"
           },
           "description": {
             "type": "string",
@@ -739,7 +739,7 @@
           "dose": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/Quantity"
+                "$ref": "#/components/schemas/Quantity-Input"
               },
               {
                 "type": "null"
@@ -747,10 +747,10 @@
             ]
           },
           "route": {
-            "$ref": "#/components/schemas/Code"
+            "$ref": "#/components/schemas/AliasCode"
           },
           "frequency": {
-            "$ref": "#/components/schemas/Code"
+            "$ref": "#/components/schemas/AliasCode"
           },
           "instanceType": {
             "const": "AgentAdministration",
@@ -808,7 +808,7 @@
           "dose": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/Quantity"
+                "$ref": "#/components/schemas/Quantity-Output"
               },
               {
                 "type": "null"
@@ -816,10 +816,10 @@
             ]
           },
           "route": {
-            "$ref": "#/components/schemas/Code"
+            "$ref": "#/components/schemas/AliasCode"
           },
           "frequency": {
-            "$ref": "#/components/schemas/Code"
+            "$ref": "#/components/schemas/AliasCode"
           },
           "instanceType": {
             "const": "AgentAdministration",
@@ -2642,7 +2642,7 @@
         ],
         "title": "Procedure"
       },
-      "Quantity": {
+      "Quantity-Input": {
         "properties": {
           "id": {
             "type": "string",
@@ -2656,7 +2656,41 @@
           "unit": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/Code"
+                "$ref": "#/components/schemas/AliasCode"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "instanceType": {
+            "const": "Quantity",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "value",
+          "instanceType"
+        ],
+        "title": "Quantity"
+      },
+      "Quantity-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "value": {
+            "type": "number",
+            "title": "Value"
+          },
+          "unit": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AliasCode"
               },
               {
                 "type": "null"
@@ -4906,7 +4940,7 @@
           "minimumResponseDuration": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/Quantity"
+                "$ref": "#/components/schemas/Quantity-Input"
               },
               {
                 "type": "null"
@@ -5001,7 +5035,7 @@
           "minimumResponseDuration": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/Quantity"
+                "$ref": "#/components/schemas/Quantity-Output"
               },
               {
                 "type": "null"
@@ -5650,7 +5684,7 @@
             "title": "Instancetype"
           },
           "quantity": {
-            "$ref": "#/components/schemas/Quantity"
+            "$ref": "#/components/schemas/Quantity-Input"
           }
         },
         "type": "object",
@@ -5687,7 +5721,7 @@
             "title": "Instancetype"
           },
           "quantity": {
-            "$ref": "#/components/schemas/Quantity"
+            "$ref": "#/components/schemas/Quantity-Output"
           }
         },
         "type": "object",
