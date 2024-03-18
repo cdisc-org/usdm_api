@@ -1010,6 +1010,28 @@ components:
       - text
       - instanceType
       title: Condition
+    ConditionAssignment:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        condition:
+          type: string
+          title: Condition
+        conditionTargetId:
+          type: string
+          title: Conditiontargetid
+        instanceType:
+          const: ConditionAssignment
+          title: Instancetype
+      type: object
+      required:
+      - id
+      - condition
+      - conditionTargetId
+      - instanceType
+      title: ConditionAssignment
     EligibilityCriterion:
       properties:
         id:
@@ -1668,6 +1690,28 @@ components:
       - identifier
       - instanceType
       title: Organization
+    ParameterMap:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        tag:
+          type: string
+          title: Tag
+        reference:
+          type: string
+          title: Reference
+        instanceType:
+          const: ParameterMap
+          title: Instancetype
+      type: object
+      required:
+      - id
+      - tag
+      - reference
+      - instanceType
+      title: ParameterMap
     Procedure:
       properties:
         id:
@@ -2134,9 +2178,9 @@ components:
           const: ScheduledDecisionInstance
           title: Instancetype
         conditionAssignments:
-          additionalProperties:
-            type: string
-          type: object
+          items:
+            $ref: '#/components/schemas/ConditionAssignment'
+          type: array
           title: Conditionassignments
       type: object
       required:
@@ -3714,9 +3758,11 @@ components:
           - type: string
           - type: 'null'
           title: Description
-        parameterMap:
-          type: object
-          title: Parametermap
+        parameterMaps:
+          items:
+            $ref: '#/components/schemas/ParameterMap'
+          type: array
+          title: Parametermaps
         instanceType:
           const: SyntaxTemplateDictionary
           title: Instancetype
@@ -3724,7 +3770,7 @@ components:
       required:
       - id
       - name
-      - parameterMap
+      - parameterMaps
       - instanceType
       title: SyntaxTemplateDictionary
     Timing:

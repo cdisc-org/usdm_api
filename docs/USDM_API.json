@@ -1553,6 +1553,35 @@
         ],
         "title": "Condition"
       },
+      "ConditionAssignment": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "condition": {
+            "type": "string",
+            "title": "Condition"
+          },
+          "conditionTargetId": {
+            "type": "string",
+            "title": "Conditiontargetid"
+          },
+          "instanceType": {
+            "const": "ConditionAssignment",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "condition",
+          "conditionTargetId",
+          "instanceType"
+        ],
+        "title": "ConditionAssignment"
+      },
       "EligibilityCriterion": {
         "properties": {
           "id": {
@@ -2597,6 +2626,35 @@
         ],
         "title": "Organization"
       },
+      "ParameterMap": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "tag": {
+            "type": "string",
+            "title": "Tag"
+          },
+          "reference": {
+            "type": "string",
+            "title": "Reference"
+          },
+          "instanceType": {
+            "const": "ParameterMap",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "tag",
+          "reference",
+          "instanceType"
+        ],
+        "title": "ParameterMap"
+      },
       "Procedure": {
         "properties": {
           "id": {
@@ -3338,10 +3396,10 @@
             "title": "Instancetype"
           },
           "conditionAssignments": {
-            "additionalProperties": {
-              "type": "string"
+            "items": {
+              "$ref": "#/components/schemas/ConditionAssignment"
             },
-            "type": "object",
+            "type": "array",
             "title": "Conditionassignments"
           }
         },
@@ -5789,9 +5847,12 @@
             ],
             "title": "Description"
           },
-          "parameterMap": {
-            "type": "object",
-            "title": "Parametermap"
+          "parameterMaps": {
+            "items": {
+              "$ref": "#/components/schemas/ParameterMap"
+            },
+            "type": "array",
+            "title": "Parametermaps"
           },
           "instanceType": {
             "const": "SyntaxTemplateDictionary",
@@ -5802,7 +5863,7 @@
         "required": [
           "id",
           "name",
-          "parameterMap",
+          "parameterMaps",
           "instanceType"
         ],
         "title": "SyntaxTemplateDictionary"
