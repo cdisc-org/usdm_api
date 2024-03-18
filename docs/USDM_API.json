@@ -3886,7 +3886,8 @@
               "$ref": "#/components/schemas/Code"
             },
             "type": "array",
-            "title": "Plannedsex"
+            "title": "Plannedsex",
+            "default": []
           },
           "criteria": {
             "items": {
@@ -3923,7 +3924,6 @@
           "id",
           "name",
           "includesHealthySubjects",
-          "plannedSex",
           "criteria",
           "instanceType"
         ],
@@ -3992,7 +3992,8 @@
               "$ref": "#/components/schemas/Code"
             },
             "type": "array",
-            "title": "Plannedsex"
+            "title": "Plannedsex",
+            "default": []
           },
           "criteria": {
             "items": {
@@ -4029,7 +4030,6 @@
           "id",
           "name",
           "includesHealthySubjects",
-          "plannedSex",
           "criteria",
           "instanceType"
         ],
@@ -4624,7 +4624,8 @@
               "$ref": "#/components/schemas/Code"
             },
             "type": "array",
-            "title": "Plannedsex"
+            "title": "Plannedsex",
+            "default": []
           },
           "criteria": {
             "items": {
@@ -4661,7 +4662,6 @@
           "id",
           "name",
           "includesHealthySubjects",
-          "plannedSex",
           "criteria",
           "instanceType"
         ],
@@ -4730,7 +4730,8 @@
               "$ref": "#/components/schemas/Code"
             },
             "type": "array",
-            "title": "Plannedsex"
+            "title": "Plannedsex",
+            "default": []
           },
           "criteria": {
             "items": {
@@ -4767,7 +4768,6 @@
           "id",
           "name",
           "includesHealthySubjects",
-          "plannedSex",
           "criteria",
           "instanceType"
         ],

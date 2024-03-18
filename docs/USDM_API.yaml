@@ -2492,6 +2492,7 @@ components:
             $ref: '#/components/schemas/Code'
           type: array
           title: Plannedsex
+          default: []
         criteria:
           items:
             $ref: '#/components/schemas/EligibilityCriterion'
@@ -2515,7 +2516,6 @@ components:
       - id
       - name
       - includesHealthySubjects
-      - plannedSex
       - criteria
       - instanceType
       title: StudyCohort
@@ -2555,6 +2555,7 @@ components:
             $ref: '#/components/schemas/Code'
           type: array
           title: Plannedsex
+          default: []
         criteria:
           items:
             $ref: '#/components/schemas/EligibilityCriterion'
@@ -2578,7 +2579,6 @@ components:
       - id
       - name
       - includesHealthySubjects
-      - plannedSex
       - criteria
       - instanceType
       title: StudyCohort
@@ -2980,6 +2980,7 @@ components:
             $ref: '#/components/schemas/Code'
           type: array
           title: Plannedsex
+          default: []
         criteria:
           items:
             $ref: '#/components/schemas/EligibilityCriterion'
@@ -3003,7 +3004,6 @@ components:
       - id
       - name
       - includesHealthySubjects
-      - plannedSex
       - criteria
       - instanceType
       title: StudyDesignPopulation
@@ -3043,6 +3043,7 @@ components:
             $ref: '#/components/schemas/Code'
           type: array
           title: Plannedsex
+          default: []
         criteria:
           items:
             $ref: '#/components/schemas/EligibilityCriterion'
@@ -3066,7 +3067,6 @@ components:
       - id
       - name
       - includesHealthySubjects
-      - plannedSex
       - criteria
       - instanceType
       title: StudyDesignPopulation
