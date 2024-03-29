@@ -1,26 +1,46 @@
-# DDF Service
-A simple DDF Study Definitions Repository (SDR) Simulator. A simple micro service that emulates the TransCelerate SDR functionality and provides the current API specification
+# USDM API
+This repository contains the official formal definition of the Unified Study Definitions Model (USDM) API. 
 
-# Example Files
-See the json files within the study directory
+The API is defined by a set of python classes built using the pydantic library. These classes are then used from within FastAPI. FastAPI allows for the API specificition to be exported using the OpenAPI standard while also being executed as a server.
 
-# Docker
-## How to build the image
-```
-docker build --pull --rm -f "Dockerfile" -t ddfservice:latest "." --build-arg DDF_SERVICE_PROJ_KEY_ARG=<DDFServiceProjectKey>
-```
+The repo forms part of the larger DDF USDM project that can be found in the CDISC [DDF-RA](https://github.com/cdisc-org/DDF-RA) repo.
 
-## How to build the container
+# Server Execution
+To run the server use the command
 ```
-docker container run -p 80:80 -dit --name ddf ddfservice:latest
-```
-
-# Check syntax
-```
-uvicorn main:app
+uvicorn main:app  --reload
 ```
 
 # Generate API json and yaml files
+To generate the OpenAPI specifications in both YAML and JSON format use the script
 ```
-./api_docs.sh
+. ./api_docs.sh
 ```
+This script employs the openapi.py utility
+
+# Style
+
+## Attribute Name
+
+Attribute names refect the UML model for all simple type attributes and all relationships. Where a relationship is turned into a cross reference (so as not to include the content twice in the serialization) either Id or Ids is appended to the attribute name for 1 to 1 or 1 to many relationship respectively. When Id or Ids is appended the root attribute name may be altered so as to make the new name readble, for example the attribute 'children' becomes 'childIds'.
+
+## Attribute Definition
+
+The following coding style is used in attribute definitions. For required simple type attributes the coding convention used is as follows:
+
+- Required: ```attributeName: typeName```
+- Optional: ```attributeName: Union[typeName, None] = None```
+
+The convention used for relationships and cardinality is as follows:
+
+- For 1:1: ```attributeName: ClassName```
+- For 1:0..1: ```attributeName: Union[ClassName, None] = None```
+- For 1:1..*: ```attributeName: [ClassName]```
+- For 1:0..*: ```attributeName: [ClassName] = []```
+
+For cross references (note the addition of 'Id' or 'Ids') the convention is as follows:
+
+- For 1:1: ```attributeNameId: str```
+- For 1:0..1: ```attributeNameId: Union[str, None] = None```
+- For 1:1..*: ```attributeNameIds: [str]```
+- For 1:0..*: ```attributeNameIds: [str] = []```

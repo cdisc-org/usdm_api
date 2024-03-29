@@ -3,8 +3,8 @@ from model.study_version import *
 from model.wrapper import Wrapper
 from uuid import UUID, uuid4
 
-VERSION = "2.9.0"
-SYSTEM_NAME = "Simple API for DDF"
+VERSION = "2.11.0"
+SYSTEM_NAME = "DDF USDM API"
 
 tags_metadata = [
     {

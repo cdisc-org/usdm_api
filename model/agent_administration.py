@@ -1,12 +1,12 @@
+from typing import Literal
 from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 from .quantity import Quantity
 from .administration_duration import AdministrationDuration
-from .code import Code
-from typing import Literal
+from .alias_code import AliasCode
 
 class AgentAdministration(ApiBaseModelWithIdNameLabelAndDesc):
   duration:	AdministrationDuration
   dose:	Quantity
-  route:	Code
-  frequency:	Code
+  route:	AliasCode
+  frequency:	AliasCode
   instanceType: Literal['AgentAdministration']

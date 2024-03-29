@@ -1,9 +1,9 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Simple API for DDF",
+    "title": "DDF USDM API",
     "description": "A simple TransCelerate Digital Data Flow (DDF) Study Definitions Repository API.",
-    "version": "2.9.0"
+    "version": "2.11.0"
   },
   "paths": {
     "/v3/studyDefinitions": {
@@ -631,7 +631,14 @@
             "title": "Id"
           },
           "quantity": {
-            "$ref": "#/components/schemas/Quantity"
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Quantity-Input"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "description": {
             "type": "string",
@@ -653,7 +660,6 @@
         "type": "object",
         "required": [
           "id",
-          "quantity",
           "description",
           "durationWillVary",
           "reasonDurationWillVary",
@@ -669,7 +675,14 @@
             "title": "Id"
           },
           "quantity": {
-            "$ref": "#/components/schemas/Quantity"
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Quantity-Output"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "description": {
             "type": "string",
@@ -691,7 +704,6 @@
         "type": "object",
         "required": [
           "id",
-          "quantity",
           "description",
           "durationWillVary",
           "reasonDurationWillVary",
@@ -737,13 +749,13 @@
             "$ref": "#/components/schemas/AdministrationDuration-Input"
           },
           "dose": {
-            "$ref": "#/components/schemas/Quantity"
+            "$ref": "#/components/schemas/Quantity-Input"
           },
           "route": {
-            "$ref": "#/components/schemas/Code"
+            "$ref": "#/components/schemas/AliasCode"
           },
           "frequency": {
-            "$ref": "#/components/schemas/Code"
+            "$ref": "#/components/schemas/AliasCode"
           },
           "instanceType": {
             "const": "AgentAdministration",
@@ -800,13 +812,13 @@
             "$ref": "#/components/schemas/AdministrationDuration-Output"
           },
           "dose": {
-            "$ref": "#/components/schemas/Quantity"
+            "$ref": "#/components/schemas/Quantity-Output"
           },
           "route": {
-            "$ref": "#/components/schemas/Code"
+            "$ref": "#/components/schemas/AliasCode"
           },
           "frequency": {
-            "$ref": "#/components/schemas/Code"
+            "$ref": "#/components/schemas/AliasCode"
           },
           "instanceType": {
             "const": "AgentAdministration",
@@ -1541,6 +1553,35 @@
         ],
         "title": "Condition"
       },
+      "ConditionAssignment": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "condition": {
+            "type": "string",
+            "title": "Condition"
+          },
+          "conditionTargetId": {
+            "type": "string",
+            "title": "Conditiontargetid"
+          },
+          "instanceType": {
+            "const": "ConditionAssignment",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "condition",
+          "conditionTargetId",
+          "instanceType"
+        ],
+        "title": "ConditionAssignment"
+      },
       "EligibilityCriterion": {
         "properties": {
           "id": {
@@ -1721,7 +1762,8 @@
               "$ref": "#/components/schemas/Code"
             },
             "type": "array",
-            "title": "Environmentalsetting"
+            "title": "Environmentalsetting",
+            "default": []
           },
           "contactModes": {
             "items": {
@@ -2277,6 +2319,28 @@
             "title": "Childids",
             "default": []
           },
+          "previousId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Previousid"
+          },
+          "nextId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nextid"
+          },
           "instanceType": {
             "const": "NarrativeContent",
             "title": "Instancetype"
@@ -2346,14 +2410,7 @@
             "title": "Instancetype"
           },
           "level": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/Code"
-              },
-              {
-                "type": "null"
-              }
-            ]
+            "$ref": "#/components/schemas/Code"
           },
           "endpoints": {
             "items": {
@@ -2369,7 +2426,8 @@
           "id",
           "name",
           "text",
-          "instanceType"
+          "instanceType",
+          "level"
         ],
         "title": "Objective"
       },
@@ -2427,14 +2485,7 @@
             "title": "Instancetype"
           },
           "level": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/Code"
-              },
-              {
-                "type": "null"
-              }
-            ]
+            "$ref": "#/components/schemas/Code"
           },
           "endpoints": {
             "items": {
@@ -2450,7 +2501,8 @@
           "id",
           "name",
           "text",
-          "instanceType"
+          "instanceType",
+          "level"
         ],
         "title": "Objective"
       },
@@ -2574,6 +2626,35 @@
         ],
         "title": "Organization"
       },
+      "ParameterMap": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "tag": {
+            "type": "string",
+            "title": "Tag"
+          },
+          "reference": {
+            "type": "string",
+            "title": "Reference"
+          },
+          "instanceType": {
+            "const": "ParameterMap",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "tag",
+          "reference",
+          "instanceType"
+        ],
+        "title": "ParameterMap"
+      },
       "Procedure": {
         "properties": {
           "id": {
@@ -2641,7 +2722,7 @@
         ],
         "title": "Procedure"
       },
-      "Quantity": {
+      "Quantity-Input": {
         "properties": {
           "id": {
             "type": "string",
@@ -2655,7 +2736,41 @@
           "unit": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/Code"
+                "$ref": "#/components/schemas/AliasCode"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "instanceType": {
+            "const": "Quantity",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "value",
+          "instanceType"
+        ],
+        "title": "Quantity"
+      },
+      "Quantity-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "value": {
+            "type": "number",
+            "title": "Value"
+          },
+          "unit": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AliasCode"
               },
               {
                 "type": "null"
@@ -3095,6 +3210,33 @@
             "minLength": 1,
             "title": "Id"
           },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
           "timelineId": {
             "anyOf": [
               {
@@ -3166,6 +3308,7 @@
         "type": "object",
         "required": [
           "id",
+          "name",
           "instanceType"
         ],
         "title": "ScheduledActivityInstance"
@@ -3176,6 +3319,33 @@
             "type": "string",
             "minLength": 1,
             "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
           },
           "timelineId": {
             "anyOf": [
@@ -3226,16 +3396,17 @@
             "title": "Instancetype"
           },
           "conditionAssignments": {
-            "additionalProperties": {
-              "type": "string"
+            "items": {
+              "$ref": "#/components/schemas/ConditionAssignment"
             },
-            "type": "object",
+            "type": "array",
             "title": "Conditionassignments"
           }
         },
         "type": "object",
         "required": [
           "id",
+          "name",
           "instanceType",
           "conditionAssignments"
         ],
@@ -3715,7 +3886,8 @@
               "$ref": "#/components/schemas/Code"
             },
             "type": "array",
-            "title": "Plannedsex"
+            "title": "Plannedsex",
+            "default": []
           },
           "criteria": {
             "items": {
@@ -3752,7 +3924,6 @@
           "id",
           "name",
           "includesHealthySubjects",
-          "plannedSex",
           "criteria",
           "instanceType"
         ],
@@ -3821,7 +3992,8 @@
               "$ref": "#/components/schemas/Code"
             },
             "type": "array",
-            "title": "Plannedsex"
+            "title": "Plannedsex",
+            "default": []
           },
           "criteria": {
             "items": {
@@ -3858,7 +4030,6 @@
           "id",
           "name",
           "includesHealthySubjects",
-          "plannedSex",
           "criteria",
           "instanceType"
         ],
@@ -4453,7 +4624,8 @@
               "$ref": "#/components/schemas/Code"
             },
             "type": "array",
-            "title": "Plannedsex"
+            "title": "Plannedsex",
+            "default": []
           },
           "criteria": {
             "items": {
@@ -4490,7 +4662,6 @@
           "id",
           "name",
           "includesHealthySubjects",
-          "plannedSex",
           "criteria",
           "instanceType"
         ],
@@ -4559,7 +4730,8 @@
               "$ref": "#/components/schemas/Code"
             },
             "type": "array",
-            "title": "Plannedsex"
+            "title": "Plannedsex",
+            "default": []
           },
           "criteria": {
             "items": {
@@ -4596,7 +4768,6 @@
           "id",
           "name",
           "includesHealthySubjects",
-          "plannedSex",
           "criteria",
           "instanceType"
         ],
@@ -4849,7 +5020,7 @@
           "minimumResponseDuration": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/Quantity"
+                "$ref": "#/components/schemas/Quantity-Input"
               },
               {
                 "type": "null"
@@ -4869,7 +5040,8 @@
               "$ref": "#/components/schemas/AgentAdministration-Input"
             },
             "type": "array",
-            "title": "Administrations"
+            "title": "Administrations",
+            "default": []
           },
           "productDesignation": {
             "$ref": "#/components/schemas/Code"
@@ -4895,7 +5067,6 @@
           "name",
           "role",
           "type",
-          "administrations",
           "productDesignation",
           "instanceType"
         ],
@@ -4944,7 +5115,7 @@
           "minimumResponseDuration": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/Quantity"
+                "$ref": "#/components/schemas/Quantity-Output"
               },
               {
                 "type": "null"
@@ -4964,7 +5135,8 @@
               "$ref": "#/components/schemas/AgentAdministration-Output"
             },
             "type": "array",
-            "title": "Administrations"
+            "title": "Administrations",
+            "default": []
           },
           "productDesignation": {
             "$ref": "#/components/schemas/Code"
@@ -4990,7 +5162,6 @@
           "name",
           "role",
           "type",
-          "administrations",
           "productDesignation",
           "instanceType"
         ],
@@ -5593,7 +5764,7 @@
             "title": "Instancetype"
           },
           "quantity": {
-            "$ref": "#/components/schemas/Quantity"
+            "$ref": "#/components/schemas/Quantity-Input"
           }
         },
         "type": "object",
@@ -5630,7 +5801,7 @@
             "title": "Instancetype"
           },
           "quantity": {
-            "$ref": "#/components/schemas/Quantity"
+            "$ref": "#/components/schemas/Quantity-Output"
           }
         },
         "type": "object",
@@ -5676,9 +5847,12 @@
             ],
             "title": "Description"
           },
-          "parameterMap": {
-            "type": "object",
-            "title": "Parametermap"
+          "parameterMaps": {
+            "items": {
+              "$ref": "#/components/schemas/ParameterMap"
+            },
+            "type": "array",
+            "title": "Parametermaps"
           },
           "instanceType": {
             "const": "SyntaxTemplateDictionary",
@@ -5689,7 +5863,7 @@
         "required": [
           "id",
           "name",
-          "parameterMap",
+          "parameterMaps",
           "instanceType"
         ],
         "title": "SyntaxTemplateDictionary"
@@ -5734,6 +5908,10 @@
           "value": {
             "type": "string",
             "title": "Value"
+          },
+          "valueLabel": {
+            "type": "string",
+            "title": "Valuelabel"
           },
           "relativeToFrom": {
             "$ref": "#/components/schemas/Code"
@@ -5782,7 +5960,7 @@
             ],
             "title": "Windowupper"
           },
-          "window": {
+          "windowLabel": {
             "anyOf": [
               {
                 "type": "string"
@@ -5791,7 +5969,7 @@
                 "type": "null"
               }
             ],
-            "title": "Window"
+            "title": "Windowlabel"
           },
           "instanceType": {
             "const": "Timing",
@@ -5804,6 +5982,7 @@
           "name",
           "type",
           "value",
+          "valueLabel",
           "relativeToFrom",
           "instanceType"
         ],
@@ -5898,11 +6077,38 @@
         "properties": {
           "study": {
             "$ref": "#/components/schemas/Study-Input"
+          },
+          "usdmVersion": {
+            "type": "string",
+            "title": "Usdmversion"
+          },
+          "systemName": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Systemname"
+          },
+          "systemVersion": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Systemversion"
           }
         },
         "type": "object",
         "required": [
-          "study"
+          "study",
+          "usdmVersion"
         ],
         "title": "Wrapper"
       },
@@ -5910,11 +6116,38 @@
         "properties": {
           "study": {
             "$ref": "#/components/schemas/Study-Output"
+          },
+          "usdmVersion": {
+            "type": "string",
+            "title": "Usdmversion"
+          },
+          "systemName": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Systemname"
+          },
+          "systemVersion": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Systemversion"
           }
         },
         "type": "object",
         "required": [
-          "study"
+          "study",
+          "usdmVersion"
         ],
         "title": "Wrapper"
       }
