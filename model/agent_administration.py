@@ -7,7 +7,7 @@ from typing import Literal
 
 class AgentAdministration(ApiBaseModelWithIdNameLabelAndDesc):
   duration:	AdministrationDuration
-  dose:	Union[Quantity, None] = None
+  dose:	Quantity
   route:	AliasCode
   frequency:	AliasCode
   instanceType: Literal['AgentAdministration']
