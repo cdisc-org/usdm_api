@@ -1323,11 +1323,6 @@ components:
           - type: string
           - type: 'null'
           title: Previousid
-        contextId:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Contextid
       type: object
       required:
       - id
@@ -1392,11 +1387,6 @@ components:
           - type: string
           - type: 'null'
           title: Previousid
-        contextId:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Contextid
       type: object
       required:
       - id
@@ -3110,11 +3100,11 @@ components:
           type: array
           title: Plannedsex
           default: []
-        criteria:
+        criteriaIds:
           items:
-            $ref: '#/components/schemas/EligibilityCriterion-Input'
+            type: string
           type: array
-          title: Criteria
+          title: Criteriaids
           default: []
         plannedAge:
           anyOf:
@@ -3176,11 +3166,11 @@ components:
           type: array
           title: Plannedsex
           default: []
-        criteria:
+        criteriaIds:
           items:
-            $ref: '#/components/schemas/EligibilityCriterion-Output'
+            type: string
           type: array
-          title: Criteria
+          title: Criteriaids
           default: []
         plannedAge:
           anyOf:
@@ -3610,11 +3600,11 @@ components:
           type: array
           title: Plannedsex
           default: []
-        criteria:
+        criteriaIds:
           items:
-            $ref: '#/components/schemas/EligibilityCriterion-Input'
+            type: string
           type: array
-          title: Criteria
+          title: Criteriaids
           default: []
         plannedAge:
           anyOf:
@@ -3676,11 +3666,11 @@ components:
           type: array
           title: Plannedsex
           default: []
-        criteria:
+        criteriaIds:
           items:
-            $ref: '#/components/schemas/EligibilityCriterion-Output'
+            type: string
           type: array
-          title: Criteria
+          title: Criteriaids
           default: []
         plannedAge:
           anyOf:
@@ -4294,6 +4284,11 @@ components:
             $ref: '#/components/schemas/StudyTitle'
           type: array
           title: Titles
+        criteria:
+          items:
+            $ref: '#/components/schemas/EligibilityCriterion-Input'
+          type: array
+          title: Criteria
         instanceType:
           type: string
           enum:
@@ -4306,6 +4301,7 @@ components:
       - versionIdentifier
       - rationale
       - titles
+      - criteria
       - instanceType
       title: StudyVersion
     StudyVersion-Output:
@@ -4368,6 +4364,11 @@ components:
             $ref: '#/components/schemas/StudyTitle'
           type: array
           title: Titles
+        criteria:
+          items:
+            $ref: '#/components/schemas/EligibilityCriterion-Output'
+          type: array
+          title: Criteria
         instanceType:
           type: string
           enum:
@@ -4380,6 +4381,7 @@ components:
       - versionIdentifier
       - rationale
       - titles
+      - criteria
       - instanceType
       title: StudyVersion
     SubjectEnrollment-Input:

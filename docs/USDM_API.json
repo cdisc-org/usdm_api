@@ -2010,17 +2010,6 @@
               }
             ],
             "title": "Previousid"
-          },
-          "contextId": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Contextid"
           }
         },
         "type": "object",
@@ -2127,17 +2116,6 @@
               }
             ],
             "title": "Previousid"
-          },
-          "contextId": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Contextid"
           }
         },
         "type": "object",
@@ -4788,12 +4766,12 @@
             "title": "Plannedsex",
             "default": []
           },
-          "criteria": {
+          "criteriaIds": {
             "items": {
-              "$ref": "#/components/schemas/EligibilityCriterion-Input"
+              "type": "string"
             },
             "type": "array",
-            "title": "Criteria",
+            "title": "Criteriaids",
             "default": []
           },
           "plannedAge": {
@@ -4898,12 +4876,12 @@
             "title": "Plannedsex",
             "default": []
           },
-          "criteria": {
+          "criteriaIds": {
             "items": {
-              "$ref": "#/components/schemas/EligibilityCriterion-Output"
+              "type": "string"
             },
             "type": "array",
-            "title": "Criteria",
+            "title": "Criteriaids",
             "default": []
           },
           "plannedAge": {
@@ -5542,12 +5520,12 @@
             "title": "Plannedsex",
             "default": []
           },
-          "criteria": {
+          "criteriaIds": {
             "items": {
-              "$ref": "#/components/schemas/EligibilityCriterion-Input"
+              "type": "string"
             },
             "type": "array",
-            "title": "Criteria",
+            "title": "Criteriaids",
             "default": []
           },
           "plannedAge": {
@@ -5652,12 +5630,12 @@
             "title": "Plannedsex",
             "default": []
           },
-          "criteria": {
+          "criteriaIds": {
             "items": {
-              "$ref": "#/components/schemas/EligibilityCriterion-Output"
+              "type": "string"
             },
             "type": "array",
-            "title": "Criteria",
+            "title": "Criteriaids",
             "default": []
           },
           "plannedAge": {
@@ -6607,6 +6585,13 @@
             "type": "array",
             "title": "Titles"
           },
+          "criteria": {
+            "items": {
+              "$ref": "#/components/schemas/EligibilityCriterion-Input"
+            },
+            "type": "array",
+            "title": "Criteria"
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -6622,6 +6607,7 @@
           "versionIdentifier",
           "rationale",
           "titles",
+          "criteria",
           "instanceType"
         ],
         "title": "StudyVersion"
@@ -6719,6 +6705,13 @@
             "type": "array",
             "title": "Titles"
           },
+          "criteria": {
+            "items": {
+              "$ref": "#/components/schemas/EligibilityCriterion-Output"
+            },
+            "type": "array",
+            "title": "Criteria"
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -6734,6 +6727,7 @@
           "versionIdentifier",
           "rationale",
           "titles",
+          "criteria",
           "instanceType"
         ],
         "title": "StudyVersion"
