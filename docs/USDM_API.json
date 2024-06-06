@@ -362,7 +362,7 @@
           },
           "definedProcedures": {
             "items": {
-              "$ref": "#/components/schemas/Procedure"
+              "$ref": "#/components/schemas/Procedure-Input"
             },
             "type": "array",
             "title": "Definedprocedures",
@@ -402,6 +402,14 @@
               }
             ],
             "title": "Timelineid"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
           },
           "instanceType": {
             "type": "string",
@@ -478,7 +486,7 @@
           },
           "definedProcedures": {
             "items": {
-              "$ref": "#/components/schemas/Procedure"
+              "$ref": "#/components/schemas/Procedure-Output"
             },
             "type": "array",
             "title": "Definedprocedures",
@@ -518,6 +526,14 @@
               }
             ],
             "title": "Timelineid"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
           },
           "instanceType": {
             "type": "string",
@@ -900,7 +916,7 @@
         ],
         "title": "AliasCode"
       },
-      "AnalysisPopulation": {
+      "AnalysisPopulation-Input": {
         "properties": {
           "id": {
             "type": "string",
@@ -937,6 +953,78 @@
           "text": {
             "type": "string",
             "title": "Text"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "AnalysisPopulation"
+            ],
+            "const": "AnalysisPopulation",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "text",
+          "instanceType"
+        ],
+        "title": "AnalysisPopulation"
+      },
+      "AnalysisPopulation-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
           },
           "instanceType": {
             "type": "string",
@@ -1002,6 +1090,14 @@
           "code": {
             "$ref": "#/components/schemas/AliasCode"
           },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -1066,6 +1162,14 @@
           },
           "code": {
             "$ref": "#/components/schemas/AliasCode"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
           },
           "instanceType": {
             "type": "string",
@@ -1146,6 +1250,14 @@
               }
             ]
           },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -1223,6 +1335,14 @@
               }
             ]
           },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -1285,6 +1405,14 @@
           },
           "code": {
             "$ref": "#/components/schemas/AliasCode"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
           },
           "instanceType": {
             "type": "string",
@@ -1352,6 +1480,14 @@
           },
           "code": {
             "$ref": "#/components/schemas/AliasCode"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
           },
           "instanceType": {
             "type": "string",
@@ -1436,7 +1572,7 @@
         ],
         "title": "BiomedicalConceptSurrogate"
       },
-      "Characteristic": {
+      "Characteristic-Input": {
         "properties": {
           "id": {
             "type": "string",
@@ -1484,6 +1620,89 @@
               }
             ],
             "title": "Dictionaryid"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "Characteristic"
+            ],
+            "const": "Characteristic",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "text",
+          "instanceType"
+        ],
+        "title": "Characteristic"
+      },
+      "Characteristic-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "dictionaryId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dictionaryid"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
           },
           "instanceType": {
             "type": "string",
@@ -1545,6 +1764,42 @@
           "instanceType"
         ],
         "title": "Code"
+      },
+      "CommentAnnotation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "codes": {
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "type": "array",
+            "title": "Codes",
+            "default": []
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "CommentAnnotation"
+            ],
+            "const": "CommentAnnotation",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "instanceType"
+        ],
+        "title": "CommentAnnotation"
       },
       "Condition": {
         "properties": {
@@ -1662,7 +1917,7 @@
         ],
         "title": "ConditionAssignment"
       },
-      "EligibilityCriterion": {
+      "EligibilityCriterion-Input": {
         "properties": {
           "id": {
             "type": "string",
@@ -1710,6 +1965,131 @@
               }
             ],
             "title": "Dictionaryid"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "EligibilityCriterion"
+            ],
+            "const": "EligibilityCriterion",
+            "title": "Instancetype"
+          },
+          "category": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "identifier": {
+            "type": "string",
+            "title": "Identifier"
+          },
+          "nextId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nextid"
+          },
+          "previousId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Previousid"
+          },
+          "contextId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Contextid"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "text",
+          "instanceType",
+          "category",
+          "identifier"
+        ],
+        "title": "EligibilityCriterion"
+      },
+      "EligibilityCriterion-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "dictionaryId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dictionaryid"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
           },
           "instanceType": {
             "type": "string",
@@ -1895,7 +2275,7 @@
         ],
         "title": "Encounter"
       },
-      "Endpoint": {
+      "Endpoint-Input": {
         "properties": {
           "id": {
             "type": "string",
@@ -1944,6 +2324,14 @@
             ],
             "title": "Dictionaryid"
           },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -1971,19 +2359,130 @@
         ],
         "title": "Endpoint"
       },
-      "Estimand": {
+      "Endpoint-Output": {
         "properties": {
           "id": {
             "type": "string",
             "minLength": 1,
             "title": "Id"
           },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "dictionaryId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dictionaryid"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "Endpoint"
+            ],
+            "const": "Endpoint",
+            "title": "Instancetype"
+          },
+          "purpose": {
+            "type": "string",
+            "title": "Purpose"
+          },
+          "level": {
+            "$ref": "#/components/schemas/Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "text",
+          "instanceType",
+          "purpose",
+          "level"
+        ],
+        "title": "Endpoint"
+      },
+      "Estimand-Input": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
           "summaryMeasure": {
             "type": "string",
             "title": "Summarymeasure"
           },
           "analysisPopulation": {
-            "$ref": "#/components/schemas/AnalysisPopulation"
+            "$ref": "#/components/schemas/AnalysisPopulation-Input"
           },
           "interventionId": {
             "type": "string",
@@ -2000,6 +2499,14 @@
             "type": "array",
             "title": "Intercurrentevents"
           },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -2012,6 +2519,93 @@
         "type": "object",
         "required": [
           "id",
+          "name",
+          "summaryMeasure",
+          "analysisPopulation",
+          "interventionId",
+          "variableOfInterestId",
+          "intercurrentEvents",
+          "instanceType"
+        ],
+        "title": "Estimand"
+      },
+      "Estimand-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "summaryMeasure": {
+            "type": "string",
+            "title": "Summarymeasure"
+          },
+          "analysisPopulation": {
+            "$ref": "#/components/schemas/AnalysisPopulation-Output"
+          },
+          "interventionId": {
+            "type": "string",
+            "title": "Interventionid"
+          },
+          "variableOfInterestId": {
+            "type": "string",
+            "title": "Variableofinterestid"
+          },
+          "intercurrentEvents": {
+            "items": {
+              "$ref": "#/components/schemas/IntercurrentEvent"
+            },
+            "type": "array",
+            "title": "Intercurrentevents"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "Estimand"
+            ],
+            "const": "Estimand",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
           "summaryMeasure",
           "analysisPopulation",
           "interventionId",
@@ -2533,6 +3127,14 @@
             ],
             "title": "Dictionaryid"
           },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -2546,7 +3148,7 @@
           },
           "endpoints": {
             "items": {
-              "$ref": "#/components/schemas/Endpoint"
+              "$ref": "#/components/schemas/Endpoint-Input"
             },
             "type": "array",
             "title": "Endpoints",
@@ -2612,6 +3214,14 @@
             ],
             "title": "Dictionaryid"
           },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -2625,7 +3235,7 @@
           },
           "endpoints": {
             "items": {
-              "$ref": "#/components/schemas/Endpoint"
+              "$ref": "#/components/schemas/Endpoint-Output"
             },
             "type": "array",
             "title": "Endpoints",
@@ -2803,7 +3413,7 @@
         ],
         "title": "ParameterMap"
       },
-      "Procedure": {
+      "Procedure-Input": {
         "properties": {
           "id": {
             "type": "string",
@@ -2854,6 +3464,93 @@
               }
             ],
             "title": "Studyinterventionid"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "Procedure"
+            ],
+            "const": "Procedure",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "procedureType",
+          "code",
+          "instanceType"
+        ],
+        "title": "Procedure"
+      },
+      "Procedure-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "procedureType": {
+            "type": "string",
+            "title": "Proceduretype"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "studyInterventionId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Studyinterventionid"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
           },
           "instanceType": {
             "type": "string",
@@ -4093,7 +4790,7 @@
           },
           "criteria": {
             "items": {
-              "$ref": "#/components/schemas/EligibilityCriterion"
+              "$ref": "#/components/schemas/EligibilityCriterion-Input"
             },
             "type": "array",
             "title": "Criteria",
@@ -4119,7 +4816,7 @@
           },
           "characteristics": {
             "items": {
-              "$ref": "#/components/schemas/Characteristic"
+              "$ref": "#/components/schemas/Characteristic-Input"
             },
             "type": "array",
             "title": "Characteristics",
@@ -4203,7 +4900,7 @@
           },
           "criteria": {
             "items": {
-              "$ref": "#/components/schemas/EligibilityCriterion"
+              "$ref": "#/components/schemas/EligibilityCriterion-Output"
             },
             "type": "array",
             "title": "Criteria",
@@ -4229,7 +4926,7 @@
           },
           "characteristics": {
             "items": {
-              "$ref": "#/components/schemas/Characteristic"
+              "$ref": "#/components/schemas/Characteristic-Output"
             },
             "type": "array",
             "title": "Characteristics",
@@ -4399,7 +5096,7 @@
           },
           "estimands": {
             "items": {
-              "$ref": "#/components/schemas/Estimand"
+              "$ref": "#/components/schemas/Estimand-Input"
             },
             "type": "array",
             "title": "Estimands",
@@ -4666,7 +5363,7 @@
           },
           "estimands": {
             "items": {
-              "$ref": "#/components/schemas/Estimand"
+              "$ref": "#/components/schemas/Estimand-Output"
             },
             "type": "array",
             "title": "Estimands",
@@ -4847,7 +5544,7 @@
           },
           "criteria": {
             "items": {
-              "$ref": "#/components/schemas/EligibilityCriterion"
+              "$ref": "#/components/schemas/EligibilityCriterion-Input"
             },
             "type": "array",
             "title": "Criteria",
@@ -4957,7 +5654,7 @@
           },
           "criteria": {
             "items": {
-              "$ref": "#/components/schemas/EligibilityCriterion"
+              "$ref": "#/components/schemas/EligibilityCriterion-Output"
             },
             "type": "array",
             "title": "Criteria",
@@ -5298,6 +5995,14 @@
               }
             ]
           },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -5396,6 +6101,14 @@
                 "type": "null"
               }
             ]
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
           },
           "instanceType": {
             "type": "string",
