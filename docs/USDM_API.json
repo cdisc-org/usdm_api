@@ -1841,12 +1841,12 @@
             ],
             "title": "Scheduledatid"
           },
-          "environmentalSetting": {
+          "environmentalSettings": {
             "items": {
               "$ref": "#/components/schemas/Code"
             },
             "type": "array",
-            "title": "Environmentalsetting",
+            "title": "Environmentalsettings",
             "default": []
           },
           "contactModes": {
