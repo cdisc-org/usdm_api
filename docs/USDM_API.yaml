@@ -2235,11 +2235,6 @@ components:
           - type: string
           - type: 'null'
           title: Description
-        timelineId:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Timelineid
         defaultConditionId:
           anyOf:
           - type: string
@@ -2256,6 +2251,11 @@ components:
           - ScheduledActivityInstance
           const: ScheduledActivityInstance
           title: Instancetype
+        timelineId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Timelineid
         timelineExitId:
           anyOf:
           - type: string
@@ -2298,11 +2298,6 @@ components:
           - type: string
           - type: 'null'
           title: Description
-        timelineId:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Timelineid
         defaultConditionId:
           anyOf:
           - type: string
