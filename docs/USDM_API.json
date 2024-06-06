@@ -404,6 +404,10 @@
             "title": "Timelineid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Activity"
+            ],
             "const": "Activity",
             "title": "Instancetype"
           }
@@ -516,6 +520,10 @@
             "title": "Timelineid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Activity"
+            ],
             "const": "Activity",
             "title": "Instancetype"
           }
@@ -612,6 +620,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Address"
+            ],
             "const": "Address",
             "title": "Instancetype"
           }
@@ -653,6 +665,10 @@
             "title": "Reasondurationwillvary"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "AdministrationDuration"
+            ],
             "const": "AdministrationDuration",
             "title": "Instancetype"
           }
@@ -697,6 +713,10 @@
             "title": "Reasondurationwillvary"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "AdministrationDuration"
+            ],
             "const": "AdministrationDuration",
             "title": "Instancetype"
           }
@@ -758,6 +778,10 @@
             "$ref": "#/components/schemas/AliasCode"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "AgentAdministration"
+            ],
             "const": "AgentAdministration",
             "title": "Instancetype"
           }
@@ -821,6 +845,10 @@
             "$ref": "#/components/schemas/AliasCode"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "AgentAdministration"
+            ],
             "const": "AgentAdministration",
             "title": "Instancetype"
           }
@@ -856,6 +884,10 @@
             "default": []
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "AliasCode"
+            ],
             "const": "AliasCode",
             "title": "Instancetype"
           }
@@ -907,6 +939,10 @@
             "title": "Text"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "AnalysisPopulation"
+            ],
             "const": "AnalysisPopulation",
             "title": "Instancetype"
           }
@@ -967,6 +1003,10 @@
             "$ref": "#/components/schemas/AliasCode"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "BiomedicalConcept"
+            ],
             "const": "BiomedicalConcept",
             "title": "Instancetype"
           }
@@ -1028,6 +1068,10 @@
             "$ref": "#/components/schemas/AliasCode"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "BiomedicalConcept"
+            ],
             "const": "BiomedicalConcept",
             "title": "Instancetype"
           }
@@ -1103,6 +1147,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "BiomedicalConceptCategory"
+            ],
             "const": "BiomedicalConceptCategory",
             "title": "Instancetype"
           }
@@ -1176,6 +1224,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "BiomedicalConceptCategory"
+            ],
             "const": "BiomedicalConceptCategory",
             "title": "Instancetype"
           }
@@ -1235,6 +1287,10 @@
             "$ref": "#/components/schemas/AliasCode"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "BiomedicalConceptProperty"
+            ],
             "const": "BiomedicalConceptProperty",
             "title": "Instancetype"
           }
@@ -1298,6 +1354,10 @@
             "$ref": "#/components/schemas/AliasCode"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "BiomedicalConceptProperty"
+            ],
             "const": "BiomedicalConceptProperty",
             "title": "Instancetype"
           }
@@ -1360,6 +1420,10 @@
             "title": "Reference"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "BiomedicalConceptSurrogate"
+            ],
             "const": "BiomedicalConceptSurrogate",
             "title": "Instancetype"
           }
@@ -1422,6 +1486,10 @@
             "title": "Dictionaryid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Characteristic"
+            ],
             "const": "Characteristic",
             "title": "Instancetype"
           }
@@ -1459,6 +1527,10 @@
             "title": "Decode"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Code"
+            ],
             "const": "Code",
             "title": "Instancetype"
           }
@@ -1540,6 +1612,10 @@
             "default": []
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Condition"
+            ],
             "const": "Condition",
             "title": "Instancetype"
           }
@@ -1569,6 +1645,10 @@
             "title": "Conditiontargetid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "ConditionAssignment"
+            ],
             "const": "ConditionAssignment",
             "title": "Instancetype"
           }
@@ -1632,6 +1712,10 @@
             "title": "Dictionaryid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "EligibilityCriterion"
+            ],
             "const": "EligibilityCriterion",
             "title": "Instancetype"
           },
@@ -1794,6 +1878,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Encounter"
+            ],
             "const": "Encounter",
             "title": "Instancetype"
           }
@@ -1857,6 +1945,10 @@
             "title": "Dictionaryid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Endpoint"
+            ],
             "const": "Endpoint",
             "title": "Instancetype"
           },
@@ -1909,6 +2001,10 @@
             "title": "Intercurrentevents"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Estimand"
+            ],
             "const": "Estimand",
             "title": "Instancetype"
           }
@@ -1946,6 +2042,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "GeographicScope"
+            ],
             "const": "GeographicScope",
             "title": "Instancetype"
           }
@@ -1979,6 +2079,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "GeographicScope"
+            ],
             "const": "GeographicScope",
             "title": "Instancetype"
           }
@@ -2041,6 +2145,10 @@
             "title": "Geographicscopes"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "GovernanceDate"
+            ],
             "const": "GovernanceDate",
             "title": "Instancetype"
           }
@@ -2106,6 +2214,10 @@
             "title": "Geographicscopes"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "GovernanceDate"
+            ],
             "const": "GovernanceDate",
             "title": "Instancetype"
           }
@@ -2181,6 +2293,10 @@
             "title": "Israredisease"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Indication"
+            ],
             "const": "Indication",
             "title": "Instancetype"
           }
@@ -2233,6 +2349,10 @@
             "title": "Strategy"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "IntercurrentEvent"
+            ],
             "const": "IntercurrentEvent",
             "title": "Instancetype"
           }
@@ -2268,6 +2388,10 @@
             "$ref": "#/components/schemas/Code"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Masking"
+            ],
             "const": "Masking",
             "title": "Instancetype"
           }
@@ -2342,6 +2466,10 @@
             "title": "Nextid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "NarrativeContent"
+            ],
             "const": "NarrativeContent",
             "title": "Instancetype"
           }
@@ -2406,6 +2534,10 @@
             "title": "Dictionaryid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Objective"
+            ],
             "const": "Objective",
             "title": "Instancetype"
           },
@@ -2481,6 +2613,10 @@
             "title": "Dictionaryid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Objective"
+            ],
             "const": "Objective",
             "title": "Instancetype"
           },
@@ -2551,6 +2687,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Organization"
+            ],
             "const": "Organization",
             "title": "Instancetype"
           }
@@ -2611,6 +2751,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Organization"
+            ],
             "const": "Organization",
             "title": "Instancetype"
           }
@@ -2642,6 +2786,10 @@
             "title": "Reference"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "ParameterMap"
+            ],
             "const": "ParameterMap",
             "title": "Instancetype"
           }
@@ -2708,6 +2856,10 @@
             "title": "Studyinterventionid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Procedure"
+            ],
             "const": "Procedure",
             "title": "Instancetype"
           }
@@ -2744,6 +2896,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Quantity"
+            ],
             "const": "Quantity",
             "title": "Instancetype"
           }
@@ -2778,6 +2934,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Quantity"
+            ],
             "const": "Quantity",
             "title": "Instancetype"
           }
@@ -2820,6 +2980,10 @@
             "title": "Isapproximate"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Range"
+            ],
             "const": "Range",
             "title": "Instancetype"
           }
@@ -2879,6 +3043,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "ResearchOrganization"
+            ],
             "const": "ResearchOrganization",
             "title": "Instancetype"
           },
@@ -2947,6 +3115,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "ResearchOrganization"
+            ],
             "const": "ResearchOrganization",
             "title": "Instancetype"
           },
@@ -2985,6 +3157,10 @@
             "$ref": "#/components/schemas/Code"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "ResponseCode"
+            ],
             "const": "ResponseCode",
             "title": "Instancetype"
           }
@@ -3076,6 +3252,10 @@
             "default": []
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "ScheduleTimeline"
+            ],
             "const": "ScheduleTimeline",
             "title": "Instancetype"
           }
@@ -3169,6 +3349,10 @@
             "default": []
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "ScheduleTimeline"
+            ],
             "const": "ScheduleTimeline",
             "title": "Instancetype"
           }
@@ -3192,6 +3376,10 @@
             "title": "Id"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "ScheduleTimelineExit"
+            ],
             "const": "ScheduleTimelineExit",
             "title": "Instancetype"
           }
@@ -3282,6 +3470,10 @@
             "title": "Epochid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "ScheduledActivityInstance"
+            ],
             "const": "ScheduledActivityInstance",
             "title": "Instancetype"
           },
@@ -3392,6 +3584,10 @@
             "title": "Epochid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "ScheduledDecisionInstance"
+            ],
             "const": "ScheduledDecisionInstance",
             "title": "Instancetype"
           },
@@ -3472,6 +3668,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Study"
+            ],
             "const": "Study",
             "title": "Instancetype"
           }
@@ -3543,6 +3743,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Study"
+            ],
             "const": "Study",
             "title": "Instancetype"
           }
@@ -3603,6 +3807,10 @@
             "title": "Previousid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyAmendment"
+            ],
             "const": "StudyAmendment",
             "title": "Instancetype"
           }
@@ -3668,6 +3876,10 @@
             "title": "Previousid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyAmendment"
+            ],
             "const": "StudyAmendment",
             "title": "Instancetype"
           }
@@ -3706,6 +3918,10 @@
             "title": "Otherreason"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyAmendmentReason"
+            ],
             "const": "StudyAmendmentReason",
             "title": "Instancetype"
           }
@@ -3771,6 +3987,10 @@
             "default": []
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyArm"
+            ],
             "const": "StudyArm",
             "title": "Instancetype"
           }
@@ -3810,6 +4030,10 @@
             "default": []
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyCell"
+            ],
             "const": "StudyCell",
             "title": "Instancetype"
           }
@@ -3907,6 +4131,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyCohort"
+            ],
             "const": "StudyCohort",
             "title": "Instancetype"
           },
@@ -4013,6 +4241,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyCohort"
+            ],
             "const": "StudyCohort",
             "title": "Instancetype"
           },
@@ -4281,6 +4513,10 @@
             "default": []
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyDesign"
+            ],
             "const": "StudyDesign",
             "title": "Instancetype"
           }
@@ -4544,6 +4780,10 @@
             "default": []
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyDesign"
+            ],
             "const": "StudyDesign",
             "title": "Instancetype"
           }
@@ -4645,6 +4885,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyDesignPopulation"
+            ],
             "const": "StudyDesignPopulation",
             "title": "Instancetype"
           },
@@ -4751,6 +4995,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyDesignPopulation"
+            ],
             "const": "StudyDesignPopulation",
             "title": "Instancetype"
           },
@@ -4836,6 +5084,10 @@
             "default": []
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyElement"
+            ],
             "const": "StudyElement",
             "title": "Instancetype"
           }
@@ -4908,6 +5160,10 @@
             "title": "Nextid"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyEpoch"
+            ],
             "const": "StudyEpoch",
             "title": "Instancetype"
           }
@@ -4936,6 +5192,10 @@
             "$ref": "#/components/schemas/Organization-Input"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyIdentifier"
+            ],
             "const": "StudyIdentifier",
             "title": "Instancetype"
           }
@@ -4964,6 +5224,10 @@
             "$ref": "#/components/schemas/Organization-Output"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyIdentifier"
+            ],
             "const": "StudyIdentifier",
             "title": "Instancetype"
           }
@@ -5057,6 +5321,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyIntervention"
+            ],
             "const": "StudyIntervention",
             "title": "Instancetype"
           }
@@ -5152,6 +5420,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyIntervention"
+            ],
             "const": "StudyIntervention",
             "title": "Instancetype"
           }
@@ -5210,6 +5482,10 @@
             "default": []
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyProtocolDocument"
+            ],
             "const": "StudyProtocolDocument",
             "title": "Instancetype"
           }
@@ -5265,6 +5541,10 @@
             "default": []
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyProtocolDocument"
+            ],
             "const": "StudyProtocolDocument",
             "title": "Instancetype"
           }
@@ -5316,6 +5596,10 @@
             "default": []
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyProtocolDocumentVersion"
+            ],
             "const": "StudyProtocolDocumentVersion",
             "title": "Instancetype"
           }
@@ -5368,6 +5652,10 @@
             "default": []
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyProtocolDocumentVersion"
+            ],
             "const": "StudyProtocolDocumentVersion",
             "title": "Instancetype"
           }
@@ -5426,6 +5714,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudySite"
+            ],
             "const": "StudySite",
             "title": "Instancetype"
           }
@@ -5483,6 +5775,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudySite"
+            ],
             "const": "StudySite",
             "title": "Instancetype"
           }
@@ -5510,6 +5806,10 @@
             "$ref": "#/components/schemas/Code"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyTitle"
+            ],
             "const": "StudyTitle",
             "title": "Instancetype"
           }
@@ -5617,6 +5917,10 @@
             "title": "Titles"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyVersion"
+            ],
             "const": "StudyVersion",
             "title": "Instancetype"
           }
@@ -5725,6 +6029,10 @@
             "title": "Titles"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyVersion"
+            ],
             "const": "StudyVersion",
             "title": "Instancetype"
           }
@@ -5760,6 +6068,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "SubjectEnrollment"
+            ],
             "const": "SubjectEnrollment",
             "title": "Instancetype"
           },
@@ -5797,6 +6109,10 @@
             ]
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "SubjectEnrollment"
+            ],
             "const": "SubjectEnrollment",
             "title": "Instancetype"
           },
@@ -5855,6 +6171,10 @@
             "title": "Parametermaps"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "SyntaxTemplateDictionary"
+            ],
             "const": "SyntaxTemplateDictionary",
             "title": "Instancetype"
           }
@@ -5972,6 +6292,10 @@
             "title": "Windowlabel"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "Timing"
+            ],
             "const": "Timing",
             "title": "Instancetype"
           }
@@ -6027,6 +6351,10 @@
             "title": "Text"
           },
           "instanceType": {
+            "type": "string",
+            "enum": [
+              "TransitionRule"
+            ],
             "const": "TransitionRule",
             "title": "Instancetype"
           }
