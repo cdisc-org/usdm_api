@@ -270,6 +270,9 @@ components:
           - type: 'null'
           title: Timelineid
         instanceType:
+          type: string
+          enum:
+          - Activity
           const: Activity
           title: Instancetype
       type: object
@@ -338,6 +341,9 @@ components:
           - type: 'null'
           title: Timelineid
         instanceType:
+          type: string
+          enum:
+          - Activity
           const: Activity
           title: Instancetype
       type: object
@@ -387,6 +393,9 @@ components:
           - $ref: '#/components/schemas/Code'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - Address
           const: Address
           title: Instancetype
       type: object
@@ -414,6 +423,9 @@ components:
           type: string
           title: Reasondurationwillvary
         instanceType:
+          type: string
+          enum:
+          - AdministrationDuration
           const: AdministrationDuration
           title: Instancetype
       type: object
@@ -444,6 +456,9 @@ components:
           type: string
           title: Reasondurationwillvary
         instanceType:
+          type: string
+          enum:
+          - AdministrationDuration
           const: AdministrationDuration
           title: Instancetype
       type: object
@@ -483,6 +498,9 @@ components:
         frequency:
           $ref: '#/components/schemas/AliasCode'
         instanceType:
+          type: string
+          enum:
+          - AgentAdministration
           const: AgentAdministration
           title: Instancetype
       type: object
@@ -524,6 +542,9 @@ components:
         frequency:
           $ref: '#/components/schemas/AliasCode'
         instanceType:
+          type: string
+          enum:
+          - AgentAdministration
           const: AgentAdministration
           title: Instancetype
       type: object
@@ -551,6 +572,9 @@ components:
           title: Standardcodealiases
           default: []
         instanceType:
+          type: string
+          enum:
+          - AliasCode
           const: AliasCode
           title: Instancetype
       type: object
@@ -583,6 +607,9 @@ components:
           type: string
           title: Text
         instanceType:
+          type: string
+          enum:
+          - AnalysisPopulation
           const: AnalysisPopulation
           title: Instancetype
       type: object
@@ -625,6 +652,9 @@ components:
         code:
           $ref: '#/components/schemas/AliasCode'
         instanceType:
+          type: string
+          enum:
+          - BiomedicalConcept
           const: BiomedicalConcept
           title: Instancetype
       type: object
@@ -668,6 +698,9 @@ components:
         code:
           $ref: '#/components/schemas/AliasCode'
         instanceType:
+          type: string
+          enum:
+          - BiomedicalConcept
           const: BiomedicalConcept
           title: Instancetype
       type: object
@@ -715,6 +748,9 @@ components:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - BiomedicalConceptCategory
           const: BiomedicalConceptCategory
           title: Instancetype
       type: object
@@ -760,6 +796,9 @@ components:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - BiomedicalConceptCategory
           const: BiomedicalConceptCategory
           title: Instancetype
       type: object
@@ -801,6 +840,9 @@ components:
         code:
           $ref: '#/components/schemas/AliasCode'
         instanceType:
+          type: string
+          enum:
+          - BiomedicalConceptProperty
           const: BiomedicalConceptProperty
           title: Instancetype
       type: object
@@ -846,6 +888,9 @@ components:
         code:
           $ref: '#/components/schemas/AliasCode'
         instanceType:
+          type: string
+          enum:
+          - BiomedicalConceptProperty
           const: BiomedicalConceptProperty
           title: Instancetype
       type: object
@@ -884,6 +929,9 @@ components:
           - type: 'null'
           title: Reference
         instanceType:
+          type: string
+          enum:
+          - BiomedicalConceptSurrogate
           const: BiomedicalConceptSurrogate
           title: Instancetype
       type: object
@@ -921,6 +969,9 @@ components:
           - type: 'null'
           title: Dictionaryid
         instanceType:
+          type: string
+          enum:
+          - Characteristic
           const: Characteristic
           title: Instancetype
       type: object
@@ -949,6 +1000,9 @@ components:
           type: string
           title: Decode
         instanceType:
+          type: string
+          enum:
+          - Code
           const: Code
           title: Instancetype
       type: object
@@ -1001,6 +1055,9 @@ components:
           title: Appliestoids
           default: []
         instanceType:
+          type: string
+          enum:
+          - Condition
           const: Condition
           title: Instancetype
       type: object
@@ -1023,6 +1080,9 @@ components:
           type: string
           title: Conditiontargetid
         instanceType:
+          type: string
+          enum:
+          - ConditionAssignment
           const: ConditionAssignment
           title: Instancetype
       type: object
@@ -1061,6 +1121,9 @@ components:
           - type: 'null'
           title: Dictionaryid
         instanceType:
+          type: string
+          enum:
+          - EligibilityCriterion
           const: EligibilityCriterion
           title: Instancetype
         category:
@@ -1150,6 +1213,9 @@ components:
           - $ref: '#/components/schemas/TransitionRule'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - Encounter
           const: Encounter
           title: Instancetype
       type: object
@@ -1188,6 +1254,9 @@ components:
           - type: 'null'
           title: Dictionaryid
         instanceType:
+          type: string
+          enum:
+          - Endpoint
           const: Endpoint
           title: Instancetype
         purpose:
@@ -1227,6 +1296,9 @@ components:
           type: array
           title: Intercurrentevents
         instanceType:
+          type: string
+          enum:
+          - Estimand
           const: Estimand
           title: Instancetype
       type: object
@@ -1252,6 +1324,9 @@ components:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - GeographicScope
           const: GeographicScope
           title: Instancetype
       type: object
@@ -1273,6 +1348,9 @@ components:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - GeographicScope
           const: GeographicScope
           title: Instancetype
       type: object
@@ -1313,6 +1391,9 @@ components:
           type: array
           title: Geographicscopes
         instanceType:
+          type: string
+          enum:
+          - GovernanceDate
           const: GovernanceDate
           title: Instancetype
       type: object
@@ -1356,6 +1437,9 @@ components:
           type: array
           title: Geographicscopes
         instanceType:
+          type: string
+          enum:
+          - GovernanceDate
           const: GovernanceDate
           title: Instancetype
       type: object
@@ -1406,6 +1490,9 @@ components:
           type: boolean
           title: Israredisease
         instanceType:
+          type: string
+          enum:
+          - Indication
           const: Indication
           title: Instancetype
       type: object
@@ -1439,6 +1526,9 @@ components:
           type: string
           title: Strategy
         instanceType:
+          type: string
+          enum:
+          - IntercurrentEvent
           const: IntercurrentEvent
           title: Instancetype
       type: object
@@ -1462,6 +1552,9 @@ components:
         role:
           $ref: '#/components/schemas/Code'
         instanceType:
+          type: string
+          enum:
+          - Masking
           const: Masking
           title: Instancetype
       type: object
@@ -1508,6 +1601,9 @@ components:
           - type: 'null'
           title: Nextid
         instanceType:
+          type: string
+          enum:
+          - NarrativeContent
           const: NarrativeContent
           title: Instancetype
       type: object
@@ -1547,6 +1643,9 @@ components:
           - type: 'null'
           title: Dictionaryid
         instanceType:
+          type: string
+          enum:
+          - Objective
           const: Objective
           title: Instancetype
         level:
@@ -1594,6 +1693,9 @@ components:
           - type: 'null'
           title: Dictionaryid
         instanceType:
+          type: string
+          enum:
+          - Objective
           const: Objective
           title: Instancetype
         level:
@@ -1640,6 +1742,9 @@ components:
           - $ref: '#/components/schemas/Address'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - Organization
           const: Organization
           title: Instancetype
       type: object
@@ -1679,6 +1784,9 @@ components:
           - $ref: '#/components/schemas/Address'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - Organization
           const: Organization
           title: Instancetype
       type: object
@@ -1703,6 +1811,9 @@ components:
           type: string
           title: Reference
         instanceType:
+          type: string
+          enum:
+          - ParameterMap
           const: ParameterMap
           title: Instancetype
       type: object
@@ -1743,6 +1854,9 @@ components:
           - type: 'null'
           title: Studyinterventionid
         instanceType:
+          type: string
+          enum:
+          - Procedure
           const: Procedure
           title: Instancetype
       type: object
@@ -1767,6 +1881,9 @@ components:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - Quantity
           const: Quantity
           title: Instancetype
       type: object
@@ -1789,6 +1906,9 @@ components:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - Quantity
           const: Quantity
           title: Instancetype
       type: object
@@ -1817,6 +1937,9 @@ components:
           type: boolean
           title: Isapproximate
         instanceType:
+          type: string
+          enum:
+          - Range
           const: Range
           title: Instancetype
       type: object
@@ -1855,6 +1978,9 @@ components:
           - $ref: '#/components/schemas/Address'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - ResearchOrganization
           const: ResearchOrganization
           title: Instancetype
         manages:
@@ -1900,6 +2026,9 @@ components:
           - $ref: '#/components/schemas/Address'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - ResearchOrganization
           const: ResearchOrganization
           title: Instancetype
         manages:
@@ -1929,6 +2058,9 @@ components:
         code:
           $ref: '#/components/schemas/Code'
         instanceType:
+          type: string
+          enum:
+          - ResponseCode
           const: ResponseCode
           title: Instancetype
       type: object
@@ -1988,6 +2120,9 @@ components:
           title: Instances
           default: []
         instanceType:
+          type: string
+          enum:
+          - ScheduleTimeline
           const: ScheduleTimeline
           title: Instancetype
       type: object
@@ -2049,6 +2184,9 @@ components:
           title: Instances
           default: []
         instanceType:
+          type: string
+          enum:
+          - ScheduleTimeline
           const: ScheduleTimeline
           title: Instancetype
       type: object
@@ -2067,6 +2205,9 @@ components:
           minLength: 1
           title: Id
         instanceType:
+          type: string
+          enum:
+          - ScheduleTimelineExit
           const: ScheduleTimelineExit
           title: Instancetype
       type: object
@@ -2115,6 +2256,9 @@ components:
           - type: 'null'
           title: Epochid
         instanceType:
+          type: string
+          enum:
+          - ScheduledActivityInstance
           const: ScheduledActivityInstance
           title: Instancetype
         activityIds:
@@ -2175,6 +2319,9 @@ components:
           - type: 'null'
           title: Epochid
         instanceType:
+          type: string
+          enum:
+          - ScheduledDecisionInstance
           const: ScheduledDecisionInstance
           title: Instancetype
         conditionAssignments:
@@ -2222,6 +2369,9 @@ components:
           - $ref: '#/components/schemas/StudyProtocolDocument-Input'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - Study
           const: Study
           title: Instancetype
       type: object
@@ -2262,6 +2412,9 @@ components:
           - $ref: '#/components/schemas/StudyProtocolDocument-Output'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - Study
           const: Study
           title: Instancetype
       type: object
@@ -2303,6 +2456,9 @@ components:
           - type: 'null'
           title: Previousid
         instanceType:
+          type: string
+          enum:
+          - StudyAmendment
           const: StudyAmendment
           title: Instancetype
       type: object
@@ -2349,6 +2505,9 @@ components:
           - type: 'null'
           title: Previousid
         instanceType:
+          type: string
+          enum:
+          - StudyAmendment
           const: StudyAmendment
           title: Instancetype
       type: object
@@ -2375,6 +2534,9 @@ components:
           - type: 'null'
           title: Otherreason
         instanceType:
+          type: string
+          enum:
+          - StudyAmendmentReason
           const: StudyAmendmentReason
           title: Instancetype
       type: object
@@ -2417,6 +2579,9 @@ components:
           title: Populationids
           default: []
         instanceType:
+          type: string
+          enum:
+          - StudyArm
           const: StudyArm
           title: Instancetype
       type: object
@@ -2447,6 +2612,9 @@ components:
           title: Elementids
           default: []
         instanceType:
+          type: string
+          enum:
+          - StudyCell
           const: StudyCell
           title: Instancetype
       type: object
@@ -2503,6 +2671,9 @@ components:
           - $ref: '#/components/schemas/Range'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - StudyCohort
           const: StudyCohort
           title: Instancetype
         characteristics:
@@ -2566,6 +2737,9 @@ components:
           - $ref: '#/components/schemas/Range'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - StudyCohort
           const: StudyCohort
           title: Instancetype
         characteristics:
@@ -2750,6 +2924,9 @@ components:
           title: Organizations
           default: []
         instanceType:
+          type: string
+          enum:
+          - StudyDesign
           const: StudyDesign
           title: Instancetype
       type: object
@@ -2931,6 +3108,9 @@ components:
           title: Organizations
           default: []
         instanceType:
+          type: string
+          enum:
+          - StudyDesign
           const: StudyDesign
           title: Instancetype
       type: object
@@ -2991,6 +3171,9 @@ components:
           - $ref: '#/components/schemas/Range'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - StudyDesignPopulation
           const: StudyDesignPopulation
           title: Instancetype
         cohorts:
@@ -3054,6 +3237,9 @@ components:
           - $ref: '#/components/schemas/Range'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - StudyDesignPopulation
           const: StudyDesignPopulation
           title: Instancetype
         cohorts:
@@ -3105,6 +3291,9 @@ components:
           title: Studyinterventionids
           default: []
         instanceType:
+          type: string
+          enum:
+          - StudyElement
           const: StudyElement
           title: Instancetype
       type: object
@@ -3146,6 +3335,9 @@ components:
           - type: 'null'
           title: Nextid
         instanceType:
+          type: string
+          enum:
+          - StudyEpoch
           const: StudyEpoch
           title: Instancetype
       type: object
@@ -3167,6 +3359,9 @@ components:
         studyIdentifierScope:
           $ref: '#/components/schemas/Organization-Input'
         instanceType:
+          type: string
+          enum:
+          - StudyIdentifier
           const: StudyIdentifier
           title: Instancetype
       type: object
@@ -3188,6 +3383,9 @@ components:
         studyIdentifierScope:
           $ref: '#/components/schemas/Organization-Output'
         instanceType:
+          type: string
+          enum:
+          - StudyIdentifier
           const: StudyIdentifier
           title: Instancetype
       type: object
@@ -3244,6 +3442,9 @@ components:
           - $ref: '#/components/schemas/Code'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - StudyIntervention
           const: StudyIntervention
           title: Instancetype
       type: object
@@ -3302,6 +3503,9 @@ components:
           - $ref: '#/components/schemas/Code'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - StudyIntervention
           const: StudyIntervention
           title: Instancetype
       type: object
@@ -3340,6 +3544,9 @@ components:
           title: Versions
           default: []
         instanceType:
+          type: string
+          enum:
+          - StudyProtocolDocument
           const: StudyProtocolDocument
           title: Instancetype
       type: object
@@ -3375,6 +3582,9 @@ components:
           title: Versions
           default: []
         instanceType:
+          type: string
+          enum:
+          - StudyProtocolDocument
           const: StudyProtocolDocument
           title: Instancetype
       type: object
@@ -3413,6 +3623,9 @@ components:
           title: Childids
           default: []
         instanceType:
+          type: string
+          enum:
+          - StudyProtocolDocumentVersion
           const: StudyProtocolDocumentVersion
           title: Instancetype
       type: object
@@ -3452,6 +3665,9 @@ components:
           title: Childids
           default: []
         instanceType:
+          type: string
+          enum:
+          - StudyProtocolDocumentVersion
           const: StudyProtocolDocumentVersion
           title: Instancetype
       type: object
@@ -3486,6 +3702,9 @@ components:
           - $ref: '#/components/schemas/SubjectEnrollment-Input'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - StudySite
           const: StudySite
           title: Instancetype
       type: object
@@ -3519,6 +3738,9 @@ components:
           - $ref: '#/components/schemas/SubjectEnrollment-Output'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - StudySite
           const: StudySite
           title: Instancetype
       type: object
@@ -3539,6 +3761,9 @@ components:
         type:
           $ref: '#/components/schemas/Code'
         instanceType:
+          type: string
+          enum:
+          - StudyTitle
           const: StudyTitle
           title: Instancetype
       type: object
@@ -3609,6 +3834,9 @@ components:
           type: array
           title: Titles
         instanceType:
+          type: string
+          enum:
+          - StudyVersion
           const: StudyVersion
           title: Instancetype
       type: object
@@ -3680,6 +3908,9 @@ components:
           type: array
           title: Titles
         instanceType:
+          type: string
+          enum:
+          - StudyVersion
           const: StudyVersion
           title: Instancetype
       type: object
@@ -3703,6 +3934,9 @@ components:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - SubjectEnrollment
           const: SubjectEnrollment
           title: Instancetype
         quantity:
@@ -3727,6 +3961,9 @@ components:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
         instanceType:
+          type: string
+          enum:
+          - SubjectEnrollment
           const: SubjectEnrollment
           title: Instancetype
         quantity:
@@ -3764,6 +4001,9 @@ components:
           type: array
           title: Parametermaps
         instanceType:
+          type: string
+          enum:
+          - SyntaxTemplateDictionary
           const: SyntaxTemplateDictionary
           title: Instancetype
       type: object
@@ -3829,6 +4069,9 @@ components:
           - type: 'null'
           title: Windowlabel
         instanceType:
+          type: string
+          enum:
+          - Timing
           const: Timing
           title: Instancetype
       type: object
@@ -3865,6 +4108,9 @@ components:
           type: string
           title: Text
         instanceType:
+          type: string
+          enum:
+          - TransitionRule
           const: TransitionRule
           title: Instancetype
       type: object
