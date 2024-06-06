@@ -2666,6 +2666,7 @@ components:
             $ref: '#/components/schemas/EligibilityCriterion'
           type: array
           title: Criteria
+          default: []
         plannedAge:
           anyOf:
           - $ref: '#/components/schemas/Range'
@@ -2687,7 +2688,6 @@ components:
       - id
       - name
       - includesHealthySubjects
-      - criteria
       - instanceType
       title: StudyCohort
     StudyCohort-Output:
@@ -2732,6 +2732,7 @@ components:
             $ref: '#/components/schemas/EligibilityCriterion'
           type: array
           title: Criteria
+          default: []
         plannedAge:
           anyOf:
           - $ref: '#/components/schemas/Range'
@@ -2753,7 +2754,6 @@ components:
       - id
       - name
       - includesHealthySubjects
-      - criteria
       - instanceType
       title: StudyCohort
     StudyDesign-Input:
@@ -3166,6 +3166,7 @@ components:
             $ref: '#/components/schemas/EligibilityCriterion'
           type: array
           title: Criteria
+          default: []
         plannedAge:
           anyOf:
           - $ref: '#/components/schemas/Range'
@@ -3187,7 +3188,6 @@ components:
       - id
       - name
       - includesHealthySubjects
-      - criteria
       - instanceType
       title: StudyDesignPopulation
     StudyDesignPopulation-Output:
@@ -3232,6 +3232,7 @@ components:
             $ref: '#/components/schemas/EligibilityCriterion'
           type: array
           title: Criteria
+          default: []
         plannedAge:
           anyOf:
           - $ref: '#/components/schemas/Range'
@@ -3253,7 +3254,6 @@ components:
       - id
       - name
       - includesHealthySubjects
-      - criteria
       - instanceType
       title: StudyDesignPopulation
     StudyElement:

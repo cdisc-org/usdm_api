@@ -4118,7 +4118,8 @@
               "$ref": "#/components/schemas/EligibilityCriterion"
             },
             "type": "array",
-            "title": "Criteria"
+            "title": "Criteria",
+            "default": []
           },
           "plannedAge": {
             "anyOf": [
@@ -4152,7 +4153,6 @@
           "id",
           "name",
           "includesHealthySubjects",
-          "criteria",
           "instanceType"
         ],
         "title": "StudyCohort"
@@ -4228,7 +4228,8 @@
               "$ref": "#/components/schemas/EligibilityCriterion"
             },
             "type": "array",
-            "title": "Criteria"
+            "title": "Criteria",
+            "default": []
           },
           "plannedAge": {
             "anyOf": [
@@ -4262,7 +4263,6 @@
           "id",
           "name",
           "includesHealthySubjects",
-          "criteria",
           "instanceType"
         ],
         "title": "StudyCohort"
@@ -4872,7 +4872,8 @@
               "$ref": "#/components/schemas/EligibilityCriterion"
             },
             "type": "array",
-            "title": "Criteria"
+            "title": "Criteria",
+            "default": []
           },
           "plannedAge": {
             "anyOf": [
@@ -4906,7 +4907,6 @@
           "id",
           "name",
           "includesHealthySubjects",
-          "criteria",
           "instanceType"
         ],
         "title": "StudyDesignPopulation"
@@ -4982,7 +4982,8 @@
               "$ref": "#/components/schemas/EligibilityCriterion"
             },
             "type": "array",
-            "title": "Criteria"
+            "title": "Criteria",
+            "default": []
           },
           "plannedAge": {
             "anyOf": [
@@ -5016,7 +5017,6 @@
           "id",
           "name",
           "includesHealthySubjects",
-          "criteria",
           "instanceType"
         ],
         "title": "StudyDesignPopulation"
