@@ -2240,11 +2240,6 @@ components:
           - type: string
           - type: 'null'
           title: Timelineid
-        timelineExitId:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Timelineexitid
         defaultConditionId:
           anyOf:
           - type: string
@@ -2261,6 +2256,11 @@ components:
           - ScheduledActivityInstance
           const: ScheduledActivityInstance
           title: Instancetype
+        timelineExitId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Timelineexitid
         activityIds:
           items:
             type: string
@@ -2303,11 +2303,6 @@ components:
           - type: string
           - type: 'null'
           title: Timelineid
-        timelineExitId:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Timelineexitid
         defaultConditionId:
           anyOf:
           - type: string

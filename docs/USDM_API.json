@@ -3436,17 +3436,6 @@
             ],
             "title": "Timelineid"
           },
-          "timelineExitId": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Timelineexitid"
-          },
           "defaultConditionId": {
             "anyOf": [
               {
@@ -3476,6 +3465,17 @@
             ],
             "const": "ScheduledActivityInstance",
             "title": "Instancetype"
+          },
+          "timelineExitId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Timelineexitid"
           },
           "activityIds": {
             "items": {
@@ -3549,17 +3549,6 @@
               }
             ],
             "title": "Timelineid"
-          },
-          "timelineExitId": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Timelineexitid"
           },
           "defaultConditionId": {
             "anyOf": [
