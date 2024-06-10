@@ -9,6 +9,7 @@ from .governance_date import GovernanceDate
 from .study_amendment import StudyAmendment
 from .study_title import StudyTitle
 from .eligibility_criterion import EligibilityCriterion
+from .comment_annotation import CommentAnnotation
 
 class StudyVersion(ApiBaseModelWithId):
   versionIdentifier: str
@@ -23,4 +24,5 @@ class StudyVersion(ApiBaseModelWithId):
   studyDesigns: List[StudyDesign] = []
   titles: List[StudyTitle]
   criteria: List[EligibilityCriterion]
+  notes: List[CommentAnnotation] = []
   instanceType: Literal['StudyVersion']
