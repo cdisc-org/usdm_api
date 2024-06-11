@@ -1,7 +1,7 @@
 from typing import List, Literal, Union
-from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
+from .syntax_template import SyntaxTemplate
 
-class Condition(ApiBaseModelWithIdNameLabelAndDesc):
+class Condition(SyntaxTemplate):
   text: str
   dictionaryId: Union[str, None] = None
   contextIds: List[str] = []
