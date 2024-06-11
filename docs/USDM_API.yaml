@@ -3366,6 +3366,12 @@ components:
           anyOf:
           - $ref: '#/components/schemas/Range'
           - type: 'null'
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
         instanceType:
           type: string
           enum:
@@ -3432,6 +3438,12 @@ components:
           anyOf:
           - $ref: '#/components/schemas/Range'
           - type: 'null'
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
         instanceType:
           type: string
           enum:
@@ -3878,6 +3890,12 @@ components:
           anyOf:
           - $ref: '#/components/schemas/Range'
           - type: 'null'
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
         instanceType:
           type: string
           enum:
@@ -3944,6 +3962,12 @@ components:
           anyOf:
           - $ref: '#/components/schemas/Range'
           - type: 'null'
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
         instanceType:
           type: string
           enum:
