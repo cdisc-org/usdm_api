@@ -2049,7 +2049,7 @@ components:
           title: Detail
       type: object
       title: HTTPValidationError
-    Indication:
+    Indication-Input:
       properties:
         id:
           type: string
@@ -2078,6 +2078,60 @@ components:
         isRareDisease:
           type: boolean
           title: Israredisease
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
+        instanceType:
+          type: string
+          enum:
+          - Indication
+          const: Indication
+          title: Instancetype
+      type: object
+      required:
+      - id
+      - name
+      - isRareDisease
+      - instanceType
+      title: Indication
+    Indication-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Label
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+        codes:
+          items:
+            $ref: '#/components/schemas/Code'
+          type: array
+          title: Codes
+          default: []
+        isRareDisease:
+          type: boolean
+          title: Israredisease
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
         instanceType:
           type: string
           enum:
@@ -3618,7 +3672,7 @@ components:
           title: Rationale
         epochs:
           items:
-            $ref: '#/components/schemas/StudyEpoch'
+            $ref: '#/components/schemas/StudyEpoch-Input'
           type: array
           title: Epochs
         elements:
@@ -3635,7 +3689,7 @@ components:
           default: []
         indications:
           items:
-            $ref: '#/components/schemas/Indication'
+            $ref: '#/components/schemas/Indication-Input'
           type: array
           title: Indications
           default: []
@@ -3808,7 +3862,7 @@ components:
           title: Rationale
         epochs:
           items:
-            $ref: '#/components/schemas/StudyEpoch'
+            $ref: '#/components/schemas/StudyEpoch-Output'
           type: array
           title: Epochs
         elements:
@@ -3825,7 +3879,7 @@ components:
           default: []
         indications:
           items:
-            $ref: '#/components/schemas/Indication'
+            $ref: '#/components/schemas/Indication-Output'
           type: array
           title: Indications
           default: []
@@ -4093,7 +4147,7 @@ components:
       - name
       - instanceType
       title: StudyElement
-    StudyEpoch:
+    StudyEpoch-Input:
       properties:
         id:
           type: string
@@ -4125,6 +4179,63 @@ components:
           - type: string
           - type: 'null'
           title: Nextid
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
+        instanceType:
+          type: string
+          enum:
+          - StudyEpoch
+          const: StudyEpoch
+          title: Instancetype
+      type: object
+      required:
+      - id
+      - name
+      - type
+      - instanceType
+      title: StudyEpoch
+    StudyEpoch-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Label
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+        type:
+          $ref: '#/components/schemas/Code'
+        previousId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Previousid
+        nextId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Nextid
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
         instanceType:
           type: string
           enum:
