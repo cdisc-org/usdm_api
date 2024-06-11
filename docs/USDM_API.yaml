@@ -3677,7 +3677,7 @@ components:
           title: Epochs
         elements:
           items:
-            $ref: '#/components/schemas/StudyElement'
+            $ref: '#/components/schemas/StudyElement-Input'
           type: array
           title: Elements
           default: []
@@ -3867,7 +3867,7 @@ components:
           title: Epochs
         elements:
           items:
-            $ref: '#/components/schemas/StudyElement'
+            $ref: '#/components/schemas/StudyElement-Output'
           type: array
           title: Elements
           default: []
@@ -4101,7 +4101,7 @@ components:
       - includesHealthySubjects
       - instanceType
       title: StudyDesignPopulation
-    StudyElement:
+    StudyElement-Input:
       properties:
         id:
           type: string
@@ -4134,6 +4134,64 @@ components:
             type: string
           type: array
           title: Studyinterventionids
+          default: []
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
+        instanceType:
+          type: string
+          enum:
+          - StudyElement
+          const: StudyElement
+          title: Instancetype
+      type: object
+      required:
+      - id
+      - name
+      - instanceType
+      title: StudyElement
+    StudyElement-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Label
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+        transitionStartRule:
+          anyOf:
+          - $ref: '#/components/schemas/TransitionRule'
+          - type: 'null'
+        transitionEndRule:
+          anyOf:
+          - $ref: '#/components/schemas/TransitionRule'
+          - type: 'null'
+        studyInterventionIds:
+          items:
+            type: string
+          type: array
+          title: Studyinterventionids
+          default: []
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
           default: []
         instanceType:
           type: string
