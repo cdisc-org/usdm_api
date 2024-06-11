@@ -4992,7 +4992,7 @@
         ],
         "title": "StudyAmendmentReason"
       },
-      "StudyArm": {
+      "StudyArm-Input": {
         "properties": {
           "id": {
             "type": "string",
@@ -5042,6 +5042,94 @@
             },
             "type": "array",
             "title": "Populationids",
+            "default": []
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "StudyArm"
+            ],
+            "const": "StudyArm",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "dataOriginDescription",
+          "dataOriginType",
+          "instanceType"
+        ],
+        "title": "StudyArm"
+      },
+      "StudyArm-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "dataOriginDescription": {
+            "type": "string",
+            "title": "Dataorigindescription"
+          },
+          "dataOriginType": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "populationIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Populationids",
+            "default": []
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
             "default": []
           },
           "instanceType": {
@@ -5452,7 +5540,7 @@
           },
           "arms": {
             "items": {
-              "$ref": "#/components/schemas/StudyArm"
+              "$ref": "#/components/schemas/StudyArm-Input"
             },
             "type": "array",
             "title": "Arms"
@@ -5727,7 +5815,7 @@
           },
           "arms": {
             "items": {
-              "$ref": "#/components/schemas/StudyArm"
+              "$ref": "#/components/schemas/StudyArm-Output"
             },
             "type": "array",
             "title": "Arms"
