@@ -1251,7 +1251,7 @@ components:
       - text
       - instanceType
       title: CommentAnnotation
-    Condition:
+    Condition-Input:
       properties:
         id:
           type: string
@@ -1279,6 +1279,18 @@ components:
           - type: string
           - type: 'null'
           title: Dictionaryid
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
+        instanceType:
+          type: string
+          enum:
+          - Condition
+          const: Condition
+          title: Instancetype
         contextIds:
           items:
             type: string
@@ -1291,12 +1303,65 @@ components:
           type: array
           title: Appliestoids
           default: []
+      type: object
+      required:
+      - id
+      - name
+      - text
+      - instanceType
+      title: Condition
+    Condition-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Label
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+        text:
+          type: string
+          title: Text
+        dictionaryId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Dictionaryid
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
         instanceType:
           type: string
           enum:
           - Condition
           const: Condition
           title: Instancetype
+        contextIds:
+          items:
+            type: string
+          type: array
+          title: Contextids
+          default: []
+        appliesToIds:
+          items:
+            type: string
+          type: array
+          title: Appliestoids
+          default: []
       type: object
       required:
       - id
@@ -3543,7 +3608,7 @@ components:
           default: []
         conditions:
           items:
-            $ref: '#/components/schemas/Condition'
+            $ref: '#/components/schemas/Condition-Input'
           type: array
           title: Conditions
           default: []
@@ -3733,7 +3798,7 @@ components:
           default: []
         conditions:
           items:
-            $ref: '#/components/schemas/Condition'
+            $ref: '#/components/schemas/Condition-Output'
           type: array
           title: Conditions
           default: []
