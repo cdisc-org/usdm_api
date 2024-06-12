@@ -10,7 +10,7 @@ class PopulationDefinition(ApiBaseModelWithIdNameLabelAndDesc):
   plannedEnrollmentNumber: Union[Range, None] = None
   plannedCompletionNumber: Union[Range, None] = None
   plannedSex: List[Code] = []
-  criteriaIds: List[str] = []
+  criterionIds: List[str] = []
   plannedAge: Union[Range, None] = None
   notes: List[CommentAnnotation] = []
   instanceType: Literal['PopulationDefinition']
