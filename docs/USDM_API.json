@@ -7763,14 +7763,7 @@
             "$ref": "#/components/schemas/Code"
           },
           "relativeFromScheduledInstanceId": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
+            "type": "string",
             "title": "Relativefromscheduledinstanceid"
           },
           "relativeToScheduledInstanceId": {
@@ -7834,6 +7827,7 @@
           "value",
           "valueLabel",
           "relativeToFrom",
+          "relativeFromScheduledInstanceId",
           "instanceType"
         ],
         "title": "Timing"
