@@ -240,6 +240,12 @@ components:
           - type: string
           - type: 'null'
           title: Nextid
+        childIds:
+          items:
+            type: string
+          type: array
+          title: Childids
+          default: []
         definedProcedures:
           items:
             $ref: '#/components/schemas/Procedure-Input'
@@ -317,6 +323,12 @@ components:
           - type: string
           - type: 'null'
           title: Nextid
+        childIds:
+          items:
+            type: string
+          type: array
+          title: Childids
+          default: []
         definedProcedures:
           items:
             $ref: '#/components/schemas/Procedure-Output'
