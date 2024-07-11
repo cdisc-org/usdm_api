@@ -4,7 +4,7 @@ from .code import Code
 from .governance_date import GovernanceDate
 from .narrative_content import NarrativeContent
 
-class StudyProtocolDocumentVersion(ApiBaseModelWithId):
+class StudyDefinitionDocumentVersion(ApiBaseModelWithId):
   protocolVersion: str
   protocolStatus: Code
   dateValues: List[GovernanceDate] = []
