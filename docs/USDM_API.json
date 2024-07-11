@@ -5610,12 +5610,30 @@
             ],
             "title": "Description"
           },
+          "language": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "templateName": {
+            "type": "string",
+            "title": "Templatename"
+          },
           "versions": {
             "items": {
               "$ref": "#/components/schemas/StudyDefinitionDocumentVersion-Input"
             },
             "type": "array",
             "title": "Versions",
+            "default": []
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
             "default": []
           },
           "instanceType": {
@@ -5631,6 +5649,9 @@
         "required": [
           "id",
           "name",
+          "language",
+          "type",
+          "templateName",
           "instanceType"
         ],
         "title": "StudyDefinitionDocument"
@@ -5669,12 +5690,30 @@
             ],
             "title": "Description"
           },
+          "language": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "templateName": {
+            "type": "string",
+            "title": "Templatename"
+          },
           "versions": {
             "items": {
               "$ref": "#/components/schemas/StudyDefinitionDocumentVersion-Output"
             },
             "type": "array",
             "title": "Versions",
+            "default": []
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
             "default": []
           },
           "instanceType": {
@@ -5690,6 +5729,9 @@
         "required": [
           "id",
           "name",
+          "language",
+          "type",
+          "templateName",
           "instanceType"
         ],
         "title": "StudyDefinitionDocument"
