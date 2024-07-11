@@ -11,5 +11,5 @@ class Study(ApiBaseModel):
   description: Union[str, None] = None
   label: Union[str, None] = None
   versions: List[StudyVersion] = []
-  documentedBy: Union[StudyDefinitionDocument, None] = None
+  documentedBy: List[StudyDefinitionDocument] = []
   instanceType: Literal['Study']

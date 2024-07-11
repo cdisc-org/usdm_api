@@ -16,7 +16,7 @@ class StudyVersion(ApiBaseModelWithId):
   rationale: str
   studyType: Union[genericCode, None] = None
   studyPhase: Union[AliasCode, None] = None
-  documentVersionId: Union[str, None] = None
+  documentVersionIds: List[str] = []
   dateValues: List[GovernanceDate] = []
   amendments: List[StudyAmendment] = []
   businessTherapeuticAreas: List[Code] = []
