@@ -3490,14 +3490,6 @@
             "title": "Name"
           },
           "sectionNumber": {
-            "type": "string",
-            "title": "Sectionnumber"
-          },
-          "sectionTitle": {
-            "type": "string",
-            "title": "Sectiontitle"
-          },
-          "text": {
             "anyOf": [
               {
                 "type": "string"
@@ -3506,7 +3498,26 @@
                 "type": "null"
               }
             ],
-            "title": "Text"
+            "title": "Sectionnumber"
+          },
+          "sectionTitle": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sectiontitle"
+          },
+          "displaySectionNumber": {
+            "type": "boolean",
+            "title": "Displaysectionnumber"
+          },
+          "displaySectionTitle": {
+            "type": "boolean",
+            "title": "Displaysectiontitle"
           },
           "childIds": {
             "items": {
@@ -3538,6 +3549,16 @@
             ],
             "title": "Nextid"
           },
+          "contentItem": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/NarrativeContentItem"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -3551,11 +3572,45 @@
         "required": [
           "id",
           "name",
-          "sectionNumber",
-          "sectionTitle",
+          "displaySectionNumber",
+          "displaySectionTitle",
           "instanceType"
         ],
         "title": "NarrativeContent"
+      },
+      "NarrativeContentItem": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "NarrativeContentItem"
+            ],
+            "const": "NarrativeContentItem",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "text",
+          "instanceType"
+        ],
+        "title": "NarrativeContentItem"
       },
       "Objective-Input": {
         "properties": {
