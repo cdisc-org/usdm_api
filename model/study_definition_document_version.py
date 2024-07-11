@@ -10,4 +10,4 @@ class StudyDefinitionDocumentVersion(ApiBaseModelWithId):
   dateValues: List[GovernanceDate] = []
   contents: List[NarrativeContent] = []
   childIds: List[str] = []
-  instanceType: Literal['StudyProtocolDocumentVersion']
+  instanceType: Literal['StudyDefinitionDocumentVersion']

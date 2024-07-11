@@ -1,7 +1,7 @@
 from typing import List, Literal, Union
 from .api_base_model import ApiBaseModelWithId
 from .study_identifier import *
-from .study_protocol_document_version import *
+from .study_definition_document_version import *
 from .alias_code import *
 from .code import Code as genericCode
 from .study_design import *
