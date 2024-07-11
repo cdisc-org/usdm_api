@@ -3710,10 +3710,10 @@ components:
           type: string
           minLength: 1
           title: Id
-        protocolVersion:
+        version:
           type: string
-          title: Protocolversion
-        protocolStatus:
+          title: Version
+        status:
           $ref: '#/components/schemas/Code'
         dateValues:
           items:
@@ -3733,6 +3733,12 @@ components:
           type: array
           title: Childids
           default: []
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
         instanceType:
           type: string
           enum:
@@ -3742,8 +3748,8 @@ components:
       type: object
       required:
       - id
-      - protocolVersion
-      - protocolStatus
+      - version
+      - status
       - instanceType
       title: StudyDefinitionDocumentVersion
     StudyDefinitionDocumentVersion-Output:
@@ -3752,10 +3758,10 @@ components:
           type: string
           minLength: 1
           title: Id
-        protocolVersion:
+        version:
           type: string
-          title: Protocolversion
-        protocolStatus:
+          title: Version
+        status:
           $ref: '#/components/schemas/Code'
         dateValues:
           items:
@@ -3775,6 +3781,12 @@ components:
           type: array
           title: Childids
           default: []
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
         instanceType:
           type: string
           enum:
@@ -3784,8 +3796,8 @@ components:
       type: object
       required:
       - id
-      - protocolVersion
-      - protocolStatus
+      - version
+      - status
       - instanceType
       title: StudyDefinitionDocumentVersion
     StudyDesign-Input:

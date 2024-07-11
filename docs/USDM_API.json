@@ -5701,11 +5701,11 @@
             "minLength": 1,
             "title": "Id"
           },
-          "protocolVersion": {
+          "version": {
             "type": "string",
-            "title": "Protocolversion"
+            "title": "Version"
           },
-          "protocolStatus": {
+          "status": {
             "$ref": "#/components/schemas/Code"
           },
           "dateValues": {
@@ -5732,6 +5732,14 @@
             "title": "Childids",
             "default": []
           },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -5744,8 +5752,8 @@
         "type": "object",
         "required": [
           "id",
-          "protocolVersion",
-          "protocolStatus",
+          "version",
+          "status",
           "instanceType"
         ],
         "title": "StudyDefinitionDocumentVersion"
@@ -5757,11 +5765,11 @@
             "minLength": 1,
             "title": "Id"
           },
-          "protocolVersion": {
+          "version": {
             "type": "string",
-            "title": "Protocolversion"
+            "title": "Version"
           },
-          "protocolStatus": {
+          "status": {
             "$ref": "#/components/schemas/Code"
           },
           "dateValues": {
@@ -5788,6 +5796,14 @@
             "title": "Childids",
             "default": []
           },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -5800,8 +5816,8 @@
         "type": "object",
         "required": [
           "id",
-          "protocolVersion",
-          "protocolStatus",
+          "version",
+          "status",
           "instanceType"
         ],
         "title": "StudyDefinitionDocumentVersion"
