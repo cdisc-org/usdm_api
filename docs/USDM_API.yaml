@@ -3161,9 +3161,11 @@ components:
           title: Versions
           default: []
         documentedBy:
-          anyOf:
-          - $ref: '#/components/schemas/StudyDefinitionDocument-Input'
-          - type: 'null'
+          items:
+            $ref: '#/components/schemas/StudyDefinitionDocument-Input'
+          type: array
+          title: Documentedby
+          default: []
         instanceType:
           type: string
           enum:
@@ -3204,9 +3206,11 @@ components:
           title: Versions
           default: []
         documentedBy:
-          anyOf:
-          - $ref: '#/components/schemas/StudyDefinitionDocument-Output'
-          - type: 'null'
+          items:
+            $ref: '#/components/schemas/StudyDefinitionDocument-Output'
+          type: array
+          title: Documentedby
+          default: []
         instanceType:
           type: string
           enum:
@@ -4812,11 +4816,12 @@ components:
           anyOf:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
-        documentVersionId:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Documentversionid
+        documentVersionIds:
+          items:
+            type: string
+          type: array
+          title: Documentversionids
+          default: []
         dateValues:
           items:
             $ref: '#/components/schemas/GovernanceDate-Input'
@@ -4898,11 +4903,12 @@ components:
           anyOf:
           - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
-        documentVersionId:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Documentversionid
+        documentVersionIds:
+          items:
+            type: string
+          type: array
+          title: Documentversionids
+          default: []
         dateValues:
           items:
             $ref: '#/components/schemas/GovernanceDate-Output'

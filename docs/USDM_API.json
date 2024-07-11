@@ -4867,14 +4867,12 @@
             "default": []
           },
           "documentedBy": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/StudyDefinitionDocument-Input"
-              },
-              {
-                "type": "null"
-              }
-            ]
+            "items": {
+              "$ref": "#/components/schemas/StudyDefinitionDocument-Input"
+            },
+            "type": "array",
+            "title": "Documentedby",
+            "default": []
           },
           "instanceType": {
             "type": "string",
@@ -4942,14 +4940,12 @@
             "default": []
           },
           "documentedBy": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/StudyDefinitionDocument-Output"
-              },
-              {
-                "type": "null"
-              }
-            ]
+            "items": {
+              "$ref": "#/components/schemas/StudyDefinitionDocument-Output"
+            },
+            "type": "array",
+            "title": "Documentedby",
+            "default": []
           },
           "instanceType": {
             "type": "string",
@@ -7407,16 +7403,13 @@
               }
             ]
           },
-          "documentVersionId": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Documentversionid"
+          "documentVersionIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Documentversionids",
+            "default": []
           },
           "dateValues": {
             "items": {
@@ -7535,16 +7528,13 @@
               }
             ]
           },
-          "documentVersionId": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Documentversionid"
+          "documentVersionIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Documentversionids",
+            "default": []
           },
           "dateValues": {
             "items": {
