@@ -4,6 +4,6 @@ from .comment_annotation import CommentAnnotation
 
 class Abbreviation(ApiBaseModelWithId):
   abbreviation: str
-  lomgName: str
+  longName: str
   notes: List[CommentAnnotation] = []
   instanceType: Literal['Address']
