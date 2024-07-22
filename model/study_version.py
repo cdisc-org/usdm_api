@@ -10,6 +10,7 @@ from .study_amendment import StudyAmendment
 from .study_title import StudyTitle
 from .eligibility_criterion import EligibilityCriterion
 from .comment_annotation import CommentAnnotation
+from .abbreviation import Abbreviation
 
 class StudyVersion(ApiBaseModelWithId):
   versionIdentifier: str
@@ -24,5 +25,6 @@ class StudyVersion(ApiBaseModelWithId):
   studyDesigns: List[StudyDesign] = []
   titles: List[StudyTitle]
   criteria: List[EligibilityCriterion]
+  abbreviations: List[Abbreviation] = []
   notes: List[CommentAnnotation] = []
   instanceType: Literal['StudyVersion']
