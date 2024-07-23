@@ -29,6 +29,7 @@ Attribute names refect the UML model for all simple type attributes and all rela
 The following coding style is used in attribute definitions. For required simple type attributes the coding convention used is as follows:
 
 - Required: ```attributeName: typeName```
+- Required (string): ```attributeName: str = Field(min_length=1)```
 - Optional: ```attributeName: Union[typeName, None] = None```
 
 The convention used for relationships and cardinality is as follows:
