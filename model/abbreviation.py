@@ -4,7 +4,7 @@ from .api_base_model import ApiBaseModelWithId
 from .comment_annotation import CommentAnnotation
 
 class Abbreviation(ApiBaseModelWithId):
-  abbreviation: str = Field(min_length=1)
-  longName: str = Field(min_length=1)
+  abbreviatedText: str = Field(min_length=1)
+  expandedText: str = Field(min_length=1)
   notes: List[CommentAnnotation] = []
   instanceType: Literal['Abbreviation']
