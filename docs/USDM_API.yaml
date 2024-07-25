@@ -216,14 +216,14 @@ components:
           type: string
           minLength: 1
           title: Id
-        abbreviation:
+        abbreviatedText:
           type: string
           minLength: 1
-          title: Abbreviation
-        longName:
+          title: Abbreviatedtext
+        expandedText:
           type: string
           minLength: 1
-          title: Longname
+          title: Expandedtext
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
@@ -239,8 +239,8 @@ components:
       type: object
       required:
       - id
-      - abbreviation
-      - longName
+      - abbreviatedText
+      - expandedText
       - instanceType
       title: Abbreviation
     Abbreviation-Output:
@@ -249,14 +249,14 @@ components:
           type: string
           minLength: 1
           title: Id
-        abbreviation:
+        abbreviatedText:
           type: string
           minLength: 1
-          title: Abbreviation
-        longName:
+          title: Abbreviatedtext
+        expandedText:
           type: string
           minLength: 1
-          title: Longname
+          title: Expandedtext
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
@@ -272,8 +272,8 @@ components:
       type: object
       required:
       - id
-      - abbreviation
-      - longName
+      - abbreviatedText
+      - expandedText
       - instanceType
       title: Abbreviation
     Activity-Input:

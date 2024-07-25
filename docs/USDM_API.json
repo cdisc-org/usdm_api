@@ -311,15 +311,15 @@
             "minLength": 1,
             "title": "Id"
           },
-          "abbreviation": {
+          "abbreviatedText": {
             "type": "string",
             "minLength": 1,
-            "title": "Abbreviation"
+            "title": "Abbreviatedtext"
           },
-          "longName": {
+          "expandedText": {
             "type": "string",
             "minLength": 1,
-            "title": "Longname"
+            "title": "Expandedtext"
           },
           "notes": {
             "items": {
@@ -341,8 +341,8 @@
         "type": "object",
         "required": [
           "id",
-          "abbreviation",
-          "longName",
+          "abbreviatedText",
+          "expandedText",
           "instanceType"
         ],
         "title": "Abbreviation"
@@ -354,15 +354,15 @@
             "minLength": 1,
             "title": "Id"
           },
-          "abbreviation": {
+          "abbreviatedText": {
             "type": "string",
             "minLength": 1,
-            "title": "Abbreviation"
+            "title": "Abbreviatedtext"
           },
-          "longName": {
+          "expandedText": {
             "type": "string",
             "minLength": 1,
-            "title": "Longname"
+            "title": "Expandedtext"
           },
           "notes": {
             "items": {
@@ -384,8 +384,8 @@
         "type": "object",
         "required": [
           "id",
-          "abbreviation",
-          "longName",
+          "abbreviatedText",
+          "expandedText",
           "instanceType"
         ],
         "title": "Abbreviation"
