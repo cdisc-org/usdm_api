@@ -3,7 +3,7 @@ info:
   title: DDF USDM API
   description: A simple TransCelerate Digital Data Flow (DDF) Study Definitions Repository
     API.
-  version: 3.3.0
+  version: 3.5.0
 paths:
   /v3/studyDefinitions:
     post:
@@ -210,6 +210,72 @@ paths:
                 $ref: '#/components/schemas/HTTPValidationError'
 components:
   schemas:
+    Abbreviation-Input:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        abbreviatedText:
+          type: string
+          minLength: 1
+          title: Abbreviatedtext
+        expandedText:
+          type: string
+          minLength: 1
+          title: Expandedtext
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
+        instanceType:
+          type: string
+          enum:
+          - Abbreviation
+          const: Abbreviation
+          title: Instancetype
+      type: object
+      required:
+      - id
+      - abbreviatedText
+      - expandedText
+      - instanceType
+      title: Abbreviation
+    Abbreviation-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        abbreviatedText:
+          type: string
+          minLength: 1
+          title: Abbreviatedtext
+        expandedText:
+          type: string
+          minLength: 1
+          title: Expandedtext
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
+        instanceType:
+          type: string
+          enum:
+          - Abbreviation
+          const: Abbreviation
+          title: Instancetype
+      type: object
+      required:
+      - id
+      - abbreviatedText
+      - expandedText
+      - instanceType
+      title: Abbreviation
     Activity-Input:
       properties:
         id:
@@ -2308,10 +2374,11 @@ components:
           - type: string
           - type: 'null'
           title: Nextid
-        contentItem:
+        contentItemId:
           anyOf:
-          - $ref: '#/components/schemas/NarrativeContentItem'
+          - type: string
           - type: 'null'
+          title: Contentitemid
         instanceType:
           type: string
           enum:
@@ -4906,6 +4973,18 @@ components:
             $ref: '#/components/schemas/EligibilityCriterion-Input'
           type: array
           title: Criteria
+        narrativeContentItems:
+          items:
+            $ref: '#/components/schemas/NarrativeContentItem'
+          type: array
+          title: Narrativecontentitems
+          default: []
+        abbreviations:
+          items:
+            $ref: '#/components/schemas/Abbreviation-Input'
+          type: array
+          title: Abbreviations
+          default: []
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
@@ -4993,6 +5072,18 @@ components:
             $ref: '#/components/schemas/EligibilityCriterion-Output'
           type: array
           title: Criteria
+        narrativeContentItems:
+          items:
+            $ref: '#/components/schemas/NarrativeContentItem'
+          type: array
+          title: Narrativecontentitems
+          default: []
+        abbreviations:
+          items:
+            $ref: '#/components/schemas/Abbreviation-Output'
+          type: array
+          title: Abbreviations
+          default: []
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
