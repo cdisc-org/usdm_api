@@ -1,8 +1,5 @@
 from typing import Literal
-from .api_base_model import ApiBaseModelWithId
-from .organization import Organization
+from .identifier import Identifier
 
-class StudyIdentifier(ApiBaseModelWithId):
-  studyIdentifier: str
-  studyIdentifierScope: Organization
+class StudyIdentifier(Identifier):
   instanceType: Literal['StudyIdentifier']
