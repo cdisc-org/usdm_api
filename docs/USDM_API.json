@@ -753,6 +753,156 @@
         ],
         "title": "Address"
       },
+      "Administration-Input": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "duration": {
+            "$ref": "#/components/schemas/AdministrationDuration-Input"
+          },
+          "dose": {
+            "$ref": "#/components/schemas/Quantity-Input"
+          },
+          "route": {
+            "$ref": "#/components/schemas/AliasCode"
+          },
+          "frequency": {
+            "$ref": "#/components/schemas/AliasCode"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "AgentAdministration"
+            ],
+            "const": "AgentAdministration",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "duration",
+          "dose",
+          "route",
+          "frequency",
+          "instanceType"
+        ],
+        "title": "Administration"
+      },
+      "Administration-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "duration": {
+            "$ref": "#/components/schemas/AdministrationDuration-Output"
+          },
+          "dose": {
+            "$ref": "#/components/schemas/Quantity-Output"
+          },
+          "route": {
+            "$ref": "#/components/schemas/AliasCode"
+          },
+          "frequency": {
+            "$ref": "#/components/schemas/AliasCode"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "AgentAdministration"
+            ],
+            "const": "AgentAdministration",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "duration",
+          "dose",
+          "route",
+          "frequency",
+          "instanceType"
+        ],
+        "title": "Administration"
+      },
       "AdministrationDuration-Input": {
         "properties": {
           "id": {
@@ -848,156 +998,6 @@
           "instanceType"
         ],
         "title": "AdministrationDuration"
-      },
-      "AgentAdministration-Input": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1,
-            "title": "Id"
-          },
-          "name": {
-            "type": "string",
-            "minLength": 1,
-            "title": "Name"
-          },
-          "label": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Label"
-          },
-          "description": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Description"
-          },
-          "duration": {
-            "$ref": "#/components/schemas/AdministrationDuration-Input"
-          },
-          "dose": {
-            "$ref": "#/components/schemas/Quantity-Input"
-          },
-          "route": {
-            "$ref": "#/components/schemas/AliasCode"
-          },
-          "frequency": {
-            "$ref": "#/components/schemas/AliasCode"
-          },
-          "notes": {
-            "items": {
-              "$ref": "#/components/schemas/CommentAnnotation"
-            },
-            "type": "array",
-            "title": "Notes",
-            "default": []
-          },
-          "instanceType": {
-            "type": "string",
-            "enum": [
-              "AgentAdministration"
-            ],
-            "const": "AgentAdministration",
-            "title": "Instancetype"
-          }
-        },
-        "type": "object",
-        "required": [
-          "id",
-          "name",
-          "duration",
-          "dose",
-          "route",
-          "frequency",
-          "instanceType"
-        ],
-        "title": "AgentAdministration"
-      },
-      "AgentAdministration-Output": {
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1,
-            "title": "Id"
-          },
-          "name": {
-            "type": "string",
-            "minLength": 1,
-            "title": "Name"
-          },
-          "label": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Label"
-          },
-          "description": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Description"
-          },
-          "duration": {
-            "$ref": "#/components/schemas/AdministrationDuration-Output"
-          },
-          "dose": {
-            "$ref": "#/components/schemas/Quantity-Output"
-          },
-          "route": {
-            "$ref": "#/components/schemas/AliasCode"
-          },
-          "frequency": {
-            "$ref": "#/components/schemas/AliasCode"
-          },
-          "notes": {
-            "items": {
-              "$ref": "#/components/schemas/CommentAnnotation"
-            },
-            "type": "array",
-            "title": "Notes",
-            "default": []
-          },
-          "instanceType": {
-            "type": "string",
-            "enum": [
-              "AgentAdministration"
-            ],
-            "const": "AgentAdministration",
-            "title": "Instancetype"
-          }
-        },
-        "type": "object",
-        "required": [
-          "id",
-          "name",
-          "duration",
-          "dose",
-          "route",
-          "frequency",
-          "instanceType"
-        ],
-        "title": "AgentAdministration"
       },
       "AliasCode": {
         "properties": {
@@ -7277,7 +7277,7 @@
           },
           "administrations": {
             "items": {
-              "$ref": "#/components/schemas/AgentAdministration-Input"
+              "$ref": "#/components/schemas/Administration-Input"
             },
             "type": "array",
             "title": "Administrations",
@@ -7384,7 +7384,7 @@
           },
           "administrations": {
             "items": {
-              "$ref": "#/components/schemas/AgentAdministration-Output"
+              "$ref": "#/components/schemas/Administration-Output"
             },
             "type": "array",
             "title": "Administrations",
