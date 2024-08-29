@@ -5149,10 +5149,6 @@ components:
           default: []
         productDesignation:
           $ref: '#/components/schemas/Code'
-        pharmacologicClass:
-          anyOf:
-          - $ref: '#/components/schemas/Code'
-          - type: 'null'
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
@@ -5216,10 +5212,6 @@ components:
           default: []
         productDesignation:
           $ref: '#/components/schemas/Code'
-        pharmacologicClass:
-          anyOf:
-          - $ref: '#/components/schemas/Code'
-          - type: 'null'
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
