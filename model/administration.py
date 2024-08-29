@@ -5,10 +5,10 @@ from .administration_duration import AdministrationDuration
 from .alias_code import AliasCode
 from .comment_annotation import CommentAnnotation
 
-class AgentAdministration(ApiBaseModelWithIdNameLabelAndDesc):
+class Administration(ApiBaseModelWithIdNameLabelAndDesc):
   duration:	AdministrationDuration
   dose:	Quantity
-  route:	AliasCode
-  frequency:	AliasCode
+  route: AliasCode
+  frequency:AliasCode
   notes: List[CommentAnnotation] = []
   instanceType: Literal['AgentAdministration']
