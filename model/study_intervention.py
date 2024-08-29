@@ -12,6 +12,5 @@ class StudyIntervention(ApiBaseModelWithIdNameLabelAndDesc):
   codes: List[Code] = []
   administrations: List[Administration] = []
   productDesignation:	Code
-  pharmacologicClass:	Union[Code, None] = None
   notes: List[CommentAnnotation] = []
   instanceType: Literal['StudyIntervention']
