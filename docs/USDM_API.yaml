@@ -517,7 +517,7 @@ components:
           anyOf:
           - $ref: '#/components/schemas/Code'
           - type: 'null'
-        admoinistrableDoseForm:
+        administrableDoseForm:
           $ref: '#/components/schemas/AliasCode'
         properties:
           items:
@@ -553,7 +553,7 @@ components:
       required:
       - id
       - name
-      - admoinistrableDoseForm
+      - administrableDoseForm
       - instanceType
       title: AdministrableProduct
     AdministrableProduct-Output:
@@ -580,7 +580,7 @@ components:
           anyOf:
           - $ref: '#/components/schemas/Code'
           - type: 'null'
-        admoinistrableDoseForm:
+        administrableDoseForm:
           $ref: '#/components/schemas/AliasCode'
         properties:
           items:
@@ -616,7 +616,7 @@ components:
       required:
       - id
       - name
-      - admoinistrableDoseForm
+      - administrableDoseForm
       - instanceType
       title: AdministrableProduct
     AdministrableProductIdentifier-Input:

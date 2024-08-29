@@ -797,7 +797,7 @@
               }
             ]
           },
-          "admoinistrableDoseForm": {
+          "administrableDoseForm": {
             "$ref": "#/components/schemas/AliasCode"
           },
           "properties": {
@@ -845,7 +845,7 @@
         "required": [
           "id",
           "name",
-          "admoinistrableDoseForm",
+          "administrableDoseForm",
           "instanceType"
         ],
         "title": "AdministrableProduct"
@@ -894,7 +894,7 @@
               }
             ]
           },
-          "admoinistrableDoseForm": {
+          "administrableDoseForm": {
             "$ref": "#/components/schemas/AliasCode"
           },
           "properties": {
@@ -942,7 +942,7 @@
         "required": [
           "id",
           "name",
-          "admoinistrableDoseForm",
+          "administrableDoseForm",
           "instanceType"
         ],
         "title": "AdministrableProduct"
