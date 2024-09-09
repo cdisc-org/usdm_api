@@ -8554,7 +8554,14 @@
             "title": "Description"
           },
           "code": {
-            "$ref": "#/components/schemas/Code"
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Code"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "strengths": {
             "items": {
@@ -8586,7 +8593,6 @@
         "required": [
           "id",
           "name",
-          "code",
           "strengths",
           "instanceType"
         ],
@@ -8627,7 +8633,14 @@
             "title": "Description"
           },
           "code": {
-            "$ref": "#/components/schemas/Code"
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Code"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "strengths": {
             "items": {
@@ -8659,7 +8672,6 @@
         "required": [
           "id",
           "name",
-          "code",
           "strengths",
           "instanceType"
         ],

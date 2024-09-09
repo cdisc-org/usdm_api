@@ -5614,7 +5614,9 @@ components:
           - type: 'null'
           title: Description
         code:
-          $ref: '#/components/schemas/Code'
+          anyOf:
+          - $ref: '#/components/schemas/Code'
+          - type: 'null'
         strengths:
           items:
             $ref: '#/components/schemas/Strength-Input'
@@ -5634,7 +5636,6 @@ components:
       required:
       - id
       - name
-      - code
       - strengths
       - instanceType
       title: Substance
@@ -5659,7 +5660,9 @@ components:
           - type: 'null'
           title: Description
         code:
-          $ref: '#/components/schemas/Code'
+          anyOf:
+          - $ref: '#/components/schemas/Code'
+          - type: 'null'
         strengths:
           items:
             $ref: '#/components/schemas/Strength-Output'
@@ -5679,7 +5682,6 @@ components:
       required:
       - id
       - name
-      - code
       - strengths
       - instanceType
       title: Substance
