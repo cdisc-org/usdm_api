@@ -4,7 +4,7 @@ from .strength import Strength
 from .code import Code
 
 class Substance(ApiBaseModelWithIdNameLabelAndDesc):
-  code: Code
+  code: Union[Code, None] = None
   strengths: List[Strength]
   referenceSubstance: Union['Substance', None] = None
   instanceType: Literal['Substance']
