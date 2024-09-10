@@ -20,7 +20,6 @@ from .estimand import Estimand
 from .syntax_template_dictionary import SyntaxTemplateDictionary
 from .masking import Masking
 from .condition import Condition
-from .organization import ResearchOrganization
 from .comment_annotation import CommentAnnotation
 
 class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
@@ -50,6 +49,5 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   documentVersionId: Union[str, None] = None
   dictionaries: List[SyntaxTemplateDictionary] = []
   conditions: List[Condition] = []
-  organizations: List[ResearchOrganization] = []
   notes: List[CommentAnnotation] = []
   instanceType: Literal['StudyDesign']
