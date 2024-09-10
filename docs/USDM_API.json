@@ -8358,15 +8358,13 @@
             ],
             "title": "Description"
           },
-          "code": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/Code"
-              },
-              {
-                "type": "null"
-              }
-            ]
+          "codes": {
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "type": "array",
+            "title": "Codes",
+            "default": []
           },
           "strengths": {
             "items": {
@@ -8437,15 +8435,13 @@
             ],
             "title": "Description"
           },
-          "code": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/Code"
-              },
-              {
-                "type": "null"
-              }
-            ]
+          "codes": {
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "type": "array",
+            "title": "Codes",
+            "default": []
           },
           "strengths": {
             "items": {

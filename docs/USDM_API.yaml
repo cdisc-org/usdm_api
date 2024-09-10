@@ -5485,10 +5485,12 @@ components:
           - type: string
           - type: 'null'
           title: Description
-        code:
-          anyOf:
-          - $ref: '#/components/schemas/Code'
-          - type: 'null'
+        codes:
+          items:
+            $ref: '#/components/schemas/Code'
+          type: array
+          title: Codes
+          default: []
         strengths:
           items:
             $ref: '#/components/schemas/Strength-Input'
@@ -5531,10 +5533,12 @@ components:
           - type: string
           - type: 'null'
           title: Description
-        code:
-          anyOf:
-          - $ref: '#/components/schemas/Code'
-          - type: 'null'
+        codes:
+          items:
+            $ref: '#/components/schemas/Code'
+          type: array
+          title: Codes
+          default: []
         strengths:
           items:
             $ref: '#/components/schemas/Strength-Output'
