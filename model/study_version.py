@@ -13,6 +13,7 @@ from .narrative_content import NarrativeContentItem
 from .comment_annotation import CommentAnnotation
 from .abbreviation import Abbreviation
 from .study_role import StudyRole
+from .organization import Organization
 
 class StudyVersion(ApiBaseModelWithId):
   versionIdentifier: str
