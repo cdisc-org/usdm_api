@@ -4358,7 +4358,7 @@
             ],
             "title": "Label"
           },
-          "organizationType": {
+          "type": {
             "$ref": "#/components/schemas/Code"
           },
           "identifierScheme": {
@@ -4400,7 +4400,7 @@
         "required": [
           "id",
           "name",
-          "organizationType",
+          "type",
           "identifierScheme",
           "identifier",
           "instanceType"
@@ -4430,7 +4430,7 @@
             ],
             "title": "Label"
           },
-          "organizationType": {
+          "type": {
             "$ref": "#/components/schemas/Code"
           },
           "identifierScheme": {
@@ -4472,7 +4472,7 @@
         "required": [
           "id",
           "name",
-          "organizationType",
+          "type",
           "identifierScheme",
           "identifier",
           "instanceType"

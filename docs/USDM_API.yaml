@@ -2858,7 +2858,7 @@ components:
           - type: string
           - type: 'null'
           title: Label
-        organizationType:
+        type:
           $ref: '#/components/schemas/Code'
         identifierScheme:
           type: string
@@ -2886,7 +2886,7 @@ components:
       required:
       - id
       - name
-      - organizationType
+      - type
       - identifierScheme
       - identifier
       - instanceType
@@ -2906,7 +2906,7 @@ components:
           - type: string
           - type: 'null'
           title: Label
-        organizationType:
+        type:
           $ref: '#/components/schemas/Code'
         identifierScheme:
           type: string
@@ -2934,7 +2934,7 @@ components:
       required:
       - id
       - name
-      - organizationType
+      - type
       - identifierScheme
       - identifier
       - instanceType
