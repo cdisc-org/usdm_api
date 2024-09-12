@@ -14,6 +14,7 @@ from .comment_annotation import CommentAnnotation
 from .abbreviation import Abbreviation
 from .study_role import StudyRole
 from .organization import Organization
+from .administrable_product import AdministrableProduct
 
 class StudyVersion(ApiBaseModelWithId):
   versionIdentifier: str
@@ -33,5 +34,6 @@ class StudyVersion(ApiBaseModelWithId):
   abbreviations: List[Abbreviation] = []
   roles: List[StudyRole] = []
   organizations: List[Organization] = []
+  administrableProducts: List[AdministrableProduct] = []
   notes: List[CommentAnnotation] = []
   instanceType: Literal['StudyVersion']
