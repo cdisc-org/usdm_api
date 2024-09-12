@@ -12,6 +12,7 @@ from .eligibility_criterion import EligibilityCriterion
 from .narrative_content import NarrativeContentItem
 from .comment_annotation import CommentAnnotation
 from .abbreviation import Abbreviation
+from .study_role import StudyRole
 
 class StudyVersion(ApiBaseModelWithId):
   versionIdentifier: str
@@ -29,5 +30,7 @@ class StudyVersion(ApiBaseModelWithId):
   criteria: List[EligibilityCriterion]
   narrativeContentItems: List[NarrativeContentItem] = []
   abbreviations: List[Abbreviation] = []
+  roles: List[StudyRole] = []
+  organizations: List[Organization] = []
   notes: List[CommentAnnotation] = []
   instanceType: Literal['StudyVersion']
