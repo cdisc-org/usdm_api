@@ -18,7 +18,6 @@ from .objective import Objective
 from .schedule_timeline import ScheduleTimeline
 from .estimand import Estimand
 from .syntax_template_dictionary import SyntaxTemplateDictionary
-from .masking import Masking
 from .condition import Condition
 from .comment_annotation import CommentAnnotation
 
@@ -41,7 +40,6 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   elements: List[StudyElement] = []
   estimands: List[Estimand] = []
   indications: List[Indication] = []
-  maskingRoles: List[Masking] = []
   studyInterventions: List[StudyIntervention] = []
   objectives: List[Objective] = []
   population: Union[StudyDesignPopulation, None] = None

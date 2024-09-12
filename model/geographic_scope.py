@@ -12,5 +12,5 @@ class GeographicScope(ApiBaseModelWithId):
 
 class SubjectEnrollment(GeographicScope):
   quantity: Quantity
-  appliedTo: Union[StudySite, None] = None
+  appliesTo: Union[StudySite, None] = None
   instanceType: Literal['SubjectEnrollment']
