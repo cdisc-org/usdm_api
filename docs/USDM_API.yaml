@@ -736,10 +736,11 @@ components:
           $ref: '#/components/schemas/AliasCode'
         frequency:
           $ref: '#/components/schemas/AliasCode'
-        administrableProduct:
+        administrableProductId:
           anyOf:
-          - $ref: '#/components/schemas/AdministrableProduct-Input'
+          - type: string
           - type: 'null'
+          title: Administrableproductid
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
@@ -790,10 +791,11 @@ components:
           $ref: '#/components/schemas/AliasCode'
         frequency:
           $ref: '#/components/schemas/AliasCode'
-        administrableProduct:
+        administrableProductId:
           anyOf:
-          - $ref: '#/components/schemas/AdministrableProduct-Output'
+          - type: string
           - type: 'null'
+          title: Administrableproductid
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
@@ -5367,6 +5369,12 @@ components:
           type: array
           title: Organizations
           default: []
+        administrableProducts:
+          items:
+            $ref: '#/components/schemas/AdministrableProduct-Input'
+          type: array
+          title: Administrableproducts
+          default: []
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
@@ -5483,6 +5491,12 @@ components:
             $ref: '#/components/schemas/Organization-Output'
           type: array
           title: Organizations
+          default: []
+        administrableProducts:
+          items:
+            $ref: '#/components/schemas/AdministrableProduct-Output'
+          type: array
+          title: Administrableproducts
           default: []
         notes:
           items:

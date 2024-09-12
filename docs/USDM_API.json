@@ -1110,15 +1110,16 @@
           "frequency": {
             "$ref": "#/components/schemas/AliasCode"
           },
-          "administrableProduct": {
+          "administrableProductId": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/AdministrableProduct-Input"
+                "type": "string"
               },
               {
                 "type": "null"
               }
-            ]
+            ],
+            "title": "Administrableproductid"
           },
           "notes": {
             "items": {
@@ -1195,15 +1196,16 @@
           "frequency": {
             "$ref": "#/components/schemas/AliasCode"
           },
-          "administrableProduct": {
+          "administrableProductId": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/AdministrableProduct-Output"
+                "type": "string"
               },
               {
                 "type": "null"
               }
-            ]
+            ],
+            "title": "Administrableproductid"
           },
           "notes": {
             "items": {
@@ -8202,6 +8204,14 @@
             "title": "Organizations",
             "default": []
           },
+          "administrableProducts": {
+            "items": {
+              "$ref": "#/components/schemas/AdministrableProduct-Input"
+            },
+            "type": "array",
+            "title": "Administrableproducts",
+            "default": []
+          },
           "notes": {
             "items": {
               "$ref": "#/components/schemas/CommentAnnotation"
@@ -8365,6 +8375,14 @@
             },
             "type": "array",
             "title": "Organizations",
+            "default": []
+          },
+          "administrableProducts": {
+            "items": {
+              "$ref": "#/components/schemas/AdministrableProduct-Output"
+            },
+            "type": "array",
+            "title": "Administrableproducts",
             "default": []
           },
           "notes": {
