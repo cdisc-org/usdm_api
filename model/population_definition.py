@@ -6,14 +6,11 @@ from .range import Range
 from .characteristic import Characteristic
 from .comment_annotation import CommentAnnotation
 
-planned_sex_type = List[Annotated[Code, Len(min_length=0, max_length=2)]]
-
 class PopulationDefinition(ApiBaseModelWithIdNameLabelAndDesc):
   includesHealthySubjects: bool
   plannedEnrollmentNumber: Union[Range, None] = None
   plannedCompletionNumber: Union[Range, None] = None
-  plannedSex: planned_sex_type = []
-#  plannedSex: List[Annotated[Code, Len(min_length=0, max_length=2)]] = []
+  plannedSex: List[Annotated[Code, Len(min_length=0, max_length=2)]] = []
   criterionIds: List[str] = []
   plannedAge: Union[Range, None] = None
   notes: List[CommentAnnotation] = []
