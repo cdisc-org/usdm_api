@@ -5,7 +5,7 @@ from .comment_annotation import CommentAnnotation
 
 class StudyAmendmentImpact(ApiBaseModelWithId):
   type: Code
-  description: str
+  text: str
   isSubstantial: bool
   notes: List[CommentAnnotation] = []
   instanceType: Literal['StudyAmendmentImpact']

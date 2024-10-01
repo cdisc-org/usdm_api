@@ -3,7 +3,7 @@ from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 from .document_content_reference import DocumentContentReference
 
 class StudyChange(ApiBaseModelWithIdNameLabelAndDesc):
-  text: str
+  summary: str
   rationale: str
   changedSections: List[DocumentContentReference]
   instanceType: Literal['StudyChange']
