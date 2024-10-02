@@ -12,4 +12,4 @@ class Administration(ApiBaseModelWithIdNameLabelAndDesc):
   frequency: AliasCode
   administrableProductId: Union[str, None] = None
   notes: List[CommentAnnotation] = []
-  instanceType: Literal['AgentAdministration']
+  instanceType: Literal['Administration']
