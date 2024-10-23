@@ -44,7 +44,7 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   objectives: List[Objective] = []
   population: Union[StudyDesignPopulation, None] = None
   scheduleTimelines: List[ScheduleTimeline] = []
-  documentVersionId: Union[str, None] = None
+  documentVersionIds: List[str] = []
   dictionaries: List[SyntaxTemplateDictionary] = []
   conditions: List[Condition] = []
   notes: List[CommentAnnotation] = []

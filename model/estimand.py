@@ -5,9 +5,9 @@ from .intercurrent_event import IntercurrentEvent
 from .comment_annotation import CommentAnnotation
 
 class Estimand(ApiBaseModelWithIdNameLabelAndDesc):
-  summaryMeasure: str
+  populationSummary: str
   analysisPopulation: AnalysisPopulation
-  interventionId: str
+  interventionIds: List[str]
   variableOfInterestId: str
   intercurrentEvents: List[IntercurrentEvent]
   notes: List[CommentAnnotation] = []
