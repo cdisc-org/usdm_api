@@ -14,6 +14,7 @@ from .study_arm import StudyArm
 from .study_epoch import StudyEpoch
 from .study_element import StudyElement
 from .population_definition import StudyDesignPopulation
+from .analysis_population import AnalysisPopulation
 from .objective import Objective
 from .schedule_timeline import ScheduleTimeline
 from .estimand import Estimand
@@ -43,6 +44,7 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   studyInterventions: List[StudyIntervention] = []
   objectives: List[Objective] = []
   population: Union[StudyDesignPopulation, None] = None
+  analysisPopulations: List[AnalysisPopulation] = []
   scheduleTimelines: List[ScheduleTimeline] = []
   documentVersionIds: List[str] = []
   dictionaries: List[SyntaxTemplateDictionary] = []
