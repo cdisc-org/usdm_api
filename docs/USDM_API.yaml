@@ -520,6 +520,8 @@ components:
           - type: 'null'
         administrableDoseForm:
           $ref: '#/components/schemas/AliasCode'
+        productDesignation:
+          $ref: '#/components/schemas/Code'
         properties:
           items:
             $ref: '#/components/schemas/AdministrableProductProperty-Input'
@@ -555,6 +557,7 @@ components:
       - id
       - name
       - administrableDoseForm
+      - productDesignation
       - instanceType
       title: AdministrableProduct
     AdministrableProduct-Output:
@@ -583,6 +586,8 @@ components:
           - type: 'null'
         administrableDoseForm:
           $ref: '#/components/schemas/AliasCode'
+        productDesignation:
+          $ref: '#/components/schemas/Code'
         properties:
           items:
             $ref: '#/components/schemas/AdministrableProductProperty-Output'
@@ -618,6 +623,7 @@ components:
       - id
       - name
       - administrableDoseForm
+      - productDesignation
       - instanceType
       title: AdministrableProduct
     AdministrableProductIdentifier:
@@ -742,6 +748,11 @@ components:
           - type: string
           - type: 'null'
           title: Administrableproductid
+        medicalDeviceId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Medicaldeviceid
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
@@ -797,6 +808,11 @@ components:
           - type: string
           - type: 'null'
           title: Administrableproductid
+        medicalDeviceId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Medicaldeviceid
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
@@ -2706,6 +2722,152 @@ components:
       - description
       - instanceType
       title: Masking
+    MedicalDevice-Input:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Label
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+        hardwareVersion:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Hardwareversion
+        softwareVersion:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Softwareversion
+        embeddedProductId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Embeddedproductid
+        identifiers:
+          items:
+            $ref: '#/components/schemas/MedicalDeviceIdentifier'
+          type: array
+          title: Identifiers
+          default: []
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
+        instanceType:
+          type: string
+          enum:
+          - MedicalDevice
+          const: MedicalDevice
+          title: Instancetype
+      type: object
+      required:
+      - id
+      - name
+      - instanceType
+      title: MedicalDevice
+    MedicalDevice-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Label
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+        hardwareVersion:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Hardwareversion
+        softwareVersion:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Softwareversion
+        embeddedProductId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Embeddedproductid
+        identifiers:
+          items:
+            $ref: '#/components/schemas/MedicalDeviceIdentifier'
+          type: array
+          title: Identifiers
+          default: []
+        notes:
+          items:
+            $ref: '#/components/schemas/CommentAnnotation'
+          type: array
+          title: Notes
+          default: []
+        instanceType:
+          type: string
+          enum:
+          - MedicalDevice
+          const: MedicalDevice
+          title: Instancetype
+      type: object
+      required:
+      - id
+      - name
+      - instanceType
+      title: MedicalDevice
+    MedicalDeviceIdentifier:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        text:
+          type: string
+          title: Text
+        scopeId:
+          type: string
+          title: Scopeid
+        instanceType:
+          type: string
+          enum:
+          - MedicalDeviceIdentifier
+          const: MedicalDeviceIdentifier
+          title: Instancetype
+        type:
+          $ref: '#/components/schemas/Code'
+      type: object
+      required:
+      - id
+      - text
+      - scopeId
+      - instanceType
+      - type
+      title: MedicalDeviceIdentifier
     NarrativeContent:
       properties:
         id:
@@ -3176,7 +3338,7 @@ components:
       - value
       - instanceType
       title: Quantity
-    Range:
+    Range-Input:
       properties:
         id:
           type: string
@@ -3190,7 +3352,40 @@ components:
           title: Maxvalue
         unit:
           anyOf:
-          - $ref: '#/components/schemas/Code'
+          - $ref: '#/components/schemas/AliasCode'
+          - type: 'null'
+        isApproximate:
+          type: boolean
+          title: Isapproximate
+        instanceType:
+          type: string
+          enum:
+          - Range
+          const: Range
+          title: Instancetype
+      type: object
+      required:
+      - id
+      - minValue
+      - maxValue
+      - isApproximate
+      - instanceType
+      title: Range
+    Range-Output:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        minValue:
+          type: number
+          title: Minvalue
+        maxValue:
+          type: number
+          title: Maxvalue
+        unit:
+          anyOf:
+          - $ref: '#/components/schemas/AliasCode'
           - type: 'null'
         isApproximate:
           type: boolean
@@ -3544,7 +3739,7 @@ components:
         numerator:
           anyOf:
           - $ref: '#/components/schemas/Quantity-Input'
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
           title: Numerator
         instanceType:
@@ -3586,7 +3781,7 @@ components:
         numerator:
           anyOf:
           - $ref: '#/components/schemas/Quantity-Output'
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
           title: Numerator
         instanceType:
@@ -4144,11 +4339,11 @@ components:
           title: Includeshealthysubjects
         plannedEnrollmentNumber:
           anyOf:
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
         plannedCompletionNumber:
           anyOf:
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
         plannedSex:
           items:
@@ -4165,7 +4360,7 @@ components:
           default: []
         plannedAge:
           anyOf:
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
         notes:
           items:
@@ -4217,11 +4412,11 @@ components:
           title: Includeshealthysubjects
         plannedEnrollmentNumber:
           anyOf:
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
         plannedCompletionNumber:
           anyOf:
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
         plannedSex:
           items:
@@ -4238,7 +4433,7 @@ components:
           default: []
         plannedAge:
           anyOf:
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
         notes:
           items:
@@ -4864,11 +5059,11 @@ components:
           title: Includeshealthysubjects
         plannedEnrollmentNumber:
           anyOf:
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
         plannedCompletionNumber:
           anyOf:
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
         plannedSex:
           items:
@@ -4885,7 +5080,7 @@ components:
           default: []
         plannedAge:
           anyOf:
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
         notes:
           items:
@@ -4937,11 +5132,11 @@ components:
           title: Includeshealthysubjects
         plannedEnrollmentNumber:
           anyOf:
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
         plannedCompletionNumber:
           anyOf:
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
         plannedSex:
           items:
@@ -4958,7 +5153,7 @@ components:
           default: []
         plannedAge:
           anyOf:
-          - $ref: '#/components/schemas/Range'
+          - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
         notes:
           items:
@@ -5256,8 +5451,6 @@ components:
           type: array
           title: Administrations
           default: []
-        productDesignation:
-          $ref: '#/components/schemas/Code'
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
@@ -5276,7 +5469,6 @@ components:
       - name
       - role
       - type
-      - productDesignation
       - instanceType
       title: StudyIntervention
     StudyIntervention-Output:
@@ -5319,8 +5511,6 @@ components:
           type: array
           title: Administrations
           default: []
-        productDesignation:
-          $ref: '#/components/schemas/Code'
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
@@ -5339,7 +5529,6 @@ components:
       - name
       - role
       - type
-      - productDesignation
       - instanceType
       title: StudyIntervention
     StudyRole:
@@ -5559,6 +5748,12 @@ components:
           type: array
           title: Administrableproducts
           default: []
+        medicalDevices:
+          items:
+            $ref: '#/components/schemas/MedicalDevice-Input'
+          type: array
+          title: Medicaldevices
+          default: []
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
@@ -5681,6 +5876,12 @@ components:
             $ref: '#/components/schemas/AdministrableProduct-Output'
           type: array
           title: Administrableproducts
+          default: []
+        medicalDevices:
+          items:
+            $ref: '#/components/schemas/MedicalDevice-Output'
+          type: array
+          title: Medicaldevices
           default: []
         notes:
           items:
