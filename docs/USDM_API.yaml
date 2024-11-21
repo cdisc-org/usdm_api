@@ -522,6 +522,10 @@ components:
           $ref: '#/components/schemas/AliasCode'
         productDesignation:
           $ref: '#/components/schemas/Code'
+        sourcing:
+          anyOf:
+          - $ref: '#/components/schemas/Code'
+          - type: 'null'
         properties:
           items:
             $ref: '#/components/schemas/AdministrableProductProperty-Input'
@@ -588,6 +592,10 @@ components:
           $ref: '#/components/schemas/AliasCode'
         productDesignation:
           $ref: '#/components/schemas/Code'
+        sourcing:
+          anyOf:
+          - $ref: '#/components/schemas/Code'
+          - type: 'null'
         properties:
           items:
             $ref: '#/components/schemas/AdministrableProductProperty-Output'
@@ -2757,6 +2765,10 @@ components:
           - type: string
           - type: 'null'
           title: Embeddedproductid
+        sourcing:
+          anyOf:
+          - $ref: '#/components/schemas/Code'
+          - type: 'null'
         identifiers:
           items:
             $ref: '#/components/schemas/MedicalDeviceIdentifier'
@@ -2816,6 +2828,10 @@ components:
           - type: string
           - type: 'null'
           title: Embeddedproductid
+        sourcing:
+          anyOf:
+          - $ref: '#/components/schemas/Code'
+          - type: 'null'
         identifiers:
           items:
             $ref: '#/components/schemas/MedicalDeviceIdentifier'
@@ -3288,6 +3304,51 @@ components:
       - code
       - instanceType
       title: Procedure
+    ProductOrganizationRole:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        name:
+          type: string
+          minLength: 1
+          title: Name
+        label:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Label
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+        code:
+          $ref: '#/components/schemas/Code'
+        appliesToIds:
+          items:
+            type: string
+          type: array
+          title: Appliestoids
+        organizationId:
+          type: string
+          title: Organizationid
+        instanceType:
+          type: string
+          enum:
+          - ProductOrganizationRole
+          const: ProductOrganizationRole
+          title: Instancetype
+      type: object
+      required:
+      - id
+      - name
+      - code
+      - appliesToIds
+      - organizationId
+      - instanceType
+      title: ProductOrganizationRole
     Quantity-Input:
       properties:
         id:
@@ -5754,6 +5815,12 @@ components:
           type: array
           title: Medicaldevices
           default: []
+        productOrganizationRoles:
+          items:
+            $ref: '#/components/schemas/ProductOrganizationRole'
+          type: array
+          title: Productorganizationroles
+          default: []
         notes:
           items:
             $ref: '#/components/schemas/CommentAnnotation'
@@ -5882,6 +5949,12 @@ components:
             $ref: '#/components/schemas/MedicalDevice-Output'
           type: array
           title: Medicaldevices
+          default: []
+        productOrganizationRoles:
+          items:
+            $ref: '#/components/schemas/ProductOrganizationRole'
+          type: array
+          title: Productorganizationroles
           default: []
         notes:
           items:

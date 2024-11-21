@@ -16,6 +16,7 @@ from .study_role import StudyRole
 from .organization import Organization
 from .administrable_product import AdministrableProduct
 from .medical_device import MedicalDevice
+from .product_organization_role import ProductOrganizationRole
 
 class StudyVersion(ApiBaseModelWithId):
   versionIdentifier: str
@@ -37,5 +38,6 @@ class StudyVersion(ApiBaseModelWithId):
   organizations: List[Organization] = []
   administrableProducts: List[AdministrableProduct] = []
   medicalDevices: List[MedicalDevice] = []
+  productOrganizationRoles: List[ProductOrganizationRole] = []
   notes: List[CommentAnnotation] = []
   instanceType: Literal['StudyVersion']
