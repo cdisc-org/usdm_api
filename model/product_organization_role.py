@@ -4,6 +4,6 @@ from .code import Code
 
 class ProductOrganizationRole(ApiBaseModelWithIdNameLabelAndDesc):
   code: Code
-  appliesToIds: List[str]
+  appliesToIds: List[str] = []
   organizationId: str
   instanceType: Literal['ProductOrganizationRole']
