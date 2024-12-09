@@ -45,7 +45,7 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   population: Union[StudyDesignPopulation, None] = None
   analysisPopulations: List[AnalysisPopulation] = []
   scheduleTimelines: List[ScheduleTimeline] = []
-  biospecimenRetention: List[BiospecimenRetention] = []
+  biospecimenRetentions: List[BiospecimenRetention] = []
   documentVersionIds: List[str] = []
   dictionaries: List[SyntaxTemplateDictionary] = []
   conditions: List[Condition] = []
