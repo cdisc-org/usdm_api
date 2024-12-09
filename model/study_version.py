@@ -3,7 +3,6 @@ from .api_base_model import ApiBaseModelWithId
 from .identifier import *
 from .study_definition_document_version import *
 from .alias_code import *
-from .code import Code as genericCode
 from .study_design import *
 from .governance_date import GovernanceDate
 from .study_amendment import StudyAmendment
@@ -21,15 +20,13 @@ from .product_organization_role import ProductOrganizationRole
 class StudyVersion(ApiBaseModelWithId):
   versionIdentifier: str
   rationale: str
-  studyType: Union[genericCode, None] = None
-  studyPhase: Union[AliasCode, None] = None
   documentVersionIds: List[str] = []
   dateValues: List[GovernanceDate] = []
   amendments: List[StudyAmendment] = []
   businessTherapeuticAreas: List[Code] = []
   studyIdentifiers: List[StudyIdentifier]
   referenceIdentifiers: List[ReferenceIdentifier] = []
-  studyDesigns: List[StudyDesign] = []
+  studyDesigns: List[Union[InterventionalStudyDesign, ObservationalStudyDesign]] = []
   titles: List[StudyTitle]
   criteria: List[EligibilityCriterion]
   narrativeContentItems: List[NarrativeContentItem] = []

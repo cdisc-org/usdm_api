@@ -108,7 +108,7 @@ async def read_study_history(studyId: str):
   tags=['Production'],
   summary='Study designs for a study',
   description='Returns all the study designs for a specified study.',
-  response_model=List[StudyDesign],
+  response_model=List[Union[InterventionalStudyDesign, ObservationalStudyDesign]],
   responses=standard_responses
 )
 async def search_study_design(studyId: UUID):
