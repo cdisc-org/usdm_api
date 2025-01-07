@@ -2,9 +2,6 @@ from typing import List, Literal, Union
 from .activity import Activity
 from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 from .alias_code import AliasCode
-from .biomedical_concept import BiomedicalConcept
-from .biomedical_concept_category import BiomedicalConceptCategory
-from .biomedical_concept_surrogate import BiomedicalConceptSurrogate
 from .biospecimen_retention import BiospecimenRetention
 from .code import Code
 from .encounter import Encounter
@@ -19,8 +16,6 @@ from .analysis_population import AnalysisPopulation
 from .objective import Objective
 from .schedule_timeline import ScheduleTimeline
 from .estimand import Estimand
-from .syntax_template_dictionary import SyntaxTemplateDictionary
-from .condition import Condition
 from .comment_annotation import CommentAnnotation
 
 class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
@@ -30,9 +25,6 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   characteristics: List[Code] = []
   encounters: List[Encounter] = []
   activities: List[Activity] = []
-  biomedicalConcepts: List[BiomedicalConcept] = []
-  bcCategories: List[BiomedicalConceptCategory] = []
-  bcSurrogates: List[BiomedicalConceptSurrogate] = []
   arms: List[StudyArm]
   studyCells: List[StudyCell]
   rationale: str
@@ -47,8 +39,6 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   scheduleTimelines: List[ScheduleTimeline] = []
   biospecimenRetentions: List[BiospecimenRetention] = []
   documentVersionIds: List[str] = []
-  dictionaries: List[SyntaxTemplateDictionary] = []
-  conditions: List[Condition] = []
   notes: List[CommentAnnotation] = []
   instanceType: Literal['StudyDesign']
 

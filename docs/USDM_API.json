@@ -4288,30 +4288,6 @@
             "title": "Activities",
             "default": []
           },
-          "biomedicalConcepts": {
-            "items": {
-              "$ref": "#/components/schemas/BiomedicalConcept-Input"
-            },
-            "type": "array",
-            "title": "Biomedicalconcepts",
-            "default": []
-          },
-          "bcCategories": {
-            "items": {
-              "$ref": "#/components/schemas/BiomedicalConceptCategory-Input"
-            },
-            "type": "array",
-            "title": "Bccategories",
-            "default": []
-          },
-          "bcSurrogates": {
-            "items": {
-              "$ref": "#/components/schemas/BiomedicalConceptSurrogate-Input"
-            },
-            "type": "array",
-            "title": "Bcsurrogates",
-            "default": []
-          },
           "arms": {
             "items": {
               "$ref": "#/components/schemas/StudyArm-Input"
@@ -4410,22 +4386,6 @@
             },
             "type": "array",
             "title": "Documentversionids",
-            "default": []
-          },
-          "dictionaries": {
-            "items": {
-              "$ref": "#/components/schemas/SyntaxTemplateDictionary"
-            },
-            "type": "array",
-            "title": "Dictionaries",
-            "default": []
-          },
-          "conditions": {
-            "items": {
-              "$ref": "#/components/schemas/Condition-Input"
-            },
-            "type": "array",
-            "title": "Conditions",
             "default": []
           },
           "notes": {
@@ -4574,30 +4534,6 @@
             "title": "Activities",
             "default": []
           },
-          "biomedicalConcepts": {
-            "items": {
-              "$ref": "#/components/schemas/BiomedicalConcept-Output"
-            },
-            "type": "array",
-            "title": "Biomedicalconcepts",
-            "default": []
-          },
-          "bcCategories": {
-            "items": {
-              "$ref": "#/components/schemas/BiomedicalConceptCategory-Output"
-            },
-            "type": "array",
-            "title": "Bccategories",
-            "default": []
-          },
-          "bcSurrogates": {
-            "items": {
-              "$ref": "#/components/schemas/BiomedicalConceptSurrogate-Output"
-            },
-            "type": "array",
-            "title": "Bcsurrogates",
-            "default": []
-          },
           "arms": {
             "items": {
               "$ref": "#/components/schemas/StudyArm-Output"
@@ -4696,22 +4632,6 @@
             },
             "type": "array",
             "title": "Documentversionids",
-            "default": []
-          },
-          "dictionaries": {
-            "items": {
-              "$ref": "#/components/schemas/SyntaxTemplateDictionary"
-            },
-            "type": "array",
-            "title": "Dictionaries",
-            "default": []
-          },
-          "conditions": {
-            "items": {
-              "$ref": "#/components/schemas/Condition-Output"
-            },
-            "type": "array",
-            "title": "Conditions",
             "default": []
           },
           "notes": {
@@ -5455,30 +5375,6 @@
             "title": "Activities",
             "default": []
           },
-          "biomedicalConcepts": {
-            "items": {
-              "$ref": "#/components/schemas/BiomedicalConcept-Input"
-            },
-            "type": "array",
-            "title": "Biomedicalconcepts",
-            "default": []
-          },
-          "bcCategories": {
-            "items": {
-              "$ref": "#/components/schemas/BiomedicalConceptCategory-Input"
-            },
-            "type": "array",
-            "title": "Bccategories",
-            "default": []
-          },
-          "bcSurrogates": {
-            "items": {
-              "$ref": "#/components/schemas/BiomedicalConceptSurrogate-Input"
-            },
-            "type": "array",
-            "title": "Bcsurrogates",
-            "default": []
-          },
           "arms": {
             "items": {
               "$ref": "#/components/schemas/StudyArm-Input"
@@ -5577,22 +5473,6 @@
             },
             "type": "array",
             "title": "Documentversionids",
-            "default": []
-          },
-          "dictionaries": {
-            "items": {
-              "$ref": "#/components/schemas/SyntaxTemplateDictionary"
-            },
-            "type": "array",
-            "title": "Dictionaries",
-            "default": []
-          },
-          "conditions": {
-            "items": {
-              "$ref": "#/components/schemas/Condition-Input"
-            },
-            "type": "array",
-            "title": "Conditions",
             "default": []
           },
           "notes": {
@@ -5737,30 +5617,6 @@
             "title": "Activities",
             "default": []
           },
-          "biomedicalConcepts": {
-            "items": {
-              "$ref": "#/components/schemas/BiomedicalConcept-Output"
-            },
-            "type": "array",
-            "title": "Biomedicalconcepts",
-            "default": []
-          },
-          "bcCategories": {
-            "items": {
-              "$ref": "#/components/schemas/BiomedicalConceptCategory-Output"
-            },
-            "type": "array",
-            "title": "Bccategories",
-            "default": []
-          },
-          "bcSurrogates": {
-            "items": {
-              "$ref": "#/components/schemas/BiomedicalConceptSurrogate-Output"
-            },
-            "type": "array",
-            "title": "Bcsurrogates",
-            "default": []
-          },
           "arms": {
             "items": {
               "$ref": "#/components/schemas/StudyArm-Output"
@@ -5859,22 +5715,6 @@
             },
             "type": "array",
             "title": "Documentversionids",
-            "default": []
-          },
-          "dictionaries": {
-            "items": {
-              "$ref": "#/components/schemas/SyntaxTemplateDictionary"
-            },
-            "type": "array",
-            "title": "Dictionaries",
-            "default": []
-          },
-          "conditions": {
-            "items": {
-              "$ref": "#/components/schemas/Condition-Output"
-            },
-            "type": "array",
-            "title": "Conditions",
             "default": []
           },
           "notes": {
@@ -9541,6 +9381,46 @@
             "title": "Productorganizationroles",
             "default": []
           },
+          "biomedicalConcepts": {
+            "items": {
+              "$ref": "#/components/schemas/BiomedicalConcept-Input"
+            },
+            "type": "array",
+            "title": "Biomedicalconcepts",
+            "default": []
+          },
+          "bcCategories": {
+            "items": {
+              "$ref": "#/components/schemas/BiomedicalConceptCategory-Input"
+            },
+            "type": "array",
+            "title": "Bccategories",
+            "default": []
+          },
+          "bcSurrogates": {
+            "items": {
+              "$ref": "#/components/schemas/BiomedicalConceptSurrogate-Input"
+            },
+            "type": "array",
+            "title": "Bcsurrogates",
+            "default": []
+          },
+          "dictionaries": {
+            "items": {
+              "$ref": "#/components/schemas/SyntaxTemplateDictionary"
+            },
+            "type": "array",
+            "title": "Dictionaries",
+            "default": []
+          },
+          "conditions": {
+            "items": {
+              "$ref": "#/components/schemas/Condition-Input"
+            },
+            "type": "array",
+            "title": "Conditions",
+            "default": []
+          },
           "notes": {
             "items": {
               "$ref": "#/components/schemas/CommentAnnotation"
@@ -9715,6 +9595,46 @@
             },
             "type": "array",
             "title": "Productorganizationroles",
+            "default": []
+          },
+          "biomedicalConcepts": {
+            "items": {
+              "$ref": "#/components/schemas/BiomedicalConcept-Output"
+            },
+            "type": "array",
+            "title": "Biomedicalconcepts",
+            "default": []
+          },
+          "bcCategories": {
+            "items": {
+              "$ref": "#/components/schemas/BiomedicalConceptCategory-Output"
+            },
+            "type": "array",
+            "title": "Bccategories",
+            "default": []
+          },
+          "bcSurrogates": {
+            "items": {
+              "$ref": "#/components/schemas/BiomedicalConceptSurrogate-Output"
+            },
+            "type": "array",
+            "title": "Bcsurrogates",
+            "default": []
+          },
+          "dictionaries": {
+            "items": {
+              "$ref": "#/components/schemas/SyntaxTemplateDictionary"
+            },
+            "type": "array",
+            "title": "Dictionaries",
+            "default": []
+          },
+          "conditions": {
+            "items": {
+              "$ref": "#/components/schemas/Condition-Output"
+            },
+            "type": "array",
+            "title": "Conditions",
             "default": []
           },
           "notes": {
