@@ -4115,15 +4115,9 @@ components:
           minLength: 1
           title: Id
         minValue:
-          type: number
-          title: Minvalue
+          $ref: '#/components/schemas/Quantity-Input'
         maxValue:
-          type: number
-          title: Maxvalue
-        unit:
-          anyOf:
-          - $ref: '#/components/schemas/AliasCode'
-          - type: 'null'
+          $ref: '#/components/schemas/Quantity-Input'
         isApproximate:
           type: boolean
           title: Isapproximate
@@ -4148,15 +4142,9 @@ components:
           minLength: 1
           title: Id
         minValue:
-          type: number
-          title: Minvalue
+          $ref: '#/components/schemas/Quantity-Output'
         maxValue:
-          type: number
-          title: Maxvalue
-        unit:
-          anyOf:
-          - $ref: '#/components/schemas/AliasCode'
-          - type: 'null'
+          $ref: '#/components/schemas/Quantity-Output'
         isApproximate:
           type: boolean
           title: Isapproximate
@@ -4506,12 +4494,14 @@ components:
           anyOf:
           - $ref: '#/components/schemas/Quantity-Input'
           - type: 'null'
-        numerator:
+        numeratorQuantity:
           anyOf:
           - $ref: '#/components/schemas/Quantity-Input'
+          - type: 'null'
+        numeratorRange:
+          anyOf:
           - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
-          title: Numerator
         instanceType:
           type: string
           enum:
@@ -4548,12 +4538,14 @@ components:
           anyOf:
           - $ref: '#/components/schemas/Quantity-Output'
           - type: 'null'
-        numerator:
+        numeratorQuantity:
           anyOf:
           - $ref: '#/components/schemas/Quantity-Output'
+          - type: 'null'
+        numeratorRange:
+          anyOf:
           - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
-          title: Numerator
         instanceType:
           type: string
           enum:
@@ -5107,13 +5099,21 @@ components:
         includesHealthySubjects:
           type: boolean
           title: Includeshealthysubjects
-        plannedEnrollmentNumber:
+        plannedEnrollmentNumberRange:
           anyOf:
           - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
-        plannedCompletionNumber:
+        plannedEnrollmentNumberQuantity:
+          anyOf:
+          - $ref: '#/components/schemas/Quantity-Input'
+          - type: 'null'
+        plannedCompletionNumberRange:
           anyOf:
           - $ref: '#/components/schemas/Range-Input'
+          - type: 'null'
+        plannedCompletionNumberQuantity:
+          anyOf:
+          - $ref: '#/components/schemas/Quantity-Input'
           - type: 'null'
         plannedSex:
           items:
@@ -5180,13 +5180,21 @@ components:
         includesHealthySubjects:
           type: boolean
           title: Includeshealthysubjects
-        plannedEnrollmentNumber:
+        plannedEnrollmentNumberRange:
           anyOf:
           - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
-        plannedCompletionNumber:
+        plannedEnrollmentNumberQuantity:
+          anyOf:
+          - $ref: '#/components/schemas/Quantity-Output'
+          - type: 'null'
+        plannedCompletionNumberRange:
           anyOf:
           - $ref: '#/components/schemas/Range-Output'
+          - type: 'null'
+        plannedCompletionNumberQuantity:
+          anyOf:
+          - $ref: '#/components/schemas/Quantity-Output'
           - type: 'null'
         plannedSex:
           items:
@@ -5457,13 +5465,21 @@ components:
         includesHealthySubjects:
           type: boolean
           title: Includeshealthysubjects
-        plannedEnrollmentNumber:
+        plannedEnrollmentNumberRange:
           anyOf:
           - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
-        plannedCompletionNumber:
+        plannedEnrollmentNumberQuantity:
+          anyOf:
+          - $ref: '#/components/schemas/Quantity-Input'
+          - type: 'null'
+        plannedCompletionNumberRange:
           anyOf:
           - $ref: '#/components/schemas/Range-Input'
+          - type: 'null'
+        plannedCompletionNumberQuantity:
+          anyOf:
+          - $ref: '#/components/schemas/Quantity-Input'
           - type: 'null'
         plannedSex:
           items:
@@ -5530,13 +5546,21 @@ components:
         includesHealthySubjects:
           type: boolean
           title: Includeshealthysubjects
-        plannedEnrollmentNumber:
+        plannedEnrollmentNumberRange:
           anyOf:
           - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
-        plannedCompletionNumber:
+        plannedEnrollmentNumberQuantity:
+          anyOf:
+          - $ref: '#/components/schemas/Quantity-Output'
+          - type: 'null'
+        plannedCompletionNumberRange:
           anyOf:
           - $ref: '#/components/schemas/Range-Output'
+          - type: 'null'
+        plannedCompletionNumberQuantity:
+          anyOf:
+          - $ref: '#/components/schemas/Quantity-Output'
           - type: 'null'
         plannedSex:
           items:
