@@ -4378,14 +4378,7 @@
             "default": []
           },
           "population": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/StudyDesignPopulation-Input"
-              },
-              {
-                "type": "null"
-              }
-            ]
+            "$ref": "#/components/schemas/StudyDesignPopulation-Input"
           },
           "analysisPopulations": {
             "items": {
@@ -4489,6 +4482,7 @@
           "studyCells",
           "rationale",
           "epochs",
+          "population",
           "instanceType",
           "model"
         ],
@@ -4670,14 +4664,7 @@
             "default": []
           },
           "population": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/StudyDesignPopulation-Output"
-              },
-              {
-                "type": "null"
-              }
-            ]
+            "$ref": "#/components/schemas/StudyDesignPopulation-Output"
           },
           "analysisPopulations": {
             "items": {
@@ -4781,6 +4768,7 @@
           "studyCells",
           "rationale",
           "epochs",
+          "population",
           "instanceType",
           "model"
         ],
@@ -5557,14 +5545,7 @@
             "default": []
           },
           "population": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/StudyDesignPopulation-Input"
-              },
-              {
-                "type": "null"
-              }
-            ]
+            "$ref": "#/components/schemas/StudyDesignPopulation-Input"
           },
           "analysisPopulations": {
             "items": {
@@ -5663,6 +5644,7 @@
           "studyCells",
           "rationale",
           "epochs",
+          "population",
           "instanceType",
           "model",
           "timePerspective"
@@ -5845,14 +5827,7 @@
             "default": []
           },
           "population": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/StudyDesignPopulation-Output"
-              },
-              {
-                "type": "null"
-              }
-            ]
+            "$ref": "#/components/schemas/StudyDesignPopulation-Output"
           },
           "analysisPopulations": {
             "items": {
@@ -5951,6 +5926,7 @@
           "studyCells",
           "rationale",
           "epochs",
+          "population",
           "instanceType",
           "model",
           "timePerspective"

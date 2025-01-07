@@ -42,7 +42,7 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   indications: List[Indication] = []
   studyInterventions: List[StudyIntervention] = []
   objectives: List[Objective] = []
-  population: Union[StudyDesignPopulation, None] = None
+  population: StudyDesignPopulation
   analysisPopulations: List[AnalysisPopulation] = []
   scheduleTimelines: List[ScheduleTimeline] = []
   biospecimenRetentions: List[BiospecimenRetention] = []

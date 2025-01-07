@@ -2871,9 +2871,7 @@ components:
           title: Objectives
           default: []
         population:
-          anyOf:
-          - $ref: '#/components/schemas/StudyDesignPopulation-Input'
-          - type: 'null'
+          $ref: '#/components/schemas/StudyDesignPopulation-Input'
         analysisPopulations:
           items:
             $ref: '#/components/schemas/AnalysisPopulation-Input'
@@ -2948,6 +2946,7 @@ components:
       - studyCells
       - rationale
       - epochs
+      - population
       - instanceType
       - model
       title: InterventionalStudyDesign
@@ -3070,9 +3069,7 @@ components:
           title: Objectives
           default: []
         population:
-          anyOf:
-          - $ref: '#/components/schemas/StudyDesignPopulation-Output'
-          - type: 'null'
+          $ref: '#/components/schemas/StudyDesignPopulation-Output'
         analysisPopulations:
           items:
             $ref: '#/components/schemas/AnalysisPopulation-Output'
@@ -3147,6 +3144,7 @@ components:
       - studyCells
       - rationale
       - epochs
+      - population
       - instanceType
       - model
       title: InterventionalStudyDesign
@@ -3643,9 +3641,7 @@ components:
           title: Objectives
           default: []
         population:
-          anyOf:
-          - $ref: '#/components/schemas/StudyDesignPopulation-Input'
-          - type: 'null'
+          $ref: '#/components/schemas/StudyDesignPopulation-Input'
         analysisPopulations:
           items:
             $ref: '#/components/schemas/AnalysisPopulation-Input'
@@ -3716,6 +3712,7 @@ components:
       - studyCells
       - rationale
       - epochs
+      - population
       - instanceType
       - model
       - timePerspective
@@ -3839,9 +3836,7 @@ components:
           title: Objectives
           default: []
         population:
-          anyOf:
-          - $ref: '#/components/schemas/StudyDesignPopulation-Output'
-          - type: 'null'
+          $ref: '#/components/schemas/StudyDesignPopulation-Output'
         analysisPopulations:
           items:
             $ref: '#/components/schemas/AnalysisPopulation-Output'
@@ -3912,6 +3907,7 @@ components:
       - studyCells
       - rationale
       - epochs
+      - population
       - instanceType
       - model
       - timePerspective
