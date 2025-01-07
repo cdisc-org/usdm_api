@@ -5148,7 +5148,6 @@ components:
             type: string
           type: array
           title: Elementids
-          default: []
         instanceType:
           type: string
           enum:
@@ -5160,6 +5159,7 @@ components:
       - id
       - armId
       - epochId
+      - elementIds
       - instanceType
       title: StudyCell
     StudyChange:

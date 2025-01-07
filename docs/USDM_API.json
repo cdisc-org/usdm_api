@@ -7825,8 +7825,7 @@
               "type": "string"
             },
             "type": "array",
-            "title": "Elementids",
-            "default": []
+            "title": "Elementids"
           },
           "instanceType": {
             "type": "string",
@@ -7842,6 +7841,7 @@
           "id",
           "armId",
           "epochId",
+          "elementIds",
           "instanceType"
         ],
         "title": "StudyCell"
