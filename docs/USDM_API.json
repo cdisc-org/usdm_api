@@ -9771,7 +9771,7 @@
           "quantity": {
             "$ref": "#/components/schemas/Quantity-Input"
           },
-          "appliesTo": {
+          "forGeographicScope": {
             "anyOf": [
               {
                 "$ref": "#/components/schemas/GeographicScope-Input"
@@ -9781,7 +9781,7 @@
               }
             ]
           },
-          "appliesToId": {
+          "forStudyCohortId": {
             "anyOf": [
               {
                 "type": "string"
@@ -9790,7 +9790,18 @@
                 "type": "null"
               }
             ],
-            "title": "Appliestoid"
+            "title": "Forstudycohortid"
+          },
+          "forStudySiteId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Forstudysiteid"
           },
           "instanceType": {
             "type": "string",
@@ -9847,7 +9858,7 @@
           "quantity": {
             "$ref": "#/components/schemas/Quantity-Output"
           },
-          "appliesTo": {
+          "forGeographicScope": {
             "anyOf": [
               {
                 "$ref": "#/components/schemas/GeographicScope-Output"
@@ -9857,7 +9868,7 @@
               }
             ]
           },
-          "appliesToId": {
+          "forStudyCohortId": {
             "anyOf": [
               {
                 "type": "string"
@@ -9866,7 +9877,18 @@
                 "type": "null"
               }
             ],
-            "title": "Appliestoid"
+            "title": "Forstudycohortid"
+          },
+          "forStudySiteId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Forstudysiteid"
           },
           "instanceType": {
             "type": "string",

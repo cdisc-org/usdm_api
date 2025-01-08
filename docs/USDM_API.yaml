@@ -6411,15 +6411,20 @@ components:
           title: Description
         quantity:
           $ref: '#/components/schemas/Quantity-Input'
-        appliesTo:
+        forGeographicScope:
           anyOf:
           - $ref: '#/components/schemas/GeographicScope-Input'
           - type: 'null'
-        appliesToId:
+        forStudyCohortId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Appliestoid
+          title: Forstudycohortid
+        forStudySiteId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Forstudysiteid
         instanceType:
           type: string
           enum:
@@ -6455,15 +6460,20 @@ components:
           title: Description
         quantity:
           $ref: '#/components/schemas/Quantity-Output'
-        appliesTo:
+        forGeographicScope:
           anyOf:
           - $ref: '#/components/schemas/GeographicScope-Output'
           - type: 'null'
-        appliesToId:
+        forStudyCohortId:
           anyOf:
           - type: string
           - type: 'null'
-          title: Appliestoid
+          title: Forstudycohortid
+        forStudySiteId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Forstudysiteid
         instanceType:
           type: string
           enum:
