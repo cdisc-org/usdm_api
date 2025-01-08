@@ -7,7 +7,7 @@ from .study_design import *
 from .governance_date import GovernanceDate
 from .study_amendment import StudyAmendment
 from .study_title import StudyTitle
-from .eligibility_criterion import EligibilityCriterion
+from .eligibility_criterion import EligibilityCriterionItem
 from .narrative_content import NarrativeContentItem
 from .comment_annotation import CommentAnnotation
 from .abbreviation import Abbreviation
@@ -33,7 +33,7 @@ class StudyVersion(ApiBaseModelWithId):
   referenceIdentifiers: List[ReferenceIdentifier] = []
   studyDesigns: List[Union[InterventionalStudyDesign, ObservationalStudyDesign]] = []
   titles: List[StudyTitle]
-  criteria: List[EligibilityCriterion]
+  eligibilityCriterionItems: List[EligibilityCriterionItem] = []
   narrativeContentItems: List[NarrativeContentItem] = []
   abbreviations: List[Abbreviation] = []
   roles: List[StudyRole] = []

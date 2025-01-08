@@ -12,6 +12,7 @@ from .study_arm import StudyArm
 from .study_epoch import StudyEpoch
 from .study_element import StudyElement
 from .population_definition import StudyDesignPopulation
+from .eligibility_criterion import EligibilityCriterion
 from .analysis_population import AnalysisPopulation
 from .objective import Objective
 from .schedule_timeline import ScheduleTimeline
@@ -35,10 +36,11 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   studyInterventions: List[StudyIntervention] = []
   objectives: List[Objective] = []
   population: StudyDesignPopulation
-  analysisPopulations: List[AnalysisPopulation] = []
   scheduleTimelines: List[ScheduleTimeline] = []
   biospecimenRetentions: List[BiospecimenRetention] = []
   documentVersionIds: List[str] = []
+  eligibilityCriteria: List[EligibilityCriterion] =[]
+  analysisPopulations: List[AnalysisPopulation] = []
   notes: List[CommentAnnotation] = []
   instanceType: Literal['StudyDesign']
 

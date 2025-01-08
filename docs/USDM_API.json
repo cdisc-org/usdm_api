@@ -2787,70 +2787,12 @@
         ],
         "title": "DocumentContentReference"
       },
-      "EligibilityCriterion-Input": {
+      "EligibilityCriterion": {
         "properties": {
           "id": {
             "type": "string",
             "minLength": 1,
             "title": "Id"
-          },
-          "name": {
-            "type": "string",
-            "minLength": 1,
-            "title": "Name"
-          },
-          "label": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Label"
-          },
-          "description": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Description"
-          },
-          "text": {
-            "type": "string",
-            "title": "Text"
-          },
-          "dictionaryId": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Dictionaryid"
-          },
-          "notes": {
-            "items": {
-              "$ref": "#/components/schemas/CommentAnnotation"
-            },
-            "type": "array",
-            "title": "Notes",
-            "default": []
-          },
-          "instanceType": {
-            "type": "string",
-            "enum": [
-              "EligibilityCriterion"
-            ],
-            "const": "EligibilityCriterion",
-            "title": "Instancetype"
           },
           "category": {
             "$ref": "#/components/schemas/Code"
@@ -2858,6 +2800,10 @@
           "identifier": {
             "type": "string",
             "title": "Identifier"
+          },
+          "criterionItemId": {
+            "type": "string",
+            "title": "Criterionitemid"
           },
           "nextId": {
             "anyOf": [
@@ -2880,20 +2826,27 @@
               }
             ],
             "title": "Previousid"
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "EligibilityCriterion"
+            ],
+            "const": "EligibilityCriterion",
+            "title": "Instancetype"
           }
         },
         "type": "object",
         "required": [
           "id",
-          "name",
-          "text",
-          "instanceType",
           "category",
-          "identifier"
+          "identifier",
+          "criterionItemId",
+          "instanceType"
         ],
         "title": "EligibilityCriterion"
       },
-      "EligibilityCriterion-Output": {
+      "EligibilityCriterionItem-Input": {
         "properties": {
           "id": {
             "type": "string",
@@ -2953,39 +2906,10 @@
           "instanceType": {
             "type": "string",
             "enum": [
-              "EligibilityCriterion"
+              "EligibilityCriterionItem"
             ],
-            "const": "EligibilityCriterion",
+            "const": "EligibilityCriterionItem",
             "title": "Instancetype"
-          },
-          "category": {
-            "$ref": "#/components/schemas/Code"
-          },
-          "identifier": {
-            "type": "string",
-            "title": "Identifier"
-          },
-          "nextId": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Nextid"
-          },
-          "previousId": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Previousid"
           }
         },
         "type": "object",
@@ -2993,11 +2917,84 @@
           "id",
           "name",
           "text",
-          "instanceType",
-          "category",
-          "identifier"
+          "instanceType"
         ],
-        "title": "EligibilityCriterion"
+        "title": "EligibilityCriterionItem"
+      },
+      "EligibilityCriterionItem-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "dictionaryId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dictionaryid"
+          },
+          "notes": {
+            "items": {
+              "$ref": "#/components/schemas/CommentAnnotation"
+            },
+            "type": "array",
+            "title": "Notes",
+            "default": []
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "EligibilityCriterionItem"
+            ],
+            "const": "EligibilityCriterionItem",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "text",
+          "instanceType"
+        ],
+        "title": "EligibilityCriterionItem"
       },
       "Encounter-Input": {
         "properties": {
@@ -4356,14 +4353,6 @@
           "population": {
             "$ref": "#/components/schemas/StudyDesignPopulation-Input"
           },
-          "analysisPopulations": {
-            "items": {
-              "$ref": "#/components/schemas/AnalysisPopulation-Input"
-            },
-            "type": "array",
-            "title": "Analysispopulations",
-            "default": []
-          },
           "scheduleTimelines": {
             "items": {
               "$ref": "#/components/schemas/ScheduleTimeline-Input"
@@ -4386,6 +4375,22 @@
             },
             "type": "array",
             "title": "Documentversionids",
+            "default": []
+          },
+          "eligibilityCriteria": {
+            "items": {
+              "$ref": "#/components/schemas/EligibilityCriterion"
+            },
+            "type": "array",
+            "title": "Eligibilitycriteria",
+            "default": []
+          },
+          "analysisPopulations": {
+            "items": {
+              "$ref": "#/components/schemas/AnalysisPopulation-Input"
+            },
+            "type": "array",
+            "title": "Analysispopulations",
             "default": []
           },
           "notes": {
@@ -4602,14 +4607,6 @@
           "population": {
             "$ref": "#/components/schemas/StudyDesignPopulation-Output"
           },
-          "analysisPopulations": {
-            "items": {
-              "$ref": "#/components/schemas/AnalysisPopulation-Output"
-            },
-            "type": "array",
-            "title": "Analysispopulations",
-            "default": []
-          },
           "scheduleTimelines": {
             "items": {
               "$ref": "#/components/schemas/ScheduleTimeline-Output"
@@ -4632,6 +4629,22 @@
             },
             "type": "array",
             "title": "Documentversionids",
+            "default": []
+          },
+          "eligibilityCriteria": {
+            "items": {
+              "$ref": "#/components/schemas/EligibilityCriterion"
+            },
+            "type": "array",
+            "title": "Eligibilitycriteria",
+            "default": []
+          },
+          "analysisPopulations": {
+            "items": {
+              "$ref": "#/components/schemas/AnalysisPopulation-Output"
+            },
+            "type": "array",
+            "title": "Analysispopulations",
             "default": []
           },
           "notes": {
@@ -5443,14 +5456,6 @@
           "population": {
             "$ref": "#/components/schemas/StudyDesignPopulation-Input"
           },
-          "analysisPopulations": {
-            "items": {
-              "$ref": "#/components/schemas/AnalysisPopulation-Input"
-            },
-            "type": "array",
-            "title": "Analysispopulations",
-            "default": []
-          },
           "scheduleTimelines": {
             "items": {
               "$ref": "#/components/schemas/ScheduleTimeline-Input"
@@ -5473,6 +5478,22 @@
             },
             "type": "array",
             "title": "Documentversionids",
+            "default": []
+          },
+          "eligibilityCriteria": {
+            "items": {
+              "$ref": "#/components/schemas/EligibilityCriterion"
+            },
+            "type": "array",
+            "title": "Eligibilitycriteria",
+            "default": []
+          },
+          "analysisPopulations": {
+            "items": {
+              "$ref": "#/components/schemas/AnalysisPopulation-Input"
+            },
+            "type": "array",
+            "title": "Analysispopulations",
             "default": []
           },
           "notes": {
@@ -5685,14 +5706,6 @@
           "population": {
             "$ref": "#/components/schemas/StudyDesignPopulation-Output"
           },
-          "analysisPopulations": {
-            "items": {
-              "$ref": "#/components/schemas/AnalysisPopulation-Output"
-            },
-            "type": "array",
-            "title": "Analysispopulations",
-            "default": []
-          },
           "scheduleTimelines": {
             "items": {
               "$ref": "#/components/schemas/ScheduleTimeline-Output"
@@ -5715,6 +5728,22 @@
             },
             "type": "array",
             "title": "Documentversionids",
+            "default": []
+          },
+          "eligibilityCriteria": {
+            "items": {
+              "$ref": "#/components/schemas/EligibilityCriterion"
+            },
+            "type": "array",
+            "title": "Eligibilitycriteria",
+            "default": []
+          },
+          "analysisPopulations": {
+            "items": {
+              "$ref": "#/components/schemas/AnalysisPopulation-Output"
+            },
+            "type": "array",
+            "title": "Analysispopulations",
             "default": []
           },
           "notes": {
@@ -9386,12 +9415,13 @@
             "type": "array",
             "title": "Titles"
           },
-          "criteria": {
+          "eligibilityCriterionItems": {
             "items": {
-              "$ref": "#/components/schemas/EligibilityCriterion-Input"
+              "$ref": "#/components/schemas/EligibilityCriterionItem-Input"
             },
             "type": "array",
-            "title": "Criteria"
+            "title": "Eligibilitycriterionitems",
+            "default": []
           },
           "narrativeContentItems": {
             "items": {
@@ -9513,7 +9543,6 @@
           "rationale",
           "studyIdentifiers",
           "titles",
-          "criteria",
           "instanceType"
         ],
         "title": "StudyVersion"
@@ -9602,12 +9631,13 @@
             "type": "array",
             "title": "Titles"
           },
-          "criteria": {
+          "eligibilityCriterionItems": {
             "items": {
-              "$ref": "#/components/schemas/EligibilityCriterion-Output"
+              "$ref": "#/components/schemas/EligibilityCriterionItem-Output"
             },
             "type": "array",
-            "title": "Criteria"
+            "title": "Eligibilitycriterionitems",
+            "default": []
           },
           "narrativeContentItems": {
             "items": {
@@ -9729,7 +9759,6 @@
           "rationale",
           "studyIdentifiers",
           "titles",
-          "criteria",
           "instanceType"
         ],
         "title": "StudyVersion"

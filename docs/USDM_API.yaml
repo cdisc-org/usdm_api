@@ -1847,7 +1847,45 @@ components:
       - appliesToId
       - instanceType
       title: DocumentContentReference
-    EligibilityCriterion-Input:
+    EligibilityCriterion:
+      properties:
+        id:
+          type: string
+          minLength: 1
+          title: Id
+        category:
+          $ref: '#/components/schemas/Code'
+        identifier:
+          type: string
+          title: Identifier
+        criterionItemId:
+          type: string
+          title: Criterionitemid
+        nextId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Nextid
+        previousId:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Previousid
+        instanceType:
+          type: string
+          enum:
+          - EligibilityCriterion
+          const: EligibilityCriterion
+          title: Instancetype
+      type: object
+      required:
+      - id
+      - category
+      - identifier
+      - criterionItemId
+      - instanceType
+      title: EligibilityCriterion
+    EligibilityCriterionItem-Input:
       properties:
         id:
           type: string
@@ -1884,34 +1922,17 @@ components:
         instanceType:
           type: string
           enum:
-          - EligibilityCriterion
-          const: EligibilityCriterion
+          - EligibilityCriterionItem
+          const: EligibilityCriterionItem
           title: Instancetype
-        category:
-          $ref: '#/components/schemas/Code'
-        identifier:
-          type: string
-          title: Identifier
-        nextId:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Nextid
-        previousId:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Previousid
       type: object
       required:
       - id
       - name
       - text
       - instanceType
-      - category
-      - identifier
-      title: EligibilityCriterion
-    EligibilityCriterion-Output:
+      title: EligibilityCriterionItem
+    EligibilityCriterionItem-Output:
       properties:
         id:
           type: string
@@ -1948,33 +1969,16 @@ components:
         instanceType:
           type: string
           enum:
-          - EligibilityCriterion
-          const: EligibilityCriterion
+          - EligibilityCriterionItem
+          const: EligibilityCriterionItem
           title: Instancetype
-        category:
-          $ref: '#/components/schemas/Code'
-        identifier:
-          type: string
-          title: Identifier
-        nextId:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Nextid
-        previousId:
-          anyOf:
-          - type: string
-          - type: 'null'
-          title: Previousid
       type: object
       required:
       - id
       - name
       - text
       - instanceType
-      - category
-      - identifier
-      title: EligibilityCriterion
+      title: EligibilityCriterionItem
     Encounter-Input:
       properties:
         id:
@@ -2854,12 +2858,6 @@ components:
           default: []
         population:
           $ref: '#/components/schemas/StudyDesignPopulation-Input'
-        analysisPopulations:
-          items:
-            $ref: '#/components/schemas/AnalysisPopulation-Input'
-          type: array
-          title: Analysispopulations
-          default: []
         scheduleTimelines:
           items:
             $ref: '#/components/schemas/ScheduleTimeline-Input'
@@ -2877,6 +2875,18 @@ components:
             type: string
           type: array
           title: Documentversionids
+          default: []
+        eligibilityCriteria:
+          items:
+            $ref: '#/components/schemas/EligibilityCriterion'
+          type: array
+          title: Eligibilitycriteria
+          default: []
+        analysisPopulations:
+          items:
+            $ref: '#/components/schemas/AnalysisPopulation-Input'
+          type: array
+          title: Analysispopulations
           default: []
         notes:
           items:
@@ -3022,12 +3032,6 @@ components:
           default: []
         population:
           $ref: '#/components/schemas/StudyDesignPopulation-Output'
-        analysisPopulations:
-          items:
-            $ref: '#/components/schemas/AnalysisPopulation-Output'
-          type: array
-          title: Analysispopulations
-          default: []
         scheduleTimelines:
           items:
             $ref: '#/components/schemas/ScheduleTimeline-Output'
@@ -3045,6 +3049,18 @@ components:
             type: string
           type: array
           title: Documentversionids
+          default: []
+        eligibilityCriteria:
+          items:
+            $ref: '#/components/schemas/EligibilityCriterion'
+          type: array
+          title: Eligibilitycriteria
+          default: []
+        analysisPopulations:
+          items:
+            $ref: '#/components/schemas/AnalysisPopulation-Output'
+          type: array
+          title: Analysispopulations
           default: []
         notes:
           items:
@@ -3564,12 +3580,6 @@ components:
           default: []
         population:
           $ref: '#/components/schemas/StudyDesignPopulation-Input'
-        analysisPopulations:
-          items:
-            $ref: '#/components/schemas/AnalysisPopulation-Input'
-          type: array
-          title: Analysispopulations
-          default: []
         scheduleTimelines:
           items:
             $ref: '#/components/schemas/ScheduleTimeline-Input'
@@ -3587,6 +3597,18 @@ components:
             type: string
           type: array
           title: Documentversionids
+          default: []
+        eligibilityCriteria:
+          items:
+            $ref: '#/components/schemas/EligibilityCriterion'
+          type: array
+          title: Eligibilitycriteria
+          default: []
+        analysisPopulations:
+          items:
+            $ref: '#/components/schemas/AnalysisPopulation-Input'
+          type: array
+          title: Analysispopulations
           default: []
         notes:
           items:
@@ -3729,12 +3751,6 @@ components:
           default: []
         population:
           $ref: '#/components/schemas/StudyDesignPopulation-Output'
-        analysisPopulations:
-          items:
-            $ref: '#/components/schemas/AnalysisPopulation-Output'
-          type: array
-          title: Analysispopulations
-          default: []
         scheduleTimelines:
           items:
             $ref: '#/components/schemas/ScheduleTimeline-Output'
@@ -3752,6 +3768,18 @@ components:
             type: string
           type: array
           title: Documentversionids
+          default: []
+        eligibilityCriteria:
+          items:
+            $ref: '#/components/schemas/EligibilityCriterion'
+          type: array
+          title: Eligibilitycriteria
+          default: []
+        analysisPopulations:
+          items:
+            $ref: '#/components/schemas/AnalysisPopulation-Output'
+          type: array
+          title: Analysispopulations
           default: []
         notes:
           items:
@@ -6131,11 +6159,12 @@ components:
             $ref: '#/components/schemas/StudyTitle'
           type: array
           title: Titles
-        criteria:
+        eligibilityCriterionItems:
           items:
-            $ref: '#/components/schemas/EligibilityCriterion-Input'
+            $ref: '#/components/schemas/EligibilityCriterionItem-Input'
           type: array
-          title: Criteria
+          title: Eligibilitycriterionitems
+          default: []
         narrativeContentItems:
           items:
             $ref: '#/components/schemas/NarrativeContentItem'
@@ -6227,7 +6256,6 @@ components:
       - rationale
       - studyIdentifiers
       - titles
-      - criteria
       - instanceType
       title: StudyVersion
     StudyVersion-Output:
@@ -6290,11 +6318,12 @@ components:
             $ref: '#/components/schemas/StudyTitle'
           type: array
           title: Titles
-        criteria:
+        eligibilityCriterionItems:
           items:
-            $ref: '#/components/schemas/EligibilityCriterion-Output'
+            $ref: '#/components/schemas/EligibilityCriterionItem-Output'
           type: array
-          title: Criteria
+          title: Eligibilitycriterionitems
+          default: []
         narrativeContentItems:
           items:
             $ref: '#/components/schemas/NarrativeContentItem'
@@ -6386,7 +6415,6 @@ components:
       - rationale
       - studyIdentifiers
       - titles
-      - criteria
       - instanceType
       title: StudyVersion
     SubjectEnrollment-Input:
