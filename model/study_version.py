@@ -13,9 +13,11 @@ from .comment_annotation import CommentAnnotation
 from .abbreviation import Abbreviation
 from .study_role import StudyRole
 from .organization import Organization
+from .study_intervention import StudyIntervention
 from .administrable_product import AdministrableProduct
 from .medical_device import MedicalDevice
 from .product_organization_role import ProductOrganizationRole
+from .activity import Activity
 from .biomedical_concept import BiomedicalConcept
 from .biomedical_concept_category import BiomedicalConceptCategory
 from .biomedical_concept_surrogate import BiomedicalConceptSurrogate
@@ -38,9 +40,11 @@ class StudyVersion(ApiBaseModelWithId):
   abbreviations: List[Abbreviation] = []
   roles: List[StudyRole] = []
   organizations: List[Organization] = []
+  studyInterventions: List[StudyIntervention] = []
   administrableProducts: List[AdministrableProduct] = []
   medicalDevices: List[MedicalDevice] = []
   productOrganizationRoles: List[ProductOrganizationRole] = []
+  activities: List[Activity] = []
   biomedicalConcepts: List[BiomedicalConcept] = []
   bcCategories: List[BiomedicalConceptCategory] = []
   bcSurrogates: List[BiomedicalConceptSurrogate] = []

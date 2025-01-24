@@ -21,6 +21,7 @@ class PopulationDefinition(ApiBaseModelWithIdNameLabelAndDesc):
 
 class StudyCohort(PopulationDefinition):
   characteristics: List[Characteristic] = []
+  indicationIds: List[str] = []
   instanceType: Literal['StudyCohort']
   
 class StudyDesignPopulation(PopulationDefinition):

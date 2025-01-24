@@ -1,5 +1,4 @@
 from typing import List, Literal, Union
-from .activity import Activity
 from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 from .alias_code import AliasCode
 from .biospecimen_retention import BiospecimenRetention
@@ -7,7 +6,6 @@ from .code import Code
 from .encounter import Encounter
 from .study_cell import StudyCell
 from .indication import Indication
-from .study_intervention import StudyIntervention
 from .study_arm import StudyArm
 from .study_epoch import StudyEpoch
 from .study_element import StudyElement
@@ -25,7 +23,6 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   therapeuticAreas: List[Code] = []
   characteristics: List[Code] = []
   encounters: List[Encounter] = []
-  activities: List[Activity] = []
   arms: List[StudyArm]
   studyCells: List[StudyCell]
   rationale: str
@@ -33,7 +30,7 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   elements: List[StudyElement] = []
   estimands: List[Estimand] = []
   indications: List[Indication] = []
-  studyInterventions: List[StudyIntervention] = []
+  studyInterventionIds: List[str] = []
   objectives: List[Objective] = []
   population: StudyDesignPopulation
   scheduleTimelines: List[ScheduleTimeline] = []
