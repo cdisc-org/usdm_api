@@ -53,7 +53,7 @@ attribute = ExtensionAttribute(
   extensions=[ext_value_1, ext_value_2, ext_value_3], 
   instanceType='ExtensionAttribute')
 code = Code(id='1', code='Code', decode='decode', codeSystem='System', codeSystemVersion='Version', instanceType='Code', extensions=[attribute])
-pretty_json('SIMPLE ARRAY EXTENSION V2', [code, ext])
+pretty_json('SIMPLE ARRAY EXTENSION V2', [code])
 
 # Complex extending code with array of values, used if you wanted to add several arrays to a class linked via a class, only one added here
 ext = ExtensionClass(
@@ -90,3 +90,32 @@ ext_2 = ExtensionClass(
   instanceType='ExtensionClass')
 code = Code(id='1', code='Code', decode='decode', codeSystem='System', codeSystemVersion='Version', instanceType='Code', extensions=[ext_1, ext_2])
 pretty_json('ARRAY OF CLASSES', [code])
+
+
+# StudyDefinitionDocument(ApiBaseModelWithIdNameLabelAndDesc):
+#   language: Code
+#   type: Code
+#   templateName: str
+#   versions: List[StudyDefinitionDocumentVersion] = []
+#   notes: List[CommentAnnotation] = []
+#   instanceType: Literal['StudyDefinitionDocument']
+#   extensions=[yellow_colour_ext]
+
+# # Example of extending code with single value
+# yellow_colour_ext = ExtensionAttribute(
+#   id='X1', # Id because the attribute is actually .... a class!
+#   url='http://cdisc.org/usdm/extensions/doc-colour-extension/colour-attribute', # Name is a unique URL defining who built the extension and a unique id/ref to extension and role within the extension
+#   name='YELLOW_DOC',
+#   label="Fix to add extra attribute in Code class", # What the extension is about, could be omitted but should be defined within the extension definition.
+#   description='Fill in a value', # What the value is about, could be omitted but should be defined within the extension definition.
+#   valueString='YELLOW', # The actual extra value
+#   instanceType='ExtensionAttribute')
+
+
+# red_colour_ext = ExtensionAttribute(
+#   id='X11', # Id because the attribute is actually .... a class!
+#   name='http://cdisc.org/usdm/extensions/doc-colour-extension/colour-attribute', # Name is a unique URL defining who built the extension and a unique id/ref to extension and role within the extension
+#   label="Fix to add extra attribute in Code class", # What the extension is about, could be omitted but should be defined within the extension definition.
+#   description='Fill in a value', # What the value is about, could be omitted but should be defined within the extension definition.
+#   valueString='RED', # The actual extra value
+#   instanceType='ExtensionAttribute') 
