@@ -218,6 +218,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         abbreviatedText:
           type: string
           minLength: 1
@@ -251,6 +256,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         abbreviatedText:
           type: string
           minLength: 1
@@ -284,6 +294,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -367,6 +382,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -450,6 +470,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         text:
           anyOf:
           - type: string
@@ -502,6 +527,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -572,6 +602,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -642,6 +677,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         text:
           type: string
           title: Text
@@ -667,6 +707,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -699,6 +744,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -731,6 +781,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -791,6 +846,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -851,6 +911,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         quantity:
           anyOf:
           - $ref: '#/components/schemas/Quantity-Input'
@@ -884,6 +949,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         quantity:
           anyOf:
           - $ref: '#/components/schemas/Quantity-Output'
@@ -917,6 +987,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         standardCode:
           $ref: '#/components/schemas/Code'
         standardCodeAliases:
@@ -943,6 +1018,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -991,6 +1071,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1039,6 +1124,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1080,6 +1170,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1132,6 +1227,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1184,6 +1284,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1238,6 +1343,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1292,6 +1402,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1346,6 +1461,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1400,6 +1520,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1443,6 +1568,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1486,6 +1616,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1527,6 +1662,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1574,6 +1714,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1621,6 +1766,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         code:
           type: string
           title: Code
@@ -1654,6 +1804,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         text:
           type: string
           title: Text
@@ -1681,6 +1836,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1740,6 +1900,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1799,6 +1964,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         condition:
           type: string
           title: Condition
@@ -1824,6 +1994,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         sectionNumber:
           type: string
           title: Sectionnumber
@@ -1853,6 +2028,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1912,6 +2092,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -1971,6 +2156,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2018,6 +2208,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2065,6 +2260,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2141,6 +2341,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2217,6 +2422,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2271,6 +2481,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2325,6 +2540,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2387,6 +2607,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2449,6 +2674,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         type:
           $ref: '#/components/schemas/Code'
         code:
@@ -2473,6 +2703,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         type:
           $ref: '#/components/schemas/Code'
         code:
@@ -2497,6 +2732,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2543,6 +2783,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2598,6 +2843,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2646,6 +2896,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2694,6 +2949,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         role:
           $ref: '#/components/schemas/Code'
         substance:
@@ -2717,6 +2977,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         role:
           $ref: '#/components/schemas/Code'
         substance:
@@ -2740,6 +3005,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2791,6 +3061,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -2842,6 +3117,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -3010,6 +3290,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -3178,6 +3463,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         description:
           type: string
           title: Description
@@ -3199,6 +3489,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -3262,6 +3557,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -3325,6 +3625,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         text:
           type: string
           title: Text
@@ -3353,6 +3658,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -3414,6 +3724,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -3440,6 +3755,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -3496,6 +3816,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -3552,6 +3877,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -3717,6 +4047,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -3882,6 +4217,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -3930,6 +4270,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -3978,6 +4323,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         tag:
           type: string
           title: Tag
@@ -4003,6 +4353,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -4053,6 +4408,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -4103,6 +4463,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -4148,6 +4513,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         value:
           type: number
           title: Value
@@ -4173,6 +4543,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         value:
           type: number
           title: Value
@@ -4198,6 +4573,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         minValue:
           $ref: '#/components/schemas/Quantity-Input'
         maxValue:
@@ -4225,6 +4605,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         minValue:
           $ref: '#/components/schemas/Quantity-Output'
         maxValue:
@@ -4252,6 +4637,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         text:
           type: string
           title: Text
@@ -4280,6 +4670,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         isEnabled:
           type: boolean
           title: Isenabled
@@ -4304,6 +4699,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -4368,6 +4768,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -4432,6 +4837,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         instanceType:
           type: string
           enum:
@@ -4449,6 +4859,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -4512,6 +4927,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -4560,6 +4980,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -4604,6 +5029,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -4738,6 +5168,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         number:
           type: string
           title: Number
@@ -4813,6 +5248,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         number:
           type: string
           title: Number
@@ -4888,6 +5328,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         type:
           $ref: '#/components/schemas/Code'
         text:
@@ -4922,6 +5367,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         type:
           $ref: '#/components/schemas/Code'
         text:
@@ -4956,6 +5406,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         code:
           $ref: '#/components/schemas/Code'
         otherReason:
@@ -4981,6 +5436,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5035,6 +5495,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5089,6 +5554,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         armId:
           type: string
           title: Armid
@@ -5120,6 +5590,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5166,6 +5641,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5253,6 +5733,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5340,6 +5825,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5394,6 +5884,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5448,6 +5943,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         version:
           type: string
           title: Version
@@ -5496,6 +5996,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         version:
           type: string
           title: Version
@@ -5544,6 +6049,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5625,6 +6135,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5706,6 +6221,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5758,6 +6278,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5810,6 +6335,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5861,6 +6391,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5912,6 +6447,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         text:
           type: string
           title: Text
@@ -5937,6 +6477,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -5997,6 +6542,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -6057,6 +6607,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -6114,6 +6669,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -6149,6 +6709,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         text:
           type: string
           title: Text
@@ -6173,6 +6738,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         versionIdentifier:
           type: string
           title: Versionidentifier
@@ -6344,6 +6914,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         versionIdentifier:
           type: string
           title: Versionidentifier
@@ -6515,6 +7090,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -6564,6 +7144,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -6613,6 +7198,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -6661,6 +7251,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -6709,6 +7304,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -6747,6 +7347,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
@@ -6817,6 +7422,11 @@ components:
           type: string
           minLength: 1
           title: Id
+        extensions:
+          items: {}
+          type: array
+          title: Extensions
+          default: []
         name:
           type: string
           minLength: 1
