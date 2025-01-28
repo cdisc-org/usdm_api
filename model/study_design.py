@@ -1,4 +1,5 @@
 from typing import List, Literal, Union
+from .activity import Activity
 from .api_base_model import ApiBaseModelWithIdNameLabelAndDesc
 from .alias_code import AliasCode
 from .biospecimen_retention import BiospecimenRetention
@@ -23,6 +24,7 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   therapeuticAreas: List[Code] = []
   characteristics: List[Code] = []
   encounters: List[Encounter] = []
+  activities: List[Activity] = []
   arms: List[StudyArm]
   studyCells: List[StudyCell]
   rationale: str
