@@ -5,5 +5,5 @@ from .quantity import Quantity
 class AdministrationDuration(ApiBaseModelWithIdAndDesc):
   quantity:	Union[Quantity, None] = None
   durationWillVary: bool
-  reasonDurationWillVary:	str
+  reasonDurationWillVary:	Union[str, None] = None
   instanceType: Literal['AdministrationDuration']
