@@ -4742,7 +4742,7 @@
             ],
             "title": "Valuealiascode"
           },
-          "valueExtensionClassInstance": {
+          "valueExtensionClass": {
             "anyOf": [
               {
                 "$ref": "#/components/schemas/ExtensionClass-Input"
@@ -4754,7 +4754,7 @@
                 "type": "array"
               }
             ],
-            "title": "Valueextensionclassinstance"
+            "title": "Valueextensionclass"
           },
           "instanceType": {
             "type": "string",
@@ -4896,7 +4896,7 @@
             ],
             "title": "Valuealiascode"
           },
-          "valueExtensionClassInstance": {
+          "valueExtensionClass": {
             "anyOf": [
               {
                 "$ref": "#/components/schemas/ExtensionClass-Output"
@@ -4908,7 +4908,7 @@
                 "type": "array"
               }
             ],
-            "title": "Valueextensionclassinstance"
+            "title": "Valueextensionclass"
           },
           "instanceType": {
             "type": "string",

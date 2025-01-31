@@ -3131,13 +3131,13 @@ components:
               $ref: '#/components/schemas/AliasCode-Input'
             type: array
           title: Valuealiascode
-        valueExtensionClassInstance:
+        valueExtensionClass:
           anyOf:
           - $ref: '#/components/schemas/ExtensionClass-Input'
           - items:
               $ref: '#/components/schemas/ExtensionClass-Input'
             type: array
-          title: Valueextensionclassinstance
+          title: Valueextensionclass
         instanceType:
           type: string
           enum:
@@ -3215,13 +3215,13 @@ components:
               $ref: '#/components/schemas/AliasCode-Output'
             type: array
           title: Valuealiascode
-        valueExtensionClassInstance:
+        valueExtensionClass:
           anyOf:
           - $ref: '#/components/schemas/ExtensionClass-Output'
           - items:
               $ref: '#/components/schemas/ExtensionClass-Output'
             type: array
-          title: Valueextensionclassinstance
+          title: Valueextensionclass
         instanceType:
           type: string
           enum:

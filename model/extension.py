@@ -13,7 +13,7 @@ class ExtensionAttribute(Extension):
   valueRange: Union['Range',List['Range']] = None
   valueCode: Union['Code',List['Code']] = None
   valueAliasCode: Union['AliasCode',List['AliasCode']] = None
-  valueExtensionClassInstance: Union['ExtensionClass',List['ExtensionClass']] = None
+  valueExtensionClass: Union['ExtensionClass',List['ExtensionClass']] = None
   instanceType: Literal['ExtensionAttribute']
 
 class ExtensionClass(Extension):

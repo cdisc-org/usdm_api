@@ -146,7 +146,7 @@ pretty_json("COMPLEX ARRAY EXTENSION", [code, ext_cl_inst])
 ext_1 = ExtensionAttribute(
     url="http://cdisc.org/usdm/extensions/extension-5/class-1-attribute",
     id="ExtensionAttributeValue_11",
-    valueExtensionClassInstance=ExtensionClass(
+    valueExtensionClass=ExtensionClass(
         url="http://cdisc.org/usdm/extensions/extension-5/class-1",
         id="ExtensionClassInstance_2",
         attributes=[
@@ -178,7 +178,7 @@ ext_1 = ExtensionAttribute(
 ext_2 = ExtensionAttribute(
     url="http://cdisc.org/usdm/extensions/extension-5/class-2-attribute",
     id="ExtensionAttributeValue_15",
-    valueExtensionClassInstance=ExtensionClass(
+    valueExtensionClass=ExtensionClass(
         url="http://cdisc.org/usdm/extensions/extension-5/class-2",
         id="ExtensionClassInstance_3",
         attributes=[
@@ -264,7 +264,7 @@ pretty_json('RED DOCUMENT', [document])
 ariel_yellow_bold_ext = ExtensionAttribute(
   url='http://cdisc.org/usdm/extensions/doc-style-extension/style', # Name is a unique URL defining who built the extension and a unique id/ref to extension and role within the extension
   id='ExtensionAttributeValue_21', 
-    valueExtensionClassInstance=ExtensionClass(
+    valueExtensionClass=ExtensionClass(
         url="http://cdisc.org/usdm/extensions/doc-style-extension/style-class",
         id="ExtensionClassInstance_4",
         attributes=[
