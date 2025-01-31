@@ -1,12 +1,20 @@
+from __future__ import annotations
 from typing import Union, List
 from pydantic import BaseModel, Field
 
 class ApiBaseModel(BaseModel):
   pass
 
-class ApiBaseModelWithId(ApiBaseModel):
+class ApiBaseModelWithIdOnly(ApiBaseModel):
   id: str = Field(min_length=1)
-  extensions: List[object] = [] # Would like this type to be ExtensionAttribute rather than object but get circular relationships
+
+class Extension(ApiBaseModelWithIdOnly):
+  url: str
+
+class ApiBaseModelWithId(ApiBaseModelWithIdOnly):
+  extensions: List['ExtensionAttribute'] = [] 
+
+from .extension import ExtensionAttribute
 
 class ApiBaseModelWithIdAndDesc(ApiBaseModelWithId):
   description: Union[str, None] = None
