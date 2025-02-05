@@ -218,11 +218,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         abbreviatedText:
           type: string
@@ -257,11 +263,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         abbreviatedText:
           type: string
@@ -296,11 +308,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -385,11 +403,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -474,11 +498,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           anyOf:
@@ -532,11 +562,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           anyOf:
@@ -590,11 +626,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -666,11 +708,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -742,11 +790,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           type: string
@@ -773,11 +827,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           type: string
@@ -804,11 +864,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -842,11 +908,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -880,11 +952,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -946,11 +1024,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1012,11 +1096,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         quantity:
           anyOf:
@@ -1051,11 +1141,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         quantity:
           anyOf:
@@ -1090,11 +1186,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         standardCode:
           $ref: '#/components/schemas/Code-Input'
@@ -1122,11 +1224,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         standardCode:
           $ref: '#/components/schemas/Code-Output'
@@ -1154,11 +1262,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1208,11 +1322,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1262,11 +1382,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1309,11 +1435,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1356,11 +1488,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1414,11 +1552,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1472,11 +1616,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1532,11 +1682,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1592,11 +1748,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1652,11 +1814,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1712,11 +1880,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1761,11 +1935,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1810,11 +1990,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1857,11 +2043,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1904,11 +2096,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1957,11 +2155,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2010,11 +2214,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         code:
           type: string
@@ -2049,11 +2259,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         code:
           type: string
@@ -2088,11 +2304,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           type: string
@@ -2121,11 +2343,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           type: string
@@ -2154,11 +2382,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2219,11 +2453,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2284,11 +2524,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         condition:
           type: string
@@ -2315,11 +2561,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         condition:
           type: string
@@ -2346,11 +2598,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         sectionNumber:
           type: string
@@ -2381,11 +2639,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         sectionNumber:
           type: string
@@ -2416,11 +2680,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2481,11 +2751,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2546,11 +2822,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2599,11 +2881,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2652,11 +2940,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2734,11 +3028,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2816,11 +3116,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2876,11 +3182,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2936,11 +3248,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3004,11 +3322,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3076,68 +3400,35 @@ components:
           type: string
           title: Url
         valueString:
-          anyOf:
-          - type: string
-          - items:
-              type: string
-            type: array
+          type: string
           title: Valuestring
         valueBoolean:
-          anyOf:
-          - type: boolean
-          - items:
-              type: boolean
-            type: array
+          type: boolean
           title: Valueboolean
         valueInteger:
-          anyOf:
-          - type: integer
-          - items:
-              type: integer
-            type: array
+          type: integer
           title: Valueinteger
         valueId:
-          anyOf:
-          - type: string
-          - items:
-              type: string
-            type: array
+          type: string
           title: Valueid
         valueQuantity:
-          anyOf:
+          allOf:
           - $ref: '#/components/schemas/Quantity-Input'
-          - items:
-              $ref: '#/components/schemas/Quantity-Input'
-            type: array
-          title: Valuequantity
         valueRange:
-          anyOf:
+          allOf:
           - $ref: '#/components/schemas/Range-Input'
-          - items:
-              $ref: '#/components/schemas/Range-Input'
-            type: array
-          title: Valuerange
         valueCode:
-          anyOf:
+          allOf:
           - $ref: '#/components/schemas/Code-Input'
-          - items:
-              $ref: '#/components/schemas/Code-Input'
-            type: array
-          title: Valuecode
         valueAliasCode:
-          anyOf:
+          allOf:
           - $ref: '#/components/schemas/AliasCode-Input'
-          - items:
-              $ref: '#/components/schemas/AliasCode-Input'
-            type: array
-          title: Valuealiascode
-        valueExtensionClass:
-          anyOf:
-          - $ref: '#/components/schemas/ExtensionClass-Input'
-          - items:
-              $ref: '#/components/schemas/ExtensionClass-Input'
-            type: array
-          title: Valueextensionclass
+        extensionAttributes:
+          items:
+            $ref: '#/components/schemas/ExtensionAttribute-Input'
+          type: array
+          title: Extensionattributes
+          default: []
         instanceType:
           type: string
           enum:
@@ -3160,68 +3451,35 @@ components:
           type: string
           title: Url
         valueString:
-          anyOf:
-          - type: string
-          - items:
-              type: string
-            type: array
+          type: string
           title: Valuestring
         valueBoolean:
-          anyOf:
-          - type: boolean
-          - items:
-              type: boolean
-            type: array
+          type: boolean
           title: Valueboolean
         valueInteger:
-          anyOf:
-          - type: integer
-          - items:
-              type: integer
-            type: array
+          type: integer
           title: Valueinteger
         valueId:
-          anyOf:
-          - type: string
-          - items:
-              type: string
-            type: array
+          type: string
           title: Valueid
         valueQuantity:
-          anyOf:
+          allOf:
           - $ref: '#/components/schemas/Quantity-Output'
-          - items:
-              $ref: '#/components/schemas/Quantity-Output'
-            type: array
-          title: Valuequantity
         valueRange:
-          anyOf:
+          allOf:
           - $ref: '#/components/schemas/Range-Output'
-          - items:
-              $ref: '#/components/schemas/Range-Output'
-            type: array
-          title: Valuerange
         valueCode:
-          anyOf:
+          allOf:
           - $ref: '#/components/schemas/Code-Output'
-          - items:
-              $ref: '#/components/schemas/Code-Output'
-            type: array
-          title: Valuecode
         valueAliasCode:
-          anyOf:
+          allOf:
           - $ref: '#/components/schemas/AliasCode-Output'
-          - items:
-              $ref: '#/components/schemas/AliasCode-Output'
-            type: array
-          title: Valuealiascode
-        valueExtensionClass:
-          anyOf:
-          - $ref: '#/components/schemas/ExtensionClass-Output'
-          - items:
-              $ref: '#/components/schemas/ExtensionClass-Output'
-            type: array
-          title: Valueextensionclass
+        extensionAttributes:
+          items:
+            $ref: '#/components/schemas/ExtensionAttribute-Output'
+          type: array
+          title: Extensionattributes
+          default: []
         instanceType:
           type: string
           enum:
@@ -3243,11 +3501,12 @@ components:
         url:
           type: string
           title: Url
-        attributes:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Attributes
+          title: Extensionattributes
+          default: []
         instanceType:
           type: string
           enum:
@@ -3258,7 +3517,6 @@ components:
       required:
       - id
       - url
-      - attributes
       - instanceType
       title: ExtensionClass
     ExtensionClass-Output:
@@ -3270,11 +3528,12 @@ components:
         url:
           type: string
           title: Url
-        attributes:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Attributes
+          title: Extensionattributes
+          default: []
         instanceType:
           type: string
           enum:
@@ -3285,7 +3544,6 @@ components:
       required:
       - id
       - url
-      - attributes
       - instanceType
       title: ExtensionClass
     GeographicScope-Input:
@@ -3294,11 +3552,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         type:
           $ref: '#/components/schemas/Code-Input'
@@ -3324,11 +3588,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         type:
           $ref: '#/components/schemas/Code-Output'
@@ -3354,11 +3624,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3406,11 +3682,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3467,11 +3749,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3521,11 +3809,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3575,11 +3869,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         role:
           $ref: '#/components/schemas/Code-Input'
@@ -3604,11 +3904,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         role:
           $ref: '#/components/schemas/Code-Output'
@@ -3633,11 +3939,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3690,11 +4002,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3747,11 +4065,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3921,11 +4245,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4095,11 +4425,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         description:
           type: string
@@ -4122,11 +4458,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         description:
           type: string
@@ -4149,11 +4491,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4218,11 +4566,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4287,11 +4641,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           type: string
@@ -4321,11 +4681,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           type: string
@@ -4355,11 +4721,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4422,11 +4794,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4489,11 +4867,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4521,11 +4905,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4553,11 +4943,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4615,11 +5011,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4677,11 +5079,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4848,11 +5256,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5019,11 +5433,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5073,11 +5493,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5127,11 +5553,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         tag:
           type: string
@@ -5158,11 +5590,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         tag:
           type: string
@@ -5189,11 +5627,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5245,11 +5689,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5301,11 +5751,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5352,11 +5808,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5403,11 +5865,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         value:
           type: number
@@ -5434,11 +5902,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         value:
           type: number
@@ -5465,11 +5939,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         minValue:
           $ref: '#/components/schemas/Quantity-Input'
@@ -5498,11 +5978,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         minValue:
           $ref: '#/components/schemas/Quantity-Output'
@@ -5531,11 +6017,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           type: string
@@ -5565,11 +6057,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           type: string
@@ -5599,11 +6097,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         isEnabled:
           type: boolean
@@ -5629,11 +6133,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         isEnabled:
           type: boolean
@@ -5659,11 +6169,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5729,11 +6245,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5799,11 +6321,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         instanceType:
           type: string
@@ -5822,11 +6350,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         instanceType:
           type: string
@@ -5845,11 +6379,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5914,11 +6454,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5983,11 +6529,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -6037,11 +6589,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -6091,11 +6649,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -6141,11 +6705,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -6281,11 +6851,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         number:
           type: string
@@ -6362,11 +6938,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         number:
           type: string
@@ -6443,11 +7025,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         type:
           $ref: '#/components/schemas/Code-Input'
@@ -6483,11 +7071,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         type:
           $ref: '#/components/schemas/Code-Output'
@@ -6523,11 +7117,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         code:
           $ref: '#/components/schemas/Code-Input'
@@ -6554,11 +7154,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         code:
           $ref: '#/components/schemas/Code-Output'
@@ -6585,11 +7191,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -6645,11 +7257,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -6705,11 +7323,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         armId:
           type: string
@@ -6742,11 +7366,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         armId:
           type: string
@@ -6779,11 +7409,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -6831,11 +7467,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -6883,11 +7525,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -6976,11 +7624,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7069,11 +7723,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7129,11 +7789,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7189,11 +7855,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         version:
           type: string
@@ -7243,11 +7915,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         version:
           type: string
@@ -7297,11 +7975,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7384,11 +8068,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7471,11 +8161,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7529,11 +8225,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7587,11 +8289,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7644,11 +8352,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7701,11 +8415,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           type: string
@@ -7732,11 +8452,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           type: string
@@ -7763,11 +8489,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7829,11 +8561,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7895,11 +8633,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7958,11 +8702,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8021,11 +8771,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8062,11 +8818,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8103,11 +8865,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           type: string
@@ -8133,11 +8901,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         text:
           type: string
@@ -8163,11 +8937,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         versionIdentifier:
           type: string
@@ -8340,11 +9120,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         versionIdentifier:
           type: string
@@ -8517,11 +9303,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8572,11 +9364,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8627,11 +9425,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8681,11 +9485,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8735,11 +9545,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8779,11 +9595,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8823,11 +9645,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8899,11 +9727,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8975,11 +9809,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Input'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
@@ -9017,11 +9857,17 @@ components:
           type: string
           minLength: 1
           title: Id
-        extensions:
+        extensionAttributes:
           items:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
-          title: Extensions
+          title: Extensionattributes
+          default: []
+        extensionClasses:
+          items:
+            $ref: '#/components/schemas/ExtensionClass-Output'
+          type: array
+          title: Extensionclasses
           default: []
         name:
           type: string
