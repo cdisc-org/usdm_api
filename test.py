@@ -2,8 +2,7 @@ import json
 from model.api_base_model import ApiBaseModel
 from model.code import Code
 from model.study_definition_document import StudyDefinitionDocument
-from model.extension_attribute import ExtensionAttribute
-from model.extension_class import ExtensionClass
+from model.extension import ExtensionAttribute, ExtensionClass
 
 def pretty_json(label, instances: list[ApiBaseModel]):
   print(f"\n{label}:\n\n")
@@ -21,7 +20,7 @@ ext = ExtensionAttribute(
   url='http://cdisc.org/usdm/extensions/extension-1/attribute', # Name is a unique URL defining who built the extension and a unique id/ref to extension and role within the extension
   valueString='Extra value', # The actual extra value
   instanceType='ExtensionAttribute')
-code = Code(id='1', code='Code', decode='decode', codeSystem='System', codeSystemVersion='Version', instanceType='Code', extensions=[ext])
+code = Code(id='1', code='Code', decode='decode', codeSystem='System', codeSystemVersion='Version', instanceType='Code', extensionAttributes=[ext])
 pretty_json('SIMPLE EXTENSION', [code])
 
 # Simple way of adding array of values. Only works if there is a single array of values.
@@ -38,7 +37,7 @@ ext_value_2 = ExtensionAttribute(**params)
 params['id'] = 'X3'
 params['valueString'] = 'Extra value 3'
 ext_value_3 = ExtensionAttribute(**params)
-code = Code(id='1', code='Code', decode='decode', codeSystem='System', codeSystemVersion='Version', instanceType='Code', extensions=[ext_value_1, ext_value_2, ext_value_3])
+code = Code(id='1', code='Code', decode='decode', codeSystem='System', codeSystemVersion='Version', instanceType='Code', extensionAttributes=[ext_value_1, ext_value_2, ext_value_3])
 pretty_json('SIMPLE ARRAY EXTENSION V1', [code])
 
 # Slightly more complex way of building an array, array links off a single attribute, useful if need more than one array
@@ -60,7 +59,7 @@ ext_value_3 = ExtensionAttribute(**params)
 attribute1 = ExtensionAttribute(
   id='ARRAY_1_STRING', 
   url='http://cdisc.org/usdm/extensions/extension-3/attribute-array-1', 
-  extensions=[ext_value_1, ext_value_2, ext_value_3], 
+  extensionAttributes=[ext_value_1, ext_value_2, ext_value_3], 
   instanceType='ExtensionAttribute')
 
 # Second collection
@@ -80,37 +79,37 @@ ext_value_12 = ExtensionAttribute(**params)
 attribute2 = ExtensionAttribute(
   id='ARRAY_2_BOOLEAN', 
   url='http://cdisc.org/usdm/extensions/extension-3/attribute-array-2', 
-  extensions=[ext_value_10, ext_value_11, ext_value_12], 
+  extensionAttributes=[ext_value_10, ext_value_11, ext_value_12], 
   instanceType='ExtensionAttribute')
-code = Code(id='1', code='Code', decode='decode', codeSystem='System', codeSystemVersion='Version', instanceType='Code', extensions=[attribute1, attribute2])
+code = Code(id='1', code='Code', decode='decode', codeSystem='System', codeSystemVersion='Version', instanceType='Code', extensionAttributes=[attribute1, attribute2])
 pretty_json('SIMPLE ARRAY EXTENSION V2', [code])
 
 # Complex extending code with array of values, used if you wanted to add several arrays to a class linked via a class, only one added here
 ext = ExtensionClass(
   id='XCLASS1', 
   url='http://cdisc.org/usdm/extensions/extension-4/class', 
-  attributes=[ext_value_1, ext_value_2, ext_value_3], 
+  extensionAttributes=[ext_value_1, ext_value_2, ext_value_3], 
   instanceType='ExtensionClass')
 link = ExtensionAttribute(
   id='LINK1', 
   url='http://cdisc.org/usdm/extensions/extension-4/attribute', 
   valueId='XC1', 
   instanceType='ExtensionAttribute')
-code = Code(id='1', code='Code', decode='decode', codeSystem='System', codeSystemVersion='Version', instanceType='Code', extensions=[link])
+code = Code(id='1', code='Code', decode='decode', codeSystem='System', codeSystemVersion='Version', instanceType='Code', extensionAttributes=[link])
 pretty_json('CLASS EXTENSION', [code, ext])
 
 # Array of new classes. Could link to an intermediate class like the example above if needed.
 ext_1 = ExtensionClass(
   id='XCLASS1', 
   url='http://cdisc.org/usdm/extensions/extension-5/class-1', 
-  attributes=[ext_value_1, ext_value_2, ext_value_3], 
+  extensionAttributes=[ext_value_1, ext_value_2, ext_value_3], 
   instanceType='ExtensionClass')
 ext_2 = ExtensionClass(
   id='XCLASS2', 
   url='http://cdisc.org/usdm/extensions/extension-5/class-2', 
-  attributes=[ext_value_10, ext_value_11, ext_value_12], 
+  extensionAttributes=[ext_value_10, ext_value_11, ext_value_12], 
   instanceType='ExtensionClass')
-code = Code(id='1', code='Code', decode='decode', codeSystem='System', codeSystemVersion='Version', instanceType='Code', extensions=[ext_1, ext_2])
+code = Code(id='1', code='Code', decode='decode', codeSystem='System', codeSystemVersion='Version', instanceType='Code', extensionClasses=[ext_1, ext_2])
 pretty_json('ARRAY OF CLASSES', [code])
 
 
@@ -118,14 +117,14 @@ pretty_json('ARRAY OF CLASSES', [code])
 
 # Yellow attribute  
 yellow_colour_ext = ExtensionAttribute(
-  id='X1', 
+  id='COLOUR1', 
   url='http://cdisc.org/usdm/extensions/doc-colour-extension/colour-attribute', # Name is a unique URL defining who built the extension and a unique id/ref to extension and role within the extension
   valueString='YELLOW', # The actual extra value
   instanceType='ExtensionAttribute')
 
 # Red attribute
 red_colour_ext = ExtensionAttribute(
-  id='X11',
+  id='COLOUR2',
   url='http://cdisc.org/usdm/extensions/doc-colour-extension/colour-attribute', # Name is a unique URL defining who built the extension and a unique id/ref to extension and role within the extension
   valueString='RED', # The actual extra value
   instanceType='ExtensionAttribute') 
@@ -142,12 +141,12 @@ params = {
   'versions': [],
   'notes': [],
   'instanceType': 'StudyDefinitionDocument',
-  'extensions': [yellow_colour_ext]
+  'extensionAttributes': [yellow_colour_ext]
 }
 document = StudyDefinitionDocument(**params)
 pretty_json('YELLOW DOCUMENT', [document])
 
 # Now change to a red document
-params['extensions'] = [red_colour_ext]
+params['extensionAttributes'] = [red_colour_ext]
 document = StudyDefinitionDocument(**params)
 pretty_json('RED DOCUMENT', [document])

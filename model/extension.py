@@ -5,6 +5,7 @@ class Extension(ApiBaseModelWithIdOnly):
   url: str
 
 class ExtensionAttribute(Extension):
+  # values or extensions, never both.
   valueString: str = None
   valueBoolean: bool = None
   valueInteger: int = None
