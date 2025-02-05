@@ -12,9 +12,10 @@ class Extension(ApiBaseModelWithIdOnly):
   url: str
 
 class ApiBaseModelWithId(ApiBaseModelWithIdOnly):
-  extensions: List['ExtensionAttribute'] = [] 
+  extensionAttributes: List['ExtensionAttribute'] = [] 
+  extensionClasses: List['ExtensionClass'] = [] # The bucket to be used to hold extension classes if present
 
-from .extension import ExtensionAttribute
+from .extension import ExtensionAttribute, ExtensionClass
 
 class ApiBaseModelWithIdAndDesc(ApiBaseModelWithId):
   description: Union[str, None] = None

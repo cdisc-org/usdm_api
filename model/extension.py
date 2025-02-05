@@ -5,19 +5,19 @@ class Extension(ApiBaseModelWithIdOnly):
   url: str
 
 class ExtensionAttribute(Extension):
-  valueString: Union[str,List[str]] = None
-  valueBoolean: Union[bool,List[bool]] = None
-  valueInteger: Union[int,List[int]] = None
-  valueId: Union[str,List[str]] = None
-  valueQuantity: Union['Quantity',List['Quantity']] = None
-  valueRange: Union['Range',List['Range']] = None
-  valueCode: Union['Code',List['Code']] = None
-  valueAliasCode: Union['AliasCode',List['AliasCode']] = None
-  valueExtensionClass: Union['ExtensionClass',List['ExtensionClass']] = None
+  valueString: str = None
+  valueBoolean: bool = None
+  valueInteger: int = None
+  valueId: str = None
+  valueQuantity: 'Quantity' = None
+  valueRange: 'Range' = None
+  valueCode: 'Code' = None
+  valueAliasCode: 'AliasCode' = None
+  extensionAttributes: List['ExtensionAttribute'] = [] # Could be named attributes, named to align woth ApiBaseModelWithId definition
   instanceType: Literal['ExtensionAttribute']
 
 class ExtensionClass(Extension):
-  attributes: List[ExtensionAttribute]
+  extensionAttributes: List['ExtensionAttribute'] = [] # Could be named attributes, named to align woth ApiBaseModelWithId definition and above
   instanceType: Literal['ExtensionClass']
 
 from .quantity import Quantity
