@@ -326,14 +326,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "abbreviatedText": {
             "type": "string",
             "minLength": 1,
@@ -385,14 +377,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "abbreviatedText": {
             "type": "string",
             "minLength": 1,
@@ -442,14 +426,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -592,14 +568,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -740,14 +708,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "text": {
             "anyOf": [
               {
@@ -852,14 +812,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "text": {
             "anyOf": [
               {
@@ -962,14 +914,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -1091,14 +1035,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -1218,14 +1154,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "text": {
             "type": "string",
             "title": "Text"
@@ -1267,14 +1195,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "text": {
             "type": "string",
             "title": "Text"
@@ -1314,14 +1234,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -1374,14 +1286,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -1430,14 +1334,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -1545,14 +1441,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -1658,14 +1546,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "quantity": {
             "anyOf": [
               {
@@ -1720,14 +1600,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "quantity": {
@@ -1786,14 +1658,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "standardCode": {
             "$ref": "#/components/schemas/Code-Input"
           },
@@ -1837,14 +1701,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "standardCode": {
             "$ref": "#/components/schemas/Code-Output"
           },
@@ -1886,14 +1742,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -1976,14 +1824,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -2064,14 +1904,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -2147,14 +1979,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -2228,14 +2052,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -2319,14 +2135,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -2406,14 +2214,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -2509,14 +2309,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -2610,14 +2402,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -2699,14 +2483,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -2792,14 +2568,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -2876,14 +2644,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -2964,14 +2724,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -3047,14 +2799,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -3128,14 +2872,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -3221,14 +2957,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -3312,14 +3040,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "code": {
             "type": "string",
             "title": "Code"
@@ -3369,14 +3089,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "code": {
@@ -3430,14 +3142,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "text": {
             "type": "string",
             "title": "Text"
@@ -3482,14 +3186,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "text": {
             "type": "string",
             "title": "Text"
@@ -3532,14 +3228,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -3641,14 +3329,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -3748,14 +3428,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "condition": {
             "type": "string",
             "title": "Condition"
@@ -3797,14 +3469,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "condition": {
             "type": "string",
             "title": "Condition"
@@ -3844,14 +3508,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "sectionNumber": {
@@ -3900,14 +3556,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "sectionNumber": {
             "type": "string",
             "title": "Sectionnumber"
@@ -3952,14 +3600,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -4065,14 +3705,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -4176,14 +3808,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -4267,14 +3891,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -4356,14 +3972,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -4506,14 +4114,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -4654,14 +4254,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -4754,14 +4346,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -4852,14 +4436,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -4958,14 +4534,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -5106,13 +4674,12 @@
               }
             ]
           },
-          "extensionAttributes": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionAttribute-Input"
-            },
-            "type": "array",
-            "title": "Extensionattributes",
-            "default": []
+          "valueExtensionClass": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExtensionClass-Input"
+              }
+            ]
           },
           "instanceType": {
             "type": "string",
@@ -5186,13 +4753,12 @@
               }
             ]
           },
-          "extensionAttributes": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionAttribute-Output"
-            },
-            "type": "array",
-            "title": "Extensionattributes",
-            "default": []
+          "valueExtensionClass": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExtensionClass-Output"
+              }
+            ]
           },
           "instanceType": {
             "type": "string",
@@ -5298,14 +4864,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "type": {
             "$ref": "#/components/schemas/Code-Input"
           },
@@ -5351,14 +4909,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "type": {
             "$ref": "#/components/schemas/Code-Output"
           },
@@ -5402,14 +4952,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -5487,14 +5029,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -5587,14 +5121,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -5673,14 +5199,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -5763,14 +5281,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "role": {
             "$ref": "#/components/schemas/Code-Input"
           },
@@ -5810,14 +5320,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "role": {
             "$ref": "#/components/schemas/Code-Output"
           },
@@ -5855,14 +5357,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -5953,14 +5447,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -6047,14 +5533,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -6311,14 +5789,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -6573,14 +6043,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "description": {
             "type": "string",
             "title": "Description"
@@ -6617,14 +6079,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "description": {
             "type": "string",
             "title": "Description"
@@ -6659,14 +6113,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -6787,14 +6233,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -6913,14 +6351,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "text": {
             "type": "string",
             "title": "Text"
@@ -6966,14 +6396,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "text": {
             "type": "string",
             "title": "Text"
@@ -7017,14 +6439,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -7137,14 +6551,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -7255,14 +6661,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -7305,14 +6703,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -7353,14 +6743,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -7458,14 +6840,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -7559,14 +6933,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -7819,14 +7185,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -8077,14 +7435,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -8163,14 +7513,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -8253,14 +7595,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "tag": {
             "type": "string",
             "title": "Tag"
@@ -8302,14 +7636,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "tag": {
             "type": "string",
             "title": "Tag"
@@ -8349,14 +7675,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -8446,14 +7764,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -8541,14 +7851,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -8623,14 +7925,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -8709,14 +8003,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "value": {
             "type": "number",
             "title": "Value"
@@ -8761,14 +8047,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "value": {
@@ -8817,14 +8095,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "minValue": {
             "$ref": "#/components/schemas/Quantity-Input"
           },
@@ -8869,14 +8139,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "minValue": {
             "$ref": "#/components/schemas/Quantity-Output"
           },
@@ -8919,14 +8181,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "text": {
@@ -8974,14 +8228,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "text": {
             "type": "string",
             "title": "Text"
@@ -9027,14 +8273,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "isEnabled": {
             "type": "boolean",
             "title": "Isenabled"
@@ -9075,14 +8313,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "isEnabled": {
             "type": "boolean",
             "title": "Isenabled"
@@ -9121,14 +8351,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -9236,14 +8458,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -9349,14 +8563,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -9388,14 +8594,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -9425,14 +8623,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -9557,14 +8747,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -9687,14 +8869,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -9782,14 +8956,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -9881,14 +9047,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -9976,14 +9134,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -10221,14 +9371,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "number": {
             "type": "string",
             "title": "Number"
@@ -10339,14 +9481,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "number": {
@@ -10461,14 +9595,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "type": {
             "$ref": "#/components/schemas/Code-Input"
           },
@@ -10520,14 +9646,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "type": {
@@ -10583,14 +9701,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "code": {
             "$ref": "#/components/schemas/Code-Input"
           },
@@ -10637,14 +9747,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "code": {
             "$ref": "#/components/schemas/Code-Output"
           },
@@ -10689,14 +9791,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -10787,14 +9881,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -10883,14 +9969,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "armId": {
             "type": "string",
             "title": "Armid"
@@ -10940,14 +10018,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "armId": {
             "type": "string",
             "title": "Armid"
@@ -10995,14 +10065,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -11082,14 +10144,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -11165,14 +10219,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -11330,14 +10376,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -11493,14 +10531,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -11587,14 +10617,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -11685,14 +10707,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "version": {
             "type": "string",
             "title": "Version"
@@ -11765,14 +10779,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "version": {
             "type": "string",
             "title": "Version"
@@ -11843,14 +10849,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -12000,14 +10998,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -12155,14 +11145,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -12256,14 +11238,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -12361,14 +11335,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -12460,14 +11426,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -12563,14 +11521,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "text": {
             "type": "string",
             "title": "Text"
@@ -12612,14 +11562,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "text": {
             "type": "string",
             "title": "Text"
@@ -12659,14 +11601,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -12770,14 +11704,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -12879,14 +11805,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -12982,14 +11900,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -13089,14 +11999,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -13158,14 +12060,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -13231,14 +12125,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "text": {
             "type": "string",
             "title": "Text"
@@ -13279,14 +12165,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "text": {
             "type": "string",
             "title": "Text"
@@ -13325,14 +12203,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "versionIdentifier": {
@@ -13575,14 +12445,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "versionIdentifier": {
             "type": "string",
             "title": "Versionidentifier"
@@ -13823,14 +12685,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -13924,14 +12778,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -14029,14 +12875,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -14120,14 +12958,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -14215,14 +13045,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -14290,14 +13112,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -14363,14 +13177,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {
@@ -14499,14 +13305,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -14633,14 +13431,6 @@
             "title": "Extensionattributes",
             "default": []
           },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Input"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
-            "default": []
-          },
           "name": {
             "type": "string",
             "minLength": 1,
@@ -14703,14 +13493,6 @@
             },
             "type": "array",
             "title": "Extensionattributes",
-            "default": []
-          },
-          "extensionClasses": {
-            "items": {
-              "$ref": "#/components/schemas/ExtensionClass-Output"
-            },
-            "type": "array",
-            "title": "Extensionclasses",
             "default": []
           },
           "name": {

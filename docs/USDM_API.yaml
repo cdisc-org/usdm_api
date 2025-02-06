@@ -224,12 +224,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         abbreviatedText:
           type: string
           minLength: 1
@@ -269,12 +263,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         abbreviatedText:
           type: string
           minLength: 1
@@ -313,12 +301,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -409,12 +391,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -504,12 +480,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         text:
           anyOf:
           - type: string
@@ -568,12 +538,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         text:
           anyOf:
           - type: string
@@ -631,12 +595,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -714,12 +672,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -796,12 +748,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         text:
           type: string
           title: Text
@@ -833,12 +779,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         text:
           type: string
           title: Text
@@ -869,12 +809,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -914,12 +848,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -957,12 +885,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1030,12 +952,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -1102,12 +1018,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         quantity:
           anyOf:
           - $ref: '#/components/schemas/Quantity-Input'
@@ -1146,12 +1056,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         quantity:
           anyOf:
@@ -1192,12 +1096,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         standardCode:
           $ref: '#/components/schemas/Code-Input'
         standardCodeAliases:
@@ -1230,12 +1128,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         standardCode:
           $ref: '#/components/schemas/Code-Output'
         standardCodeAliases:
@@ -1267,12 +1159,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1328,12 +1214,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -1388,12 +1268,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -1441,12 +1315,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -1493,12 +1361,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1558,12 +1420,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -1621,12 +1477,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1688,12 +1538,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -1753,12 +1597,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1820,12 +1658,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -1886,12 +1718,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -1940,12 +1766,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -1996,12 +1816,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -2049,12 +1863,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -2101,12 +1909,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2161,12 +1963,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -2220,12 +2016,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         code:
           type: string
           title: Code
@@ -2264,12 +2054,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         code:
           type: string
@@ -2310,12 +2094,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         text:
           type: string
           title: Text
@@ -2349,12 +2127,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         text:
           type: string
           title: Text
@@ -2387,12 +2159,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2459,12 +2225,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -2530,12 +2290,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         condition:
           type: string
           title: Condition
@@ -2567,12 +2321,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         condition:
           type: string
           title: Condition
@@ -2603,12 +2351,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         sectionNumber:
           type: string
@@ -2645,12 +2387,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         sectionNumber:
           type: string
           title: Sectionnumber
@@ -2685,12 +2421,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -2757,12 +2487,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -2828,12 +2552,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -2887,12 +2605,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -2945,12 +2657,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3034,12 +2740,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -3122,12 +2822,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -3188,12 +2882,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -3253,12 +2941,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3327,12 +3009,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3423,12 +3099,9 @@ components:
         valueAliasCode:
           allOf:
           - $ref: '#/components/schemas/AliasCode-Input'
-        extensionAttributes:
-          items:
-            $ref: '#/components/schemas/ExtensionAttribute-Input'
-          type: array
-          title: Extensionattributes
-          default: []
+        valueExtensionClass:
+          allOf:
+          - $ref: '#/components/schemas/ExtensionClass-Input'
         instanceType:
           type: string
           enum:
@@ -3474,12 +3147,9 @@ components:
         valueAliasCode:
           allOf:
           - $ref: '#/components/schemas/AliasCode-Output'
-        extensionAttributes:
-          items:
-            $ref: '#/components/schemas/ExtensionAttribute-Output'
-          type: array
-          title: Extensionattributes
-          default: []
+        valueExtensionClass:
+          allOf:
+          - $ref: '#/components/schemas/ExtensionClass-Output'
         instanceType:
           type: string
           enum:
@@ -3558,12 +3228,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         type:
           $ref: '#/components/schemas/Code-Input'
         code:
@@ -3594,12 +3258,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         type:
           $ref: '#/components/schemas/Code-Output'
         code:
@@ -3629,12 +3287,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3687,12 +3339,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3755,12 +3401,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -3814,12 +3454,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -3875,12 +3509,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         role:
           $ref: '#/components/schemas/Code-Input'
         substance:
@@ -3910,12 +3538,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         role:
           $ref: '#/components/schemas/Code-Output'
         substance:
@@ -3944,12 +3566,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4008,12 +3624,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -4070,12 +3680,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4251,12 +3855,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -4431,12 +4029,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         description:
           type: string
           title: Description
@@ -4464,12 +4056,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         description:
           type: string
           title: Description
@@ -4496,12 +4082,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4572,12 +4152,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -4647,12 +4221,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         text:
           type: string
           title: Text
@@ -4687,12 +4255,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         text:
           type: string
           title: Text
@@ -4726,12 +4288,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -4800,12 +4356,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -4873,12 +4423,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -4911,12 +4455,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -4948,12 +4486,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5017,12 +4549,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -5084,12 +4610,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5262,12 +4782,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -5439,12 +4953,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -5498,12 +5006,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5559,12 +5061,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         tag:
           type: string
           title: Tag
@@ -5596,12 +5092,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         tag:
           type: string
           title: Tag
@@ -5632,12 +5122,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5695,12 +5179,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -5757,12 +5235,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -5813,12 +5285,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -5871,12 +5337,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         value:
           type: number
           title: Value
@@ -5908,12 +5368,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         value:
           type: number
           title: Value
@@ -5944,12 +5398,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         minValue:
           $ref: '#/components/schemas/Quantity-Input'
@@ -5984,12 +5432,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         minValue:
           $ref: '#/components/schemas/Quantity-Output'
         maxValue:
@@ -6022,12 +5464,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         text:
           type: string
@@ -6063,12 +5499,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         text:
           type: string
           title: Text
@@ -6103,12 +5533,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         isEnabled:
           type: boolean
           title: Isenabled
@@ -6139,12 +5563,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         isEnabled:
           type: boolean
           title: Isenabled
@@ -6174,12 +5592,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -6251,12 +5663,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -6327,12 +5733,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         instanceType:
           type: string
           enum:
@@ -6356,12 +5756,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         instanceType:
           type: string
           enum:
@@ -6384,12 +5778,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -6460,12 +5848,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -6535,12 +5917,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -6594,12 +5970,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -6655,12 +6025,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -6710,12 +6074,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -6857,12 +6215,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         number:
           type: string
           title: Number
@@ -6943,12 +6295,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         number:
           type: string
@@ -7031,12 +6377,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         type:
           $ref: '#/components/schemas/Code-Input'
         text:
@@ -7076,12 +6416,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         type:
           $ref: '#/components/schemas/Code-Output'
@@ -7123,12 +6457,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         code:
           $ref: '#/components/schemas/Code-Input'
         otherReason:
@@ -7160,12 +6488,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         code:
           $ref: '#/components/schemas/Code-Output'
         otherReason:
@@ -7196,12 +6518,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7263,12 +6579,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -7329,12 +6639,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         armId:
           type: string
           title: Armid
@@ -7372,12 +6676,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         armId:
           type: string
           title: Armid
@@ -7414,12 +6712,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7473,12 +6765,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -7530,12 +6816,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7630,12 +6910,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -7729,12 +7003,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -7794,12 +7062,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -7861,12 +7123,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         version:
           type: string
           title: Version
@@ -7921,12 +7177,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         version:
           type: string
           title: Version
@@ -7980,12 +7230,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8074,12 +7318,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -8167,12 +7405,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -8230,12 +7462,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8295,12 +7521,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -8357,12 +7577,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8421,12 +7635,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         text:
           type: string
           title: Text
@@ -8458,12 +7666,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         text:
           type: string
           title: Text
@@ -8494,12 +7696,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8567,12 +7763,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -8639,12 +7829,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -8707,12 +7891,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8777,12 +7955,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -8823,12 +7995,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -8871,12 +8037,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         text:
           type: string
           title: Text
@@ -8907,12 +8067,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         text:
           type: string
           title: Text
@@ -8942,12 +8096,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         versionIdentifier:
           type: string
@@ -9126,12 +8274,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         versionIdentifier:
           type: string
           title: Versionidentifier
@@ -9309,12 +8451,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -9369,12 +8505,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -9431,12 +8561,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -9490,12 +8614,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -9551,12 +8669,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -9601,12 +8713,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -9650,12 +8756,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Input'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
@@ -9733,12 +8833,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -9815,12 +8909,6 @@ components:
           type: array
           title: Extensionattributes
           default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Input'
-          type: array
-          title: Extensionclasses
-          default: []
         name:
           type: string
           minLength: 1
@@ -9862,12 +8950,6 @@ components:
             $ref: '#/components/schemas/ExtensionAttribute-Output'
           type: array
           title: Extensionattributes
-          default: []
-        extensionClasses:
-          items:
-            $ref: '#/components/schemas/ExtensionClass-Output'
-          type: array
-          title: Extensionclasses
           default: []
         name:
           type: string
