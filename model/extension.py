@@ -5,7 +5,7 @@ class Extension(ApiBaseModelWithIdOnly):
   url: str
 
 class ExtensionAttribute(Extension):
-  # values or extensions, never both.
+  # values or extension attributes, never both.
   valueString: str = None
   valueBoolean: bool = None
   valueInteger: int = None
@@ -15,10 +15,11 @@ class ExtensionAttribute(Extension):
   valueCode: 'Code' = None
   valueAliasCode: 'AliasCode' = None
   valueExtensionClass: 'ExtensionClass' = None
+  extensionAttributes: List['ExtensionAttribute'] = []
   instanceType: Literal['ExtensionAttribute']
 
 class ExtensionClass(Extension):
-  extensionAttributes: List['ExtensionAttribute'] = [] # Could be named attributes, named to align woth ApiBaseModelWithId definition and above
+  extensionAttributes: List['ExtensionAttribute'] = []
   instanceType: Literal['ExtensionClass']
 
 from .quantity import Quantity
