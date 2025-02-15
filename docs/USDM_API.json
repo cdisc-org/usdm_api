@@ -4681,6 +4681,14 @@
               }
             ]
           },
+          "extensionAttributes": {
+            "items": {
+              "$ref": "#/components/schemas/ExtensionAttribute-Input"
+            },
+            "type": "array",
+            "title": "Extensionattributes",
+            "default": []
+          },
           "instanceType": {
             "type": "string",
             "enum": [
@@ -4759,6 +4767,14 @@
                 "$ref": "#/components/schemas/ExtensionClass-Output"
               }
             ]
+          },
+          "extensionAttributes": {
+            "items": {
+              "$ref": "#/components/schemas/ExtensionAttribute-Output"
+            },
+            "type": "array",
+            "title": "Extensionattributes",
+            "default": []
           },
           "instanceType": {
             "type": "string",
