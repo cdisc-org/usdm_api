@@ -1,11 +1,20 @@
-from typing import Union
+from __future__ import annotations
+from typing import Union, List
 from pydantic import BaseModel, Field
 
 class ApiBaseModel(BaseModel):
   pass
 
-class ApiBaseModelWithId(ApiBaseModel):
+class ApiBaseModelWithIdOnly(ApiBaseModel):
   id: str = Field(min_length=1)
+
+# class Extension(ApiBaseModelWithIdOnly): In extension.py file, not needed here?
+#   url: str
+
+class ApiBaseModelWithId(ApiBaseModelWithIdOnly):
+  extensionAttributes: List['ExtensionAttribute'] = []
+
+from .extension import ExtensionAttribute
 
 class ApiBaseModelWithIdAndDesc(ApiBaseModelWithId):
   description: Union[str, None] = None
