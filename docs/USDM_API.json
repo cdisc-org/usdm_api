@@ -1399,7 +1399,14 @@
             ]
           },
           "frequency": {
-            "$ref": "#/components/schemas/AliasCode"
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AliasCode-Input"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "administrableProductId": {
             "anyOf": [
@@ -1505,10 +1512,24 @@
             ]
           },
           "route": {
-            "$ref": "#/components/schemas/AliasCode"
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AliasCode-Output"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "frequency": {
-            "$ref": "#/components/schemas/AliasCode"
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AliasCode-Output"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "administrableProductId": {
             "anyOf": [
@@ -1565,6 +1586,25 @@
             "minLength": 1,
             "title": "Id"
           },
+          "extensionAttributes": {
+            "items": {
+              "$ref": "#/components/schemas/ExtensionAttribute-Input"
+            },
+            "type": "array",
+            "title": "Extensionattributes",
+            "default": []
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
           "quantity": {
             "anyOf": [
               {
@@ -1613,6 +1653,25 @@
             "type": "string",
             "minLength": 1,
             "title": "Id"
+          },
+          "extensionAttributes": {
+            "items": {
+              "$ref": "#/components/schemas/ExtensionAttribute-Output"
+            },
+            "type": "array",
+            "title": "Extensionattributes",
+            "default": []
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
           },
           "quantity": {
             "anyOf": [
@@ -6080,7 +6139,56 @@
             "minLength": 1,
             "title": "Id"
           },
-          "description": {
+          "extensionAttributes": {
+            "items": {
+              "$ref": "#/components/schemas/ExtensionAttribute-Input"
+            },
+            "type": "array",
+            "title": "Extensionattributes",
+            "default": []
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "isMasked": {
+            "type": "boolean",
+            "title": "Ismasked"
+          },
+          "instanceType": {
+            "type": "string",
+            "enum": [
+              "Masking"
+            ],
+            "const": "Masking",
+            "title": "Instancetype"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "isMasked",
+          "instanceType"
+        ],
+        "title": "Masking"
+      },
+      "Masking-Output": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Id"
+          },
+          "extensionAttributes": {
+            "items": {
+              "$ref": "#/components/schemas/ExtensionAttribute-Output"
+            },
+            "type": "array",
+            "title": "Extensionattributes",
+            "default": []
+          },
+          "text": {
             "type": "string",
             "title": "Text"
           },

@@ -8,9 +8,6 @@ class ApiBaseModel(BaseModel):
 class ApiBaseModelWithIdOnly(ApiBaseModel):
   id: str = Field(min_length=1)
 
-# class Extension(ApiBaseModelWithIdOnly): In extension.py file, not needed here?
-#   url: str
-
 class ApiBaseModelWithId(ApiBaseModelWithIdOnly):
   extensionAttributes: List['ExtensionAttribute'] = []
 
