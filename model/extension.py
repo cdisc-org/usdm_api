@@ -1,4 +1,4 @@
-from typing import List, Literal
+from typing import Union, List, Literal
 from .api_base_model import ApiBaseModelWithIdOnly
 
 class Extension(ApiBaseModelWithIdOnly):
@@ -6,15 +6,15 @@ class Extension(ApiBaseModelWithIdOnly):
 
 class ExtensionAttribute(Extension):
   # values or extension attributes, never both.
-  valueString: str = None
-  valueBoolean: bool = None
-  valueInteger: int = None
-  valueId: str = None
-  valueQuantity: 'Quantity' = None
-  valueRange: 'Range' = None
-  valueCode: 'Code' = None
-  valueAliasCode: 'AliasCode' = None
-  valueExtensionClass: 'ExtensionClass' = None
+  valueString: Union[str, None] = None
+  valueBoolean: Union[bool, None] = None
+  valueInteger: Union[int, None] = None
+  valueId: Union[str, None] = None
+  valueQuantity: Union['Quantity', None] = None
+  valueRange: Union['Range', None] = None
+  valueCode: Union['Code', None] = None
+  valueAliasCode: Union['AliasCode', None] = None
+  valueExtensionClass: Union['ExtensionClass', None] = None
   extensionAttributes: List['ExtensionAttribute'] = []
   instanceType: Literal['ExtensionAttribute']
 
