@@ -19,7 +19,7 @@ class ExtensionAttribute(Extension):
   instanceType: Literal['ExtensionAttribute']
 
 class ExtensionClass(Extension):
-  extensionAttributes: List['ExtensionAttribute'] = []
+  extensionAttributes: List['ExtensionAttribute']
   instanceType: Literal['ExtensionClass']
 
 from .quantity import Quantity
