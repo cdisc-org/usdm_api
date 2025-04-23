@@ -7931,20 +7931,20 @@
             "title": "Givennames",
             "default": []
           },
-          "namePrefixes": {
+          "prefixes": {
             "items": {
               "type": "string"
             },
             "type": "array",
-            "title": "Nameprefixes",
+            "title": "Prefixes",
             "default": []
           },
-          "nameSuffixes": {
+          "suffixes": {
             "items": {
               "type": "string"
             },
             "type": "array",
-            "title": "Namesuffixes",
+            "title": "Suffixes",
             "default": []
           },
           "instanceType": {
@@ -8008,20 +8008,20 @@
             "title": "Givennames",
             "default": []
           },
-          "namePrefixes": {
+          "prefixes": {
             "items": {
               "type": "string"
             },
             "type": "array",
-            "title": "Nameprefixes",
+            "title": "Prefixes",
             "default": []
           },
-          "nameSuffixes": {
+          "suffixes": {
             "items": {
               "type": "string"
             },
             "type": "array",
-            "title": "Namesuffixes",
+            "title": "Suffixes",
             "default": []
           },
           "instanceType": {

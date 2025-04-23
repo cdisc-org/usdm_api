@@ -5,6 +5,6 @@ class PersonName(ApiBaseModelWithId):
     text: Union[str, None] = None
     familyName: Union[str, None] = None
     givenNames: List[str] = []
-    namePrefixes: List[str] = []
-    nameSuffixes: List[str] = []
+    prefixes: List[str] = []
+    suffixes: List[str] = []
     instanceType: Literal['PersonName']
