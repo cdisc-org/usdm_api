@@ -1,9 +1,17 @@
 from typing import Literal, Union
 from .api_base_model import ApiBaseModelWithId
-from .quantity import Quantity
-from .range import Range
+from .alias_code import AliasCode
 
 class QuantityRange(ApiBaseModelWithId):
-  quantity: Union[Quantity, None] = None
-  range: Union[Range, None] = None
-  instanceType: Literal['QuantityRange']
+  pass
+
+class Quantity(QuantityRange):
+  value: float
+  unit: Union[AliasCode, None] = None
+  instanceType: Literal['Quantity']
+
+class Range(QuantityRange):
+  minValue: Quantity
+  maxValue: Quantity
+  isApproximate: bool
+  instanceType: Literal['Range']

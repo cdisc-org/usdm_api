@@ -22,7 +22,6 @@ class ExtensionClass(Extension):
   extensionAttributes: List['ExtensionAttribute']
   instanceType: Literal['ExtensionClass']
 
-from .quantity import Quantity
-from .range import Range
+from .quantity_range import Quantity, Range
 from .code import Code
 from .alias_code import AliasCode

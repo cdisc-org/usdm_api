@@ -3,7 +3,7 @@ from model.api_base_model import ApiBaseModel
 from model.extension import ExtensionAttribute, ExtensionClass
 from model.code import Code
 from model.study_definition_document import StudyDefinitionDocument
-from model.quantity import Quantity
+from model.quantity_range import Quantity
 from model.alias_code import AliasCode
 from model.study_version import StudyVersion, StudyTitle, StudyIdentifier
 

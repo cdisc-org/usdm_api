@@ -5577,68 +5577,6 @@ components:
       - value
       - instanceType
       title: Quantity
-    QuantityRange-Input:
-      properties:
-        id:
-          type: string
-          minLength: 1
-          title: Id
-        extensionAttributes:
-          items:
-            $ref: '#/components/schemas/ExtensionAttribute-Input'
-          type: array
-          title: Extensionattributes
-          default: []
-        quantity:
-          anyOf:
-          - $ref: '#/components/schemas/Quantity-Input'
-          - type: 'null'
-        range:
-          anyOf:
-          - $ref: '#/components/schemas/Range-Input'
-          - type: 'null'
-        instanceType:
-          type: string
-          enum:
-          - QuantityRange
-          const: QuantityRange
-          title: Instancetype
-      type: object
-      required:
-      - id
-      - instanceType
-      title: QuantityRange
-    QuantityRange-Output:
-      properties:
-        id:
-          type: string
-          minLength: 1
-          title: Id
-        extensionAttributes:
-          items:
-            $ref: '#/components/schemas/ExtensionAttribute-Output'
-          type: array
-          title: Extensionattributes
-          default: []
-        quantity:
-          anyOf:
-          - $ref: '#/components/schemas/Quantity-Output'
-          - type: 'null'
-        range:
-          anyOf:
-          - $ref: '#/components/schemas/Range-Output'
-          - type: 'null'
-        instanceType:
-          type: string
-          enum:
-          - QuantityRange
-          const: QuantityRange
-          title: Instancetype
-      type: object
-      required:
-      - id
-      - instanceType
-      title: QuantityRange
     Range-Input:
       properties:
         id:
@@ -6312,7 +6250,10 @@ components:
           - type: 'null'
           title: Description
         numerator:
-          $ref: '#/components/schemas/QuantityRange-Input'
+          anyOf:
+          - $ref: '#/components/schemas/Quantity-Input'
+          - $ref: '#/components/schemas/Range-Input'
+          title: Numerator
         denominator:
           anyOf:
           - $ref: '#/components/schemas/Quantity-Input'
@@ -6357,7 +6298,10 @@ components:
           - type: 'null'
           title: Description
         numerator:
-          $ref: '#/components/schemas/QuantityRange-Output'
+          anyOf:
+          - $ref: '#/components/schemas/Quantity-Output'
+          - $ref: '#/components/schemas/Range-Output'
+          title: Numerator
         denominator:
           anyOf:
           - $ref: '#/components/schemas/Quantity-Output'
@@ -7140,12 +7084,16 @@ components:
           title: Includeshealthysubjects
         plannedEnrollmentNumber:
           anyOf:
-          - $ref: '#/components/schemas/QuantityRange-Input'
+          - $ref: '#/components/schemas/Quantity-Input'
+          - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
+          title: Plannedenrollmentnumber
         plannedCompletionNumber:
           anyOf:
-          - $ref: '#/components/schemas/QuantityRange-Input'
+          - $ref: '#/components/schemas/Quantity-Input'
+          - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
+          title: Plannedcompletionnumber
         plannedSex:
           items:
             $ref: '#/components/schemas/Code-Input'
@@ -7225,12 +7173,16 @@ components:
           title: Includeshealthysubjects
         plannedEnrollmentNumber:
           anyOf:
-          - $ref: '#/components/schemas/QuantityRange-Output'
+          - $ref: '#/components/schemas/Quantity-Output'
+          - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
+          title: Plannedenrollmentnumber
         plannedCompletionNumber:
           anyOf:
-          - $ref: '#/components/schemas/QuantityRange-Output'
+          - $ref: '#/components/schemas/Quantity-Output'
+          - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
+          title: Plannedcompletionnumber
         plannedSex:
           items:
             $ref: '#/components/schemas/Code-Output'
@@ -7538,12 +7490,16 @@ components:
           title: Includeshealthysubjects
         plannedEnrollmentNumber:
           anyOf:
-          - $ref: '#/components/schemas/QuantityRange-Input'
+          - $ref: '#/components/schemas/Quantity-Input'
+          - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
+          title: Plannedenrollmentnumber
         plannedCompletionNumber:
           anyOf:
-          - $ref: '#/components/schemas/QuantityRange-Input'
+          - $ref: '#/components/schemas/Quantity-Input'
+          - $ref: '#/components/schemas/Range-Input'
           - type: 'null'
+          title: Plannedcompletionnumber
         plannedSex:
           items:
             $ref: '#/components/schemas/Code-Input'
@@ -7617,12 +7573,16 @@ components:
           title: Includeshealthysubjects
         plannedEnrollmentNumber:
           anyOf:
-          - $ref: '#/components/schemas/QuantityRange-Output'
+          - $ref: '#/components/schemas/Quantity-Output'
+          - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
+          title: Plannedenrollmentnumber
         plannedCompletionNumber:
           anyOf:
-          - $ref: '#/components/schemas/QuantityRange-Output'
+          - $ref: '#/components/schemas/Quantity-Output'
+          - $ref: '#/components/schemas/Range-Output'
           - type: 'null'
+          title: Plannedcompletionnumber
         plannedSex:
           items:
             $ref: '#/components/schemas/Code-Output'
