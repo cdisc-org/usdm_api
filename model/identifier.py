@@ -5,7 +5,6 @@ from .code import Code
 class Identifier(ApiBaseModelWithId):
   text: str
   scopeId: str
-  instanceType: Literal['Identifier']
 
 class ReferenceIdentifier(Identifier):
   type: Code

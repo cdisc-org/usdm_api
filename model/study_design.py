@@ -41,7 +41,6 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   eligibilityCriteria: List[EligibilityCriterion] =[]
   analysisPopulations: List[AnalysisPopulation] = []
   notes: List[CommentAnnotation] = []
-  instanceType: Literal['StudyDesign']
 
 class InterventionalStudyDesign(StudyDesign):
   subTypes: List[Code] = []

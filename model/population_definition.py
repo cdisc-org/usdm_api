@@ -14,7 +14,6 @@ class PopulationDefinition(ApiBaseModelWithIdNameLabelAndDesc):
   criterionIds: List[str] = []
   plannedAge: Union[Range, None] = None
   notes: List[CommentAnnotation] = []
-  instanceType: Literal['PopulationDefinition']
 
 class StudyCohort(PopulationDefinition):
   characteristics: List[Characteristic] = []
