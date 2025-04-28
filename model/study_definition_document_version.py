@@ -10,6 +10,5 @@ class StudyDefinitionDocumentVersion(ApiBaseModelWithId):
   status: Code
   dateValues: List[GovernanceDate] = []
   contents: List[NarrativeContent] = []
-  childIds: List[str] = []
   notes: List[CommentAnnotation] = []
   instanceType: Literal['StudyDefinitionDocumentVersion']
