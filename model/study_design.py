@@ -38,7 +38,7 @@ class StudyDesign(ApiBaseModelWithIdNameLabelAndDesc):
   scheduleTimelines: List[ScheduleTimeline] = []
   biospecimenRetentions: List[BiospecimenRetention] = []
   documentVersionIds: List[str] = []
-  eligibilityCriteria: List[EligibilityCriterion] =[]
+  eligibilityCriteria: List[EligibilityCriterion]
   analysisPopulations: List[AnalysisPopulation] = []
   notes: List[CommentAnnotation] = []
 
