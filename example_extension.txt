@@ -1,0 +1,429 @@
+
+1. Standard USDM Code class:
+
+
+{
+  "id": "1",
+  "extensionAttributes": [],
+  "code": "Code",
+  "codeSystem": "System",
+  "codeSystemVersion": "Version",
+  "decode": "decode",
+  "instanceType": "Code"
+}
+
+
+
+2. Extend the code class with an attribute:
+
+
+{
+  "id": "1",
+  "extensionAttributes": [
+    {
+      "id": "ExtensionAttributeValue_1",
+      "url": "http://cdisc.org/usdm/extensions/extension-1/strAttribute1",
+      "valueString": "Extra value",
+      "extensionAttributes": [],
+      "instanceType": "ExtensionAttribute"
+    }
+  ],
+  "code": "Code",
+  "codeSystem": "System",
+  "codeSystemVersion": "Version",
+  "decode": "decode",
+  "instanceType": "Code"
+}
+
+
+... which is logically equivalent to:
+
+{
+  "id": "1",
+  "strAttribute1": "Extra value",
+  "code": "Code",
+  "codeSystem": "System",
+  "codeSystemVersion": "Version",
+  "decode": "decode",
+  "instanceType": "Code"
+}
+
+3. Extend code class with two attributes:
+
+
+{
+  "id": "1",
+  "extensionAttributes": [
+    {
+      "id": "ExtensionAttributeValue_1",
+      "url": "http://cdisc.org/usdm/extensions/extension-1/strAttribute",
+      "valueString": "Extra value",
+      "extensionAttributes": [],
+      "instanceType": "ExtensionAttribute"
+    },
+    {
+      "id": "ExtensionAttributeValue_2",
+      "url": "http://cdisc.org/usdm/extensions/extension-1/intAttribute",
+      "valueInteger": 57,
+      "extensionAttributes": [],
+      "instanceType": "ExtensionAttribute"
+    }
+  ],
+  "code": "Code",
+  "codeSystem": "System",
+  "codeSystemVersion": "Version",
+  "decode": "decode",
+  "instanceType": "Code"
+}
+
+
+... which is logically equivalent to:
+
+{
+  "id": "1",
+  "strAttribute": "Extra value",
+  "intAttribute": 57,
+  "code": "Code",
+  "codeSystem": "System",
+  "codeSystemVersion": "Version",
+  "decode": "decode",
+  "instanceType": "Code"
+}
+
+4. Extend the code class wiht two array attributes of differing types:
+
+
+{
+  "id": "1",
+  "extensionAttributes": [
+    {
+      "id": "ExtensionAttributeValue_1",
+      "url": "http://cdisc.org/usdm/extensions/extension-2/strArrayType",
+      "extensionAttributes": [
+        {
+          "id": "ExtensionAttributeValue_11",
+          "url": "http://cdisc.org/usdm/extensions/extension-2/strArrayAttribute",
+          "valueString": "Extra value 1",
+          "extensionAttributes": [],
+          "instanceType": "ExtensionAttribute"
+        },
+        {
+          "id": "ExtensionAttributeValue_12",
+          "url": "http://cdisc.org/usdm/extensions/extension-2/strArrayAttribute",
+          "valueString": "Extra value 2",
+          "extensionAttributes": [],
+          "instanceType": "ExtensionAttribute"
+        },
+        {
+          "id": "ExtensionAttributeValue_13",
+          "url": "http://cdisc.org/usdm/extensions/extension-2/strArrayAttribute",
+          "valueString": "Extra value 3",
+          "extensionAttributes": [],
+          "instanceType": "ExtensionAttribute"
+        }
+      ],
+      "instanceType": "ExtensionAttribute"
+    },
+    {
+      "id": "ExtensionAttributeValue_2",
+      "url": "http://cdisc.org/usdm/extensions/extension-2/intArrayType",
+      "extensionAttributes": [
+        {
+          "id": "ExtensionAttributeValue_21",
+          "url": "http://cdisc.org/usdm/extensions/extension-2/intArrayAttribute",
+          "extensionAttributes": [],
+          "instanceType": "ExtensionAttribute"
+        },
+        {
+          "id": "ExtensionAttributeValue_22",
+          "url": "http://cdisc.org/usdm/extensions/extension-2/intArrayAttribute",
+          "extensionAttributes": [],
+          "instanceType": "ExtensionAttribute"
+        }
+      ],
+      "instanceType": "ExtensionAttribute"
+    }
+  ],
+  "code": "Code",
+  "codeSystem": "System",
+  "codeSystemVersion": "Version",
+  "decode": "decode",
+  "instanceType": "Code"
+}
+
+
+... which is logically equivalent to:
+
+{
+  "id": "1",
+  "strArrayAttribute": [
+    "Extra value 1",
+    "Extra value 2",
+    "Extra value 3"
+  ],
+  "intArrayAttribute": [
+    11,
+    12
+  ],
+  "code": "Code",
+  "codeSystem": "System",
+  "codeSystemVersion": "Version",
+  "decode": "decode",
+  "instanceType": "Code"
+}
+
+5. Extend the code class with an extension class:
+
+
+{
+  "id": "1",
+  "extensionAttributes": [
+    {
+      "id": "ExtensionAttribute_1",
+      "url": "http://cdisc.org/usdm/extensions/extension-5/classAttribute1",
+      "valueExtensionClass": {
+        "id": "ExtensionClass_11",
+        "url": "http://cdisc.org/usdm/extensions/extension-5/class-1",
+        "extensionAttributes": [
+          {
+            "id": "ExtensionAttributeValue_111",
+            "url": "name",
+            "valueString": "XCLASS2",
+            "extensionAttributes": [],
+            "instanceType": "ExtensionAttribute"
+          },
+          {
+            "id": "ExtensionAttributeValue_112",
+            "url": "label",
+            "valueString": "Fix to add extra complex attribute in Code class",
+            "extensionAttributes": [],
+            "instanceType": "ExtensionAttribute"
+          },
+          {
+            "id": "ExtensionAttributeValue_113",
+            "url": "description",
+            "valueString": "This is an instance of the Class-1 extension class that is the value of the cmplxAttribute1 extension attribute of Code",
+            "extensionAttributes": [],
+            "instanceType": "ExtensionAttribute"
+          },
+          {
+            "id": "ExtensionAttributeValue_114",
+            "url": "some-value",
+            "valueString": "Value for the attribute",
+            "extensionAttributes": [],
+            "instanceType": "ExtensionAttribute"
+          }
+        ],
+        "instanceType": "ExtensionClass"
+      },
+      "extensionAttributes": [],
+      "instanceType": "ExtensionAttribute"
+    }
+  ],
+  "code": "Code",
+  "codeSystem": "System",
+  "codeSystemVersion": "Version",
+  "decode": "decode",
+  "instanceType": "Code"
+}
+
+
+... which is logically equivalent to:
+
+{
+  "id": "1",
+  "classAttribute1": {
+    "id": "ExtensionClass_2",
+    "name": "XCLASS2",
+    "label": "Fix to add extra complex attribute in Code class",
+    "description": "This is an instance of the Class-1 extension class that is the value of the cmplxAttribute1 extension attribute of Code",
+    "some-value": "Value for the attribute"
+  },
+  "code": "Code",
+  "codeSystem": "System",
+  "codeSystemVersion": "Version",
+  "decode": "decode",
+  "instanceType": "Code"
+}
+
+6. A document with a yellow attribute:
+
+
+{
+  "id": "StudyDefinitionDocument_1",
+  "extensionAttributes": [
+    {
+      "id": "ExtensionAttributeValue_19",
+      "url": "http://cdisc.org/usdm/extensions/doc-colour-extension/colour-attribute",
+      "valueString": "YELLOW",
+      "extensionAttributes": [],
+      "instanceType": "ExtensionAttribute"
+    }
+  ],
+  "name": "Document1",
+  "label": "Document 1",
+  "description": "Document One",
+  "language": {
+    "id": "1",
+    "extensionAttributes": [],
+    "code": "en",
+    "codeSystem": "ISO-639-1",
+    "codeSystemVersion": "1.0",
+    "decode": "English",
+    "instanceType": "Code"
+  },
+  "type": {
+    "id": "1",
+    "extensionAttributes": [],
+    "code": "Protocol",
+    "codeSystem": "System",
+    "codeSystemVersion": "1",
+    "decode": "Protocol Document",
+    "instanceType": "Code"
+  },
+  "templateName": "ACME Sponsor Template v4.3",
+  "versions": [],
+  "childIds": [],
+  "notes": [],
+  "instanceType": "StudyDefinitionDocument"
+}
+
+
+... which is logically equivalent to:
+
+{
+  "id": "StudyDefinitionDocument_1",
+  "colour-attribute": "YELLOW",
+  "name": "Document1",
+  "label": "Document 1",
+  "description": "Document One",
+  "language": {
+    "id": "1",
+    "extensionAttributes": [],
+    "code": "en",
+    "codeSystem": "ISO-639-1",
+    "codeSystemVersion": "1.0",
+    "decode": "English",
+    "instanceType": "Code"
+  },
+  "type": {
+    "id": "1",
+    "extensionAttributes": [],
+    "code": "Protocol",
+    "codeSystem": "System",
+    "codeSystemVersion": "1",
+    "decode": "Protocol Document",
+    "instanceType": "Code"
+  },
+  "templateName": "ACME Sponsor Template v4.3",
+  "versions": [],
+  "notes": [],
+  "instanceType": "StudyDefinitionDocument"
+}
+
+7. An example with a set of attributes setting the document style:
+
+
+{
+  "id": "StudyDefinitionDocument_3",
+  "extensionAttributes": [
+    {
+      "id": "ExtensionAttributeValue_1",
+      "url": "http://cdisc.org/usdm/extensions/doc-style-extension/style",
+      "valueExtensionClass": {
+        "id": "ExtensionClass_11",
+        "url": "http://cdisc.org/usdm/extensions/doc-style-extension/Style",
+        "extensionAttributes": [
+          {
+            "id": "ExtensionAttributeValue_111",
+            "url": "font-name",
+            "valueString": "ARIEL",
+            "extensionAttributes": [],
+            "instanceType": "ExtensionAttribute"
+          },
+          {
+            "id": "ExtensionAttributeValue_112",
+            "url": "font-colour",
+            "valueString": "YELLOW",
+            "extensionAttributes": [],
+            "instanceType": "ExtensionAttribute"
+          },
+          {
+            "id": "ExtensionAttributeValue_113",
+            "url": "font-weight",
+            "valueString": "BOLD",
+            "extensionAttributes": [],
+            "instanceType": "ExtensionAttribute"
+          }
+        ],
+        "instanceType": "ExtensionClass"
+      },
+      "extensionAttributes": [],
+      "instanceType": "ExtensionAttribute"
+    }
+  ],
+  "name": "Document2",
+  "label": "Document 2",
+  "description": "Document Two",
+  "language": {
+    "id": "1",
+    "extensionAttributes": [],
+    "code": "en",
+    "codeSystem": "ISO-639-1",
+    "codeSystemVersion": "1.0",
+    "decode": "English",
+    "instanceType": "Code"
+  },
+  "type": {
+    "id": "1",
+    "extensionAttributes": [],
+    "code": "Protocol",
+    "codeSystem": "System",
+    "codeSystemVersion": "1",
+    "decode": "Protocol Document",
+    "instanceType": "Code"
+  },
+  "templateName": "ACME Sponsor Template v4.3",
+  "versions": [],
+  "childIds": [],
+  "notes": [],
+  "instanceType": "StudyDefinitionDocument"
+}
+
+
+... which is logically equivalent to:
+
+{
+  "id": "StudyDefinitionDocument_3",
+  "style": {
+    "id": "ExtensionClass_11",
+    "font-name": "ARIEL",
+    "font-colour": "YELLOW",
+    "font-weight": "BOLD"
+  },
+  "name": "Document2",
+  "label": "Document 2",
+  "description": "Document Two",
+  "language": {
+    "id": "1",
+    "extensionAttributes": [],
+    "code": "en",
+    "codeSystem": "ISO-639-1",
+    "codeSystemVersion": "1.0",
+    "decode": "English",
+    "instanceType": "Code"
+  },
+  "type": {
+    "id": "1",
+    "extensionAttributes": [],
+    "code": "Protocol",
+    "codeSystem": "System",
+    "codeSystemVersion": "1",
+    "decode": "Protocol Document",
+    "instanceType": "Code"
+  },
+  "templateName": "ACME Sponsor Template v4.3",
+  "versions": [],
+  "notes": [],
+  "instanceType": "StudyDefinitionDocument"
+}
