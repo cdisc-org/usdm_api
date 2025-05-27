@@ -3,7 +3,7 @@ from model.study_version import *
 from model.wrapper import Wrapper
 from uuid import UUID, uuid4
 
-VERSION = "3.13.0"
+VERSION = "4.0.0"
 SYSTEM_NAME = "DDF USDM API"
 
 tags_metadata = [
@@ -66,7 +66,7 @@ app = FastAPI(
   openapi_tags = tags_metadata
 )
 
-@app.post("/v3/studyDefinitions", 
+@app.post("/v4/studyDefinitions", 
   tags=["Production"], 
   summary=annotations['study_definition']['post']['summary'],
   description=annotations['study_definition']['post']['description'], 
@@ -76,7 +76,7 @@ app = FastAPI(
 async def create_study(study: Wrapper):
   return str(uuid4())
 
-@app.put("/v3/studyDefinitions/{studyId}", 
+@app.put("/v4/studyDefinitions/{studyId}", 
   tags=["Production"], 
   summary=annotations['study_definition']['put']['summary'],
   description=annotations['study_definition']['put']['description'], 
@@ -86,7 +86,7 @@ async def create_study(study: Wrapper):
 async def update_study(studyId: str, study: Wrapper):
   return studyId
 
-@app.get("/v3/studyDefinitions/{studyId}", 
+@app.get("/v4/studyDefinitions/{studyId}", 
   tags=["Production"], 
   summary=annotations['study_definition']['get_uuid']['summary'],
   description=annotations['study_definition']['get_uuid']['description'],
@@ -95,7 +95,7 @@ async def update_study(studyId: str, study: Wrapper):
 async def read_full_study(studyId: str):
   return {}
 
-@app.get("/v3/studyDefinitions/{studyId}/history", 
+@app.get("/v4/studyDefinitions/{studyId}/history", 
   tags=["Production"], 
   summary="Returns the study history",
   description="Returns the history for the specified study",
@@ -104,7 +104,7 @@ async def read_full_study(studyId: str):
 async def read_study_history(studyId: str):
   return []
 
-@app.get("/v3/studyDesigns", 
+@app.get("/v4/studyDesigns", 
   tags=['Production'],
   summary='Study designs for a study',
   description='Returns all the study designs for a specified study.',
